@@ -1,0 +1,182 @@
+{
+  "attempt_id": "A238",
+  "benchmark": {
+    "candidate_count_per_repeat": 4194304,
+    "maximum_candidates_per_second": 344954679.4934089,
+    "median_candidates_per_second": 339108347.92496,
+    "minimum_candidates_per_second": 197010486.24535435,
+    "projected_complete_domain_seconds": {
+      "32": 12.665472030639648,
+      "33": 25.330944061279297,
+      "34": 50.661888122558594,
+      "35": 101.32377624511719,
+      "36": 202.64755249023438,
+      "37": 405.29510498046875,
+      "38": 810.5902099609375,
+      "39": 1621.180419921875,
+      "40": 3242.36083984375,
+      "41": 6484.7216796875,
+      "42": 12969.443359375
+    },
+    "repeats": 5,
+    "samples": [
+      {
+        "candidate_count": 4194304,
+        "candidates_per_second": 197010486.24535435,
+        "control_matches": [],
+        "factual_matches": [],
+        "gpu_seconds": 0.02128975000232458
+      },
+      {
+        "candidate_count": 4194304,
+        "candidates_per_second": 294177131.56504333,
+        "control_matches": [],
+        "factual_matches": [],
+        "gpu_seconds": 0.014257750008255243
+      },
+      {
+        "candidate_count": 4194304,
+        "candidates_per_second": 344954679.4934089,
+        "control_matches": [],
+        "factual_matches": [],
+        "gpu_seconds": 0.012159000150859356
+      },
+      {
+        "candidate_count": 4194304,
+        "candidates_per_second": 339108347.92496,
+        "control_matches": [],
+        "factual_matches": [],
+        "gpu_seconds": 0.012368625029921532
+      },
+      {
+        "candidate_count": 4194304,
+        "candidates_per_second": 340365017.052299,
+        "control_matches": [],
+        "factual_matches": [],
+        "gpu_seconds": 0.012322958558797836
+      }
+    ],
+    "volatile_performance_only_not_a_success_rule": true
+  },
+  "boundary_filter_gate": {
+    "exact": true,
+    "intervals": [
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 0
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [
+          2418085869
+        ],
+        "first_candidate": 2418085741
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 4294967040
+      }
+    ],
+    "target_candidate": 2418085869
+  },
+  "cipher": {
+    "block_bits": 256,
+    "candidate_encoding": "uint32 candidate replaces low32 of key word 0",
+    "filter_output_bits": 256,
+    "known_plaintext_blocks_per_candidate": 1,
+    "master_key_bits": 256,
+    "rounds": 72,
+    "tweak_bits": 128,
+    "variant": "Threefish-256"
+  },
+  "cross_implementation_gate": {
+    "candidate_count": 256,
+    "complete_output_bits_checked": 65536,
+    "exact_filter_identity": true,
+    "exact_scalar_identity": true,
+    "first_candidate": 123456789,
+    "output_sha256": "6f980c2e0967d2de37fca5894451e5b06c6fc4af3d2c1fec7468c57a122ec5e8",
+    "target_candidate": 123456862
+  },
+  "evidence_stage": "THREEFISH256_METAL_PRE_TARGET_QUALIFICATION",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "native_64_bit_integer_arithmetic": true,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "threefish256-metal-native-v1"
+  },
+  "information_boundary": {
+    "benchmark_outcome_may_select_future_width": true,
+    "complete_residual_key_domain_executed": false,
+    "production_target_selected": false,
+    "production_unknown_assignment_generated": false
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "c8ed6938d22ce4abf76c2aad14170bbc9e4d44bf8ee8eb21ca5603915013702d",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "bcab26af8232b08324165b93f751d48ecdf1895ce6959924293fbfd15e44fbda",
+    "warnings_as_errors": true
+  },
+  "official_kat_gates": {
+    "all_passed": true,
+    "cases": [
+      {
+        "actual_words_hex": [
+          "94eeea8b1f2ada84",
+          "adf103313eae6670",
+          "952419a1f4b16d53",
+          "d83f13e63c9f6b11"
+        ],
+        "candidate": 0,
+        "exact_scalar_and_Metal_identity": true,
+        "expected_words_hex": [
+          "94eeea8b1f2ada84",
+          "adf103313eae6670",
+          "952419a1f4b16d53",
+          "d83f13e63c9f6b11"
+        ],
+        "name": "official_zero"
+      },
+      {
+        "actual_words_hex": [
+          "df8fea0eff91d0e0",
+          "d50ad82ee69281c9",
+          "76f48d58085d869d",
+          "df975e95b5567065"
+        ],
+        "candidate": 319951120,
+        "exact_scalar_and_Metal_identity": true,
+        "expected_words_hex": [
+          "df8fea0eff91d0e0",
+          "d50ad82ee69281c9",
+          "76f48d58085d869d",
+          "df975e95b5567065"
+        ],
+        "name": "official_nonzero"
+      }
+    ],
+    "source": "Skein 1.3 specification and official submission KATs"
+  },
+  "schema": "threefish256-metal-qualification-v1",
+  "scope": "Full 72-round Threefish-256 implementation qualification and volatile throughput measurement; no production recovery target was selected or run."
+}

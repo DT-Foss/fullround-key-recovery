@@ -1,0 +1,5 @@
+msgpack==1.2.1
+xxhash==3.8.1
+pytest==8.4.2
+ruff==0.15.4
+build==1.2.2.post1

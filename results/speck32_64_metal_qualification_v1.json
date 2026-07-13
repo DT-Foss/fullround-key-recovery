@@ -1,0 +1,160 @@
+{
+  "attempt_id": "A236",
+  "benchmark": {
+    "candidate_count_per_repeat": 67108864,
+    "maximum_candidates_per_second": 4717228303.301979,
+    "median_candidates_per_second": 4665143185.083495,
+    "minimum_candidates_per_second": 2708951812.785854,
+    "projected_complete_domain_seconds": {
+      "40": 235.68657684326175,
+      "41": 471.3731536865235,
+      "42": 942.746307373047,
+      "43": 1885.492614746094,
+      "44": 3770.985229492188,
+      "45": 7541.970458984376,
+      "46": 15083.940917968752,
+      "47": 30167.881835937504,
+      "48": 60335.76367187501
+    },
+    "repeats": 5,
+    "samples": [
+      {
+        "candidate_count": 67108864,
+        "candidates_per_second": 2708951812.785854,
+        "control_matches": [],
+        "factual_matches": [],
+        "gpu_seconds": 0.02477300027385354
+      },
+      {
+        "candidate_count": 67108864,
+        "candidates_per_second": 4185475255.9595895,
+        "control_matches": [],
+        "factual_matches": [],
+        "gpu_seconds": 0.016033750027418137
+      },
+      {
+        "candidate_count": 67108864,
+        "candidates_per_second": 4665143185.083495,
+        "control_matches": [],
+        "factual_matches": [],
+        "gpu_seconds": 0.01438516704365611
+      },
+      {
+        "candidate_count": 67108864,
+        "candidates_per_second": 4665481181.230241,
+        "control_matches": [],
+        "factual_matches": [],
+        "gpu_seconds": 0.014384124893695116
+      },
+      {
+        "candidate_count": 67108864,
+        "candidates_per_second": 4717228303.301979,
+        "control_matches": [],
+        "factual_matches": [],
+        "gpu_seconds": 0.01422633370384574
+      }
+    ],
+    "volatile_performance_only_not_a_success_rule": true
+  },
+  "boundary_filter_gate": {
+    "exact_boundary_identity": true,
+    "intervals": [
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 0
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [
+          2418085869
+        ],
+        "first_candidate": 2418085741
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 4294967040
+      }
+    ],
+    "target_candidate": 2418085869
+  },
+  "cipher": {
+    "block_bits": 32,
+    "candidate_encoding": "low16=k0, high16=l0, configured_key2=l1, key3=l2",
+    "filter_output_bits": 96,
+    "known_plaintext_blocks_per_candidate": 3,
+    "master_key_bits": 64,
+    "rounds": 22,
+    "variant": "Speck32/64"
+  },
+  "cross_implementation_gate": {
+    "candidate_count": 256,
+    "complete_output_bits_checked": 24576,
+    "exact_filter_identity": true,
+    "exact_scalar_identity": true,
+    "first_candidate": 123456789,
+    "output_sha256": "e68d19275f4e8aa15eea6cda2a36f321ce7dd8cdd6d1b973d83caf9d4f87d36d",
+    "target_candidate": 123456862
+  },
+  "evidence_stage": "SPECK32_64_METAL_PRE_TARGET_QUALIFICATION",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "speck32-64-metal-native-v1"
+  },
+  "information_boundary": {
+    "benchmark_outcome_may_select_future_width": true,
+    "complete_residual_key_domain_executed": false,
+    "production_target_selected": false,
+    "production_unknown_assignment_generated": false
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "21d61b221f5acaabd1952289eaa0ca61364b6ce0a4711d480b6551f6d9e50013",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "219d40e02c434219e2e387516d18f4d82736816206d729961a64aea5a6cd9d9c",
+    "warnings_as_errors": true
+  },
+  "official_kat_gate": {
+    "actual_ciphertext_words": [
+      43112,
+      17138
+    ],
+    "candidate_encoding": 151519488,
+    "expected_ciphertext_words": [
+      43112,
+      17138
+    ],
+    "master_key_words_paper_order": [
+      256,
+      2312,
+      4368,
+      6424
+    ],
+    "plaintext_words": [
+      25972,
+      26956
+    ],
+    "three_block_scalar_identity": true
+  },
+  "schema": "speck32-64-metal-qualification-v1",
+  "scope": "Full 22-round Speck32/64 implementation qualification and volatile throughput measurement; no production recovery target was selected or run."
+}

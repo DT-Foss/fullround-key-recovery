@@ -1,0 +1,356 @@
+{
+  "anchor_gates": {
+    "native_source_sha256": "219d40e02c434219e2e387516d18f4d82736816206d729961a64aea5a6cd9d9c",
+    "protocol_sha256": "d8a657c4f46f0fc913b012331ad58791d577bc10a94f1f9146d01df00e1e93ca",
+    "public_challenge_sha256": "fc7035aa844c1669f79f263b5e1e081e4002121c465d3b55eade3a078a9bb201",
+    "qualification_sha256": "e3a6c816adc246b1e6c264183557430e45c94e418179699bee9531125ffe5f44"
+  },
+  "attempt_id": "A237",
+  "causal": {
+    "amplified_state_materialized_in_file": true,
+    "api_id": "a237",
+    "clusters": 2,
+    "embedded_rules": 2,
+    "explicit_triplets": 5,
+    "file_bytes": 5008,
+    "file_sha256": "3c768ff374a5c71fb6a80346017ff1467ea44f7218f3e2d554e4fd3afc404130",
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "inference_recomputed_on_reader_open": false,
+    "integrity_verified_by_authoritative_reader": true,
+    "magic": "CAUSAL\u0000\u0001",
+    "materialized_inferred_triplets": 2,
+    "personal_semantic_readback": {
+      "control_chain": [
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "matched negative control",
+          "evidence": "[]",
+          "is_inferred": false,
+          "m_idx": 11,
+          "mechanism": "zero_exact_control_models",
+          "o_idx": 12,
+          "outcome": "A237:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "zero independently confirmed assignments",
+          "s_idx": 10,
+          "source": "8965c4f75cebb93a5f8e7f0fdc49c172a23f6e7162524c29d0639869036f2212",
+          "trigger": "A237:control_filter_candidate_set"
+        },
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after the identical complete control search.",
+          "is_inferred": true,
+          "m_idx": 14,
+          "mechanism": "verified_matched_control_chain",
+          "o_idx": 12,
+          "outcome": "A237:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "s_idx": 8,
+          "source": "materialized:control_separates_target_specific_recovery",
+          "trigger": "A237:one_bit_flipped_control_relation"
+        }
+      ],
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W42_domain",
+        "predicate": "next_required_gain",
+        "subject": "A237:unique_verified_42_bit_residual_key",
+        "suggested_queries": [
+          "Which known-key operator ranks the held-out W42 outer slice early?",
+          "Does a frozen typed propagation graph reduce executed W42 candidates?"
+        ]
+      },
+      "recovery_chain": [
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "independent key confirmation",
+          "evidence": "[{\"candidate_output_little_u16_sha256\": \"27f3ece4b7b591a915b040d2b3492f929fc7cdfb8a1e7acd43782de5a8a0f6f9\", \"combined_assignment\": 3099631123999, \"complete_three_block_match\": true, \"implementation\": \"independent_Python_canonical_Speck32/64\", \"key0\": 32287, \"key1\": 45161, \"key2_low10\": 721, \"output_bits_checked\": 96, \"output_words_checked\": 6, \"target_output_little_u16_sha256\": \"27f3ece4b7b591a915b040d2b3492f929fc7cdfb8a1e7acd43782de5a8a0f6f9\"}]",
+          "is_inferred": false,
+          "m_idx": 6,
+          "mechanism": "independent_exact_confirmation",
+          "o_idx": 7,
+          "outcome": "A237:unique_verified_42_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "3 blocks; 96 output bits; canonical Python implementation",
+          "s_idx": 5,
+          "source": "8965c4f75cebb93a5f8e7f0fdc49c172a23f6e7162524c29d0639869036f2212",
+          "trigger": "A237:factual_filter_candidate_set"
+        },
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after complete execution and independent confirmation.",
+          "is_inferred": true,
+          "m_idx": 13,
+          "mechanism": "verified_complete_enumeration_and_confirmation_chain",
+          "o_idx": 7,
+          "outcome": "A237:unique_verified_42_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "s_idx": 3,
+          "source": "materialized:complete_domain_plus_independent_confirmation",
+          "trigger": "A237:frozen_public_W42_relation"
+        }
+      ]
+    },
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "total_triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 5008,
+      "file_size_kb": 4.9,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.speck32_64_metal_width42_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation_sha256": "8965c4f75cebb93a5f8e7f0fdc49c172a23f6e7162524c29d0639869036f2212",
+  "evidence_stage": "SPECK32_64_FULLROUND_42BIT_RESIDUAL_KEY_RECOVERY_RETAINED",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "factual_confirmations": [
+      {
+        "candidate_output_little_u16_sha256": "27f3ece4b7b591a915b040d2b3492f929fc7cdfb8a1e7acd43782de5a8a0f6f9",
+        "combined_assignment": 3099631123999,
+        "complete_three_block_match": true,
+        "implementation": "independent_Python_canonical_Speck32/64",
+        "key0": 32287,
+        "key1": 45161,
+        "key2_low10": 721,
+        "output_bits_checked": 96,
+        "output_words_checked": 6,
+        "target_output_little_u16_sha256": "27f3ece4b7b591a915b040d2b3492f929fc7cdfb8a1e7acd43782de5a8a0f6f9"
+      }
+    ],
+    "factual_filter_matches": [
+      3099631123999
+    ],
+    "factual_full_matches": [
+      3099631123999
+    ],
+    "filter_output_bits": 96,
+    "gpu_seconds": 959.8156910734251,
+    "inner_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 22,
+    "logical_candidate_count": 4398046511104,
+    "newly_executed_assignment_count": 1736240529408,
+    "outer_slice_count": 1024,
+    "resumed_assignment_count": 2661805981696,
+    "stream_batch_count": 4096,
+    "stream_candidate_count": 1073741824,
+    "unique_exact_assignment": true,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 42,
+    "volatile_candidates_per_gpu_second": 4582178174.421565,
+    "volatile_wall_seconds": 375.5439051669091
+  },
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "combined_assignment_encoding": "key2_low10_times_2^32_plus_key1_times_2^16_plus_key0",
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_used": false,
+    "filter_output_bits": 96,
+    "fresh_public_challenge": true,
+    "full_confirmation": "independent_Python_Speck32/64_all_three_96_output_bits",
+    "gpu_logical_thread_count": 4398046511104,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_key0_key1_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 22,
+    "known_plaintext_ciphertext_pairs": 3,
+    "logical_candidate_count": 4398046511104,
+    "outer_key2_low10_slice_count": 1024,
+    "persistent_host_process": true,
+    "primitive": "Speck32/64_block_cipher",
+    "result_capacity_per_batch": 64,
+    "rounds": 22,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 4096,
+    "stream_batches_per_slice": 4,
+    "stream_candidate_count": 1073741824,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 42,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "c3d2438e5c78b852426214fb3d81387882584b0f91f6ffe0e656cf5d4927b2c2",
+  "execution_sha256": "3523aae5995e32917c85f70a45124c6ce5e9ab4ef964b35e7b7777788317a9c3",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "speck32-64-metal-native-v1"
+  },
+  "mapping_gate": {
+    "complete_output_bits_checked": 73728,
+    "exact_scalar_filter_and_mapping_identity": true,
+    "logical_candidates_checked": 768,
+    "outer_values_checked": [
+      0,
+      512,
+      1023
+    ],
+    "rows": [
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 24576,
+        "control_matches": [],
+        "factual_combined_assignment": 184105,
+        "factual_inner_candidate": 184105,
+        "first_inner_candidate": 184032,
+        "outer_key2_low10": 0,
+        "output_sha256": "78fd5657061cb532047fdee0edd4d671b1140349bd3f7ee3911e2963b5052b26"
+      },
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 24576,
+        "control_matches": [],
+        "factual_combined_assignment": 2199023439657,
+        "factual_inner_candidate": 184105,
+        "first_inner_candidate": 184032,
+        "outer_key2_low10": 512,
+        "output_sha256": "85ca1ef6b7c11c0e612be384561a1c61f53db96f38e23dea1556227f76179090"
+      },
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 24576,
+        "control_matches": [],
+        "factual_combined_assignment": 4393751727913,
+        "factual_inner_candidate": 184105,
+        "first_inner_candidate": 184032,
+        "outer_key2_low10": 1023,
+        "output_sha256": "69b4404f0d07e1efccb05e52328e92501bb5f9e44f2c60fd68eb9d47e12a3e03"
+      }
+    ]
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "21d61b221f5acaabd1952289eaa0ca61364b6ce0a4711d480b6551f6d9e50013",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "219d40e02c434219e2e387516d18f4d82736816206d729961a64aea5a6cd9d9c",
+    "warnings_as_errors": true
+  },
+  "protocol_gate": {
+    "artifact_sha256": "d8a657c4f46f0fc913b012331ad58791d577bc10a94f1f9146d01df00e1e93ca",
+    "information_boundary": {
+      "A237_candidate_outcomes_used_before_protocol_freeze": false,
+      "benchmark_outcome_used_only_to_select_width_and_batch_size": true,
+      "unknown_assignment_available_to_runner_before_execution": false,
+      "unknown_assignment_generated_once_from_os_randomness": true,
+      "unknown_assignment_in_protocol_or_source": false,
+      "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+      "unknown_assignment_used_only_to_construct_public_ciphertexts": true
+    },
+    "prospective_prediction": {
+      "asymptotic_search_advantage_claimed": false,
+      "claim_type": "fresh_fullround_42_bit_residual_key_recovery",
+      "complete_domain_will_be_executed": true,
+      "expected_control_exact_assignments": 0,
+      "expected_unique_exact_assignment": true,
+      "success_requires_independent_three_block_confirmation": true
+    },
+    "protocol_state": "frozen_before_any_A237_candidate_execution"
+  },
+  "public_challenge": {
+    "candidate_encoding": "assignment=(key2_low10<<32)|(key1<<16)|key0",
+    "cipher": "Speck32/64",
+    "control_ciphertext_little_u16_sha256": "4034e4376638bbba58beeaf6d376d0c8a7be2f476752d1ec96b22d3993ad9d13",
+    "control_ciphertext_words_xy_order": [
+      51938,
+      34778,
+      61707,
+      12234,
+      64696,
+      16520
+    ],
+    "control_relation": "target_ciphertext_final_word_xor_0x0001",
+    "known_key2_upper6": 6144,
+    "known_key3": 10980,
+    "known_master_key_bits": 22,
+    "known_material_derivation_label": "speck32-64/a237/fullround/w42/known-material/v1",
+    "known_material_derivation_sha256": "f0ca99c25874be832b9fe36417fd476167bbf0936ff43a7d3c2a8955f691f1bb",
+    "plaintext_blocks": 3,
+    "plaintext_words_xy_order": [
+      31859,
+      35106,
+      60354,
+      513,
+      32518,
+      62308
+    ],
+    "rounds": 22,
+    "target_ciphertext_little_u16_sha256": "27f3ece4b7b591a915b040d2b3492f929fc7cdfb8a1e7acd43782de5a8a0f6f9",
+    "target_ciphertext_words_xy_order": [
+      51938,
+      34778,
+      61707,
+      12234,
+      64696,
+      16521
+    ],
+    "unknown_assignment_bits": 42,
+    "unknown_assignment_included": false,
+    "unknown_key0_bits": 16,
+    "unknown_key0_included": false,
+    "unknown_key1_bits": 16,
+    "unknown_key1_included": false,
+    "unknown_key2_low10_included": false,
+    "unknown_key2_low_bits": 10
+  },
+  "public_challenge_sha256": "fc7035aa844c1669f79f263b5e1e081e4002121c465d3b55eade3a078a9bb201",
+  "recovery": {
+    "candidate_identities_persisted_in_checkpoint": false,
+    "recovered_combined_assignments": [
+      3099631123999
+    ],
+    "recovered_key0": [
+      32287
+    ],
+    "recovered_key1": [
+      45161
+    ],
+    "recovered_key2_low10": [
+      721
+    ],
+    "recovery_accepted_only_after_complete_domain_execution": true,
+    "unknown_assignment_source_was_discarded_before_runner_construction": true
+  },
+  "result": "The native Metal runner executed the complete fresh 42-bit residual key domain for standard 22-round Speck32/64 and independently confirmed the unique assignment across three public blocks.",
+  "schema": "speck32-64-metal-width42-recovery-v1",
+  "scope": "Full-round Speck32/64 partial-key recovery with K0, K1, and the low ten bits of K2 unknown; 22 key bits known; complete 2^42 enumeration."
+}

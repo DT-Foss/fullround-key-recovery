@@ -1,0 +1,125 @@
+{
+  "anchors": {
+    "native_host": {
+      "filename": "speck32_64_metal_native.swift",
+      "sha256": "219d40e02c434219e2e387516d18f4d82736816206d729961a64aea5a6cd9d9c"
+    },
+    "qualification": {
+      "filename": "speck32_64_metal_qualification_v1.json",
+      "sha256": "e3a6c816adc246b1e6c264183557430e45c94e418179699bee9531125ffe5f44"
+    }
+  },
+  "attempt_id": "A237",
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "combined_assignment_encoding": "key2_low10_times_2^32_plus_key1_times_2^16_plus_key0",
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_used": false,
+    "filter_output_bits": 96,
+    "fresh_public_challenge": true,
+    "full_confirmation": "independent_Python_Speck32/64_all_three_96_output_bits",
+    "gpu_logical_thread_count": 4398046511104,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_key0_key1_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 22,
+    "known_plaintext_ciphertext_pairs": 3,
+    "logical_candidate_count": 4398046511104,
+    "outer_key2_low10_slice_count": 1024,
+    "persistent_host_process": true,
+    "primitive": "Speck32/64_block_cipher",
+    "result_capacity_per_batch": 64,
+    "rounds": 22,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 4096,
+    "stream_batches_per_slice": 4,
+    "stream_candidate_count": 1073741824,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 42,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "c3d2438e5c78b852426214fb3d81387882584b0f91f6ffe0e656cf5d4927b2c2",
+  "information_boundary": {
+    "A237_candidate_outcomes_used_before_protocol_freeze": false,
+    "benchmark_outcome_used_only_to_select_width_and_batch_size": true,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+    "unknown_assignment_used_only_to_construct_public_ciphertexts": true
+  },
+  "primary_sources": {
+    "algorithm_and_Speck32_64_test_vector": "https://eprint.iacr.org/2013/404.pdf",
+    "official_NSA_publications_index": "https://nsacyber.github.io/simon-speck/publications/"
+  },
+  "prospective_prediction": {
+    "asymptotic_search_advantage_claimed": false,
+    "claim_type": "fresh_fullround_42_bit_residual_key_recovery",
+    "complete_domain_will_be_executed": true,
+    "expected_control_exact_assignments": 0,
+    "expected_unique_exact_assignment": true,
+    "success_requires_independent_three_block_confirmation": true
+  },
+  "protocol_state": "frozen_before_any_A237_candidate_execution",
+  "public_challenge": {
+    "candidate_encoding": "assignment=(key2_low10<<32)|(key1<<16)|key0",
+    "cipher": "Speck32/64",
+    "control_ciphertext_little_u16_sha256": "4034e4376638bbba58beeaf6d376d0c8a7be2f476752d1ec96b22d3993ad9d13",
+    "control_ciphertext_words_xy_order": [
+      51938,
+      34778,
+      61707,
+      12234,
+      64696,
+      16520
+    ],
+    "control_relation": "target_ciphertext_final_word_xor_0x0001",
+    "known_key2_upper6": 6144,
+    "known_key3": 10980,
+    "known_master_key_bits": 22,
+    "known_material_derivation_label": "speck32-64/a237/fullround/w42/known-material/v1",
+    "known_material_derivation_sha256": "f0ca99c25874be832b9fe36417fd476167bbf0936ff43a7d3c2a8955f691f1bb",
+    "plaintext_blocks": 3,
+    "plaintext_words_xy_order": [
+      31859,
+      35106,
+      60354,
+      513,
+      32518,
+      62308
+    ],
+    "rounds": 22,
+    "target_ciphertext_little_u16_sha256": "27f3ece4b7b591a915b040d2b3492f929fc7cdfb8a1e7acd43782de5a8a0f6f9",
+    "target_ciphertext_words_xy_order": [
+      51938,
+      34778,
+      61707,
+      12234,
+      64696,
+      16521
+    ],
+    "unknown_assignment_bits": 42,
+    "unknown_assignment_included": false,
+    "unknown_key0_bits": 16,
+    "unknown_key0_included": false,
+    "unknown_key1_bits": 16,
+    "unknown_key1_included": false,
+    "unknown_key2_low10_included": false,
+    "unknown_key2_low_bits": 10
+  },
+  "public_challenge_sha256": "fc7035aa844c1669f79f263b5e1e081e4002121c465d3b55eade3a078a9bb201",
+  "required_validation_gates": {
+    "all_2^42_assignments_must_execute": true,
+    "authentic_AI_native_causal_artifact_required": true,
+    "authentic_CausalReader_reopen_required": true,
+    "bit_flipped_control_required": true,
+    "candidate_execution_against_public_A237_target_before_freeze": false,
+    "early_stop_forbidden": true,
+    "independent_three_block_confirmation_required": true,
+    "pre_target_official_KAT_passed": true,
+    "pre_target_scalar_Metal_cross_gate_passed": true,
+    "pre_target_uint32_boundary_gate_passed": true
+  },
+  "schema": "speck32-64-metal-width42-recovery-protocol-v1"
+}

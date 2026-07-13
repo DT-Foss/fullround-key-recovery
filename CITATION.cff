@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or its retained evidence, please cite it."
+title: "Full-Round Key Recovery on Commodity Apple Silicon"
+type: software
+authors:
+  - family-names: Foss
+    given-names: David Tom
+    email: d.foss@ieee.org
+    orcid: "https://orcid.org/0009-0004-0289-7154"
+    affiliation: "AI Systems and Causal Knowledge Graphs, Görlitz, Germany"
+version: 1.0.0
+date-released: 2026-07-13
+license: MIT
+repository-code: "https://github.com/DT-Foss/fullround-key-recovery"
+url: "https://github.com/DT-Foss/fullround-key-recovery"
+keywords:
+  - cryptanalysis
+  - full-round key recovery
+  - ChaCha20
+  - Speck32/64
+  - Threefish-256
+  - Apple Metal

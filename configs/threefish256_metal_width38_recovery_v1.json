@@ -1,0 +1,123 @@
+{
+  "anchors": {
+    "native_host": {
+      "filename": "threefish256_metal_native.swift",
+      "sha256": "bcab26af8232b08324165b93f751d48ecdf1895ce6959924293fbfd15e44fbda"
+    },
+    "qualification": {
+      "filename": "threefish256_metal_qualification_v1.json",
+      "sha256": "1ef2c82a70f4fbb394c6b0cd490ec2e38c57222812a66d8002ff0fd1c2d52a1b"
+    }
+  },
+  "attempt_id": "A240",
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "combined_assignment_encoding": "key0_bits32_37_times_2^32_plus_key0_low32",
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_used": false,
+    "filter_output_bits": 256,
+    "fresh_public_challenge": true,
+    "full_confirmation": "independent_Python_Threefish256_all_256_output_bits",
+    "gpu_logical_thread_count": 274877906944,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_key0_low32_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 218,
+    "known_plaintext_ciphertext_pairs": 1,
+    "known_tweak_bits": 128,
+    "logical_candidate_count": 274877906944,
+    "outer_key0_bits32_37_slice_count": 64,
+    "persistent_host_process": true,
+    "primitive": "Threefish-256_block_cipher",
+    "result_capacity_per_batch": 64,
+    "rounds": 72,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 1024,
+    "stream_batches_per_slice": 16,
+    "stream_candidate_count": 268435456,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 38,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "f96b3fb69b3aad0d770ca08e63865b3438b76cdb52ac2bb017791cbb596edccd",
+  "information_boundary": {
+    "A240_candidate_outcomes_used_before_protocol_freeze": false,
+    "benchmark_outcome_used_only_to_select_width_and_batch_size": true,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+    "unknown_assignment_used_only_to_construct_public_ciphertext": true
+  },
+  "primary_sources": {
+    "Threefish_and_Skein_specification": "https://www.schneier.com/wp-content/uploads/2015/01/skein.pdf",
+    "official_submission_KATs": "Skein_1.3_NIST_submission/KAT_MCT/skein_golden_kat_short_internals.txt"
+  },
+  "prospective_prediction": {
+    "asymptotic_search_advantage_claimed": false,
+    "claim_type": "fresh_fullround_38_bit_residual_key_recovery",
+    "complete_domain_will_be_executed": true,
+    "expected_control_exact_assignments": 0,
+    "expected_unique_exact_assignment": true,
+    "success_requires_independent_256_bit_confirmation": true
+  },
+  "protocol_state": "frozen_before_any_A240_candidate_execution",
+  "public_challenge": {
+    "candidate_encoding": "assignment=(key0_bits32_37<<32)|key0_low32",
+    "cipher": "Threefish-256",
+    "control_ciphertext_little_u64_sha256": "ea937503704090d291a8634bcfefd895327c2d45024e3599ef9be4c71736e272",
+    "control_ciphertext_words": [
+      6526091696668407987,
+      14191008806165600048,
+      7890594592182661770,
+      15563314045270301343
+    ],
+    "control_relation": "target_ciphertext_final_word_xor_0x1",
+    "known_key0_upper26": 8727406805698740224,
+    "known_key_words_1_through_3": [
+      12184162199244316852,
+      11226414163041441310,
+      2988110594559273656
+    ],
+    "known_master_key_bits": 218,
+    "known_material_derivation_label": "threefish256/a240/fullround/w38/known-material/v1",
+    "known_material_derivation_sha256": "d6a1ee40f5843da2e4efde8dd319f8b9d6a069f6a20608df1c4acc09f10b2235",
+    "known_tweak_words": [
+      9252865697514594960,
+      6536410145701532725
+    ],
+    "plaintext_words": [
+      13472069834144904001,
+      4389140383935443658,
+      4950073667042607460,
+      8368489937178531392
+    ],
+    "rounds": 72,
+    "target_ciphertext_little_u64_sha256": "8338cde44f5454c2c9ea1e593fb7779e7217e725d9c4c5c33ec99da6638f2e96",
+    "target_ciphertext_words": [
+      6526091696668407987,
+      14191008806165600048,
+      7890594592182661770,
+      15563314045270301342
+    ],
+    "unknown_assignment_bits": 38,
+    "unknown_assignment_included": false,
+    "unknown_key0_low38_included": false,
+    "unknown_key0_low_bits": 38
+  },
+  "public_challenge_sha256": "b7bb97880b48f943e65236c7846fcade0c7131cc8dda9fce8ea5c8d6772ecc3e",
+  "required_validation_gates": {
+    "all_2^38_assignments_must_execute": true,
+    "authentic_AI_native_causal_artifact_required": true,
+    "authentic_CausalReader_reopen_required": true,
+    "bit_flipped_control_required": true,
+    "candidate_execution_against_public_A240_target_before_freeze": false,
+    "early_stop_forbidden": true,
+    "independent_256_bit_confirmation_required": true,
+    "pre_target_scalar_Metal_cross_gate_passed": true,
+    "pre_target_two_official_KATs_passed": true,
+    "pre_target_uint32_boundary_gate_passed": true
+  },
+  "schema": "threefish256-metal-width38-recovery-protocol-v1"
+}
