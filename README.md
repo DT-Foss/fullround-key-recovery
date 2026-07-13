@@ -30,6 +30,16 @@ bit unknown are separate experimental scopes.
 The complete claim matrix and evidence map are in
 [docs/CLAIM_MATRIX.md](docs/CLAIM_MATRIX.md).
 
+## Research lineage
+
+This recovery line grew out of applying causal knowledge-graph methods to
+cipher data: `.causal` led to Live-CASI and then F8.  The twelve full-round F8
+known-key cross-round distinguishers and their four retained architectural
+mechanisms have their own canonical, executable archive at
+[DT-Foss/f8](https://github.com/DT-Foss/f8/tree/68ab9a663d5793b40942b4a4580c208d5973106d).
+This repository links that exact public commit for provenance while keeping the
+F8 runners, result JSON, and figures in their original repository.
+
 ## Verify in seconds
 
 Python 3.10 or newer is required. The exact `dotcausal` 0.3.1 Reader revision
