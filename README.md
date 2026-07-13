@@ -40,6 +40,12 @@ mechanisms have their own canonical, executable archive at
 This repository links that exact public commit for provenance while keeping the
 F8 runners, result JSON, and figures in their original repository.
 
+The subsequent full-round Causal Reader, SHAKE reconstruction, and ChaCha20
+recovery program is preserved independently in
+[DT-Foss/f8-causal-cryptanalysis](https://github.com/DT-Foss/f8-causal-cryptanalysis/tree/1697097b836ac25364668540dd63bd30922a4342).
+The link pins the exact public predecessor state without copying its larger
+artifact history into this focused three-record package.
+
 ## Verify in seconds
 
 Python 3.10 or newer is required. The exact `dotcausal` 0.3.1 Reader revision
