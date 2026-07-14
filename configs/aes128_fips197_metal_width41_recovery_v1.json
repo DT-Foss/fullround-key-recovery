@@ -1,0 +1,157 @@
+{
+  "content_manifest": {
+    "cpu_reference": {
+      "filename": "aes128_reference.py",
+      "sha256": "e8ed10fbcd6975561ed4cf6e6fbcede5dc568e4cf2a4ed08ea7c9088040a6f42"
+    },
+    "independent_numpy_reference": {
+      "filename": "ciphers.py",
+      "sha256": "995818e86a95a6379daefa58d553be5ea2517267086b5d419eb290fcbf351873"
+    },
+    "native_source": {
+      "filename": "aes128_metal_native.swift",
+      "sha256": "bb29f89dbcb27d3575bb3652e6ff65cb901cd27076dc3969ab10075920544cc8"
+    },
+    "prospective_recovery": {
+      "filename": "aes128_metal_recovery.py",
+      "sha256": "31e7f1ef779b5a291538f3cdc9e6d0462d89b2e5c8f087c76a0b315bd2b75887"
+    },
+    "protocol_factory": {
+      "filename": "aes128_metal_protocol_factory.py",
+      "sha256": "ab039893d3b59c231102294c59b5143c6567e5e282e2dba5f7c511d4e6a05b6c"
+    },
+    "qualification": {
+      "filename": "aes128_fips197_metal_qualification_v1.json",
+      "sha256": "925da77ccca1a66fcff1bdcc0683b7816ac61f4a4905bbef5e6c2f36c5cecbb9"
+    },
+    "qualification_source": {
+      "filename": "aes128_metal_qualification.py",
+      "sha256": "6a96852102b8539dcfeb2f17a03a04fe4ef68ed7bf5710da161305e5ec6623af"
+    }
+  },
+  "execution_plan": {
+    "authentic_CausalReader_reopen_required": true,
+    "authentic_dotcausal_v1_required": true,
+    "block_bits": 128,
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "early_stop_forbidden": true,
+    "factual_and_control_computed_by_same_kernel_invocation": true,
+    "filter_bits_per_relation": 256,
+    "full_confirmation": "scalar_FIPS197_reference_plus_independent_NumPy_AES_all_two_blocks",
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_key_word3_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 87,
+    "known_plaintext_ciphertext_pairs": 2,
+    "logical_candidate_count": 2199023255552,
+    "materialized_inferred_closure_required": true,
+    "outer_key_word2_low_bit_count": 9,
+    "outer_slice_count": 512,
+    "persistent_host_process": true,
+    "primitive": "FIPS_197_AES_128_block_cipher",
+    "result_capacity_per_batch": 64,
+    "rounds": 10,
+    "stream_batch_count": 2048,
+    "stream_candidate_count": 1073741824,
+    "unknown_key_bits": 41,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "0baaff31b731058bb868ca36f9e772c8ffde5372fb5f048c2a4d2b502b606220",
+  "information_boundary": {
+    "benchmark_used_only_to_select_width_and_stream_size": true,
+    "builder_process_must_exit_before_runner_construction": true,
+    "candidate_outcomes_used_before_protocol_freeze": false,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_logged_or_returned_by_builder": false,
+    "unknown_assignment_used_only_to_construct_public_ciphertexts": true
+  },
+  "metal_evidence_ledger_anchor": {
+    "embedded_in_qualification": "aes128_fips197_metal_qualification_v1.json",
+    "provenance_scope": "semantic_execution_provenance_not_hardware_attestation",
+    "schema": "aes128-fips197-metal-evidence-ledger-v1",
+    "sha256": "a4c634c3513550cd32cffa99924aa96fd9731b6c3d53cd431b583691cf70ef71"
+  },
+  "primary_sources": {
+    "local_independent_reference": "src/arx_carry_leak/live_casi_v091/ciphers.py",
+    "local_scalar_reference": "aes128_reference.py",
+    "standard": "https://doi.org/10.6028/NIST.FIPS.197-upd1"
+  },
+  "prospective_prediction": {
+    "asymptotic_search_advantage_claimed": false,
+    "claim_type": "fresh_fullround_41_bit_residual_key_recovery",
+    "complete_domain_will_be_executed": true,
+    "expected_control_exact_assignments": 0,
+    "expected_unique_exact_assignment": true,
+    "success_requires_two_independent_CPU_confirmations": true
+  },
+  "protocol_state": "frozen_after_review_before_any_candidate_execution",
+  "public_challenge": {
+    "algorithm": "AES-128",
+    "block_bits": 128,
+    "candidate_encoding": "assignment=(low_bits_of_FIPS_key_word2<<32)|FIPS_key_word3; assignment bit 0 is key byte 15 bit 0",
+    "control_ciphertext_hex": "370e475217130962c10ae6bb4e0735b164cdc2b2547ac3c7b37917d913a8d1a6",
+    "control_ciphertext_sha256": "70260a088179a39123f1223e904e0e90d9fc6aa07a35d6194a2f841593e941b4",
+    "control_relation": "identical_relation_target_final_ciphertext_byte_xor_0x01",
+    "filter_bits": 256,
+    "hidden_assignment_included": false,
+    "known_key_mask_hex": "fffffffffffffffffffffe0000000000",
+    "known_key_word2_mask": 4294966784,
+    "known_key_words_big_endian": [
+      1763183068,
+      3229705068,
+      1079581696,
+      0
+    ],
+    "known_key_zeroed_residual_hex": "691809dcc081636c40591c0000000000",
+    "known_master_key_bits": 87,
+    "known_material_derivation_label": "aes128/fips197/fullround/fresh/w41/known-material/v1",
+    "known_material_derivation_sha256": "57ebafc442c1f3732941903de5b62c43f0e533423ad07684b653ec07f3b70268",
+    "plaintext_blocks": 2,
+    "plaintext_hex": "6f153d30741d4d7af21bd4b934684c2a77499576c9d0fed6cb0e90aeaa101c0b",
+    "rounds": 10,
+    "standard": "FIPS_197",
+    "target_ciphertext_hex": "370e475217130962c10ae6bb4e0735b164cdc2b2547ac3c7b37917d913a8d1a7",
+    "target_ciphertext_sha256": "92b4d50cce41d40e46188ef9533e8e14668688426c6d8c9430ef459ccfa6ad65",
+    "unknown_assignment_bits": 41,
+    "unknown_assignment_included": false
+  },
+  "public_challenge_sha256": "29f8f092fae2002e75e226f1ec97e2e9b611a226a55df75f6cba1be3cabc6bba",
+  "qualification_launch_gate": {
+    "full_domain_launch_authorized": false,
+    "maximum_complete_domain_seconds": 7200,
+    "parameters_safe_for_later_review": true,
+    "projected_selected_width_seconds_at_observed_minimum": 4727.46142578125,
+    "selectable_widths": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "selected_stream_candidate_count": 1073741824,
+    "selected_width": 41,
+    "selection_rule": "maximum integer width in 32...64 whose complete domain fits 7200 seconds at minimum observed end-to-end wall throughput"
+  },
+  "required_validation_gates": {
+    "CPU_Metal_two_block_identity_passed_before_freeze": true,
+    "FIPS197_KATs_passed_before_freeze": true,
+    "all_assignments_must_execute": true,
+    "authentic_CausalReader_reopen_required": true,
+    "authentic_dotcausal_v1_required": true,
+    "early_stop_forbidden": true,
+    "endian_boundary_mapping_passed_before_freeze": true,
+    "hash_bound_actual_Metal_evidence_ledger_passed": true,
+    "independent_NumPy_identity_passed_before_freeze": true,
+    "one_bit_flipped_matched_control_required": true,
+    "review_acknowledged_before_freeze": true,
+    "selected_width_two_hour_projection_passed": true
+  },
+  "schema": "aes128-fips197-metal-width41-recovery-protocol-v1"
+}

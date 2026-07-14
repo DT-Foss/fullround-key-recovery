@@ -36,10 +36,42 @@ def test_a240_independent_full_block_confirmation_and_full_key() -> None:
     ]
 
 
+def test_new_cross_family_recovery_anchors() -> None:
+    expected = {
+        "speck64_128": ("A244", 2**44, 17_005_369_072_308, 128),
+        "simon64_128": ("A246", 2**43, 4_109_884_320_956, 128),
+        "rc5_32_12_16": ("A248", 2**40, 964_575_894_496, 128),
+        "present80": ("A253", 2**38, 250_884_064_964, 128),
+        "ascon_aead128": ("A256", 2**40, 56_559_342_585, 384),
+        "aes128": ("AES-W41", 2**41, 1_914_598_048_454, 256),
+        "salsa20_20": ("A264", 2**42, 1_767_048_180_590, 512),
+    }
+    for name, values in expected.items():
+        attempt, candidates, assignment, confirmation_bits = values
+        result = verify_result(name, ROOT)
+        assert result["attempt_id"] == attempt
+        assert result["logical_candidates"] == candidates
+        assert result["recovered_assignment"] == assignment
+        assert result["independent_confirmation_bits"] == confirmation_bits
+        assert result["factual_models"] == 1
+        assert result["control_models"] == 0
+
+
 def test_complete_suite_opens_all_causal_and_protocol_artifacts() -> None:
     result = verify_all(ROOT)
     assert result["status"] == "verified"
     assert result["author"] == "David Tom Foss"
-    assert result["artifact_count"] == 17
-    assert [row["attempt_id"] for row in result["results"]] == ["A184", "A237", "A240"]
-    assert len(result["causal"]) == 3
+    assert result["artifact_count"] == 94
+    assert [row["attempt_id"] for row in result["results"]] == [
+        "A184",
+        "A237",
+        "A240",
+        "A244",
+        "A246",
+        "A248",
+        "A253",
+        "A256",
+        "AES-W41",
+        "A264",
+    ]
+    assert len(result["causal"]) == 10

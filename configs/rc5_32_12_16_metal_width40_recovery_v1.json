@@ -1,0 +1,134 @@
+{
+  "anchors": {
+    "native_host": {
+      "filename": "rc5_32_12_16_metal_native.swift",
+      "sha256": "99b59fd72ea103b052b16652197842bd1e7146fac26cb699384e023e9a9fbabd"
+    },
+    "qualification": {
+      "attempt_id": "A247",
+      "filename": "rc5_32_12_16_metal_qualification_v1.json",
+      "sha256": "b97270560628f950bc0139570b773cc55278174fcd0d5dffcaa382e864731627"
+    }
+  },
+  "attempt_id": "A248",
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "combined_assignment_encoding": "assignment=(key1_low8<<32)|key0",
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_used": false,
+    "filter_output_bits": 128,
+    "fresh_public_challenge": true,
+    "full_confirmation": "independent_Python_RC5-32/12/16_all_two_blocks_all_128_output_bits",
+    "gpu_logical_thread_count": 1099511627776,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_key0_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 88,
+    "known_plaintext_ciphertext_pairs": 2,
+    "logical_candidate_count": 1099511627776,
+    "outer_key1_low_bit_count": 8,
+    "outer_key1_slice_count": 256,
+    "persistent_host_process": true,
+    "primitive": "RC5-32/12/16_block_cipher",
+    "result_capacity_per_batch": 64,
+    "rounds": 12,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 1024,
+    "stream_batches_per_slice": 4,
+    "stream_candidate_count": 1073741824,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 40,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "495a42253ba0e7ca13ea77bfe6c452540a2005b8592d2bd54c6330c37b88fd7a",
+  "information_boundary": {
+    "A248_candidate_outcomes_used_before_protocol_freeze": false,
+    "benchmark_outcome_used_only_to_select_width_and_batch_size": true,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+    "unknown_assignment_used_only_to_construct_public_ciphertexts": true
+  },
+  "primary_sources": {
+    "algorithm_and_test_vectors": "https://www.rfc-editor.org/rfc/rfc2040"
+  },
+  "prospective_prediction": {
+    "asymptotic_search_advantage_claimed": false,
+    "claim_type": "fresh_fullround_40_bit_residual_key_recovery",
+    "complete_domain_will_be_executed": true,
+    "expected_control_exact_assignments": 0,
+    "expected_unique_exact_assignment": true,
+    "success_requires_independent_two_block_confirmation": true
+  },
+  "protocol_state": "frozen_before_any_A248_candidate_execution",
+  "public_challenge": {
+    "candidate_encoding": "assignment=(key1_low8<<32)|key0",
+    "cipher": "RC5-32/12/16",
+    "control_ciphertext_little_u32_sha256": "1291eb8424e3fb4b015cc86b2300885c6d0a9e9b216ad6a2905823891d40d9bb",
+    "control_ciphertext_words_ab_order": [
+      3146284457,
+      1189086793,
+      4070219664,
+      3655964985
+    ],
+    "control_relation": "target_ciphertext_final_word_xor_0x00000001",
+    "known_key1": 2733965568,
+    "known_key1_mask": 4294967040,
+    "known_key2": 4140601590,
+    "known_key3": 3240199025,
+    "known_master_key_bits": 88,
+    "known_material_derivation_label": "rc5-32-12-16/a248/fullround/w40/known-material/v1",
+    "known_material_derivation_sha256": "cf54a500636c8694c334595352cba2b4199dc64f8d932070ebf3d00605fe9fee",
+    "plaintext_blocks": 2,
+    "plaintext_words_ab_order": [
+      4202524781,
+      443681163,
+      2531214505,
+      2137176543
+    ],
+    "rounds": 12,
+    "target_ciphertext_little_u32_sha256": "7a147ce62cbe15b3bc259c0688b5b79610c9849f85d5694407a2cb58e8a3de5c",
+    "target_ciphertext_words_ab_order": [
+      3146284457,
+      1189086793,
+      4070219664,
+      3655964984
+    ],
+    "unknown_assignment_bits": 40,
+    "unknown_assignment_included": false,
+    "unknown_key0_bits": 32,
+    "unknown_key0_included": false,
+    "unknown_key1_low_bits": 8,
+    "unknown_key1_low_bits_included": false
+  },
+  "public_challenge_sha256": "e4ab71bf070f0036a0d582be31ac5cb5eb6a797501580cd9d7500c78923609b3",
+  "qualification_launch_gate": {
+    "full_domain_launch_authorized": true,
+    "highest_safe_integer_width_at_observed_minimum": 40,
+    "maximum_complete_domain_seconds": 7200,
+    "maximum_supported_residual_width": 64,
+    "observed_minimum_candidates_per_second": 207652465.07477248,
+    "projected_selected_width_seconds_at_observed_minimum": 5294.960632324219,
+    "required_candidates_per_second": 152709948.30222222,
+    "selected_width": 40,
+    "selected_width_under_two_hours": true,
+    "selection_rule": "maximum_supported_integer_width_whose_complete_domain_fits_7200_seconds_at_minimum_end_to_end_wall_throughput",
+    "throughput_statistic": "minimum_end_to_end_wall_throughput_of_all_timed_repeats"
+  },
+  "required_validation_gates": {
+    "all_assignments_must_execute": true,
+    "authentic_AI_native_causal_artifact_required": true,
+    "authentic_CausalReader_reopen_required": true,
+    "bit_flipped_control_required": true,
+    "candidate_execution_against_public_A248_target_before_freeze": false,
+    "early_stop_forbidden": true,
+    "independent_two_block_confirmation_required": true,
+    "pre_target_RFC2040_KATs_passed": true,
+    "pre_target_scalar_Metal_cross_gate_passed": true,
+    "pre_target_selected_width_two_hour_gate_passed": true,
+    "pre_target_uint32_boundary_gate_passed": true
+  },
+  "schema": "rc5-32-12-16-metal-width40-recovery-protocol-v1"
+}

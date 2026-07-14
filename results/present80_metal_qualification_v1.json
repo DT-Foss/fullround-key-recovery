@@ -1,0 +1,320 @@
+{
+  "attempt_id": "A252",
+  "benchmark": {
+    "candidate_count_per_repeat": 33554432,
+    "launch_gate_uses_end_to_end_wall_throughput": true,
+    "maximum_candidates_per_second": 63917196.13371781,
+    "maximum_gpu_candidates_per_second": 63975061.5906182,
+    "median_candidates_per_second": 63733263.552892484,
+    "median_gpu_candidates_per_second": 63791215.72705862,
+    "minimum_candidates_per_second": 63687567.842751555,
+    "minimum_gpu_candidates_per_second": 63756575.11340127,
+    "projected_complete_domain_seconds": {
+      "32": 67.38972800970078,
+      "33": 134.77945601940155,
+      "34": 269.5589120388031,
+      "35": 539.1178240776062,
+      "36": 1078.2356481552124,
+      "37": 2156.471296310425,
+      "38": 4312.94259262085,
+      "39": 8625.8851852417,
+      "40": 17251.7703704834,
+      "41": 34503.5407409668,
+      "42": 69007.0814819336,
+      "43": 138014.1629638672,
+      "44": 276028.3259277344,
+      "45": 552056.6518554688,
+      "46": 1104113.3037109375,
+      "47": 2208226.607421875,
+      "48": 4416453.21484375,
+      "49": 8832906.4296875,
+      "50": 17665812.859375,
+      "51": 35331625.71875,
+      "52": 70663251.4375,
+      "53": 141326502.875,
+      "54": 282653005.75,
+      "55": 565306011.5,
+      "56": 1130612023.0,
+      "57": 2261224046.0,
+      "58": 4522448092.0,
+      "59": 9044896184.0,
+      "60": 18089792368.0,
+      "61": 36179584736.0,
+      "62": 72359169472.0,
+      "63": 144718338944.0,
+      "64": 289436677888.0
+    },
+    "projected_complete_domain_seconds_at_minimum": {
+      "32": 67.43808001279831,
+      "33": 134.87616002559662,
+      "34": 269.75232005119324,
+      "35": 539.5046401023865,
+      "36": 1079.009280204773,
+      "37": 2158.018560409546,
+      "38": 4316.037120819092,
+      "39": 8632.074241638184,
+      "40": 17264.148483276367,
+      "41": 34528.296966552734,
+      "42": 69056.59393310547,
+      "43": 138113.18786621094,
+      "44": 276226.3757324219,
+      "45": 552452.7514648438,
+      "46": 1104905.5029296875,
+      "47": 2209811.005859375,
+      "48": 4419622.01171875,
+      "49": 8839244.0234375,
+      "50": 17678488.046875,
+      "51": 35356976.09375,
+      "52": 70713952.1875,
+      "53": 141427904.375,
+      "54": 282855808.75,
+      "55": 565711617.5,
+      "56": 1131423235.0,
+      "57": 2262846470.0,
+      "58": 4525692940.0,
+      "59": 9051385880.0,
+      "60": 18102771760.0,
+      "61": 36205543520.0,
+      "62": 72411087040.0,
+      "63": 144822174080.0,
+      "64": 289644348160.0
+    },
+    "repeats": 5,
+    "samples": [
+      {
+        "candidate_count": 33554432,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 63687567.842751555,
+        "end_to_end_wall_seconds": 0.5268600000999868,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 63764824.09804373,
+        "gpu_seconds": 0.5262216664850712
+      },
+      {
+        "candidate_count": 33554432,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 63917196.13371781,
+        "end_to_end_wall_seconds": 0.5249672080390155,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 63975061.5906182,
+        "gpu_seconds": 0.524492375086993
+      },
+      {
+        "candidate_count": 33554432,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 63733263.552892484,
+        "end_to_end_wall_seconds": 0.5264822500757873,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 63791215.72705862,
+        "gpu_seconds": 0.5260039586573839
+      },
+      {
+        "candidate_count": 33554432,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 63874149.35518408,
+        "end_to_end_wall_seconds": 0.525320999789983,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 63931637.42386676,
+        "gpu_seconds": 0.5248486250638962
+      },
+      {
+        "candidate_count": 33554432,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 63691275.134750515,
+        "end_to_end_wall_seconds": 0.5268293330445886,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 63756575.11340127,
+        "gpu_seconds": 0.5262897503562272
+      }
+    ],
+    "volatile_performance_only_not_a_recovery_success_rule": true
+  },
+  "boundary_filter_gate": {
+    "exact_boundary_identity": true,
+    "intervals": [
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 0
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [
+          2418085869
+        ],
+        "first_candidate": 2418085741
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 4294967040
+      }
+    ],
+    "target_candidate": 2418085869
+  },
+  "cipher": {
+    "block_bits": 64,
+    "candidate_encoding": "candidate=master_key_low32; configured_middle32=master_key_bits_63..32; configured_high16=master_key_bits_79..64",
+    "filter_output_bits": 128,
+    "final_whitening_key": "K32",
+    "key_schedule": "80-bit register rotate-left-61, high-nibble S-box, round-counter XOR into bits 19..15",
+    "known_plaintext_blocks_per_candidate": 2,
+    "master_key_bits": 80,
+    "references": [
+      "Bogdanov_et_al_CHES_2007_DOI_10.1007/978-3-540-74735-2_31",
+      "ISO_IEC_29192_2_2012_Annex_B.1.1"
+    ],
+    "rounds": 31,
+    "variant": "PRESENT-80"
+  },
+  "cross_implementation_gate": {
+    "candidate_count": 256,
+    "complete_output_bits_checked": 32768,
+    "exact_filter_identity": true,
+    "exact_scalar_identity": true,
+    "first_candidate": 123456789,
+    "output_sha256": "1e619ea6d68edefac269e3ef389ca044f12197c436a7519cbfdf70a233bc9268",
+    "target_candidate": 123456862
+  },
+  "evidence_stage": "PRESENT80_METAL_PRE_TARGET_QUALIFICATION",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "present80-metal-native-v1"
+  },
+  "information_boundary": {
+    "benchmark_outcome_may_select_future_width": true,
+    "complete_residual_key_domain_executed": false,
+    "production_target_selected": false,
+    "production_unknown_assignment_generated": false
+  },
+  "launch_gate": {
+    "full_domain_launch_authorized": true,
+    "highest_safe_integer_width_at_observed_minimum": 38,
+    "maximum_complete_domain_seconds": 7200,
+    "maximum_supported_residual_width": 64,
+    "observed_minimum_candidates_per_second": 63687567.842751555,
+    "projected_selected_width_seconds_at_observed_minimum": 4316.037120819092,
+    "required_candidates_per_second": 38177487.075555556,
+    "selected_width": 38,
+    "selected_width_under_two_hours": true,
+    "selection_rule": "maximum_supported_integer_width_whose_complete_domain_fits_7200_seconds_at_minimum_end_to_end_wall_throughput",
+    "throughput_statistic": "minimum_end_to_end_wall_throughput_of_all_timed_repeats"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "e2dac10336475b051c6f84cbca46861cb60658a47e0b3b5136165a42c6c84a7e",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "80ff97b91b81a8fd603a9f608b9c503acb7d939f11211c576019ef5e1f3fb2db",
+    "warnings_as_errors": true
+  },
+  "provenance_kat_gate": {
+    "actual_ciphertext_words": [
+      4175253587,
+      496450526
+    ],
+    "candidate_low32": 3454992675,
+    "ches_2007_scalar_vectors": [
+      {
+        "actual_ciphertext_hex": "5579c1387b228445",
+        "ciphertext_hex": "5579c1387b228445",
+        "key_hex": "00000000000000000000",
+        "pass": true,
+        "plaintext_hex": "0000000000000000"
+      },
+      {
+        "actual_ciphertext_hex": "e72c46c0f5945049",
+        "ciphertext_hex": "e72c46c0f5945049",
+        "key_hex": "ffffffffffffffffffff",
+        "pass": true,
+        "plaintext_hex": "0000000000000000"
+      },
+      {
+        "actual_ciphertext_hex": "a112ffc72f68417b",
+        "ciphertext_hex": "a112ffc72f68417b",
+        "key_hex": "00000000000000000000",
+        "pass": true,
+        "plaintext_hex": "ffffffffffffffff"
+      },
+      {
+        "actual_ciphertext_hex": "3333dcd3213210d2",
+        "ciphertext_hex": "3333dcd3213210d2",
+        "key_hex": "ffffffffffffffffffff",
+        "pass": true,
+        "plaintext_hex": "ffffffffffffffff"
+      }
+    ],
+    "expected_ciphertext_words_big_endian": [
+      4175253587,
+      496450526
+    ],
+    "iso_iec_29192_2_2012_annex_b_1_1": {
+      "actual_ciphertext_hex": "f8dd50531d973bde",
+      "actual_round_key_hex": {
+        "1": "0123456789abcdef",
+        "2": "1024602468acf135",
+        "31": "b57108e6e7d71e08",
+        "32": "5d37d6ae211cdcf5"
+      },
+      "ciphertext_hex": "f8dd50531d973bde",
+      "ciphertext_pass": true,
+      "key_hex": "0123456789abcdef0123",
+      "pass": true,
+      "plaintext_hex": "0123456789abcdef",
+      "round_key_hex": {
+        "1": "0123456789abcdef",
+        "2": "1024602468acf135",
+        "31": "b57108e6e7d71e08",
+        "32": "5d37d6ae211cdcf5"
+      },
+      "round_keys_pass": true
+    },
+    "master_key_hex": "0123456789abcdef0123",
+    "master_key_parts_candidate_middle32_high16": [
+      3454992675,
+      1164413355,
+      291
+    ],
+    "nonpalindromic_orientation_sentinels": [
+      {
+        "actual_ciphertext_hex": "f7f0bfafd3ceb06c",
+        "ciphertext_hex": "f7f0bfafd3ceb06c",
+        "key_hex": "00010203040506070809",
+        "pass": true,
+        "plaintext_hex": "0123456789abcdef"
+      },
+      {
+        "actual_ciphertext_hex": "cb7d344f360de3b1",
+        "ciphertext_hex": "cb7d344f360de3b1",
+        "key_hex": "0123456789abcdef0123",
+        "pass": true,
+        "plaintext_hex": "fedcba9876543210"
+      }
+    ],
+    "plaintext_words_big_endian": [
+      19088743,
+      2309737967
+    ],
+    "two_block_scalar_identity": true,
+    "word_convention": "PRESENT blocks are two big-endian uint32 words; the 80-bit key is high16 || middle32 || candidate_low32"
+  },
+  "schema": "present80-metal-qualification-v1",
+  "scope": "All 31 PRESENT-80 SPN rounds plus final K32 whitening implementation qualification and volatile throughput measurement; no production recovery target was selected or run."
+}

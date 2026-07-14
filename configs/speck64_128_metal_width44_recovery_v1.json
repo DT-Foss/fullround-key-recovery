@@ -1,0 +1,132 @@
+{
+  "anchors": {
+    "native_host": {
+      "filename": "speck64_128_metal_native.swift",
+      "sha256": "67c0ff467314db77fa24b7715bd9d8bb3672ae91794d35ca8e39b421ef21fdb0"
+    },
+    "qualification": {
+      "attempt_id": "A243",
+      "filename": "speck64_128_metal_qualification_v1.json",
+      "sha256": "ea16b7947e8b7fd3e18791e33149e119d60ede8b678df94dbbec7507733ed653"
+    }
+  },
+  "attempt_id": "A244",
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "combined_assignment_encoding": "key1_low12_times_2^32_plus_key0",
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_used": false,
+    "filter_output_bits": 128,
+    "fresh_public_challenge": true,
+    "full_confirmation": "independent_Python_Speck64/128_all_two_blocks_all_128_output_bits",
+    "gpu_logical_thread_count": 17592186044416,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_key0_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 84,
+    "known_plaintext_ciphertext_pairs": 2,
+    "logical_candidate_count": 17592186044416,
+    "outer_key1_low12_slice_count": 4096,
+    "persistent_host_process": true,
+    "primitive": "Speck64/128_block_cipher",
+    "result_capacity_per_batch": 64,
+    "rounds": 27,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 16384,
+    "stream_batches_per_slice": 4,
+    "stream_candidate_count": 1073741824,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 44,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "f89956c3678e8f8b4e239be172e57217b57bedc429b12c039ca734e9c8f1fe34",
+  "information_boundary": {
+    "A244_candidate_outcomes_used_before_protocol_freeze": false,
+    "benchmark_outcome_used_only_to_select_width_and_batch_size": true,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+    "unknown_assignment_used_only_to_construct_public_ciphertexts": true
+  },
+  "primary_sources": {
+    "algorithm_and_Speck64_128_test_vector": "https://eprint.iacr.org/2013/404.pdf",
+    "official_NSA_publications_index": "https://nsacyber.github.io/simon-speck/publications/"
+  },
+  "prospective_prediction": {
+    "asymptotic_search_advantage_claimed": false,
+    "claim_type": "fresh_fullround_44_bit_residual_key_recovery",
+    "complete_domain_will_be_executed": true,
+    "expected_control_exact_assignments": 0,
+    "expected_unique_exact_assignment": true,
+    "success_requires_independent_two_block_confirmation": true
+  },
+  "protocol_state": "frozen_before_any_A244_candidate_execution",
+  "public_challenge": {
+    "candidate_encoding": "assignment=(key1_low12<<32)|key0",
+    "cipher": "Speck64/128",
+    "control_ciphertext_little_u32_sha256": "e2c3a33aef3ad13ecb08af982627a5b5bffdc088b2942560e3f85abda830553f",
+    "control_ciphertext_words_xy_order": [
+      3606198093,
+      2972251285,
+      2904459452,
+      2781209000
+    ],
+    "control_relation": "target_ciphertext_final_word_xor_0x00000001",
+    "known_key1_upper20": 2986930176,
+    "known_key2": 1761331752,
+    "known_key3": 1214738790,
+    "known_master_key_bits": 84,
+    "known_material_derivation_label": "speck64-128/a244/fullround/w44/known-material/v1",
+    "known_material_derivation_sha256": "812c3043ce14195487ca7c1f1d14d8db901101850ce82f31c63daa5dfdc5cf1d",
+    "plaintext_blocks": 2,
+    "plaintext_words_xy_order": [
+      2693322380,
+      3671652415,
+      39957623,
+      2791048886
+    ],
+    "rounds": 27,
+    "target_ciphertext_little_u32_sha256": "f42f282efd5143b1fac07f6993815694ed01232949daa61f3a453040711d3798",
+    "target_ciphertext_words_xy_order": [
+      3606198093,
+      2972251285,
+      2904459452,
+      2781209001
+    ],
+    "unknown_assignment_bits": 44,
+    "unknown_assignment_included": false,
+    "unknown_key0_bits": 32,
+    "unknown_key0_included": false,
+    "unknown_key1_low12_included": false,
+    "unknown_key1_low_bits": 12
+  },
+  "public_challenge_sha256": "59d30ca435a09987421861ff8bf8c390836ff240e99b68a86a3d5df73716dbf9",
+  "qualification_launch_gate": {
+    "full_domain_launch_authorized": true,
+    "highest_safe_integer_width_at_observed_minimum": 44,
+    "maximum_complete_domain_seconds": 7200,
+    "observed_minimum_candidates_per_second": 3600209640.168731,
+    "projected_width44_seconds_at_observed_minimum": 4886.433792114258,
+    "required_candidates_per_second": 2443359172.8355556,
+    "selected_width": 44,
+    "target_width": 44,
+    "throughput_statistic": "minimum_end_to_end_wall_throughput_of_all_timed_repeats",
+    "width44_under_two_hours": true
+  },
+  "required_validation_gates": {
+    "all_2^44_assignments_must_execute": true,
+    "authentic_AI_native_causal_artifact_required": true,
+    "authentic_CausalReader_reopen_required": true,
+    "bit_flipped_control_required": true,
+    "candidate_execution_against_public_A244_target_before_freeze": false,
+    "early_stop_forbidden": true,
+    "independent_two_block_confirmation_required": true,
+    "pre_target_official_KAT_passed": true,
+    "pre_target_scalar_Metal_cross_gate_passed": true,
+    "pre_target_uint32_boundary_gate_passed": true,
+    "pre_target_width44_two_hour_gate_passed": true
+  },
+  "schema": "speck64-128-metal-width44-recovery-protocol-v1"
+}

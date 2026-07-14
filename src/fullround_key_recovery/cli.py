@@ -7,17 +7,17 @@ import json
 from collections.abc import Sequence
 from pathlib import Path
 
-from .verify import verify_all, verify_result
+from .verify import VERIFY_FUNCTIONS, verify_all, verify_result
 
 
 def main(argv: Sequence[str] | None = None) -> None:
     parser = argparse.ArgumentParser(
-        description="Verify A184, A237, and A240 from immutable artifacts."
+        description="Verify all ten retained full-round recovery records."
     )
     parser.add_argument(
         "result",
         nargs="?",
-        choices=("all", "chacha20", "speck32_64", "threefish256"),
+        choices=("all", *VERIFY_FUNCTIONS),
         default="all",
     )
     parser.add_argument("--root", type=Path)

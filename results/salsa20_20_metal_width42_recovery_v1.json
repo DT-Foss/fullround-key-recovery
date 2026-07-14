@@ -1,0 +1,372 @@
+{
+  "anchor_gates": {
+    "cpu_reference_sha256": "4867a767deb2ba917e7123c8f4fefc6218a858e0750378ceac12028c2871c579",
+    "metal_evidence_ledger_sha256": "bdac6f6477b5ab5dc33e1ef8f641bcb79db3115784027561d382d5c0809b8dcb",
+    "native_source_sha256": "0c7baa4bbdd11c6659b2e14c9d776a9c123b01d03d77a969d863ce5c06fab1ed",
+    "protocol_factory_sha256": "3c8bc3669af64e37ee7f617dd79116039d7c2ef0f1c73038bded7f027347dc77",
+    "protocol_sha256": "589ff6b019921f9898e5104ebb89702cf987d1e798b7ec81887eaa763175a1fc",
+    "public_challenge_sha256": "06dccfe236b22787dfdf8cbc07fe5c6dbc0125925f2b72dc40b56df9a410f951",
+    "qualification_sha256": "656d63d9f6607b0f30ac798ee2d6a0eaba803eba02057d76ea4cadf8fa12480e",
+    "qualification_source_sha256": "c793de778bf03618a65f9e129aa5e405c3c3641c317834b01b4aab9623edcdb1",
+    "recovery_source_sha256": "f60f30d75fb0a5c5a491b9f36b272b010040ed6613775a16d01de037bcaa0538"
+  },
+  "attempt_id": "A264",
+  "causal": {
+    "amplified_state_materialized_in_file": true,
+    "api_id": "a264",
+    "clusters": 2,
+    "embedded_rules": 2,
+    "explicit_triplets": 5,
+    "file_bytes": 5495,
+    "file_sha256": "3bb3345feae3712a03e3a22c5d1a8227f71bd6887a6473450f718561bb68d5e6",
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "inference_recomputed_on_reader_open": false,
+    "integrity_verified_by_authoritative_reader": true,
+    "magic": "CAUSAL\u0000\u0001",
+    "materialized_inferred_triplets": 2,
+    "personal_semantic_readback": {
+      "control_chain": [
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "matched negative control",
+          "evidence": "[]",
+          "is_inferred": false,
+          "m_idx": 11,
+          "mechanism": "zero_exact_control_models",
+          "o_idx": 12,
+          "outcome": "A264:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "zero independently confirmed assignments",
+          "s_idx": 10,
+          "source": "dae147461d1f27c5152041c520ef169c0350103184fc97556cc654f4233d85dd",
+          "trigger": "A264:control_filter_candidate_set"
+        },
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after the identical complete control search.",
+          "is_inferred": true,
+          "m_idx": 14,
+          "mechanism": "verified_matched_control_chain",
+          "o_idx": 12,
+          "outcome": "A264:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "s_idx": 8,
+          "source": "materialized:matched_control_separation",
+          "trigger": "A264:one_bit_flipped_control_relation"
+        }
+      ],
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W42_domain",
+        "predicate": "next_required_gain",
+        "subject": "A264:unique_verified_42_bit_residual_key",
+        "suggested_queries": [
+          "Which frozen operator ranks the held-out W42 region early?",
+          "Can a public reader reduce executed W42 candidates?"
+        ]
+      },
+      "recovery_chain": [
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "independent key confirmation",
+          "evidence": "[{\"actual_block_sha256\": \"c692083c6eed30a468ece396aed8fc42ceaaf1ad7dc2ea1c9b1c88751e55936f\", \"combined_assignment\": 1767048180590, \"complete_512_bit_block_match\": true, \"expected_block_sha256\": \"c692083c6eed30a468ece396aed8fc42ceaaf1ad7dc2ea1c9b1c88751e55936f\", \"implementation\": \"independent_direct_register_schedule_python\", \"key_word0\": 1816621934, \"key_word1_low_bits\": 411, \"relation\": \"factual\"}]",
+          "is_inferred": false,
+          "m_idx": 6,
+          "mechanism": "independent_exact_confirmation",
+          "o_idx": 7,
+          "outcome": "A264:unique_verified_42_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "all 20 rounds; complete 512-bit output block",
+          "s_idx": 5,
+          "source": "dae147461d1f27c5152041c520ef169c0350103184fc97556cc654f4233d85dd",
+          "trigger": "A264:factual_filter_candidate_set"
+        },
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after complete execution and exact confirmation.",
+          "is_inferred": true,
+          "m_idx": 13,
+          "mechanism": "verified_complete_enumeration_and_confirmation_chain",
+          "o_idx": 7,
+          "outcome": "A264:unique_verified_42_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "s_idx": 3,
+          "source": "materialized:complete_domain_plus_independent_confirmation",
+          "trigger": "A264:frozen_public_W42_relation"
+        }
+      ]
+    },
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "total_triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 5495,
+      "file_size_kb": 5.4,
+      "filepath": "research/results/v1/.salsa20_20_metal_width42_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation_sha256": "dae147461d1f27c5152041c520ef169c0350103184fc97556cc654f4233d85dd",
+  "evidence_stage": "SALSA20_20_FULLROUND_42BIT_RESIDUAL_KEY_RECOVERY_RETAINED",
+  "execution": {
+    "checkpoint_persisted_after_every_batch": true,
+    "complete_domain_executed": true,
+    "completed_batches": 16384,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "factual_confirmations": [
+      {
+        "actual_block_sha256": "c692083c6eed30a468ece396aed8fc42ceaaf1ad7dc2ea1c9b1c88751e55936f",
+        "combined_assignment": 1767048180590,
+        "complete_512_bit_block_match": true,
+        "expected_block_sha256": "c692083c6eed30a468ece396aed8fc42ceaaf1ad7dc2ea1c9b1c88751e55936f",
+        "implementation": "independent_direct_register_schedule_python",
+        "key_word0": 1816621934,
+        "key_word1_low_bits": 411,
+        "relation": "factual"
+      }
+    ],
+    "factual_filter_matches": [
+      1767048180590
+    ],
+    "factual_full_matches": [
+      1767048180590
+    ],
+    "gpu_seconds": 3153.3164217788726,
+    "known_key_bits": 214,
+    "logical_candidate_count": 4398046511104,
+    "newly_executed_assignment_count": 4398046511104,
+    "resumed_assignment_count": 0,
+    "success_evaluated_only_after_complete_domain": true,
+    "total_executed_assignment_count": 4398046511104,
+    "unique_exact_assignment": true,
+    "unknown_key_bits": 42,
+    "volatile_candidates_per_gpu_second": 1394736817.6337156,
+    "volatile_wall_seconds": 3171.8903417908587
+  },
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_forbidden": true,
+    "early_stop_used": false,
+    "factual_and_control_computed_by_same_kernel_invocation": true,
+    "filter_output_bits": 512,
+    "fresh_public_challenge": true,
+    "gpu_logical_thread_count": 4398046511104,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "independent_confirmation": "separate_direct_schedule_Python_Salsa20/20_full_512_bit_block",
+    "inner_key_word0_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 214,
+    "logical_candidate_count": 4398046511104,
+    "outer_key_word1_low_bit_count": 10,
+    "outer_slice_count": 1024,
+    "persistent_host_process": true,
+    "primitive": "Salsa20/20_stream_block_function",
+    "result_capacity_per_batch": 64,
+    "rounds": 20,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 16384,
+    "stream_candidate_count": 268435456,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 42,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "1e6c0d3e4e5f1bc432f6336827c7879903de0cf776668e0a44363dadabebeba6",
+  "execution_sha256": "40782363ca67848e8cb6fb51c9c6374c882178ed3560ddab2051411abff43366",
+  "host_identity": {
+    "blocks_execution_width": 32,
+    "blocks_max_threads_per_group": 1024,
+    "complete_block_words": 16,
+    "device": "Apple M4",
+    "filter_execution_width": 32,
+    "filter_max_threads_per_group": 1024,
+    "recommended_max_working_set_bytes": 12713115648,
+    "salsa20_rounds": 20,
+    "shader_runtime_compiled": true
+  },
+  "mapping_gate": {
+    "exact_scalar_filter_and_mapping_identity": true,
+    "full_block_bits_per_row": 512,
+    "rows": [
+      {
+        "block_sha256": "1ce096f546749be46fa930fc72458507bd03fa6576b70ca39ac181311ddfe9ff",
+        "combined_assignment": 0,
+        "exact_native_scalar_independent_identity": true,
+        "inner_key_word0": 0,
+        "outer_slice": 0
+      },
+      {
+        "block_sha256": "a0a6674a214bc1566f51acf1d4791f2e470c49825210a32f607102c6914c92e2",
+        "combined_assignment": 1,
+        "exact_native_scalar_independent_identity": true,
+        "inner_key_word0": 1,
+        "outer_slice": 0
+      },
+      {
+        "block_sha256": "401c0bd814725eacd35c9dcce135ae8fb0c549563b648fff17ca85de5fffd351",
+        "combined_assignment": 2147483647,
+        "exact_native_scalar_independent_identity": true,
+        "inner_key_word0": 2147483647,
+        "outer_slice": 0
+      },
+      {
+        "block_sha256": "a5d86598dd85ff59855f1d6307c78e6ebebcf1423f38949c38836499b0a0fd0c",
+        "combined_assignment": 2147483648,
+        "exact_native_scalar_independent_identity": true,
+        "inner_key_word0": 2147483648,
+        "outer_slice": 0
+      },
+      {
+        "block_sha256": "214def641772b6552b633f0792e3d6b07a6c7095f20db52a99faf2ba317be700",
+        "combined_assignment": 4294967297,
+        "exact_native_scalar_independent_identity": true,
+        "inner_key_word0": 1,
+        "outer_slice": 1
+      },
+      {
+        "block_sha256": "ea1f206f1bc1a98b1452b356ecea3317569ec49e67e107e60926c55e052c33a9",
+        "combined_assignment": 4398046511103,
+        "exact_native_scalar_independent_identity": true,
+        "inner_key_word0": 4294967295,
+        "outer_slice": 1023
+      }
+    ]
+  },
+  "native_build": {
+    "compile_command": [
+      "/usr/bin/swiftc",
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors",
+      "-framework",
+      "Foundation",
+      "-framework",
+      "CoreFoundation",
+      "-framework",
+      "Metal",
+      "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/experiments/salsa20_20_metal_native.swift",
+      "-o",
+      "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/build/salsa20_20_metal_width42/.salsa20_20_metal_0c7baa4bbdd11c66.tmp"
+    ],
+    "compiler": "/usr/bin/swiftc",
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/build/salsa20_20_metal_width42/salsa20_20_metal_0c7baa4bbdd11c66",
+    "executable_sha256": "14156a1a68afd6c3aaa0dcac7ddbd79e1e4347740921ba5a4dc1c40a412cad18",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/experiments/salsa20_20_metal_native.swift",
+    "source_sha256": "0c7baa4bbdd11c6659b2e14c9d776a9c123b01d03d77a969d863ce5c06fab1ed",
+    "warnings_as_errors": true
+  },
+  "protocol_gate": {
+    "artifact_sha256": "589ff6b019921f9898e5104ebb89702cf987d1e798b7ec81887eaa763175a1fc",
+    "information_boundary": {
+      "benchmark_outcome_used_only_to_select_width_and_batch_size": true,
+      "candidate_outcomes_used_before_protocol_freeze": false,
+      "runner_imported_or_constructed_by_builder": false,
+      "unknown_assignment_available_to_runner_before_execution": false,
+      "unknown_assignment_generated_once_from_os_randomness": true,
+      "unknown_assignment_in_protocol_or_source": false,
+      "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+      "unknown_assignment_used_only_to_construct_public_block": true
+    },
+    "prospective_prediction": {
+      "asymptotic_search_advantage_claimed": false,
+      "claim_type": "fresh_fullround_42_bit_residual_key_recovery",
+      "complete_domain_will_be_executed": true,
+      "expected_control_exact_assignments": 0,
+      "expected_unique_exact_assignment": true,
+      "success_requires_independent_full_block_confirmation": true
+    },
+    "protocol_state": "frozen_before_any_A264_candidate_execution"
+  },
+  "public_challenge": {
+    "algorithm": "Salsa20/20",
+    "byte_semantics": "Bernstein_little_endian",
+    "candidate_encoding": "assignment=(key_word1_low10_bits<<32)|key_word0_little_endian",
+    "control_block_hex": "40d57d148a6be291f90d38c7d6b5d5d2d65fdca3765d5cff59eb0cdf175c18a5a6dff54fdc89512bf06ca3bd891e3ad2245b706f890c79f255d69fe8fc827ade",
+    "control_block_sha256": "dad7f845fa09bc48e8b7df80e8c2ca41571d60a2bbb7f799e10f04e7559992f5",
+    "control_relation": "identical_input_target_final_block_bit_xor_0x01",
+    "counter": 12147667806934997545,
+    "counter_bits": 64,
+    "counter_words_little_endian": [
+      1640962601,
+      2828349314
+    ],
+    "filter_bits": 512,
+    "key_bits": 256,
+    "known_key_mask_hex_little_endian_integer": "0000000000fcffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "known_key_word1_mask": 4294966272,
+    "known_key_words_little_endian": [
+      0,
+      3770628096,
+      2277822258,
+      1861156912,
+      3799256028,
+      2808254761,
+      1801243748,
+      3596201653
+    ],
+    "known_key_zeroed_residual_hex": "000000000038bfe032cfc4873000ef6edc0b74e2299162a764cc5c6bb5ae59d6",
+    "known_master_key_bits": 214,
+    "known_material_derivation_label": "salsa20-20/a264/fullround/w42/known-material/v1",
+    "known_material_derivation_sha256": "c8a7600540a99307f3827e7892fe635b4bb55cd0cee08829dec12000d55e28e6",
+    "nonce_bits": 64,
+    "nonce_hex": "155848bbe289b74a",
+    "rounds": 20,
+    "target_block_hex": "40d57d148a6be291f90d38c7d6b5d5d2d65fdca3765d5cff59eb0cdf175c18a5a6dff54fdc89512bf06ca3bd891e3ad2245b706f890c79f255d69fe8fc827adf",
+    "target_block_sha256": "c692083c6eed30a468ece396aed8fc42ceaaf1ad7dc2ea1c9b1c88751e55936f",
+    "unknown_assignment_bits": 42,
+    "unknown_assignment_included": false,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word0_included": false,
+    "unknown_key_word1_low_bits": 10,
+    "unknown_key_word1_low_bits_included": false
+  },
+  "public_challenge_sha256": "06dccfe236b22787dfdf8cbc07fe5c6dbc0125925f2b72dc40b56df9a410f951",
+  "recovery": {
+    "candidate_identities_persisted_in_checkpoint": true,
+    "recovered_combined_assignments": [
+      1767048180590
+    ],
+    "recovered_key_word0": [
+      1816621934
+    ],
+    "recovered_key_word1_low_bits": [
+      411
+    ],
+    "recovery_accepted_only_after_complete_domain_execution": true,
+    "success_evaluated_only_after_complete_domain": true,
+    "unknown_assignment_source_discarded_before_runner_process": true
+  },
+  "result": "The Metal runner executed every assignment in the fresh 42-bit residual domain through all 20 Salsa20 rounds and independently confirmed the unique result over the complete 512-bit block.",
+  "schema": "salsa20-20-metal-width42-recovery-v1"
+}

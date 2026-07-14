@@ -1,0 +1,199 @@
+{
+  "attempt_id": "A245",
+  "benchmark": {
+    "candidate_count_per_repeat": 536870912,
+    "launch_gate_uses_end_to_end_wall_throughput": true,
+    "maximum_candidates_per_second": 2291220290.1017256,
+    "maximum_gpu_candidates_per_second": 2297054025.694689,
+    "median_candidates_per_second": 2284149649.674952,
+    "median_gpu_candidates_per_second": 2295467870.893984,
+    "minimum_candidates_per_second": 2152370242.1892347,
+    "minimum_gpu_candidates_per_second": 2159085130.6253734,
+    "projected_complete_domain_seconds": {
+      "40": 481.3658456802368,
+      "41": 962.7316913604736,
+      "42": 1925.4633827209473,
+      "43": 3850.9267654418945,
+      "44": 7701.853530883789,
+      "45": 15403.707061767578,
+      "46": 30807.414123535156,
+      "47": 61614.82824707031,
+      "48": 123229.65649414062
+    },
+    "projected_complete_domain_seconds_at_minimum": {
+      "40": 510.83759021759033,
+      "41": 1021.6751804351807,
+      "42": 2043.3503608703613,
+      "43": 4086.7007217407227,
+      "44": 8173.401443481445,
+      "45": 16346.80288696289,
+      "46": 32693.60577392578,
+      "47": 65387.21154785156,
+      "48": 130774.42309570312
+    },
+    "repeats": 5,
+    "samples": [
+      {
+        "candidate_count": 536870912,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 2152370242.1892347,
+        "end_to_end_wall_seconds": 0.24943241709843278,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 2159085130.6253734,
+        "gpu_seconds": 0.24865666683763266
+      },
+      {
+        "candidate_count": 536870912,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 2291220290.1017256,
+        "end_to_end_wall_seconds": 0.2343165841884911,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 2297054025.694689,
+        "gpu_seconds": 0.23372149979695678
+      },
+      {
+        "candidate_count": 536870912,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 2288330788.971941,
+        "end_to_end_wall_seconds": 0.23461245838552713,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 2295467870.893984,
+        "gpu_seconds": 0.23388299997895956
+      },
+      {
+        "candidate_count": 536870912,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 2281774432.6515894,
+        "end_to_end_wall_seconds": 0.23528658412396908,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 2288864114.502295,
+        "gpu_seconds": 0.23455779161304235
+      },
+      {
+        "candidate_count": 536870912,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 2284149649.674952,
+        "end_to_end_wall_seconds": 0.23504191683605313,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 2296420282.3968763,
+        "gpu_seconds": 0.23378599993884563
+      }
+    ],
+    "volatile_performance_only_not_a_recovery_success_rule": true
+  },
+  "boundary_filter_gate": {
+    "exact_boundary_identity": true,
+    "intervals": [
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 0
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [
+          2418085869
+        ],
+        "first_candidate": 2418085741
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 4294967040
+      }
+    ],
+    "target_candidate": 2418085869
+  },
+  "cipher": {
+    "block_bits": 64,
+    "candidate_encoding": "candidate=k0; configured_key1=k1, key2=k2, key3=k3",
+    "filter_output_bits": 128,
+    "known_plaintext_blocks_per_candidate": 2,
+    "master_key_bits": 128,
+    "rounds": 44,
+    "variant": "SIMON64/128",
+    "z_sequence": "z3"
+  },
+  "cross_implementation_gate": {
+    "candidate_count": 256,
+    "complete_output_bits_checked": 32768,
+    "exact_filter_identity": true,
+    "exact_scalar_identity": true,
+    "first_candidate": 123456789,
+    "output_sha256": "01a84402e073d5ceb00f82d614fb1ea249dde73395da19a3a87ae12c5880257b",
+    "target_candidate": 123456862
+  },
+  "evidence_stage": "SIMON64_128_METAL_PRE_TARGET_QUALIFICATION",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "simon64-128-metal-native-v1"
+  },
+  "information_boundary": {
+    "benchmark_outcome_may_select_future_width": true,
+    "complete_residual_key_domain_executed": false,
+    "production_target_selected": false,
+    "production_unknown_assignment_generated": false
+  },
+  "launch_gate": {
+    "full_domain_launch_authorized": true,
+    "highest_safe_integer_width_at_observed_minimum": 43,
+    "maximum_complete_domain_seconds": 7200,
+    "maximum_supported_residual_width": 64,
+    "observed_minimum_candidates_per_second": 2152370242.1892347,
+    "projected_selected_width_seconds_at_observed_minimum": 4086.7007217407227,
+    "required_candidates_per_second": 1221679586.4177778,
+    "selected_width": 43,
+    "selected_width_under_two_hours": true,
+    "selection_rule": "maximum_supported_integer_width_whose_complete_domain_fits_7200_seconds_at_minimum_end_to_end_wall_throughput",
+    "throughput_statistic": "minimum_end_to_end_wall_throughput_of_all_timed_repeats"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "10ea0a3b117ba43a22706d226169421c0012842481ef85442a99d5e38db3c75f",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "e868d0d19dc3962845a4aedb9e3a7cdf8eaf7a14746ee3d69312b37b1f628880",
+    "warnings_as_errors": true
+  },
+  "official_kat_gate": {
+    "actual_ciphertext_words": [
+      1154022432,
+      3118440570
+    ],
+    "candidate_encoding": 50462976,
+    "expected_ciphertext_words": [
+      1154022432,
+      3118440570
+    ],
+    "master_key_words_paper_order": [
+      50462976,
+      185207048,
+      319951120,
+      454695192
+    ],
+    "plaintext_words": [
+      1701538156,
+      543452789
+    ],
+    "two_block_scalar_identity": true
+  },
+  "schema": "simon64-128-metal-qualification-v1",
+  "scope": "Full 44-round SIMON64/128 implementation qualification and volatile throughput measurement; no production recovery target was selected or run."
+}

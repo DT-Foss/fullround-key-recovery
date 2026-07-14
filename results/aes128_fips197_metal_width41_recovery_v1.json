@@ -1,0 +1,309 @@
+{
+  "anchor_gates": {
+    "cpu_reference_sha256": "e8ed10fbcd6975561ed4cf6e6fbcede5dc568e4cf2a4ed08ea7c9088040a6f42",
+    "independent_numpy_reference_sha256": "995818e86a95a6379daefa58d553be5ea2517267086b5d419eb290fcbf351873",
+    "metal_evidence_ledger_sha256": "a4c634c3513550cd32cffa99924aa96fd9731b6c3d53cd431b583691cf70ef71",
+    "native_source_sha256": "bb29f89dbcb27d3575bb3652e6ff65cb901cd27076dc3969ab10075920544cc8",
+    "prospective_recovery_sha256": "31e7f1ef779b5a291538f3cdc9e6d0462d89b2e5c8f087c76a0b315bd2b75887",
+    "protocol_factory_sha256": "ab039893d3b59c231102294c59b5143c6567e5e282e2dba5f7c511d4e6a05b6c",
+    "protocol_sha256": "ec58c69f879276bfb8725d462bbb1e0f142d5332bc611b39c8cec967f0c78d02",
+    "public_challenge_sha256": "29f8f092fae2002e75e226f1ec97e2e9b611a226a55df75f6cba1be3cabc6bba",
+    "qualification_sha256": "925da77ccca1a66fcff1bdcc0683b7816ac61f4a4905bbef5e6c2f36c5cecbb9",
+    "qualification_source_sha256": "6a96852102b8539dcfeb2f17a03a04fe4ef68ed7bf5710da161305e5ec6623af"
+  },
+  "causal": {
+    "amplified_state_materialized_in_file": true,
+    "api_id": "aes128v1",
+    "clusters": 2,
+    "embedded_rules": 2,
+    "explicit_triplets": 5,
+    "file_bytes": 5654,
+    "file_sha256": "47873d8f6e0ffd057ace0be11abe882a82d97a723443c23ec547ca83331ccb0a",
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "inference_recomputed_on_reader_open": false,
+    "integrity_verified_by_authoritative_reader": true,
+    "magic": "CAUSAL\u0000\u0001",
+    "materialized_inferred_triplets": 2,
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "semantic_readback": {
+      "control_chain": [
+        {
+          "confidence": 1.0,
+          "domain": "matched negative control",
+          "evidence": "[]",
+          "inference_chain": [],
+          "is_inferred": false,
+          "mechanism": "zero_exact_control_models",
+          "outcome": "AES128:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "zero independently confirmed assignments",
+          "source": "90a72f0e39498d177adf18e3cfbf7228451f87cc24296c09c1f2adbced3ea50d",
+          "trigger": "AES128:control_filter_candidate_set"
+        },
+        {
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after the identical complete control search.",
+          "inference_chain": [],
+          "is_inferred": true,
+          "mechanism": "verified_matched_control_chain",
+          "outcome": "AES128:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "source": "materialized:matched_control_separation",
+          "trigger": "AES128:one_bit_flipped_control_relation"
+        }
+      ],
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W41_domain",
+        "predicate": "next_required_gain",
+        "subject": "AES128:unique_verified_41_bit_residual_key",
+        "suggested_queries": [
+          "Which frozen public operator ranks a held-out W41 region early?",
+          "Can a causal reader reduce executed W41 assignments?"
+        ]
+      },
+      "recovery_chain": [
+        {
+          "confidence": 1.0,
+          "domain": "independent key confirmation",
+          "evidence": "[{\"combined_assignment\": 1914598048454, \"complete_two_block_match\": true, \"independent_ciphertext_sha256\": \"92b4d50cce41d40e46188ef9533e8e14668688426c6d8c9430ef459ccfa6ad65\", \"independent_source_sha256\": \"995818e86a95a6379daefa58d553be5ea2517267086b5d419eb290fcbf351873\", \"key_hex\": \"691809dcc081636c40591dbdc6efc2c6\", \"output_bits_checked\": 256, \"relation\": \"factual\", \"scalar_ciphertext_sha256\": \"92b4d50cce41d40e46188ef9533e8e14668688426c6d8c9430ef459ccfa6ad65\", \"scalar_independent_identity\": tru",
+          "inference_chain": [],
+          "is_inferred": false,
+          "mechanism": "two_reference_exact_confirmation",
+          "outcome": "AES128:unique_verified_41_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "2 blocks; 256 bits; scalar FIPS and independent NumPy AES",
+          "source": "90a72f0e39498d177adf18e3cfbf7228451f87cc24296c09c1f2adbced3ea50d",
+          "trigger": "AES128:factual_filter_candidate_set"
+        },
+        {
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after complete execution and exact confirmation.",
+          "inference_chain": [],
+          "is_inferred": true,
+          "mechanism": "verified_complete_enumeration_and_confirmation_chain",
+          "outcome": "AES128:unique_verified_41_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "source": "materialized:complete_domain_plus_two_reference_confirmation",
+          "trigger": "AES128:frozen_public_W41_relation"
+        }
+      ]
+    },
+    "total_triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 5654,
+      "file_size_kb": 5.5,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.aes128_fips197_metal_width41_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation_content_sha256": "90a72f0e39498d177adf18e3cfbf7228451f87cc24296c09c1f2adbced3ea50d",
+  "evidence_stage": "AES128_FIPS197_FULLROUND_41BIT_RESIDUAL_KEY_RECOVERY",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "executed_assignment_count": 2199023255552,
+    "factual_confirmations": [
+      {
+        "combined_assignment": 1914598048454,
+        "complete_two_block_match": true,
+        "independent_ciphertext_sha256": "92b4d50cce41d40e46188ef9533e8e14668688426c6d8c9430ef459ccfa6ad65",
+        "independent_source_sha256": "995818e86a95a6379daefa58d553be5ea2517267086b5d419eb290fcbf351873",
+        "key_hex": "691809dcc081636c40591dbdc6efc2c6",
+        "output_bits_checked": 256,
+        "relation": "factual",
+        "scalar_ciphertext_sha256": "92b4d50cce41d40e46188ef9533e8e14668688426c6d8c9430ef459ccfa6ad65",
+        "scalar_independent_identity": true
+      }
+    ],
+    "factual_filter_matches": [
+      1914598048454
+    ],
+    "factual_full_matches": [
+      1914598048454
+    ],
+    "gpu_seconds": 2255.3558697528206,
+    "independent_two_reference_confirmation_after_completion": true,
+    "known_key_bits": 87,
+    "logical_candidate_count": 2199023255552,
+    "newly_executed_assignment_count": 2199023255552,
+    "resumed_assignment_count": 0,
+    "success_evaluated_only_after_complete_domain": true,
+    "unique_exact_assignment": true,
+    "unknown_key_bits": 41,
+    "volatile_candidates_per_gpu_second": 975022738.115828,
+    "volatile_wall_seconds": 2257.3140379162505
+  },
+  "execution_content_sha256": "a3c9762798c19ce4c6190ef4016e8f591c674c842a7e3b82ab50ea42aaf54655",
+  "execution_plan": {
+    "authentic_CausalReader_reopen_required": true,
+    "authentic_dotcausal_v1_required": true,
+    "block_bits": 128,
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "early_stop_forbidden": true,
+    "factual_and_control_computed_by_same_kernel_invocation": true,
+    "filter_bits_per_relation": 256,
+    "full_confirmation": "scalar_FIPS197_reference_plus_independent_NumPy_AES_all_two_blocks",
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_key_word3_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 87,
+    "known_plaintext_ciphertext_pairs": 2,
+    "logical_candidate_count": 2199023255552,
+    "materialized_inferred_closure_required": true,
+    "outer_key_word2_low_bit_count": 9,
+    "outer_slice_count": 512,
+    "persistent_host_process": true,
+    "primitive": "FIPS_197_AES_128_block_cipher",
+    "result_capacity_per_batch": 64,
+    "rounds": 10,
+    "stream_batch_count": 2048,
+    "stream_candidate_count": 1073741824,
+    "unknown_key_bits": 41,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "0baaff31b731058bb868ca36f9e772c8ffde5372fb5f048c2a4d2b502b606220",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "candidate_maps_to_key_bytes_12_through_15_big_endian": true,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "fips197_external_byte_order": true,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "aes128-fips197-metal-native-v1"
+  },
+  "mapping_gate": {
+    "exact_scalar_filter_and_mapping_identity": true,
+    "fips197_big_endian_key_word_mapping": true,
+    "rows": [
+      {
+        "candidate_count": 8,
+        "control_matches": [],
+        "factual_combined_assignment": 65536,
+        "factual_inner_candidate": 65536,
+        "first_inner_candidate": 65532,
+        "label": "inner_low16_carry",
+        "outer_assignment": 0,
+        "outputs_sha256": "8e82493dbe14bbb0ce1163fbc1d7ff2f1542a52e4707770904f22f7f25a78cd9"
+      },
+      {
+        "candidate_count": 8,
+        "control_matches": [],
+        "factual_combined_assignment": 1101659111424,
+        "factual_inner_candidate": 2147483648,
+        "first_inner_candidate": 2147483644,
+        "label": "inner_high_bit",
+        "outer_assignment": 256,
+        "outputs_sha256": "9a5a04b98a96d349745e44f9818a6194a67c7090e2edb9baa319a061b313861c"
+      },
+      {
+        "candidate_count": 8,
+        "control_matches": [],
+        "factual_combined_assignment": 2199023255551,
+        "factual_inner_candidate": 4294967295,
+        "first_inner_candidate": 4294967288,
+        "label": "inner_terminal",
+        "outer_assignment": 511,
+        "outputs_sha256": "d70d6970bf94337d0d18ab630a0ab0fc849db4e2b1d96107104e2f48ba1e6284"
+      }
+    ]
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "859db6c5100caa0e68da685a6062e4ecfb1d641e45186c7ecb9d7bb3d5932485",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source_filename": "aes128_metal_native.swift",
+    "source_sha256": "bb29f89dbcb27d3575bb3652e6ff65cb901cd27076dc3969ab10075920544cc8",
+    "warnings_as_errors": true
+  },
+  "protocol_gate": {
+    "artifact_sha256": "ec58c69f879276bfb8725d462bbb1e0f142d5332bc611b39c8cec967f0c78d02",
+    "information_boundary": {
+      "benchmark_used_only_to_select_width_and_stream_size": true,
+      "builder_process_must_exit_before_runner_construction": true,
+      "candidate_outcomes_used_before_protocol_freeze": false,
+      "unknown_assignment_available_to_runner_before_execution": false,
+      "unknown_assignment_generated_once_from_os_randomness": true,
+      "unknown_assignment_in_protocol_or_source": false,
+      "unknown_assignment_logged_or_returned_by_builder": false,
+      "unknown_assignment_used_only_to_construct_public_ciphertexts": true
+    },
+    "protocol_state": "frozen_after_review_before_any_candidate_execution"
+  },
+  "public_challenge": {
+    "algorithm": "AES-128",
+    "block_bits": 128,
+    "candidate_encoding": "assignment=(low_bits_of_FIPS_key_word2<<32)|FIPS_key_word3; assignment bit 0 is key byte 15 bit 0",
+    "control_ciphertext_hex": "370e475217130962c10ae6bb4e0735b164cdc2b2547ac3c7b37917d913a8d1a6",
+    "control_ciphertext_sha256": "70260a088179a39123f1223e904e0e90d9fc6aa07a35d6194a2f841593e941b4",
+    "control_relation": "identical_relation_target_final_ciphertext_byte_xor_0x01",
+    "filter_bits": 256,
+    "hidden_assignment_included": false,
+    "known_key_mask_hex": "fffffffffffffffffffffe0000000000",
+    "known_key_word2_mask": 4294966784,
+    "known_key_words_big_endian": [
+      1763183068,
+      3229705068,
+      1079581696,
+      0
+    ],
+    "known_key_zeroed_residual_hex": "691809dcc081636c40591c0000000000",
+    "known_master_key_bits": 87,
+    "known_material_derivation_label": "aes128/fips197/fullround/fresh/w41/known-material/v1",
+    "known_material_derivation_sha256": "57ebafc442c1f3732941903de5b62c43f0e533423ad07684b653ec07f3b70268",
+    "plaintext_blocks": 2,
+    "plaintext_hex": "6f153d30741d4d7af21bd4b934684c2a77499576c9d0fed6cb0e90aeaa101c0b",
+    "rounds": 10,
+    "standard": "FIPS_197",
+    "target_ciphertext_hex": "370e475217130962c10ae6bb4e0735b164cdc2b2547ac3c7b37917d913a8d1a7",
+    "target_ciphertext_sha256": "92b4d50cce41d40e46188ef9533e8e14668688426c6d8c9430ef459ccfa6ad65",
+    "unknown_assignment_bits": 41,
+    "unknown_assignment_included": false
+  },
+  "public_challenge_sha256": "29f8f092fae2002e75e226f1ec97e2e9b611a226a55df75f6cba1be3cabc6bba",
+  "recovery": {
+    "accepted_only_after_complete_domain": true,
+    "candidate_identities_persisted_in_checkpoint": true,
+    "recovered_assignments": [
+      1914598048454
+    ],
+    "recovered_key_word2_low_bits": [
+      445
+    ],
+    "recovered_key_word3": [
+      3337601734
+    ],
+    "success_evaluated_only_after_complete_domain": true
+  },
+  "schema": "aes128-fips197-metal-width41-recovery-v1"
+}

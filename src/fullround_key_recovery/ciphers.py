@@ -16,6 +16,7 @@ THREEFISH256_ROTATIONS = (
     (58, 22),
     (32, 32),
 )
+SIMON_Z3 = 0b11011011101011000110010111100000010010001010011100110100001111
 
 
 def _rol(value: int, amount: int, width: int) -> int:
@@ -81,6 +82,52 @@ def speck32_64_encrypt(x: int, y: int, master_key: list[int]) -> tuple[int, int]
     for round_key in speck32_64_round_keys(master_key):
         x = ((_ror(x, 7, 16) + y) & 0xFFFF) ^ round_key
         y = _rol(y, 2, 16) ^ x
+    return x, y
+
+
+def speck64_128_round_keys(master_key: list[int]) -> list[int]:
+    """Expand a paper-order ``[K0, K1, K2, K3]`` Speck64/128 key."""
+    if len(master_key) != 4 or any(word < 0 or word > MASK32 for word in master_key):
+        raise ValueError("Speck64/128 expects four uint32 key words")
+    keys = [master_key[0]]
+    l_words = list(master_key[1:])
+    for index in range(26):
+        new_l = ((_ror(l_words[index], 8, 32) + keys[index]) & MASK32) ^ index
+        l_words.append(new_l)
+        keys.append(_rol(keys[index], 3, 32) ^ new_l)
+    return keys
+
+
+def speck64_128_encrypt(x: int, y: int, master_key: list[int]) -> tuple[int, int]:
+    """Encrypt one block with all 27 rounds of Speck64/128."""
+    if x < 0 or x > MASK32 or y < 0 or y > MASK32:
+        raise ValueError("Speck64/128 block words must fit in uint32")
+    for round_key in speck64_128_round_keys(master_key):
+        x = ((_ror(x, 8, 32) + y) & MASK32) ^ round_key
+        y = _rol(y, 3, 32) ^ x
+    return x, y
+
+
+def simon64_128_round_keys(master_key: list[int]) -> list[int]:
+    """Expand a paper-order ``[K0, K1, K2, K3]`` SIMON64/128 key."""
+    if len(master_key) != 4 or any(word < 0 or word > MASK32 for word in master_key):
+        raise ValueError("SIMON64/128 expects four uint32 key words")
+    keys = list(master_key)
+    for index in range(4, 44):
+        value = _ror(keys[index - 1], 3, 32) ^ keys[index - 3]
+        value ^= _ror(value, 1, 32)
+        z_bit = (SIMON_Z3 >> (61 - ((index - 4) % 62))) & 1
+        keys.append(keys[index - 4] ^ value ^ (MASK32 ^ 3) ^ z_bit)
+    return keys
+
+
+def simon64_128_encrypt(x: int, y: int, master_key: list[int]) -> tuple[int, int]:
+    """Encrypt one block with all 44 rounds of SIMON64/128."""
+    if x < 0 or x > MASK32 or y < 0 or y > MASK32:
+        raise ValueError("SIMON64/128 block words must fit in uint32")
+    for round_key in simon64_128_round_keys(master_key):
+        function = (_rol(x, 1, 32) & _rol(x, 8, 32)) ^ _rol(x, 2, 32)
+        x, y = (y ^ function ^ round_key) & MASK32, x
     return x, y
 
 

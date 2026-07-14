@@ -1,0 +1,347 @@
+{
+  "anchor_gates": {
+    "native_source_sha256": "99b59fd72ea103b052b16652197842bd1e7146fac26cb699384e023e9a9fbabd",
+    "protocol_sha256": "1fb8b2b00e53a800ab54deb510925d99774f647936d199b2694cda5e38505f83",
+    "public_challenge_sha256": "e4ab71bf070f0036a0d582be31ac5cb5eb6a797501580cd9d7500c78923609b3",
+    "qualification_sha256": "b97270560628f950bc0139570b773cc55278174fcd0d5dffcaa382e864731627"
+  },
+  "attempt_id": "A248",
+  "causal": {
+    "amplified_state_materialized_in_file": true,
+    "api_id": "a248",
+    "clusters": 2,
+    "embedded_rules": 2,
+    "explicit_triplets": 5,
+    "file_bytes": 4958,
+    "file_sha256": "1e3606af8cf0e0b2b036a7e581f6cae2b6ee37a3ddd5d22ff8b0da26c901f4ad",
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "inference_recomputed_on_reader_open": false,
+    "integrity_verified_by_authoritative_reader": true,
+    "magic": "CAUSAL\u0000\u0001",
+    "materialized_inferred_triplets": 2,
+    "personal_semantic_readback": {
+      "control_chain": [
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "matched negative control",
+          "evidence": "[]",
+          "is_inferred": false,
+          "m_idx": 11,
+          "mechanism": "zero_exact_control_models",
+          "o_idx": 12,
+          "outcome": "A248:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "zero independently confirmed assignments",
+          "s_idx": 10,
+          "source": "65c63aaf01b7cc514c651954630f70a800994771a838b9916a0e96c7de13d86c",
+          "trigger": "A248:control_filter_candidate_set"
+        },
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after the identical complete control search.",
+          "is_inferred": true,
+          "m_idx": 14,
+          "mechanism": "verified_matched_control_chain",
+          "o_idx": 12,
+          "outcome": "A248:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "s_idx": 8,
+          "source": "materialized:control_separates_target_specific_recovery",
+          "trigger": "A248:one_bit_flipped_control_relation"
+        }
+      ],
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W40_domain",
+        "predicate": "next_required_gain",
+        "subject": "A248:unique_verified_40_bit_residual_key",
+        "suggested_queries": [
+          "Which frozen operator ranks the held-out W40 slice early?",
+          "Does typed propagation reduce executed W40 candidates?"
+        ]
+      },
+      "recovery_chain": [
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "independent key confirmation",
+          "evidence": "[{\"candidate_output_little_u32_sha256\": \"7a147ce62cbe15b3bc259c0688b5b79610c9849f85d5694407a2cb58e8a3de5c\", \"combined_assignment\": 964575894496, \"complete_two_block_match\": true, \"implementation\": \"independent_Python_canonical_RC5-32/12/16\", \"key0\": 2503220192, \"key1_low_bits\": 224, \"output_bits_checked\": 128, \"output_words_checked\": 4, \"target_output_little_u32_sha256\": \"7a147ce62cbe15b3bc259c0688b5b79610c9849f85d5694407a2cb58e8a3de5c\"}]",
+          "is_inferred": false,
+          "m_idx": 6,
+          "mechanism": "independent_exact_confirmation",
+          "o_idx": 7,
+          "outcome": "A248:unique_verified_40_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "2 blocks; 128 output bits; canonical Python implementation",
+          "s_idx": 5,
+          "source": "65c63aaf01b7cc514c651954630f70a800994771a838b9916a0e96c7de13d86c",
+          "trigger": "A248:factual_filter_candidate_set"
+        },
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after complete execution and exact confirmation.",
+          "is_inferred": true,
+          "m_idx": 13,
+          "mechanism": "verified_complete_enumeration_and_confirmation_chain",
+          "o_idx": 7,
+          "outcome": "A248:unique_verified_40_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "s_idx": 3,
+          "source": "materialized:complete_domain_plus_independent_confirmation",
+          "trigger": "A248:frozen_public_W40_relation"
+        }
+      ]
+    },
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "total_triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 4958,
+      "file_size_kb": 4.8,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.rc5_32_12_16_metal_width40_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation_sha256": "65c63aaf01b7cc514c651954630f70a800994771a838b9916a0e96c7de13d86c",
+  "evidence_stage": "RC5_32_12_16_FULLROUND_40BIT_RESIDUAL_KEY_RECOVERY_RETAINED",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "factual_confirmations": [
+      {
+        "candidate_output_little_u32_sha256": "7a147ce62cbe15b3bc259c0688b5b79610c9849f85d5694407a2cb58e8a3de5c",
+        "combined_assignment": 964575894496,
+        "complete_two_block_match": true,
+        "implementation": "independent_Python_canonical_RC5-32/12/16",
+        "key0": 2503220192,
+        "key1_low_bits": 224,
+        "output_bits_checked": 128,
+        "output_words_checked": 4,
+        "target_output_little_u32_sha256": "7a147ce62cbe15b3bc259c0688b5b79610c9849f85d5694407a2cb58e8a3de5c"
+      }
+    ],
+    "factual_filter_matches": [
+      964575894496
+    ],
+    "factual_full_matches": [
+      964575894496
+    ],
+    "filter_output_bits": 128,
+    "gpu_seconds": 4593.603102961555,
+    "inner_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 88,
+    "logical_candidate_count": 1099511627776,
+    "newly_executed_assignment_count": 1099511627776,
+    "outer_slice_count": 256,
+    "resumed_assignment_count": 0,
+    "stream_batch_count": 1024,
+    "stream_candidate_count": 1073741824,
+    "unique_exact_assignment": true,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 40,
+    "volatile_candidates_per_gpu_second": 239357124.0552173,
+    "volatile_wall_seconds": 4595.525929250289
+  },
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "combined_assignment_encoding": "assignment=(key1_low8<<32)|key0",
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_used": false,
+    "filter_output_bits": 128,
+    "fresh_public_challenge": true,
+    "full_confirmation": "independent_Python_RC5-32/12/16_all_two_blocks_all_128_output_bits",
+    "gpu_logical_thread_count": 1099511627776,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_key0_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 88,
+    "known_plaintext_ciphertext_pairs": 2,
+    "logical_candidate_count": 1099511627776,
+    "outer_key1_low_bit_count": 8,
+    "outer_key1_slice_count": 256,
+    "persistent_host_process": true,
+    "primitive": "RC5-32/12/16_block_cipher",
+    "result_capacity_per_batch": 64,
+    "rounds": 12,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 1024,
+    "stream_batches_per_slice": 4,
+    "stream_candidate_count": 1073741824,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 40,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "495a42253ba0e7ca13ea77bfe6c452540a2005b8592d2bd54c6330c37b88fd7a",
+  "execution_sha256": "61c9bd7f03bd43f5cff175a30e03173d4548daad3c958c8bcef3e1a1545dfaa8",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "rc5-32-12-16-metal-native-v1"
+  },
+  "mapping_gate": {
+    "complete_output_bits_checked": 98304,
+    "exact_scalar_filter_and_mapping_identity": true,
+    "logical_candidates_checked": 768,
+    "outer_values_checked": [
+      0,
+      128,
+      255
+    ],
+    "rows": [
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 32768,
+        "control_matches": [],
+        "factual_combined_assignment": 184105,
+        "factual_inner_candidate": 184105,
+        "first_inner_candidate": 184032,
+        "outer_key1_low_bits": 0,
+        "output_sha256": "e002ce1935701cf1edbdc31be3e876d9132c15ac65691afac2b324e76e94cd78"
+      },
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 32768,
+        "control_matches": [],
+        "factual_combined_assignment": 549755997993,
+        "factual_inner_candidate": 184105,
+        "first_inner_candidate": 184032,
+        "outer_key1_low_bits": 128,
+        "output_sha256": "21825d435e99cedfa33c010633dd1aaf2659e7b7e07f51183c3542c0d9a4678a"
+      },
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 32768,
+        "control_matches": [],
+        "factual_combined_assignment": 1095216844585,
+        "factual_inner_candidate": 184105,
+        "first_inner_candidate": 184032,
+        "outer_key1_low_bits": 255,
+        "output_sha256": "5f162957ecbac2baaf10a9728c8973595a8f8d5d3d2a5b37e268ccfd66466e85"
+      }
+    ]
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "7ca2bb946f4fe0714fcdb7647ca1e073ad1e4b63b93d4e47dcdd2f8ed42d4723",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "99b59fd72ea103b052b16652197842bd1e7146fac26cb699384e023e9a9fbabd",
+    "warnings_as_errors": true
+  },
+  "protocol_gate": {
+    "artifact_sha256": "1fb8b2b00e53a800ab54deb510925d99774f647936d199b2694cda5e38505f83",
+    "information_boundary": {
+      "A248_candidate_outcomes_used_before_protocol_freeze": false,
+      "benchmark_outcome_used_only_to_select_width_and_batch_size": true,
+      "unknown_assignment_available_to_runner_before_execution": false,
+      "unknown_assignment_generated_once_from_os_randomness": true,
+      "unknown_assignment_in_protocol_or_source": false,
+      "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+      "unknown_assignment_used_only_to_construct_public_ciphertexts": true
+    },
+    "prospective_prediction": {
+      "asymptotic_search_advantage_claimed": false,
+      "claim_type": "fresh_fullround_40_bit_residual_key_recovery",
+      "complete_domain_will_be_executed": true,
+      "expected_control_exact_assignments": 0,
+      "expected_unique_exact_assignment": true,
+      "success_requires_independent_two_block_confirmation": true
+    },
+    "protocol_state": "frozen_before_any_A248_candidate_execution"
+  },
+  "public_challenge": {
+    "candidate_encoding": "assignment=(key1_low8<<32)|key0",
+    "cipher": "RC5-32/12/16",
+    "control_ciphertext_little_u32_sha256": "1291eb8424e3fb4b015cc86b2300885c6d0a9e9b216ad6a2905823891d40d9bb",
+    "control_ciphertext_words_ab_order": [
+      3146284457,
+      1189086793,
+      4070219664,
+      3655964985
+    ],
+    "control_relation": "target_ciphertext_final_word_xor_0x00000001",
+    "known_key1": 2733965568,
+    "known_key1_mask": 4294967040,
+    "known_key2": 4140601590,
+    "known_key3": 3240199025,
+    "known_master_key_bits": 88,
+    "known_material_derivation_label": "rc5-32-12-16/a248/fullround/w40/known-material/v1",
+    "known_material_derivation_sha256": "cf54a500636c8694c334595352cba2b4199dc64f8d932070ebf3d00605fe9fee",
+    "plaintext_blocks": 2,
+    "plaintext_words_ab_order": [
+      4202524781,
+      443681163,
+      2531214505,
+      2137176543
+    ],
+    "rounds": 12,
+    "target_ciphertext_little_u32_sha256": "7a147ce62cbe15b3bc259c0688b5b79610c9849f85d5694407a2cb58e8a3de5c",
+    "target_ciphertext_words_ab_order": [
+      3146284457,
+      1189086793,
+      4070219664,
+      3655964984
+    ],
+    "unknown_assignment_bits": 40,
+    "unknown_assignment_included": false,
+    "unknown_key0_bits": 32,
+    "unknown_key0_included": false,
+    "unknown_key1_low_bits": 8,
+    "unknown_key1_low_bits_included": false
+  },
+  "public_challenge_sha256": "e4ab71bf070f0036a0d582be31ac5cb5eb6a797501580cd9d7500c78923609b3",
+  "recovery": {
+    "candidate_identities_persisted_in_checkpoint": true,
+    "recovered_combined_assignments": [
+      964575894496
+    ],
+    "recovered_key0": [
+      2503220192
+    ],
+    "recovered_key1_low_bits": [
+      224
+    ],
+    "recovery_accepted_only_after_complete_domain_execution": true,
+    "success_evaluated_only_after_complete_domain": true,
+    "unknown_assignment_source_was_discarded_before_runner_construction": true
+  },
+  "result": "The native Metal runner executed the complete fresh 40-bit residual-key domain for all 12 RC5-32/12/16 rounds and independently confirmed the unique assignment across two public blocks.",
+  "schema": "rc5-32-12-16-metal-width40-recovery-v1"
+}

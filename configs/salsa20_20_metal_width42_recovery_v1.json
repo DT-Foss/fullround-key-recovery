@@ -1,0 +1,162 @@
+{
+  "anchors": {
+    "cpu_reference": {
+      "filename": "salsa20_reference.py",
+      "sha256": "4867a767deb2ba917e7123c8f4fefc6218a858e0750378ceac12028c2871c579"
+    },
+    "native_source": {
+      "filename": "salsa20_20_metal_native.swift",
+      "sha256": "0c7baa4bbdd11c6659b2e14c9d776a9c123b01d03d77a969d863ce5c06fab1ed"
+    },
+    "protocol_factory": {
+      "filename": "salsa20_20_metal_protocol_factory.py",
+      "sha256": "3c8bc3669af64e37ee7f617dd79116039d7c2ef0f1c73038bded7f027347dc77"
+    },
+    "qualification": {
+      "filename": "salsa20_20_metal_qualification_v1.json",
+      "sha256": "656d63d9f6607b0f30ac798ee2d6a0eaba803eba02057d76ea4cadf8fa12480e"
+    },
+    "qualification_source": {
+      "filename": "salsa20_20_metal_qualification.py",
+      "sha256": "c793de778bf03618a65f9e129aa5e405c3c3641c317834b01b4aab9623edcdb1"
+    },
+    "recovery_source": {
+      "filename": "salsa20_20_metal_recovery.py",
+      "sha256": "f60f30d75fb0a5c5a491b9f36b272b010040ed6613775a16d01de037bcaa0538"
+    }
+  },
+  "attempt_id": "A264",
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_forbidden": true,
+    "early_stop_used": false,
+    "factual_and_control_computed_by_same_kernel_invocation": true,
+    "filter_output_bits": 512,
+    "fresh_public_challenge": true,
+    "gpu_logical_thread_count": 4398046511104,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "independent_confirmation": "separate_direct_schedule_Python_Salsa20/20_full_512_bit_block",
+    "inner_key_word0_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 214,
+    "logical_candidate_count": 4398046511104,
+    "outer_key_word1_low_bit_count": 10,
+    "outer_slice_count": 1024,
+    "persistent_host_process": true,
+    "primitive": "Salsa20/20_stream_block_function",
+    "result_capacity_per_batch": 64,
+    "rounds": 20,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 16384,
+    "stream_candidate_count": 268435456,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 42,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "1e6c0d3e4e5f1bc432f6336827c7879903de0cf776668e0a44363dadabebeba6",
+  "information_boundary": {
+    "benchmark_outcome_used_only_to_select_width_and_batch_size": true,
+    "candidate_outcomes_used_before_protocol_freeze": false,
+    "runner_imported_or_constructed_by_builder": false,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+    "unknown_assignment_used_only_to_construct_public_block": true
+  },
+  "metal_evidence_ledger_anchor": {
+    "embedded_in_qualification": "salsa20_20_metal_qualification_v1.json",
+    "provenance_scope": "semantic_execution_provenance_not_hardware_attestation",
+    "schema": "salsa20-20-metal-evidence-ledger-v1",
+    "sha256": "bdac6f6477b5ab5dc33e1ef8f641bcb79db3115784027561d382d5c0809b8dcb"
+  },
+  "primary_sources": {
+    "reference_implementation": "https://cr.yp.to/snuffle/salsa20/ref/salsa20.c",
+    "specification": "https://cr.yp.to/snuffle/spec.pdf"
+  },
+  "prospective_prediction": {
+    "asymptotic_search_advantage_claimed": false,
+    "claim_type": "fresh_fullround_42_bit_residual_key_recovery",
+    "complete_domain_will_be_executed": true,
+    "expected_control_exact_assignments": 0,
+    "expected_unique_exact_assignment": true,
+    "success_requires_independent_full_block_confirmation": true
+  },
+  "protocol_state": "frozen_before_any_A264_candidate_execution",
+  "public_challenge": {
+    "algorithm": "Salsa20/20",
+    "byte_semantics": "Bernstein_little_endian",
+    "candidate_encoding": "assignment=(key_word1_low10_bits<<32)|key_word0_little_endian",
+    "control_block_hex": "40d57d148a6be291f90d38c7d6b5d5d2d65fdca3765d5cff59eb0cdf175c18a5a6dff54fdc89512bf06ca3bd891e3ad2245b706f890c79f255d69fe8fc827ade",
+    "control_block_sha256": "dad7f845fa09bc48e8b7df80e8c2ca41571d60a2bbb7f799e10f04e7559992f5",
+    "control_relation": "identical_input_target_final_block_bit_xor_0x01",
+    "counter": 12147667806934997545,
+    "counter_bits": 64,
+    "counter_words_little_endian": [
+      1640962601,
+      2828349314
+    ],
+    "filter_bits": 512,
+    "key_bits": 256,
+    "known_key_mask_hex_little_endian_integer": "0000000000fcffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "known_key_word1_mask": 4294966272,
+    "known_key_words_little_endian": [
+      0,
+      3770628096,
+      2277822258,
+      1861156912,
+      3799256028,
+      2808254761,
+      1801243748,
+      3596201653
+    ],
+    "known_key_zeroed_residual_hex": "000000000038bfe032cfc4873000ef6edc0b74e2299162a764cc5c6bb5ae59d6",
+    "known_master_key_bits": 214,
+    "known_material_derivation_label": "salsa20-20/a264/fullround/w42/known-material/v1",
+    "known_material_derivation_sha256": "c8a7600540a99307f3827e7892fe635b4bb55cd0cee08829dec12000d55e28e6",
+    "nonce_bits": 64,
+    "nonce_hex": "155848bbe289b74a",
+    "rounds": 20,
+    "target_block_hex": "40d57d148a6be291f90d38c7d6b5d5d2d65fdca3765d5cff59eb0cdf175c18a5a6dff54fdc89512bf06ca3bd891e3ad2245b706f890c79f255d69fe8fc827adf",
+    "target_block_sha256": "c692083c6eed30a468ece396aed8fc42ceaaf1ad7dc2ea1c9b1c88751e55936f",
+    "unknown_assignment_bits": 42,
+    "unknown_assignment_included": false,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word0_included": false,
+    "unknown_key_word1_low_bits": 10,
+    "unknown_key_word1_low_bits_included": false
+  },
+  "public_challenge_sha256": "06dccfe236b22787dfdf8cbc07fe5c6dbc0125925f2b72dc40b56df9a410f951",
+  "qualification_attempt_id": "A263",
+  "qualification_launch_gate": {
+    "full_domain_launch_authorized": false,
+    "maximum_complete_domain_seconds": 7200,
+    "parameters_safe_for_post_review_freeze": true,
+    "projected_selected_width_seconds_at_observed_minimum": 4096.1201171875,
+    "projection_rate_basis": "minimum_end_to_end_candidates_per_second",
+    "requires_explicit_root_review_before_protocol_freeze": true,
+    "requires_separate_explicit_execution_acknowledgement": true,
+    "selected_stream_candidate_count": 268435456,
+    "selected_width": 42,
+    "selected_width_under_two_hours": true
+  },
+  "required_validation_gates": {
+    "all_assignments_must_execute": true,
+    "authentic_AI_native_causal_artifact_required": true,
+    "authentic_CausalReader_reopen_required": true,
+    "bit_flipped_control_required": true,
+    "candidate_execution_against_public_target_before_freeze": false,
+    "early_stop_forbidden": true,
+    "hash_bound_actual_Metal_evidence_ledger_passed": true,
+    "independent_full_block_confirmation_required": true,
+    "pre_target_scalar_Metal_cross_gate_passed": true,
+    "pre_target_selected_width_two_hour_gate_passed": true,
+    "pre_target_specification_KATs_passed": true,
+    "pre_target_uint32_boundary_gate_passed": true,
+    "qualification_deadline_covered_startup_and_all_reads": true,
+    "width_selected_from_minimum_end_to_end_wall_throughput": true
+  },
+  "schema": "salsa20-20-metal-width42-recovery-protocol-v1"
+}

@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-EXPECTED_SHA256: dict[str, str] = {
+_BASE_SHA256: dict[str, str] = {
     "configs/chacha20_metal_width40_partial_key_recovery_v1.json": "a6c904e07bc56b08994a9cf4c36c86cd43b468f6c23f9e0d81f3cd52317c6ecf",
     "configs/speck32_64_metal_width42_recovery_v1.json": "d8a657c4f46f0fc913b012331ad58791d577bc10a94f1f9146d01df00e1e93ca",
     "configs/threefish256_metal_width38_recovery_v1.json": "8e3c9811d7c588a0d6f89feeec7b5d0233c970c12d6d2f0db66a78f3cd9e3d32",
@@ -27,10 +27,46 @@ EXPECTED_SHA256: dict[str, str] = {
     "experiments/native/threefish256_metal_native.swift": "bcab26af8232b08324165b93f751d48ecdf1895ce6959924293fbfd15e44fbda",
 }
 
+
+def _load_manifest() -> dict[str, str]:
+    manifest = Path(__file__).resolve().parents[2] / "provenance" / "ARTIFACTS.sha256"
+    values: dict[str, str] = {}
+    for line_number, raw in enumerate(manifest.read_text().splitlines(), 1):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        try:
+            digest, relative = line.split(maxsplit=1)
+        except ValueError as error:
+            raise RuntimeError(f"malformed artifact manifest line {line_number}") from error
+        if (
+            len(digest) != 64
+            or any(character not in "0123456789abcdef" for character in digest)
+            or relative in values
+        ):
+            raise RuntimeError(f"invalid artifact manifest line {line_number}")
+        values[relative] = digest
+    if not values:
+        raise RuntimeError("artifact manifest is empty")
+    for relative, digest in _BASE_SHA256.items():
+        if values.get(relative) != digest:
+            raise RuntimeError(f"base artifact pin differs: {relative}")
+    return values
+
+
+EXPECTED_SHA256 = _load_manifest()
+
 RESULT_FILES = {
     "chacha20": "chacha20_metal_width40_partial_key_recovery_v1.json",
     "speck32_64": "speck32_64_metal_width42_recovery_v1.json",
     "threefish256": "threefish256_metal_width38_recovery_v1.json",
+    "speck64_128": "speck64_128_metal_width44_recovery_v1.json",
+    "simon64_128": "simon64_128_metal_width43_recovery_v1.json",
+    "rc5_32_12_16": "rc5_32_12_16_metal_width40_recovery_v1.json",
+    "present80": "present80_metal_width38_recovery_v1.json",
+    "ascon_aead128": "ascon_aead128_metal_width40_a256_recovery_v1.json",
+    "aes128": "aes128_fips197_metal_width41_recovery_v1.json",
+    "salsa20_20": "salsa20_20_metal_width42_recovery_v1.json",
 }
 
 

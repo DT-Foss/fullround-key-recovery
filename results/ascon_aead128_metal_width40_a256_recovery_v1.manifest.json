@@ -1,0 +1,51 @@
+{
+  "attempt_id": "A256",
+  "authentic_causal_reader_verified": true,
+  "causal_artifact_bound_to_result": true,
+  "complete_domain_executed": true,
+  "early_stop_used": false,
+  "files": {
+    "causal": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/ascon_aead128_metal_width40_a256_recovery_v1.causal",
+      "sha256": "7d1d5af53464d9fb81937b4a4101d087aa2ac57d3d8d736e4187745486b7cc07"
+    },
+    "cpu_reference": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/src/arx_carry_leak/ascon_aead128_reference.py",
+      "sha256": "e43873f67fb33a3d210eb71fcc3aa69d6ebe85fa0e811cdfba6de3c93450f09a"
+    },
+    "native_source": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/experiments/ascon_aead128_metal_native.swift",
+      "sha256": "e4c54e5e4405166de3d7da514af70c4e5f8fa96aa046522e1215c42fe86c41f3"
+    },
+    "protocol": {
+      "path": "research/configs/ascon_aead128_metal_width40_a256_recovery_v1.json",
+      "sha256": "5cc44a343c6716ae3a2d04d1cff82cc66d5ab5c23a5e3951b620bcb3b6a762d6"
+    },
+    "protocol_factory": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/experiments/ascon_aead128_metal_protocol_factory.py",
+      "sha256": "335dc1275066cb5388774218e5f5bb9c350710a6690a9f648d694de8c879270c"
+    },
+    "qualification": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/ascon_aead128_metal_a255_qualification_v1.json",
+      "sha256": "e85272303429f91a1b1c54c3a8dfa4d9b44ccce3b756e8a12501182297b401d2"
+    },
+    "qualification_source": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/experiments/ascon_aead128_metal_qualification.py",
+      "sha256": "ed119d72916c4be9bc3ce99fa4576c281c3736947d006f9aa0793e2b31ea0ed0"
+    },
+    "recovery_source": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/experiments/ascon_aead128_metal_recovery.py",
+      "sha256": "6df36e0354024f63ed54ab753bec104551770416e57d2fc67d1087bfcef6ed64"
+    },
+    "report": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/reports/ASCON_AEAD128_METAL_WIDTH40_A256_RECOVERY_V1.md",
+      "sha256": "22d3452021400ea2c9b3b00056e51426194c5249a7d84e464ff1d0e39e6c25fd"
+    },
+    "result": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/ascon_aead128_metal_width40_a256_recovery_v1.json",
+      "sha256": "f183789c705bd7c3d8d29ecc1681f374b2153c705b4c460e09061539be5e4273"
+    }
+  },
+  "independent_full_confirmation_passed": true,
+  "schema": "ascon-aead128-a256-final-content-manifest-v1"
+}

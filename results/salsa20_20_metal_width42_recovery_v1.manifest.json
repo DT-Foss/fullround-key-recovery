@@ -1,0 +1,24 @@
+{
+  "attempt_id": "A264",
+  "authentic_dotcausal_v1_reader_verified": true,
+  "causal_artifact_bound_to_result": true,
+  "complete_domain_executed": true,
+  "files": {
+    "causal": {
+      "path": "research/results/v1/salsa20_20_metal_width42_recovery_v1.causal",
+      "sha256": "3bb3345feae3712a03e3a22c5d1a8227f71bd6887a6473450f718561bb68d5e6"
+    },
+    "report": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/reports/FULLROUND_SALSA20_20_METAL_WIDTH42_RECOVERY_V1.md",
+      "sha256": "06eadae1898a26a3cb09830c89b598119582bf4ac4144698c35f8680b83f5a1b"
+    },
+    "result": {
+      "path": "research/results/v1/salsa20_20_metal_width42_recovery_v1.json",
+      "sha256": "7616406fce6f9fc4b6d0ea1b1a7a34cf3011ebc9098731907bee8003c99531bb"
+    }
+  },
+  "metal_evidence_ledger_sha256": "bdac6f6477b5ab5dc33e1ef8f641bcb79db3115784027561d382d5c0809b8dcb",
+  "protocol_sha256": "589ff6b019921f9898e5104ebb89702cf987d1e798b7ec81887eaa763175a1fc",
+  "qualification_sha256": "656d63d9f6607b0f30ac798ee2d6a0eaba803eba02057d76ea4cadf8fa12480e",
+  "schema": "salsa20-20-a264-recovery-artifact-manifest-v1"
+}

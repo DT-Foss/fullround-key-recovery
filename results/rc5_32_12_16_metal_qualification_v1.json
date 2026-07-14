@@ -1,0 +1,248 @@
+{
+  "attempt_id": "A247",
+  "benchmark": {
+    "candidate_count_per_repeat": 33554432,
+    "launch_gate_uses_end_to_end_wall_throughput": true,
+    "maximum_candidates_per_second": 225454697.21253234,
+    "maximum_gpu_candidates_per_second": 225980499.63375083,
+    "median_candidates_per_second": 224519075.7910724,
+    "median_gpu_candidates_per_second": 225309996.5020063,
+    "minimum_candidates_per_second": 207652465.07477248,
+    "minimum_gpu_candidates_per_second": 208243073.10063437,
+    "projected_complete_domain_seconds": {
+      "40": 4897.185791015625,
+      "41": 9794.37158203125,
+      "42": 19588.7431640625,
+      "43": 39177.486328125,
+      "44": 78354.97265625,
+      "45": 156709.9453125,
+      "46": 313419.890625,
+      "47": 626839.78125,
+      "48": 1253679.5625
+    },
+    "projected_complete_domain_seconds_at_minimum": {
+      "40": 5294.960632324219,
+      "41": 10589.921264648438,
+      "42": 21179.842529296875,
+      "43": 42359.68505859375,
+      "44": 84719.3701171875,
+      "45": 169438.740234375,
+      "46": 338877.48046875,
+      "47": 677754.9609375,
+      "48": 1355509.921875
+    },
+    "repeats": 5,
+    "samples": [
+      {
+        "candidate_count": 33554432,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 207652465.07477248,
+        "end_to_end_wall_seconds": 0.16158937476575375,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 208243073.10063437,
+        "gpu_seconds": 0.16113108349964023
+      },
+      {
+        "candidate_count": 33554432,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 225454697.21253234,
+        "end_to_end_wall_seconds": 0.14883004175499082,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 225980499.63375083,
+        "gpu_seconds": 0.1484837499447167
+      },
+      {
+        "candidate_count": 33554432,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 225274386.82421824,
+        "end_to_end_wall_seconds": 0.14894916582852602,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 225932125.6536975,
+        "gpu_seconds": 0.14851554157212377
+      },
+      {
+        "candidate_count": 33554432,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 223595967.44373712,
+        "end_to_end_wall_seconds": 0.15006725024431944,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 224327133.77033445,
+        "gpu_seconds": 0.14957812475040555
+      },
+      {
+        "candidate_count": 33554432,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 224519075.7910724,
+        "end_to_end_wall_seconds": 0.14945024996995926,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 225309996.5020063,
+        "gpu_seconds": 0.14892562478780746
+      }
+    ],
+    "volatile_performance_only_not_a_recovery_success_rule": true
+  },
+  "boundary_filter_gate": {
+    "exact_boundary_identity": true,
+    "intervals": [
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 0
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [
+          2418085869
+        ],
+        "first_candidate": 2418085741
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 4294967040
+      }
+    ],
+    "target_candidate": 2418085869
+  },
+  "cipher": {
+    "block_bits": 64,
+    "candidate_encoding": "candidate=k0; configured_key1=k1, key2=k2, key3=k3",
+    "filter_output_bits": 128,
+    "key_schedule": "RFC_2040_P32_Q32_26_subkeys_78_mix_steps",
+    "known_plaintext_blocks_per_candidate": 2,
+    "master_key_bits": 128,
+    "references": [
+      "Rivest_original_RC5_paper_examples",
+      "RFC_2040_byte_conventions_and_CBC_vector"
+    ],
+    "rounds": 12,
+    "variant": "RC5-32/12/16"
+  },
+  "cross_implementation_gate": {
+    "candidate_count": 256,
+    "complete_output_bits_checked": 32768,
+    "exact_filter_identity": true,
+    "exact_scalar_identity": true,
+    "first_candidate": 123456789,
+    "output_sha256": "1789b6411cd141efb523eb7b588d9ff4d117540bad32b2ea811ddce136f75a9e",
+    "target_candidate": 123456862
+  },
+  "evidence_stage": "RC5_32_12_16_METAL_PRE_TARGET_QUALIFICATION",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "rc5-32-12-16-metal-native-v1"
+  },
+  "information_boundary": {
+    "benchmark_outcome_may_select_future_width": true,
+    "complete_residual_key_domain_executed": false,
+    "production_target_selected": false,
+    "production_unknown_assignment_generated": false
+  },
+  "launch_gate": {
+    "full_domain_launch_authorized": true,
+    "highest_safe_integer_width_at_observed_minimum": 40,
+    "maximum_complete_domain_seconds": 7200,
+    "maximum_supported_residual_width": 64,
+    "observed_minimum_candidates_per_second": 207652465.07477248,
+    "projected_selected_width_seconds_at_observed_minimum": 5294.960632324219,
+    "required_candidates_per_second": 152709948.30222222,
+    "selected_width": 40,
+    "selected_width_under_two_hours": true,
+    "selection_rule": "maximum_supported_integer_width_whose_complete_domain_fits_7200_seconds_at_minimum_end_to_end_wall_throughput",
+    "throughput_statistic": "minimum_end_to_end_wall_throughput_of_all_timed_repeats"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "7ca2bb946f4fe0714fcdb7647ca1e073ad1e4b63b93d4e47dcdd2f8ed42d4723",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "99b59fd72ea103b052b16652197842bd1e7146fac26cb699384e023e9a9fbabd",
+    "warnings_as_errors": true
+  },
+  "provenance_kat_gate": {
+    "actual_ciphertext_words": [
+      2886975735,
+      1384721243
+    ],
+    "candidate_word_k0": 424042385,
+    "expected_ciphertext_words": [
+      2886975735,
+      1384721243
+    ],
+    "master_key_words_little_endian": [
+      424042385,
+      1370636734,
+      27612515,
+      2446240016
+    ],
+    "plaintext_words": [
+      4007372065,
+      1838107413
+    ],
+    "rfc2040_byte_convention": "four little-endian uint32 key words and two little-endian uint32 block words",
+    "rfc2040_derived_r12_raw_block_vector": {
+      "actual_ciphertext_hex": "294ddb46b3278d60",
+      "ciphertext_hex": "294ddb46b3278d60",
+      "key_hex": "01020304050607081020304050607080",
+      "pass": true,
+      "plaintext_xor_iv_hex": "1122334455667788"
+    },
+    "rivest_original_paper_scalar_vectors": [
+      {
+        "actual_ciphertext_hex": "21a5dbee154b8f6d",
+        "ciphertext_hex": "21a5dbee154b8f6d",
+        "key_hex": "00000000000000000000000000000000",
+        "pass": true,
+        "plaintext_hex": "0000000000000000"
+      },
+      {
+        "actual_ciphertext_hex": "f7c013ac5b2b8952",
+        "ciphertext_hex": "f7c013ac5b2b8952",
+        "key_hex": "915f4619be41b2516355a50110a9ce91",
+        "pass": true,
+        "plaintext_hex": "21a5dbee154b8f6d"
+      },
+      {
+        "actual_ciphertext_hex": "2f42b3b70369fc92",
+        "ciphertext_hex": "2f42b3b70369fc92",
+        "key_hex": "783348e75aeb0f2fd7b169bb8dc16787",
+        "pass": true,
+        "plaintext_hex": "f7c013ac5b2b8952"
+      },
+      {
+        "actual_ciphertext_hex": "65c178b284d197cc",
+        "ciphertext_hex": "65c178b284d197cc",
+        "key_hex": "dc49db1375a5584f6485b413b5f12baf",
+        "pass": true,
+        "plaintext_hex": "2f42b3b70369fc92"
+      },
+      {
+        "actual_ciphertext_hex": "eb44e415da319824",
+        "ciphertext_hex": "eb44e415da319824",
+        "key_hex": "5269f149d41ba0152497574d7f153125",
+        "pass": true,
+        "plaintext_hex": "65c178b284d197cc"
+      }
+    ],
+    "two_block_scalar_identity": true
+  },
+  "schema": "rc5-32-12-16-metal-qualification-v1",
+  "scope": "Full 12-round RC5-32/12/16 implementation qualification and volatile throughput measurement; no production recovery target was selected or run."
+}

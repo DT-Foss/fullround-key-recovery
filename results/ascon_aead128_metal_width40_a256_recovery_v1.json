@@ -1,0 +1,340 @@
+{
+  "anchor_gates": {
+    "cpu_reference_sha256": "e43873f67fb33a3d210eb71fcc3aa69d6ebe85fa0e811cdfba6de3c93450f09a",
+    "native_source_sha256": "e4c54e5e4405166de3d7da514af70c4e5f8fa96aa046522e1215c42fe86c41f3",
+    "protocol_factory_sha256": "335dc1275066cb5388774218e5f5bb9c350710a6690a9f648d694de8c879270c",
+    "protocol_sha256": "5cc44a343c6716ae3a2d04d1cff82cc66d5ab5c23a5e3951b620bcb3b6a762d6",
+    "public_challenge_sha256": "0f27ea6e46e7fcbc80858626b90095dc8616bcfaec390931c34f36c39c4aabeb",
+    "qualification_sha256": "e85272303429f91a1b1c54c3a8dfa4d9b44ccce3b756e8a12501182297b401d2",
+    "qualification_source_sha256": "ed119d72916c4be9bc3ce99fa4576c281c3736947d006f9aa0793e2b31ea0ed0",
+    "recovery_source_sha256": "6df36e0354024f63ed54ab753bec104551770416e57d2fc67d1087bfcef6ed64"
+  },
+  "attempt_id": "A256",
+  "causal": {
+    "amplified_state_materialized_in_file": true,
+    "api_id": "a256",
+    "clusters": 2,
+    "embedded_rules": 2,
+    "explicit_triplets": 5,
+    "file_bytes": 5049,
+    "file_sha256": "7d1d5af53464d9fb81937b4a4101d087aa2ac57d3d8d736e4187745486b7cc07",
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "inference_recomputed_on_reader_open": false,
+    "integrity_verified_by_authoritative_reader": true,
+    "magic": "CAUSAL\u0000\u0001",
+    "materialized_inferred_triplets": 2,
+    "personal_semantic_readback": {
+      "control_chain": [
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "matched negative control",
+          "evidence": "[]",
+          "is_inferred": false,
+          "m_idx": 11,
+          "mechanism": "zero_exact_control_models",
+          "o_idx": 12,
+          "outcome": "A256:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "zero independently confirmed assignments",
+          "s_idx": 10,
+          "source": "2ca676e10acfea0c924bced5bc1d5f1b3274c966657efb07b71a4dae73a554c3",
+          "trigger": "A256:control_filter_candidate_set"
+        },
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after the identical complete control search.",
+          "is_inferred": true,
+          "m_idx": 14,
+          "mechanism": "verified_matched_control_chain",
+          "o_idx": 12,
+          "outcome": "A256:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "s_idx": 8,
+          "source": "materialized:matched_control_separation",
+          "trigger": "A256:one_bit_flipped_control_relation"
+        }
+      ],
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W40_domain",
+        "predicate": "next_required_gain",
+        "subject": "A256:unique_verified_40_bit_residual_key",
+        "suggested_queries": [
+          "Which frozen public operator ranks the held-out W40 region early?",
+          "Can a causal reader reduce executed W40 candidates?"
+        ]
+      },
+      "recovery_chain": [
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "independent key confirmation",
+          "evidence": "[{\"candidate_output_sha256\": \"979ab4275351aefc8a2f071e40f6b7664e8ee72f6bbbcd7ac8cac2d4b4b9a874\", \"ciphertext_bytes_checked\": 32, \"combined_assignment\": 56559342585, \"complete_ciphertext_and_tag_match\": true, \"expected_output_sha256\": \"979ab4275351aefc8a2f071e40f6b7664e8ee72f6bbbcd7ac8cac2d4b4b9a874\", \"implementation\": \"independent_Python_exact_NIST_SP800-232_little_endian_reference\", \"key_word0\": 724767737, \"key_word1_low_bits\": 13, \"output_bits_checked\": 384, \"relation\": \"factual\", \"tag_bytes_c",
+          "is_inferred": false,
+          "m_idx": 6,
+          "mechanism": "independent_exact_confirmation",
+          "o_idx": 7,
+          "outcome": "A256:unique_verified_40_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "32 ciphertext bytes plus 16 tag bytes; independent NIST SP 800-232 Python implementation",
+          "s_idx": 5,
+          "source": "2ca676e10acfea0c924bced5bc1d5f1b3274c966657efb07b71a4dae73a554c3",
+          "trigger": "A256:factual_filter_candidate_set"
+        },
+        {
+          "attrs": {},
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after complete execution and exact confirmation.",
+          "is_inferred": true,
+          "m_idx": 13,
+          "mechanism": "verified_complete_enumeration_and_confirmation_chain",
+          "o_idx": 7,
+          "outcome": "A256:unique_verified_40_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "s_idx": 3,
+          "source": "materialized:complete_domain_plus_independent_confirmation",
+          "trigger": "A256:frozen_public_W40_relation"
+        }
+      ]
+    },
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "total_triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 5049,
+      "file_size_kb": 4.9,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.ascon_aead128_metal_width40_a256_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation_content_sha256": "2ca676e10acfea0c924bced5bc1d5f1b3274c966657efb07b71a4dae73a554c3",
+  "evidence_stage": "ASCON_AEAD128_SP800_232_FULLROUND_40BIT_RESIDUAL_KEY_RECOVERY",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "executed_assignment_count": 1099511627776,
+    "factual_confirmations": [
+      {
+        "candidate_output_sha256": "979ab4275351aefc8a2f071e40f6b7664e8ee72f6bbbcd7ac8cac2d4b4b9a874",
+        "ciphertext_bytes_checked": 32,
+        "combined_assignment": 56559342585,
+        "complete_ciphertext_and_tag_match": true,
+        "expected_output_sha256": "979ab4275351aefc8a2f071e40f6b7664e8ee72f6bbbcd7ac8cac2d4b4b9a874",
+        "implementation": "independent_Python_exact_NIST_SP800-232_little_endian_reference",
+        "key_word0": 724767737,
+        "key_word1_low_bits": 13,
+        "output_bits_checked": 384,
+        "relation": "factual",
+        "tag_bytes_checked": 16
+      }
+    ],
+    "factual_filter_matches": [
+      56559342585
+    ],
+    "factual_full_matches": [
+      56559342585
+    ],
+    "gpu_seconds": 4615.997359492816,
+    "independent_full_ciphertext_and_tag_confirmation_after_completion": true,
+    "known_key_bits": 88,
+    "logical_candidate_count": 1099511627776,
+    "newly_executed_assignment_count": 1099511627776,
+    "resumed_assignment_count": 0,
+    "success_evaluated_only_after_complete_domain": true,
+    "unique_exact_assignment": true,
+    "unknown_key_bits": 40,
+    "volatile_candidates_per_gpu_second": 238195896.17287153,
+    "volatile_wall_seconds": 4617.907253584359
+  },
+  "execution_content_sha256": "e185587615a776ad6ae150bfa7afb6112941f8b42c48a4f35639dba292d94a2f",
+  "execution_plan": {
+    "authentic_CausalReader_reopen_required": true,
+    "authentic_dotcausal_v1_required": true,
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_forbidden": true,
+    "early_stop_used": false,
+    "factual_and_control_computed_by_same_kernel_invocation": true,
+    "filter_bits_per_relation": 384,
+    "final_manifest_binds_causal_artifact": true,
+    "full_confirmation": "independent_Python_SP800-232_full_32_byte_ciphertext_plus_16_byte_tag",
+    "gpu_logical_thread_count": 1099511627776,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_key_word0_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 88,
+    "logical_candidate_count": 1099511627776,
+    "materialized_inferred_closure_required": true,
+    "outer_key_word1_low_bit_count": 8,
+    "outer_slice_count": 256,
+    "permutation_rounds_initial_final": 12,
+    "permutation_rounds_intermediate": 8,
+    "persistent_host_process": true,
+    "primitive": "NIST_SP800-232_Ascon-AEAD128",
+    "result_capacity_per_batch": 64,
+    "stream_batch_count": 1024,
+    "stream_candidate_count": 1073741824,
+    "unknown_key_bits": 40,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "251be3e6bfd33d41b63cbe47b8f9c38ecf313c76f20ed362074f84a152e280ad",
+  "final_artifact_manifest_filename": "ascon_aead128_metal_width40_a256_recovery_v1.manifest.json",
+  "host_identity": {
+    "metal": {
+      "device": "Apple M4",
+      "encryptions_execution_width": 32,
+      "encryptions_max_threads_per_group": 1024,
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true,
+      "sp800_232_little_endian_semantics": true
+    },
+    "op": "ready",
+    "version": "ascon-aead128-metal-native-v1"
+  },
+  "mapping_gate": {
+    "complete_ciphertext_and_tag_bits_checked": 9216,
+    "exact_scalar_filter_and_mapping_identity": true,
+    "logical_candidates_checked": 24,
+    "rows": [
+      {
+        "candidate_count": 8,
+        "complete_outputs_sha256": "93c3d7cc26ae1bdf126687ff25cd588a19595b80f520878fa491069e2e8888b0",
+        "control_matches": [],
+        "factual_combined_assignment": 65536,
+        "factual_inner_candidate": 65536,
+        "first_inner_candidate": 65532,
+        "label": "inner_low16_carry",
+        "outer_assignment": 0
+      },
+      {
+        "candidate_count": 8,
+        "complete_outputs_sha256": "6258a6324e3e6f5b8384cda6f067cbae6b00c0578e3f13a468b047cfc037564c",
+        "control_matches": [],
+        "factual_combined_assignment": 551903297536,
+        "factual_inner_candidate": 2147483648,
+        "first_inner_candidate": 2147483644,
+        "label": "inner_high_bit",
+        "outer_assignment": 128
+      },
+      {
+        "candidate_count": 8,
+        "complete_outputs_sha256": "39ef04f3c7e8b71708f82d91d1b9552edeba71a5be3c0d098774361925e5b549",
+        "control_matches": [],
+        "factual_combined_assignment": 1099511627775,
+        "factual_inner_candidate": 4294967295,
+        "first_inner_candidate": 4294967288,
+        "label": "inner_terminal",
+        "outer_assignment": 255
+      }
+    ]
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "62ff4ffec0ffc74a94c625a6446d4f58974cfc6a95a7cb07c13a773edcc6bf32",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_filename": "ascon_aead128_metal_native.swift",
+    "source_sha256": "e4c54e5e4405166de3d7da514af70c4e5f8fa96aa046522e1215c42fe86c41f3",
+    "warnings_as_errors": true
+  },
+  "protocol_gate": {
+    "artifact_sha256": "5cc44a343c6716ae3a2d04d1cff82cc66d5ab5c23a5e3951b620bcb3b6a762d6",
+    "information_boundary": {
+      "A256_candidate_outcomes_used_before_protocol_freeze": false,
+      "benchmark_outcome_used_only_to_select_width_and_batch_size": true,
+      "builder_process_must_exit_before_runner_construction": true,
+      "runner_imported_or_constructed_by_builder": false,
+      "unknown_assignment_available_to_runner_before_execution": false,
+      "unknown_assignment_generated_once_from_os_randomness": true,
+      "unknown_assignment_in_protocol_or_source": false,
+      "unknown_assignment_local_references_discarded_before_return": true,
+      "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+      "unknown_assignment_used_only_to_construct_public_relation": true
+    },
+    "protocol_state": "frozen_after_root_review_before_any_A256_candidate_execution"
+  },
+  "public_challenge": {
+    "algorithm": "Ascon-AEAD128",
+    "associated_data_bytes": 17,
+    "associated_data_hex": "24a375a5cb5b1fa7f163f023a48e7887c3",
+    "byte_semantics": "little_endian",
+    "candidate_encoding": "assignment=(key_word1_low8_bits<<32)|key_word0_little_endian",
+    "ciphertext_bytes": 32,
+    "control_ciphertext_and_tag_hex": "58ca4d197100b0dbf3ff049205259da5ef3faf211b702b121ce0f3491a624cbec30364840a0304e21079ee06d3147230",
+    "control_ciphertext_and_tag_sha256": "2c88f6bfee202d24cd871051b4ff08840422e4e0248496fb61fcb53a94bc1238",
+    "control_relation": "identical_inputs_target_final_tag_byte_xor_0x01",
+    "filter_bits": 384,
+    "known_key_mask_hex_little_endian_integer": "0000000000ffffffffffffffffffffff",
+    "known_key_word1_mask": 4294967040,
+    "known_key_words_little_endian": [
+      0,
+      2164026880,
+      2478765059,
+      622459774
+    ],
+    "known_key_zeroed_residual_hex": "00000000006efc8003f4be937efb1925",
+    "known_master_key_bits": 88,
+    "known_material_derivation_label": "ascon-aead128/a256/sp800-232/fullround/w40/known-material/v1",
+    "known_material_derivation_sha256": "44a30e42398dd46638bffe969a0ee5d0fdf9adceacd9c2b2408dfde97d5a9a33",
+    "legacy_submission_endian_semantics": false,
+    "message_bytes": 32,
+    "message_hex": "5fb94f756bbad35492c28c51c6df99edd1d489bacbe1c95f24b7c9b2f15833b5",
+    "nonce_hex": "f45727d0128314453e76dc777d5c82bc",
+    "standard": "NIST_SP_800-232",
+    "tag_bytes": 16,
+    "target_ciphertext_and_tag_hex": "58ca4d197100b0dbf3ff049205259da5ef3faf211b702b121ce0f3491a624cbec30364840a0304e21079ee06d3147231",
+    "target_ciphertext_and_tag_sha256": "979ab4275351aefc8a2f071e40f6b7664e8ee72f6bbbcd7ac8cac2d4b4b9a874",
+    "unknown_assignment_bits": 40,
+    "unknown_assignment_included": false,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word0_included": false,
+    "unknown_key_word1_low_bits": 8,
+    "unknown_key_word1_low_bits_included": false
+  },
+  "public_challenge_sha256": "0f27ea6e46e7fcbc80858626b90095dc8616bcfaec390931c34f36c39c4aabeb",
+  "recovery": {
+    "accepted_only_after_complete_domain_execution": true,
+    "independent_cpu_confirmation_after_completion": true,
+    "recovered_assignments": [
+      56559342585
+    ],
+    "recovered_key_word0": [
+      724767737
+    ],
+    "recovered_key_word1_low_bits": [
+      13
+    ],
+    "unknown_assignment_source_discarded_before_runner_construction": true
+  },
+  "schema": "ascon-aead128-sp800-232-metal-width40-recovery-v1"
+}

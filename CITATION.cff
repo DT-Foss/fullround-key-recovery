@@ -8,8 +8,8 @@ authors:
     email: d.foss@ieee.org
     orcid: "https://orcid.org/0009-0004-0289-7154"
     affiliation: "AI Systems and Causal Knowledge Graphs, Görlitz, Germany"
-version: 1.0.0
-date-released: 2026-07-13
+version: 1.2.0
+date-released: 2026-07-14
 license: MIT
 repository-code: "https://github.com/DT-Foss/fullround-key-recovery"
 url: "https://github.com/DT-Foss/fullround-key-recovery"
@@ -18,5 +18,12 @@ keywords:
   - full-round key recovery
   - ChaCha20
   - Speck32/64
+  - Speck64/128
+  - SIMON64/128
+  - RC5-32/12/16
+  - PRESENT-80
+  - Ascon-AEAD128
+  - AES-128
+  - Salsa20/20
   - Threefish-256
   - Apple Metal

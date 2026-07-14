@@ -2,7 +2,9 @@ from __future__ import annotations
 
 from fullround_key_recovery.ciphers import (
     chacha20_block,
+    simon64_128_encrypt,
     speck32_64_encrypt,
+    speck64_128_encrypt,
     threefish256_encrypt,
 )
 
@@ -30,6 +32,22 @@ def test_speck32_64_official_vector() -> None:
         0x694C,
         [0x0100, 0x0908, 0x1110, 0x1918],
     ) == (0xA868, 0x42F2)
+
+
+def test_speck64_128_official_vector() -> None:
+    assert speck64_128_encrypt(
+        0x3B726574,
+        0x7475432D,
+        [0x03020100, 0x0B0A0908, 0x13121110, 0x1B1A1918],
+    ) == (0x8C6FA548, 0x454E028B)
+
+
+def test_simon64_128_official_vector() -> None:
+    assert simon64_128_encrypt(
+        0x656B696C,
+        0x20646E75,
+        [0x03020100, 0x0B0A0908, 0x13121110, 0x1B1A1918],
+    ) == (0x44C8FC20, 0xB9DFA07A)
 
 
 def test_threefish256_zero_vector() -> None:

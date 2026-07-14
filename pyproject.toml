@@ -4,15 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fullround-key-recovery"
-version = "1.0.0"
-description = "Reproducible full-round residual-key recovery anchors for ChaCha20, Speck32/64, and Threefish-256"
+version = "1.2.0"
+description = "Ten reproducible full-round residual-key recovery anchors across nine cipher families"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 authors = [
   {name = "David Tom Foss", email = "d.foss@ieee.org"},
 ]
-keywords = ["cryptanalysis", "key recovery", "ChaCha20", "Speck", "Threefish", "Metal"]
+keywords = ["cryptanalysis", "key recovery", "ChaCha20", "Salsa20", "Speck", "SIMON", "RC5", "PRESENT", "Ascon", "AES", "Metal"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Science/Research",

@@ -1,0 +1,431 @@
+{
+  "algorithm": {
+    "byte_semantics": "SP800-232_little_endian",
+    "candidate_encoding": "candidate=key_uint32_word0_bytes_0_to_3_little_endian; outer_bits=low_bits_of_key_uint32_word1",
+    "filter_bits": 384,
+    "iv_hex_as_uint64": "00001000808c0001",
+    "key_bits": 128,
+    "legacy_submission_endian_semantics": false,
+    "name": "Ascon-AEAD128",
+    "nonce_bits": 128,
+    "permutation_rounds_initial_final": 12,
+    "permutation_rounds_intermediate": 8,
+    "qualification_associated_data_bytes": 17,
+    "qualification_message_bytes": 32,
+    "rate_bits": 128,
+    "standard": "NIST_SP_800-232_August_2025",
+    "tag_bits": 128
+  },
+  "attempt_id": "A255",
+  "benchmark": {
+    "candidate_count_per_repeat": 67108864,
+    "launch_gate_uses_end_to_end_wall_throughput": true,
+    "maximum_candidate_invocations_permitted": 202375168,
+    "maximum_candidates_per_second": 203599114.35702506,
+    "maximum_gpu_candidates_per_second": 203933964.13586578,
+    "median_candidates_per_second": 200210941.57245094,
+    "median_gpu_candidates_per_second": 200585378.7810098,
+    "minimum_candidates_per_second": 200088221.24233952,
+    "minimum_gpu_candidates_per_second": 200559302.02299905,
+    "projected_complete_domain_seconds": {
+      "32": 21.452210664749146,
+      "33": 42.90442132949829,
+      "34": 85.80884265899658,
+      "35": 171.61768531799316,
+      "36": 343.2353706359863,
+      "37": 686.4707412719727,
+      "38": 1372.9414825439453,
+      "39": 2745.8829650878906,
+      "40": 5491.765930175781,
+      "41": 10983.531860351562,
+      "42": 21967.063720703125,
+      "43": 43934.12744140625,
+      "44": 87868.2548828125,
+      "45": 175736.509765625,
+      "46": 351473.01953125,
+      "47": 702946.0390625,
+      "48": 1405892.078125,
+      "49": 2811784.15625,
+      "50": 5623568.3125,
+      "51": 11247136.625,
+      "52": 22494273.25,
+      "53": 44988546.5,
+      "54": 89977093.0,
+      "55": 179954186.0,
+      "56": 359908372.0,
+      "57": 719816744.0,
+      "58": 1439633488.0,
+      "59": 2879266976.0,
+      "60": 5758533952.0,
+      "61": 11517067904.0,
+      "62": 23034135808.0,
+      "63": 46068271616.0,
+      "64": 92136543232.0
+    },
+    "projected_complete_domain_seconds_at_minimum": {
+      "32": 21.4653679728508,
+      "33": 42.9307359457016,
+      "34": 85.8614718914032,
+      "35": 171.7229437828064,
+      "36": 343.4458875656128,
+      "37": 686.8917751312256,
+      "38": 1373.7835502624512,
+      "39": 2747.5671005249023,
+      "40": 5495.134201049805,
+      "41": 10990.26840209961,
+      "42": 21980.53680419922,
+      "43": 43961.07360839844,
+      "44": 87922.14721679688,
+      "45": 175844.29443359375,
+      "46": 351688.5888671875,
+      "47": 703377.177734375,
+      "48": 1406754.35546875,
+      "49": 2813508.7109375,
+      "50": 5627017.421875,
+      "51": 11254034.84375,
+      "52": 22508069.6875,
+      "53": 45016139.375,
+      "54": 90032278.75,
+      "55": 180064557.5,
+      "56": 360129115.0,
+      "57": 720258230.0,
+      "58": 1440516460.0,
+      "59": 2881032920.0,
+      "60": 5762065840.0,
+      "61": 11524131680.0,
+      "62": 23048263360.0,
+      "63": 46096526720.0,
+      "64": 92193053440.0
+    },
+    "recommended_stream_candidate_count": 1073741824,
+    "recommended_stream_target_seconds_at_minimum": 5.3663419932127,
+    "repeats": 3,
+    "samples": [
+      {
+        "candidate_count": 67108864,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 203599114.35702506,
+        "end_to_end_wall_seconds": 0.32961275009438396,
+        "factual_matches": [
+          33554432
+        ],
+        "gpu_candidates_per_second": 203933964.13586578,
+        "gpu_seconds": 0.32907154178246856
+      },
+      {
+        "candidate_count": 67108864,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 200088221.24233952,
+        "end_to_end_wall_seconds": 0.33539637457579374,
+        "factual_matches": [
+          33554432
+        ],
+        "gpu_candidates_per_second": 200559302.02299905,
+        "gpu_seconds": 0.3346085837110877
+      },
+      {
+        "candidate_count": 67108864,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 200210941.57245094,
+        "end_to_end_wall_seconds": 0.3351907916367054,
+        "factual_matches": [
+          33554432
+        ],
+        "gpu_candidates_per_second": 200585378.7810098,
+        "gpu_seconds": 0.33456508349627256
+      }
+    ],
+    "timed_relation_compares_full_32_byte_ciphertext_and_16_byte_tag": true,
+    "volatile_performance_only_not_a_recovery_success_rule": true,
+    "warmup_candidate_count": 1048576,
+    "warmup_factual_matches": []
+  },
+  "boundary_mapping_gate": {
+    "candidate_encoding": "assignment=(outer_key_word1_low_bits<<32)|candidate_key_word0; all key words and candidate bytes are little-endian",
+    "complete_ciphertext_and_tag_checked": true,
+    "exact_boundary_identity": true,
+    "outer_word_boundaries_checked": [
+      "0x00000000",
+      "0x00000001",
+      "0x80000000",
+      "0xffffffff"
+    ],
+    "rows": [
+      {
+        "candidate_count": 2,
+        "exact_cpu_metal_filter_identity": true,
+        "first_low32_candidate": 0,
+        "label": "low32_zero_boundary",
+        "outer_key_word1": 0,
+        "outputs_sha256": "109bac2c89651276d42a8fc7137880906b480959dc2c18fa7c71efb77fced060",
+        "target_combined_low64_assignment": 1,
+        "target_low32_candidate": 1
+      },
+      {
+        "candidate_count": 4,
+        "exact_cpu_metal_filter_identity": true,
+        "first_low32_candidate": 65534,
+        "label": "low16_carry_boundary",
+        "outer_key_word1": 0,
+        "outputs_sha256": "937d8218b7d980048dd4b4332bd809b982a43122f683c00740dabce3c426c927",
+        "target_combined_low64_assignment": 65536,
+        "target_low32_candidate": 65536
+      },
+      {
+        "candidate_count": 4,
+        "exact_cpu_metal_filter_identity": true,
+        "first_low32_candidate": 2147483646,
+        "label": "low32_sign_boundary",
+        "outer_key_word1": 0,
+        "outputs_sha256": "e1048ed48eb55f7b29e862ad206c63c31b195915a3aa6abf53b32f8ff4d17417",
+        "target_combined_low64_assignment": 2147483648,
+        "target_low32_candidate": 2147483648
+      },
+      {
+        "candidate_count": 4,
+        "exact_cpu_metal_filter_identity": true,
+        "first_low32_candidate": 4294967292,
+        "label": "low32_terminal_boundary",
+        "outer_key_word1": 0,
+        "outputs_sha256": "a601af682526bccc5bb5cc79a7277f0c42ea2e8b6ad12efa0ef5006ffd997910",
+        "target_combined_low64_assignment": 4294967295,
+        "target_low32_candidate": 4294967295
+      },
+      {
+        "candidate_count": 2,
+        "exact_cpu_metal_filter_identity": true,
+        "first_low32_candidate": 0,
+        "label": "outer_bit_zero_to_one_boundary",
+        "outer_key_word1": 1,
+        "outputs_sha256": "2c701217f2b549789233e9cff86c90c8f3cedad44383604d2b95e3d3f6a56e5c",
+        "target_combined_low64_assignment": 4294967296,
+        "target_low32_candidate": 0
+      },
+      {
+        "candidate_count": 2,
+        "exact_cpu_metal_filter_identity": true,
+        "first_low32_candidate": 0,
+        "label": "outer_word_high_bit_boundary",
+        "outer_key_word1": 2147483648,
+        "outputs_sha256": "b6e0aeaaec9f32de6c67980b92937f3cda72336a9150901b63cca93bf77b8c65",
+        "target_combined_low64_assignment": 9223372036854775809,
+        "target_low32_candidate": 1
+      },
+      {
+        "candidate_count": 2,
+        "exact_cpu_metal_filter_identity": true,
+        "first_low32_candidate": 4294967294,
+        "label": "full_low64_terminal_boundary",
+        "outer_key_word1": 4294967295,
+        "outputs_sha256": "53c682676a49b5d3c045b2ab00295d907c5022cf6074d719bcc901b939c77f98",
+        "target_combined_low64_assignment": 18446744073709551614,
+        "target_low32_candidate": 4294967294
+      }
+    ],
+    "uint32_boundaries_checked": [
+      "0x00000000",
+      "0x00010000",
+      "0x80000000",
+      "0xffffffff"
+    ]
+  },
+  "content_anchors": {
+    "cpu_reference": {
+      "filename": "ascon_aead128_reference.py",
+      "sha256": "e43873f67fb33a3d210eb71fcc3aa69d6ebe85fa0e811cdfba6de3c93450f09a"
+    },
+    "native_source": {
+      "filename": "ascon_aead128_metal_native.swift",
+      "sha256": "e4c54e5e4405166de3d7da514af70c4e5f8fa96aa046522e1215c42fe86c41f3"
+    },
+    "nist_standard": {
+      "pdf_sha256": "1be9bb9a5fef3665ee8b258babe54b8e500d667fcfbbcc99710fe6077c6bad27",
+      "url": "https://doi.org/10.6028/NIST.SP.800-232"
+    },
+    "official_kat": {
+      "commit": "446347f21b209f3921c65ece70027c366cbe1693",
+      "sha256": "bbbc34692fe05e5fda0a3b025585622ab3e3747495e5e3655b29aae8c2a4bd33",
+      "url": "https://raw.githubusercontent.com/ascon/ascon-c/446347f21b209f3921c65ece70027c366cbe1693/crypto_aead/asconaead128/LWC_AEAD_KAT_128_128.txt"
+    },
+    "qualification_source": {
+      "filename": "ascon_aead128_metal_qualification.py",
+      "sha256": "ed119d72916c4be9bc3ce99fa4576c281c3736947d006f9aa0793e2b31ea0ed0"
+    }
+  },
+  "content_anchors_sha256": "5190ec3da6048a32a7cfbb5e404c8d627d74272b216237f0105374cf17238f89",
+  "cross_implementation_gate": {
+    "associated_data_bytes": 17,
+    "candidate_count": 256,
+    "ciphertext_and_tag_bits_per_candidate": 384,
+    "complete_output_bits_checked": 98304,
+    "exact_cpu_metal_identity": true,
+    "exact_factual_and_control_filter_identity": true,
+    "first_candidate": 305462912,
+    "message_bytes": 32,
+    "outputs_sha256": "e5a85d758547e0077cc84045295280dcc773414b2d614c4a9ce410a315f655b8",
+    "target_candidate": 305463057
+  },
+  "evidence_stage": "ASCON_AEAD128_SP800_232_METAL_PRE_TARGET_QUALIFICATION",
+  "host_identity": {
+    "metal": {
+      "device": "Apple M4",
+      "encryptions_execution_width": 32,
+      "encryptions_max_threads_per_group": 1024,
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true,
+      "sp800_232_little_endian_semantics": true
+    },
+    "op": "ready",
+    "version": "ascon-aead128-metal-native-v1"
+  },
+  "information_boundary": {
+    "A256_requires_separate_post_review_process": true,
+    "benchmark_outcome_used_only_to_select_prospective_width_and_batch_size": true,
+    "complete_residual_key_domain_executed": false,
+    "production_protocol_frozen": false,
+    "production_target_selected": false,
+    "production_unknown_assignment_generated": false
+  },
+  "launch_gate": {
+    "authorization_reason": "A255 selects parameters only; A256 remains blocked pending root review, fresh challenge freeze, content-hash anchoring, and explicit launch acknowledgement",
+    "full_domain_launch_authorized": false,
+    "highest_safe_integer_width_at_observed_minimum": 40,
+    "maximum_complete_domain_seconds": 7200,
+    "maximum_supported_residual_width": 64,
+    "observed_minimum_candidates_per_second": 200088221.24233952,
+    "parameters_safe_for_post_review_freeze": true,
+    "projected_selected_width_seconds_at_observed_minimum": 5495.134201049805,
+    "selected_stream_candidate_count": 1073741824,
+    "selected_stream_projected_seconds_at_observed_minimum": 5.3663419932127,
+    "selected_width": 40,
+    "selected_width_under_two_hours": true,
+    "selection_rule": "maximum_supported_integer_width_whose_complete_domain_fits_7200_seconds_at_minimum_end_to_end_wall_throughput",
+    "throughput_statistic": "minimum_end_to_end_wall_throughput_of_all_timed_repeats"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "62ff4ffec0ffc74a94c625a6446d4f58974cfc6a95a7cb07c13a773edcc6bf32",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_filename": "ascon_aead128_metal_native.swift",
+    "source_sha256": "e4c54e5e4405166de3d7da514af70c4e5f8fa96aa046522e1215c42fe86c41f3",
+    "warnings_as_errors": true
+  },
+  "official_kat_gate": {
+    "all_official_kat_gates_passed": true,
+    "legacy_endian_semantics_used": false,
+    "metal_vectors": [
+      {
+        "associated_data_bytes": 0,
+        "ciphertext_and_tag_bytes_checked": 16,
+        "combined_sha256": "6f1f2d8707590d40596f7dc22676157671a1166c16c56bad37c58531ea04c5d8",
+        "count": 1,
+        "exact_cpu_metal_identity": true,
+        "message_bytes": 0,
+        "one_bit_control_rejected": true
+      },
+      {
+        "associated_data_bytes": 1,
+        "ciphertext_and_tag_bytes_checked": 17,
+        "combined_sha256": "21425892097cf94993f469c7b6b0f3663399871a1e0fe2a076c84363ea097be7",
+        "count": 35,
+        "exact_cpu_metal_identity": true,
+        "message_bytes": 1,
+        "one_bit_control_rejected": true
+      },
+      {
+        "associated_data_bytes": 1,
+        "ciphertext_and_tag_bytes_checked": 33,
+        "combined_sha256": "9750e430cbdafa4dbe526c5cc5182fdf8ef65808f04af5a3875398e66d9c0dcb",
+        "count": 563,
+        "exact_cpu_metal_identity": true,
+        "message_bytes": 17,
+        "one_bit_control_rejected": true
+      },
+      {
+        "associated_data_bytes": 17,
+        "ciphertext_and_tag_bytes_checked": 48,
+        "combined_sha256": "c51478c2f77f87d539caa04aa21e2a7790814933eb86d6432dbaad2f8231a1da",
+        "count": 1074,
+        "exact_cpu_metal_identity": true,
+        "message_bytes": 32,
+        "one_bit_control_rejected": true
+      }
+    ],
+    "nonpalindromic_orientation_sentinel": {
+      "expected_combined_hex": "bf77c71b3de9f1c5b372ef273a08e89be9675adc5777342f1d1ef3c5d4bfc7aa055dd1908bb4c524bc967452ffdaa943",
+      "key_hex_nonpalindromic": "000102030405060708090a0b0c0d0e0f",
+      "legacy_big_endian_interpretation_hex": [
+        "0001020304050607",
+        "08090a0b0c0d0e0f"
+      ],
+      "little_and_big_word_interpretations_differ": true,
+      "little_endian_key_words_hex": [
+        "0706050403020100",
+        "0f0e0d0c0b0a0908"
+      ],
+      "official_kat_count": 1074,
+      "pass": true,
+      "word_reversed_key_combined_hex": "25a9f1f9cb74ebc2bea5e1779542380a7023e02192561e6433b9f335a59fbacd8b38d99ffc4df0f844dfbbbbe143f3e9",
+      "word_reversed_key_rejected": true
+    },
+    "official_kat_file_sha256": "bbbc34692fe05e5fda0a3b025585622ab3e3747495e5e3655b29aae8c2a4bd33",
+    "official_kat_repository_commit": "446347f21b209f3921c65ece70027c366cbe1693",
+    "official_kat_url": "https://raw.githubusercontent.com/ascon/ascon-c/446347f21b209f3921c65ece70027c366cbe1693/crypto_aead/asconaead128/LWC_AEAD_KAT_128_128.txt",
+    "scalar_vectors": [
+      {
+        "actual_combined_hex": "4f9c278211bec9316bf68f46ee8b2ec6",
+        "associated_data_bytes": 0,
+        "count": 1,
+        "expected_combined_hex": "4f9c278211bec9316bf68f46ee8b2ec6",
+        "pass": true,
+        "plaintext_bytes": 0
+      },
+      {
+        "actual_combined_hex": "962b8016836c75a7d86866588ca245d886",
+        "associated_data_bytes": 1,
+        "count": 35,
+        "expected_combined_hex": "962b8016836c75a7d86866588ca245d886",
+        "pass": true,
+        "plaintext_bytes": 1
+      },
+      {
+        "actual_combined_hex": "96107d8a29a7529a7941bdc7df1fe3c6c7ea70d7986e7b59cd0d357239f5d25bf5",
+        "associated_data_bytes": 1,
+        "count": 563,
+        "expected_combined_hex": "96107d8a29a7529a7941bdc7df1fe3c6c7ea70d7986e7b59cd0d357239f5d25bf5",
+        "pass": true,
+        "plaintext_bytes": 17
+      },
+      {
+        "actual_combined_hex": "bf77c71b3de9f1c5b372ef273a08e89be9675adc5777342f1d1ef3c5d4bfc7aa055dd1908bb4c524bc967452ffdaa943",
+        "associated_data_bytes": 17,
+        "count": 1074,
+        "expected_combined_hex": "bf77c71b3de9f1c5b372ef273a08e89be9675adc5777342f1d1ef3c5d4bfc7aa055dd1908bb4c524bc967452ffdaa943",
+        "pass": true,
+        "plaintext_bytes": 32
+      }
+    ],
+    "sp800_232_pdf_sha256": "1be9bb9a5fef3665ee8b258babe54b8e500d667fcfbbcc99710fe6077c6bad27",
+    "sp800_232_url": "https://doi.org/10.6028/NIST.SP.800-232",
+    "standard": "NIST_SP_800-232_Ascon-AEAD128"
+  },
+  "qualification_resource_cap": {
+    "actual_wall_seconds_host_lifetime": 1.5458635003305972,
+    "cannot_occupy_gpu_for_two_minutes": true,
+    "maximum_benchmark_candidates_per_repeat": 67108864,
+    "maximum_benchmark_repeats": 3,
+    "reported_total_gpu_seconds": 1.004085501190275,
+    "subprocess_killed_on_deadline": true,
+    "wall_deadline_seconds": 110.0
+  },
+  "schema": "ascon-aead128-sp800-232-metal-qualification-v1",
+  "scope": "Standardized NIST SP 800-232 Ascon-AEAD128 full encryption and 128-bit tag implementation qualification plus volatile throughput measurement; no A256 production challenge was generated, frozen, or searched."
+}

@@ -1,0 +1,197 @@
+{
+  "attempt_id": "A243",
+  "benchmark": {
+    "candidate_count_per_repeat": 536870912,
+    "launch_gate_uses_end_to_end_wall_throughput": true,
+    "maximum_candidates_per_second": 3999101755.8786774,
+    "maximum_gpu_candidates_per_second": 4013751794.367891,
+    "median_candidates_per_second": 3996654370.1154714,
+    "median_gpu_candidates_per_second": 4013583017.0797415,
+    "minimum_candidates_per_second": 3600209640.168731,
+    "minimum_gpu_candidates_per_second": 3615931508.373946,
+    "projected_complete_domain_seconds": {
+      "40": 275.1080093383789,
+      "41": 550.2160186767578,
+      "42": 1100.4320373535156,
+      "43": 2200.8640747070312,
+      "44": 4401.7281494140625,
+      "45": 8803.456298828125,
+      "46": 17606.91259765625,
+      "47": 35213.8251953125,
+      "48": 70427.650390625
+    },
+    "projected_complete_domain_seconds_at_minimum": {
+      "40": 305.4021120071411,
+      "41": 610.8042240142822,
+      "42": 1221.6084480285645,
+      "43": 2443.216896057129,
+      "44": 4886.433792114258,
+      "45": 9772.867584228516,
+      "46": 19545.73516845703,
+      "47": 39091.47033691406,
+      "48": 78182.94067382812
+    },
+    "repeats": 5,
+    "samples": [
+      {
+        "candidate_count": 536870912,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 3600209640.168731,
+        "end_to_end_wall_seconds": 0.14912212500348687,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 3615931508.373946,
+        "gpu_seconds": 0.14847375033423305
+      },
+      {
+        "candidate_count": 536870912,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 3998777825.807854,
+        "end_to_end_wall_seconds": 0.1342587498947978,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 4013583017.0797415,
+        "gpu_seconds": 0.13376350002363324
+      },
+      {
+        "candidate_count": 536870912,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 3999101755.8786774,
+        "end_to_end_wall_seconds": 0.13424787484109402,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 4013599266.812909,
+        "gpu_seconds": 0.1337629584595561
+      },
+      {
+        "candidate_count": 536870912,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 3996654370.1154714,
+        "end_to_end_wall_seconds": 0.13433008268475533,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 4013751794.367891,
+        "gpu_seconds": 0.13375787530094385
+      },
+      {
+        "candidate_count": 536870912,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 3995902000.124789,
+        "end_to_end_wall_seconds": 0.13435537507757545,
+        "factual_matches": [],
+        "gpu_candidates_per_second": 4012933009.921749,
+        "gpu_seconds": 0.13378516677767038
+      }
+    ],
+    "volatile_performance_only_not_a_recovery_success_rule": true
+  },
+  "boundary_filter_gate": {
+    "exact_boundary_identity": true,
+    "intervals": [
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 0
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [
+          2418085869
+        ],
+        "first_candidate": 2418085741
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "factual_matches": [],
+        "first_candidate": 4294967040
+      }
+    ],
+    "target_candidate": 2418085869
+  },
+  "cipher": {
+    "block_bits": 64,
+    "candidate_encoding": "candidate=k0; configured_key1=l0, key2=l1, key3=l2",
+    "filter_output_bits": 128,
+    "known_plaintext_blocks_per_candidate": 2,
+    "master_key_bits": 128,
+    "rounds": 27,
+    "variant": "Speck64/128"
+  },
+  "cross_implementation_gate": {
+    "candidate_count": 256,
+    "complete_output_bits_checked": 32768,
+    "exact_filter_identity": true,
+    "exact_scalar_identity": true,
+    "first_candidate": 123456789,
+    "output_sha256": "8dba51f664cba45cd087af9e1c3461484975ca820f6b67b880a21b8e13c73305",
+    "target_candidate": 123456862
+  },
+  "evidence_stage": "SPECK64_128_METAL_PRE_TARGET_QUALIFICATION",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "speck64-128-metal-native-v1"
+  },
+  "information_boundary": {
+    "benchmark_outcome_may_select_future_width": true,
+    "complete_residual_key_domain_executed": false,
+    "production_target_selected": false,
+    "production_unknown_assignment_generated": false
+  },
+  "launch_gate": {
+    "full_domain_launch_authorized": true,
+    "highest_safe_integer_width_at_observed_minimum": 44,
+    "maximum_complete_domain_seconds": 7200,
+    "observed_minimum_candidates_per_second": 3600209640.168731,
+    "projected_width44_seconds_at_observed_minimum": 4886.433792114258,
+    "required_candidates_per_second": 2443359172.8355556,
+    "selected_width": 44,
+    "target_width": 44,
+    "throughput_statistic": "minimum_end_to_end_wall_throughput_of_all_timed_repeats",
+    "width44_under_two_hours": true
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "8e0d96fbbc9cf6a9e352343ee236541b67c973bd13b6b17f68aeb4fa6c12e6bc",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "67c0ff467314db77fa24b7715bd9d8bb3672ae91794d35ca8e39b421ef21fdb0",
+    "warnings_as_errors": true
+  },
+  "official_kat_gate": {
+    "actual_ciphertext_words": [
+      2356127048,
+      1162740363
+    ],
+    "candidate_encoding": 50462976,
+    "expected_ciphertext_words": [
+      2356127048,
+      1162740363
+    ],
+    "master_key_words_paper_order": [
+      50462976,
+      185207048,
+      319951120,
+      454695192
+    ],
+    "plaintext_words": [
+      997352820,
+      1953841965
+    ],
+    "two_block_scalar_identity": true
+  },
+  "schema": "speck64-128-metal-qualification-v1",
+  "scope": "Full 27-round Speck64/128 implementation qualification and volatile throughput measurement; no production recovery target was selected or run."
+}
