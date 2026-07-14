@@ -57,11 +57,48 @@ def test_new_cross_family_recovery_anchors() -> None:
         assert result["control_models"] == 0
 
 
+def test_new_complete_domain_present128_and_aes256_records() -> None:
+    expected = {
+        "present128": ("P128R1", 2**38, 198_790_436_326, 128),
+        "aes256": ("AES256R1", 2**41, 534_703_724_815, 256),
+    }
+    for name, (attempt, candidates, assignment, confirmation_bits) in expected.items():
+        result = verify_result(name, ROOT)
+        assert result["attempt_id"] == attempt
+        assert result["logical_candidates"] == candidates
+        assert result["recovered_assignment"] == assignment
+        assert result["independent_confirmation_bits"] == confirmation_bits
+        assert result["factual_models"] == 1
+        assert result["control_models"] == 0
+
+
+def test_target_blind_strict_subset_chacha20_recoveries() -> None:
+    a281 = verify_result("chacha20_cross_material", ROOT)
+    assert a281["attempt_id"] == "A281"
+    assert a281["strict_subset_recovery"] is True
+    assert a281["complete_domain_executed"] is False
+    assert a281["frozen_order_rank"] == 37
+    assert a281["logical_assignments"] == 151_552
+    assert a281["recovered_assignment"] == 0xBF9F3
+
+    a286 = verify_result("chacha20_multitarget_panel", ROOT)
+    assert a286["attempt_id"] == "A286"
+    assert a286["strict_subset_recoveries"] == 4
+    assert a286["complete_domain_executed"] is False
+    assert a286["independent_confirmation_bits"] == 16_384
+    assert [row["recovered_assignment"] for row in a286["target_results"]] == [
+        0x18E26,
+        0xE28A0,
+        0x57A0F,
+        0x2527D,
+    ]
+
+
 def test_complete_suite_opens_all_causal_and_protocol_artifacts() -> None:
     result = verify_all(ROOT)
     assert result["status"] == "verified"
     assert result["author"] == "David Tom Foss"
-    assert result["artifact_count"] == 94
+    assert result["artifact_count"] == 205
     assert [row["attempt_id"] for row in result["results"]] == [
         "A184",
         "A237",
@@ -73,5 +110,9 @@ def test_complete_suite_opens_all_causal_and_protocol_artifacts() -> None:
         "A256",
         "AES-W41",
         "A264",
+        "P128R1",
+        "AES256R1",
+        "A281",
+        "A286",
     ]
-    assert len(result["causal"]) == 10
+    assert len(result["causal"]) == 28

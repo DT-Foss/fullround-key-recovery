@@ -1,0 +1,18 @@
+{
+  "attempt_id": "AES256R1",
+  "authentic_dotcausal_v1_reader_verified": true,
+  "causal_artifact_bound_to_result": true,
+  "complete_domain_executed": true,
+  "files": {
+    "causal": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/aes256_fips197_metal_width41_recovery_v1.causal",
+      "sha256": "85643fd518638abfe74adc0dfc3c5cbfc250a2d3429ae4c065d3fcb2fc264be0"
+    },
+    "result": {
+      "path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/aes256_fips197_metal_width41_recovery_v1.json",
+      "sha256": "51b9d4c476d03acf92894f1cb259a59538fef14afebb2bdb6cd4b403556f60b3"
+    }
+  },
+  "protocol_sha256": "71e3b65274795610f1594dfc1a5fb7aa0a8435b2b1207ae540f37d82e83d9735",
+  "schema": "aes256-fips197-recovery-artifact-manifest-v1"
+}

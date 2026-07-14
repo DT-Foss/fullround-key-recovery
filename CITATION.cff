@@ -8,7 +8,7 @@ authors:
     email: d.foss@ieee.org
     orcid: "https://orcid.org/0009-0004-0289-7154"
     affiliation: "AI Systems and Causal Knowledge Graphs, Görlitz, Germany"
-version: 1.2.0
+version: 1.3.0
 date-released: 2026-07-14
 license: MIT
 repository-code: "https://github.com/DT-Foss/fullround-key-recovery"
@@ -24,6 +24,9 @@ keywords:
   - PRESENT-80
   - Ascon-AEAD128
   - AES-128
+  - AES-256
+  - PRESENT-128
+  - strict-subset recovery
   - Salsa20/20
   - Threefish-256
   - Apple Metal

@@ -1,0 +1,99 @@
+{
+  "attempt_id": "A283",
+  "generation_summary": {
+    "all_low20_values_distinct": true,
+    "all_prefix8_values_distinct": true,
+    "all_public_challenge_hashes_distinct": true,
+    "all_suffix12_values_distinct": true,
+    "all_targets_generated_in_one_process": true,
+    "generation_labels_returned_or_serialized": false,
+    "prior_ledger_sha256": "a9f8e3eb7a158e734019f8dbfdd4c39fcf0035e3d39a85123eee4c196973d7d0"
+  },
+  "information_boundary": {
+    "all_four_target_protocols_complete_before_any_measurement": true,
+    "any_measurement_started": false,
+    "any_recovery_started": false,
+    "any_target_generation_label_available": false
+  },
+  "panel_master": {
+    "path": "research/configs/chacha20_round20_multitarget_panel_master_v1.json",
+    "sha256": "79a7c1527dfa91aa623ebb26df563883be457b81ea9b9d1b6731f5950f22b4ef"
+  },
+  "protocol_state": "all_four_targets_frozen_and_labels_discarded_before_any_measurement",
+  "schema": "chacha20-round20-multitarget-target-ledger-v1",
+  "target_count": 4,
+  "targets": [
+    {
+      "master_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t01_master_v1.json",
+        "sha256": "187836780490e1d39dd39197fe6c5673c5d55d3a3528f940ffd8b832ec5d2a84"
+      },
+      "panel_index": 1,
+      "public_challenge_sha256": "5b948554cb1d9eeda7acc30c13fff24d98de93f8d1e8753538e7764fbfcc4a94",
+      "public_template_sha256": "aaeb292d26f65511bdc011d9810e77c61151421ec90113baa2c382323916d442",
+      "symbolic_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t01_symbolic_v1.json",
+        "sha256": "a79ecc2781c2a8c9ef2e5375c9d5befad1fc4a67b391a9500ea4a6195b804f30"
+      },
+      "target_id": "t01",
+      "target_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t01_target_v1.json",
+        "sha256": "eb9900126605dfd4b10579a0bbd1ff4eb359fef93d3f70abbba6a5baf28990af"
+      }
+    },
+    {
+      "master_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t02_master_v1.json",
+        "sha256": "393e1ad69187a0474bb6d326d5a401711f4a0fd63b8225289e2178edfe4cac5c"
+      },
+      "panel_index": 2,
+      "public_challenge_sha256": "22461db90498f6b1afadc25d4435cf552c60efa038a6ad72d481b751fbd66abb",
+      "public_template_sha256": "6d265ad8f24b0115327e2e1cbbf043a7a4501ffc4f0da709f8f31faf6dad1ae6",
+      "symbolic_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t02_symbolic_v1.json",
+        "sha256": "38490a48f456e6a96cc88b2f2e2956430ef3a3a06e6ad9070f2d9c91a347cbc5"
+      },
+      "target_id": "t02",
+      "target_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t02_target_v1.json",
+        "sha256": "3c6bccd52e95dce0b4af7d8a65fff06777437eb86aa3cd4c3fde188aefc93d8d"
+      }
+    },
+    {
+      "master_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t03_master_v1.json",
+        "sha256": "72be2b0417da7fda9224d41f898c6e8e87d345f76b1b67b25ed560a96b29be0d"
+      },
+      "panel_index": 3,
+      "public_challenge_sha256": "ece6555c9f9d0fc6e5557f1700ef97a2e2d8474235f658994bd50e632fee1798",
+      "public_template_sha256": "95d710c670353c7d1fb9afd757cf87828c61adcb6e7167f6b99f8d7f4c673986",
+      "symbolic_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t03_symbolic_v1.json",
+        "sha256": "39f6becda9242401d8e088241dc31bc6b4e539552dd8e28315a938b926782f60"
+      },
+      "target_id": "t03",
+      "target_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t03_target_v1.json",
+        "sha256": "822c78998efa25bc807ef182f78d06734455452df51ab6c3cefb97f8689c607d"
+      }
+    },
+    {
+      "master_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t04_master_v1.json",
+        "sha256": "e94bd5832aa0b5bcb40bd8413eedd6787d404ba8d2416a4e7e7785352b9e0df7"
+      },
+      "panel_index": 4,
+      "public_challenge_sha256": "8ec9d241cd2a98175ed2b432304a332c41620e33adc899aea271012fb0712f91",
+      "public_template_sha256": "7632acee61d5a487136b0e2caa68719b78de519e5ce70438a8f055c059d5fc30",
+      "symbolic_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t04_symbolic_v1.json",
+        "sha256": "b4303c273a6aae49fe4901a30974769612308a56d314fe3f6e5bd81d83422ad3"
+      },
+      "target_id": "t04",
+      "target_protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t04_target_v1.json",
+        "sha256": "d64aa757a4779ad1e061fc41d1cdd22c68041b6f87a8157e7033a1f5d9b828be"
+      }
+    }
+  ]
+}

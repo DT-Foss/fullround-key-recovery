@@ -1,0 +1,135 @@
+{
+  "anchors": {
+    "Bitwuzla": {
+      "path": "/opt/homebrew/bin/bitwuzla",
+      "sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a"
+    },
+    "inherited_symbolic_protocol": {
+      "path": "research/configs/chacha20_round20_knownkey_propagation_atlas_v3.json",
+      "sha256": "aa5b7af87c74cbffe7f6d3e50332cc65c07f084435edb4314b32e4904b625698"
+    },
+    "preflight_runner": {
+      "path": "research/experiments/chacha20_round20_cross_material_symbolic_preflight.py",
+      "sha256": "01b3e00fb3db3703cd203c94655c8ac60c278bb4266e565c7fc27bb5886dc808"
+    },
+    "public_core": {
+      "path": "research/experiments/chacha20_round20_public_core.py",
+      "sha256": "953e4478d369b2eb39657d4b6f718fa97a46cac1855b0364cce1bc4e4753f77f"
+    },
+    "symbolic_template": {
+      "path": "research/experiments/chacha20_round20_symbolic_template.py",
+      "sha256": "34f4c5542f7fa12e7b0ff06ab7e042605c2414f23001f11894fa6dbdfc0b4721"
+    }
+  },
+  "attempt_id": "A280T",
+  "compile_manifest": {
+    "all_mapping_probes_exact_unit_deltas": true,
+    "base_body_sha256": "ca73e3be7e9d712a9692f061b07784baa4e414ff47ea27e828f5f77ca0b53fe0",
+    "base_cnf_sha256": "3211fc771c76349f5a8337fb83eb9f0b60753b9118207457b5581df176fdabd5",
+    "formula_sha256": "5a6ac58b3e95cf8f81a5ff8d6f2661b23d776d1bd047a5be585a542616344ee5",
+    "key_mapping_sha256": "ddcd967d755bd29d8d98e9fe1b3befccdf20edd4c12b87614b16ee4a87d80926",
+    "mapping_probe_count": 102,
+    "mapping_probe_status_counts": {
+      "sat": 6,
+      "unknown": 96,
+      "unsat": 0
+    },
+    "output_mapping_sha256": "5e6963f2d3d4c25ef3f47011e8dc473f58110909167357e35b770dde502bb190"
+  },
+  "master_protocol": {
+    "path": "research/configs/chacha20_round20_multitarget_t01_master_v1.json",
+    "scientific_design_sha256": "53718049f387230077711988bc736f0b103f9eca3f60d550135d8f15a9cb8844",
+    "sha256": "187836780490e1d39dd39197fe6c5673c5d55d3a3528f940ffd8b832ec5d2a84"
+  },
+  "protocol_state": "frozen_from_A278_public_material_without_reading_A279_target",
+  "public_template_sha256": "aaeb292d26f65511bdc011d9810e77c61151421ec90113baa2c382323916d442",
+  "schema": "chacha20-round20-cross-material-symbolic-template-v1",
+  "scientific_design_sha256": "84792a01b238c77578afd4d45bd264d0e6a588de48b98ce0fe2b873b53ba4736",
+  "symbolic_R20_template": {
+    "Bitwuzla_path": "/opt/homebrew/bin/bitwuzla",
+    "Bitwuzla_sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+    "Bitwuzla_version": "0.9.1",
+    "arguments": [
+      "--lang",
+      "smt2",
+      "--time-limit",
+      "1000",
+      "--bv-solver",
+      "bitblast",
+      "--sat-solver",
+      "cadical",
+      "--preprocess=false",
+      "--rewrite-level",
+      "0"
+    ],
+    "base_body_sha256": "ca73e3be7e9d712a9692f061b07784baa4e414ff47ea27e828f5f77ca0b53fe0",
+    "base_bytes": 4453734,
+    "base_clause_length_counts": {
+      "1": 1044,
+      "2": 139054,
+      "3": 112271
+    },
+    "base_header": "p cnf 80765 252369",
+    "base_sha256": "3211fc771c76349f5a8337fb83eb9f0b60753b9118207457b5581df176fdabd5",
+    "construction": "replace_all_28_occurrences_of_the_16_public_target_word_expressions_in_the_pinned_split18_forward_backward_formula_by_declared_symbolic_t0_through_t15_words",
+    "formula_bytes": 38851,
+    "formula_sha256": "5a6ac58b3e95cf8f81a5ff8d6f2661b23d776d1bd047a5be585a542616344ee5",
+    "key_one_literals_bit0_through_bit19": [
+      23,
+      22,
+      25,
+      27,
+      29,
+      31,
+      33,
+      35,
+      37,
+      39,
+      41,
+      43,
+      45,
+      47,
+      49,
+      51,
+      53,
+      55,
+      57,
+      59
+    ],
+    "mapping_export_count": 102,
+    "mapping_probe_design": "zero_pattern_plus_five_binary_coordinate_patterns_for_low20_k0_and_each_of_16_output_words",
+    "mapping_probe_status_counts": {
+      "sat": 6,
+      "unknown": 96,
+      "unsat": 0
+    },
+    "output_one_literal_matrix_sha256": "5e6963f2d3d4c25ef3f47011e8dc473f58110909167357e35b770dde502bb190",
+    "replacement_counts_by_lane": [
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "replacement_total": 28
+  },
+  "target_independence": {
+    "A279_protocol_opened": false,
+    "A279_target_words_read": false,
+    "later_target_instantiation_is_exactly_512_unit_polarities": true,
+    "symbolic_formula_depends_only_on_A278_public_material": true,
+    "synthetic_label": 0,
+    "synthetic_target_constants_removed_before_formula_hash": true
+  }
+}

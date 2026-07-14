@@ -1,0 +1,77 @@
+{
+  "attempt_id": "A285",
+  "causal": {
+    "api_id": "a285t04",
+    "bytes": 4456,
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 3,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "integrity_verified_by_authoritative_reader": true,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_multitarget_t04_composite_recovery_canonical_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "complete_remaining_panel_targets_then_widen_unknown_domain",
+        "predicate": "next_required_object",
+        "subject": "A285:t04_confirmed_cross_material_R20_recovery",
+        "suggested_queries": [
+          "Complete the independently frozen panel and measure its rank distribution.",
+          "Transfer the panel mechanism to a wider unknown-key domain."
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_CROSS_MATERIAL_TARGET_BLIND_GLOBAL_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 7,
+        "mechanism": "materialized_order_solver_evidence_terminal_chain",
+        "o_idx": 6,
+        "outcome": "A285:t04_confirmed_cross_material_R20_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "canonical three-edge AI-native closure",
+        "s_idx": 0,
+        "source": "materialized:A284_order_plus_A285_t04_execution",
+        "trigger": "A284:t04_hash_frozen_cross_material_order"
+      }
+    },
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "sha256": "6b4fa079e7e3a6bd14d91176a9831f7aee70780abac287e272b7fe779b54887a",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 8,
+      "file_size_bytes": 4456,
+      "file_size_kb": 4.4,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_multitarget_t04_composite_recovery_canonical_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 4
+    }
+  },
+  "confirmed": true,
+  "evidence_stage": "FULLROUND_R20_CROSS_MATERIAL_TARGET_BLIND_GLOBAL_RECOVERY_CONFIRMED",
+  "order_rank": null,
+  "prefix8": null,
+  "schema": "chacha20-round20-multitarget-canonical-causal-v1",
+  "scientific_result_changed": false,
+  "solver_or_measurement_reexecuted": false,
+  "source_causal": {
+    "path": "research/results/v1/chacha20_round20_multitarget_t04_composite_recovery_v1.causal",
+    "retained_as_immutable_original": true,
+    "sha256": "90f2c1755300b266fb69a9b31ae4295e0ba6822f0b0dfa8d548eec43cf0c50b7"
+  },
+  "source_result": {
+    "path": "research/results/v1/chacha20_round20_multitarget_t04_composite_recovery_v1.json",
+    "sha256": "8c8727bb2b922b8a2f39af9d770b221066afc1b42af7dda3041c44d2a2c6dfd7"
+  },
+  "target_id": "t04"
+}

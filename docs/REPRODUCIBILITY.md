@@ -10,9 +10,10 @@ python3 -m venv .venv
 make verify test lint
 ```
 
-This verifies 94 artifact hashes, ten protocol/result identities, complete-
-domain execution records, recovered-key reconstruction, full-output
-confirmations, matched controls, and Causal integrity.
+This verifies 205 artifact hashes, twelve complete-domain records, the A281
+strict-subset record, the four-target A286 root confirmation, recovered-key
+reconstruction, full-output confirmations, matched controls, and Causal
+integrity across 28 AI-native files.
 
 The source-compatible Causal Reader is vendored because it is part of the
 artifact provenance. Its exact files and MIT license are pinned by
@@ -61,9 +62,15 @@ The checkpoint records durable progress and accumulated GPU time but no candidat
 identity. Once a filter match appears, durable progress remains before that
 batch, so candidate identity is not persisted before full-domain completion.
 
-The later seven records retain their exact originating protocol factories,
+The later nine complete-domain records retain their exact originating protocol factories,
 qualification programs, recovery programs, and native hosts. Those sources are
 provenance-preserving originals rather than rewritten package wrappers.
+
+The A281/A286 strict-subset evidence is verified without replaying the solver:
+the verifier checks every frozen anchor hash, recomputes all 40 ChaCha20 blocks,
+checks the exact search/rank summaries, rejects the matched controls, and opens
+the original, canonical, order, and aggregate Causal files. The byte-exact
+solver/orchestration sources remain in `experiments/original/` for full replay.
 
 ## Platform boundary
 

@@ -1,0 +1,361 @@
+{
+  "anchor_gates": {
+    "native_source_sha256": "bf9dd12c67dda107891037c51288fef0b490612250c385ccf1079d9a18f1f08b",
+    "protocol_sha256": "995cab40aa623afbf01ccb407185ec2265ccd5cc347f98b084c9f0b3524ba23f",
+    "public_challenge_sha256": "cc4a4b941b09d5c878161a2e05be85d9ba42b6c191241d40e8311f0e67c51e6b",
+    "qualification_sha256": "b4e1905cd3832fd253c12840f905d4cb4d9e41713577e9a40a7e40eaa4777439",
+    "reference_source_sha256": "08e209278113fc1a423b2e060108dc32c2a0c0e1fd7046906891680aad643da1"
+  },
+  "attempt_id": "P128R1",
+  "causal": {
+    "amplified_state_materialized_in_file": true,
+    "api_id": "p128r1",
+    "clusters": 2,
+    "embedded_rules": 2,
+    "explicit_triplets": 5,
+    "file_bytes": 5726,
+    "file_sha256": "7af833da6c2f9c361dfc2844ae424665d29b90682ddec3614de8c542c52bdd81",
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "inference_recomputed_on_reader_open": false,
+    "integrity_verified_by_authoritative_reader": true,
+    "magic": "CAUSAL\u0000\u0001",
+    "materialized_inferred_triplets": 2,
+    "personal_semantic_readback": {
+      "control_chain": [
+        {
+          "confidence": 1.0,
+          "domain": "matched negative control",
+          "evidence": "[]",
+          "inference_chain": [],
+          "is_inferred": false,
+          "m_idx": 11,
+          "mechanism": "zero_exact_control_models",
+          "o_idx": 12,
+          "outcome": "P128R1:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "zero independently confirmed assignments",
+          "s_idx": 10,
+          "source": "04da7d22c2d96d930091ae566d44187bd551a2bc908135c9049bc4ffc68d4356",
+          "trigger": "P128R1:control_filter_candidate_set"
+        },
+        {
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after the identical complete control search.",
+          "inference_chain": [
+            3,
+            4
+          ],
+          "is_inferred": true,
+          "m_idx": 14,
+          "mechanism": "verified_matched_control_chain",
+          "o_idx": 12,
+          "outcome": "P128R1:control_relation_rejected",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "s_idx": 8,
+          "source": "materialized:control_separates_target_specific_recovery",
+          "trigger": "P128R1:one_bit_flipped_control_relation"
+        }
+      ],
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W38_domain",
+        "predicate": "next_required_gain",
+        "subject": "P128R1:unique_verified_38_bit_residual_key",
+        "suggested_queries": [
+          "Which frozen operator ranks the held-out W38 slice early?",
+          "Does typed propagation reduce executed W38 candidates?"
+        ]
+      },
+      "recovery_chain": [
+        {
+          "confidence": 1.0,
+          "domain": "independent key confirmation",
+          "evidence": "[{\"candidate_output_big_u32_sha256\": \"288f1b36951b98ec085881d9b51f4188a893e33429d7d921a98a716e5010ad45\", \"combined_assignment\": 198790436326, \"complete_two_block_match\": true, \"full_master_key_hex\": \"0ad8100fd09c280e4ef73eee48d555e6\", \"implementation\": \"independent_Python_canonical_PRESENT-128\", \"low32\": 1221940710, \"mid_low32_low_bits\": 46, \"output_bits_checked\": 128, \"output_words_checked\": 4, \"target_output_big_u32_sha256\": \"288f1b36951b98ec085881d9b51f4188a893e33429d7d921a98a716e5010ad45\"}]",
+          "inference_chain": [],
+          "is_inferred": false,
+          "m_idx": 6,
+          "mechanism": "independent_exact_confirmation",
+          "o_idx": 7,
+          "outcome": "P128R1:unique_verified_38_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "2 blocks; 128 output bits; canonical Python implementation",
+          "s_idx": 5,
+          "source": "04da7d22c2d96d930091ae566d44187bd551a2bc908135c9049bc4ffc68d4356",
+          "trigger": "P128R1:factual_filter_candidate_set"
+        },
+        {
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "Materialized after complete execution and exact confirmation.",
+          "inference_chain": [
+            1,
+            2
+          ],
+          "is_inferred": true,
+          "m_idx": 13,
+          "mechanism": "verified_complete_enumeration_and_confirmation_chain",
+          "o_idx": 7,
+          "outcome": "P128R1:unique_verified_38_bit_residual_key",
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact two-edge closure retained in-file",
+          "s_idx": 3,
+          "source": "materialized:complete_domain_plus_independent_confirmation",
+          "trigger": "P128R1:frozen_public_W38_relation"
+        }
+      ]
+    },
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io",
+      "version": "0.3.1"
+    },
+    "total_triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 5726,
+      "file_size_kb": 5.6,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.present128_metal_width38_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation_sha256": "04da7d22c2d96d930091ae566d44187bd551a2bc908135c9049bc4ffc68d4356",
+  "evidence_stage": "PRESENT128_FULLROUND_38BIT_RESIDUAL_KEY_RECOVERY_RETAINED",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "factual_confirmations": [
+      {
+        "candidate_output_big_u32_sha256": "288f1b36951b98ec085881d9b51f4188a893e33429d7d921a98a716e5010ad45",
+        "combined_assignment": 198790436326,
+        "complete_two_block_match": true,
+        "full_master_key_hex": "0ad8100fd09c280e4ef73eee48d555e6",
+        "implementation": "independent_Python_canonical_PRESENT-128",
+        "low32": 1221940710,
+        "mid_low32_low_bits": 46,
+        "output_bits_checked": 128,
+        "output_words_checked": 4,
+        "target_output_big_u32_sha256": "288f1b36951b98ec085881d9b51f4188a893e33429d7d921a98a716e5010ad45"
+      }
+    ],
+    "factual_filter_matches": [
+      198790436326
+    ],
+    "factual_full_matches": [
+      198790436326
+    ],
+    "filter_output_bits": 128,
+    "gpu_seconds": 4305.31717183115,
+    "inner_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 90,
+    "logical_candidate_count": 274877906944,
+    "newly_executed_assignment_count": 274877906944,
+    "outer_slice_count": 64,
+    "resumed_assignment_count": 0,
+    "stream_batch_count": 256,
+    "stream_candidate_count": 1073741824,
+    "unique_exact_assignment": true,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 38,
+    "volatile_candidates_per_gpu_second": 63846145.585387416,
+    "volatile_wall_seconds": 4306.462685625069
+  },
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "combined_assignment_encoding": "assignment=(mid_low32_low6<<32)|low32",
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_used": false,
+    "filter_output_bits": 128,
+    "final_whitening_key": "K32",
+    "fresh_public_challenge": true,
+    "full_confirmation": "independent_Python_PRESENT-128_all_two_blocks_all_128_output_bits",
+    "gpu_logical_thread_count": 274877906944,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_low32_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 90,
+    "known_plaintext_ciphertext_pairs": 2,
+    "logical_candidate_count": 274877906944,
+    "outer_mid_low32_bit_count": 6,
+    "outer_mid_low32_slice_count": 64,
+    "persistent_host_process": true,
+    "primitive": "PRESENT-128_block_cipher",
+    "result_capacity_per_batch": 64,
+    "rounds": 31,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 256,
+    "stream_batches_per_slice": 4,
+    "stream_candidate_count": 1073741824,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 38,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "9a36fd9637730ed4f3c2109d3c6db391dd5b3067e8a1b232857dda5994e3431b",
+  "execution_sha256": "cd42eb2aed027d380d2c1d6b088df2dfb2be79f927c9b7c12780d30b0a265b6c",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "present128-metal-native-v1"
+  },
+  "mapping_gate": {
+    "complete_output_bits_checked": 98304,
+    "exact_scalar_filter_and_mapping_identity": true,
+    "logical_candidates_checked": 768,
+    "outer_values_checked": [
+      0,
+      32,
+      63
+    ],
+    "rows": [
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 32768,
+        "control_matches": [],
+        "factual_combined_assignment": 184105,
+        "factual_inner_candidate": 184105,
+        "first_inner_candidate": 184032,
+        "outer_mid_low32_low_bits": 0,
+        "output_big_u32_sha256": "47cdbc6cd55758c87a76dbcf8a6e8250007c49e642e3a0c37a91c8dd0b1e1857"
+      },
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 32768,
+        "control_matches": [],
+        "factual_combined_assignment": 137439137577,
+        "factual_inner_candidate": 184105,
+        "first_inner_candidate": 184032,
+        "outer_mid_low32_low_bits": 32,
+        "output_big_u32_sha256": "effc54fa7539f17e49416837cfe53e0f04ece96dc94997157b40b8d2be351638"
+      },
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 32768,
+        "control_matches": [],
+        "factual_combined_assignment": 270583123753,
+        "factual_inner_candidate": 184105,
+        "first_inner_candidate": 184032,
+        "outer_mid_low32_low_bits": 63,
+        "output_big_u32_sha256": "16a54c94b5fe91e2b38f7dd05407a322126843ba68369783c865d488509d15c2"
+      }
+    ]
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "d75925e31664f8c371ee7b5a85d3a91f856bdb57ed9b2ea40a884e14133c594a",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "bf9dd12c67dda107891037c51288fef0b490612250c385ccf1079d9a18f1f08b",
+    "warnings_as_errors": true
+  },
+  "protocol_gate": {
+    "artifact_sha256": "995cab40aa623afbf01ccb407185ec2265ccd5cc347f98b084c9f0b3524ba23f",
+    "information_boundary": {
+      "P128R1_candidate_outcomes_used_before_protocol_freeze": false,
+      "benchmark_outcome_used_only_to_select_width": true,
+      "unknown_assignment_available_to_runner_before_execution": false,
+      "unknown_assignment_generated_once_from_os_randomness": true,
+      "unknown_assignment_in_protocol_or_source": false,
+      "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+      "unknown_assignment_used_only_to_construct_public_ciphertexts": true
+    },
+    "prospective_prediction": {
+      "asymptotic_search_advantage_claimed": false,
+      "claim_type": "fresh_fullround_38_bit_residual_key_recovery",
+      "complete_domain_will_be_executed": true,
+      "expected_control_exact_assignments": 0,
+      "expected_unique_exact_assignment": true,
+      "success_requires_independent_two_block_confirmation": true
+    },
+    "protocol_state": "frozen_before_any_P128R1_candidate_execution"
+  },
+  "public_challenge": {
+    "candidate_encoding": "assignment=(mid_low32_low6<<32)|low32",
+    "cipher": "PRESENT-128",
+    "control_ciphertext_big_u32_sha256": "4aa6ebc3f5efe5d47dda7e03357033474f706b7b3a651300596736bbd5c77f7c",
+    "control_ciphertext_words_big_endian": [
+      892895276,
+      963865740,
+      633340274,
+      3424536799
+    ],
+    "control_relation": "target_ciphertext_final_word_xor_0x00000001",
+    "final_whitening_key": "K32",
+    "known_high64": 781392195459229710,
+    "known_master_key_bits": 90,
+    "known_material_derivation_label": "present128/p128r1/fullround/w38/known-material/v1",
+    "known_material_derivation_sha256": "125acc180ed62170a063d4aabbe80befeadb7dc65bb8a10dbaf80d80dd5663ed",
+    "known_material_guard_hex": "407c81e0",
+    "known_mid_low32": 1324826304,
+    "known_mid_low32_mask": 4294967232,
+    "plaintext_blocks": 2,
+    "plaintext_words_big_endian": [
+      772655223,
+      666000628,
+      1333708810,
+      2061780140
+    ],
+    "rounds": 31,
+    "target_ciphertext_big_u32_sha256": "288f1b36951b98ec085881d9b51f4188a893e33429d7d921a98a716e5010ad45",
+    "target_ciphertext_words_big_endian": [
+      892895276,
+      963865740,
+      633340274,
+      3424536798
+    ],
+    "unknown_assignment_bits": 38,
+    "unknown_assignment_included": false,
+    "unknown_low32_bits": 32,
+    "unknown_low32_included": false,
+    "unknown_mid_low32_low_bits": 6,
+    "unknown_mid_low32_low_bits_included": false
+  },
+  "public_challenge_sha256": "cc4a4b941b09d5c878161a2e05be85d9ba42b6c191241d40e8311f0e67c51e6b",
+  "recovery": {
+    "candidate_identities_persisted_in_checkpoint": true,
+    "recovered_combined_assignments": [
+      198790436326
+    ],
+    "recovered_full_master_key_hex": [
+      "0ad8100fd09c280e4ef73eee48d555e6"
+    ],
+    "recovered_low32": [
+      1221940710
+    ],
+    "recovered_mid_low32_low_bits": [
+      46
+    ],
+    "recovery_accepted_only_after_complete_domain_execution": true,
+    "success_evaluated_only_after_complete_domain": true,
+    "unknown_assignment_source_was_discarded_before_runner_construction": true
+  },
+  "result": "The native Metal runner executed the complete fresh 38-bit residual-key domain for all 31 PRESENT-128 rounds plus final K32 whitening and independently confirmed the unique assignment across two public blocks.",
+  "schema": "present128-metal-width38-recovery-v1"
+}

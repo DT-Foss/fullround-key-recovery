@@ -1,0 +1,696 @@
+{
+  "algorithm": {
+    "block_bits": 128,
+    "key_bits": 256,
+    "name": "AES-256",
+    "rounds": 14,
+    "standard": "FIPS_197",
+    "state_byte_order": "FIPS197_external_column_major"
+  },
+  "attempt_id": "AES256Q1",
+  "benchmark": {
+    "candidate_count_per_repeat": 4194304,
+    "maximum_candidate_invocations_permitted": 8650752,
+    "median_candidates_per_second": 490335134.86677355,
+    "minimum_candidates_per_second": 470393652.063513,
+    "projected_complete_domain_seconds_at_minimum": {
+      "32": 9.13058090209961,
+      "33": 18.26116180419922,
+      "34": 36.52232360839844,
+      "35": 73.04464721679688,
+      "36": 146.08929443359375,
+      "37": 292.1785888671875,
+      "38": 584.357177734375,
+      "39": 1168.71435546875,
+      "40": 2337.4287109375,
+      "41": 4674.857421875,
+      "42": 9349.71484375,
+      "43": 18699.4296875,
+      "44": 37398.859375,
+      "45": 74797.71875,
+      "46": 149595.4375,
+      "47": 299190.875,
+      "48": 598381.75,
+      "49": 1196763.5,
+      "50": 2393527.0,
+      "51": 4787054.0,
+      "52": 9574108.0,
+      "53": 19148216.0,
+      "54": 38296432.0,
+      "55": 76592864.0,
+      "56": 153185728.0,
+      "57": 306371456.0,
+      "58": 612742912.0,
+      "59": 1225485824.0,
+      "60": 2450971648.0,
+      "61": 4901943296.0,
+      "62": 9803886592.0,
+      "63": 19607773184.0,
+      "64": 39215546368.0
+    },
+    "recommended_stream_candidate_count": 1073741824,
+    "recommended_stream_seconds_at_minimum": 2.2826452255249023,
+    "repeats": 2,
+    "samples": [
+      {
+        "candidate_count": 4194304,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 510276617.6700341,
+        "end_to_end_wall_seconds": 0.008219667244702578,
+        "factual_matches": [
+          2097152
+        ],
+        "gpu_candidates_per_second": 535332007.8453195,
+        "gpu_seconds": 0.007834958378225565
+      },
+      {
+        "candidate_count": 4194304,
+        "control_matches": [],
+        "end_to_end_candidates_per_second": 470393652.063513,
+        "end_to_end_wall_seconds": 0.00891658291220665,
+        "factual_matches": [
+          2097152
+        ],
+        "gpu_candidates_per_second": 500409104.96314025,
+        "gpu_seconds": 0.008381749968975782
+      }
+    ],
+    "timed_relation_bits": 256,
+    "volatile_performance_only_not_recovery_evidence": true,
+    "warmup_candidate_count": 262144,
+    "warmup_factual_matches": []
+  },
+  "content_anchors": {
+    "cpu_reference": {
+      "path": "src/arx_carry_leak/aes256_reference.py",
+      "sha256": "4caa7f33d7db50a04c70e5c65b51386eb79e2cb128ee0396c2531ad414aaf782"
+    },
+    "local_c_reference_anchor": "provenance/dependencies/pqcrypto-upstream/pqclean/common/aes.c",
+    "local_independent_numpy_reference": {
+      "path": "src/arx_carry_leak/aes256_independent.py",
+      "sha256": "61ebba17b6a813ed76703c66948cdd12e43f6f581f2b988320ec4c3ee76247ce"
+    },
+    "native_source": {
+      "path": "research/experiments/aes256_metal_native.swift",
+      "sha256": "505b01b607006a2909b3b4650a829ac09a401cb40469a4786d175e2bf6696109"
+    },
+    "nist_example_values_url": "https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines/example-values",
+    "qualification_source": {
+      "path": "research/experiments/aes256_metal_qualification.py",
+      "sha256": "c66871b75f83009ccf65db2b35486a4b247cf097ac2a68b5f874f783ee27c99f"
+    },
+    "standard_url": "https://doi.org/10.6028/NIST.FIPS.197-upd1"
+  },
+  "content_anchors_sha256": "ccb6d97c9bcd82d40faf9c6cf344d7e40b893de073bcab4622738b0a9048363a",
+  "cpu_boundary_mapping_gate": {
+    "assignment_bit0": "key_byte_31_bit_0",
+    "candidate_encoding": "assignment is the contiguous low bits of int.from_bytes(key,'big'); inner uint32 is FIPS key word7 (bytes 28..31, big-endian); outer bits are the low bits of FIPS key word6",
+    "exact_boundary_identity": true,
+    "inner_candidate_byte_mapping": {
+      "key_byte_28": "candidate_bits_31_to_24",
+      "key_byte_29": "candidate_bits_23_to_16",
+      "key_byte_30": "candidate_bits_15_to_8",
+      "key_byte_31": "candidate_bits_7_to_0"
+    },
+    "rows": [
+      {
+        "assignment": 0,
+        "ciphertext_sha256": "b6799095caa6715c38534c71ad891e9f527fc3098411390b4c2d469ba8ddeaa3",
+        "exact_scalar_independent_identity": true,
+        "inner_candidate_word7": 0,
+        "key_hex": "00112233445566778899aabbccddeeff102132435465768798a9bacb00000000",
+        "key_words_big_endian": [
+          1122867,
+          1146447479,
+          2291772091,
+          3437096703,
+          270611011,
+          1415935623,
+          2561260235,
+          0
+        ],
+        "outer_assignment": 0,
+        "width": 32
+      },
+      {
+        "assignment": 65535,
+        "ciphertext_sha256": "8bf6b0b02553424391e504908382c80f26297fe3780da284578627f698781de5",
+        "exact_scalar_independent_identity": true,
+        "inner_candidate_word7": 65535,
+        "key_hex": "00112233445566778899aabbccddeeff102132435465768798a9bacb0000ffff",
+        "key_words_big_endian": [
+          1122867,
+          1146447479,
+          2291772091,
+          3437096703,
+          270611011,
+          1415935623,
+          2561260235,
+          65535
+        ],
+        "outer_assignment": 0,
+        "width": 32
+      },
+      {
+        "assignment": 2147483648,
+        "ciphertext_sha256": "5595e5f93c8814cc9a7da2c4f36a50b5bc8e20df9f2f1f20f46314ab8c3e6e8b",
+        "exact_scalar_independent_identity": true,
+        "inner_candidate_word7": 2147483648,
+        "key_hex": "00112233445566778899aabbccddeeff102132435465768798a9bacb80000000",
+        "key_words_big_endian": [
+          1122867,
+          1146447479,
+          2291772091,
+          3437096703,
+          270611011,
+          1415935623,
+          2561260235,
+          2147483648
+        ],
+        "outer_assignment": 0,
+        "width": 32
+      },
+      {
+        "assignment": 4294967295,
+        "ciphertext_sha256": "f1c3c55bd852e329ff46df39cf2cd31e0e4e5a21d4f9cd1e36cd32ce7ffa51e7",
+        "exact_scalar_independent_identity": true,
+        "inner_candidate_word7": 4294967295,
+        "key_hex": "00112233445566778899aabbccddeeff102132435465768798a9bacbffffffff",
+        "key_words_big_endian": [
+          1122867,
+          1146447479,
+          2291772091,
+          3437096703,
+          270611011,
+          1415935623,
+          2561260235,
+          4294967295
+        ],
+        "outer_assignment": 0,
+        "width": 32
+      },
+      {
+        "assignment": 4314056039,
+        "ciphertext_sha256": "cd91cdc24bf4c64b0f128df803af52c9cccde79dbde358e1902c69e0f894daf2",
+        "exact_scalar_independent_identity": true,
+        "inner_candidate_word7": 19088743,
+        "key_hex": "00112233445566778899aabbccddeeff102132435465768798a9bacb01234567",
+        "key_words_big_endian": [
+          1122867,
+          1146447479,
+          2291772091,
+          3437096703,
+          270611011,
+          1415935623,
+          2561260235,
+          19088743
+        ],
+        "outer_assignment": 1,
+        "width": 33
+      },
+      {
+        "assignment": 710979341807,
+        "ciphertext_sha256": "1484d80b8d711175b8ff5015c94b5d997f2e957450be27ae354cafb6c01ab17d",
+        "exact_scalar_independent_identity": true,
+        "inner_candidate_word7": 2309737967,
+        "key_hex": "00112233445566778899aabbccddeeff102132435465768798a9baa589abcdef",
+        "key_words_big_endian": [
+          1122867,
+          1146447479,
+          2291772091,
+          3437096703,
+          270611011,
+          1415935623,
+          2561260197,
+          2309737967
+        ],
+        "outer_assignment": 165,
+        "width": 40
+      },
+      {
+        "assignment": 18364758544493064720,
+        "ciphertext_sha256": "6487f07abf75dbdff018f47f86ecf0e086a8306391fba45edb59a7b354774057",
+        "exact_scalar_independent_identity": true,
+        "inner_candidate_word7": 1985229328,
+        "key_hex": "00112233445566778899aabbccddeeff1021324354657687fedcba9876543210",
+        "key_words_big_endian": [
+          1122867,
+          1146447479,
+          2291772091,
+          3437096703,
+          270611011,
+          1415935623,
+          4275878552,
+          1985229328
+        ],
+        "outer_assignment": 4275878552,
+        "width": 64
+      }
+    ]
+  },
+  "cpu_kat_gate": {
+    "all_cpu_kats_passed": true,
+    "independent_numpy_vectors": [
+      {
+        "expected_ciphertext_hex": "8ea2b7ca516745bfeafc49904b496089",
+        "name": "FIPS197_Appendix_C3_AES256",
+        "observed_ciphertext_hex": "8ea2b7ca516745bfeafc49904b496089",
+        "pass": true
+      },
+      {
+        "expected_ciphertext_hex": "f3eed1bdb5d2a03c064b5a7e3db181f8",
+        "name": "NIST_SP800_38A_F5_AES256_ECB",
+        "observed_ciphertext_hex": "f3eed1bdb5d2a03c064b5a7e3db181f8",
+        "pass": true
+      }
+    ],
+    "independent_orientation_ciphertext_hex": "2557998248d878d5049ebff99fd7d5bd",
+    "nist_example_values_url": "https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines/example-values",
+    "nonpalindromic_orientation_and_round_key_sentinels": {
+      "decrypt_roundtrip_pass": true,
+      "orientation_ciphertext_expected_hex": "2557998248d878d5049ebff99fd7d5bd",
+      "orientation_ciphertext_observed_hex": "2557998248d878d5049ebff99fd7d5bd",
+      "orientation_pass": true,
+      "round_key_word_sentinels": {
+        "12": {
+          "expected": 2830146586,
+          "observed": 2830146586,
+          "pass": true
+        },
+        "56": {
+          "expected": 4266168529,
+          "observed": 4266168529,
+          "pass": true
+        },
+        "59": {
+          "expected": 1886151454,
+          "observed": 1886151454,
+          "pass": true
+        },
+        "8": {
+          "expected": 2611172369,
+          "observed": 2611172369,
+          "pass": true
+        }
+      }
+    },
+    "scalar_reference_vectors": [
+      {
+        "expected_ciphertext_hex": "8ea2b7ca516745bfeafc49904b496089",
+        "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+        "name": "FIPS197_Appendix_C3_AES256",
+        "observed_ciphertext_hex": "8ea2b7ca516745bfeafc49904b496089",
+        "pass": true,
+        "plaintext_hex": "00112233445566778899aabbccddeeff"
+      },
+      {
+        "expected_ciphertext_hex": "f3eed1bdb5d2a03c064b5a7e3db181f8",
+        "key_hex": "603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4",
+        "name": "NIST_SP800_38A_F5_AES256_ECB",
+        "observed_ciphertext_hex": "f3eed1bdb5d2a03c064b5a7e3db181f8",
+        "pass": true,
+        "plaintext_hex": "6bc1bee22e409f96e93d7e117393172a"
+      }
+    ],
+    "standard": "FIPS_197_updated_2023_no_algorithm_change",
+    "standard_url": "https://doi.org/10.6028/NIST.FIPS.197-upd1"
+  },
+  "evidence_stage": "AES256_FIPS197_METAL_PRE_TARGET_QUALIFICATION",
+  "full_domain_launched": false,
+  "host_identity": {
+    "metal": {
+      "aes256_nk8_subword_i_mod_8_eq_4": true,
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "candidate_maps_to_key_bytes_28_through_31_big_endian": true,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "fips197_external_byte_order": true,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "aes256-fips197-metal-native-v1"
+  },
+  "information_boundary": {
+    "benchmark_used_only_for_prospective_width_and_stream_selection": true,
+    "complete_residual_key_domain_executed": false,
+    "production_protocol_frozen": false,
+    "production_target_selected": false,
+    "production_unknown_assignment_generated": false
+  },
+  "launch_gate": {
+    "full_domain_launch_authorized": false,
+    "maximum_complete_domain_seconds": 7200,
+    "parameters_safe_for_later_review": true,
+    "projected_selected_width_seconds_at_observed_minimum": 4674.857421875,
+    "selectable_widths": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "selected_stream_candidate_count": 1073741824,
+    "selected_width": 41,
+    "selection_rule": "maximum integer width in 32...64 whose complete domain fits 7200 seconds at minimum observed end-to-end wall throughput"
+  },
+  "metal_boundary_mapping_gate": {
+    "exact_boundary_identity": true,
+    "rows": [
+      {
+        "combined_low64_assignment": 1,
+        "exact_cpu_metal_identity": true,
+        "label": "low32_zero_boundary",
+        "outer_word6": 0,
+        "outputs_sha256": "a336ed72d3f52f82d35ea1a8321a9930b4eb3fef87c4e78776d6604a57c5b01d",
+        "target_inner_word7": 1
+      },
+      {
+        "combined_low64_assignment": 65536,
+        "exact_cpu_metal_identity": true,
+        "label": "low16_carry_boundary",
+        "outer_word6": 0,
+        "outputs_sha256": "30ea8d2d329c4f1597d5f30a418a4d73ba76b39d5457330831650a5f942755ff",
+        "target_inner_word7": 65536
+      },
+      {
+        "combined_low64_assignment": 2147483648,
+        "exact_cpu_metal_identity": true,
+        "label": "low32_sign_boundary",
+        "outer_word6": 0,
+        "outputs_sha256": "d534f0b92040a67ef6ae164949613da7401fdd4b37b57479a9e43f699a67fcb0",
+        "target_inner_word7": 2147483648
+      },
+      {
+        "combined_low64_assignment": 4294967295,
+        "exact_cpu_metal_identity": true,
+        "label": "low32_terminal_boundary",
+        "outer_word6": 0,
+        "outputs_sha256": "cbc6642dd002daf9d0144b806734d20324d2485381f02057be06cc00588fbc58",
+        "target_inner_word7": 4294967295
+      },
+      {
+        "combined_low64_assignment": 4294967296,
+        "exact_cpu_metal_identity": true,
+        "label": "outer_bit_boundary",
+        "outer_word6": 1,
+        "outputs_sha256": "b57c5e6cc0b4c0530aadbcc1111a7b248ff54d48dae1f5d7921617d39a31df14",
+        "target_inner_word7": 0
+      },
+      {
+        "combined_low64_assignment": 9223372036854775809,
+        "exact_cpu_metal_identity": true,
+        "label": "outer_high_bit_boundary",
+        "outer_word6": 2147483648,
+        "outputs_sha256": "66f6f875939f0a93affbd30b06b9b9a3cb52de2aa4c109b90e8fc0cf5cdaec6c",
+        "target_inner_word7": 1
+      },
+      {
+        "combined_low64_assignment": 18446744073709551614,
+        "exact_cpu_metal_identity": true,
+        "label": "low64_terminal_boundary",
+        "outer_word6": 4294967295,
+        "outputs_sha256": "ed26ff674f44ac2ae60aa76f153487b540ec1504c1eeb93f307a2d9c565b386c",
+        "target_inner_word7": 4294967294
+      }
+    ]
+  },
+  "metal_evidence_ledger": {
+    "absolute_deadline_timestamps": {
+      "absolute_deadline_monotonic": 2460080.880716208,
+      "actual_wall_seconds_host_lifetime": 0.8517870418727398,
+      "cannot_occupy_gpu_for_two_minutes": true,
+      "constructor_cleanup_on_startup_failure": true,
+      "deadline_covers_ready_wait": true,
+      "host_lifetime_finished_monotonic": 2459991.73250325,
+      "host_lifetime_started_monotonic": 2459990.880716208,
+      "maximum_benchmark_candidates_per_repeat": 16777216,
+      "maximum_benchmark_repeats": 3,
+      "reported_total_gpu_seconds": 0.017196332570165396,
+      "subprocess_killed_on_deadline": true,
+      "wall_deadline_seconds": 90.0
+    },
+    "attempt_id": "AES256Q1",
+    "boundary_invocation_records": {
+      "exact_boundary_identity": true,
+      "rows": [
+        {
+          "combined_low64_assignment": 1,
+          "exact_cpu_metal_identity": true,
+          "label": "low32_zero_boundary",
+          "outer_word6": 0,
+          "outputs_sha256": "a336ed72d3f52f82d35ea1a8321a9930b4eb3fef87c4e78776d6604a57c5b01d",
+          "target_inner_word7": 1
+        },
+        {
+          "combined_low64_assignment": 65536,
+          "exact_cpu_metal_identity": true,
+          "label": "low16_carry_boundary",
+          "outer_word6": 0,
+          "outputs_sha256": "30ea8d2d329c4f1597d5f30a418a4d73ba76b39d5457330831650a5f942755ff",
+          "target_inner_word7": 65536
+        },
+        {
+          "combined_low64_assignment": 2147483648,
+          "exact_cpu_metal_identity": true,
+          "label": "low32_sign_boundary",
+          "outer_word6": 0,
+          "outputs_sha256": "d534f0b92040a67ef6ae164949613da7401fdd4b37b57479a9e43f699a67fcb0",
+          "target_inner_word7": 2147483648
+        },
+        {
+          "combined_low64_assignment": 4294967295,
+          "exact_cpu_metal_identity": true,
+          "label": "low32_terminal_boundary",
+          "outer_word6": 0,
+          "outputs_sha256": "cbc6642dd002daf9d0144b806734d20324d2485381f02057be06cc00588fbc58",
+          "target_inner_word7": 4294967295
+        },
+        {
+          "combined_low64_assignment": 4294967296,
+          "exact_cpu_metal_identity": true,
+          "label": "outer_bit_boundary",
+          "outer_word6": 1,
+          "outputs_sha256": "b57c5e6cc0b4c0530aadbcc1111a7b248ff54d48dae1f5d7921617d39a31df14",
+          "target_inner_word7": 0
+        },
+        {
+          "combined_low64_assignment": 9223372036854775809,
+          "exact_cpu_metal_identity": true,
+          "label": "outer_high_bit_boundary",
+          "outer_word6": 2147483648,
+          "outputs_sha256": "66f6f875939f0a93affbd30b06b9b9a3cb52de2aa4c109b90e8fc0cf5cdaec6c",
+          "target_inner_word7": 1
+        },
+        {
+          "combined_low64_assignment": 18446744073709551614,
+          "exact_cpu_metal_identity": true,
+          "label": "low64_terminal_boundary",
+          "outer_word6": 4294967295,
+          "outputs_sha256": "ed26ff674f44ac2ae60aa76f153487b540ec1504c1eeb93f307a2d9c565b386c",
+          "target_inner_word7": 4294967294
+        }
+      ]
+    },
+    "cpu_content_anchors_sha256": "ccb6d97c9bcd82d40faf9c6cf344d7e40b893de073bcab4622738b0a9048363a",
+    "native_build_record": {
+      "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+      "executable_sha256": "6ae69d17b288626c0779d53b42e74b5ce0c66d8297861b31462e54c3c8af8a13",
+      "selected_flags": [
+        "-O",
+        "-whole-module-optimization",
+        "-warnings-as-errors"
+      ],
+      "source_filename": "aes256_metal_native.swift",
+      "source_sha256": "505b01b607006a2909b3b4650a829ac09a401cb40469a4786d175e2bf6696109",
+      "warnings_as_errors": true
+    },
+    "producer_path": "aes256_metal_qualification.run_metal_qualification",
+    "provenance_scope": "semantic_execution_provenance_not_hardware_attestation",
+    "raw_host_ready_device_record": {
+      "metal": {
+        "aes256_nk8_subword_i_mod_8_eq_4": true,
+        "blocks_execution_width": 32,
+        "blocks_max_threads_per_group": 1024,
+        "candidate_maps_to_key_bytes_28_through_31_big_endian": true,
+        "device": "Apple M4",
+        "filter_execution_width": 32,
+        "filter_max_threads_per_group": 1024,
+        "fips197_external_byte_order": true,
+        "shader_runtime_compiled": true
+      },
+      "op": "ready",
+      "version": "aes256-fips197-metal-native-v1"
+    },
+    "schema": "aes256-fips197-metal-evidence-ledger-v1",
+    "selected_throughput_width_derivation": {
+      "full_domain_launch_authorized": false,
+      "maximum_complete_domain_seconds": 7200,
+      "parameters_safe_for_later_review": true,
+      "projected_selected_width_seconds_at_observed_minimum": 4674.857421875,
+      "selectable_widths": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "selected_stream_candidate_count": 1073741824,
+      "selected_width": 41,
+      "selection_rule": "maximum integer width in 32...64 whose complete domain fits 7200 seconds at minimum observed end-to-end wall throughput"
+    },
+    "timed_run_records": {
+      "candidate_count_per_repeat": 4194304,
+      "maximum_candidate_invocations_permitted": 8650752,
+      "median_candidates_per_second": 490335134.86677355,
+      "minimum_candidates_per_second": 470393652.063513,
+      "projected_complete_domain_seconds_at_minimum": {
+        "32": 9.13058090209961,
+        "33": 18.26116180419922,
+        "34": 36.52232360839844,
+        "35": 73.04464721679688,
+        "36": 146.08929443359375,
+        "37": 292.1785888671875,
+        "38": 584.357177734375,
+        "39": 1168.71435546875,
+        "40": 2337.4287109375,
+        "41": 4674.857421875,
+        "42": 9349.71484375,
+        "43": 18699.4296875,
+        "44": 37398.859375,
+        "45": 74797.71875,
+        "46": 149595.4375,
+        "47": 299190.875,
+        "48": 598381.75,
+        "49": 1196763.5,
+        "50": 2393527.0,
+        "51": 4787054.0,
+        "52": 9574108.0,
+        "53": 19148216.0,
+        "54": 38296432.0,
+        "55": 76592864.0,
+        "56": 153185728.0,
+        "57": 306371456.0,
+        "58": 612742912.0,
+        "59": 1225485824.0,
+        "60": 2450971648.0,
+        "61": 4901943296.0,
+        "62": 9803886592.0,
+        "63": 19607773184.0,
+        "64": 39215546368.0
+      },
+      "recommended_stream_candidate_count": 1073741824,
+      "recommended_stream_seconds_at_minimum": 2.2826452255249023,
+      "repeats": 2,
+      "samples": [
+        {
+          "candidate_count": 4194304,
+          "control_matches": [],
+          "end_to_end_candidates_per_second": 510276617.6700341,
+          "end_to_end_wall_seconds": 0.008219667244702578,
+          "factual_matches": [
+            2097152
+          ],
+          "gpu_candidates_per_second": 535332007.8453195,
+          "gpu_seconds": 0.007834958378225565
+        },
+        {
+          "candidate_count": 4194304,
+          "control_matches": [],
+          "end_to_end_candidates_per_second": 470393652.063513,
+          "end_to_end_wall_seconds": 0.00891658291220665,
+          "factual_matches": [
+            2097152
+          ],
+          "gpu_candidates_per_second": 500409104.96314025,
+          "gpu_seconds": 0.008381749968975782
+        }
+      ],
+      "timed_relation_bits": 256,
+      "volatile_performance_only_not_recovery_evidence": true,
+      "warmup_candidate_count": 262144,
+      "warmup_factual_matches": []
+    },
+    "vector_invocation_records": {
+      "cross_candidate_count": 256,
+      "cross_outputs_sha256": "2c8cbce4d23c4a0f2b0716602f605f2036f7191ac2501872e3fb14efab45693f",
+      "exact_cpu_metal_identity": true,
+      "exact_factual_control_filter_identity": true,
+      "fips197_vectors": [
+        {
+          "exact_cpu_metal_identity": true,
+          "name": "FIPS197_Appendix_C3_AES256",
+          "one_bit_control_rejected": true,
+          "two_block_output_sha256": "a1e083ff3a9e921f0ec8f64a1ce1f46af316aedc7e6967f79e1c0127c936b57a"
+        },
+        {
+          "exact_cpu_metal_identity": true,
+          "name": "NIST_SP800_38A_F5_AES256_ECB",
+          "one_bit_control_rejected": true,
+          "two_block_output_sha256": "40edcea92a73b568817df155882d83659cd60a6d17202daf9dd817e3ad055dcb"
+        }
+      ]
+    }
+  },
+  "metal_evidence_ledger_sha256": "e4209d52b2ac8c9e70580e7442d2fcc0b4d39f6f3d5752eada537890ad46738c",
+  "metal_executed": true,
+  "metal_kat_cross_gate": {
+    "cross_candidate_count": 256,
+    "cross_outputs_sha256": "2c8cbce4d23c4a0f2b0716602f605f2036f7191ac2501872e3fb14efab45693f",
+    "exact_cpu_metal_identity": true,
+    "exact_factual_control_filter_identity": true,
+    "fips197_vectors": [
+      {
+        "exact_cpu_metal_identity": true,
+        "name": "FIPS197_Appendix_C3_AES256",
+        "one_bit_control_rejected": true,
+        "two_block_output_sha256": "a1e083ff3a9e921f0ec8f64a1ce1f46af316aedc7e6967f79e1c0127c936b57a"
+      },
+      {
+        "exact_cpu_metal_identity": true,
+        "name": "NIST_SP800_38A_F5_AES256_ECB",
+        "one_bit_control_rejected": true,
+        "two_block_output_sha256": "40edcea92a73b568817df155882d83659cd60a6d17202daf9dd817e3ad055dcb"
+      }
+    ]
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "6ae69d17b288626c0779d53b42e74b5ce0c66d8297861b31462e54c3c8af8a13",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source_filename": "aes256_metal_native.swift",
+    "source_sha256": "505b01b607006a2909b3b4650a829ac09a401cb40469a4786d175e2bf6696109",
+    "warnings_as_errors": true
+  },
+  "production_challenge_frozen": false,
+  "qualification_resource_cap": {
+    "absolute_deadline_monotonic": 2460080.880716208,
+    "actual_wall_seconds_host_lifetime": 0.8517870418727398,
+    "cannot_occupy_gpu_for_two_minutes": true,
+    "constructor_cleanup_on_startup_failure": true,
+    "deadline_covers_ready_wait": true,
+    "host_lifetime_finished_monotonic": 2459991.73250325,
+    "host_lifetime_started_monotonic": 2459990.880716208,
+    "maximum_benchmark_candidates_per_repeat": 16777216,
+    "maximum_benchmark_repeats": 3,
+    "reported_total_gpu_seconds": 0.017196332570165396,
+    "subprocess_killed_on_deadline": true,
+    "wall_deadline_seconds": 90.0
+  },
+  "schema": "aes256-fips197-metal-qualification-v1"
+}

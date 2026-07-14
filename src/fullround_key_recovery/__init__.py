@@ -3,4 +3,4 @@
 from .verify import verify_all, verify_result
 
 __all__ = ["verify_all", "verify_result"]
-__version__ = "1.2.0"
+__version__ = "1.3.0"

@@ -1,0 +1,5320 @@
+{
+  "A280_complete_order_sha256": "bd8473da8d3df910dc8b8671b502e2cdd890c2e3f751e3cd31d006c326552d2b",
+  "A280_result_sha256": "7fec4631110d07195386d32d4378195ba6b9b51a70eb19364d31dd718137ddf8",
+  "attempt_id": "A281",
+  "blocking_clause_manifest": null,
+  "causal": {
+    "api_id": "a281",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 3,
+    "file_bytes": 4270,
+    "file_sha256": "21376078164db9bad5eb2804c5e9e5a4dab2328876b1589c6e04db785bb49067",
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "integrity_verified_by_authoritative_reader": true,
+    "materialized_inferred_triplets": 1,
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "multi_target_cross_material_replication_or_wider_unknown_domain",
+        "predicate": "next_required_object",
+        "subject": "A281:confirmed_cross_material_R20_recovery",
+        "suggested_queries": [
+          "Freeze the same end-to-end schedule across multiple independently derived public targets.",
+          "Transfer the confirmed cross-material mechanism to a wider unknown-key domain."
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_CROSS_MATERIAL_TARGET_BLIND_TOP128_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 6,
+        "mechanism": "materialized_order_solver_confirmation_chain",
+        "o_idx": 5,
+        "outcome": "A281:confirmed_cross_material_R20_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "AI-native end-to-end prospective closure",
+        "s_idx": 0,
+        "source": "materialized:A280_order_plus_A281_execution",
+        "trigger": "A280:hash_frozen_cross_material_candidate_order"
+      }
+    },
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 7,
+      "file_size_bytes": 4270,
+      "file_size_kb": 4.2,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_cross_material_composite_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 4
+    }
+  },
+  "confirmation": {
+    "all_blocks_match": true,
+    "all_cross_implementation_blocks_match": true,
+    "block_count_checked": 8,
+    "block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "candidate_block_sha256": [
+      "cff26847393e23923f40d75c46c2f060cef43ac85dabcb6768c5442b154102b1",
+      "d7b4d6804402324bea1565ff730fc127523ac76ab3af0dc9d8bd65bfb6ba8b16",
+      "3e1a44d6de1e2fa04d3d7529270835735d2a6ed1b896586b8405192ec73193bd",
+      "9247b527ea0079664786138037817ef81a222caee6d808d0065957c3082438f5",
+      "aa27943328d4653579306538943974268dd3c6db2b67ffaf02ce662d144b7206",
+      "eaf071c4a8448b4856dd9485acddaa1d25255d6b0fee03cdcfd3622a7cfbbc96",
+      "5be67c4489e9b0a19d7e23a6078c47466959fd06d82ec8b2e0a66976d1b241aa",
+      "2e7f2607f7e1e15ad72879d36ddb4f3a041a6815705c361968bb47163f34ff52"
+    ],
+    "claim_gate_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "claim_gate_candidate_block_sha256": [
+      "cff26847393e23923f40d75c46c2f060cef43ac85dabcb6768c5442b154102b1",
+      "d7b4d6804402324bea1565ff730fc127523ac76ab3af0dc9d8bd65bfb6ba8b16",
+      "3e1a44d6de1e2fa04d3d7529270835735d2a6ed1b896586b8405192ec73193bd",
+      "9247b527ea0079664786138037817ef81a222caee6d808d0065957c3082438f5",
+      "aa27943328d4653579306538943974268dd3c6db2b67ffaf02ce662d144b7206",
+      "eaf071c4a8448b4856dd9485acddaa1d25255d6b0fee03cdcfd3622a7cfbbc96",
+      "5be67c4489e9b0a19d7e23a6078c47466959fd06d82ec8b2e0a66976d1b241aa",
+      "2e7f2607f7e1e15ad72879d36ddb4f3a041a6815705c361968bb47163f34ff52"
+    ],
+    "claim_gate_implementation": "standalone_byte_oriented_RFC8439_reference",
+    "claim_gate_rfc8439_section_2_3_2_kat": true,
+    "claim_gate_source_sha256": "df67f3329ad71b8dc4db7103ce9e42700cebf185bc77395fa8a3c982c6d824f5",
+    "control_first_block_match": false,
+    "cross_implementation_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "implementation": "dual_independent_standard_ChaCha20_R20_blocks",
+    "key_word0": 2582378995,
+    "output_bits_checked": 4096,
+    "primary_implementation": "frozen_public_core_pure_Python",
+    "recovered_unknown_low20": 784883,
+    "recovered_unknown_low20_hex": "bf9f3"
+  },
+  "evidence_stage": "FULLROUND_R20_CROSS_MATERIAL_TARGET_BLIND_TOP128_RECOVERY_CONFIRMED",
+  "information_boundary": {
+    "complete_full_domain_enumeration_used": false,
+    "confirmation_only_after_solver_model": true,
+    "correct_prefix_or_rank_known_before_execution": false,
+    "order_frozen_before_execution": true,
+    "residual_entered_only_after_128_exact_UNSAT": true,
+    "target_label_available": false
+  },
+  "measurement_sha256": "610c675041eed61e345ba3a8d7e6d84b2e0694f96b06b9ed10da9b59f727b471",
+  "native_helper_builds": {
+    "ranked": {
+      "binary_sha256": "daf36a6e15c9936068044d8ea77053bb72c5d868f738a18b218132bb716baff7",
+      "command": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/homebrew/include",
+        "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/native/cadical_ranked_until_sat.cpp",
+        "/opt/homebrew/lib/libcadical.a",
+        "-lpthread",
+        "-o",
+        "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/native/build/cadical_ranked_until_sat"
+      ],
+      "elapsed_seconds": 0.9029712080955505,
+      "returncode": 0,
+      "source_sha256": "8ff6e2621a5307f8bf04820debaa021ca60d33a1621406876e58531121e83f45",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "residual": {
+      "binary_sha256": "cbbfb314c39656c5c0c11466b3e8a2def277caee5056d901bb9d7fa41e0c74c7",
+      "command": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/homebrew/include",
+        "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/native/cadical_residual_two_pass.cpp",
+        "/opt/homebrew/lib/libcadical.a",
+        "-lpthread",
+        "-o",
+        "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/native/build/cadical_residual_two_pass"
+      ],
+      "elapsed_seconds": 0.45920512499287724,
+      "returncode": 0,
+      "source_sha256": "b0fcd4a8a08579055bed98003c01fcbadfd8782731745ad87f007dbd7db679dd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "post_model_controls": {
+    "computed_only_after_confirmed_model": true,
+    "discovery_stage": "top128",
+    "recovered_prefix8": 191
+  },
+  "protocol_sha256": "8c82ff74661a74c453bd744d847d0d9c14bec869a956d8b9961d49f9df82bde7",
+  "public_challenge_sha256": "dc61222c9a5390505112300c8b5ddb51c8ed0bc5694ebca371ce78b78d67f6d9",
+  "residual_execution": null,
+  "residual_execution_summary": {
+    "complete_remaining_half_enumeration_used": false,
+    "entered": false,
+    "global_status": null,
+    "model_discovery_stage": "top128",
+    "new_exact_unsat_prefixes": 0,
+    "sat_found": false
+  },
+  "runner_sha256": "7addd66933d0ad44777adf474ce6fd92072b864ca9fe2dbb04f9376a3af70fdf",
+  "schema": "chacha20-round20-cross-material-composite-recovery-result-v1",
+  "scientific_execution": {
+    "residual": null,
+    "top128": {
+      "max_cells": 128,
+      "mode": "A281_cross_material_frozen_top128",
+      "order": [
+        "00001100",
+        "11001010",
+        "01000101",
+        "01011101",
+        "11110000",
+        "00111001",
+        "01111000",
+        "11001101",
+        "11111110",
+        "00001001",
+        "11111010",
+        "01110010",
+        "11101011",
+        "01111011",
+        "10111001",
+        "00001111",
+        "11000100",
+        "00011101",
+        "00111101",
+        "11100101",
+        "01001100",
+        "10000010",
+        "01011010",
+        "10011100",
+        "00010101",
+        "01010111",
+        "11111001",
+        "00100101",
+        "10001011",
+        "00011100",
+        "10001101",
+        "11001111",
+        "10100101",
+        "01010001",
+        "00011110",
+        "10011111",
+        "10111111",
+        "00101100",
+        "01100100",
+        "11110100",
+        "10110011",
+        "00101000",
+        "01100010",
+        "00111010",
+        "00000000",
+        "10100010",
+        "00010100",
+        "00011010",
+        "01101111",
+        "00010111",
+        "01010100",
+        "11011100",
+        "01010010",
+        "11111000",
+        "11001100",
+        "00101010",
+        "01101001",
+        "11101110",
+        "01001010",
+        "11100111",
+        "11111011",
+        "11011011",
+        "11000001",
+        "10101001",
+        "11110011",
+        "01001001",
+        "00101101",
+        "10010001",
+        "10100100",
+        "00001000",
+        "00100111",
+        "10111110",
+        "00110101",
+        "10111000",
+        "01011001",
+        "11010001",
+        "11010111",
+        "11011110",
+        "10010111",
+        "10110101",
+        "11100010",
+        "11001110",
+        "10100110",
+        "01001000",
+        "00011000",
+        "10011101",
+        "00111011",
+        "11001000",
+        "10000000",
+        "10101101",
+        "00001110",
+        "11011101",
+        "00100010",
+        "11000101",
+        "01010101",
+        "11110111",
+        "01100011",
+        "10101111",
+        "11010101",
+        "10100000",
+        "10101011",
+        "11000010",
+        "10011000",
+        "00011001",
+        "00000010",
+        "10100111",
+        "00000101",
+        "10111010",
+        "10000111",
+        "01110101",
+        "10001110",
+        "10000101",
+        "01101000",
+        "10010010",
+        "00100110",
+        "10111100",
+        "00110010",
+        "01100111",
+        "00111110",
+        "00001011",
+        "11101010",
+        "01111010",
+        "11110110",
+        "01101110",
+        "00011011",
+        "10101100",
+        "01111100",
+        "01001011",
+        "01111101",
+        "01100101",
+        "11011001",
+        "01110001",
+        "10101000",
+        "10001000",
+        "11111101",
+        "00000100",
+        "01100001",
+        "11000111",
+        "01101100",
+        "00010001",
+        "10001010",
+        "01011000",
+        "11101101",
+        "00101110",
+        "00000111",
+        "10101010",
+        "10000100",
+        "11001011",
+        "00010110",
+        "11100000",
+        "01001111",
+        "01111111",
+        "00111000",
+        "10010110",
+        "11100011",
+        "01110111",
+        "01011111",
+        "11100100",
+        "11000011",
+        "00100001",
+        "11010100",
+        "11001001",
+        "10100001",
+        "00000001",
+        "10000001",
+        "11110010",
+        "10110111",
+        "10101110",
+        "10001001",
+        "01001110",
+        "10100011",
+        "01111110",
+        "01011110",
+        "01000110",
+        "00010010",
+        "10011001",
+        "11011000",
+        "01010110",
+        "00010000",
+        "01000111",
+        "11101001",
+        "10001111",
+        "10010100",
+        "01011011",
+        "11101000",
+        "11010110",
+        "11011010",
+        "10011110",
+        "01110100",
+        "00000110",
+        "11011111",
+        "10000110",
+        "10110100",
+        "11000110",
+        "01110110",
+        "11010010",
+        "00101011",
+        "00111100",
+        "10110001",
+        "10010101",
+        "00110110",
+        "00101111",
+        "10110110",
+        "01011100",
+        "01000000",
+        "10110010",
+        "01100110",
+        "11100110",
+        "00000011",
+        "01001101",
+        "00110111",
+        "10000011",
+        "01101011",
+        "01111001",
+        "10011010",
+        "11110001",
+        "11101100",
+        "10010000",
+        "00101001",
+        "00100011",
+        "00110100",
+        "00001010",
+        "01101101",
+        "10011011",
+        "11100001",
+        "10111101",
+        "00110000",
+        "01010011",
+        "00001101",
+        "11111111",
+        "10001100",
+        "10111011",
+        "11010011",
+        "10110000",
+        "01100000",
+        "00010011",
+        "11111100",
+        "00011111",
+        "00100100",
+        "01000011",
+        "10010011",
+        "00111111",
+        "01101010",
+        "11010000",
+        "00110001",
+        "00110011",
+        "01000010",
+        "11101111",
+        "00100000",
+        "01110000",
+        "11000000",
+        "01110011",
+        "01000001",
+        "01010000",
+        "01000100",
+        "11110101"
+      ],
+      "retained_state_continuity_verified": true,
+      "rows": [
+        {
+          "active_variables_after": 29761,
+          "active_variables_before": 68498,
+          "active_variables_delta": -38737,
+          "assumptions": [
+            -86,
+            -62,
+            -55,
+            -53,
+            51,
+            49,
+            -47,
+            -45
+          ],
+          "cell_index": 0,
+          "failed_assumptions": [
+            -86,
+            -62,
+            -55,
+            -53,
+            51,
+            49,
+            -47,
+            -45
+          ],
+          "irredundant_clauses_after": 155676,
+          "irredundant_clauses_before": 249004,
+          "irredundant_clauses_delta": -93328,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            7350,
+            10020,
+            174382887
+          ],
+          "metrics_before": [
+            0,
+            0,
+            12307
+          ],
+          "metrics_delta": [
+            7350,
+            10020,
+            174370580
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "00001100",
+          "redundant_clauses_after": 1517,
+          "redundant_clauses_before": 0,
+          "redundant_clauses_delta": 1517,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29875,
+          "active_variables_before": 29761,
+          "active_variables_delta": 114,
+          "assumptions": [
+            86,
+            62,
+            -55,
+            -53,
+            51,
+            -49,
+            47,
+            -45
+          ],
+          "cell_index": 1,
+          "failed_assumptions": [
+            86,
+            62,
+            -55,
+            -53,
+            51,
+            -49,
+            47,
+            -45
+          ],
+          "irredundant_clauses_after": 155791,
+          "irredundant_clauses_before": 155676,
+          "irredundant_clauses_delta": 115,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            13414,
+            16742,
+            291867409
+          ],
+          "metrics_before": [
+            7350,
+            10020,
+            174382887
+          ],
+          "metrics_delta": [
+            6064,
+            6722,
+            117484522
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "11001010",
+          "redundant_clauses_after": 2277,
+          "redundant_clauses_before": 1517,
+          "redundant_clauses_delta": 760,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29934,
+          "active_variables_before": 29875,
+          "active_variables_delta": 59,
+          "assumptions": [
+            -86,
+            62,
+            -55,
+            -53,
+            -51,
+            49,
+            -47,
+            45
+          ],
+          "cell_index": 2,
+          "failed_assumptions": [
+            -86,
+            62,
+            -55,
+            -53,
+            -51,
+            49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 155836,
+          "irredundant_clauses_before": 155791,
+          "irredundant_clauses_delta": 45,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            19053,
+            22656,
+            407981710
+          ],
+          "metrics_before": [
+            13414,
+            16742,
+            291867409
+          ],
+          "metrics_delta": [
+            5639,
+            5914,
+            116114301
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "01000101",
+          "redundant_clauses_after": 2151,
+          "redundant_clauses_before": 2277,
+          "redundant_clauses_delta": -126,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29940,
+          "active_variables_before": 29934,
+          "active_variables_delta": 6,
+          "assumptions": [
+            -86,
+            62,
+            -55,
+            53,
+            51,
+            49,
+            -47,
+            45
+          ],
+          "cell_index": 3,
+          "failed_assumptions": [
+            -86,
+            62,
+            -55,
+            53,
+            51,
+            49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 155846,
+          "irredundant_clauses_before": 155836,
+          "irredundant_clauses_delta": 10,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            24688,
+            28726,
+            517295731
+          ],
+          "metrics_before": [
+            19053,
+            22656,
+            407981710
+          ],
+          "metrics_delta": [
+            5635,
+            6070,
+            109314021
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "01011101",
+          "redundant_clauses_after": 4634,
+          "redundant_clauses_before": 2151,
+          "redundant_clauses_delta": 2483,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29926,
+          "active_variables_before": 29940,
+          "active_variables_delta": -14,
+          "assumptions": [
+            86,
+            62,
+            55,
+            53,
+            -51,
+            -49,
+            -47,
+            -45
+          ],
+          "cell_index": 4,
+          "failed_assumptions": [
+            86,
+            62,
+            55,
+            53,
+            -51,
+            -49,
+            -47,
+            -45
+          ],
+          "irredundant_clauses_after": 155853,
+          "irredundant_clauses_before": 155846,
+          "irredundant_clauses_delta": 7,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            30289,
+            35350,
+            630443309
+          ],
+          "metrics_before": [
+            24688,
+            28726,
+            517295731
+          ],
+          "metrics_delta": [
+            5601,
+            6624,
+            113147578
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "11110000",
+          "redundant_clauses_after": 5222,
+          "redundant_clauses_before": 4634,
+          "redundant_clauses_delta": 588,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29940,
+          "active_variables_before": 29926,
+          "active_variables_delta": 14,
+          "assumptions": [
+            -86,
+            -62,
+            55,
+            53,
+            51,
+            -49,
+            -47,
+            45
+          ],
+          "cell_index": 5,
+          "failed_assumptions": [
+            -86,
+            -62,
+            55,
+            53,
+            51,
+            -49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 155869,
+          "irredundant_clauses_before": 155853,
+          "irredundant_clauses_delta": 16,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            36910,
+            43361,
+            755763517
+          ],
+          "metrics_before": [
+            30289,
+            35350,
+            630443309
+          ],
+          "metrics_delta": [
+            6621,
+            8011,
+            125320208
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "00111001",
+          "redundant_clauses_after": 6579,
+          "redundant_clauses_before": 5222,
+          "redundant_clauses_delta": 1357,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29948,
+          "active_variables_before": 29940,
+          "active_variables_delta": 8,
+          "assumptions": [
+            -86,
+            62,
+            55,
+            53,
+            51,
+            -49,
+            -47,
+            -45
+          ],
+          "cell_index": 6,
+          "failed_assumptions": [
+            -86,
+            62,
+            55,
+            53,
+            51,
+            -49,
+            -47,
+            -45
+          ],
+          "irredundant_clauses_after": 155890,
+          "irredundant_clauses_before": 155869,
+          "irredundant_clauses_delta": 21,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            42509,
+            49340,
+            877776476
+          ],
+          "metrics_before": [
+            36910,
+            43361,
+            755763517
+          ],
+          "metrics_delta": [
+            5599,
+            5979,
+            122012959
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "01111000",
+          "redundant_clauses_after": 6949,
+          "redundant_clauses_before": 6579,
+          "redundant_clauses_delta": 370,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29942,
+          "active_variables_before": 29948,
+          "active_variables_delta": -6,
+          "assumptions": [
+            86,
+            62,
+            -55,
+            -53,
+            51,
+            49,
+            -47,
+            45
+          ],
+          "cell_index": 7,
+          "failed_assumptions": [
+            86,
+            62,
+            -55,
+            -53,
+            51,
+            49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 155891,
+          "irredundant_clauses_before": 155890,
+          "irredundant_clauses_delta": 1,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            48894,
+            56571,
+            1007336312
+          ],
+          "metrics_before": [
+            42509,
+            49340,
+            877776476
+          ],
+          "metrics_delta": [
+            6385,
+            7231,
+            129559836
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "11001101",
+          "redundant_clauses_after": 8049,
+          "redundant_clauses_before": 6949,
+          "redundant_clauses_delta": 1100,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29944,
+          "active_variables_before": 29942,
+          "active_variables_delta": 2,
+          "assumptions": [
+            86,
+            62,
+            55,
+            53,
+            51,
+            49,
+            47,
+            -45
+          ],
+          "cell_index": 8,
+          "failed_assumptions": [
+            86,
+            62,
+            55,
+            53,
+            51,
+            49,
+            47,
+            -45
+          ],
+          "irredundant_clauses_after": 155887,
+          "irredundant_clauses_before": 155891,
+          "irredundant_clauses_delta": -4,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            54189,
+            62019,
+            1114538302
+          ],
+          "metrics_before": [
+            48894,
+            56571,
+            1007336312
+          ],
+          "metrics_delta": [
+            5295,
+            5448,
+            107201990
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "11111110",
+          "redundant_clauses_after": 7657,
+          "redundant_clauses_before": 8049,
+          "redundant_clauses_delta": -392,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29945,
+          "active_variables_before": 29944,
+          "active_variables_delta": 1,
+          "assumptions": [
+            -86,
+            -62,
+            -55,
+            -53,
+            51,
+            -49,
+            -47,
+            45
+          ],
+          "cell_index": 9,
+          "failed_assumptions": [
+            -86,
+            -62,
+            -55,
+            -53,
+            51,
+            -49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 155889,
+          "irredundant_clauses_before": 155887,
+          "irredundant_clauses_delta": 2,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            61178,
+            69245,
+            1264677729
+          ],
+          "metrics_before": [
+            54189,
+            62019,
+            1114538302
+          ],
+          "metrics_delta": [
+            6989,
+            7226,
+            150139427
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "00001001",
+          "redundant_clauses_after": 8033,
+          "redundant_clauses_before": 7657,
+          "redundant_clauses_delta": 376,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29949,
+          "active_variables_before": 29945,
+          "active_variables_delta": 4,
+          "assumptions": [
+            86,
+            62,
+            55,
+            53,
+            51,
+            -49,
+            47,
+            -45
+          ],
+          "cell_index": 10,
+          "failed_assumptions": [
+            86,
+            62,
+            55,
+            53,
+            51,
+            -49,
+            47,
+            -45
+          ],
+          "irredundant_clauses_after": 155897,
+          "irredundant_clauses_before": 155889,
+          "irredundant_clauses_delta": 8,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            68174,
+            77284,
+            1408595989
+          ],
+          "metrics_before": [
+            61178,
+            69245,
+            1264677729
+          ],
+          "metrics_delta": [
+            6996,
+            8039,
+            143918260
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "11111010",
+          "redundant_clauses_after": 8477,
+          "redundant_clauses_before": 8033,
+          "redundant_clauses_delta": 444,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29948,
+          "active_variables_before": 29949,
+          "active_variables_delta": -1,
+          "assumptions": [
+            -86,
+            62,
+            55,
+            53,
+            -51,
+            -49,
+            47,
+            -45
+          ],
+          "cell_index": 11,
+          "failed_assumptions": [
+            -86,
+            62,
+            55,
+            53,
+            -51,
+            -49,
+            47,
+            -45
+          ],
+          "irredundant_clauses_after": 155899,
+          "irredundant_clauses_before": 155897,
+          "irredundant_clauses_delta": 2,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            73822,
+            83364,
+            1523079677
+          ],
+          "metrics_before": [
+            68174,
+            77284,
+            1408595989
+          ],
+          "metrics_delta": [
+            5648,
+            6080,
+            114483688
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "01110010",
+          "redundant_clauses_after": 7464,
+          "redundant_clauses_before": 8477,
+          "redundant_clauses_delta": -1013,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29948,
+          "active_variables_before": 29948,
+          "active_variables_delta": 0,
+          "assumptions": [
+            86,
+            62,
+            55,
+            -53,
+            51,
+            -49,
+            47,
+            45
+          ],
+          "cell_index": 12,
+          "failed_assumptions": [
+            86,
+            62,
+            55,
+            -53,
+            51,
+            -49,
+            47,
+            45
+          ],
+          "irredundant_clauses_after": 155899,
+          "irredundant_clauses_before": 155899,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            78966,
+            89176,
+            1628586717
+          ],
+          "metrics_before": [
+            73822,
+            83364,
+            1523079677
+          ],
+          "metrics_delta": [
+            5144,
+            5812,
+            105507040
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "11101011",
+          "redundant_clauses_after": 11361,
+          "redundant_clauses_before": 7464,
+          "redundant_clauses_delta": 3897,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29965,
+          "active_variables_before": 29948,
+          "active_variables_delta": 17,
+          "assumptions": [
+            -86,
+            62,
+            55,
+            53,
+            51,
+            -49,
+            47,
+            45
+          ],
+          "cell_index": 13,
+          "failed_assumptions": [
+            -86,
+            62,
+            55,
+            53,
+            51,
+            -49,
+            47,
+            45
+          ],
+          "irredundant_clauses_after": 156170,
+          "irredundant_clauses_before": 155899,
+          "irredundant_clauses_delta": 271,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            83835,
+            94316,
+            1733707052
+          ],
+          "metrics_before": [
+            78966,
+            89176,
+            1628586717
+          ],
+          "metrics_delta": [
+            4869,
+            5140,
+            105120335
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "01111011",
+          "redundant_clauses_after": 8412,
+          "redundant_clauses_before": 11361,
+          "redundant_clauses_delta": -2949,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29972,
+          "active_variables_before": 29965,
+          "active_variables_delta": 7,
+          "assumptions": [
+            86,
+            -62,
+            55,
+            53,
+            51,
+            -49,
+            -47,
+            45
+          ],
+          "cell_index": 14,
+          "failed_assumptions": [
+            86,
+            -62,
+            55,
+            53,
+            51,
+            -49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 156098,
+          "irredundant_clauses_before": 156170,
+          "irredundant_clauses_delta": -72,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            88404,
+            98927,
+            1838274992
+          ],
+          "metrics_before": [
+            83835,
+            94316,
+            1733707052
+          ],
+          "metrics_delta": [
+            4569,
+            4611,
+            104567940
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "10111001",
+          "redundant_clauses_after": 5873,
+          "redundant_clauses_before": 8412,
+          "redundant_clauses_delta": -2539,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29972,
+          "active_variables_before": 29972,
+          "active_variables_delta": 0,
+          "assumptions": [
+            -86,
+            -62,
+            -55,
+            -53,
+            51,
+            49,
+            47,
+            45
+          ],
+          "cell_index": 15,
+          "failed_assumptions": [
+            -86,
+            -62,
+            -55,
+            -53,
+            51,
+            49,
+            47,
+            45
+          ],
+          "irredundant_clauses_after": 156098,
+          "irredundant_clauses_before": 156098,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            93078,
+            103708,
+            1942357641
+          ],
+          "metrics_before": [
+            88404,
+            98927,
+            1838274992
+          ],
+          "metrics_delta": [
+            4674,
+            4781,
+            104082649
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "00001111",
+          "redundant_clauses_after": 9804,
+          "redundant_clauses_before": 5873,
+          "redundant_clauses_delta": 3931,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29975,
+          "active_variables_before": 29972,
+          "active_variables_delta": 3,
+          "assumptions": [
+            86,
+            62,
+            -55,
+            -53,
+            -51,
+            49,
+            -47,
+            -45
+          ],
+          "cell_index": 16,
+          "failed_assumptions": [
+            86,
+            62,
+            -55,
+            -53,
+            -51,
+            49,
+            -47,
+            -45
+          ],
+          "irredundant_clauses_after": 156105,
+          "irredundant_clauses_before": 156098,
+          "irredundant_clauses_delta": 7,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            97259,
+            107921,
+            2045723972
+          ],
+          "metrics_before": [
+            93078,
+            103708,
+            1942357641
+          ],
+          "metrics_delta": [
+            4181,
+            4213,
+            103366331
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "11000100",
+          "redundant_clauses_after": 6363,
+          "redundant_clauses_before": 9804,
+          "redundant_clauses_delta": -3441,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29905,
+          "active_variables_before": 29975,
+          "active_variables_delta": -70,
+          "assumptions": [
+            -86,
+            -62,
+            -55,
+            53,
+            51,
+            49,
+            -47,
+            45
+          ],
+          "cell_index": 17,
+          "failed_assumptions": [
+            -86,
+            -62,
+            -55,
+            53,
+            51,
+            49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 156067,
+          "irredundant_clauses_before": 156105,
+          "irredundant_clauses_delta": -38,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            101431,
+            112106,
+            2149214560
+          ],
+          "metrics_before": [
+            97259,
+            107921,
+            2045723972
+          ],
+          "metrics_delta": [
+            4172,
+            4185,
+            103490588
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "00011101",
+          "redundant_clauses_after": 8979,
+          "redundant_clauses_before": 6363,
+          "redundant_clauses_delta": 2616,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29918,
+          "active_variables_before": 29905,
+          "active_variables_delta": 13,
+          "assumptions": [
+            -86,
+            -62,
+            55,
+            53,
+            51,
+            49,
+            -47,
+            45
+          ],
+          "cell_index": 18,
+          "failed_assumptions": [
+            -86,
+            -62,
+            55,
+            53,
+            51,
+            49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 156065,
+          "irredundant_clauses_before": 156067,
+          "irredundant_clauses_delta": -2,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            106277,
+            116998,
+            2254052331
+          ],
+          "metrics_before": [
+            101431,
+            112106,
+            2149214560
+          ],
+          "metrics_delta": [
+            4846,
+            4892,
+            104837771
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "00111101",
+          "redundant_clauses_after": 6139,
+          "redundant_clauses_before": 8979,
+          "redundant_clauses_delta": -2840,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29918,
+          "active_variables_before": 29918,
+          "active_variables_delta": 0,
+          "assumptions": [
+            86,
+            62,
+            55,
+            -53,
+            -51,
+            49,
+            -47,
+            45
+          ],
+          "cell_index": 19,
+          "failed_assumptions": [
+            86,
+            62,
+            55,
+            -53,
+            -51,
+            49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 156065,
+          "irredundant_clauses_before": 156065,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            111466,
+            122696,
+            2359194127
+          ],
+          "metrics_before": [
+            106277,
+            116998,
+            2254052331
+          ],
+          "metrics_delta": [
+            5189,
+            5698,
+            105141796
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "11100101",
+          "redundant_clauses_after": 10160,
+          "redundant_clauses_before": 6139,
+          "redundant_clauses_delta": 4021,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29921,
+          "active_variables_before": 29918,
+          "active_variables_delta": 3,
+          "assumptions": [
+            -86,
+            62,
+            -55,
+            -53,
+            51,
+            49,
+            -47,
+            -45
+          ],
+          "cell_index": 20,
+          "failed_assumptions": [
+            -86,
+            62,
+            -55,
+            -53,
+            51,
+            49,
+            -47,
+            -45
+          ],
+          "irredundant_clauses_after": 156069,
+          "irredundant_clauses_before": 156065,
+          "irredundant_clauses_delta": 4,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            116959,
+            128786,
+            2472940149
+          ],
+          "metrics_before": [
+            111466,
+            122696,
+            2359194127
+          ],
+          "metrics_delta": [
+            5493,
+            6090,
+            113746022
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "01001100",
+          "redundant_clauses_after": 7085,
+          "redundant_clauses_before": 10160,
+          "redundant_clauses_delta": -3075,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29921,
+          "active_variables_before": 29921,
+          "active_variables_delta": 0,
+          "assumptions": [
+            86,
+            -62,
+            -55,
+            -53,
+            -51,
+            -49,
+            47,
+            -45
+          ],
+          "cell_index": 21,
+          "failed_assumptions": [
+            86,
+            -62,
+            -55,
+            -53,
+            -51,
+            -49,
+            47,
+            -45
+          ],
+          "irredundant_clauses_after": 156069,
+          "irredundant_clauses_before": 156069,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            122335,
+            134322,
+            2577892958
+          ],
+          "metrics_before": [
+            116959,
+            128786,
+            2472940149
+          ],
+          "metrics_delta": [
+            5376,
+            5536,
+            104952809
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "10000010",
+          "redundant_clauses_after": 11325,
+          "redundant_clauses_before": 7085,
+          "redundant_clauses_delta": 4240,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29925,
+          "active_variables_before": 29921,
+          "active_variables_delta": 4,
+          "assumptions": [
+            -86,
+            62,
+            -55,
+            53,
+            51,
+            -49,
+            47,
+            -45
+          ],
+          "cell_index": 22,
+          "failed_assumptions": [
+            -86,
+            62,
+            -55,
+            53,
+            51,
+            -49,
+            47,
+            -45
+          ],
+          "irredundant_clauses_after": 156077,
+          "irredundant_clauses_before": 156069,
+          "irredundant_clauses_delta": 8,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            128981,
+            141665,
+            2709319571
+          ],
+          "metrics_before": [
+            122335,
+            134322,
+            2577892958
+          ],
+          "metrics_delta": [
+            6646,
+            7343,
+            131426613
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "01011010",
+          "redundant_clauses_after": 9093,
+          "redundant_clauses_before": 11325,
+          "redundant_clauses_delta": -2232,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29915,
+          "active_variables_before": 29925,
+          "active_variables_delta": -10,
+          "assumptions": [
+            86,
+            -62,
+            -55,
+            53,
+            51,
+            49,
+            -47,
+            -45
+          ],
+          "cell_index": 23,
+          "failed_assumptions": [
+            86,
+            -62,
+            -55,
+            53,
+            51,
+            49,
+            -47,
+            -45
+          ],
+          "irredundant_clauses_after": 156068,
+          "irredundant_clauses_before": 156077,
+          "irredundant_clauses_delta": -9,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            134304,
+            148020,
+            2814527901
+          ],
+          "metrics_before": [
+            128981,
+            141665,
+            2709319571
+          ],
+          "metrics_delta": [
+            5323,
+            6355,
+            105208330
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "10011100",
+          "redundant_clauses_after": 12781,
+          "redundant_clauses_before": 9093,
+          "redundant_clauses_delta": 3688,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29918,
+          "active_variables_before": 29915,
+          "active_variables_delta": 3,
+          "assumptions": [
+            -86,
+            -62,
+            -55,
+            53,
+            -51,
+            49,
+            -47,
+            45
+          ],
+          "cell_index": 24,
+          "failed_assumptions": [
+            -86,
+            -62,
+            -55,
+            53,
+            -51,
+            49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 156071,
+          "irredundant_clauses_before": 156068,
+          "irredundant_clauses_delta": 3,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            140261,
+            154613,
+            2940685327
+          ],
+          "metrics_before": [
+            134304,
+            148020,
+            2814527901
+          ],
+          "metrics_delta": [
+            5957,
+            6593,
+            126157426
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "00010101",
+          "redundant_clauses_after": 9487,
+          "redundant_clauses_before": 12781,
+          "redundant_clauses_delta": -3294,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29918,
+          "active_variables_before": 29918,
+          "active_variables_delta": 0,
+          "assumptions": [
+            -86,
+            62,
+            -55,
+            53,
+            -51,
+            49,
+            47,
+            45
+          ],
+          "cell_index": 25,
+          "failed_assumptions": [
+            -86,
+            62,
+            -55,
+            53,
+            -51,
+            49,
+            47,
+            45
+          ],
+          "irredundant_clauses_after": 156071,
+          "irredundant_clauses_before": 156071,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            145223,
+            160039,
+            3045251489
+          ],
+          "metrics_before": [
+            140261,
+            154613,
+            2940685327
+          ],
+          "metrics_delta": [
+            4962,
+            5426,
+            104566162
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "01010111",
+          "redundant_clauses_after": 13446,
+          "redundant_clauses_before": 9487,
+          "redundant_clauses_delta": 3959,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29922,
+          "active_variables_before": 29918,
+          "active_variables_delta": 4,
+          "assumptions": [
+            86,
+            62,
+            55,
+            53,
+            51,
+            -49,
+            -47,
+            45
+          ],
+          "cell_index": 26,
+          "failed_assumptions": [
+            86,
+            62,
+            55,
+            53,
+            51,
+            -49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 156083,
+          "irredundant_clauses_before": 156071,
+          "irredundant_clauses_delta": 12,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            151061,
+            165958,
+            3170483732
+          ],
+          "metrics_before": [
+            145223,
+            160039,
+            3045251489
+          ],
+          "metrics_delta": [
+            5838,
+            5919,
+            125232243
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "11111001",
+          "redundant_clauses_after": 10368,
+          "redundant_clauses_before": 13446,
+          "redundant_clauses_delta": -3078,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29922,
+          "active_variables_before": 29922,
+          "active_variables_delta": 0,
+          "assumptions": [
+            -86,
+            -62,
+            55,
+            -53,
+            -51,
+            49,
+            -47,
+            45
+          ],
+          "cell_index": 27,
+          "failed_assumptions": [
+            -86,
+            -62,
+            55,
+            -53,
+            -51,
+            49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 156083,
+          "irredundant_clauses_before": 156083,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            156338,
+            171411,
+            3275413078
+          ],
+          "metrics_before": [
+            151061,
+            165958,
+            3170483732
+          ],
+          "metrics_delta": [
+            5277,
+            5453,
+            104929346
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "00100101",
+          "redundant_clauses_after": 14316,
+          "redundant_clauses_before": 10368,
+          "redundant_clauses_delta": 3948,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29924,
+          "active_variables_before": 29922,
+          "active_variables_delta": 2,
+          "assumptions": [
+            86,
+            -62,
+            -55,
+            -53,
+            51,
+            -49,
+            47,
+            45
+          ],
+          "cell_index": 28,
+          "failed_assumptions": [
+            86,
+            -62,
+            -55,
+            -53,
+            51,
+            -49,
+            47,
+            45
+          ],
+          "irredundant_clauses_after": 156087,
+          "irredundant_clauses_before": 156083,
+          "irredundant_clauses_delta": 4,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            163148,
+            179095,
+            3399913939
+          ],
+          "metrics_before": [
+            156338,
+            171411,
+            3275413078
+          ],
+          "metrics_delta": [
+            6810,
+            7684,
+            124500861
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "10001011",
+          "redundant_clauses_after": 10480,
+          "redundant_clauses_before": 14316,
+          "redundant_clauses_delta": -3836,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29924,
+          "active_variables_before": 29924,
+          "active_variables_delta": 0,
+          "assumptions": [
+            -86,
+            -62,
+            -55,
+            53,
+            51,
+            49,
+            -47,
+            -45
+          ],
+          "cell_index": 29,
+          "failed_assumptions": [
+            -86,
+            -62,
+            -55,
+            53,
+            51,
+            49,
+            -47
+          ],
+          "irredundant_clauses_after": 156087,
+          "irredundant_clauses_before": 156087,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            168605,
+            184787,
+            3504590026
+          ],
+          "metrics_before": [
+            163148,
+            179095,
+            3399913939
+          ],
+          "metrics_delta": [
+            5457,
+            5692,
+            104676087
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "00011100",
+          "redundant_clauses_after": 13205,
+          "redundant_clauses_before": 10480,
+          "redundant_clauses_delta": 2725,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29917,
+          "active_variables_before": 29924,
+          "active_variables_delta": -7,
+          "assumptions": [
+            86,
+            -62,
+            -55,
+            -53,
+            51,
+            49,
+            -47,
+            45
+          ],
+          "cell_index": 30,
+          "failed_assumptions": [
+            86,
+            -62,
+            -55,
+            -53,
+            51,
+            49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 156061,
+          "irredundant_clauses_before": 156087,
+          "irredundant_clauses_delta": -26,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            174524,
+            190955,
+            3629313228
+          ],
+          "metrics_before": [
+            168605,
+            184787,
+            3504590026
+          ],
+          "metrics_delta": [
+            5919,
+            6168,
+            124723202
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "10001101",
+          "redundant_clauses_after": 10324,
+          "redundant_clauses_before": 13205,
+          "redundant_clauses_delta": -2881,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29917,
+          "active_variables_before": 29917,
+          "active_variables_delta": 0,
+          "assumptions": [
+            86,
+            62,
+            -55,
+            -53,
+            51,
+            49,
+            47,
+            45
+          ],
+          "cell_index": 31,
+          "failed_assumptions": [
+            86,
+            62,
+            -55,
+            -53,
+            51,
+            49,
+            47,
+            45
+          ],
+          "irredundant_clauses_after": 156061,
+          "irredundant_clauses_before": 156061,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            180175,
+            197267,
+            3734313930
+          ],
+          "metrics_before": [
+            174524,
+            190955,
+            3629313228
+          ],
+          "metrics_delta": [
+            5651,
+            6312,
+            105000702
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "11001111",
+          "redundant_clauses_after": 14656,
+          "redundant_clauses_before": 10324,
+          "redundant_clauses_delta": 4332,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29919,
+          "active_variables_before": 29917,
+          "active_variables_delta": 2,
+          "assumptions": [
+            86,
+            -62,
+            55,
+            -53,
+            -51,
+            49,
+            -47,
+            45
+          ],
+          "cell_index": 32,
+          "failed_assumptions": [
+            86,
+            -62,
+            55,
+            -53,
+            -51,
+            49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 156063,
+          "irredundant_clauses_before": 156061,
+          "irredundant_clauses_delta": 2,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            185355,
+            202663,
+            3850013923
+          ],
+          "metrics_before": [
+            180175,
+            197267,
+            3734313930
+          ],
+          "metrics_delta": [
+            5180,
+            5396,
+            115699993
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "10100101",
+          "redundant_clauses_after": 9778,
+          "redundant_clauses_before": 14656,
+          "redundant_clauses_delta": -4878,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29919,
+          "active_variables_before": 29919,
+          "active_variables_delta": 0,
+          "assumptions": [
+            -86,
+            62,
+            -55,
+            53,
+            -51,
+            -49,
+            -47,
+            45
+          ],
+          "cell_index": 33,
+          "failed_assumptions": [
+            -86,
+            62,
+            -55,
+            53,
+            -51,
+            -49,
+            -47,
+            45
+          ],
+          "irredundant_clauses_after": 156063,
+          "irredundant_clauses_before": 156063,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            190186,
+            207567,
+            3954223471
+          ],
+          "metrics_before": [
+            185355,
+            202663,
+            3850013923
+          ],
+          "metrics_delta": [
+            4831,
+            4904,
+            104209548
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "01010001",
+          "redundant_clauses_after": 14036,
+          "redundant_clauses_before": 9778,
+          "redundant_clauses_delta": 4258,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29924,
+          "active_variables_before": 29919,
+          "active_variables_delta": 5,
+          "assumptions": [
+            -86,
+            -62,
+            -55,
+            53,
+            51,
+            49,
+            47,
+            -45
+          ],
+          "cell_index": 34,
+          "failed_assumptions": [
+            -86,
+            -62,
+            -55,
+            53,
+            51,
+            49,
+            47,
+            -45
+          ],
+          "irredundant_clauses_after": 156075,
+          "irredundant_clauses_before": 156063,
+          "irredundant_clauses_delta": 12,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            197770,
+            218865,
+            4088921809
+          ],
+          "metrics_before": [
+            190186,
+            207567,
+            3954223471
+          ],
+          "metrics_delta": [
+            7584,
+            11298,
+            134698338
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "00011110",
+          "redundant_clauses_after": 10169,
+          "redundant_clauses_before": 14036,
+          "redundant_clauses_delta": -3867,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29924,
+          "active_variables_before": 29924,
+          "active_variables_delta": 0,
+          "assumptions": [
+            86,
+            -62,
+            -55,
+            53,
+            51,
+            49,
+            47,
+            45
+          ],
+          "cell_index": 35,
+          "failed_assumptions": [
+            86,
+            -62,
+            -55,
+            53,
+            51,
+            49,
+            47,
+            45
+          ],
+          "irredundant_clauses_after": 156075,
+          "irredundant_clauses_before": 156075,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            202545,
+            223702,
+            4193152544
+          ],
+          "metrics_before": [
+            197770,
+            218865,
+            4088921809
+          ],
+          "metrics_delta": [
+            4775,
+            4837,
+            104230735
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [],
+          "prefix8": "10011111",
+          "redundant_clauses_after": 14214,
+          "redundant_clauses_before": 10169,
+          "redundant_clauses_delta": 4045,
+          "returncode": 20,
+          "seconds_budget": 30,
+          "status": "unsat",
+          "terminator_fired": false
+        },
+        {
+          "active_variables_after": 29924,
+          "active_variables_before": 29924,
+          "active_variables_delta": 0,
+          "assumptions": [
+            86,
+            -62,
+            55,
+            53,
+            51,
+            49,
+            47,
+            45
+          ],
+          "cell_index": 36,
+          "failed_assumptions": [],
+          "irredundant_clauses_after": 156075,
+          "irredundant_clauses_before": 156075,
+          "irredundant_clauses_delta": 0,
+          "metric_names": [
+            "conflicts",
+            "decisions",
+            "search_propagations"
+          ],
+          "metrics_after": [
+            206104,
+            228011,
+            4256377782
+          ],
+          "metrics_before": [
+            202545,
+            223702,
+            4193152544
+          ],
+          "metrics_delta": [
+            3559,
+            4309,
+            63225238
+          ],
+          "mode": "A281_cross_material_frozen_top128",
+          "model_bits_bit0_through_bit19": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "prefix8": "10111111",
+          "redundant_clauses_after": 17210,
+          "redundant_clauses_before": 14214,
+          "redundant_clauses_delta": 2996,
+          "returncode": 10,
+          "seconds_budget": 30,
+          "status": "sat",
+          "terminator_fired": false
+        }
+      ],
+      "sat_found": true,
+      "seconds_budget_per_cell": 30.0,
+      "summary": {
+        "attempted_cells": 37,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "planned_max_cells": 128,
+        "sat": 1,
+        "seconds_budget": 30,
+        "signature": "cadical-3.0.0",
+        "stopped_after_sat": true,
+        "terminator_fires": 0,
+        "unknown": 0,
+        "unsat": 36,
+        "variables": 80805,
+        "version": "3.0.0"
+      }
+    }
+  },
+  "symbolic_template_manifest": {
+    "all_mapping_probes_exact_unit_deltas": true,
+    "base_body_sha256": "ca639dda207d713da81a494238e70d12b6ed5c076a40bd615cd907f98713ced1",
+    "base_cnf_sha256": "ee2f1cb941c49bb07b0aae1cb31d568b8b874de1d38c10b6057c183046b09909",
+    "formula_sha256": "95ea792e925e0a3bdb491f8103a79ceace285f4a92a7946ce92130106fe3eeed",
+    "key_mapping_sha256": "1b40107b2c394894a21247768fbc6a8baf4b2f3b7daa95746ed8c702ede7c436",
+    "mapping_probe_count": 102,
+    "output_mapping_sha256": "d5ad963fdf397c962a725c052f399c093b80a5033016264b93b55896f2937127"
+  },
+  "target_instantiation": {
+    "bytes": 4460032,
+    "header": "p cnf 80805 252998",
+    "sha256": "ae1312cf831129060fb01b97aac70334b945204057066d1888ee1f19da3e8067",
+    "unit_count": 512,
+    "unit_int32le_sha256": "ec904c1f6698e8a20994d087d210bbbe147e7e6d2ada417c5c448e15f9a581a4"
+  },
+  "top_execution": {
+    "command": [
+      "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/native/build/cadical_ranked_until_sat",
+      "--cnf",
+      "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a281_cross_material_composite_mbzb9mau/a281_cross_material_target.cnf",
+      "--mode",
+      "A281_cross_material_frozen_top128",
+      "--assumption-one-literals",
+      "86,62,55,53,51,49,47,45",
+      "--model-one-literals",
+      "23,22,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,62,86",
+      "--cell-order",
+      "00001100,11001010,01000101,01011101,11110000,00111001,01111000,11001101,11111110,00001001,11111010,01110010,11101011,01111011,10111001,00001111,11000100,00011101,00111101,11100101,01001100,10000010,01011010,10011100,00010101,01010111,11111001,00100101,10001011,00011100,10001101,11001111,10100101,01010001,00011110,10011111,10111111,00101100,01100100,11110100,10110011,00101000,01100010,00111010,00000000,10100010,00010100,00011010,01101111,00010111,01010100,11011100,01010010,11111000,11001100,00101010,01101001,11101110,01001010,11100111,11111011,11011011,11000001,10101001,11110011,01001001,00101101,10010001,10100100,00001000,00100111,10111110,00110101,10111000,01011001,11010001,11010111,11011110,10010111,10110101,11100010,11001110,10100110,01001000,00011000,10011101,00111011,11001000,10000000,10101101,00001110,11011101,00100010,11000101,01010101,11110111,01100011,10101111,11010101,10100000,10101011,11000010,10011000,00011001,00000010,10100111,00000101,10111010,10000111,01110101,10001110,10000101,01101000,10010010,00100110,10111100,00110010,01100111,00111110,00001011,11101010,01111010,11110110,01101110,00011011,10101100,01111100,01001011,01111101,01100101,11011001,01110001,10101000,10001000,11111101,00000100,01100001,11000111,01101100,00010001,10001010,01011000,11101101,00101110,00000111,10101010,10000100,11001011,00010110,11100000,01001111,01111111,00111000,10010110,11100011,01110111,01011111,11100100,11000011,00100001,11010100,11001001,10100001,00000001,10000001,11110010,10110111,10101110,10001001,01001110,10100011,01111110,01011110,01000110,00010010,10011001,11011000,01010110,00010000,01000111,11101001,10001111,10010100,01011011,11101000,11010110,11011010,10011110,01110100,00000110,11011111,10000110,10110100,11000110,01110110,11010010,00101011,00111100,10110001,10010101,00110110,00101111,10110110,01011100,01000000,10110010,01100110,11100110,00000011,01001101,00110111,10000011,01101011,01111001,10011010,11110001,11101100,10010000,00101001,00100011,00110100,00001010,01101101,10011011,11100001,10111101,00110000,01010011,00001101,11111111,10001100,10111011,11010011,10110000,01100000,00010011,11111100,00011111,00100100,01000011,10010011,00111111,01101010,11010000,00110001,00110011,01000010,11101111,00100000,01110000,11000000,01110011,01000001,01010000,01000100,11110101",
+      "--seconds",
+      "30.0",
+      "--max-cells",
+      "128"
+    ],
+    "helper_returncode": 0,
+    "max_cells": 128,
+    "mode": "A281_cross_material_frozen_top128",
+    "order": [
+      "00001100",
+      "11001010",
+      "01000101",
+      "01011101",
+      "11110000",
+      "00111001",
+      "01111000",
+      "11001101",
+      "11111110",
+      "00001001",
+      "11111010",
+      "01110010",
+      "11101011",
+      "01111011",
+      "10111001",
+      "00001111",
+      "11000100",
+      "00011101",
+      "00111101",
+      "11100101",
+      "01001100",
+      "10000010",
+      "01011010",
+      "10011100",
+      "00010101",
+      "01010111",
+      "11111001",
+      "00100101",
+      "10001011",
+      "00011100",
+      "10001101",
+      "11001111",
+      "10100101",
+      "01010001",
+      "00011110",
+      "10011111",
+      "10111111",
+      "00101100",
+      "01100100",
+      "11110100",
+      "10110011",
+      "00101000",
+      "01100010",
+      "00111010",
+      "00000000",
+      "10100010",
+      "00010100",
+      "00011010",
+      "01101111",
+      "00010111",
+      "01010100",
+      "11011100",
+      "01010010",
+      "11111000",
+      "11001100",
+      "00101010",
+      "01101001",
+      "11101110",
+      "01001010",
+      "11100111",
+      "11111011",
+      "11011011",
+      "11000001",
+      "10101001",
+      "11110011",
+      "01001001",
+      "00101101",
+      "10010001",
+      "10100100",
+      "00001000",
+      "00100111",
+      "10111110",
+      "00110101",
+      "10111000",
+      "01011001",
+      "11010001",
+      "11010111",
+      "11011110",
+      "10010111",
+      "10110101",
+      "11100010",
+      "11001110",
+      "10100110",
+      "01001000",
+      "00011000",
+      "10011101",
+      "00111011",
+      "11001000",
+      "10000000",
+      "10101101",
+      "00001110",
+      "11011101",
+      "00100010",
+      "11000101",
+      "01010101",
+      "11110111",
+      "01100011",
+      "10101111",
+      "11010101",
+      "10100000",
+      "10101011",
+      "11000010",
+      "10011000",
+      "00011001",
+      "00000010",
+      "10100111",
+      "00000101",
+      "10111010",
+      "10000111",
+      "01110101",
+      "10001110",
+      "10000101",
+      "01101000",
+      "10010010",
+      "00100110",
+      "10111100",
+      "00110010",
+      "01100111",
+      "00111110",
+      "00001011",
+      "11101010",
+      "01111010",
+      "11110110",
+      "01101110",
+      "00011011",
+      "10101100",
+      "01111100",
+      "01001011",
+      "01111101",
+      "01100101",
+      "11011001",
+      "01110001",
+      "10101000",
+      "10001000",
+      "11111101",
+      "00000100",
+      "01100001",
+      "11000111",
+      "01101100",
+      "00010001",
+      "10001010",
+      "01011000",
+      "11101101",
+      "00101110",
+      "00000111",
+      "10101010",
+      "10000100",
+      "11001011",
+      "00010110",
+      "11100000",
+      "01001111",
+      "01111111",
+      "00111000",
+      "10010110",
+      "11100011",
+      "01110111",
+      "01011111",
+      "11100100",
+      "11000011",
+      "00100001",
+      "11010100",
+      "11001001",
+      "10100001",
+      "00000001",
+      "10000001",
+      "11110010",
+      "10110111",
+      "10101110",
+      "10001001",
+      "01001110",
+      "10100011",
+      "01111110",
+      "01011110",
+      "01000110",
+      "00010010",
+      "10011001",
+      "11011000",
+      "01010110",
+      "00010000",
+      "01000111",
+      "11101001",
+      "10001111",
+      "10010100",
+      "01011011",
+      "11101000",
+      "11010110",
+      "11011010",
+      "10011110",
+      "01110100",
+      "00000110",
+      "11011111",
+      "10000110",
+      "10110100",
+      "11000110",
+      "01110110",
+      "11010010",
+      "00101011",
+      "00111100",
+      "10110001",
+      "10010101",
+      "00110110",
+      "00101111",
+      "10110110",
+      "01011100",
+      "01000000",
+      "10110010",
+      "01100110",
+      "11100110",
+      "00000011",
+      "01001101",
+      "00110111",
+      "10000011",
+      "01101011",
+      "01111001",
+      "10011010",
+      "11110001",
+      "11101100",
+      "10010000",
+      "00101001",
+      "00100011",
+      "00110100",
+      "00001010",
+      "01101101",
+      "10011011",
+      "11100001",
+      "10111101",
+      "00110000",
+      "01010011",
+      "00001101",
+      "11111111",
+      "10001100",
+      "10111011",
+      "11010011",
+      "10110000",
+      "01100000",
+      "00010011",
+      "11111100",
+      "00011111",
+      "00100100",
+      "01000011",
+      "10010011",
+      "00111111",
+      "01101010",
+      "11010000",
+      "00110001",
+      "00110011",
+      "01000010",
+      "11101111",
+      "00100000",
+      "01110000",
+      "11000000",
+      "01110011",
+      "01000001",
+      "01010000",
+      "01000100",
+      "11110101"
+    ],
+    "process_elapsed_seconds": 465.64968166686594,
+    "retained_state_continuity_verified": true,
+    "rows": [
+      {
+        "active_variables_after": 29761,
+        "active_variables_before": 68498,
+        "active_variables_delta": -38737,
+        "assumptions": [
+          -86,
+          -62,
+          -55,
+          -53,
+          51,
+          49,
+          -47,
+          -45
+        ],
+        "cell_index": 0,
+        "elapsed_seconds": 22.809261125,
+        "failed_assumptions": [
+          -86,
+          -62,
+          -55,
+          -53,
+          51,
+          49,
+          -47,
+          -45
+        ],
+        "irredundant_clauses_after": 155676,
+        "irredundant_clauses_before": 249004,
+        "irredundant_clauses_delta": -93328,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          7350,
+          10020,
+          174382887
+        ],
+        "metrics_before": [
+          0,
+          0,
+          12307
+        ],
+        "metrics_delta": [
+          7350,
+          10020,
+          174370580
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "00001100",
+        "redundant_clauses_after": 1517,
+        "redundant_clauses_before": 0,
+        "redundant_clauses_delta": 1517,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29875,
+        "active_variables_before": 29761,
+        "active_variables_delta": 114,
+        "assumptions": [
+          86,
+          62,
+          -55,
+          -53,
+          51,
+          -49,
+          47,
+          -45
+        ],
+        "cell_index": 1,
+        "elapsed_seconds": 13.177475,
+        "failed_assumptions": [
+          86,
+          62,
+          -55,
+          -53,
+          51,
+          -49,
+          47,
+          -45
+        ],
+        "irredundant_clauses_after": 155791,
+        "irredundant_clauses_before": 155676,
+        "irredundant_clauses_delta": 115,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          13414,
+          16742,
+          291867409
+        ],
+        "metrics_before": [
+          7350,
+          10020,
+          174382887
+        ],
+        "metrics_delta": [
+          6064,
+          6722,
+          117484522
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "11001010",
+        "redundant_clauses_after": 2277,
+        "redundant_clauses_before": 1517,
+        "redundant_clauses_delta": 760,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29934,
+        "active_variables_before": 29875,
+        "active_variables_delta": 59,
+        "assumptions": [
+          -86,
+          62,
+          -55,
+          -53,
+          -51,
+          49,
+          -47,
+          45
+        ],
+        "cell_index": 2,
+        "elapsed_seconds": 12.92964725,
+        "failed_assumptions": [
+          -86,
+          62,
+          -55,
+          -53,
+          -51,
+          49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 155836,
+        "irredundant_clauses_before": 155791,
+        "irredundant_clauses_delta": 45,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          19053,
+          22656,
+          407981710
+        ],
+        "metrics_before": [
+          13414,
+          16742,
+          291867409
+        ],
+        "metrics_delta": [
+          5639,
+          5914,
+          116114301
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "01000101",
+        "redundant_clauses_after": 2151,
+        "redundant_clauses_before": 2277,
+        "redundant_clauses_delta": -126,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29940,
+        "active_variables_before": 29934,
+        "active_variables_delta": 6,
+        "assumptions": [
+          -86,
+          62,
+          -55,
+          53,
+          51,
+          49,
+          -47,
+          45
+        ],
+        "cell_index": 3,
+        "elapsed_seconds": 11.918225042,
+        "failed_assumptions": [
+          -86,
+          62,
+          -55,
+          53,
+          51,
+          49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 155846,
+        "irredundant_clauses_before": 155836,
+        "irredundant_clauses_delta": 10,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          24688,
+          28726,
+          517295731
+        ],
+        "metrics_before": [
+          19053,
+          22656,
+          407981710
+        ],
+        "metrics_delta": [
+          5635,
+          6070,
+          109314021
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "01011101",
+        "redundant_clauses_after": 4634,
+        "redundant_clauses_before": 2151,
+        "redundant_clauses_delta": 2483,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29926,
+        "active_variables_before": 29940,
+        "active_variables_delta": -14,
+        "assumptions": [
+          86,
+          62,
+          55,
+          53,
+          -51,
+          -49,
+          -47,
+          -45
+        ],
+        "cell_index": 4,
+        "elapsed_seconds": 12.529293792,
+        "failed_assumptions": [
+          86,
+          62,
+          55,
+          53,
+          -51,
+          -49,
+          -47,
+          -45
+        ],
+        "irredundant_clauses_after": 155853,
+        "irredundant_clauses_before": 155846,
+        "irredundant_clauses_delta": 7,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          30289,
+          35350,
+          630443309
+        ],
+        "metrics_before": [
+          24688,
+          28726,
+          517295731
+        ],
+        "metrics_delta": [
+          5601,
+          6624,
+          113147578
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "11110000",
+        "redundant_clauses_after": 5222,
+        "redundant_clauses_before": 4634,
+        "redundant_clauses_delta": 588,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29940,
+        "active_variables_before": 29926,
+        "active_variables_delta": 14,
+        "assumptions": [
+          -86,
+          -62,
+          55,
+          53,
+          51,
+          -49,
+          -47,
+          45
+        ],
+        "cell_index": 5,
+        "elapsed_seconds": 12.866807208,
+        "failed_assumptions": [
+          -86,
+          -62,
+          55,
+          53,
+          51,
+          -49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 155869,
+        "irredundant_clauses_before": 155853,
+        "irredundant_clauses_delta": 16,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          36910,
+          43361,
+          755763517
+        ],
+        "metrics_before": [
+          30289,
+          35350,
+          630443309
+        ],
+        "metrics_delta": [
+          6621,
+          8011,
+          125320208
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "00111001",
+        "redundant_clauses_after": 6579,
+        "redundant_clauses_before": 5222,
+        "redundant_clauses_delta": 1357,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29948,
+        "active_variables_before": 29940,
+        "active_variables_delta": 8,
+        "assumptions": [
+          -86,
+          62,
+          55,
+          53,
+          51,
+          -49,
+          -47,
+          -45
+        ],
+        "cell_index": 6,
+        "elapsed_seconds": 12.451496625,
+        "failed_assumptions": [
+          -86,
+          62,
+          55,
+          53,
+          51,
+          -49,
+          -47,
+          -45
+        ],
+        "irredundant_clauses_after": 155890,
+        "irredundant_clauses_before": 155869,
+        "irredundant_clauses_delta": 21,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          42509,
+          49340,
+          877776476
+        ],
+        "metrics_before": [
+          36910,
+          43361,
+          755763517
+        ],
+        "metrics_delta": [
+          5599,
+          5979,
+          122012959
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "01111000",
+        "redundant_clauses_after": 6949,
+        "redundant_clauses_before": 6579,
+        "redundant_clauses_delta": 370,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29942,
+        "active_variables_before": 29948,
+        "active_variables_delta": -6,
+        "assumptions": [
+          86,
+          62,
+          -55,
+          -53,
+          51,
+          49,
+          -47,
+          45
+        ],
+        "cell_index": 7,
+        "elapsed_seconds": 14.375310791,
+        "failed_assumptions": [
+          86,
+          62,
+          -55,
+          -53,
+          51,
+          49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 155891,
+        "irredundant_clauses_before": 155890,
+        "irredundant_clauses_delta": 1,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          48894,
+          56571,
+          1007336312
+        ],
+        "metrics_before": [
+          42509,
+          49340,
+          877776476
+        ],
+        "metrics_delta": [
+          6385,
+          7231,
+          129559836
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "11001101",
+        "redundant_clauses_after": 8049,
+        "redundant_clauses_before": 6949,
+        "redundant_clauses_delta": 1100,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29944,
+        "active_variables_before": 29942,
+        "active_variables_delta": 2,
+        "assumptions": [
+          86,
+          62,
+          55,
+          53,
+          51,
+          49,
+          47,
+          -45
+        ],
+        "cell_index": 8,
+        "elapsed_seconds": 11.455149833,
+        "failed_assumptions": [
+          86,
+          62,
+          55,
+          53,
+          51,
+          49,
+          47,
+          -45
+        ],
+        "irredundant_clauses_after": 155887,
+        "irredundant_clauses_before": 155891,
+        "irredundant_clauses_delta": -4,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          54189,
+          62019,
+          1114538302
+        ],
+        "metrics_before": [
+          48894,
+          56571,
+          1007336312
+        ],
+        "metrics_delta": [
+          5295,
+          5448,
+          107201990
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "11111110",
+        "redundant_clauses_after": 7657,
+        "redundant_clauses_before": 8049,
+        "redundant_clauses_delta": -392,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29945,
+        "active_variables_before": 29944,
+        "active_variables_delta": 1,
+        "assumptions": [
+          -86,
+          -62,
+          -55,
+          -53,
+          51,
+          -49,
+          -47,
+          45
+        ],
+        "cell_index": 9,
+        "elapsed_seconds": 15.910655333,
+        "failed_assumptions": [
+          -86,
+          -62,
+          -55,
+          -53,
+          51,
+          -49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 155889,
+        "irredundant_clauses_before": 155887,
+        "irredundant_clauses_delta": 2,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          61178,
+          69245,
+          1264677729
+        ],
+        "metrics_before": [
+          54189,
+          62019,
+          1114538302
+        ],
+        "metrics_delta": [
+          6989,
+          7226,
+          150139427
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "00001001",
+        "redundant_clauses_after": 8033,
+        "redundant_clauses_before": 7657,
+        "redundant_clauses_delta": 376,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29949,
+        "active_variables_before": 29945,
+        "active_variables_delta": 4,
+        "assumptions": [
+          86,
+          62,
+          55,
+          53,
+          51,
+          -49,
+          47,
+          -45
+        ],
+        "cell_index": 10,
+        "elapsed_seconds": 16.0509145,
+        "failed_assumptions": [
+          86,
+          62,
+          55,
+          53,
+          51,
+          -49,
+          47,
+          -45
+        ],
+        "irredundant_clauses_after": 155897,
+        "irredundant_clauses_before": 155889,
+        "irredundant_clauses_delta": 8,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          68174,
+          77284,
+          1408595989
+        ],
+        "metrics_before": [
+          61178,
+          69245,
+          1264677729
+        ],
+        "metrics_delta": [
+          6996,
+          8039,
+          143918260
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "11111010",
+        "redundant_clauses_after": 8477,
+        "redundant_clauses_before": 8033,
+        "redundant_clauses_delta": 444,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29948,
+        "active_variables_before": 29949,
+        "active_variables_delta": -1,
+        "assumptions": [
+          -86,
+          62,
+          55,
+          53,
+          -51,
+          -49,
+          47,
+          -45
+        ],
+        "cell_index": 11,
+        "elapsed_seconds": 13.1777835,
+        "failed_assumptions": [
+          -86,
+          62,
+          55,
+          53,
+          -51,
+          -49,
+          47,
+          -45
+        ],
+        "irredundant_clauses_after": 155899,
+        "irredundant_clauses_before": 155897,
+        "irredundant_clauses_delta": 2,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          73822,
+          83364,
+          1523079677
+        ],
+        "metrics_before": [
+          68174,
+          77284,
+          1408595989
+        ],
+        "metrics_delta": [
+          5648,
+          6080,
+          114483688
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "01110010",
+        "redundant_clauses_after": 7464,
+        "redundant_clauses_before": 8477,
+        "redundant_clauses_delta": -1013,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29948,
+        "active_variables_before": 29948,
+        "active_variables_delta": 0,
+        "assumptions": [
+          86,
+          62,
+          55,
+          -53,
+          51,
+          -49,
+          47,
+          45
+        ],
+        "cell_index": 12,
+        "elapsed_seconds": 11.27648175,
+        "failed_assumptions": [
+          86,
+          62,
+          55,
+          -53,
+          51,
+          -49,
+          47,
+          45
+        ],
+        "irredundant_clauses_after": 155899,
+        "irredundant_clauses_before": 155899,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          78966,
+          89176,
+          1628586717
+        ],
+        "metrics_before": [
+          73822,
+          83364,
+          1523079677
+        ],
+        "metrics_delta": [
+          5144,
+          5812,
+          105507040
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "11101011",
+        "redundant_clauses_after": 11361,
+        "redundant_clauses_before": 7464,
+        "redundant_clauses_delta": 3897,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29965,
+        "active_variables_before": 29948,
+        "active_variables_delta": 17,
+        "assumptions": [
+          -86,
+          62,
+          55,
+          53,
+          51,
+          -49,
+          47,
+          45
+        ],
+        "cell_index": 13,
+        "elapsed_seconds": 10.838351459,
+        "failed_assumptions": [
+          -86,
+          62,
+          55,
+          53,
+          51,
+          -49,
+          47,
+          45
+        ],
+        "irredundant_clauses_after": 156170,
+        "irredundant_clauses_before": 155899,
+        "irredundant_clauses_delta": 271,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          83835,
+          94316,
+          1733707052
+        ],
+        "metrics_before": [
+          78966,
+          89176,
+          1628586717
+        ],
+        "metrics_delta": [
+          4869,
+          5140,
+          105120335
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "01111011",
+        "redundant_clauses_after": 8412,
+        "redundant_clauses_before": 11361,
+        "redundant_clauses_delta": -2949,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29972,
+        "active_variables_before": 29965,
+        "active_variables_delta": 7,
+        "assumptions": [
+          86,
+          -62,
+          55,
+          53,
+          51,
+          -49,
+          -47,
+          45
+        ],
+        "cell_index": 14,
+        "elapsed_seconds": 11.476874209,
+        "failed_assumptions": [
+          86,
+          -62,
+          55,
+          53,
+          51,
+          -49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 156098,
+        "irredundant_clauses_before": 156170,
+        "irredundant_clauses_delta": -72,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          88404,
+          98927,
+          1838274992
+        ],
+        "metrics_before": [
+          83835,
+          94316,
+          1733707052
+        ],
+        "metrics_delta": [
+          4569,
+          4611,
+          104567940
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "10111001",
+        "redundant_clauses_after": 5873,
+        "redundant_clauses_before": 8412,
+        "redundant_clauses_delta": -2539,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29972,
+        "active_variables_before": 29972,
+        "active_variables_delta": 0,
+        "assumptions": [
+          -86,
+          -62,
+          -55,
+          -53,
+          51,
+          49,
+          47,
+          45
+        ],
+        "cell_index": 15,
+        "elapsed_seconds": 11.41631725,
+        "failed_assumptions": [
+          -86,
+          -62,
+          -55,
+          -53,
+          51,
+          49,
+          47,
+          45
+        ],
+        "irredundant_clauses_after": 156098,
+        "irredundant_clauses_before": 156098,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          93078,
+          103708,
+          1942357641
+        ],
+        "metrics_before": [
+          88404,
+          98927,
+          1838274992
+        ],
+        "metrics_delta": [
+          4674,
+          4781,
+          104082649
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "00001111",
+        "redundant_clauses_after": 9804,
+        "redundant_clauses_before": 5873,
+        "redundant_clauses_delta": 3931,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29975,
+        "active_variables_before": 29972,
+        "active_variables_delta": 3,
+        "assumptions": [
+          86,
+          62,
+          -55,
+          -53,
+          -51,
+          49,
+          -47,
+          -45
+        ],
+        "cell_index": 16,
+        "elapsed_seconds": 11.262683,
+        "failed_assumptions": [
+          86,
+          62,
+          -55,
+          -53,
+          -51,
+          49,
+          -47,
+          -45
+        ],
+        "irredundant_clauses_after": 156105,
+        "irredundant_clauses_before": 156098,
+        "irredundant_clauses_delta": 7,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          97259,
+          107921,
+          2045723972
+        ],
+        "metrics_before": [
+          93078,
+          103708,
+          1942357641
+        ],
+        "metrics_delta": [
+          4181,
+          4213,
+          103366331
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "11000100",
+        "redundant_clauses_after": 6363,
+        "redundant_clauses_before": 9804,
+        "redundant_clauses_delta": -3441,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29905,
+        "active_variables_before": 29975,
+        "active_variables_delta": -70,
+        "assumptions": [
+          -86,
+          -62,
+          -55,
+          53,
+          51,
+          49,
+          -47,
+          45
+        ],
+        "cell_index": 17,
+        "elapsed_seconds": 10.970115917,
+        "failed_assumptions": [
+          -86,
+          -62,
+          -55,
+          53,
+          51,
+          49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 156067,
+        "irredundant_clauses_before": 156105,
+        "irredundant_clauses_delta": -38,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          101431,
+          112106,
+          2149214560
+        ],
+        "metrics_before": [
+          97259,
+          107921,
+          2045723972
+        ],
+        "metrics_delta": [
+          4172,
+          4185,
+          103490588
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "00011101",
+        "redundant_clauses_after": 8979,
+        "redundant_clauses_before": 6363,
+        "redundant_clauses_delta": 2616,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29918,
+        "active_variables_before": 29905,
+        "active_variables_delta": 13,
+        "assumptions": [
+          -86,
+          -62,
+          55,
+          53,
+          51,
+          49,
+          -47,
+          45
+        ],
+        "cell_index": 18,
+        "elapsed_seconds": 10.842572625,
+        "failed_assumptions": [
+          -86,
+          -62,
+          55,
+          53,
+          51,
+          49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 156065,
+        "irredundant_clauses_before": 156067,
+        "irredundant_clauses_delta": -2,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          106277,
+          116998,
+          2254052331
+        ],
+        "metrics_before": [
+          101431,
+          112106,
+          2149214560
+        ],
+        "metrics_delta": [
+          4846,
+          4892,
+          104837771
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "00111101",
+        "redundant_clauses_after": 6139,
+        "redundant_clauses_before": 8979,
+        "redundant_clauses_delta": -2840,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29918,
+        "active_variables_before": 29918,
+        "active_variables_delta": 0,
+        "assumptions": [
+          86,
+          62,
+          55,
+          -53,
+          -51,
+          49,
+          -47,
+          45
+        ],
+        "cell_index": 19,
+        "elapsed_seconds": 11.16678975,
+        "failed_assumptions": [
+          86,
+          62,
+          55,
+          -53,
+          -51,
+          49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 156065,
+        "irredundant_clauses_before": 156065,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          111466,
+          122696,
+          2359194127
+        ],
+        "metrics_before": [
+          106277,
+          116998,
+          2254052331
+        ],
+        "metrics_delta": [
+          5189,
+          5698,
+          105141796
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "11100101",
+        "redundant_clauses_after": 10160,
+        "redundant_clauses_before": 6139,
+        "redundant_clauses_delta": 4021,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29921,
+        "active_variables_before": 29918,
+        "active_variables_delta": 3,
+        "assumptions": [
+          -86,
+          62,
+          -55,
+          -53,
+          51,
+          49,
+          -47,
+          -45
+        ],
+        "cell_index": 20,
+        "elapsed_seconds": 13.367338042,
+        "failed_assumptions": [
+          -86,
+          62,
+          -55,
+          -53,
+          51,
+          49,
+          -47,
+          -45
+        ],
+        "irredundant_clauses_after": 156069,
+        "irredundant_clauses_before": 156065,
+        "irredundant_clauses_delta": 4,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          116959,
+          128786,
+          2472940149
+        ],
+        "metrics_before": [
+          111466,
+          122696,
+          2359194127
+        ],
+        "metrics_delta": [
+          5493,
+          6090,
+          113746022
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "01001100",
+        "redundant_clauses_after": 7085,
+        "redundant_clauses_before": 10160,
+        "redundant_clauses_delta": -3075,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29921,
+        "active_variables_before": 29921,
+        "active_variables_delta": 0,
+        "assumptions": [
+          86,
+          -62,
+          -55,
+          -53,
+          -51,
+          -49,
+          47,
+          -45
+        ],
+        "cell_index": 21,
+        "elapsed_seconds": 11.087068292,
+        "failed_assumptions": [
+          86,
+          -62,
+          -55,
+          -53,
+          -51,
+          -49,
+          47,
+          -45
+        ],
+        "irredundant_clauses_after": 156069,
+        "irredundant_clauses_before": 156069,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          122335,
+          134322,
+          2577892958
+        ],
+        "metrics_before": [
+          116959,
+          128786,
+          2472940149
+        ],
+        "metrics_delta": [
+          5376,
+          5536,
+          104952809
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "10000010",
+        "redundant_clauses_after": 11325,
+        "redundant_clauses_before": 7085,
+        "redundant_clauses_delta": 4240,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29925,
+        "active_variables_before": 29921,
+        "active_variables_delta": 4,
+        "assumptions": [
+          -86,
+          62,
+          -55,
+          53,
+          51,
+          -49,
+          47,
+          -45
+        ],
+        "cell_index": 22,
+        "elapsed_seconds": 13.8344155,
+        "failed_assumptions": [
+          -86,
+          62,
+          -55,
+          53,
+          51,
+          -49,
+          47,
+          -45
+        ],
+        "irredundant_clauses_after": 156077,
+        "irredundant_clauses_before": 156069,
+        "irredundant_clauses_delta": 8,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          128981,
+          141665,
+          2709319571
+        ],
+        "metrics_before": [
+          122335,
+          134322,
+          2577892958
+        ],
+        "metrics_delta": [
+          6646,
+          7343,
+          131426613
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "01011010",
+        "redundant_clauses_after": 9093,
+        "redundant_clauses_before": 11325,
+        "redundant_clauses_delta": -2232,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29915,
+        "active_variables_before": 29925,
+        "active_variables_delta": -10,
+        "assumptions": [
+          86,
+          -62,
+          -55,
+          53,
+          51,
+          49,
+          -47,
+          -45
+        ],
+        "cell_index": 23,
+        "elapsed_seconds": 10.828645291,
+        "failed_assumptions": [
+          86,
+          -62,
+          -55,
+          53,
+          51,
+          49,
+          -47,
+          -45
+        ],
+        "irredundant_clauses_after": 156068,
+        "irredundant_clauses_before": 156077,
+        "irredundant_clauses_delta": -9,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          134304,
+          148020,
+          2814527901
+        ],
+        "metrics_before": [
+          128981,
+          141665,
+          2709319571
+        ],
+        "metrics_delta": [
+          5323,
+          6355,
+          105208330
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "10011100",
+        "redundant_clauses_after": 12781,
+        "redundant_clauses_before": 9093,
+        "redundant_clauses_delta": 3688,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29918,
+        "active_variables_before": 29915,
+        "active_variables_delta": 3,
+        "assumptions": [
+          -86,
+          -62,
+          -55,
+          53,
+          -51,
+          49,
+          -47,
+          45
+        ],
+        "cell_index": 24,
+        "elapsed_seconds": 13.530880292,
+        "failed_assumptions": [
+          -86,
+          -62,
+          -55,
+          53,
+          -51,
+          49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 156071,
+        "irredundant_clauses_before": 156068,
+        "irredundant_clauses_delta": 3,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          140261,
+          154613,
+          2940685327
+        ],
+        "metrics_before": [
+          134304,
+          148020,
+          2814527901
+        ],
+        "metrics_delta": [
+          5957,
+          6593,
+          126157426
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "00010101",
+        "redundant_clauses_after": 9487,
+        "redundant_clauses_before": 12781,
+        "redundant_clauses_delta": -3294,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29918,
+        "active_variables_before": 29918,
+        "active_variables_delta": 0,
+        "assumptions": [
+          -86,
+          62,
+          -55,
+          53,
+          -51,
+          49,
+          47,
+          45
+        ],
+        "cell_index": 25,
+        "elapsed_seconds": 10.947706458,
+        "failed_assumptions": [
+          -86,
+          62,
+          -55,
+          53,
+          -51,
+          49,
+          47,
+          45
+        ],
+        "irredundant_clauses_after": 156071,
+        "irredundant_clauses_before": 156071,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          145223,
+          160039,
+          3045251489
+        ],
+        "metrics_before": [
+          140261,
+          154613,
+          2940685327
+        ],
+        "metrics_delta": [
+          4962,
+          5426,
+          104566162
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "01010111",
+        "redundant_clauses_after": 13446,
+        "redundant_clauses_before": 9487,
+        "redundant_clauses_delta": 3959,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29922,
+        "active_variables_before": 29918,
+        "active_variables_delta": 4,
+        "assumptions": [
+          86,
+          62,
+          55,
+          53,
+          51,
+          -49,
+          -47,
+          45
+        ],
+        "cell_index": 26,
+        "elapsed_seconds": 13.008468333,
+        "failed_assumptions": [
+          86,
+          62,
+          55,
+          53,
+          51,
+          -49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 156083,
+        "irredundant_clauses_before": 156071,
+        "irredundant_clauses_delta": 12,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          151061,
+          165958,
+          3170483732
+        ],
+        "metrics_before": [
+          145223,
+          160039,
+          3045251489
+        ],
+        "metrics_delta": [
+          5838,
+          5919,
+          125232243
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "11111001",
+        "redundant_clauses_after": 10368,
+        "redundant_clauses_before": 13446,
+        "redundant_clauses_delta": -3078,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29922,
+        "active_variables_before": 29922,
+        "active_variables_delta": 0,
+        "assumptions": [
+          -86,
+          -62,
+          55,
+          -53,
+          -51,
+          49,
+          -47,
+          45
+        ],
+        "cell_index": 27,
+        "elapsed_seconds": 11.620018708,
+        "failed_assumptions": [
+          -86,
+          -62,
+          55,
+          -53,
+          -51,
+          49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 156083,
+        "irredundant_clauses_before": 156083,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          156338,
+          171411,
+          3275413078
+        ],
+        "metrics_before": [
+          151061,
+          165958,
+          3170483732
+        ],
+        "metrics_delta": [
+          5277,
+          5453,
+          104929346
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "00100101",
+        "redundant_clauses_after": 14316,
+        "redundant_clauses_before": 10368,
+        "redundant_clauses_delta": 3948,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29924,
+        "active_variables_before": 29922,
+        "active_variables_delta": 2,
+        "assumptions": [
+          86,
+          -62,
+          -55,
+          -53,
+          51,
+          -49,
+          47,
+          45
+        ],
+        "cell_index": 28,
+        "elapsed_seconds": 13.144463375,
+        "failed_assumptions": [
+          86,
+          -62,
+          -55,
+          -53,
+          51,
+          -49,
+          47,
+          45
+        ],
+        "irredundant_clauses_after": 156087,
+        "irredundant_clauses_before": 156083,
+        "irredundant_clauses_delta": 4,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          163148,
+          179095,
+          3399913939
+        ],
+        "metrics_before": [
+          156338,
+          171411,
+          3275413078
+        ],
+        "metrics_delta": [
+          6810,
+          7684,
+          124500861
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "10001011",
+        "redundant_clauses_after": 10480,
+        "redundant_clauses_before": 14316,
+        "redundant_clauses_delta": -3836,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29924,
+        "active_variables_before": 29924,
+        "active_variables_delta": 0,
+        "assumptions": [
+          -86,
+          -62,
+          -55,
+          53,
+          51,
+          49,
+          -47,
+          -45
+        ],
+        "cell_index": 29,
+        "elapsed_seconds": 10.999975125,
+        "failed_assumptions": [
+          -86,
+          -62,
+          -55,
+          53,
+          51,
+          49,
+          -47
+        ],
+        "irredundant_clauses_after": 156087,
+        "irredundant_clauses_before": 156087,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          168605,
+          184787,
+          3504590026
+        ],
+        "metrics_before": [
+          163148,
+          179095,
+          3399913939
+        ],
+        "metrics_delta": [
+          5457,
+          5692,
+          104676087
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "00011100",
+        "redundant_clauses_after": 13205,
+        "redundant_clauses_before": 10480,
+        "redundant_clauses_delta": 2725,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29917,
+        "active_variables_before": 29924,
+        "active_variables_delta": -7,
+        "assumptions": [
+          86,
+          -62,
+          -55,
+          -53,
+          51,
+          49,
+          -47,
+          45
+        ],
+        "cell_index": 30,
+        "elapsed_seconds": 13.120393709,
+        "failed_assumptions": [
+          86,
+          -62,
+          -55,
+          -53,
+          51,
+          49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 156061,
+        "irredundant_clauses_before": 156087,
+        "irredundant_clauses_delta": -26,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          174524,
+          190955,
+          3629313228
+        ],
+        "metrics_before": [
+          168605,
+          184787,
+          3504590026
+        ],
+        "metrics_delta": [
+          5919,
+          6168,
+          124723202
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "10001101",
+        "redundant_clauses_after": 10324,
+        "redundant_clauses_before": 13205,
+        "redundant_clauses_delta": -2881,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29917,
+        "active_variables_before": 29917,
+        "active_variables_delta": 0,
+        "assumptions": [
+          86,
+          62,
+          -55,
+          -53,
+          51,
+          49,
+          47,
+          45
+        ],
+        "cell_index": 31,
+        "elapsed_seconds": 12.097894625,
+        "failed_assumptions": [
+          86,
+          62,
+          -55,
+          -53,
+          51,
+          49,
+          47,
+          45
+        ],
+        "irredundant_clauses_after": 156061,
+        "irredundant_clauses_before": 156061,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          180175,
+          197267,
+          3734313930
+        ],
+        "metrics_before": [
+          174524,
+          190955,
+          3629313228
+        ],
+        "metrics_delta": [
+          5651,
+          6312,
+          105000702
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "11001111",
+        "redundant_clauses_after": 14656,
+        "redundant_clauses_before": 10324,
+        "redundant_clauses_delta": 4332,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29919,
+        "active_variables_before": 29917,
+        "active_variables_delta": 2,
+        "assumptions": [
+          86,
+          -62,
+          55,
+          -53,
+          -51,
+          49,
+          -47,
+          45
+        ],
+        "cell_index": 32,
+        "elapsed_seconds": 13.757373417,
+        "failed_assumptions": [
+          86,
+          -62,
+          55,
+          -53,
+          -51,
+          49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 156063,
+        "irredundant_clauses_before": 156061,
+        "irredundant_clauses_delta": 2,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          185355,
+          202663,
+          3850013923
+        ],
+        "metrics_before": [
+          180175,
+          197267,
+          3734313930
+        ],
+        "metrics_delta": [
+          5180,
+          5396,
+          115699993
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "10100101",
+        "redundant_clauses_after": 9778,
+        "redundant_clauses_before": 14656,
+        "redundant_clauses_delta": -4878,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29919,
+        "active_variables_before": 29919,
+        "active_variables_delta": 0,
+        "assumptions": [
+          -86,
+          62,
+          -55,
+          53,
+          -51,
+          -49,
+          -47,
+          45
+        ],
+        "cell_index": 33,
+        "elapsed_seconds": 12.265331583,
+        "failed_assumptions": [
+          -86,
+          62,
+          -55,
+          53,
+          -51,
+          -49,
+          -47,
+          45
+        ],
+        "irredundant_clauses_after": 156063,
+        "irredundant_clauses_before": 156063,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          190186,
+          207567,
+          3954223471
+        ],
+        "metrics_before": [
+          185355,
+          202663,
+          3850013923
+        ],
+        "metrics_delta": [
+          4831,
+          4904,
+          104209548
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "01010001",
+        "redundant_clauses_after": 14036,
+        "redundant_clauses_before": 9778,
+        "redundant_clauses_delta": 4258,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29924,
+        "active_variables_before": 29919,
+        "active_variables_delta": 5,
+        "assumptions": [
+          -86,
+          -62,
+          -55,
+          53,
+          51,
+          49,
+          47,
+          -45
+        ],
+        "cell_index": 34,
+        "elapsed_seconds": 15.295068958,
+        "failed_assumptions": [
+          -86,
+          -62,
+          -55,
+          53,
+          51,
+          49,
+          47,
+          -45
+        ],
+        "irredundant_clauses_after": 156075,
+        "irredundant_clauses_before": 156063,
+        "irredundant_clauses_delta": 12,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          197770,
+          218865,
+          4088921809
+        ],
+        "metrics_before": [
+          190186,
+          207567,
+          3954223471
+        ],
+        "metrics_delta": [
+          7584,
+          11298,
+          134698338
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "00011110",
+        "redundant_clauses_after": 10169,
+        "redundant_clauses_before": 14036,
+        "redundant_clauses_delta": -3867,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29924,
+        "active_variables_before": 29924,
+        "active_variables_delta": 0,
+        "assumptions": [
+          86,
+          -62,
+          -55,
+          53,
+          51,
+          49,
+          47,
+          45
+        ],
+        "cell_index": 35,
+        "elapsed_seconds": 10.861071958,
+        "failed_assumptions": [
+          86,
+          -62,
+          -55,
+          53,
+          51,
+          49,
+          47,
+          45
+        ],
+        "irredundant_clauses_after": 156075,
+        "irredundant_clauses_before": 156075,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          202545,
+          223702,
+          4193152544
+        ],
+        "metrics_before": [
+          197770,
+          218865,
+          4088921809
+        ],
+        "metrics_delta": [
+          4775,
+          4837,
+          104230735
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [],
+        "prefix8": "10011111",
+        "redundant_clauses_after": 14214,
+        "redundant_clauses_before": 10169,
+        "redundant_clauses_delta": 4045,
+        "returncode": 20,
+        "seconds_budget": 30,
+        "status": "unsat",
+        "terminator_fired": false
+      },
+      {
+        "active_variables_after": 29924,
+        "active_variables_before": 29924,
+        "active_variables_delta": 0,
+        "assumptions": [
+          86,
+          -62,
+          55,
+          53,
+          51,
+          49,
+          47,
+          45
+        ],
+        "cell_index": 36,
+        "elapsed_seconds": 6.770779375,
+        "failed_assumptions": [],
+        "irredundant_clauses_after": 156075,
+        "irredundant_clauses_before": 156075,
+        "irredundant_clauses_delta": 0,
+        "metric_names": [
+          "conflicts",
+          "decisions",
+          "search_propagations"
+        ],
+        "metrics_after": [
+          206104,
+          228011,
+          4256377782
+        ],
+        "metrics_before": [
+          202545,
+          223702,
+          4193152544
+        ],
+        "metrics_delta": [
+          3559,
+          4309,
+          63225238
+        ],
+        "mode": "A281_cross_material_frozen_top128",
+        "model_bits_bit0_through_bit19": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "prefix8": "10111111",
+        "redundant_clauses_after": 17210,
+        "redundant_clauses_before": 14214,
+        "redundant_clauses_delta": 2996,
+        "returncode": 10,
+        "seconds_budget": 30,
+        "status": "sat",
+        "terminator_fired": false
+      }
+    ],
+    "sat_found": true,
+    "sat_row": {
+      "active_variables_after": 29924,
+      "active_variables_before": 29924,
+      "active_variables_delta": 0,
+      "assumptions": [
+        86,
+        -62,
+        55,
+        53,
+        51,
+        49,
+        47,
+        45
+      ],
+      "cell_index": 36,
+      "elapsed_seconds": 6.770779375,
+      "failed_assumptions": [],
+      "irredundant_clauses_after": 156075,
+      "irredundant_clauses_before": 156075,
+      "irredundant_clauses_delta": 0,
+      "metric_names": [
+        "conflicts",
+        "decisions",
+        "search_propagations"
+      ],
+      "metrics_after": [
+        206104,
+        228011,
+        4256377782
+      ],
+      "metrics_before": [
+        202545,
+        223702,
+        4193152544
+      ],
+      "metrics_delta": [
+        3559,
+        4309,
+        63225238
+      ],
+      "mode": "A281_cross_material_frozen_top128",
+      "model_bits_bit0_through_bit19": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "prefix8": "10111111",
+      "redundant_clauses_after": 17210,
+      "redundant_clauses_before": 14214,
+      "redundant_clauses_delta": 2996,
+      "returncode": 10,
+      "seconds_budget": 30,
+      "status": "sat",
+      "terminator_fired": false
+    },
+    "seconds_budget_per_cell": 30.0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "712a59ec15a65c3ce54892e71be2360fd3ff8acef9453835476849b0a99b872f",
+    "summary": {
+      "attempted_cells": 37,
+      "metric_names": [
+        "conflicts",
+        "decisions",
+        "search_propagations"
+      ],
+      "mode": "A281_cross_material_frozen_top128",
+      "planned_max_cells": 128,
+      "sat": 1,
+      "seconds_budget": 30,
+      "signature": "cadical-3.0.0",
+      "stopped_after_sat": true,
+      "terminator_fires": 0,
+      "unknown": 0,
+      "unsat": 36,
+      "variables": 80805,
+      "version": "3.0.0"
+    }
+  },
+  "top_execution_summary": {
+    "all_attempted_cells_exact_UNSAT": false,
+    "attempted_cells": 37,
+    "logical_assignments_inside_attempted_cells": 151552,
+    "retained_state_continuity_verified": true,
+    "sat": 1,
+    "sat_found": true,
+    "unknown": 0,
+    "unsat": 36
+  }
+}

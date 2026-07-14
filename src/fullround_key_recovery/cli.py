@@ -12,7 +12,7 @@ from .verify import VERIFY_FUNCTIONS, verify_all, verify_result
 
 def main(argv: Sequence[str] | None = None) -> None:
     parser = argparse.ArgumentParser(
-        description="Verify all ten retained full-round recovery records."
+        description="Verify retained complete-domain and strict-subset full-round recoveries."
     )
     parser.add_argument(
         "result",

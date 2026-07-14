@@ -1,0 +1,102 @@
+{
+  "attempt_id": "A285",
+  "execution_schedule": {
+    "all_protocols_frozen_before_first_solver": true,
+    "cross_target_adaptation_permitted": false,
+    "parallel_workers": 2,
+    "per_target_residual_binary_isolated": true
+  },
+  "information_boundary": {
+    "all_four_orders_frozen_before_any_recovery_protocol": true,
+    "all_four_recovery_protocols_frozen_before_any_solver": true,
+    "all_four_targets_frozen_before_any_measurement": true,
+    "any_solver_execution_started": false,
+    "any_target_label_available": false
+  },
+  "order_ledger": {
+    "path": "research/results/v1/chacha20_round20_multitarget_orders_v1.json",
+    "sha256": "41ea2494a75ad3f2dd49ca43e408b03580fdf498d935bfc03dedf3b5c1d8c1d3"
+  },
+  "panel_master": {
+    "path": "research/configs/chacha20_round20_multitarget_panel_master_v1.json",
+    "sha256": "79a7c1527dfa91aa623ebb26df563883be457b81ea9b9d1b6731f5950f22b4ef"
+  },
+  "preflight": {
+    "path": "research/experiments/chacha20_round20_multitarget_recovery.py",
+    "sha256": "1329f1fdc9486abf658ddcfd6179798510d2e6094292a9d3f9ffee942a0ee65f"
+  },
+  "protocol_count": 4,
+  "protocol_state": "all_four_recovery_protocols_frozen_before_any_solver_execution",
+  "protocols": [
+    {
+      "complete_order_uint8_sha256": "78c961016a068a3c5eea2e112fd29ceafa1485fa9bb88bb159098c89038c7fdf",
+      "panel_index": 1,
+      "protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t01_recovery_v1.json",
+        "sha256": "40b01fbe337faeb62d74bbe52609d658e3f773b6c985b59febae1bf99aa62872"
+      },
+      "public_challenge_sha256": "5b948554cb1d9eeda7acc30c13fff24d98de93f8d1e8753538e7764fbfcc4a94",
+      "ranked_binary": {
+        "path": "research/native/build/cadical_ranked_until_sat_a285_t01",
+        "sha256": "0c95ba8028a3e973ce496827072f0b0017be53abba35e018fe37e9a309116e24"
+      },
+      "scientific_design_sha256": "b8446e754f6b7045d0929a7242a31c8425a84348991d695af7375486d99b6003",
+      "target_id": "t01",
+      "top128_order_uint8_sha256": "72eef89a6d2ca88f2a7038bff7e936b1afd82a56d8bdbd9042a6f7aa19cbcebe"
+    },
+    {
+      "complete_order_uint8_sha256": "573a1c0cb8ac696bb13bb7560d0af1c12509ac5dfb677976002e734765493034",
+      "panel_index": 2,
+      "protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t02_recovery_v1.json",
+        "sha256": "b986dc7d9bf5e3a0a17d569cc4fe5c224858aa79fe9dc6a579db9db696ca531a"
+      },
+      "public_challenge_sha256": "22461db90498f6b1afadc25d4435cf552c60efa038a6ad72d481b751fbd66abb",
+      "ranked_binary": {
+        "path": "research/native/build/cadical_ranked_until_sat_a285_t02",
+        "sha256": "8fc2be44d1411fde4389ca2ab821604b1b36da08313b5c41e182bfcea4e63192"
+      },
+      "scientific_design_sha256": "f6be8bafa93eb457dc48fb52d6751fbdb17bdb4fd2e0c0775c2cf7bb9dfdedbd",
+      "target_id": "t02",
+      "top128_order_uint8_sha256": "4c916ef558f2161bc4fbecc88a0a714ec65246aa50a39c9699778b6124858fb6"
+    },
+    {
+      "complete_order_uint8_sha256": "73c4369ab8cbbfe001ee8bcb18e44f7f338c17980c1b374db9c8a5f08a328d44",
+      "panel_index": 3,
+      "protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t03_recovery_v1.json",
+        "sha256": "4c993c83ed66bba802f0f8a49db47301dae0fba949d7e1ff66053dc22e21c491"
+      },
+      "public_challenge_sha256": "ece6555c9f9d0fc6e5557f1700ef97a2e2d8474235f658994bd50e632fee1798",
+      "ranked_binary": {
+        "path": "research/native/build/cadical_ranked_until_sat_a285_t03",
+        "sha256": "3aa7704441ad8e76cb28a5ba25478e8da6a18caa46bd470b6b492e280d0f9995"
+      },
+      "scientific_design_sha256": "a5dce4dc6857af426de688d18eb24a0ce6a5483680575b6843af72eb7f948764",
+      "target_id": "t03",
+      "top128_order_uint8_sha256": "dad1c0894bd45d11d3990cffd2c479473df048f3a08bf2119e4596ae148dac75"
+    },
+    {
+      "complete_order_uint8_sha256": "3713862f40dfe5b7c032924a3c3666b302d3f4650b7be223231765f98e44291c",
+      "panel_index": 4,
+      "protocol": {
+        "path": "research/configs/chacha20_round20_multitarget_t04_recovery_v1.json",
+        "sha256": "cb60e905cb55472cbe91bf9c6521d68483f9e025ee5199a46fce206533cb1a01"
+      },
+      "public_challenge_sha256": "8ec9d241cd2a98175ed2b432304a332c41620e33adc899aea271012fb0712f91",
+      "ranked_binary": {
+        "path": "research/native/build/cadical_ranked_until_sat_a285_t04",
+        "sha256": "30c42492b55b5c5b83d6c32222288aea8021a958bb9169ae1d89bb5b6ecb3410"
+      },
+      "scientific_design_sha256": "0338a602c340856b7efa26f0dcc868071feebdf3b1f56f1fb47817dc7e814a16",
+      "target_id": "t04",
+      "top128_order_uint8_sha256": "151cc3d56cc470e11d8e230c08300f919171b35d1fe063f702f1254380743806"
+    }
+  ],
+  "schema": "chacha20-round20-multitarget-recovery-protocol-ledger-v1",
+  "scientific_design_sha256": "08a8e6270311de1a2d075cedc43103c3f98937c0ed79aac36a2c11bd205fc29a",
+  "target_ledger": {
+    "path": "research/configs/chacha20_round20_multitarget_targets_v1.json",
+    "sha256": "9077cf5c3f32500a87f08ac525466804fdfcb09d02feebc9b8660d8a6460b45c"
+  }
+}

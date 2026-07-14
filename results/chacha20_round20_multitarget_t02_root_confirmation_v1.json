@@ -1,0 +1,84 @@
+{
+  "anchors": {
+    "canonical_causal": {
+      "path": "research/results/v1/chacha20_round20_multitarget_t02_composite_recovery_canonical_v1.causal",
+      "sha256": "0aa516b7de78e45393ea4aa1ab2c46b2dc537c72d18fd10aed0e0273744ff93f"
+    },
+    "result": {
+      "path": "research/results/v1/chacha20_round20_multitarget_t02_composite_recovery_v1.json",
+      "sha256": "3f04e0048a9089c15ae7c69739134a60dd8874eb17c76d3f7ff33235781f7d95"
+    },
+    "standalone_source": {
+      "path": "research/experiments/chacha20_round20_multitarget_root_confirm.py",
+      "sha256": "3911002cdeff7f4705e82fd62ed293bbe675c7d02791aa7aa8770ed4d7d2891e"
+    },
+    "target": {
+      "path": "research/configs/chacha20_round20_multitarget_t02_target_v1.json",
+      "sha256": "3c6bccd52e95dce0b4af7d8a65fff06777437eb86aa3cd4c3fde188aefc93d8d"
+    }
+  },
+  "attempt_id": "A285-root-confirmation",
+  "authentic_causal_readback": {
+    "api_id": "a285t02",
+    "clusters": 1,
+    "next_gap": {
+      "confidence": 1.0,
+      "expected_object_type": "complete_remaining_panel_targets_then_widen_unknown_domain",
+      "predicate": "next_required_object",
+      "subject": "A285:t02_confirmed_cross_material_R20_recovery",
+      "suggested_queries": [
+        "Complete the independently frozen panel and measure its rank distribution.",
+        "Transfer the panel mechanism to a wider unknown-key domain."
+      ]
+    },
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "rules": 2,
+    "terminal_chain": {
+      "attrs": {},
+      "confidence": 1.0,
+      "domain": "AI-native retained inference",
+      "evidence": "FULLROUND_R20_CROSS_MATERIAL_TARGET_BLIND_TOP128_RECOVERY_CONFIRMED",
+      "is_inferred": true,
+      "m_idx": 7,
+      "mechanism": "materialized_order_solver_evidence_terminal_chain",
+      "o_idx": 6,
+      "outcome": "A285:t02_confirmed_cross_material_R20_recovery",
+      "pmcid": "",
+      "quality_score": 1.0,
+      "quantification": "canonical three-edge AI-native closure",
+      "s_idx": 0,
+      "source": "materialized:A284_order_plus_A285_t02_execution",
+      "trigger": "A284:t02_hash_frozen_cross_material_order"
+    },
+    "triplets": 4
+  },
+  "confirmation_sha256": "1ef69a4368aa1415947276ae5707b5e4fa483ee8d61811bcf1a484deb09cb21a",
+  "evidence_stage": "THIRD_IMPLEMENTATION_4096_BIT_CONFIRMATION",
+  "frozen_order_rank": 55,
+  "one_bit_control_rejected": true,
+  "recovered_unknown_low20": 927904,
+  "recovered_unknown_low20_hex": "e28a0",
+  "rfc8439_gate": {
+    "exact": true,
+    "expected_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "observed_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "vector": "RFC8439_section_2.3.2"
+  },
+  "schema": "chacha20-round20-multitarget-root-confirmation-v1",
+  "standalone_block_sha256": [
+    "bf64237968ed13aa601758e350c4f345fab82f1967c320821e6ccd2ce03de944",
+    "334cb178b6ebb6691639f39ee810a1a9465c9e5db97b679db8650f2f0d39325a",
+    "0ca2ea28150694236484ad4117ee6cb646acf9547295b8f4b47a307d6fd27507",
+    "d5390ca426684a31dd5ec1868da2833c4d4fa32aff5237af320b7f0c724ea9a3",
+    "03b41a9cc380cef949ed36f93d2ae790c9728d0168d147f177e2793f50fcbc84",
+    "d6f9081f9b84716c97349efcc47b8df4726b35ea09d1b2c90bee500e73567c97",
+    "b37a4f09fa37597230f8586fa4ab9d3d74489fccfa55e4a9e009548fe281056d",
+    "e3bd439599eec349e446963e8925ba3316dc6285faf121991b57fc9232fe0bfc"
+  ],
+  "standalone_direct_spec_all_8_blocks_match": true,
+  "standalone_output_bits_checked": 4096
+}

@@ -1,0 +1,184 @@
+{
+  "anchors": {
+    "A275_causal": {
+      "path": "research/results/v1/chacha20_round20_selected_channel_target_replication_order_v1.causal",
+      "sha256": "fadae6b3dece94cb207f3eba4572d9fc1bfd6796e4256a5bd7b3de5e11e03f3b"
+    },
+    "A275_measurement": {
+      "path": "research/results/v1/chacha20_round20_selected_channel_target_replication_order_v1/target.numeric.measurement.json.zst",
+      "sha256": "0452f3c418bb29b1904170f7dd7a2a8278b4de68d056b8537ead6985ae97ddde"
+    },
+    "A275_protocol": {
+      "path": "research/configs/chacha20_round20_selected_channel_target_replication_v1.json",
+      "sha256": "d6e753defe3eba1e9989e8e6f792a6e731d8371487788917db0d7cff518c75f9"
+    },
+    "A275_result": {
+      "path": "research/results/v1/chacha20_round20_selected_channel_target_replication_order_v1.json",
+      "sha256": "2c9236c2aff721ba18f1c4009fdd1dd1724b0ba0d5799268ac49c0ac2d4a672a"
+    },
+    "A275_runner": {
+      "path": "research/experiments/chacha20_round20_selected_channel_target_replication_measure.py",
+      "sha256": "218815280ce978aba16ba857db80828424e390cc1d141a1be3d33fb330c4e56b"
+    },
+    "A276_protocol": {
+      "path": "research/configs/chacha20_round20_selected_channel_target_replication_recovery_v1.json",
+      "sha256": "b40a8d6da6a5ce3af80e6f34f0eae28f87f1eb22448985ee95e5382ae455b9e5"
+    },
+    "A276_runner": {
+      "path": "research/experiments/chacha20_round20_selected_channel_target_replication_recovery.py",
+      "sha256": "e82f3e8d8d98c38b13f7674ed31657737276b021025dc652af790e608b53a931"
+    },
+    "A277_causal": {
+      "path": "research/results/v1/chacha20_round20_replication_residual_two_pass_v1.causal",
+      "sha256": "3da37f9177102c14626b425e8c58f8fe7dddbc35dab99f1fadf6599a8f54d196"
+    },
+    "A277_protocol": {
+      "path": "research/configs/chacha20_round20_replication_residual_two_pass_v1.json",
+      "sha256": "1f7aa99d6b869287cb78bc9a3a321cf5d559c44137d554dc19b9435bb1f78b69"
+    },
+    "A277_result": {
+      "path": "research/results/v1/chacha20_round20_replication_residual_two_pass_v1.json",
+      "sha256": "dd47a7dfdc5740defef134f0b588d58f8dae9dd6dee22068aa1f67c25b37c5d7"
+    },
+    "A277_runner": {
+      "path": "research/experiments/chacha20_round20_replication_residual_two_pass.py",
+      "sha256": "7710e978fd7a1ba33155bf12919d49b243806342c78fc0517bdeee02c2bf6e60"
+    },
+    "public_core": {
+      "path": "research/experiments/chacha20_round20_public_core.py",
+      "sha256": "953e4478d369b2eb39657d4b6f718fa97a46cac1855b0364cce1bc4e4753f77f"
+    },
+    "residual_native": {
+      "path": "research/native/cadical_residual_two_pass.cpp",
+      "sha256": "b0fcd4a8a08579055bed98003c01fcbadfd8782731745ad87f007dbd7db679dd"
+    },
+    "residual_wrapper": {
+      "path": "research/experiments/chacha20_residual_two_pass.py",
+      "sha256": "023c23008f62c062fcb9a4b1485e22417707c649d7354ec0357e73b082dc59e6"
+    },
+    "symbolic_template": {
+      "path": "research/experiments/chacha20_round20_symbolic_template.py",
+      "sha256": "34f4c5542f7fa12e7b0ff06ab7e042605c2414f23001f11894fa6dbdfc0b4721"
+    }
+  },
+  "attempt_id": "A278",
+  "authentic_causal_readback": {
+    "A277_gap": {
+      "confidence": 1.0,
+      "expected_object_type": "cross_public_material_replication_with_frozen_residual_schedule",
+      "predicate": "next_required_object",
+      "subject": "A277:confirmed_R20_residual_global_recovery",
+      "suggested_queries": [
+        "Freeze the entire residual schedule before a target with new public material.",
+        "Transfer exact-boundary blocking to a wider residual-key domain."
+      ]
+    },
+    "read_personally_by_main_before_freeze": true,
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    }
+  },
+  "cross_material_public_template": {
+    "block_count": 8,
+    "counter_schedule": "base_plus_block_index_mod_2^32",
+    "counter_start": 372907653,
+    "known_key_bits": 236,
+    "known_key_word0_upper12": 3870294016,
+    "known_key_words_1_through_7": [
+      2891028167,
+      731158357,
+      983111923,
+      2762218268,
+      2590338058,
+      3731357329,
+      2344037885
+    ],
+    "known_material_derivation_label": "f8-causal:cross-material:chacha20:r20-width20:known-material:7adadd40fc9709237bd50ac14d2527474ca44a978fe72f9787caefbfc2594f2f",
+    "known_material_derivation_sha256": "e7f097f9d5c3fc7b1910b8a6071a03fada9c69c0e8f0575c05ceba80e2fdddc5",
+    "nonce_words": [
+      2800137410,
+      3933526055,
+      2151667539
+    ],
+    "public_seed_hex": "7adadd40fc9709237bd50ac14d2527474ca44a978fe72f9787caefbfc2594f2f",
+    "rounds": 20,
+    "unknown_assignment_bits": 20,
+    "unknown_assignment_included": false,
+    "unknown_key_word0_low_bits": 20,
+    "unknown_key_word0_low_value_included": false,
+    "unknown_secret_low20_included": false
+  },
+  "cross_material_public_template_sha256": "7632acee61d5a487136b0e2caa68719b78de519e5ce70438a8f055c059d5fc30",
+  "frozen_schedule": {
+    "confirmation": {
+      "flipped_control_required": true,
+      "implementations": 2,
+      "output_bits": 4096,
+      "standard_output_blocks": 8
+    },
+    "measurement": {
+      "all_stages_must_remain_model_free_UNKNOWN": true,
+      "candidate_order": "numeric_0_through_255",
+      "complete_256_candidate_cover_before_scoring": true,
+      "conflict_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "feature_indices": [
+        502,
+        504,
+        505,
+        508,
+        509,
+        510,
+        511,
+        514
+      ],
+      "rank_order": "descending_score_then_ascending_candidate",
+      "reader": "unchanged_A272_eight_feature_selected_channel_reader",
+      "score": "sum_of_frozen_standardized_additive_contributions",
+      "watchdog_seconds_per_stage": 2.0
+    },
+    "residual": {
+      "discovery_UNKNOWN_is_not_elimination": true,
+      "discovery_seconds_per_cell": 10.0,
+      "entry_condition": "no_top_half_SAT_and_all_128_top_half_cells_exact_UNSAT",
+      "fallback_UNKNOWN_is_not_elimination": true,
+      "fallback_seconds_per_discovery_UNKNOWN_cell": 30.0,
+      "global_seconds": 300.0,
+      "materialization": "one_negated_8_assumption_clause_per_exact_prefix",
+      "single_retained_state_within_global_discovery_fallback": true,
+      "stop_condition": "first_SAT_only"
+    },
+    "top_half": {
+      "UNKNOWN_is_not_elimination": true,
+      "prefix_cells": 128,
+      "seconds_per_cell": 30.0,
+      "single_retained_CaDiCaL_state": true,
+      "stop_condition": "first_SAT_only"
+    }
+  },
+  "information_boundary": {
+    "confirmation_permitted_only_after_solver_model": true,
+    "new_public_material_frozen_before_target_generation": true,
+    "reader_and_all_solver_budgets_frozen_before_target_generation": true,
+    "target_generation_label_available": false,
+    "target_measurement_or_solver_execution_started": false,
+    "target_rank_or_correct_prefix_known": false
+  },
+  "protocol_state": "frozen_before_cross_material_target_generation_measurement_order_or_solve",
+  "research_question": "Does the complete A275-A277 target-blind schedule recover a fresh ChaCha20-R20 target under entirely new public known-key, counter, and nonce material without complete residual-domain enumeration?",
+  "schema": "chacha20-round20-cross-material-composite-master-v1",
+  "scientific_design_sha256": "f1731abfe142fd6fa50cf929c1439b7e66308398d8070d1dce3efaff8bc63ee8",
+  "target_generation_contract": {
+    "generation_label_returned_or_serialized": false,
+    "process": "separate_post_master_freeze_process",
+    "reject_all_prior_public_challenge_hashes": true,
+    "reject_prior_low20_prefix8_and_suffix12": true,
+    "source": "secrets.randbits_20"
+  }
+}

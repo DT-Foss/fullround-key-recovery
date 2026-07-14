@@ -1,0 +1,309 @@
+{
+  "anchors": {
+    "A275_preflight": {
+      "path": "research/experiments/chacha20_round20_selected_channel_target_replication_preflight.py",
+      "sha256": "290de9f7f5b8f11bd70f31cf462635895d9b5a2c713724daf9ae1cb8c883a562"
+    },
+    "A277_result": {
+      "path": "research/results/v1/chacha20_round20_replication_residual_two_pass_v1.json",
+      "sha256": "dd47a7dfdc5740defef134f0b588d58f8dae9dd6dee22068aa1f67c25b37c5d7"
+    },
+    "A282_panel_master": {
+      "path": "research/configs/chacha20_round20_multitarget_panel_master_v1.json",
+      "sha256": "79a7c1527dfa91aa623ebb26df563883be457b81ea9b9d1b6731f5950f22b4ef"
+    },
+    "A283_target_preflight": {
+      "path": "research/experiments/chacha20_round20_multitarget_target_preflight.py",
+      "sha256": "df4d16407d9261820457f46a2c8b522b8af3c1f1748e122eb797e06e1ef5427f"
+    },
+    "public_core": {
+      "path": "research/experiments/chacha20_round20_public_core.py",
+      "sha256": "953e4478d369b2eb39657d4b6f718fa97a46cac1855b0364cce1bc4e4753f77f"
+    }
+  },
+  "attempt_id": "A279",
+  "generation": {
+    "generation_label_returned_or_serialized": false,
+    "intra_panel_targets_preceding": 2,
+    "prior_ledger_sha256": "a9f8e3eb7a158e734019f8dbfdd4c39fcf0035e3d39a85123eee4c196973d7d0",
+    "prior_low20_count": 218,
+    "prior_prefix8_count": 58,
+    "prior_public_challenge_count": 40,
+    "prior_suffix12_count": 49,
+    "rejection": "all_prior_and_intra_panel_low20_prefix8_suffix12_and_challenge_hashes",
+    "source": "secrets.randbits_20"
+  },
+  "information_boundary": {
+    "all_panel_public_material_and_symbolic_mappings_frozen_before_target_generation": true,
+    "master_schedule_frozen_before_target_generation": true,
+    "target_candidate_order_known": false,
+    "target_generation_label_available": false,
+    "target_generation_label_discarded_before_protocol_serialization": true,
+    "target_measurement_started": false,
+    "target_solver_execution_started": false
+  },
+  "master_protocol": {
+    "path": "research/configs/chacha20_round20_multitarget_t03_master_v1.json",
+    "scientific_design_sha256": "f72bd8e1fea358eb04fed7262528e185fb23eb46fb6ce117c85645b6cc640feb",
+    "sha256": "72be2b0417da7fda9224d41f898c6e8e87d345f76b1b67b25ed560a96b29be0d"
+  },
+  "panel_context": {
+    "panel_attempt_id": "A283",
+    "panel_index": 3,
+    "panel_master": {
+      "path": "research/configs/chacha20_round20_multitarget_panel_master_v1.json",
+      "sha256": "79a7c1527dfa91aa623ebb26df563883be457b81ea9b9d1b6731f5950f22b4ef"
+    },
+    "target_id": "t03"
+  },
+  "protocol_state": "frozen_after_A278_master_and_label_discard_before_any_target_measurement_or_solve",
+  "public_challenge": {
+    "block_count": 8,
+    "control_target_block_sha256": "eab8d5da7a9e6ca41bdef26a0d0942b67122b16dbe92977c90926f11eca762d0",
+    "control_target_words": [
+      2798557795,
+      1071914334,
+      3946823907,
+      2092243911,
+      3655185046,
+      3068126177,
+      2990047790,
+      2227887242,
+      402797262,
+      582125329,
+      2211265127,
+      3099343108,
+      1282714951,
+      362110692,
+      1236844143,
+      4064768883
+    ],
+    "counter_schedule": "base_plus_block_index_mod_2^32",
+    "counter_start": 3491444709,
+    "known_key_bits": 236,
+    "known_key_word0_upper12": 2624585728,
+    "known_key_words_1_through_7": [
+      1841175092,
+      3592880396,
+      423649303,
+      3755403760,
+      2723099868,
+      1213906786,
+      2616680243
+    ],
+    "known_material_derivation_label": "f8-causal:cross-material:chacha20:r20-width20:known-material:ddf0b6d2c26c53b7425851199b339f8df51c8a978a3c6935ca98a4844cd5562f",
+    "known_material_derivation_sha256": "661d7ff60242e8694dcfc2db9bfb97baeac23b63105279915436a670e0849bae",
+    "nonce_words": [
+      885800511,
+      2046119056,
+      866232894
+    ],
+    "public_seed_hex": "ddf0b6d2c26c53b7425851199b339f8df51c8a978a3c6935ca98a4844cd5562f",
+    "rounds": 20,
+    "target_block_sha256": [
+      "9e1ea9608054e154283e256cb0e8aa45d0b5e0efff186133ed16f099d3a2057a",
+      "5ff4adfeae7a9caa0a9c43b5286802863f6bb79c1adbeb51ae51eb3e175a45c2",
+      "d8c929a8a23c3465a008e7a2369a849bb70f70223754168a4bdaf15fbe8083b4",
+      "c1377587b17e13fd6bb59da4ae686ee05f8d0ffaaee9f51e8089b1a4e18f60ab",
+      "afa462ce2d8c2ce70b7ca1b2c4c5428c9050abd2268bbbbd79d26837eadb8eb8",
+      "c5cbf54b4b4fa0f969de56502f396ed169fff105477f95db5e283f287ee5839e",
+      "5ace93e3ffe5a3e795f5323b8886920819f10dc38e46d1b0119190ae837f0e6b",
+      "b70df34e21798477ac4011cfce5d3dbeed8ec0b8e683b2fa53dde791543d5648"
+    ],
+    "target_words": [
+      [
+        2798557794,
+        1071914334,
+        3946823907,
+        2092243911,
+        3655185046,
+        3068126177,
+        2990047790,
+        2227887242,
+        402797262,
+        582125329,
+        2211265127,
+        3099343108,
+        1282714951,
+        362110692,
+        1236844143,
+        4064768883
+      ],
+      [
+        632096124,
+        2570319515,
+        1047178297,
+        2974914479,
+        3336774564,
+        625208890,
+        2949166778,
+        449799343,
+        833409871,
+        229213234,
+        1395080330,
+        4053043344,
+        2352015481,
+        3354810004,
+        2125622662,
+        4258293606
+      ],
+      [
+        3244325660,
+        508898498,
+        140995235,
+        2124859203,
+        219710112,
+        1070686832,
+        2850395884,
+        1245645113,
+        2200415062,
+        2705276482,
+        3898050640,
+        3233478865,
+        3406076336,
+        2643563201,
+        2707051988,
+        2621413332
+      ],
+      [
+        2175841444,
+        1933568022,
+        55150736,
+        3427090130,
+        2916822515,
+        1161566257,
+        2090490995,
+        2136361233,
+        625658361,
+        3313841424,
+        4282410391,
+        163871705,
+        3111148515,
+        385939532,
+        989282095,
+        2556577335
+      ],
+      [
+        3679736442,
+        88709137,
+        3471640413,
+        1376901604,
+        2223711682,
+        3452653359,
+        2973112410,
+        3260446940,
+        528172834,
+        942887544,
+        1678507009,
+        3552568965,
+        2089393713,
+        2952119224,
+        2403142069,
+        3643387287
+      ],
+      [
+        682386056,
+        3840623177,
+        1025428860,
+        3501596335,
+        1049443275,
+        584798694,
+        3644863332,
+        2020797187,
+        361993314,
+        3334140349,
+        894709306,
+        932308133,
+        749985285,
+        1997362531,
+        1646140310,
+        2657187459
+      ],
+      [
+        2630111674,
+        410860062,
+        3816619337,
+        3780215214,
+        3157121503,
+        3386764494,
+        4243190691,
+        611262592,
+        4223829906,
+        440058761,
+        2410670576,
+        2998904225,
+        511567661,
+        1951246007,
+        3065823149,
+        564291981
+      ],
+      [
+        2675188571,
+        3747036211,
+        3057473479,
+        3236623972,
+        741093986,
+        1984066883,
+        881296591,
+        3742585948,
+        4041302579,
+        823968624,
+        672165210,
+        4033953986,
+        1615274185,
+        1612374132,
+        2021297203,
+        3077583476
+      ]
+    ],
+    "unknown_assignment_bits": 20,
+    "unknown_assignment_included": false,
+    "unknown_key_word0_low_bits": 20,
+    "unknown_key_word0_low_value_included": false,
+    "unknown_secret_low20_included": false
+  },
+  "public_challenge_sha256": "ece6555c9f9d0fc6e5557f1700ef97a2e2d8474235f658994bd50e632fee1798",
+  "public_template": {
+    "block_count": 8,
+    "counter_schedule": "base_plus_block_index_mod_2^32",
+    "counter_start": 3491444709,
+    "known_key_bits": 236,
+    "known_key_word0_upper12": 2624585728,
+    "known_key_words_1_through_7": [
+      1841175092,
+      3592880396,
+      423649303,
+      3755403760,
+      2723099868,
+      1213906786,
+      2616680243
+    ],
+    "known_material_derivation_label": "f8-causal:cross-material:chacha20:r20-width20:known-material:ddf0b6d2c26c53b7425851199b339f8df51c8a978a3c6935ca98a4844cd5562f",
+    "known_material_derivation_sha256": "661d7ff60242e8694dcfc2db9bfb97baeac23b63105279915436a670e0849bae",
+    "nonce_words": [
+      885800511,
+      2046119056,
+      866232894
+    ],
+    "public_seed_hex": "ddf0b6d2c26c53b7425851199b339f8df51c8a978a3c6935ca98a4844cd5562f",
+    "rounds": 20,
+    "unknown_assignment_bits": 20,
+    "unknown_assignment_included": false,
+    "unknown_key_word0_low_bits": 20,
+    "unknown_key_word0_low_value_included": false,
+    "unknown_secret_low20_included": false
+  },
+  "public_template_sha256": "95d710c670353c7d1fb9afd757cf87828c61adcb6e7167f6b99f8d7f4c673986",
+  "runner_sha256": "df4d16407d9261820457f46a2c8b522b8af3c1f1748e122eb797e06e1ef5427f",
+  "schema": "chacha20-round20-cross-material-target-v1",
+  "target_block_sha256": [
+    "9e1ea9608054e154283e256cb0e8aa45d0b5e0efff186133ed16f099d3a2057a",
+    "5ff4adfeae7a9caa0a9c43b5286802863f6bb79c1adbeb51ae51eb3e175a45c2",
+    "d8c929a8a23c3465a008e7a2369a849bb70f70223754168a4bdaf15fbe8083b4",
+    "c1377587b17e13fd6bb59da4ae686ee05f8d0ffaaee9f51e8089b1a4e18f60ab",
+    "afa462ce2d8c2ce70b7ca1b2c4c5428c9050abd2268bbbbd79d26837eadb8eb8",
+    "c5cbf54b4b4fa0f969de56502f396ed169fff105477f95db5e283f287ee5839e",
+    "5ace93e3ffe5a3e795f5323b8886920819f10dc38e46d1b0119190ae837f0e6b",
+    "b70df34e21798477ac4011cfce5d3dbeed8ec0b8e683b2fa53dde791543d5648"
+  ]
+}

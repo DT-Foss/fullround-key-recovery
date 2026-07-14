@@ -1,4 +1,4 @@
-"""Independent verification of the ten retained recovery anchors."""
+"""Independent verification of retained complete-domain and strict-subset recoveries."""
 
 from __future__ import annotations
 
@@ -9,7 +9,16 @@ from typing import Any
 
 from .aes128_reference import apply_low_residual_bits
 from .aes128_reference import encrypt_blocks as aes128_encrypt_blocks
-from .artifacts import EXPECTED_SHA256, load_result, repository_root, verify_artifact_hashes
+from .aes256_reference import apply_low_residual_bits as aes256_apply_low_residual_bits
+from .aes256_reference import encrypt_blocks as aes256_encrypt_blocks
+from .artifacts import (
+    CONFIG_FILES,
+    EXPECTED_SHA256,
+    load_result,
+    repository_root,
+    sha256_file,
+    verify_artifact_hashes,
+)
 from .ascon_aead128_reference import encrypt_combined as ascon_aead128_encrypt
 from .causal import read_causal
 from .ciphers import (
@@ -21,6 +30,9 @@ from .ciphers import (
 )
 from .present80_reference import encrypt_int as present80_encrypt
 from .present80_reference import key_parts_to_int, key_schedule
+from .present128_reference import encrypt_int as present128_encrypt
+from .present128_reference import key_parts_to_int as present128_key_parts_to_int
+from .present128_reference import key_schedule as present128_key_schedule
 from .rc5_reference import encrypt_words as rc5_encrypt
 from .rc5_reference import expand_key_words as rc5_expand_key
 from .salsa20_reference import block as salsa20_block
@@ -28,6 +40,11 @@ from .salsa20_reference import block as salsa20_block
 
 def _words_sha(words: list[int], width: int) -> str:
     raw = b"".join(word.to_bytes(width // 8, "little") for word in words)
+    return hashlib.sha256(raw).hexdigest()
+
+
+def _canonical_sha(value: Any) -> str:
+    raw = json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode()
     return hashlib.sha256(raw).hexdigest()
 
 
@@ -418,6 +435,263 @@ def verify_salsa20_20(root: Path) -> dict[str, Any]:
     }
 
 
+def verify_present128(root: Path) -> dict[str, Any]:
+    payload = load_result("present128", root)
+    _common_gates(payload, attempt="P128R1", candidates=1 << 38)
+    challenge = payload["public_challenge"]
+    assignment = int(payload["execution"]["factual_full_matches"][0])
+    low32 = assignment & 0xFFFFFFFF
+    middle32 = int(challenge["known_mid_low32"]) | (assignment >> 32)
+    key = present128_key_parts_to_int(int(challenge["known_high64"]), middle32, low32)
+    round_keys = present128_key_schedule(key)
+    plaintext = challenge["plaintext_words_big_endian"]
+    output: list[int] = []
+    for offset in range(0, len(plaintext), 2):
+        block = (int(plaintext[offset]) << 32) | int(plaintext[offset + 1])
+        encrypted = present128_encrypt(block, round_keys)
+        output.extend((encrypted >> 32, encrypted & 0xFFFFFFFF))
+    if (
+        output != challenge["target_ciphertext_words_big_endian"]
+        or hashlib.sha256(
+            b"".join(int(word).to_bytes(4, "big") for word in output)
+        ).hexdigest()
+        != challenge["target_ciphertext_big_u32_sha256"]
+        or payload["recovery"]["recovered_low32"] != [low32]
+        or payload["recovery"]["recovered_mid_low32_low_bits"] != [assignment >> 32]
+        or payload["recovery"]["recovered_full_master_key_hex"] != [f"{key:032x}"]
+    ):
+        raise RuntimeError("P128R1 independent two-block confirmation failed")
+    return {
+        "attempt_id": "P128R1",
+        "cipher": "PRESENT-128",
+        "rounds": "31 + K32 whitening",
+        "unknown_key_bits": 38,
+        "known_key_bits": 90,
+        "logical_candidates": 1 << 38,
+        "recovered_assignment": assignment,
+        "reconstructed_master_key_hex": f"{key:032x}",
+        "factual_models": 1,
+        "control_models": 0,
+        "independent_confirmation_bits": 128,
+        "gpu_seconds": payload["execution"]["gpu_seconds"],
+    }
+
+
+def verify_aes256(root: Path) -> dict[str, Any]:
+    payload = load_result("aes256", root)
+    _common_gates(payload, attempt="AES256R1", candidates=1 << 41)
+    challenge = payload["public_challenge"]
+    assignment = int(payload["execution"]["factual_full_matches"][0])
+    key = aes256_apply_low_residual_bits(
+        bytes.fromhex(challenge["known_key_zeroed_residual_hex"]), assignment, 41
+    )
+    output = aes256_encrypt_blocks(key, bytes.fromhex(challenge["plaintext_hex"]))
+    if (
+        output.hex() != challenge["target_ciphertext_hex"]
+        or hashlib.sha256(output).hexdigest() != challenge["target_ciphertext_sha256"]
+        or payload["recovery"]["recovered_key_word6_low_bits"] != [assignment >> 32]
+        or payload["recovery"]["recovered_key_word7"] != [assignment & 0xFFFFFFFF]
+        or payload["execution"]["factual_confirmations"][0]["key_hex"] != key.hex()
+    ):
+        raise RuntimeError("AES256R1 independent two-block confirmation failed")
+    return {
+        "attempt_id": "AES256R1",
+        "cipher": "AES-256",
+        "rounds": 14,
+        "unknown_key_bits": 41,
+        "known_key_bits": 215,
+        "logical_candidates": 1 << 41,
+        "recovered_assignment": assignment,
+        "reconstructed_master_key_hex": key.hex(),
+        "factual_models": 1,
+        "control_models": 0,
+        "independent_confirmation_bits": 256,
+        "gpu_seconds": payload["execution"]["gpu_seconds"],
+    }
+
+
+def _verify_chacha20_target(
+    *, challenge: dict[str, Any], recovered_low20: int
+) -> tuple[list[list[int]], list[str], list[int]]:
+    key = [
+        int(challenge["known_key_word0_upper12"]) | recovered_low20,
+        *[int(value) for value in challenge["known_key_words_1_through_7"]],
+    ]
+    blocks = [
+        chacha20_block(
+            key,
+            (int(challenge["counter_start"]) + block_index) & 0xFFFFFFFF,
+            [int(value) for value in challenge["nonce_words"]],
+        )
+        for block_index in range(int(challenge["block_count"]))
+    ]
+    block_hashes = [_words_sha(block, 32) for block in blocks]
+    return blocks, block_hashes, key
+
+
+def verify_chacha20_cross_material(root: Path) -> dict[str, Any]:
+    payload = load_result("chacha20_cross_material", root)
+    target = json.loads((root / "configs" / CONFIG_FILES["chacha20_cross_material"]).read_text())
+    challenge = target["public_challenge"]
+    confirmation = payload["confirmation"]
+    recovered = int(confirmation["recovered_unknown_low20"])
+    blocks, block_hashes, key = _verify_chacha20_target(
+        challenge=challenge, recovered_low20=recovered
+    )
+    summary = payload["top_execution_summary"]
+    boundary = payload["information_boundary"]
+    if (
+        payload.get("attempt_id") != "A281"
+        or blocks != challenge["target_words"]
+        or block_hashes != challenge["target_block_sha256"]
+        or block_hashes != confirmation["candidate_block_sha256"]
+        or confirmation["all_blocks_match"] is not True
+        or confirmation["all_cross_implementation_blocks_match"] is not True
+        or confirmation["output_bits_checked"] != 4096
+        or confirmation["control_first_block_match"] is not False
+        or blocks[0] == challenge["control_target_words"]
+        or summary != {
+            "all_attempted_cells_exact_UNSAT": False,
+            "attempted_cells": 37,
+            "logical_assignments_inside_attempted_cells": 151552,
+            "retained_state_continuity_verified": True,
+            "sat": 1,
+            "sat_found": True,
+            "unknown": 0,
+            "unsat": 36,
+        }
+        or boundary["complete_full_domain_enumeration_used"] is not False
+        or boundary["correct_prefix_or_rank_known_before_execution"] is not False
+        or boundary["order_frozen_before_execution"] is not True
+        or boundary["target_label_available"] is not False
+    ):
+        raise RuntimeError("A281 strict-subset ChaCha20-R20 confirmation failed")
+    return {
+        "attempt_id": "A281",
+        "cipher": "ChaCha20 block function",
+        "rounds": 20,
+        "unknown_key_bits": 20,
+        "known_key_bits": 236,
+        "complete_domain_executed": False,
+        "strict_subset_recovery": True,
+        "frozen_order_rank": 37,
+        "attempted_prefix_cells": 37,
+        "logical_assignments": 151552,
+        "search_fraction": 37 / 256,
+        "recovered_assignment": recovered,
+        "reconstructed_master_key_words": key,
+        "independent_confirmation_bits": 4096,
+        "control_models": 0,
+    }
+
+
+def _published_anchor_path(root: Path, source_path: str) -> Path:
+    name = Path(source_path).name
+    if source_path.endswith(".causal"):
+        return root / "causal" / name
+    if "/configs/" in source_path:
+        return root / "configs" / name
+    if "/experiments/" in source_path:
+        return root / "experiments" / "original" / name
+    return root / "results" / name
+
+
+def verify_chacha20_multitarget_panel(root: Path) -> dict[str, Any]:
+    payload = load_result("chacha20_multitarget_panel", root)
+    headline = payload["headline"]
+    canonical_input = {
+        "shared_anchors": payload["shared_anchors"],
+        "rfc8439_gate": payload["rfc8439_gate"],
+        "targets": payload["targets"],
+        "headline": headline,
+    }
+    if (
+        payload.get("attempt_id") != "A286"
+        or payload.get("evidence_stage")
+        != "FULLROUND_R20_FOUR_OF_FOUR_CROSS_MATERIAL_RECOVERIES_INDEPENDENTLY_CONFIRMED"
+        or _canonical_sha(canonical_input) != payload["confirmation_sha256"]
+        or headline["fresh_public_material_targets"] != 4
+        or headline["confirmed_recoveries"] != 4
+        or headline["independently_recomputed_output_bits"] != 16384
+        or headline["complete_full_domain_enumeration_used"] is not False
+        or headline["reader_refits"] != 0
+        or headline["target_labels_used"] != 0
+        or headline["all_one_bit_controls_rejected"] is not True
+    ):
+        raise RuntimeError("A286 panel headline or root hash failed")
+
+    for anchor in payload["shared_anchors"].values():
+        path = _published_anchor_path(root, anchor["path"])
+        if sha256_file(path) != anchor["sha256"]:
+            raise RuntimeError(f"A286 shared anchor failed: {path.name}")
+
+    rows = []
+    for row in payload["targets"]:
+        for anchor in row["anchors"].values():
+            path = _published_anchor_path(root, anchor["path"])
+            if sha256_file(path) != anchor["sha256"]:
+                raise RuntimeError(f"A286 target anchor failed: {path.name}")
+        target_path = _published_anchor_path(root, row["anchors"]["target"]["path"])
+        result_path = _published_anchor_path(root, row["anchors"]["result"]["path"])
+        canonical_path = _published_anchor_path(root, row["anchors"]["canonical"]["path"])
+        target = json.loads(target_path.read_text())
+        result = json.loads(result_path.read_text())
+        canonical = json.loads(canonical_path.read_text())
+        challenge = target["public_challenge"]
+        confirmation = result["confirmation"]
+        recovered = int(row["recovered_unknown_low20"])
+        blocks, block_hashes, key = _verify_chacha20_target(
+            challenge=challenge, recovered_low20=recovered
+        )
+        if (
+            blocks != challenge["target_words"]
+            or block_hashes != challenge["target_block_sha256"]
+            or block_hashes != confirmation["candidate_block_sha256"]
+            or block_hashes != row["standalone_block_sha256"]
+            or confirmation["recovered_unknown_low20"] != recovered
+            or confirmation["output_bits_checked"] != 4096
+            or confirmation["control_first_block_match"] is not False
+            or blocks[0] == challenge["control_target_words"]
+            or row["standalone_direct_spec_all_8_blocks_match"] is not True
+            or row["standalone_output_bits_checked"] != 4096
+            or row["one_bit_control_rejected"] is not True
+            or row["complete_full_domain_enumeration_used"] is not False
+            or canonical["source_result"]["sha256"] != row["anchors"]["result"]["sha256"]
+            or canonical["causal"]["sha256"] != row["anchors"]["causal"]["sha256"]
+        ):
+            raise RuntimeError(f"A286 independent confirmation failed: {row['target_id']}")
+        rows.append(
+            {
+                "target_id": row["target_id"],
+                "discovery_stage": row["discovery_stage"],
+                "frozen_order_rank": row["frozen_order_rank"],
+                "recovered_assignment": recovered,
+                "reconstructed_master_key_words": key,
+            }
+        )
+    causal = payload["causal"]
+    if (
+        sha256_file(root / "causal" / Path(causal["path"]).name) != causal["sha256"]
+        or headline["discovery_modes"] != [row["discovery_stage"] for row in rows]
+        or headline["frozen_order_ranks_when_applicable"]
+        != [row["frozen_order_rank"] for row in rows if row["frozen_order_rank"] is not None]
+    ):
+        raise RuntimeError("A286 Causal or rank summary failed")
+    return {
+        "attempt_id": "A286",
+        "cipher": "ChaCha20 block function",
+        "rounds": 20,
+        "targets": 4,
+        "unknown_key_bits_per_target": 20,
+        "known_key_bits_per_target": 236,
+        "complete_domain_executed": False,
+        "strict_subset_recoveries": 4,
+        "independent_confirmation_bits": 16384,
+        "control_models": 0,
+        "target_results": rows,
+    }
+
+
 VERIFY_FUNCTIONS = {
     "chacha20": verify_chacha20,
     "speck32_64": verify_speck32_64,
@@ -429,6 +703,10 @@ VERIFY_FUNCTIONS = {
     "ascon_aead128": verify_ascon_aead128,
     "aes128": verify_aes128,
     "salsa20_20": verify_salsa20_20,
+    "present128": verify_present128,
+    "aes256": verify_aes256,
+    "chacha20_cross_material": verify_chacha20_cross_material,
+    "chacha20_multitarget_panel": verify_chacha20_multitarget_panel,
 }
 
 
@@ -449,8 +727,12 @@ def verify_all(root: Path | None = None) -> dict[str, Any]:
     for name in VERIFY_FUNCTIONS:
         result_file = RESULT_FILES[name]
         payload = json.loads((base / "results" / result_file).read_text())
-        config = json.loads((base / "configs" / result_file).read_text())
-        if payload["public_challenge"] != config["public_challenge"]:
+        config = json.loads((base / "configs" / CONFIG_FILES[name]).read_text())
+        if (
+            "public_challenge" in payload
+            and "public_challenge" in config
+            and payload["public_challenge"] != config["public_challenge"]
+        ):
             raise RuntimeError(f"protocol/result challenge mismatch: {name}")
 
     causal = {}

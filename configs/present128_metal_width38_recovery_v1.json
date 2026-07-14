@@ -1,0 +1,143 @@
+{
+  "anchors": {
+    "native_host": {
+      "filename": "present128_metal_native.swift",
+      "sha256": "bf9dd12c67dda107891037c51288fef0b490612250c385ccf1079d9a18f1f08b"
+    },
+    "qualification": {
+      "attempt_id": "P128Q1",
+      "filename": "present128_metal_qualification_v1.json",
+      "sha256": "b4e1905cd3832fd253c12840f905d4cb4d9e41713577e9a40a7e40eaa4777439"
+    },
+    "scalar_reference": {
+      "filename": "present128_reference.py",
+      "sha256": "08e209278113fc1a423b2e060108dc32c2a0c0e1fd7046906891680aad643da1"
+    }
+  },
+  "attempt_id": "P128R1",
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "combined_assignment_encoding": "assignment=(mid_low32_low6<<32)|low32",
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_used": false,
+    "filter_output_bits": 128,
+    "final_whitening_key": "K32",
+    "fresh_public_challenge": true,
+    "full_confirmation": "independent_Python_PRESENT-128_all_two_blocks_all_128_output_bits",
+    "gpu_logical_thread_count": 274877906944,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_outer_slice": true,
+    "inner_low32_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 90,
+    "known_plaintext_ciphertext_pairs": 2,
+    "logical_candidate_count": 274877906944,
+    "outer_mid_low32_bit_count": 6,
+    "outer_mid_low32_slice_count": 64,
+    "persistent_host_process": true,
+    "primitive": "PRESENT-128_block_cipher",
+    "result_capacity_per_batch": 64,
+    "rounds": 31,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 256,
+    "stream_batches_per_slice": 4,
+    "stream_candidate_count": 1073741824,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 38,
+    "volatile_wallclock_excluded_from_success_rule": true
+  },
+  "execution_plan_sha256": "9a36fd9637730ed4f3c2109d3c6db391dd5b3067e8a1b232857dda5994e3431b",
+  "information_boundary": {
+    "P128R1_candidate_outcomes_used_before_protocol_freeze": false,
+    "benchmark_outcome_used_only_to_select_width": true,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_logged_or_returned_by_protocol_builder": false,
+    "unknown_assignment_used_only_to_construct_public_ciphertexts": true
+  },
+  "primary_sources": {
+    "algorithm_specification": "https://www.iacr.org/archive/ches2007/47270450/47270450.pdf",
+    "official_zero_vector": "PRESENT-128_E_0_0=96db702a2e6900af",
+    "orientation_trace": "local non-palindromic schedule sentinel",
+    "variant_standard": "ISO/IEC 29167-11 PRESENT-128"
+  },
+  "prospective_prediction": {
+    "asymptotic_search_advantage_claimed": false,
+    "claim_type": "fresh_fullround_38_bit_residual_key_recovery",
+    "complete_domain_will_be_executed": true,
+    "expected_control_exact_assignments": 0,
+    "expected_unique_exact_assignment": true,
+    "success_requires_independent_two_block_confirmation": true
+  },
+  "protocol_state": "frozen_before_any_P128R1_candidate_execution",
+  "public_challenge": {
+    "candidate_encoding": "assignment=(mid_low32_low6<<32)|low32",
+    "cipher": "PRESENT-128",
+    "control_ciphertext_big_u32_sha256": "4aa6ebc3f5efe5d47dda7e03357033474f706b7b3a651300596736bbd5c77f7c",
+    "control_ciphertext_words_big_endian": [
+      892895276,
+      963865740,
+      633340274,
+      3424536799
+    ],
+    "control_relation": "target_ciphertext_final_word_xor_0x00000001",
+    "final_whitening_key": "K32",
+    "known_high64": 781392195459229710,
+    "known_master_key_bits": 90,
+    "known_material_derivation_label": "present128/p128r1/fullround/w38/known-material/v1",
+    "known_material_derivation_sha256": "125acc180ed62170a063d4aabbe80befeadb7dc65bb8a10dbaf80d80dd5663ed",
+    "known_material_guard_hex": "407c81e0",
+    "known_mid_low32": 1324826304,
+    "known_mid_low32_mask": 4294967232,
+    "plaintext_blocks": 2,
+    "plaintext_words_big_endian": [
+      772655223,
+      666000628,
+      1333708810,
+      2061780140
+    ],
+    "rounds": 31,
+    "target_ciphertext_big_u32_sha256": "288f1b36951b98ec085881d9b51f4188a893e33429d7d921a98a716e5010ad45",
+    "target_ciphertext_words_big_endian": [
+      892895276,
+      963865740,
+      633340274,
+      3424536798
+    ],
+    "unknown_assignment_bits": 38,
+    "unknown_assignment_included": false,
+    "unknown_low32_bits": 32,
+    "unknown_low32_included": false,
+    "unknown_mid_low32_low_bits": 6,
+    "unknown_mid_low32_low_bits_included": false
+  },
+  "public_challenge_sha256": "cc4a4b941b09d5c878161a2e05be85d9ba42b6c191241d40e8311f0e67c51e6b",
+  "qualification_launch_gate": {
+    "full_domain_launch_authorized": true,
+    "highest_safe_integer_width_at_observed_minimum": 38,
+    "maximum_complete_domain_seconds": 7200,
+    "maximum_supported_residual_width": 64,
+    "observed_minimum_candidates_per_second": 63062643.81098738,
+    "projected_selected_width_seconds_at_observed_minimum": 4358.807216644287,
+    "required_candidates_per_second": 38177487.075555556,
+    "selected_width": 38,
+    "selected_width_under_two_hours": true,
+    "selection_rule": "maximum_supported_integer_width_whose_complete_domain_fits_7200_seconds_at_minimum_end_to_end_wall_throughput",
+    "throughput_statistic": "minimum_end_to_end_wall_throughput_of_all_timed_repeats"
+  },
+  "required_validation_gates": {
+    "all_assignments_must_execute": true,
+    "authentic_AI_native_causal_artifact_required": true,
+    "authentic_CausalReader_reopen_required": true,
+    "bit_flipped_control_required": true,
+    "candidate_execution_against_public_P128R1_target_before_freeze": false,
+    "early_stop_forbidden": true,
+    "independent_two_block_confirmation_required": true,
+    "pre_target_official_and_local_KATs_passed": true,
+    "pre_target_scalar_Metal_cross_gate_passed": true,
+    "pre_target_selected_width_two_hour_gate_passed": true,
+    "pre_target_uint32_boundary_gate_passed": true
+  },
+  "schema": "present128-metal-width38-recovery-protocol-v1"
+}

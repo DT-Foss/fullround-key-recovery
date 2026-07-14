@@ -2,10 +2,16 @@
 
 [![verification](https://github.com/DT-Foss/fullround-key-recovery/actions/workflows/ci.yml/badge.svg)](https://github.com/DT-Foss/fullround-key-recovery/actions/workflows/ci.yml)
 
-This repository preserves ten executed full-round residual-key recovery records
-across ten primitive configurations in nine cipher families. Every retained search executed its complete declared
-domain on Apple M4 Metal without early stopping, produced one exact factual model,
-and produced no model for the matched one-bit-flipped control.
+This repository preserves two complementary full-round recovery result classes:
+
+- **twelve complete-domain residual-key recoveries** across twelve primitive
+  configurations in nine cipher families; and
+- **five target-blind strict-subset ChaCha20-R20 recoveries**: the A281
+  cross-material result and the four-target A286 replication panel.
+
+Every complete-domain record enumerated its full declared domain on Apple M4
+Metal without early stopping, produced one exact factual model, and produced no
+model for the matched one-bit-flipped control.
 
 | Record | Primitive | Full rounds | Unknown / known key bits | Domain | Factual / control | Independent confirmation |
 |---|---|---:|---:|---:|---:|---:|
@@ -19,6 +25,18 @@ and produced no model for the matched one-bit-flipped control.
 | A256 | Ascon-AEAD128 | 12/8/12 permutation schedule | 40 / 88 | `2^40` | 1 / 0 | 384 bits |
 | AES-W41 | AES-128 | 10 | 41 / 87 | `2^41` | 1 / 0 | 256 bits |
 | A264 | Salsa20/20 block function | 20 | 42 / 214 | `2^42` | 1 / 0 | 512 bits |
+| P128R1 | PRESENT-128 | 31 + K32 whitening | 38 / 90 | `2^38` | 1 / 0 | 128 bits |
+| AES256R1 | AES-256 | 14 | 41 / 215 | `2^41` | 1 / 0 | 256 bits |
+
+The strict-subset records use frozen target-blind schedules and stop when the
+factual model is found. A281 recovered the hidden 20-bit residual at frozen
+rank 37 after 36 exact-UNSAT cells: 151,552 of 1,048,576 assignments
+(14.453125%). A286 independently confirmed four fresh public-material targets,
+recomputed 16,384 output bits with a third RFC-style implementation, and
+rejected all four one-bit controls. Its discovery modes were
+`fallback / top128 / top128 / global`; applicable frozen-order ranks were
+254, 55, and 107. None of the five strict-subset recoveries enumerated the
+complete residual domain.
 
 Each unique assignment reconstructs the complete master key in its declared
 known-key model. The package then recomputes the complete output with a compact
@@ -27,16 +45,17 @@ scope are in [docs/CLAIM_MATRIX.md](docs/CLAIM_MATRIX.md).
 
 ## Exact claim
 
-The artifacts establish ten executed full-round recovery points and a common
-complete-domain Metal architecture across ARX, Feistel, SP-network, AEAD, and
-AES designs. The input to each recovery is a frozen public plaintext/ciphertext
-or AEAD relation plus the listed known key bits. The runner enumerates every
-assignment in the remaining 38- to 44-bit domain.
+The artifacts establish twelve complete-domain full-round recovery points and
+a common Metal architecture across ARX, Feistel, SP-network, AEAD, and AES
+designs. Each input is a frozen public plaintext/ciphertext or AEAD relation
+plus the listed known key bits; every assignment in the remaining 38- to
+44-bit domain was executed.
 
-These records are exact recovery demonstrations. Because each retained domain
-was completely enumerated, they do not by themselves establish an asymptotic
-search reduction. Strict-subset recovery and recovery with every master-key bit
-unknown are separate experimental scopes.
+A281 and A286 establish the separate strict-subset result class: target-blind
+frozen scheduling, exact UNSAT/SAT evidence, recovery before complete-domain
+enumeration, full-output recomputation, and matched-control rejection. The
+claim boundary is residual-key recovery in the declared known-key models;
+full-key recovery with all master-key bits unknown is a separate scope.
 
 ## Verify in seconds
 
@@ -54,18 +73,18 @@ make lint
 
 `make verify`:
 
-1. verifies all 94 immutable files against `provenance/ARTIFACTS.sha256`;
-2. checks frozen protocol/result challenge identity for all ten records;
+1. verifies all 205 immutable files against `provenance/ARTIFACTS.sha256`;
+2. checks every frozen protocol/result challenge and every A286 root anchor;
 3. reconstructs every recovered key and independently recomputes the complete
-   full-round output;
-4. opens all ten `.causal` files with the matching integrity-checking Reader;
-5. checks complete-domain, no-early-stop, unique-model, and control-rejection
-   gates.
+   full-round output, including all five strict-subset ChaCha20 targets;
+4. opens all 28 `.causal` files with the matching integrity-checking Reader;
+5. checks complete-domain gates for the twelve exhaustive records and
+   target-blind/no-full-enumeration gates for A281/A286.
 
 ## Native replay
 
 Native replay requires macOS, Apple Silicon with Metal, and Swift 6. The
-repository retains all ten native Swift/Metal hosts. The three original
+repository retains all twelve native Swift/Metal hosts. The three original
 checkpointable package integrations expose direct complete-search commands:
 
 ```bash
@@ -75,7 +94,7 @@ make native-smoke
 ./scripts/reproduce_full_search.sh threefish256
 ```
 
-The seven subsequent byte-exact protocol factories, qualification programs, and
+The nine subsequent byte-exact protocol factories, qualification programs, and
 recovery runners are preserved under `experiments/original/`, alongside their
 native hosts under `experiments/native/`. Their immutable configs, qualification
 records, results, manifests, original reports, and Causal artifacts are retained
@@ -102,6 +121,8 @@ cores and 16 GB unified memory.
 | A256 | 1,099,511,627,776 | 4,616.00 s |
 | AES-W41 | 2,199,023,255,552 | 2,255.36 s |
 | A264 | 4,398,046,511,104 | 3,153.32 s |
+| P128R1 | 274,877,906,944 | 4,305.32 s |
+| AES256R1 | 2,199,023,255,552 | 3,712.32 s |
 
 A184's time is contextual, non-canonical end-to-end wall-clock provenance. The
 other rows retain GPU seconds directly in their result JSON. Correctness is

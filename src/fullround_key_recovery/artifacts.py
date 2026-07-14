@@ -67,6 +67,17 @@ RESULT_FILES = {
     "ascon_aead128": "ascon_aead128_metal_width40_a256_recovery_v1.json",
     "aes128": "aes128_fips197_metal_width41_recovery_v1.json",
     "salsa20_20": "salsa20_20_metal_width42_recovery_v1.json",
+    "present128": "present128_metal_width38_recovery_v1.json",
+    "aes256": "aes256_fips197_metal_width41_recovery_v1.json",
+    "chacha20_cross_material": "chacha20_round20_cross_material_composite_recovery_v1.json",
+    "chacha20_multitarget_panel": "chacha20_round20_multitarget_panel_root_confirmation_a286_v1.json",
+}
+
+CONFIG_FILES = {
+    **{name: filename for name, filename in RESULT_FILES.items()},
+    "aes256": "aes256_metal_width41_recovery_v1.json",
+    "chacha20_cross_material": "chacha20_round20_cross_material_target_v1.json",
+    "chacha20_multitarget_panel": "chacha20_round20_multitarget_panel_master_v1.json",
 }
 
 
