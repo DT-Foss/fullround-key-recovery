@@ -94,11 +94,108 @@ def test_target_blind_strict_subset_chacha20_recoveries() -> None:
     ]
 
 
+def test_chacha20_w43_complete_domain_record() -> None:
+    result = verify_result("chacha20_w43_complete", ROOT)
+    assert result["attempt_id"] == "CHACHA20KR43"
+    assert result["logical_candidates"] == 2**43
+    assert result["recovered_assignment"] == 2_800_167_095_032
+    assert result["independent_confirmation_bits"] == 8192
+    assert result["factual_models"] == 1
+    assert result["control_models"] == 0
+
+
+def test_new_strict_subset_chacha20_single_target_records() -> None:
+    expected = {
+        "chacha20_a294": ("A294", 202, 827_392, 4_118_259),
+        "chacha20_a295": ("A295", 2605, 10_670_080, 4_118_259),
+        "chacha20_a303": ("A303", 3801, 3_985_637_376, 3_352_070_490),
+        "chacha20_a304": ("A304", 2473, 5_310_727_061_504, 3_697_242_003_407),
+        "chacha20_a305": ("A305", 2114, 4_539_780_431_872, 2_800_167_095_032),
+        "chacha20_a309": ("A309", 4044, 8_684_423_872_512, 7_060_014_834_815),
+        "chacha20_a313": ("A313", 2753, 11_824_044_965_888, 662_233_243_956),
+    }
+    for name, (attempt, rank, upper_bound, assignment) in expected.items():
+        result = verify_result(name, ROOT)
+        assert result["attempt_id"] == attempt
+        assert result["strict_subset_recovery"] is True
+        assert result["complete_domain_executed"] is False
+        assert result["frozen_order_rank"] == rank
+        assert (
+            result.get("executed_assignments_upper_bound", result.get("executed_assignments"))
+            == upper_bound
+        )
+        assert result["recovered_assignment"] == assignment
+        assert result["independent_confirmation_bits"] == 8192
+        assert result["control_models"] == 0
+
+
+def test_new_strict_subset_chacha20_panels() -> None:
+    a296 = verify_result("chacha20_a296", ROOT)
+    assert a296["attempt_id"] == "A296"
+    assert a296["targets"] == 8
+    assert a296["strict_subset_recoveries"] == 8
+    assert a296["independent_confirmation_bits"] == 65_536
+    assert [row["frozen_order_rank"] for row in a296["target_results"]] == [
+        2750,
+        2948,
+        1485,
+        213,
+        1144,
+        2113,
+        520,
+        3019,
+    ]
+
+    a297 = verify_result("chacha20_a297", ROOT)
+    assert a297["attempt_id"] == "A297"
+    assert a297["targets"] == 4
+    assert a297["strict_subset_recoveries"] == 4
+    assert a297["independent_confirmation_bits"] == 32_768
+    assert [row["frozen_order_rank"] for row in a297["target_results"]] == [
+        2867,
+        2032,
+        926,
+        3932,
+    ]
+
+
+def test_open_outcomes_are_not_published_as_results() -> None:
+    root = ROOT / "chronology" / "arx-carry-leak"
+    result_dir = root / "research" / "results" / "v1"
+    assert (
+        result_dir / "chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json"
+    ).is_file()
+    assert (
+        result_dir / "chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.causal"
+    ).is_file()
+    assert not (
+        result_dir / "chacha20_round20_holdout_selected_w45_recovery_a322_v1.json"
+    ).exists()
+    assert not (
+        result_dir / "chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal"
+    ).exists()
+    assert not (
+        result_dir / "chacha20_round20_holdout_selected_w46_recovery_a325_v1.json"
+    ).exists()
+    assert not (
+        result_dir / "chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal"
+    ).exists()
+    assert (
+        result_dir / "chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json"
+    ).is_file()
+    assert (
+        root
+        / "research"
+        / "configs"
+        / "chacha20_round20_holdout_selected_w45_recovery_a322_design_v1.json"
+    ).is_file()
+
+
 def test_complete_suite_opens_all_causal_and_protocol_artifacts() -> None:
     result = verify_all(ROOT)
     assert result["status"] == "verified"
     assert result["author"] == "David Tom Foss"
-    assert result["artifact_count"] == 205
+    assert result["artifact_count"] == 570
     assert [row["attempt_id"] for row in result["results"]] == [
         "A184",
         "A237",
@@ -114,5 +211,16 @@ def test_complete_suite_opens_all_causal_and_protocol_artifacts() -> None:
         "AES256R1",
         "A281",
         "A286",
+        "CHACHA20KR43",
+        "A294",
+        "A295",
+        "A296",
+        "A297",
+        "A303",
+        "A304",
+        "A305",
+        "A309",
+        "A313",
     ]
-    assert len(result["causal"]) == 28
+    assert len(result["causal"]) == 38
+    assert len(result["chronology_causal"]) == 26

@@ -1,0 +1,83 @@
+{
+  "schema": "chacha20-round20-w44-multiview-operator-atlas-a317-design-v1",
+  "attempt_id": "A317",
+  "design_state": "frozen_while_A313_recovery_is_running_before_any_A313_result_candidate_or_prefix_rank_exists",
+  "scientific_question": "Do confirmed targets occupy transferable neighborhoods in the joint Fine-Coarse-Numeric operator-rank space even when no single operator transfers universally?",
+  "operator_contract": {
+    "target_coordinate_map": [
+      "rank_in_A312_fine_selected_channel_order",
+      "rank_in_A308_coarse_high8_then_reflected_Gray4_order",
+      "rank_in_numeric_word0_prefix12_order"
+    ],
+    "confirmed_prototypes": [
+      {
+        "attempt_id": "A295",
+        "unknown_key_bits": 24,
+        "coordinates_one_based": [2605, 202, 1006]
+      },
+      {
+        "attempt_id": "A303",
+        "unknown_key_bits": 32,
+        "coordinates_one_based": [2366, 3113, 3197]
+      },
+      {
+        "attempt_id": "A305",
+        "unknown_key_bits": 43,
+        "coordinates_one_based": [2114, 427, 3952]
+      },
+      {
+        "attempt_id": "A309",
+        "unknown_key_bits": 43,
+        "coordinates_one_based": [3829, 1789, 3227]
+      }
+    ],
+    "frozen_distance_views": [
+      "nearest_prototype_L1",
+      "nearest_prototype_Linf",
+      "nearest_prototype_squared_L2"
+    ],
+    "primary_view": "nearest_prototype_L1",
+    "tie_break": [
+      "minimum_distance",
+      "first_prototype_index",
+      "fine_rank",
+      "coarse_rank",
+      "numeric_rank",
+      "cell_value"
+    ],
+    "coordinate_scaling": "identical_one_based_1_to_4096_rank_scale_no_target_refit",
+    "selection_or_refit_after_A313_reveal": false,
+    "candidate_execution_by_A317": false,
+    "evaluation": "all_three_frozen_rank_views_after_A313_independent_confirmation_without_duplicate_candidate_execution"
+  },
+  "information_boundary": {
+    "A295_A303_A305_A309_results_available_at_design_freeze": true,
+    "A313_order_available_at_design_freeze": true,
+    "A313_recovery_running_at_design_freeze": true,
+    "A313_result_available_at_design_freeze": false,
+    "A313_candidate_available_at_design_freeze": false,
+    "A313_prefix_rank_available_at_design_freeze": false,
+    "A313_filter_outcome_available_at_design_freeze": false,
+    "target_labels_used_from_A313": 0,
+    "reader_refits_after_A313_reveal": 0,
+    "candidate_or_rank_used_to_choose_prototypes_metrics_or_tie_break": false
+  },
+  "source_anchors": {
+    "A217_operator_diversity_path": "research/results/v1/chacha20_round20_operator_diversity_audit_v1.json",
+    "A217_operator_diversity_sha256": "7b1ca3ac4f6ab0717898e2cb204457d72a679a67fdd0fd795f96bbc5ccb6be65",
+    "A295_result_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+    "A295_result_sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03",
+    "A303_result_path": "research/results/v1/chacha20_round20_w32_dominance_pruned_companion_a303_v1.json",
+    "A303_result_sha256": "bc1878203ed1dc8dffab86e8cd1a85bd01fb12e09a1de6a86b29fd9d1ceae3fe",
+    "A305_result_path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.json",
+    "A305_result_sha256": "adbc8b879f09e03896699188d8141ac0164296eaf2ad688b6fb1036f2b1ac40e",
+    "A309_result_path": "research/results/v1/chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.json",
+    "A309_result_sha256": "73edd2514cb644330c481d9fe01293e3a0242aad5157ba7a598ac776fbfb8abd",
+    "A308_order_path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_order_v1.json",
+    "A308_order_sha256": "d69b594a5c7a8ce17d7e5e8d5736006f76a3757a532aa6e4e84f2ca5d6ab2f0b",
+    "A313_protocol_path": "research/configs/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+    "A313_protocol_sha256": "dd5d59c52b8d5247d4a51b5a078f640577a2b8e3506fd2c7a46a8ca2a34c2f3c",
+    "A313_order_path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json",
+    "A313_order_sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3"
+  }
+}

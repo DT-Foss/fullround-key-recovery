@@ -1,0 +1,117 @@
+{
+  "attempt_id": "A204R",
+  "authentic_causal": {
+    "api_id": "a204rv",
+    "clusters": 2,
+    "explicit_triplets": 4,
+    "gaps": [
+      {
+        "confidence": 1.0,
+        "expected_object_type": "prospective_fullround_W24_global_reverse_operator",
+        "predicate": "next_required_object",
+        "subject": "A204:unpartitioned_reverse_transfer_required",
+        "suggested_queries": [
+          "Does cadical --reverse=true return a model on the frozen unpartitioned ChaCha20-R20 W24 CNF?",
+          "Does the reverse operator behave differently on the native and BFS-far CNF views?"
+        ]
+      }
+    ],
+    "materialized_inferred_triplets": 2,
+    "path": "research/results/v1/chacha20_round10_external_cnf_reverse_canonical_v1.causal",
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "rules": 2,
+    "sha256": "6dbf196b9d764e2f21f5e0f3fb89924e90de696bc44990ad43f2b1a16102110f",
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 11,
+      "file_size_bytes": 5703,
+      "file_size_kb": 5.6,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round10_external_cnf_reverse_canonical_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 6
+    }
+  },
+  "canonical_content_sha256": "b5baf652174c12ddf8976d57a6ecf563d8c34700658f88c8f61dbe02b50bc6f1",
+  "canonicalizer": {
+    "path": "research/experiments/chacha20_round10_external_cnf_reverse_causal_canonicalize.py",
+    "sha256": "1dccf58dbb78726c3ab7be8ceda5eec8a70898eabe8414c001fe1a67fd385b73"
+  },
+  "evidence_stage": "AUTHENTIC_CAUSAL_REPRESENTATION_BOUNDARY_CANONICALIZED",
+  "personal_semantic_readback": {
+    "materialized_next_chain": {
+      "attrs": {},
+      "confidence": 1.0,
+      "domain": "AI-native retained inference",
+      "evidence": "materialized from the immutable A204 global and partition results",
+      "is_inferred": true,
+      "m_idx": 10,
+      "mechanism": "partition_boundary_is_representation_conditioned",
+      "o_idx": 8,
+      "outcome": "A204:unpartitioned_reverse_transfer_required",
+      "pmcid": "",
+      "quality_score": 1.0,
+      "quantification": "operator/representation distinction retained in-file",
+      "s_idx": 4,
+      "source": "materialized:A204_reverse_operator_plus_partition_boundary",
+      "trigger": "A204:confirmed_reverse_global_operator"
+    },
+    "next_gap": {
+      "confidence": 1.0,
+      "expected_object_type": "prospective_fullround_W24_global_reverse_operator",
+      "predicate": "next_required_object",
+      "subject": "A204:unpartitioned_reverse_transfer_required",
+      "suggested_queries": [
+        "Does cadical --reverse=true return a model on the frozen unpartitioned ChaCha20-R20 W24 CNF?",
+        "Does the reverse operator behave differently on the native and BFS-far CNF views?"
+      ]
+    },
+    "representation_boundary": {
+      "attrs": {},
+      "confidence": 1.0,
+      "domain": "prospective partitioned ChaCha10 transfer",
+      "evidence": "[{\"maximum_volatile_seconds\": 10.065902624744922, \"statuses\": [\"unknown\", \"unknown\", \"unknown\", \"unknown\"], \"variants\": [\"cse_prefix_00000\", \"cse_prefix_00001\", \"cse_prefix_00010\", \"cse_prefix_00011\"], \"wave_index\": 0}, {\"maximum_volatile_seconds\": 10.03869775030762, \"statuses\": [\"unknown\", \"unknown\", \"unknown\", \"unknown\"], \"variants\": [\"cse_prefix_00100\", \"cse_prefix_00101\", \"cse_prefix_00110\", \"cse_prefix_00111\"], \"wave_index\": 1}, {\"maximum_volatile_seconds\": 10.079609083011746, \"statuses\": [",
+      "is_inferred": false,
+      "m_idx": 5,
+      "mechanism": "transfer_to_32_independent_prefix_CNF_partitions",
+      "o_idx": 6,
+      "outcome": "A204:complete_prefix_UNKNOWN_boundary",
+      "pmcid": "",
+      "quality_score": 1.0,
+      "quantification": "32/32 cells UNKNOWN at 10 seconds; zero disclosed models",
+      "s_idx": 4,
+      "source": "916eec2fdd671a8109f50b97be780bd1b150a63201ea537e282f9be062238b4c",
+      "trigger": "A204:confirmed_reverse_global_operator"
+    },
+    "retained_global_operator": {
+      "attrs": {},
+      "confidence": 1.0,
+      "domain": "exact model confirmation",
+      "evidence": "{\"all_blocks_match\": true, \"block_count_checked\": 8, \"control_first_block_match\": false, \"output_bits_checked\": 4096}",
+      "is_inferred": false,
+      "m_idx": 3,
+      "mechanism": "independent_eight_block_standard_output_recompute",
+      "o_idx": 4,
+      "outcome": "A204:confirmed_reverse_global_operator",
+      "pmcid": "",
+      "quality_score": 1.0,
+      "quantification": "8 blocks; 4096 output bits; one-bit control rejected",
+      "s_idx": 2,
+      "source": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "trigger": "A204:unique_cadical_reverse_SAT_model"
+    }
+  },
+  "schema": "chacha20-round10-external-cnf-reverse-canonical-v1",
+  "solver_evidence_rerun": false,
+  "source_legacy_sidecar": {
+    "path": "research/results/v1/chacha20_round10_external_cnf_reverse_v1.causal",
+    "sha256": "f1ca39f964640d8aa2a5c6f6dab9bcfb48dfaddf6dda2e399275f77235ca71c3"
+  },
+  "source_result": {
+    "path": "research/results/v1/chacha20_round10_external_cnf_reverse_v1.json",
+    "sha256": "603eaf8a2a6bb85c3c4bb2fdf4b7466205ffd1d8005593d987c8a6461b7c8c22"
+  }
+}

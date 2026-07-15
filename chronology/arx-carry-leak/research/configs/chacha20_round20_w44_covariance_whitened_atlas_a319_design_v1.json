@@ -1,0 +1,56 @@
+{
+  "schema": "chacha20-round20-w44-covariance-whitened-atlas-a319-design-v1",
+  "attempt_id": "A319",
+  "design_state": "frozen_while_A313_recovery_is_running_before_any_A313_result_candidate_or_prefix_rank_exists",
+  "scientific_question": "Does exact covariance whitening of the confirmed Fine-Coarse-Numeric prototype geometry concentrate the still-unrevealed A313 W44 target beyond unscaled nearest-prototype distances?",
+  "operator_contract": {
+    "coordinate_system": [
+      "one_based_rank_in_target_blind_fine_order",
+      "one_based_rank_in_target_blind_coarse_order",
+      "one_based_rank_in_numeric_order"
+    ],
+    "prototype_source": "the_same_four_independently_confirmed_disjoint_targets_frozen_by_A317",
+    "frozen_views": [
+      "nearest_exact_shrinkage_mahalanobis",
+      "nearest_exact_diagonal_variance_L2",
+      "nearest_exact_pairwise_median_scaled_L1"
+    ],
+    "primary_view": "nearest_exact_shrinkage_mahalanobis",
+    "covariance_definition": "unbiased_sample_covariance_over_the_four_confirmed_rank_triplets",
+    "shrinkage_definition": "one_half_full_covariance_plus_one_half_its_diagonal_plus_trace_over_48_identity_ridge",
+    "robust_scale_definition": "median_of_the_six_pairwise_absolute_rank_differences_per_coordinate",
+    "arithmetic": "exact_python_Fraction_for_parameters_scores_and_ties",
+    "tie_break": [
+      "minimum_exact_distance",
+      "first_prototype_index",
+      "fine_rank",
+      "coarse_rank",
+      "numeric_rank",
+      "cell_value"
+    ],
+    "selection_or_refit_after_A313_reveal": false,
+    "candidate_execution_by_A319": false,
+    "evaluation": "all_three_frozen_views_after_A313_independent_confirmation_without_duplicate_candidate_execution"
+  },
+  "information_boundary": {
+    "A317_order_and_commitment_available_at_design_freeze": true,
+    "A313_recovery_running_at_design_freeze": true,
+    "A313_result_available_at_design_freeze": false,
+    "A313_candidate_available_at_design_freeze": false,
+    "A313_prefix_rank_available_at_design_freeze": false,
+    "A313_filter_outcome_available_at_design_freeze": false,
+    "target_labels_used_from_A313": 0,
+    "reader_refits_after_A313_reveal": 0,
+    "candidate_or_rank_used_to_choose_shrinkage_ridge_scales_or_tie_break": false
+  },
+  "source_anchors": {
+    "A317_order_path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+    "A317_order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2",
+    "A317_commitment_path": "research/configs/chacha20_round20_w44_multiview_operator_atlas_a317_commitment_v1.json",
+    "A317_commitment_sha256": "e7b4be79a4a0902d631cfef6073818c7afdc89108b18b7b2b1e22e568d773240",
+    "A313_protocol_path": "research/configs/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+    "A313_protocol_sha256": "dd5d59c52b8d5247d4a51b5a078f640577a2b8e3506fd2c7a46a8ca2a34c2f3c",
+    "A313_order_path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json",
+    "A313_order_sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3"
+  }
+}

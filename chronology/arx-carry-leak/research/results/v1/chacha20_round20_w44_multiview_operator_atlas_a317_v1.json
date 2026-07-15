@@ -1,0 +1,349 @@
+{
+  "A313_result_sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a",
+  "anchors": {
+    "A313_result": {
+      "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+      "sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a"
+    },
+    "commitment": {
+      "path": "research/configs/chacha20_round20_w44_multiview_operator_atlas_a317_commitment_v1.json",
+      "sha256": "e7b4be79a4a0902d631cfef6073818c7afdc89108b18b7b2b1e22e568d773240"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w44_multiview_operator_atlas_a317_design_v1.json",
+      "sha256": "4f17da4f0f300a3fbae60c229e018f4d19b36334c652c2edf6e0238caf65f4f1"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+      "sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2"
+    }
+  },
+  "attempt_id": "A317",
+  "candidate_execution": {
+    "confirmed_prefix_source": "A313_dual_independent_confirmation",
+    "duplicate_candidate_execution": false,
+    "performed_by_A317": false
+  },
+  "causal": {
+    "api_id": "a317w44",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "selected_geometry_replication_or_online_prototype_update",
+        "predicate": "next_required_object",
+        "subject": "A317:prospective_multiview_W44_atlas_evaluated",
+        "suggested_queries": [
+          "Which frozen multiview geometry best concentrates the unseen W44 prefix, and does appending it improve the next width?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "PRE_REVEAL_COMMITTED_MULTIVIEW_W44_ATLAS_EVALUATED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_multiview_commitment_evaluation_chain",
+        "o_idx": 4,
+        "outcome": "A317:prospective_multiview_W44_atlas_evaluated",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A317_multiview_atlas_chain",
+        "trigger": "A295_A303_A305_A309:confirmed_operator_coordinate_prototypes"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "ab3e499fa9323a0394eac0997ef7670a69fc924a2a7f71f716a345f36fa447fb",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 6706,
+      "file_size_kb": 6.5,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w44_multiview_operator_atlas_a317_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "commitment_sha256": "e7b4be79a4a0902d631cfef6073818c7afdc89108b18b7b2b1e22e568d773240",
+  "design_sha256": "4f17da4f0f300a3fbae60c229e018f4d19b36334c652c2edf6e0238caf65f4f1",
+  "evidence_stage": "PRE_REVEAL_COMMITTED_MULTIVIEW_W44_ATLAS_EVALUATED",
+  "information_boundary": {
+    "A295_A303_A305_A309_results_available_at_design_freeze": true,
+    "A313_candidate_available_at_design_freeze": false,
+    "A313_candidate_or_prefix_rank_available_at_materialization": false,
+    "A313_filter_outcome_available_at_design_freeze": false,
+    "A313_order_available_at_design_freeze": true,
+    "A313_prefix_rank_available_at_design_freeze": false,
+    "A313_recovery_running_at_design_freeze": true,
+    "A313_result_available_at_design_freeze": false,
+    "A313_result_available_at_materialization": false,
+    "candidate_or_rank_used_to_choose_prototypes_metrics_or_tie_break": false,
+    "reader_refits_after_A313_reveal": 0,
+    "target_labels_used_from_A313": 0
+  },
+  "measurement_sha256": "fda71df2a3a2a4655882b93f69e9c5490ee3b4be07e68c06f3c3e38c6ec9ce3a",
+  "operator_diversity_audit": {
+    "operator_pairs": 21,
+    "spearman_rank_correlations": {
+      "coarse__vs__A313_portfolio": 0.3223420924086998,
+      "coarse__vs__numeric": -0.07049918594951546,
+      "fine__vs__A313_portfolio": 0.5180720852516717,
+      "fine__vs__coarse": 0.1097435626071766,
+      "fine__vs__numeric": -0.08065349972976743,
+      "nearest_prototype_L1__vs__A313_portfolio": -0.20642384347610732,
+      "nearest_prototype_L1__vs__coarse": 0.23417825367060324,
+      "nearest_prototype_L1__vs__fine": -0.41156966387336935,
+      "nearest_prototype_L1__vs__nearest_prototype_Linf": 0.8681890526219265,
+      "nearest_prototype_L1__vs__nearest_prototype_squared_L2": 0.9640250066971411,
+      "nearest_prototype_L1__vs__numeric": -0.4956445918965655,
+      "nearest_prototype_Linf__vs__A313_portfolio": -0.28283843029212163,
+      "nearest_prototype_Linf__vs__coarse": 0.1778416577790548,
+      "nearest_prototype_Linf__vs__fine": -0.35570735223849353,
+      "nearest_prototype_Linf__vs__nearest_prototype_squared_L2": 0.9599862604533514,
+      "nearest_prototype_Linf__vs__numeric": -0.505429295855551,
+      "nearest_prototype_squared_L2__vs__A313_portfolio": -0.2547909265794971,
+      "nearest_prototype_squared_L2__vs__coarse": 0.20040124487195132,
+      "nearest_prototype_squared_L2__vs__fine": -0.39910854211118696,
+      "nearest_prototype_squared_L2__vs__numeric": -0.5135285893253327,
+      "numeric__vs__A313_portfolio": 0.13054558184688653
+    },
+    "target_labels_used": 0,
+    "top_k_overlaps": {
+      "coarse__vs__A313_portfolio": {
+        "top_1024": 440,
+        "top_16": 3,
+        "top_256": 77,
+        "top_64": 21
+      },
+      "coarse__vs__numeric": {
+        "top_1024": 288,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "fine__vs__A313_portfolio": {
+        "top_1024": 397,
+        "top_16": 5,
+        "top_256": 94,
+        "top_64": 21
+      },
+      "fine__vs__coarse": {
+        "top_1024": 349,
+        "top_16": 0,
+        "top_256": 50,
+        "top_64": 15
+      },
+      "fine__vs__numeric": {
+        "top_1024": 251,
+        "top_16": 0,
+        "top_256": 6,
+        "top_64": 0
+      },
+      "nearest_prototype_L1__vs__A313_portfolio": {
+        "top_1024": 250,
+        "top_16": 0,
+        "top_256": 18,
+        "top_64": 2
+      },
+      "nearest_prototype_L1__vs__coarse": {
+        "top_1024": 375,
+        "top_16": 0,
+        "top_256": 29,
+        "top_64": 0
+      },
+      "nearest_prototype_L1__vs__fine": {
+        "top_1024": 21,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_L1__vs__nearest_prototype_Linf": {
+        "top_1024": 761,
+        "top_16": 14,
+        "top_256": 193,
+        "top_64": 52
+      },
+      "nearest_prototype_L1__vs__nearest_prototype_squared_L2": {
+        "top_1024": 887,
+        "top_16": 15,
+        "top_256": 231,
+        "top_64": 57
+      },
+      "nearest_prototype_L1__vs__numeric": {
+        "top_1024": 124,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_Linf__vs__A313_portfolio": {
+        "top_1024": 239,
+        "top_16": 0,
+        "top_256": 25,
+        "top_64": 2
+      },
+      "nearest_prototype_Linf__vs__coarse": {
+        "top_1024": 319,
+        "top_16": 0,
+        "top_256": 28,
+        "top_64": 0
+      },
+      "nearest_prototype_Linf__vs__fine": {
+        "top_1024": 0,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_Linf__vs__nearest_prototype_squared_L2": {
+        "top_1024": 889,
+        "top_16": 15,
+        "top_256": 212,
+        "top_64": 57
+      },
+      "nearest_prototype_Linf__vs__numeric": {
+        "top_1024": 132,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_squared_L2__vs__A313_portfolio": {
+        "top_1024": 240,
+        "top_16": 0,
+        "top_256": 17,
+        "top_64": 1
+      },
+      "nearest_prototype_squared_L2__vs__coarse": {
+        "top_1024": 346,
+        "top_16": 0,
+        "top_256": 26,
+        "top_64": 0
+      },
+      "nearest_prototype_squared_L2__vs__fine": {
+        "top_1024": 10,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_squared_L2__vs__numeric": {
+        "top_1024": 125,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "numeric__vs__A313_portfolio": {
+        "top_1024": 358,
+        "top_16": 2,
+        "top_256": 54,
+        "top_64": 11
+      }
+    }
+  },
+  "order_commitment": {
+    "A313_result_available_at_commitment": false,
+    "anchors": {
+      "A308_order": {
+        "path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_order_v1.json",
+        "sha256": "d69b594a5c7a8ce17d7e5e8d5736006f76a3757a532aa6e4e84f2ca5d6ab2f0b"
+      },
+      "A313_order": {
+        "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json",
+        "sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3"
+      },
+      "A313_protocol": {
+        "path": "research/configs/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+        "sha256": "dd5d59c52b8d5247d4a51b5a078f640577a2b8e3506fd2c7a46a8ca2a34c2f3c"
+      },
+      "design": {
+        "path": "research/configs/chacha20_round20_w44_multiview_operator_atlas_a317_design_v1.json",
+        "sha256": "4f17da4f0f300a3fbae60c229e018f4d19b36334c652c2edf6e0238caf65f4f1"
+      },
+      "order": {
+        "path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+        "sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2"
+      },
+      "reproducer": {
+        "path": "scripts/reproduce_chacha20_round20_w44_multiview_operator_atlas_a317.sh",
+        "sha256": "6a3865e463ca5bf5bb89ab535989c1b3f5d17d790bfe72fdf777682cd5333010"
+      },
+      "runner": {
+        "path": "research/experiments/chacha20_round20_w44_multiview_operator_atlas_a317.py",
+        "sha256": "07aaf434153249ccc12826098bb3de1e8734a37c8649108045e00fb9e7614fa2"
+      },
+      "test": {
+        "path": "tests/test_chacha20_round20_w44_multiview_operator_atlas_a317.py",
+        "sha256": "a3878cac62862b05000135fa51e56cf012d3c7cc2bc24580eb15f24425e0e11d"
+      }
+    },
+    "attempt_id": "A317",
+    "candidate_or_rank_available_at_commitment": false,
+    "commitment_state": "frozen_before_A313_result_candidate_or_rank_exists",
+    "design_sha256": "4f17da4f0f300a3fbae60c229e018f4d19b36334c652c2edf6e0238caf65f4f1",
+    "order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2",
+    "order_uint16be_sha256": {
+      "A313_portfolio": "5b504f49688ee98271be8d3fd28982fe7d590879ed0ededb8d41116dc1626191",
+      "coarse": "cf1391b4b4a62a9e4585a68d3dbf6cfa5f87ba5b13ff3b3a5edb1eecdd63e854",
+      "fine": "6062153baf987cbe7fdb96e66b958fa2e7347af6a46714d81fb1b2f3d9fa8021",
+      "nearest_prototype_L1": "f6493a2e4c6cafaf7a3353b583e8a3bb4fd057df71fc23e721203d3f2f0c4272",
+      "nearest_prototype_Linf": "ebcbc4e1b195f82d4645d280e70e557fdfd0082fde329aaa6d2be90ff282f066",
+      "nearest_prototype_squared_L2": "4c625e552d0465caca587a8f0a0d39ae3a5daa658b6727574afaf356eaa9fd2b",
+      "numeric": "a02cf28d81488fd0b2bbde4d6d5b035210669370a220eb257b016d7bf2dfe68e"
+    },
+    "primary_view": "nearest_prototype_L1",
+    "prototype_coordinates_one_based": [
+      [
+        2605,
+        202,
+        1006
+      ],
+      [
+        2366,
+        3113,
+        3197
+      ],
+      [
+        2114,
+        427,
+        3952
+      ],
+      [
+        3829,
+        1789,
+        3227
+      ]
+    ],
+    "public_challenge_sha256": "c3897f3f8499c9afa01628b7f5e8de0ea5910a9559ca6bfb22fafe71d1fb26d6",
+    "schema": "chacha20-round20-w44-multiview-operator-atlas-a317-commitment-v1"
+  },
+  "order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2",
+  "public_challenge_sha256": "c3897f3f8499c9afa01628b7f5e8de0ea5910a9559ca6bfb22fafe71d1fb26d6",
+  "rank_analysis": {
+    "best_atlas_rank_one_based": 2159,
+    "best_atlas_view": "nearest_prototype_Linf",
+    "counterfactual_only_no_duplicate_candidate_execution": true,
+    "prefix12": 770,
+    "prefix12_hex": "302",
+    "prefix_ranks_one_based": {
+      "A313_three_arm_portfolio": 2753,
+      "coarse": 1524,
+      "fine": 1148,
+      "nearest_prototype_L1": 2809,
+      "nearest_prototype_Linf": 2159,
+      "nearest_prototype_squared_L2": 2626,
+      "numeric": 771
+    },
+    "primary_L1_gain_bits_vs_complete_prefix_domain": 0.5441590908736017
+  },
+  "schema": "chacha20-round20-w44-multiview-operator-atlas-a317-result-v1"
+}

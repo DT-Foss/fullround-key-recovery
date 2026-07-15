@@ -1,0 +1,42 @@
+{
+  "attempt_id": "A295",
+  "design_state": "frozen_during_A293_before_any_A293_result_or_target_prefix_existed",
+  "frozen_inputs": {
+    "A272_model_sha256": "b096c08616a81712da881862b65f0c95388e4db3cf6b8e462bf7c2a072cb0da4",
+    "A293_protocol_path": "research/configs/chacha20_round20_w24_causal_refinement_a293_v1.json",
+    "A293_protocol_sha256": "92af0e5f7e8130604388dfd1e6124b6e29e29ec14b2d73d1e4fa0157f3f898b8",
+    "A294_protocol_path": "research/configs/chacha20_round20_w24_causal_ordered_metal_a294_v1.json",
+    "A294_protocol_sha256": "f49cf71d945c400dfb5302587302e776e2b9aa9dbc4b7b14fb361ed79a8a4c6f",
+    "orbit_source_path": "src/arx_carry_leak/xor_prefix_orbit.py",
+    "orbit_source_sha256": "a2c1f142eab770f308ef4103141ee9aee73eaa4dd8b73235454d0d822476e806"
+  },
+  "launch_gate": "execute_only_if_A293_completes_all_4096_prefixes_without_a_confirmed_model",
+  "readout": {
+    "accepted_clause_proxy": "max(redundant_clauses_delta,0)",
+    "candidate_cells": 4096,
+    "conflict_channel": "max(metrics_delta[conflicts],0)",
+    "frozen_selected_terms": [502, 504, 505, 508, 509, 510, 511, 514],
+    "model_refits": 0,
+    "prefix_bits": 12,
+    "ratio": "(accepted_proxy-conflicts)/(abs(accepted_proxy)+abs(conflicts))",
+    "score": "unchanged_A272_positive_coefficients_over_12bit_raw_z_xor_laplacian_xor_gradient_l2_xor_gradient_maxabs",
+    "target_labels_used": 0,
+    "tiebreak": "descending_score_then_ascending_prefix"
+  },
+  "recovery": {
+    "candidate_group_size": 4096,
+    "complete_residual_domain": 16777216,
+    "confirmation": "two_independent_RFC8439_implementations_all_eight_blocks",
+    "engine": "A294_verified_Metal_candidate_group_reader",
+    "stop": "first_factual_filter_match",
+    "unknown_key_bits": 24
+  },
+  "information_boundary": {
+    "A293_result_available_at_design_freeze": false,
+    "A294_result_available_at_design_freeze": false,
+    "fine_order_formula_frozen_before_A293_completion": true,
+    "secret_assignment_available": false,
+    "target_prefix_or_model_available": false
+  },
+  "schema": "chacha20-round20-w24-fine-selected-channel-a295-design-v1"
+}

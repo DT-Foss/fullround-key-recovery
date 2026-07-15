@@ -1,0 +1,76 @@
+{
+  "A313_result_available_at_commitment": false,
+  "anchors": {
+    "A308_order": {
+      "path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_order_v1.json",
+      "sha256": "d69b594a5c7a8ce17d7e5e8d5736006f76a3757a532aa6e4e84f2ca5d6ab2f0b"
+    },
+    "A313_order": {
+      "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json",
+      "sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3"
+    },
+    "A313_protocol": {
+      "path": "research/configs/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+      "sha256": "dd5d59c52b8d5247d4a51b5a078f640577a2b8e3506fd2c7a46a8ca2a34c2f3c"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w44_multiview_operator_atlas_a317_design_v1.json",
+      "sha256": "4f17da4f0f300a3fbae60c229e018f4d19b36334c652c2edf6e0238caf65f4f1"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+      "sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w44_multiview_operator_atlas_a317.sh",
+      "sha256": "6a3865e463ca5bf5bb89ab535989c1b3f5d17d790bfe72fdf777682cd5333010"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w44_multiview_operator_atlas_a317.py",
+      "sha256": "07aaf434153249ccc12826098bb3de1e8734a37c8649108045e00fb9e7614fa2"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w44_multiview_operator_atlas_a317.py",
+      "sha256": "a3878cac62862b05000135fa51e56cf012d3c7cc2bc24580eb15f24425e0e11d"
+    }
+  },
+  "attempt_id": "A317",
+  "candidate_or_rank_available_at_commitment": false,
+  "commitment_state": "frozen_before_A313_result_candidate_or_rank_exists",
+  "design_sha256": "4f17da4f0f300a3fbae60c229e018f4d19b36334c652c2edf6e0238caf65f4f1",
+  "order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2",
+  "order_uint16be_sha256": {
+    "A313_portfolio": "5b504f49688ee98271be8d3fd28982fe7d590879ed0ededb8d41116dc1626191",
+    "coarse": "cf1391b4b4a62a9e4585a68d3dbf6cfa5f87ba5b13ff3b3a5edb1eecdd63e854",
+    "fine": "6062153baf987cbe7fdb96e66b958fa2e7347af6a46714d81fb1b2f3d9fa8021",
+    "nearest_prototype_L1": "f6493a2e4c6cafaf7a3353b583e8a3bb4fd057df71fc23e721203d3f2f0c4272",
+    "nearest_prototype_Linf": "ebcbc4e1b195f82d4645d280e70e557fdfd0082fde329aaa6d2be90ff282f066",
+    "nearest_prototype_squared_L2": "4c625e552d0465caca587a8f0a0d39ae3a5daa658b6727574afaf356eaa9fd2b",
+    "numeric": "a02cf28d81488fd0b2bbde4d6d5b035210669370a220eb257b016d7bf2dfe68e"
+  },
+  "primary_view": "nearest_prototype_L1",
+  "prototype_coordinates_one_based": [
+    [
+      2605,
+      202,
+      1006
+    ],
+    [
+      2366,
+      3113,
+      3197
+    ],
+    [
+      2114,
+      427,
+      3952
+    ],
+    [
+      3829,
+      1789,
+      3227
+    ]
+  ],
+  "public_challenge_sha256": "c3897f3f8499c9afa01628b7f5e8de0ea5910a9559ca6bfb22fafe71d1fb26d6",
+  "schema": "chacha20-round20-w44-multiview-operator-atlas-a317-commitment-v1"
+}

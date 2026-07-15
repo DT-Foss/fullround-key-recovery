@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fullround-key-recovery"
-version = "1.3.0"
+version = "1.4.0"
 description = "Complete-domain and target-blind strict-subset full-round residual-key recovery records"
 readme = "README.md"
 requires-python = ">=3.10"

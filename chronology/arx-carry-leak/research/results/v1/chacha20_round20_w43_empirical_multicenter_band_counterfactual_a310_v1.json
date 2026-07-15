@@ -1,0 +1,139 @@
+{
+  "A309_result_sha256": "73edd2514cb644330c481d9fe01293e3a0242aad5157ba7a598ac776fbfb8abd",
+  "anchors": {
+    "A309_result": {
+      "path": "research/results/v1/chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.json",
+      "sha256": "73edd2514cb644330c481d9fe01293e3a0242aad5157ba7a598ac776fbfb8abd"
+    },
+    "commitment": {
+      "path": "research/configs/chacha20_round20_w43_empirical_multicenter_band_counterfactual_a310_commitment_v1.json",
+      "sha256": "327d669a254a7b19e609867ace5c189a5659b4ff834d94ba4a86d6003514295e"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w43_empirical_multicenter_band_counterfactual_a310_design_v1.json",
+      "sha256": "1e886342759d83ae060600d83ce7be81feca90f0ddf4b00cc63618339d478f0f"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w43_empirical_multicenter_band_counterfactual_a310_order_v1.json",
+      "sha256": "f595a8d75ecd3616771b9bf16da511a707eb8a9ac4c7ab4ad88bb1be0340bb7a"
+    }
+  },
+  "attempt_id": "A310",
+  "candidate_execution": {
+    "confirmed_prefix_source": "A309_dual_independent_confirmation",
+    "duplicate_candidate_execution": false,
+    "performed_by_A310": false
+  },
+  "causal": {
+    "api_id": "a310w43",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w43_empirical_multicenter_band_counterfactual_a310_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fresh_multicenter_execution_or_width_conditioned_operator_selection",
+        "predicate": "next_required_object",
+        "subject": "A310:prospective_multicenter_counterfactual_evaluated",
+        "suggested_queries": [
+          "Which pre-reveal band operator should be carried into the next fresh W43 or W44 target?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "PRE_REVEAL_COMMITTED_MULTICENTER_COUNTERFACTUAL_EVALUATED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_multicenter_commitment_evaluation_chain",
+        "o_idx": 4,
+        "outcome": "A310:prospective_multicenter_counterfactual_evaluated",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A310_multicenter_chain",
+        "trigger": "A295_A303_A305:confirmed_fine_rank_centers"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "dbfb7b1817bd1576ce0040dea693d561d9596066f552d081df3a71e31399b242",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 4174,
+      "file_size_kb": 4.1,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w43_empirical_multicenter_band_counterfactual_a310_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "commitment_sha256": "327d669a254a7b19e609867ace5c189a5659b4ff834d94ba4a86d6003514295e",
+  "design_sha256": "1e886342759d83ae060600d83ce7be81feca90f0ddf4b00cc63618339d478f0f",
+  "evidence_stage": "PRE_REVEAL_COMMITTED_MULTICENTER_COUNTERFACTUAL_EVALUATED",
+  "information_boundary": {
+    "A300_candidate_available_at_freeze": false,
+    "A300_filter_outcome_available_at_freeze": false,
+    "A300_prefix_rank_available_at_freeze": false,
+    "A300_result_available_at_freeze": false,
+    "A300_target_assignment_available_at_freeze": false,
+    "A309_result_available_at_freeze": false,
+    "candidate_filter_outcome_used_for_order": false,
+    "disjoint_confirmed_training_labels_used": 3,
+    "implementation_and_order_materialization_may_follow_reveal_but_the_frozen_algorithm_must_not_change": true,
+    "reader_refits_on_A300": 0,
+    "target_labels_used_from_A300": 0
+  },
+  "measurement_sha256": "c29ff6a8522d3939f060b211769b3fd704a670157c3dfae7dd2dadbd9f763dd2",
+  "order_commitment": {
+    "attempt_id": "A310",
+    "baseline_order_uint16be_sha256": "a843ebcb59cbb48e37276b4b26257bbffd789f4ae4271307f7babeac5f1dd1f7",
+    "candidate_or_rank_available_at_commitment": false,
+    "cells": 4096,
+    "design_sha256": "1e886342759d83ae060600d83ce7be81feca90f0ddf4b00cc63618339d478f0f",
+    "empirical_centers_one_based": [
+      2114,
+      2366,
+      2605
+    ],
+    "maximum_observed_factor": 2.0,
+    "multicenter_band_order_uint16be_sha256": "27fc8ac9f9f9bf12ab11f6686f07a611f64cc427cee5f49ecc434a0829c5b39d",
+    "portfolio_order_uint16be_sha256": "770f5d9059e30ea3f6a2e54c1cae538fea40315cb9ddf551da8713da01e5eb44",
+    "public_challenge_sha256": "2fd7b142df59cda46313150c8803cf4498b8ea99af4969f8fc91d36aea230772",
+    "schema": "chacha20-round20-w43-empirical-multicenter-band-counterfactual-a310-commitment-v1"
+  },
+  "order_sha256": "f595a8d75ecd3616771b9bf16da511a707eb8a9ac4c7ab4ad88bb1be0340bb7a",
+  "portfolio_guarantee": {
+    "checked_prefix_cells": 4096,
+    "frozen_worst_case_bound_bits": 1.0,
+    "frozen_worst_case_bound_factor": 2,
+    "maximum_observed_regret_bits": 1.0,
+    "maximum_observed_regret_factor": 2.0,
+    "statement": "R_A310 <= 2 * min(R_multicenter_band, R_A300_baseline)",
+    "violations": 0
+  },
+  "public_challenge_sha256": "2fd7b142df59cda46313150c8803cf4498b8ea99af4969f8fc91d36aea230772",
+  "rank_analysis": {
+    "best_arm_rank_one_based": 2940,
+    "counterfactual_only_no_duplicate_candidate_execution": true,
+    "portfolio_gain_bits_vs_complete_domain": 0.024868543078660283,
+    "portfolio_regret_factor_vs_best_arm": 1.3693877551020408,
+    "prefix12": 3226,
+    "prefix12_hex": "c9a",
+    "prefix_ranks_one_based": {
+      "A300_three_operator_baseline": 3464,
+      "A310_multicenter_plus_baseline": 4026,
+      "empirical_multicenter_band": 2940
+    }
+  },
+  "schema": "chacha20-round20-w43-empirical-multicenter-band-counterfactual-a310-result-v1"
+}

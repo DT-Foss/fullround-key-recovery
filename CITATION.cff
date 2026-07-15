@@ -8,8 +8,8 @@ authors:
     email: d.foss@ieee.org
     orcid: "https://orcid.org/0009-0004-0289-7154"
     affiliation: "AI Systems and Causal Knowledge Graphs, Görlitz, Germany"
-version: 1.3.0
-date-released: 2026-07-14
+version: 1.4.0
+date-released: 2026-07-15
 license: MIT
 repository-code: "https://github.com/DT-Foss/fullround-key-recovery"
 url: "https://github.com/DT-Foss/fullround-key-recovery"

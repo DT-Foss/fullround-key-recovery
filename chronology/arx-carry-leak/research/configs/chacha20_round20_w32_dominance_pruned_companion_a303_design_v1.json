@@ -1,0 +1,94 @@
+{
+  "attempt_id": "A303",
+  "design_state": "frozen_after_A301_calibration_and_before_A298_order_candidate_assignment_or_result_exists",
+  "frozen_at_utc": "2026-07-14T21:03:54Z",
+  "purpose": "Apply the already frozen A301 coarse/numeric two-operator allocation to the still sealed A298 W32 target, retaining A298's fine field as an audit-only view and selecting the tighter factor-two portfolio before its order or assignment is available.",
+  "primitive_contract": {
+    "assignment_encoding": "assignment=key_word0",
+    "candidate_group_size": 1048576,
+    "complete_residual_domain": 4294967296,
+    "feedforward_included": true,
+    "known_key_bits": 224,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_blocks": 8,
+    "rounds": 20,
+    "unknown_key_bits": 32,
+    "word0_prefix_bits": 12
+  },
+  "calibration_contract": {
+    "source": "A301 hash-gated fourteen-target calibration",
+    "source_targets": 14,
+    "source_strict_subset_targets": 14,
+    "source_geometric_mean_complete_domain_reduction": 3.206509101787679,
+    "fine_operator_direct_calibrations": 2,
+    "fine_operator_dominated_calibrations": 2,
+    "selection_inputs": "Completed disjoint calibration artifacts only; no A298 order, model, candidate, assignment, filter outcome, or result."
+  },
+  "operator_contract": {
+    "candidate_execution_orders": [
+      "A297_coarse_high8_then_reflected_Gray4",
+      "numeric_word0_prefix12"
+    ],
+    "audit_only_order": "A295_fine_selected_channel_as_measured_by_A298",
+    "merge": "round_robin_by_component_rank_then_first_occurrence_deduplication",
+    "merge_component_precedence": [
+      "A297_coarse_high8_then_reflected_Gray4",
+      "numeric_word0_prefix12"
+    ],
+    "reader_refits": 0,
+    "target_labels_used": 0,
+    "total_prefix_cells": 4096
+  },
+  "rank_guarantee": {
+    "component_count": 2,
+    "proof": "After r round-robin epochs, the first r entries of both allocated component orders have been visited. Therefore a target whose best allocated component rank is r has been emitted by portfolio position at most 2r; first-occurrence duplicate suppression can only decrease that position.",
+    "statement": "R_A303 <= 2 * min(R_coarse, R_numeric)",
+    "worst_case_regret_bits": 1.0,
+    "worst_case_regret_factor": 2
+  },
+  "execution_contract": {
+    "all_executed_candidate_groups_counted": true,
+    "complete_group_execution_before_stop": true,
+    "independent_confirmation": "RFC8439_byte_reference_plus_independent_word_reference_over_all_eight_blocks",
+    "matched_control": "one_bit_modified_output_over_every_executed_primary_group",
+    "public_target_source": "the already sealed and hash-gated A298 protocol challenge",
+    "stop": "first_factual_filter_match_after_its_complete_2^20_candidate_group"
+  },
+  "acceptance": {
+    "authentic_AI_native_Causal_artifact_required": true,
+    "counterfactual_fine_and_control_ranks_computed_only_after_confirmation": true,
+    "independent_full_output_confirmation_required": true,
+    "main_agent_personal_CausalReader_readback_required": true,
+    "matched_control_must_remain_empty": true,
+    "rank_regret_bound_must_hold_exactly": true,
+    "two_operator_order_frozen_before_candidate_discovery": true
+  },
+  "information_boundary": {
+    "A301_calibration_available_at_freeze": true,
+    "A298_public_challenge_preflight_and_partial_unlabeled_measurement_available_at_freeze": true,
+    "A298_order_model_candidate_assignment_filter_outcome_or_result_available_at_freeze": false,
+    "future_A298_assignment_model_filter_outcome_or_rank_may_change_the_operator_or_order": false,
+    "operator_pruning_merge_rule_and_precedence_frozen": true
+  },
+  "source_anchors": {
+    "A301_design_path": "research/configs/chacha20_round20_w43_dominance_pruned_portfolio_a301_design_v1.json",
+    "A301_design_sha256": "0a9acb05e5b68f3eb8ec1acb0778e6a6a1ba3e9f29dcab058bec638d7cc4ffa1",
+    "A301_calibration_path": "research/results/v1/chacha20_round20_w43_dominance_pruned_portfolio_a301_calibration_v1.json",
+    "A301_calibration_sha256": "4fc58388be336ccd3543a9b7f852920a477cc64bf93213376dc81284e6131cf1",
+    "A301_protocol_path": "research/configs/chacha20_round20_w43_dominance_pruned_portfolio_a301_v1.json",
+    "A301_protocol_sha256": "ac816363a2f58f69d2cd112bf89c9aec3642a9ff42470c1d1adff537b3d485a1",
+    "A301_runner_path": "research/experiments/chacha20_round20_w43_dominance_pruned_portfolio_a301.py",
+    "A301_runner_sha256": "238623f332845c71ac7cf324ca884b0fd1019aa320255985c0a9e93c9e92759a",
+    "A298_design_path": "research/configs/chacha20_round20_w32_fine_selected_channel_transfer_a298_design_v1.json",
+    "A298_design_sha256": "118bb29b7494ced14256b120a36ce5b206eb347fdd0c10b261c1793300720189",
+    "A298_protocol_path": "research/configs/chacha20_round20_w32_fine_selected_channel_transfer_a298_v1.json",
+    "A298_protocol_sha256": "0a99a249eefbdf44d4babf9ca3debabde87ad3b1dc6acf895993253c31422b73",
+    "A298_preflight_path": "research/results/v1/chacha20_round20_w32_fine_selected_channel_transfer_a298_preflight_v1.json",
+    "A298_preflight_sha256": "05bca98a3e4644fa7c52681a26f8b7033c0e574fbd16f4460ebdbbaa9aa1518f",
+    "A298_runner_path": "research/experiments/chacha20_round20_w32_fine_selected_channel_transfer_a298.py",
+    "A298_runner_sha256": "250f90f1ac02364f279ed30e937bd7163e9d452176d2358e6aa317f9260928be",
+    "A298_test_path": "tests/test_chacha20_round20_w32_fine_selected_channel_transfer_a298.py",
+    "A298_test_sha256": "cee4611c394cc336bddd52e3e3bbd6ae756610dcb4c22de8ec4d7f915a2b18f2"
+  },
+  "schema": "chacha20-round20-w32-dominance-pruned-companion-a303-design-v1"
+}

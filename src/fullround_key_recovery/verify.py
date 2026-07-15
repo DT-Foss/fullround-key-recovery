@@ -692,6 +692,568 @@ def verify_chacha20_multitarget_panel(root: Path) -> dict[str, Any]:
     }
 
 
+def _chacha20_blocks_for_key(
+    challenge: dict[str, Any], key_words: list[int]
+) -> tuple[list[list[int]], list[str]]:
+    block_count = int(
+        challenge.get("block_count", challenge.get("public_output_blocks", 8))
+    )
+    blocks = [
+        chacha20_block(
+            key_words,
+            (int(challenge["counter_start"]) + block_index) & 0xFFFFFFFF,
+            [int(value) for value in challenge["nonce_words"]],
+        )
+        for block_index in range(block_count)
+    ]
+    return blocks, [_words_sha(block, 32) for block in blocks]
+
+
+def _verify_chacha20_output(
+    *,
+    challenge: dict[str, Any],
+    key_words: list[int],
+    retained_hashes: list[str],
+) -> list[str]:
+    blocks, hashes = _chacha20_blocks_for_key(challenge, key_words)
+    if (
+        blocks != challenge["target_words"]
+        or hashes != challenge["target_block_sha256"]
+        or hashes != retained_hashes
+        or blocks[0] == challenge["control_target_words"]
+    ):
+        raise RuntimeError("independent ChaCha20 eight-block confirmation failed")
+    return hashes
+
+
+def _w43_assignment(key_words: list[int]) -> int:
+    return int(key_words[0]) | ((int(key_words[1]) & 0x7FF) << 32)
+
+
+def _verify_w43_key_boundary(challenge: dict[str, Any], key_words: list[int]) -> None:
+    known = [int(value) for value in challenge["known_zeroed_key_words"]]
+    if (
+        len(key_words) != 8
+        or int(challenge["unknown_key_bits"]) != 43
+        or int(challenge["known_key_bits"]) != 213
+        or known[0] != 0
+        or (key_words[1] & ~0x7FF) != known[1]
+        or key_words[2:] != known[2:]
+    ):
+        raise RuntimeError("W43 reconstructed key violates the frozen known-key boundary")
+
+
+def _w44_assignment(key_words: list[int]) -> int:
+    return int(key_words[0]) | ((int(key_words[1]) & 0xFFF) << 32)
+
+
+def _verify_w44_key_boundary(challenge: dict[str, Any], key_words: list[int]) -> None:
+    known = [int(value) for value in challenge["known_zeroed_key_words"]]
+    if (
+        len(key_words) != 8
+        or int(challenge["unknown_key_bits"]) != 44
+        or int(challenge["known_key_bits"]) != 212
+        or known[0] != 0
+        or (key_words[1] & ~0xFFF) != known[1]
+        or key_words[2:] != known[2:]
+    ):
+        raise RuntimeError("W44 reconstructed key violates the frozen known-key boundary")
+
+
+def verify_chacha20_w43_complete(root: Path) -> dict[str, Any]:
+    payload = load_result("chacha20_w43_complete", root)
+    config = json.loads((root / "configs" / CONFIG_FILES["chacha20_w43_complete"]).read_text())
+    challenge = config["challenge"]
+    execution = payload["execution"]
+    confirmation = payload["confirmation"]
+    key_words = [int(value) for value in confirmation["recovered_key_words"]]
+    assignment = int(confirmation["assignment"])
+    _common_gates(payload, attempt="CHACHA20KR43", candidates=1 << 43)
+    _verify_w43_key_boundary(challenge, key_words)
+    hashes = _verify_chacha20_output(
+        challenge=challenge,
+        key_words=key_words,
+        retained_hashes=confirmation["word_reference_sha256"],
+    )
+    if (
+        payload.get("evidence_stage")
+        != "FULLROUND_CHACHA20_W43_COMPLETE_DOMAIN_RECOVERY_CONFIRMED"
+        or _canonical_sha(challenge) != config["public_challenge_sha256"]
+        or config["public_challenge_sha256"] != payload["public_challenge_sha256"]
+        or config["execution"]["logical_candidate_count"] != 1 << 43
+        or config["execution"]["complete_domain_required"] is not True
+        or config["information_boundary"]["candidate_outcomes_used_before_freeze"] is not False
+        or config["information_boundary"]["success_evaluated_only_after_complete_domain"]
+        is not True
+        or execution["executed_assignment_count"] != 1 << 43
+        or execution["success_evaluated_only_after_complete_domain"] is not True
+        or execution["factual_filter_matches"] != [assignment]
+        or execution["factual_full_matches"] != [assignment]
+        or execution["control_filter_matches"] != []
+        or _w43_assignment(key_words) != assignment
+        or hashes != confirmation["byte_reference_sha256"]
+        or confirmation["all_blocks_match"] is not True
+        or confirmation["word_reference_block_matches"] != [True] * 8
+        or confirmation["byte_reference_block_matches"] != [True] * 8
+        or confirmation["output_bits_checked_per_reference"] != 4096
+        or confirmation["total_cross_implementation_output_bits_checked"] != 8192
+    ):
+        raise RuntimeError("CHACHA20KR43 complete-domain gates failed")
+    return {
+        "attempt_id": "CHACHA20KR43",
+        "cipher": "ChaCha20 block function",
+        "rounds": 20,
+        "unknown_key_bits": 43,
+        "known_key_bits": 213,
+        "logical_candidates": 1 << 43,
+        "recovered_assignment": assignment,
+        "reconstructed_master_key_words": key_words,
+        "factual_models": 1,
+        "control_models": 0,
+        "independent_confirmation_bits": 8192,
+        "gpu_seconds": execution["gpu_seconds"],
+    }
+
+
+def _verify_word0_strict_subset(
+    *,
+    root: Path,
+    name: str,
+    attempt: str,
+    evidence_stage: str,
+    expected_rank: int,
+    required_boundary: dict[str, Any],
+) -> dict[str, Any]:
+    payload = load_result(name, root)
+    config = json.loads((root / "configs" / CONFIG_FILES[name]).read_text())
+    challenge = config["public_challenge"]
+    discovery = payload["discovery"]
+    confirmation = payload["confirmation"]
+    unknown_bits = int(challenge["unknown_key_bits"])
+    complete_domain = 1 << unknown_bits
+    group_size = 1 << (unknown_bits - 12)
+    recovered_word0 = int(confirmation["recovered_full_key_word0"])
+    recovered = int(
+        confirmation.get(
+            "recovered_unknown_low24", confirmation.get("recovered_unknown_assignment")
+        )
+    )
+    key_words = [int(value) for value in challenge["known_key_value_words"]]
+    key_words[0] = recovered_word0
+    hashes = _verify_chacha20_output(
+        challenge=challenge,
+        key_words=key_words,
+        retained_hashes=confirmation["block_sha256"],
+    )
+    boundary = payload["information_boundary"]
+    if (
+        payload.get("attempt_id") != attempt
+        or payload.get("evidence_stage") != evidence_stage
+        or _canonical_sha(challenge) != payload["public_challenge_sha256"]
+        or discovery["Causal_prefix_rank_one_based"] != expected_rank
+        or discovery["executed_prefix_groups"] != expected_rank
+        or discovery["complete_domain_assignments"] != complete_domain
+        or discovery["executed_assignments_upper_bound"] != expected_rank * group_size
+        or discovery["executed_assignments_upper_bound"] >= complete_domain
+        or discovery["strict_subset_of_complete_domain"] is not True
+        or discovery["matched_control_candidates"] != 0
+        or int(discovery.get("candidate", discovery.get("candidate_low24"))) != recovered
+        or int(discovery["matched_full_key_word0"]) != recovered_word0
+        or recovered != (recovered_word0 & (complete_domain - 1))
+        or confirmation["cross_implementation_blocks_match"] is not True
+        or confirmation["root_operation_reference_all_eight_blocks_match"] is not True
+        or confirmation["independent_byte_reference_all_eight_blocks_match"] is not True
+        or confirmation["one_bit_control_rejected_over_discovery_subset"] is not True
+        or confirmation["output_bits_checked_per_implementation"] != 4096
+        or confirmation["cross_implementation_output_bits_checked"] != 8192
+        or any(boundary.get(key) != value for key, value in required_boundary.items())
+    ):
+        raise RuntimeError(f"{attempt} strict-subset gates failed")
+    return {
+        "attempt_id": attempt,
+        "cipher": "ChaCha20 block function",
+        "rounds": 20,
+        "unknown_key_bits": unknown_bits,
+        "known_key_bits": int(challenge["known_key_bits"]),
+        "complete_domain_executed": False,
+        "strict_subset_recovery": True,
+        "frozen_order_rank": expected_rank,
+        "executed_assignments_upper_bound": discovery["executed_assignments_upper_bound"],
+        "complete_domain_assignments": complete_domain,
+        "recovered_assignment": recovered,
+        "reconstructed_master_key_words": key_words,
+        "independent_confirmation_bits": 8192,
+        "control_models": 0,
+        "block_sha256": hashes,
+    }
+
+
+def verify_chacha20_a294(root: Path) -> dict[str, Any]:
+    return _verify_word0_strict_subset(
+        root=root,
+        name="chacha20_a294",
+        attempt="A294",
+        evidence_stage="FULLROUND_R20_W24_CAUSAL_ORDERED_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        expected_rank=202,
+        required_boundary={
+            "complete_candidate_domain_enumeration_used": False,
+            "secret_assignment_available_to_runner": False,
+            "target_prefix_or_model_available_before_order_freeze": False,
+            "counterfactual_ranks_computed_only_after_confirmation": True,
+        },
+    )
+
+
+def verify_chacha20_a295(root: Path) -> dict[str, Any]:
+    return _verify_word0_strict_subset(
+        root=root,
+        name="chacha20_a295",
+        attempt="A295",
+        evidence_stage="FULLROUND_R20_W24_FINE_SELECTED_CHANNEL_ORDERED_RECOVERY_CONFIRMED",
+        expected_rank=2605,
+        required_boundary={
+            "fine_order_formula_frozen_before_A293_completion": True,
+            "reader_refits": 0,
+            "target_labels_used": 0,
+            "target_prefix_model_or_filter_outcome_used_by_readout": False,
+        },
+    )
+
+
+def _verify_chacha20_panel(
+    *,
+    root: Path,
+    name: str,
+    attempt: str,
+    evidence_stage: str,
+    expected_widths: list[int],
+    expected_ranks: list[int],
+) -> dict[str, Any]:
+    payload = load_result(name, root)
+    config = json.loads((root / "configs" / CONFIG_FILES[name]).read_text())
+    config_rows = {row["target_id"]: row for row in config["targets"]}
+    result_rows = payload["targets"]
+    aggregate = payload["aggregate"]
+    boundary = payload["information_boundary"]
+    if (
+        payload.get("attempt_id") != attempt
+        or payload.get("evidence_stage") != evidence_stage
+        or [row["target_id"] for row in result_rows] != list(config_rows)
+        or [int(row["unknown_key_bits"]) for row in result_rows] != expected_widths
+        or [int(row["discovery"]["Causal_prefix_rank_one_based"]) for row in result_rows]
+        != expected_ranks
+        or aggregate["targets"] != len(expected_ranks)
+        or aggregate["confirmed_recoveries"] != len(expected_ranks)
+        or aggregate["strict_subset_recoveries"] != len(expected_ranks)
+        or aggregate["matched_control_candidates"] != 0
+        or aggregate["cross_implementation_output_bits_checked"] != 8192 * len(expected_ranks)
+        or boundary["all_target_orders_completed_before_any_recovery"] is not True
+        or boundary["target_labels_or_models_used_for_reader_scoring"] is not False
+        or boundary["reader_refits"] != 0
+        or boundary["matched_controls_scanned_over_identical_executed_groups"] is not True
+    ):
+        raise RuntimeError(f"{attempt} aggregate panel gates failed")
+
+    verified_rows = []
+    for row, unknown_bits, rank in zip(
+        result_rows, expected_widths, expected_ranks, strict=True
+    ):
+        config_row = config_rows[row["target_id"]]
+        challenge = config_row["public_challenge"]
+        discovery = row["discovery"]
+        confirmation = row["confirmation"]
+        complete_domain = 1 << unknown_bits
+        group_size = 1 << (unknown_bits - 12)
+        recovered_word0 = int(confirmation["recovered_full_key_word0"])
+        recovered = int(confirmation["recovered_unknown_assignment"])
+        key_words = [int(value) for value in challenge["known_key_value_words"]]
+        key_words[0] = recovered_word0
+        hashes = _verify_chacha20_output(
+            challenge=challenge,
+            key_words=key_words,
+            retained_hashes=confirmation["block_sha256"],
+        )
+        if (
+            int(config_row["unknown_key_bits"]) != unknown_bits
+            or _canonical_sha(challenge) != row["public_challenge_sha256"]
+            or discovery["Causal_prefix_rank_one_based"] != rank
+            or discovery["executed_prefix_groups"] != rank
+            or discovery["complete_domain_assignments"] != complete_domain
+            or discovery["executed_assignments_upper_bound"] != rank * group_size
+            or discovery["executed_assignments_upper_bound"] >= complete_domain
+            or discovery["strict_subset_of_complete_domain"] is not True
+            or discovery["matched_control_candidates"] != 0
+            or int(discovery["candidate"]) != recovered
+            or int(discovery["matched_full_key_word0"]) != recovered_word0
+            or recovered != (recovered_word0 & (complete_domain - 1))
+            or row["mapping_gate"]["width"] != unknown_bits
+            or row["mapping_gate"]["factual_match_exact"] is not True
+            or row["mapping_gate"]["control_matches"] != 0
+            or confirmation["cross_implementation_blocks_match"] is not True
+            or confirmation["root_operation_reference_all_eight_blocks_match"] is not True
+            or confirmation["independent_byte_reference_all_eight_blocks_match"] is not True
+            or confirmation["one_bit_control_rejected_over_discovery_subset"] is not True
+            or confirmation["cross_implementation_output_bits_checked"] != 8192
+        ):
+            raise RuntimeError(f"{attempt} target gates failed: {row['target_id']}")
+        verified_rows.append(
+            {
+                "target_id": row["target_id"],
+                "unknown_key_bits": unknown_bits,
+                "frozen_order_rank": rank,
+                "recovered_assignment": recovered,
+                "reconstructed_master_key_words": key_words,
+                "block_sha256": hashes,
+            }
+        )
+    return {
+        "attempt_id": attempt,
+        "cipher": "ChaCha20 block function",
+        "rounds": 20,
+        "targets": len(verified_rows),
+        "complete_domain_executed": False,
+        "strict_subset_recoveries": len(verified_rows),
+        "independent_confirmation_bits": 8192 * len(verified_rows),
+        "control_models": 0,
+        "target_results": verified_rows,
+    }
+
+
+def verify_chacha20_a296(root: Path) -> dict[str, Any]:
+    return _verify_chacha20_panel(
+        root=root,
+        name="chacha20_a296",
+        attempt="A296",
+        evidence_stage="FULLROUND_R20_EIGHT_TARGET_W24_REPLICATION_AND_W28_ZERO_REFIT_TRANSFER_CONFIRMED",
+        expected_widths=[24, 24, 24, 24, 28, 28, 28, 28],
+        expected_ranks=[2750, 2948, 1485, 213, 1144, 2113, 520, 3019],
+    )
+
+
+def verify_chacha20_a297(root: Path) -> dict[str, Any]:
+    return _verify_chacha20_panel(
+        root=root,
+        name="chacha20_a297",
+        attempt="A297",
+        evidence_stage="FULLROUND_R20_FOUR_TARGET_W32_ZERO_REFIT_CAUSAL_TRANSFER_CONFIRMED",
+        expected_widths=[32, 32, 32, 32],
+        expected_ranks=[2867, 2032, 926, 3932],
+    )
+
+
+def verify_chacha20_a303(root: Path) -> dict[str, Any]:
+    return _verify_word0_strict_subset(
+        root=root,
+        name="chacha20_a303",
+        attempt="A303",
+        evidence_stage="FULLROUND_R20_W32_CALIBRATED_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        expected_rank=3801,
+        required_boundary={
+            "A298_result_available": False,
+            "A298_target_key_label_available": False,
+            "candidate_filter_outcome_used_for_order": False,
+            "reader_refits": 0,
+            "target_labels_used": 0,
+        },
+    )
+
+
+def _verify_w43_strict_subset(
+    *,
+    root: Path,
+    name: str,
+    attempt: str,
+    evidence_stage: str,
+    expected_rank: int,
+    required_boundary: dict[str, Any],
+) -> dict[str, Any]:
+    payload = load_result(name, root)
+    config = json.loads((root / "configs" / CONFIG_FILES[name]).read_text())
+    challenge = config["public_challenge"]
+    discovery = payload["discovery"]
+    confirmation = payload["confirmation"]
+    boundary = payload["information_boundary"]
+    key_words = [int(value) for value in confirmation["recovered_key_words"]]
+    assignment = int(confirmation["assignment"])
+    _verify_w43_key_boundary(challenge, key_words)
+    hashes = _verify_chacha20_output(
+        challenge=challenge,
+        key_words=key_words,
+        retained_hashes=confirmation["word_reference_sha256"],
+    )
+    upper_bound = expected_rank * (1 << 31)
+    if (
+        payload.get("attempt_id") != attempt
+        or payload.get("evidence_stage") != evidence_stage
+        or _canonical_sha(challenge) != payload["public_challenge_sha256"]
+        or payload.get("strict_subset_of_complete_domain") is not True
+        or discovery["executed_prefix_groups"] != expected_rank
+        or discovery["executed_group_dispatches"] != expected_rank
+        or discovery["complete_domain_assignments"] != 1 << 43
+        or discovery["executed_assignments"] != upper_bound
+        or discovery["executed_assignments_upper_bound"] != upper_bound
+        or upper_bound >= 1 << 43
+        or discovery["strict_subset_of_complete_domain"] is not True
+        or discovery["complete_group_execution_before_stop"] is not True
+        or discovery["early_stop_inside_group"] is not False
+        or discovery["matched_control_candidates"] != 0
+        or discovery["control_filter_candidates"] != []
+        or discovery["factual_filter_candidates"] != [assignment]
+        or int(discovery["candidate"]) != assignment
+        or _w43_assignment(key_words) != assignment
+        or hashes != confirmation["byte_reference_sha256"]
+        or confirmation["all_blocks_match"] is not True
+        or confirmation["word_reference_block_matches"] != [True] * 8
+        or confirmation["byte_reference_block_matches"] != [True] * 8
+        or confirmation["output_bits_checked_per_reference"] != 4096
+        or confirmation["total_cross_implementation_output_bits_checked"] != 8192
+        or any(boundary.get(key) != value for key, value in required_boundary.items())
+    ):
+        raise RuntimeError(f"{attempt} W43 strict-subset gates failed")
+    return {
+        "attempt_id": attempt,
+        "cipher": "ChaCha20 block function",
+        "rounds": 20,
+        "unknown_key_bits": 43,
+        "known_key_bits": 213,
+        "complete_domain_executed": False,
+        "strict_subset_recovery": True,
+        "frozen_order_rank": expected_rank,
+        "executed_assignments": upper_bound,
+        "complete_domain_assignments": 1 << 43,
+        "recovered_assignment": assignment,
+        "reconstructed_master_key_words": key_words,
+        "independent_confirmation_bits": 8192,
+        "control_models": 0,
+        "gpu_seconds": discovery["gpu_seconds"],
+    }
+
+
+def verify_chacha20_a304(root: Path) -> dict[str, Any]:
+    return _verify_w43_strict_subset(
+        root=root,
+        name="chacha20_a304",
+        attempt="A304",
+        evidence_stage="FULLROUND_R20_W43_GROUPED_A302_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        expected_rank=2473,
+        required_boundary={
+            "A302_candidate_available_at_freeze": False,
+            "A302_filter_outcome_available_at_freeze": False,
+            "A302_prefix_rank_available_at_freeze": False,
+            "A302_unknown_assignment_available_at_freeze": False,
+            "engine_changes_candidate_membership": False,
+            "engine_changes_frozen_prefix_order": False,
+        },
+    )
+
+
+def verify_chacha20_a305(root: Path) -> dict[str, Any]:
+    return _verify_w43_strict_subset(
+        root=root,
+        name="chacha20_a305",
+        attempt="A305",
+        evidence_stage="FULLROUND_R20_W43_A299_GROUPED_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        expected_rank=2114,
+        required_boundary={
+            "A299_order_was_frozen_before_A299_candidate_or_rank_available": True,
+            "A305_candidate_supplied_to_grouped_runner": False,
+            "A305_engine_changes_A299_prefix_order": False,
+            "A305_engine_changes_candidate_membership": False,
+            "A305_engine_uses_target_rank_for_stopping": False,
+            "A305_is_execution_equivalent_replay_of_prospectively_frozen_A299_order": True,
+        },
+    )
+
+
+def verify_chacha20_a309(root: Path) -> dict[str, Any]:
+    return _verify_w43_strict_subset(
+        root=root,
+        name="chacha20_a309",
+        attempt="A309",
+        evidence_stage="FULLROUND_R20_W43_WIDTH_CONDITIONED_BAND_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        expected_rank=4044,
+        required_boundary={
+            "A300_candidate_available_at_freeze": False,
+            "A300_filter_outcome_available_at_freeze": False,
+            "A300_prefix_rank_available_at_freeze": False,
+            "A300_result_available_at_freeze": False,
+            "A300_target_assignment_available_at_freeze": False,
+            "candidate_filter_outcome_used_for_order": False,
+            "reader_refits_on_A300": 0,
+            "target_labels_used_from_A300": 0,
+        },
+    )
+
+
+def verify_chacha20_a313(root: Path) -> dict[str, Any]:
+    payload = load_result("chacha20_a313", root)
+    config = json.loads((root / "configs" / CONFIG_FILES["chacha20_a313"]).read_text())
+    challenge = config["public_challenge"]
+    discovery = payload["discovery"]
+    confirmation = payload["confirmation"]
+    boundary = payload["information_boundary"]
+    key_words = [int(value) for value in confirmation["recovered_key_words"]]
+    assignment = int(confirmation["assignment"])
+    expected_rank = 2753
+    executed_assignments = expected_rank * (1 << 32)
+    _verify_w44_key_boundary(challenge, key_words)
+    hashes = _verify_chacha20_output(
+        challenge=challenge,
+        key_words=key_words,
+        retained_hashes=confirmation["word_reference_sha256"],
+    )
+    if (
+        payload.get("attempt_id") != "A313"
+        or payload.get("evidence_stage")
+        != "FULLROUND_R20_W44_WIDTH_CONDITIONED_FINE_STRICT_SUBSET_RECOVERY_CONFIRMED"
+        or _canonical_sha(challenge) != payload["public_challenge_sha256"]
+        or config["public_challenge_sha256"] != payload["public_challenge_sha256"]
+        or payload.get("strict_subset_of_complete_domain") is not True
+        or discovery["executed_prefix_groups"] != expected_rank
+        or discovery["executed_group_dispatches"] != expected_rank * 2
+        or discovery["complete_domain_assignments"] != 1 << 44
+        or discovery["executed_assignments"] != executed_assignments
+        or discovery["strict_subset_of_complete_domain"] is not True
+        or discovery["complete_W44_group_execution_before_stop"] is not True
+        or discovery["early_stop_inside_group"] is not False
+        or discovery["matched_control_candidates"] != 0
+        or discovery["control_filter_candidates"] != []
+        or discovery["factual_filter_candidates"] != [assignment]
+        or int(discovery["candidate"]) != assignment
+        or _w44_assignment(key_words) != assignment
+        or hashes != confirmation["byte_reference_sha256"]
+        or confirmation["all_blocks_match"] is not True
+        or confirmation["word_reference_block_matches"] != [True] * 8
+        or confirmation["byte_reference_block_matches"] != [True] * 8
+        or confirmation["output_bits_checked_per_reference"] != 4096
+        or confirmation["total_cross_implementation_output_bits_checked"] != 8192
+        or payload["qualification_gate"]["complete_W44_group_candidates"] != 1 << 32
+        or payload["qualification_gate"]["production_target_used"] is not False
+        or payload["portfolio_guarantee"]["violations"] != 0
+        or boundary["candidate_filter_outcome_used_for_operator_or_order"] is not False
+        or boundary["reader_refits_on_A308_or_A312"] != 0
+        or boundary["target_labels_used_from_A308_or_A312"] != 0
+    ):
+        raise RuntimeError("A313 W44 strict-subset gates failed")
+    return {
+        "attempt_id": "A313",
+        "cipher": "ChaCha20 block function",
+        "rounds": 20,
+        "unknown_key_bits": 44,
+        "known_key_bits": 212,
+        "complete_domain_executed": False,
+        "strict_subset_recovery": True,
+        "frozen_order_rank": expected_rank,
+        "executed_assignments": executed_assignments,
+        "complete_domain_assignments": 1 << 44,
+        "recovered_assignment": assignment,
+        "reconstructed_master_key_words": key_words,
+        "independent_confirmation_bits": 8192,
+        "control_models": 0,
+        "gpu_seconds": discovery["gpu_seconds"],
+    }
+
+
 VERIFY_FUNCTIONS = {
     "chacha20": verify_chacha20,
     "speck32_64": verify_speck32_64,
@@ -707,6 +1269,16 @@ VERIFY_FUNCTIONS = {
     "aes256": verify_aes256,
     "chacha20_cross_material": verify_chacha20_cross_material,
     "chacha20_multitarget_panel": verify_chacha20_multitarget_panel,
+    "chacha20_w43_complete": verify_chacha20_w43_complete,
+    "chacha20_a294": verify_chacha20_a294,
+    "chacha20_a295": verify_chacha20_a295,
+    "chacha20_a296": verify_chacha20_a296,
+    "chacha20_a297": verify_chacha20_a297,
+    "chacha20_a303": verify_chacha20_a303,
+    "chacha20_a304": verify_chacha20_a304,
+    "chacha20_a305": verify_chacha20_a305,
+    "chacha20_a309": verify_chacha20_a309,
+    "chacha20_a313": verify_chacha20_a313,
 }
 
 
@@ -741,6 +1313,13 @@ def verify_all(root: Path | None = None) -> dict[str, Any]:
         if row["file_sha256"] != EXPECTED_SHA256[f"causal/{path.name}"]:
             raise RuntimeError(f"Causal hash mismatch after Reader open: {path.name}")
         causal[path.name] = row
+    chronology_causal = {}
+    for path in sorted((base / "chronology").rglob("*.causal")):
+        relative = path.relative_to(base).as_posix()
+        row = read_causal(path)
+        if row["file_sha256"] != EXPECTED_SHA256[relative]:
+            raise RuntimeError(f"chronology Causal hash mismatch after Reader open: {relative}")
+        chronology_causal[relative] = row
     return {
         "status": "verified",
         "author": "David Tom Foss",
@@ -748,4 +1327,5 @@ def verify_all(root: Path | None = None) -> dict[str, Any]:
         "artifacts": artifact_hashes,
         "results": results,
         "causal": causal,
+        "chronology_causal": chronology_causal,
     }

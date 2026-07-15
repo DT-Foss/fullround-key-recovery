@@ -1,0 +1,664 @@
+{
+  "anchors": {
+    "A223_config": {
+      "path": "research/configs/chacha20_round20_capacity_moonshot_a223_v1.json",
+      "sha256": "9b60f65be6415b4ac3738881336bfe8397328e0d216882f684db1c3da9b3a79f"
+    },
+    "A223_source": {
+      "path": "research/experiments/chacha20_round20_capacity_moonshot_a223.py",
+      "sha256": "f41b70c549392101a4a2cdf1499f69ac897912682a5696da79ef3533fa55e0e0"
+    },
+    "A251_wrapper": {
+      "path": "research/experiments/chacha20_fresh_clause_identity.py",
+      "sha256": "3a1d63d223712997519f72143ebcc3e5725a8f8659eadbd9389465dd0fe654f6"
+    },
+    "A297_causal": {
+      "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.causal",
+      "sha256": "5b2c2358807d242e8042d390fc269ecbac931d75a18d1e3a1b1efc004fc829f2"
+    },
+    "A297_result": {
+      "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.json",
+      "sha256": "046beb03789c994e564a018d3ca6d4ce146a22ca6b171197e99aeedd9cc98cfd"
+    },
+    "A297_runner": {
+      "path": "research/experiments/chacha20_round20_w32_causal_search_gain_panel_a297.py",
+      "sha256": "f5700d37179c82969fb458d5cd184656641f65e5962e82cfa6fa1ff48b3ca60f"
+    },
+    "A301_calibration": {
+      "path": "research/results/v1/chacha20_round20_w43_dominance_pruned_portfolio_a301_calibration_v1.json",
+      "sha256": "4fc58388be336ccd3543a9b7f852920a477cc64bf93213376dc81284e6131cf1"
+    },
+    "A301_design": {
+      "path": "research/configs/chacha20_round20_w43_dominance_pruned_portfolio_a301_design_v1.json",
+      "sha256": "0a9acb05e5b68f3eb8ec1acb0778e6a6a1ba3e9f29dcab058bec638d7cc4ffa1"
+    },
+    "A301_protocol": {
+      "path": "research/configs/chacha20_round20_w43_dominance_pruned_portfolio_a301_v1.json",
+      "sha256": "ac816363a2f58f69d2cd112bf89c9aec3642a9ff42470c1d1adff537b3d485a1"
+    },
+    "A301_runner": {
+      "path": "research/experiments/chacha20_round20_w43_dominance_pruned_portfolio_a301.py",
+      "sha256": "238623f332845c71ac7cf324ca884b0fd1019aa320255985c0a9e93c9e92759a"
+    },
+    "CausalReader": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "Metal_anchor": {
+      "path": "research/experiments/chacha20_round20_a223_w40_metal_transfer.py",
+      "sha256": "9374b2788ff3c05a5ab42fbbdfb2fc490d183675312d2d01ce08312f7758c0fe"
+    },
+    "W43_qualification": {
+      "path": "research/results/v1/chacha20_round20_w43_metal_qualification_v1.json",
+      "sha256": "c69c4a63965d22eeeaf92136b9218ae29376f174aa440dd2a7d6b423cae7b369"
+    },
+    "W43_runner": {
+      "path": "research/experiments/chacha20_round20_w43_metal_record.py",
+      "sha256": "2f9c150dafd2b1dd9b0a6fa8d4162bcf1c90e3ef2658fa1bdef1e2a80faac2ca"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302_design_v1.json",
+      "sha256": "d5792178976e49de1b7c768f72e68ef1c809237e41dd954ff32c215f3d5f2b91"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302.py",
+      "sha256": "335c6e002634185dd64999386723665f500953f29b7dc67573e2db654e9f91da"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w43_calibrated_coarse_numeric_replication_a302.py",
+      "sha256": "d5baff2d95ca0f37c2da565cec6962d21ba8ed3b94fca96a609f53ea09c1b54c"
+    }
+  },
+  "attempt_id": "A302",
+  "calibration_aggregate": {
+    "fine_operator_direct_calibrations": 2,
+    "fine_operator_dominated_calibrations": 2,
+    "geometric_mean_complete_domain_reduction": 3.206509101787679,
+    "maximum_portfolio_rank": 3534,
+    "mean_search_gain_bits": 1.6810035023216012,
+    "strict_subset_targets": 14,
+    "targets": 14
+  },
+  "design": {
+    "acceptance": {
+      "authentic_AI_native_Causal_artifact_required": true,
+      "complete_model_free_256_cell_coarse_field_required": true,
+      "counterfactual_component_ranks_computed_only_after_confirmation": true,
+      "independent_full_output_confirmation_required": true,
+      "main_agent_personal_CausalReader_readback_required": true,
+      "matched_control_must_remain_empty": true,
+      "rank_regret_bound_must_hold_exactly": true,
+      "two_operator_order_frozen_before_candidate_discovery": true
+    },
+    "attempt_id": "A302",
+    "calibration_contract": {
+      "fine_operator_direct_calibrations": 2,
+      "fine_operator_dominated_calibrations": 2,
+      "selection_inputs": "Completed disjoint calibration artifacts only; no A300 result, A301 result, A302 target, or A302 measurement.",
+      "source": "A301 hash-gated fourteen-target calibration",
+      "source_geometric_mean_complete_domain_reduction": 3.206509101787679,
+      "source_mean_search_gain_bits": 1.6810035023216012,
+      "source_strict_subset_targets": 14,
+      "source_targets": 14
+    },
+    "design_state": "frozen_after_A301_calibration_and_before_A302_runner_protocol_target_measurement_order_or_candidate_exists",
+    "execution_contract": {
+      "all_executed_candidate_groups_counted": true,
+      "complete_group_execution_before_stop": true,
+      "fresh_target_source": "OS_CSPRNG_after_runner_and_test_hash_freeze",
+      "independent_confirmation": "RFC8439_byte_reference_plus_independent_word_reference_over_all_eight_blocks",
+      "matched_control": "one_bit_modified_output_over_every_executed_primary_group",
+      "stop": "first_factual_filter_match_after_its_complete_2^31_candidate_group"
+    },
+    "frozen_at_utc": "2026-07-14T20:52:42Z",
+    "information_boundary": {
+      "A300_result_available_at_freeze": false,
+      "A301_calibration_available_at_freeze": true,
+      "A301_result_available_at_freeze": false,
+      "A302_production_assignment_target_measurement_order_model_candidate_filter_outcome_or_rank_available_at_freeze": false,
+      "future_A302_assignment_model_filter_outcome_or_rank_may_change_the_operator_or_order": false,
+      "measurement_operator_merge_rule_and_precedence_frozen": true
+    },
+    "measurement_contract": {
+      "coarse_cells": 256,
+      "coarse_operator": "unchanged_A272_A297_positive_channel_high8",
+      "coarse_to_prefix12_extension": "reflected_Gray4",
+      "conflict_horizons_per_cell": 4,
+      "expected_model_free_stages": 1024,
+      "fine_cells": 0,
+      "fine_solver_stages": 0,
+      "reader_refits": 0,
+      "target_labels_used": 0
+    },
+    "operator_contract": {
+      "candidate_execution_orders": [
+        "A297_coarse_high8_then_reflected_Gray4",
+        "numeric_word0_prefix12"
+      ],
+      "merge": "round_robin_by_component_rank_then_first_occurrence_deduplication",
+      "merge_component_precedence": [
+        "A297_coarse_high8_then_reflected_Gray4",
+        "numeric_word0_prefix12"
+      ],
+      "total_prefix_cells": 4096
+    },
+    "primitive_contract": {
+      "assignment_encoding": "assignment=(key_word1_low11<<32)|key_word0",
+      "candidate_group_size": 2147483648,
+      "complete_residual_domain": 8796093022208,
+      "feedforward_included": true,
+      "known_key_bits": 213,
+      "primitive": "RFC8439_ChaCha20_block_function",
+      "public_output_blocks": 8,
+      "rounds": 20,
+      "unknown_key_bits": 43,
+      "word0_prefix_bits": 12
+    },
+    "purpose": "Replicate the calibrated two-operator ChaCha20-R20 W43 recovery on a new sealed target while removing the dominated 4096-cell fine measurement entirely, reducing the prospective Reader field to 256 coarse Causal cells without weakening the factor-two allocated-operator rank guarantee.",
+    "rank_guarantee": {
+      "component_count": 2,
+      "proof": "After r round-robin epochs, the first r entries of both allocated component orders have been visited. Therefore a target whose best allocated component rank is r has been emitted by portfolio position at most 2r; first-occurrence duplicate suppression can only decrease that position.",
+      "statement": "R_A302 <= 2 * min(R_coarse, R_numeric)",
+      "worst_case_regret_bits": 1.0,
+      "worst_case_regret_factor": 2
+    },
+    "schema": "chacha20-round20-w43-calibrated-coarse-numeric-replication-a302-design-v1",
+    "source_anchors": {
+      "A297_causal_path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.causal",
+      "A297_causal_sha256": "5b2c2358807d242e8042d390fc269ecbac931d75a18d1e3a1b1efc004fc829f2",
+      "A297_result_path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.json",
+      "A297_result_sha256": "046beb03789c994e564a018d3ca6d4ce146a22ca6b171197e99aeedd9cc98cfd",
+      "A297_runner_path": "research/experiments/chacha20_round20_w32_causal_search_gain_panel_a297.py",
+      "A297_runner_sha256": "f5700d37179c82969fb458d5cd184656641f65e5962e82cfa6fa1ff48b3ca60f",
+      "A301_calibration_path": "research/results/v1/chacha20_round20_w43_dominance_pruned_portfolio_a301_calibration_v1.json",
+      "A301_calibration_sha256": "4fc58388be336ccd3543a9b7f852920a477cc64bf93213376dc81284e6131cf1",
+      "A301_design_path": "research/configs/chacha20_round20_w43_dominance_pruned_portfolio_a301_design_v1.json",
+      "A301_design_sha256": "0a9acb05e5b68f3eb8ec1acb0778e6a6a1ba3e9f29dcab058bec638d7cc4ffa1",
+      "A301_protocol_path": "research/configs/chacha20_round20_w43_dominance_pruned_portfolio_a301_v1.json",
+      "A301_protocol_sha256": "ac816363a2f58f69d2cd112bf89c9aec3642a9ff42470c1d1adff537b3d485a1",
+      "A301_runner_path": "research/experiments/chacha20_round20_w43_dominance_pruned_portfolio_a301.py",
+      "A301_runner_sha256": "238623f332845c71ac7cf324ca884b0fd1019aa320255985c0a9e93c9e92759a",
+      "A301_test_path": "tests/test_chacha20_round20_w43_dominance_pruned_portfolio_a301.py",
+      "A301_test_sha256": "6d83e5b3c25a109fda74a76793c1656cdd6c2f9c49e2f4bcc0278cdd592a3e28"
+    }
+  },
+  "execution_contract": {
+    "candidate_execution_orders": [
+      "A297_coarse_high8_then_reflected_Gray4",
+      "numeric_word0_prefix12"
+    ],
+    "candidate_group_size": 2147483648,
+    "coarse_cells": 256,
+    "coarse_partition_coordinates_high_to_low": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24
+    ],
+    "complete_residual_domain": 8796093022208,
+    "conflict_horizons_per_cell": 4,
+    "feedforward_included": true,
+    "fine_cells": 0,
+    "known_key_bits": 213,
+    "merge": "rank_round_robin_then_first_occurrence_deduplication",
+    "prefix_cells": 4096,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_blocks": 8,
+    "rank_guarantee": "R_A302 <= 2 * min(R_coarse, R_numeric)",
+    "reader_refits": 0,
+    "recovery": "portfolio_ordered_word0_prefix12_groups_x_complete_word1_low11_slices_then_dual_independent_eight_block_confirmation",
+    "rounds": 20,
+    "target_labels_used": 0,
+    "unknown_key_bits": 43
+  },
+  "execution_contract_sha256": "9013a1617eae6ff1620c02ea966dec39996f7f4ffc0a9211146a281a1815eaad",
+  "information_boundary": {
+    "A300_result_used": false,
+    "A301_result_used": false,
+    "A302_measurement_order_model_candidate_or_filter_outcome_available_at_freeze": false,
+    "fresh_assignment_generated_only_to_materialize_public_outputs": true,
+    "fresh_assignment_stored": false,
+    "full_key_stored": false,
+    "operator_measurement_merge_rule_and_precedence_frozen": true,
+    "reader_refits": 0,
+    "runner_and_tests_hashed_before_fresh_target_generation": true,
+    "target_labels_used": 0
+  },
+  "protocol_state": "fresh_W43_target_and_calibrated_coarse_numeric_contract_frozen_before_CNF_measurement_order_or_candidate_discovery",
+  "public_challenge": {
+    "challenge_id": "chacha20-r20-w43-fresh-v1",
+    "control_target_block_sha256": "fdbb1776247cf4218bb5ff7e02b81c06fabb1fcfc6df15afb5db7bc953016a2b",
+    "control_target_words": [
+      66926790,
+      4203107459,
+      84281816,
+      430268522,
+      148946572,
+      4087400903,
+      3908366860,
+      3620272966,
+      675786426,
+      2833373260,
+      3398659947,
+      1956991145,
+      1291109404,
+      3456589152,
+      2698155761,
+      2508569545
+    ],
+    "counter_start": 1829111934,
+    "feedforward": true,
+    "filter_bits": 64,
+    "filter_words": 2,
+    "known_key_bits": 213,
+    "known_material_derivation_label": "A302|fresh|ff17f7f3fa0dde9eea5766fdb4dbbc613fc0edd045c1ebdeb239096adbdaa340",
+    "known_material_derivation_sha256": "99b03080052c769d9a69ded9ec7924a8784a25b1ac374d3b6890b823ed160b57",
+    "known_zeroed_key_words": [
+      0,
+      2369548288,
+      2225864274,
+      3724317489,
+      3777762622,
+      3248124364,
+      151751342,
+      3535061463
+    ],
+    "nonce_words": [
+      1731968766,
+      486627184,
+      3358331919
+    ],
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_bits": 4096,
+    "public_output_blocks": 8,
+    "rounds": 20,
+    "target_block_sha256": [
+      "5c97b82c68f92a84c33223b9800a2696ab44bfc7a9d38070a548b10345141bba",
+      "6ec7a2d3f4fd45ed65d119dca475b48de8b3bdaf0c73bf9d73c33548fb6dfbb7",
+      "2d64e29c8c68a08d84b940949e0b1f8eae2ba8a421e3c0cb5637efff9406086b",
+      "44cf46d97f014aca67d5ccb3e83368a59820bc4f688cfd934281a31d8544347b",
+      "17f9236440777f36eadfaa13ebc2406471a6381175da3b398109a4b4ac3e3d93",
+      "2ee9dc3b7480df377a9bdeb8f82db9f606fc5e458d8a2e5980eaa229c04e567d",
+      "4bb40f533d2880969d7fab39eb1d4e4a69ab570a4b9112c9e359a6e5207cb285",
+      "27129a17410dfd958e91a0e2ce20cfff4e7e69179ba002dd515a97096a2c35b6"
+    ],
+    "target_words": [
+      [
+        66926791,
+        4203107459,
+        84281816,
+        430268522,
+        148946572,
+        4087400903,
+        3908366860,
+        3620272966,
+        675786426,
+        2833373260,
+        3398659947,
+        1956991145,
+        1291109404,
+        3456589152,
+        2698155761,
+        2508569545
+      ],
+      [
+        3180567264,
+        65360755,
+        2271323447,
+        4287660466,
+        867342088,
+        3159255878,
+        2318037531,
+        18258119,
+        302160255,
+        389335371,
+        1843982130,
+        4210662661,
+        773411269,
+        3653493952,
+        132108720,
+        1122194582
+      ],
+      [
+        475669261,
+        2261791691,
+        644294788,
+        1390710670,
+        4150121344,
+        1389805832,
+        3852501422,
+        913636421,
+        2073987125,
+        3844717065,
+        1991912574,
+        799148171,
+        681209308,
+        2961502263,
+        919128246,
+        2030702349
+      ],
+      [
+        3497630011,
+        2556068007,
+        2343628920,
+        2103830308,
+        402094711,
+        872507873,
+        668104710,
+        68566544,
+        435384246,
+        4205007574,
+        3655806385,
+        1534754555,
+        1450414051,
+        1859532944,
+        3762606979,
+        3928043954
+      ],
+      [
+        3743148829,
+        3366265900,
+        3316475802,
+        2998570438,
+        2151412954,
+        2454378260,
+        1798659449,
+        3039771512,
+        3715536908,
+        3212305983,
+        1248453527,
+        2884016981,
+        481740903,
+        4000514246,
+        1725241464,
+        2097331658
+      ],
+      [
+        226290354,
+        1757334219,
+        3609638502,
+        2205944768,
+        3774640938,
+        3909538722,
+        2822796517,
+        3898182440,
+        4051593257,
+        2564862033,
+        3769762096,
+        148109975,
+        1887771443,
+        2312254690,
+        228970598,
+        3091800993
+      ],
+      [
+        3382297922,
+        2151914450,
+        3099244203,
+        450280087,
+        1587970225,
+        2264124934,
+        3049697829,
+        2686962806,
+        3294372653,
+        138900105,
+        3924840702,
+        1534810793,
+        311609320,
+        1571278580,
+        1232360869,
+        3979320113
+      ],
+      [
+        3288399561,
+        1477453948,
+        439307675,
+        3764447516,
+        4079803454,
+        959567031,
+        1357337852,
+        2718640477,
+        3912524059,
+        2301276553,
+        3431912488,
+        3586792723,
+        1078515397,
+        188658315,
+        1637218417,
+        3350890694
+      ]
+    ],
+    "unknown_assignment_included": false,
+    "unknown_key_bits": 43,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low11"
+  },
+  "public_challenge_sha256": "a70fce0d6453012e9a44b1b1ff6378476bb918d2a052f87972eb4026e9464146",
+  "reader_challenge": {
+    "block_count": 8,
+    "challenge_id": "a302-reader-view-of-chacha20-r20-w43-fresh-v1",
+    "control_target_block_sha256": "fdbb1776247cf4218bb5ff7e02b81c06fabb1fcfc6df15afb5db7bc953016a2b",
+    "control_target_words": [
+      66926790,
+      4203107459,
+      84281816,
+      430268522,
+      148946572,
+      4087400903,
+      3908366860,
+      3620272966,
+      675786426,
+      2833373260,
+      3398659947,
+      1956991145,
+      1291109404,
+      3456589152,
+      2698155761,
+      2508569545
+    ],
+    "counter_schedule": "base_plus_block_index_mod_2^32",
+    "counter_start": 1829111934,
+    "full_key_included": false,
+    "known_key_bits": 213,
+    "known_key_mask_words": [
+      0,
+      4294965248,
+      4294967295,
+      4294967295,
+      4294967295,
+      4294967295,
+      4294967295,
+      4294967295
+    ],
+    "known_key_value_words": [
+      0,
+      2369548288,
+      2225864274,
+      3724317489,
+      3777762622,
+      3248124364,
+      151751342,
+      3535061463
+    ],
+    "nonce_words": [
+      1731968766,
+      486627184,
+      3358331919
+    ],
+    "rounds": 20,
+    "secret_discarded_after_target_construction": true,
+    "secret_used_only_for_target_construction": true,
+    "source_public_challenge_sha256": "a70fce0d6453012e9a44b1b1ff6378476bb918d2a052f87972eb4026e9464146",
+    "target_block_sha256": [
+      "5c97b82c68f92a84c33223b9800a2696ab44bfc7a9d38070a548b10345141bba",
+      "6ec7a2d3f4fd45ed65d119dca475b48de8b3bdaf0c73bf9d73c33548fb6dfbb7",
+      "2d64e29c8c68a08d84b940949e0b1f8eae2ba8a421e3c0cb5637efff9406086b",
+      "44cf46d97f014aca67d5ccb3e83368a59820bc4f688cfd934281a31d8544347b",
+      "17f9236440777f36eadfaa13ebc2406471a6381175da3b398109a4b4ac3e3d93",
+      "2ee9dc3b7480df377a9bdeb8f82db9f606fc5e458d8a2e5980eaa229c04e567d",
+      "4bb40f533d2880969d7fab39eb1d4e4a69ab570a4b9112c9e359a6e5207cb285",
+      "27129a17410dfd958e91a0e2ce20cfff4e7e69179ba002dd515a97096a2c35b6"
+    ],
+    "target_words": [
+      [
+        66926791,
+        4203107459,
+        84281816,
+        430268522,
+        148946572,
+        4087400903,
+        3908366860,
+        3620272966,
+        675786426,
+        2833373260,
+        3398659947,
+        1956991145,
+        1291109404,
+        3456589152,
+        2698155761,
+        2508569545
+      ],
+      [
+        3180567264,
+        65360755,
+        2271323447,
+        4287660466,
+        867342088,
+        3159255878,
+        2318037531,
+        18258119,
+        302160255,
+        389335371,
+        1843982130,
+        4210662661,
+        773411269,
+        3653493952,
+        132108720,
+        1122194582
+      ],
+      [
+        475669261,
+        2261791691,
+        644294788,
+        1390710670,
+        4150121344,
+        1389805832,
+        3852501422,
+        913636421,
+        2073987125,
+        3844717065,
+        1991912574,
+        799148171,
+        681209308,
+        2961502263,
+        919128246,
+        2030702349
+      ],
+      [
+        3497630011,
+        2556068007,
+        2343628920,
+        2103830308,
+        402094711,
+        872507873,
+        668104710,
+        68566544,
+        435384246,
+        4205007574,
+        3655806385,
+        1534754555,
+        1450414051,
+        1859532944,
+        3762606979,
+        3928043954
+      ],
+      [
+        3743148829,
+        3366265900,
+        3316475802,
+        2998570438,
+        2151412954,
+        2454378260,
+        1798659449,
+        3039771512,
+        3715536908,
+        3212305983,
+        1248453527,
+        2884016981,
+        481740903,
+        4000514246,
+        1725241464,
+        2097331658
+      ],
+      [
+        226290354,
+        1757334219,
+        3609638502,
+        2205944768,
+        3774640938,
+        3909538722,
+        2822796517,
+        3898182440,
+        4051593257,
+        2564862033,
+        3769762096,
+        148109975,
+        1887771443,
+        2312254690,
+        228970598,
+        3091800993
+      ],
+      [
+        3382297922,
+        2151914450,
+        3099244203,
+        450280087,
+        1587970225,
+        2264124934,
+        3049697829,
+        2686962806,
+        3294372653,
+        138900105,
+        3924840702,
+        1534810793,
+        311609320,
+        1571278580,
+        1232360869,
+        3979320113
+      ],
+      [
+        3288399561,
+        1477453948,
+        439307675,
+        3764447516,
+        4079803454,
+        959567031,
+        1357337852,
+        2718640477,
+        3912524059,
+        2301276553,
+        3431912488,
+        3586792723,
+        1078515397,
+        188658315,
+        1637218417,
+        3350890694
+      ]
+    ],
+    "unknown_assignment_included": false,
+    "unknown_assignment_value_included": false,
+    "unknown_bit_numbering": "little_endian_bit0_upward_across_key_words_k0_through_k7",
+    "unknown_global_bit_interval": [
+      0,
+      42
+    ],
+    "unknown_key_bits": 43
+  },
+  "reader_challenge_sha256": "88ad5307a97ea8890162d67f6171239f9573ed4d2afc36dfd71a2d15283df359",
+  "schema": "chacha20-round20-w43-calibrated-coarse-numeric-replication-a302-protocol-v1",
+  "scientific_design_sha256": "adf65a6a0c2be1fe773f1cecc1c383fcfee2629860cfd7bd28da47dae526fe84",
+  "source_protocol_scientific_design_sha256": "cba48938c0fd344f4003c88212acef920f37c7ff149e24d949a1a0b318e8c6ae"
+}

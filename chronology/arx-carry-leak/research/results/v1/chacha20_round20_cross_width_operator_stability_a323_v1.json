@@ -1,0 +1,200 @@
+{
+  "analysis": {
+    "best_of_eight_W44_oracle_coverage": {
+      "covered_cells": 4096,
+      "interpretation": "target_blind_family_complementarity_only_not_an_executable_single_order",
+      "maximum_rank": 3778,
+      "mean_rank": 1249.98681640625,
+      "minimum_rank": 1,
+      "quantile_method": "nearest_index_round_of_n_minus_one_times_probability",
+      "quantiles": [
+        {
+          "probability": 0.25,
+          "value": 442,
+          "zero_based_index": 1024
+        },
+        {
+          "probability": 0.5,
+          "value": 1019,
+          "zero_based_index": 2048
+        },
+        {
+          "probability": 0.75,
+          "value": 1974,
+          "zero_based_index": 3071
+        },
+        {
+          "probability": 0.9,
+          "value": 2728,
+          "zero_based_index": 3686
+        }
+      ],
+      "winner_cell_counts": {
+        "online_four_center_band": 1113,
+        "online_weighted_dovetail_2_to_1": 594,
+        "raw_nearest_prototype_L1": 469,
+        "raw_nearest_prototype_Linf": 1098,
+        "raw_nearest_prototype_squared_L2": 210,
+        "whitened_diagonal_variance_L2": 155,
+        "whitened_pairwise_median_scaled_L1": 184,
+        "whitened_shrinkage_mahalanobis": 273
+      }
+    },
+    "candidate_execution": false,
+    "cross_width_spearman": {
+      "online_four_center_band": 0.006588109230286433,
+      "online_weighted_dovetail_2_to_1": 0.11767988061207567,
+      "raw_nearest_prototype_L1": 0.3019665898297557,
+      "raw_nearest_prototype_Linf": 0.3498032707836566,
+      "raw_nearest_prototype_squared_L2": 0.3299093220165899,
+      "whitened_diagonal_variance_L2": 0.17406057422270696,
+      "whitened_pairwise_median_scaled_L1": 0.1835314607559829,
+      "whitened_shrinkage_mahalanobis": 0.18168927566438323
+    },
+    "most_stable_operator": "raw_nearest_prototype_Linf",
+    "most_stable_operator_index": 3,
+    "most_stable_spearman": 0.3498032707836566,
+    "operator_refits": 0,
+    "operator_sequence": [
+      "online_four_center_band",
+      "online_weighted_dovetail_2_to_1",
+      "raw_nearest_prototype_L1",
+      "raw_nearest_prototype_Linf",
+      "raw_nearest_prototype_squared_L2",
+      "whitened_shrinkage_mahalanobis",
+      "whitened_diagonal_variance_L2",
+      "whitened_pairwise_median_scaled_L1"
+    ],
+    "paired_order_hashes": {
+      "online_four_center_band": {
+        "W44_uint16be_sha256": "36dd80fbfb697e4576518f2ad06f6b9bf69c8e49cac428afca77927904e18182",
+        "W45_uint16be_sha256": "bda05840bffed94395b2150f4bdd7bdefe320a58960ec72eb9ccd5c75b71685a"
+      },
+      "online_weighted_dovetail_2_to_1": {
+        "W44_uint16be_sha256": "c88b45cbc4c141c05d7280fee9bb47172d086f8a257c06c5cf39f25e98197bfc",
+        "W45_uint16be_sha256": "3b2fcb4ae98d75f34cf915933f9a19025d0764fa513836501ce8f343d2aa0357"
+      },
+      "raw_nearest_prototype_L1": {
+        "W44_uint16be_sha256": "f6493a2e4c6cafaf7a3353b583e8a3bb4fd057df71fc23e721203d3f2f0c4272",
+        "W45_uint16be_sha256": "8661c6ee523b4b4c00c59fa21b534088ec696ec8d3d2ef8b442d3c76e96d6ae9"
+      },
+      "raw_nearest_prototype_Linf": {
+        "W44_uint16be_sha256": "ebcbc4e1b195f82d4645d280e70e557fdfd0082fde329aaa6d2be90ff282f066",
+        "W45_uint16be_sha256": "5d1afc37614fdbe050e9853413a3de7b850b876e9bc5649d3dffcf3e23c9780a"
+      },
+      "raw_nearest_prototype_squared_L2": {
+        "W44_uint16be_sha256": "4c625e552d0465caca587a8f0a0d39ae3a5daa658b6727574afaf356eaa9fd2b",
+        "W45_uint16be_sha256": "3147b095011b374521fb102a79ee923cb04987d8ea72deafd02123402d72734d"
+      },
+      "whitened_diagonal_variance_L2": {
+        "W44_uint16be_sha256": "8e92e30b5e61650fd8eb234ba03f7b5ae61f51291483ea7cfd70dc3f538fa30d",
+        "W45_uint16be_sha256": "2a0c31ff78952ecff08b61f5d22ba49d7cffcf555864a6c585434c1a78a9e006"
+      },
+      "whitened_pairwise_median_scaled_L1": {
+        "W44_uint16be_sha256": "6aa5e2ea1ffa2798494be4aa342ff4f63bd2c4986e107470aca9a0ebd2eec7b0",
+        "W45_uint16be_sha256": "a18e5b8b31a9c1a9f8c30530ee588a0dfb9c4a4ef8f1e9c3ac968046fc49d303"
+      },
+      "whitened_shrinkage_mahalanobis": {
+        "W44_uint16be_sha256": "7742217b958596ab099e5dcf18c1288587e15bffa9c884b1c80bd46dfd092678",
+        "W45_uint16be_sha256": "9879f89cb0839c504c9009edde677a6de622d334aa4dcb6d8f463bb2fe0f4d9f"
+      }
+    },
+    "target_labels_used": 0
+  },
+  "anchors": {
+    "A321_design": {
+      "path": "research/configs/chacha20_round20_holdout_selected_w45_operator_a321_design_v1.json",
+      "sha256": "3db5966ca254f8a5342399445d992db672fd0e9e5d40bc8ad401b0ae8cbd1e92"
+    },
+    "A321_runner": {
+      "path": "research/experiments/chacha20_round20_holdout_selected_w45_operator_a321.py",
+      "sha256": "61fd8e3c9635eab8cb166d8c9008df08b0cc067764f9c64da5042fa18726ef52"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_cross_width_operator_stability_a323_design_v1.json",
+      "sha256": "459826534bdc106796df6cb56e8ef8d6421c347bf2b944d7fd59ef9ae1f3890f"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_cross_width_operator_stability_a323.sh",
+      "sha256": "eba4503e05d624abde6163a7f92a2706d3c0a2a0389d79af15737870bdc80efb"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_cross_width_operator_stability_a323.py",
+      "sha256": "5a8776337f1b643a9fa91f83f4ffaf04c6333a1973f85fb29ff0099aa2123535"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_cross_width_operator_stability_a323.py",
+      "sha256": "d9593b039996407798b14bcdbc179230654886d1d86d8e01d917040caf8ecd56"
+    }
+  },
+  "attempt_id": "A323",
+  "causal": {
+    "api_id": "a323xw",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_cross_width_operator_stability_a323_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "A322_holdout_selection_versus_structural_stability_comparison",
+        "predicate": "next_required_object",
+        "subject": "A323:target_blind_cross_width_operator_stability_map",
+        "suggested_queries": [
+          "On the independently confirmed W45 target, does A321 holdout-rank selection or A323's target-blind cross-width stability prior identify the earlier frozen operator?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "TARGET_BLIND_COMPLETE_W44_W45_OPERATOR_STABILITY_AND_COMPLEMENTARITY_RETAINED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_stability_and_complementarity_chain",
+        "o_idx": 4,
+        "outcome": "A323:target_blind_cross_width_operator_stability_map",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A323_cross_width_stability_chain",
+        "trigger": "A315_A317_A319:complete_target_blind_W44_operator_family"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "1ca4304ac98ec104ed27d81ae52c8306c0fb0b021b4876a2263cc96311f2dc68",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 4575,
+      "file_size_kb": 4.5,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_cross_width_operator_stability_a323_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "design_sha256": "459826534bdc106796df6cb56e8ef8d6421c347bf2b944d7fd59ef9ae1f3890f",
+  "evidence_stage": "TARGET_BLIND_COMPLETE_W44_W45_OPERATOR_STABILITY_AND_COMPLEMENTARITY_RETAINED",
+  "information_boundary": {
+    "A313_candidate_available": false,
+    "A313_prefix_rank_available": false,
+    "A313_recovery_running_at_design_and_execution": true,
+    "A313_result_available": false,
+    "A314_candidate_available": false,
+    "A314_prefix_rank_available": false,
+    "A314_result_available": false,
+    "A314_target_blind_order_available": true,
+    "reader_refits": 0,
+    "target_labels_used": 0
+  },
+  "measurement_sha256": "9ac982faca977f4de90aa624655c24e99391bc94792c5806da50bccc0894d10d",
+  "schema": "chacha20-round20-cross-width-operator-stability-a323-result-v1"
+}

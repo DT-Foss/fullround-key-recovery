@@ -71,6 +71,16 @@ RESULT_FILES = {
     "aes256": "aes256_fips197_metal_width41_recovery_v1.json",
     "chacha20_cross_material": "chacha20_round20_cross_material_composite_recovery_v1.json",
     "chacha20_multitarget_panel": "chacha20_round20_multitarget_panel_root_confirmation_a286_v1.json",
+    "chacha20_w43_complete": "chacha20_round20_w43_metal_record_v1.json",
+    "chacha20_a294": "chacha20_round20_w24_causal_ordered_metal_a294_v1.json",
+    "chacha20_a295": "chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+    "chacha20_a296": "chacha20_round20_causal_search_gain_panel_a296_v1.json",
+    "chacha20_a297": "chacha20_round20_w32_causal_search_gain_panel_a297_v1.json",
+    "chacha20_a303": "chacha20_round20_w32_dominance_pruned_companion_a303_v1.json",
+    "chacha20_a304": "chacha20_round20_w43_grouped_engine_a304_v1.json",
+    "chacha20_a305": "chacha20_round20_w43_a299_grouped_replay_a305_v1.json",
+    "chacha20_a309": "chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.json",
+    "chacha20_a313": "chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
 }
 
 CONFIG_FILES = {
@@ -78,6 +88,11 @@ CONFIG_FILES = {
     "aes256": "aes256_metal_width41_recovery_v1.json",
     "chacha20_cross_material": "chacha20_round20_cross_material_target_v1.json",
     "chacha20_multitarget_panel": "chacha20_round20_multitarget_panel_master_v1.json",
+    "chacha20_a303": "chacha20_round20_w32_fine_selected_channel_transfer_a298_v1.json",
+    "chacha20_a304": "chacha20_round20_w43_calibrated_coarse_numeric_replication_a302_v1.json",
+    "chacha20_a305": "chacha20_round20_w43_fine_selected_channel_transfer_a299_v1.json",
+    "chacha20_a309": "chacha20_round20_w43_three_operator_portfolio_a300_v1.json",
+    "chacha20_a313": "chacha20_round20_w44_calibrated_coarse_numeric_a308_v1.json",
 }
 
 

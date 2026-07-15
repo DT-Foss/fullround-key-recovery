@@ -1,0 +1,44 @@
+{
+  "schema": "chacha20-round20-holdout-selected-w45-recovery-a322-design-v1",
+  "attempt_id": "A322",
+  "design_state": "frozen_while_A313_recovery_is_running_before_A321_selection_and_before_any_A313_or_A314_candidate_or_result_exists",
+  "scientific_question": "Does the operator selected solely by an independent W44 holdout recover the unseen standard ChaCha20-R20 W45 target before exhausting the complete residual domain?",
+  "execution_contract": {
+    "order_source": "the_exact_A321_holdout_selected_W45_order",
+    "engine": "A311_exactly_qualified_four_slab_grouped_W45_Metal_engine",
+    "candidates_per_prefix_group": 8589934592,
+    "slabs_per_prefix_group": 4,
+    "candidates_per_slab": 2147483648,
+    "outcome_evaluation": "only_after_all_four_slabs_of_the_selected_prefix_complete",
+    "stop_rule": "first_complete_prefix_group_with_exactly_one_factual_filter",
+    "matched_control": "identical_complete_search_against_frozen_one_bit_control_output",
+    "host_refresh_interval_prefix_groups": 128,
+    "confirmation": "independent_byte_and_word_implementations_over_eight_full_20_round_plus_feed_forward_blocks",
+    "manual_order_override_after_A321_selection": false,
+    "A314_target_label_or_candidate_used_for_A321_selection": false
+  },
+  "information_boundary": {
+    "A313_result_available_at_design_freeze": false,
+    "A313_candidate_available_at_design_freeze": false,
+    "A321_selected_operator_available_at_design_freeze": false,
+    "A314_target_blind_order_available_at_design_freeze": true,
+    "A314_result_available_at_design_freeze": false,
+    "A314_candidate_available_at_design_freeze": false,
+    "A314_prefix_rank_available_at_design_freeze": false,
+    "A314_filter_outcome_available_at_design_freeze": false,
+    "target_labels_used_from_A314_for_order_selection": 0,
+    "reader_refits_after_A313_or_A314_reveal": 0
+  },
+  "source_anchors": {
+    "A321_design_path": "research/configs/chacha20_round20_holdout_selected_w45_operator_a321_design_v1.json",
+    "A321_design_sha256": "3db5966ca254f8a5342399445d992db672fd0e9e5d40bc8ad401b0ae8cbd1e92",
+    "A314_protocol_path": "research/configs/chacha20_round20_w45_fine_band_recovery_a314_v1.json",
+    "A314_protocol_sha256": "17877a15624f7ab6fec1333c57260fa447d71d1112b9df5aa8219f8403968574",
+    "A314_preflight_path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_preflight_v1.json",
+    "A314_preflight_sha256": "cfb5bacd6e6e17479260d8a2cacd2f9808afc632d82e31f80e8dc6ed2d4159a4",
+    "A314_order_path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_order_v1.json",
+    "A314_order_sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034",
+    "A311_qualification_path": "research/results/v1/chacha20_round20_w45_four_slab_grouped_engine_a311_qualification_v1.json",
+    "A311_qualification_sha256": "37b258ab7c46f78a702ed92b3c1b72c5b5948113cf67a61a4a1f33e938e9b31a"
+  }
+}

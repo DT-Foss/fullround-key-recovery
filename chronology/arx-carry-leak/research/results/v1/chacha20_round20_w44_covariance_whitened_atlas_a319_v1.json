@@ -1,0 +1,519 @@
+{
+  "A313_result_sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a",
+  "anchors": {
+    "A313_result": {
+      "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+      "sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a"
+    },
+    "commitment": {
+      "path": "research/configs/chacha20_round20_w44_covariance_whitened_atlas_a319_commitment_v1.json",
+      "sha256": "82b772cda68ba1cea76ecf4140f1979254409d0523d57b646cc4fad15afe0233"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w44_covariance_whitened_atlas_a319_design_v1.json",
+      "sha256": "5e5a4d3497104ad64a185b4f2d41572aa76f7f35dfb1c4a4fdf6dc3d5790ecb3"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w44_covariance_whitened_atlas_a319_order_v1.json",
+      "sha256": "8096131a7e3c2508ebd04226e9f8a335c48e359241eaf2e9e18c268e2ed1bead"
+    }
+  },
+  "attempt_id": "A319",
+  "candidate_execution": {
+    "confirmed_prefix_source": "A313_dual_independent_confirmation",
+    "duplicate_candidate_execution": false,
+    "performed_by_A319": false
+  },
+  "causal": {
+    "api_id": "a319w44",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w44_covariance_whitened_atlas_a319_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "unchanged_whitened_geometry_replication_or_online_update",
+        "predicate": "next_required_object",
+        "subject": "A319:prospective_covariance_whitened_W44_atlas_evaluated",
+        "suggested_queries": [
+          "Does the exact covariance-normalized geometry concentrate both unseen W44 and W45 targets under the unchanged parameterization?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "PRE_REVEAL_COMMITTED_EXACT_COVARIANCE_WHITENED_W44_ATLAS_EVALUATED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_exact_whitening_commitment_chain",
+        "o_idx": 4,
+        "outcome": "A319:prospective_covariance_whitened_W44_atlas_evaluated",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A319_covariance_whitened_chain",
+        "trigger": "A295_A303_A305_A309:confirmed_operator_coordinate_covariance"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "540b3f0a92d54d994dc630985aad1f6b424e11b2e07e5490897aecf5178a0707",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 5313,
+      "file_size_kb": 5.2,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w44_covariance_whitened_atlas_a319_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "commitment_sha256": "82b772cda68ba1cea76ecf4140f1979254409d0523d57b646cc4fad15afe0233",
+  "design_sha256": "5e5a4d3497104ad64a185b4f2d41572aa76f7f35dfb1c4a4fdf6dc3d5790ecb3",
+  "evidence_stage": "PRE_REVEAL_COMMITTED_EXACT_COVARIANCE_WHITENED_W44_ATLAS_EVALUATED",
+  "exact_geometry": {
+    "arithmetic": "exact_rational",
+    "diagonal_variances_with_ridge": [
+      "381506843/576",
+      "1097871083/576",
+      "984737819/576"
+    ],
+    "fixed_identity_ridge": "48315995/576",
+    "fixed_shrinkage_weight": "1/2",
+    "inverse_shrunk_covariance": [
+      [
+        "604007759611250607168/396727468116278921169482291",
+        "-31709814965685660672/396727468116278921169482291",
+        "412052241960271872/10722364003142673545121143"
+      ],
+      [
+        "-31709814965685660672/396727468116278921169482291",
+        "216257628281201764416/396727468116278921169482291",
+        "-1083258996817628160/10722364003142673545121143"
+      ],
+      [
+        "412052241960271872/10722364003142673545121143",
+        "-1083258996817628160/10722364003142673545121143",
+        "6476529388370681664/10722364003142673545121143"
+      ]
+    ],
+    "pairwise_median_scales": [
+      "1715/2",
+      "2949/2",
+      "1473/1"
+    ],
+    "positive_definite_leading_principal_minors": [
+      "381506843/576",
+      "416027061405755593/331776",
+      "396727468116278921169482291/191102976"
+    ],
+    "prototype_mean": [
+      "5457/2",
+      "5531/4",
+      "5691/2"
+    ],
+    "sample_covariance": [
+      [
+        "1735369/3",
+        "1105987/6",
+        "-53448/1"
+      ],
+      [
+        "1105987/6",
+        "7288577/4",
+        "3755239/6"
+      ],
+      [
+        "-53448/1",
+        "3755239/6",
+        "4877197/3"
+      ]
+    ],
+    "shrunk_covariance": [
+      [
+        "381506843/576",
+        "1105987/12",
+        "-26724/1"
+      ],
+      [
+        "1105987/12",
+        "1097871083/576",
+        "3755239/12"
+      ],
+      [
+        "-26724/1",
+        "3755239/12",
+        "984737819/576"
+      ]
+    ]
+  },
+  "information_boundary": {
+    "A313_candidate_available_at_design_freeze": false,
+    "A313_candidate_or_prefix_rank_available_at_materialization": false,
+    "A313_filter_outcome_available_at_design_freeze": false,
+    "A313_prefix_rank_available_at_design_freeze": false,
+    "A313_recovery_running_at_design_freeze": true,
+    "A313_result_available_at_design_freeze": false,
+    "A313_result_available_at_materialization": false,
+    "A317_order_and_commitment_available_at_design_freeze": true,
+    "candidate_or_rank_used_to_choose_shrinkage_ridge_scales_or_tie_break": false,
+    "reader_refits_after_A313_reveal": 0,
+    "target_labels_used_from_A313": 0
+  },
+  "measurement_sha256": "28a646c534304edfbe259fc8aac950415ce77793794b1b476febda8cbf043b94",
+  "operator_diversity_audit": {
+    "operator_pairs": 45,
+    "spearman_rank_correlations": {
+      "coarse__vs__A313_portfolio": 0.3223420924086998,
+      "coarse__vs__numeric": -0.07049918594951546,
+      "fine__vs__A313_portfolio": 0.5180720852516717,
+      "fine__vs__coarse": 0.1097435626071766,
+      "fine__vs__numeric": -0.08065349972976743,
+      "nearest_exact_diagonal_variance_L2__vs__A313_portfolio": -0.2875572766909988,
+      "nearest_exact_diagonal_variance_L2__vs__coarse": 0.11047852511575967,
+      "nearest_exact_diagonal_variance_L2__vs__fine": -0.5826153115251846,
+      "nearest_exact_diagonal_variance_L2__vs__nearest_exact_pairwise_median_scaled_L1": 0.970107706169964,
+      "nearest_exact_diagonal_variance_L2__vs__nearest_prototype_L1": 0.9077731120376654,
+      "nearest_exact_diagonal_variance_L2__vs__nearest_prototype_Linf": 0.8881257861177906,
+      "nearest_exact_diagonal_variance_L2__vs__nearest_prototype_squared_L2": 0.9310609969779885,
+      "nearest_exact_diagonal_variance_L2__vs__numeric": -0.38292924105885573,
+      "nearest_exact_pairwise_median_scaled_L1__vs__A313_portfolio": -0.2501323626571998,
+      "nearest_exact_pairwise_median_scaled_L1__vs__coarse": 0.15319540711772262,
+      "nearest_exact_pairwise_median_scaled_L1__vs__fine": -0.5734152277103388,
+      "nearest_exact_pairwise_median_scaled_L1__vs__nearest_prototype_L1": 0.9557790028465504,
+      "nearest_exact_pairwise_median_scaled_L1__vs__nearest_prototype_Linf": 0.8357475093103393,
+      "nearest_exact_pairwise_median_scaled_L1__vs__nearest_prototype_squared_L2": 0.9234426567916106,
+      "nearest_exact_pairwise_median_scaled_L1__vs__numeric": -0.3978479245791837,
+      "nearest_exact_shrinkage_mahalanobis__vs__A313_portfolio": -0.29019407777574,
+      "nearest_exact_shrinkage_mahalanobis__vs__coarse": 0.12638362947716592,
+      "nearest_exact_shrinkage_mahalanobis__vs__fine": -0.5819005214647701,
+      "nearest_exact_shrinkage_mahalanobis__vs__nearest_exact_diagonal_variance_L2": 0.9961654783152888,
+      "nearest_exact_shrinkage_mahalanobis__vs__nearest_exact_pairwise_median_scaled_L1": 0.9687200820172068,
+      "nearest_exact_shrinkage_mahalanobis__vs__nearest_prototype_L1": 0.9101167097664153,
+      "nearest_exact_shrinkage_mahalanobis__vs__nearest_prototype_Linf": 0.8913392188686039,
+      "nearest_exact_shrinkage_mahalanobis__vs__nearest_prototype_squared_L2": 0.9332961606382898,
+      "nearest_exact_shrinkage_mahalanobis__vs__numeric": -0.3918901626192689,
+      "nearest_prototype_L1__vs__A313_portfolio": -0.20642384347610732,
+      "nearest_prototype_L1__vs__coarse": 0.23417825367060324,
+      "nearest_prototype_L1__vs__fine": -0.41156966387336935,
+      "nearest_prototype_L1__vs__nearest_prototype_Linf": 0.8681890526219265,
+      "nearest_prototype_L1__vs__nearest_prototype_squared_L2": 0.9640250066971411,
+      "nearest_prototype_L1__vs__numeric": -0.4956445918965655,
+      "nearest_prototype_Linf__vs__A313_portfolio": -0.28283843029212163,
+      "nearest_prototype_Linf__vs__coarse": 0.1778416577790548,
+      "nearest_prototype_Linf__vs__fine": -0.35570735223849353,
+      "nearest_prototype_Linf__vs__nearest_prototype_squared_L2": 0.9599862604533514,
+      "nearest_prototype_Linf__vs__numeric": -0.505429295855551,
+      "nearest_prototype_squared_L2__vs__A313_portfolio": -0.2547909265794971,
+      "nearest_prototype_squared_L2__vs__coarse": 0.20040124487195132,
+      "nearest_prototype_squared_L2__vs__fine": -0.39910854211118696,
+      "nearest_prototype_squared_L2__vs__numeric": -0.5135285893253327,
+      "numeric__vs__A313_portfolio": 0.13054558184688653
+    },
+    "target_labels_used": 0,
+    "top_k_overlaps": {
+      "coarse__vs__A313_portfolio": {
+        "top_1024": 440,
+        "top_16": 3,
+        "top_256": 77,
+        "top_64": 21
+      },
+      "coarse__vs__numeric": {
+        "top_1024": 288,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "fine__vs__A313_portfolio": {
+        "top_1024": 397,
+        "top_16": 5,
+        "top_256": 94,
+        "top_64": 21
+      },
+      "fine__vs__coarse": {
+        "top_1024": 349,
+        "top_16": 0,
+        "top_256": 50,
+        "top_64": 15
+      },
+      "fine__vs__numeric": {
+        "top_1024": 251,
+        "top_16": 0,
+        "top_256": 6,
+        "top_64": 0
+      },
+      "nearest_exact_diagonal_variance_L2__vs__A313_portfolio": {
+        "top_1024": 275,
+        "top_16": 0,
+        "top_256": 19,
+        "top_64": 2
+      },
+      "nearest_exact_diagonal_variance_L2__vs__coarse": {
+        "top_1024": 330,
+        "top_16": 0,
+        "top_256": 21,
+        "top_64": 0
+      },
+      "nearest_exact_diagonal_variance_L2__vs__fine": {
+        "top_1024": 0,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_exact_diagonal_variance_L2__vs__nearest_exact_pairwise_median_scaled_L1": {
+        "top_1024": 896,
+        "top_16": 13,
+        "top_256": 225,
+        "top_64": 59
+      },
+      "nearest_exact_diagonal_variance_L2__vs__nearest_prototype_L1": {
+        "top_1024": 854,
+        "top_16": 13,
+        "top_256": 210,
+        "top_64": 53
+      },
+      "nearest_exact_diagonal_variance_L2__vs__nearest_prototype_Linf": {
+        "top_1024": 795,
+        "top_16": 12,
+        "top_256": 192,
+        "top_64": 49
+      },
+      "nearest_exact_diagonal_variance_L2__vs__nearest_prototype_squared_L2": {
+        "top_1024": 857,
+        "top_16": 13,
+        "top_256": 212,
+        "top_64": 53
+      },
+      "nearest_exact_diagonal_variance_L2__vs__numeric": {
+        "top_1024": 117,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_exact_pairwise_median_scaled_L1__vs__A313_portfolio": {
+        "top_1024": 275,
+        "top_16": 0,
+        "top_256": 19,
+        "top_64": 2
+      },
+      "nearest_exact_pairwise_median_scaled_L1__vs__coarse": {
+        "top_1024": 368,
+        "top_16": 0,
+        "top_256": 23,
+        "top_64": 0
+      },
+      "nearest_exact_pairwise_median_scaled_L1__vs__fine": {
+        "top_1024": 5,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_exact_pairwise_median_scaled_L1__vs__nearest_prototype_L1": {
+        "top_1024": 894,
+        "top_16": 15,
+        "top_256": 223,
+        "top_64": 54
+      },
+      "nearest_exact_pairwise_median_scaled_L1__vs__nearest_prototype_Linf": {
+        "top_1024": 733,
+        "top_16": 13,
+        "top_256": 182,
+        "top_64": 48
+      },
+      "nearest_exact_pairwise_median_scaled_L1__vs__nearest_prototype_squared_L2": {
+        "top_1024": 820,
+        "top_16": 14,
+        "top_256": 213,
+        "top_64": 51
+      },
+      "nearest_exact_pairwise_median_scaled_L1__vs__numeric": {
+        "top_1024": 110,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_exact_shrinkage_mahalanobis__vs__A313_portfolio": {
+        "top_1024": 262,
+        "top_16": 0,
+        "top_256": 18,
+        "top_64": 2
+      },
+      "nearest_exact_shrinkage_mahalanobis__vs__coarse": {
+        "top_1024": 336,
+        "top_16": 0,
+        "top_256": 21,
+        "top_64": 0
+      },
+      "nearest_exact_shrinkage_mahalanobis__vs__fine": {
+        "top_1024": 0,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_exact_shrinkage_mahalanobis__vs__nearest_exact_diagonal_variance_L2": {
+        "top_1024": 971,
+        "top_16": 15,
+        "top_256": 245,
+        "top_64": 60
+      },
+      "nearest_exact_shrinkage_mahalanobis__vs__nearest_exact_pairwise_median_scaled_L1": {
+        "top_1024": 887,
+        "top_16": 14,
+        "top_256": 222,
+        "top_64": 55
+      },
+      "nearest_exact_shrinkage_mahalanobis__vs__nearest_prototype_L1": {
+        "top_1024": 838,
+        "top_16": 14,
+        "top_256": 209,
+        "top_64": 51
+      },
+      "nearest_exact_shrinkage_mahalanobis__vs__nearest_prototype_Linf": {
+        "top_1024": 791,
+        "top_16": 12,
+        "top_256": 190,
+        "top_64": 47
+      },
+      "nearest_exact_shrinkage_mahalanobis__vs__nearest_prototype_squared_L2": {
+        "top_1024": 845,
+        "top_16": 13,
+        "top_256": 210,
+        "top_64": 51
+      },
+      "nearest_exact_shrinkage_mahalanobis__vs__numeric": {
+        "top_1024": 110,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_L1__vs__A313_portfolio": {
+        "top_1024": 250,
+        "top_16": 0,
+        "top_256": 18,
+        "top_64": 2
+      },
+      "nearest_prototype_L1__vs__coarse": {
+        "top_1024": 375,
+        "top_16": 0,
+        "top_256": 29,
+        "top_64": 0
+      },
+      "nearest_prototype_L1__vs__fine": {
+        "top_1024": 21,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_L1__vs__nearest_prototype_Linf": {
+        "top_1024": 761,
+        "top_16": 14,
+        "top_256": 193,
+        "top_64": 52
+      },
+      "nearest_prototype_L1__vs__nearest_prototype_squared_L2": {
+        "top_1024": 887,
+        "top_16": 15,
+        "top_256": 231,
+        "top_64": 57
+      },
+      "nearest_prototype_L1__vs__numeric": {
+        "top_1024": 124,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_Linf__vs__A313_portfolio": {
+        "top_1024": 239,
+        "top_16": 0,
+        "top_256": 25,
+        "top_64": 2
+      },
+      "nearest_prototype_Linf__vs__coarse": {
+        "top_1024": 319,
+        "top_16": 0,
+        "top_256": 28,
+        "top_64": 0
+      },
+      "nearest_prototype_Linf__vs__fine": {
+        "top_1024": 0,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_Linf__vs__nearest_prototype_squared_L2": {
+        "top_1024": 889,
+        "top_16": 15,
+        "top_256": 212,
+        "top_64": 57
+      },
+      "nearest_prototype_Linf__vs__numeric": {
+        "top_1024": 132,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_squared_L2__vs__A313_portfolio": {
+        "top_1024": 240,
+        "top_16": 0,
+        "top_256": 17,
+        "top_64": 1
+      },
+      "nearest_prototype_squared_L2__vs__coarse": {
+        "top_1024": 346,
+        "top_16": 0,
+        "top_256": 26,
+        "top_64": 0
+      },
+      "nearest_prototype_squared_L2__vs__fine": {
+        "top_1024": 10,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "nearest_prototype_squared_L2__vs__numeric": {
+        "top_1024": 125,
+        "top_16": 0,
+        "top_256": 0,
+        "top_64": 0
+      },
+      "numeric__vs__A313_portfolio": {
+        "top_1024": 358,
+        "top_16": 2,
+        "top_256": 54,
+        "top_64": 11
+      }
+    }
+  },
+  "order_sha256": "8096131a7e3c2508ebd04226e9f8a335c48e359241eaf2e9e18c268e2ed1bead",
+  "public_challenge_sha256": "c3897f3f8499c9afa01628b7f5e8de0ea5910a9559ca6bfb22fafe71d1fb26d6",
+  "rank_analysis": {
+    "best_whitened_rank_one_based": 2955,
+    "best_whitened_view": "nearest_exact_diagonal_variance_L2",
+    "counterfactual_only_no_duplicate_candidate_execution": true,
+    "prefix12": 770,
+    "prefix12_hex": "302",
+    "prefix_ranks_one_based": {
+      "A313_three_arm_portfolio": 2753,
+      "coarse": 1524,
+      "fine": 1148,
+      "nearest_exact_diagonal_variance_L2": 2955,
+      "nearest_exact_pairwise_median_scaled_L1": 3019,
+      "nearest_exact_shrinkage_mahalanobis": 3002,
+      "nearest_prototype_L1": 2809,
+      "nearest_prototype_Linf": 2159,
+      "nearest_prototype_squared_L2": 2626,
+      "numeric": 771
+    },
+    "primary_gain_bits_vs_complete_prefix_domain": 0.44829173837931163
+  },
+  "schema": "chacha20-round20-w44-covariance-whitened-atlas-a319-result-v1"
+}

@@ -1,0 +1,92 @@
+{
+  "anchors": {
+    "A302_order": {
+      "path": "research/results/v1/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302_order_v1.json",
+      "sha256": "eeaa8e2a39e40dc50d46d78a149c8c5bf4e2b68781e2a846e329e2dfc164166d"
+    },
+    "A302_preflight": {
+      "path": "research/results/v1/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302_preflight_v1.json",
+      "sha256": "990366ed7199049c9f6b132824215ecf170e8a0f2891eab7ad4ff3b7875cb1ab"
+    },
+    "A302_protocol": {
+      "path": "research/configs/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302_v1.json",
+      "sha256": "9aa1121eb94002aea1a159ed321e5b7369dcad7cd24b4f295fb4239f61cfedcc"
+    },
+    "A302_runner": {
+      "path": "research/experiments/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302.py",
+      "sha256": "335c6e002634185dd64999386723665f500953f29b7dc67573e2db654e9f91da"
+    },
+    "A304_reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w43_grouped_engine_a304.sh",
+      "sha256": "367eb3b80fcc24bc62f6a1b44a06295adda57b2c9b0aaa99a09632a9e33e90fd"
+    },
+    "A304_runner": {
+      "path": "research/experiments/chacha20_round20_w43_grouped_engine_a304.py",
+      "sha256": "0f00e54a149d3ad896f5e7bb2ac79b55caac371e163c948894a7d1df72e0ec21"
+    },
+    "A304_test": {
+      "path": "tests/test_chacha20_round20_w43_grouped_engine_a304.py",
+      "sha256": "76d3dd70cb4850c8efd952cdaf407565eba01b85a65da128a03965fae8d66389"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w43_grouped_engine_a304_design_v1.json",
+      "sha256": "7f7e9e1a5d7906aa06e2818f0bc99474839de039815e316cdd7ec01cbcff8d03"
+    },
+    "grouped_native_source": {
+      "path": "research/experiments/chacha20_metal_w43_grouped_native.swift",
+      "sha256": "cfd657be7826ccd25a425cbbb5c7eb4d658ab9dc3fb0521edb34688ef32d319d"
+    }
+  },
+  "attempt_id": "A304",
+  "candidate_execution_started": false,
+  "design_sha256": "7f7e9e1a5d7906aa06e2818f0bc99474839de039815e316cdd7ec01cbcff8d03",
+  "engine_contract": {
+    "candidate_grid": "word0_suffix20_x_word1_low11",
+    "candidate_group_size": 2147483648,
+    "candidate_order_within_group": "all_2^20_word0_values_cross_all_2^11_word1_low_values",
+    "complete_group_before_success_evaluation": true,
+    "control_target_executed_in_same_kernel": true,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "filter_output_words": 2,
+    "full_rounds": 20,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "unknown_key_bits": 43
+  },
+  "information_boundary": {
+    "A302_candidate_available_at_freeze": false,
+    "A302_filter_outcome_available_at_freeze": false,
+    "A302_prefix_rank_available_at_freeze": false,
+    "A302_unknown_assignment_available_at_freeze": false,
+    "engine_changes_candidate_membership": false,
+    "engine_changes_frozen_prefix_order": false,
+    "public_A302_challenge_available_at_freeze": true,
+    "public_A302_order_available_at_freeze": true
+  },
+  "protocol_state": "frozen_before_grouped_candidate_execution",
+  "public_challenge_sha256": "a70fce0d6453012e9a44b1b1ff6378476bb918d2a052f87972eb4026e9464146",
+  "qualification_contract": {
+    "authentic_RFC8439_reference_gate": true,
+    "cross_engine_full_block_equivalence": true,
+    "grouped_filter_exact_factual_candidate": true,
+    "one_bit_matched_control_required_empty": true,
+    "outer_boundaries": [
+      0,
+      1,
+      1023,
+      2047
+    ],
+    "production_target_forbidden_during_qualification": true,
+    "synthetic_targets_only": true
+  },
+  "schema": "chacha20-round20-w43-grouped-engine-a304-protocol-v1",
+  "source_order": {
+    "attempt_id": "A302",
+    "order_sha256": "eeaa8e2a39e40dc50d46d78a149c8c5bf4e2b68781e2a846e329e2dfc164166d",
+    "portfolio_order_uint16be_sha256": "2c03f1b82e09aa80b8629874f1ef5d63451ee4c362fd237953b2798d5d6ba543",
+    "prefix_cells": 4096,
+    "preflight_sha256": "990366ed7199049c9f6b132824215ecf170e8a0f2891eab7ad4ff3b7875cb1ab",
+    "protocol_sha256": "9aa1121eb94002aea1a159ed321e5b7369dcad7cd24b4f295fb4239f61cfedcc"
+  },
+  "unknown_assignment_available_to_runner": false
+}

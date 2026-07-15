@@ -1,0 +1,159 @@
+{
+  "A313_result_available_at_commitment": false,
+  "anchors": {
+    "A313_order": {
+      "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json",
+      "sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3"
+    },
+    "A313_protocol": {
+      "path": "research/configs/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+      "sha256": "dd5d59c52b8d5247d4a51b5a078f640577a2b8e3506fd2c7a46a8ca2a34c2f3c"
+    },
+    "A317_commitment": {
+      "path": "research/configs/chacha20_round20_w44_multiview_operator_atlas_a317_commitment_v1.json",
+      "sha256": "e7b4be79a4a0902d631cfef6073818c7afdc89108b18b7b2b1e22e568d773240"
+    },
+    "A317_order": {
+      "path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+      "sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w44_covariance_whitened_atlas_a319_design_v1.json",
+      "sha256": "5e5a4d3497104ad64a185b4f2d41572aa76f7f35dfb1c4a4fdf6dc3d5790ecb3"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w44_covariance_whitened_atlas_a319_order_v1.json",
+      "sha256": "8096131a7e3c2508ebd04226e9f8a335c48e359241eaf2e9e18c268e2ed1bead"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w44_covariance_whitened_atlas_a319.sh",
+      "sha256": "c2ebadc48d344b2bad2242a4eeee62c1329239b7d31622f454a1e4aa8f52b737"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w44_covariance_whitened_atlas_a319.py",
+      "sha256": "d6f9ad95a9c3234caa1df11527eacc1eeeda0fdef89c2cf4829352c7a08a866c"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w44_covariance_whitened_atlas_a319.py",
+      "sha256": "fb62faf4fdedcbdb64477fca7b9892826d6a086b7c5375526f3e3f03375e618d"
+    }
+  },
+  "attempt_id": "A319",
+  "candidate_or_rank_available_at_commitment": false,
+  "commitment_state": "frozen_before_A313_result_candidate_or_rank_exists",
+  "design_sha256": "5e5a4d3497104ad64a185b4f2d41572aa76f7f35dfb1c4a4fdf6dc3d5790ecb3",
+  "exact_geometry": {
+    "arithmetic": "exact_rational",
+    "diagonal_variances_with_ridge": [
+      "381506843/576",
+      "1097871083/576",
+      "984737819/576"
+    ],
+    "fixed_identity_ridge": "48315995/576",
+    "fixed_shrinkage_weight": "1/2",
+    "inverse_shrunk_covariance": [
+      [
+        "604007759611250607168/396727468116278921169482291",
+        "-31709814965685660672/396727468116278921169482291",
+        "412052241960271872/10722364003142673545121143"
+      ],
+      [
+        "-31709814965685660672/396727468116278921169482291",
+        "216257628281201764416/396727468116278921169482291",
+        "-1083258996817628160/10722364003142673545121143"
+      ],
+      [
+        "412052241960271872/10722364003142673545121143",
+        "-1083258996817628160/10722364003142673545121143",
+        "6476529388370681664/10722364003142673545121143"
+      ]
+    ],
+    "pairwise_median_scales": [
+      "1715/2",
+      "2949/2",
+      "1473/1"
+    ],
+    "positive_definite_leading_principal_minors": [
+      "381506843/576",
+      "416027061405755593/331776",
+      "396727468116278921169482291/191102976"
+    ],
+    "prototype_mean": [
+      "5457/2",
+      "5531/4",
+      "5691/2"
+    ],
+    "sample_covariance": [
+      [
+        "1735369/3",
+        "1105987/6",
+        "-53448/1"
+      ],
+      [
+        "1105987/6",
+        "7288577/4",
+        "3755239/6"
+      ],
+      [
+        "-53448/1",
+        "3755239/6",
+        "4877197/3"
+      ]
+    ],
+    "shrunk_covariance": [
+      [
+        "381506843/576",
+        "1105987/12",
+        "-26724/1"
+      ],
+      [
+        "1105987/12",
+        "1097871083/576",
+        "3755239/12"
+      ],
+      [
+        "-26724/1",
+        "3755239/12",
+        "984737819/576"
+      ]
+    ]
+  },
+  "order_sha256": "8096131a7e3c2508ebd04226e9f8a335c48e359241eaf2e9e18c268e2ed1bead",
+  "order_uint16be_sha256": {
+    "A313_portfolio": "5b504f49688ee98271be8d3fd28982fe7d590879ed0ededb8d41116dc1626191",
+    "coarse": "cf1391b4b4a62a9e4585a68d3dbf6cfa5f87ba5b13ff3b3a5edb1eecdd63e854",
+    "fine": "6062153baf987cbe7fdb96e66b958fa2e7347af6a46714d81fb1b2f3d9fa8021",
+    "nearest_exact_diagonal_variance_L2": "8e92e30b5e61650fd8eb234ba03f7b5ae61f51291483ea7cfd70dc3f538fa30d",
+    "nearest_exact_pairwise_median_scaled_L1": "6aa5e2ea1ffa2798494be4aa342ff4f63bd2c4986e107470aca9a0ebd2eec7b0",
+    "nearest_exact_shrinkage_mahalanobis": "7742217b958596ab099e5dcf18c1288587e15bffa9c884b1c80bd46dfd092678",
+    "nearest_prototype_L1": "f6493a2e4c6cafaf7a3353b583e8a3bb4fd057df71fc23e721203d3f2f0c4272",
+    "nearest_prototype_Linf": "ebcbc4e1b195f82d4645d280e70e557fdfd0082fde329aaa6d2be90ff282f066",
+    "nearest_prototype_squared_L2": "4c625e552d0465caca587a8f0a0d39ae3a5daa658b6727574afaf356eaa9fd2b",
+    "numeric": "a02cf28d81488fd0b2bbde4d6d5b035210669370a220eb257b016d7bf2dfe68e"
+  },
+  "primary_view": "nearest_exact_shrinkage_mahalanobis",
+  "prototype_coordinates_one_based": [
+    [
+      2605,
+      202,
+      1006
+    ],
+    [
+      2366,
+      3113,
+      3197
+    ],
+    [
+      2114,
+      427,
+      3952
+    ],
+    [
+      3829,
+      1789,
+      3227
+    ]
+  ],
+  "public_challenge_sha256": "c3897f3f8499c9afa01628b7f5e8de0ea5910a9559ca6bfb22fafe71d1fb26d6",
+  "schema": "chacha20-round20-w44-covariance-whitened-atlas-a319-commitment-v1"
+}

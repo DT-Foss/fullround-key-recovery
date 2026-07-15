@@ -1,0 +1,118 @@
+{
+  "attempt_id": "CHACHA20KR43",
+  "benchmark": {
+    "maximum_projected_seconds": 10800.0,
+    "minimum_candidates_per_gpu_second": 1375732249.1642723,
+    "projected_complete_domain_seconds": 6393.753601074219,
+    "rows": [
+      {
+        "candidate_count": 268435456,
+        "candidates_per_gpu_second": 1375732249.1642723,
+        "control_matches": [],
+        "factual_matches": [
+          0
+        ],
+        "gpu_seconds": 0.19512187503278255,
+        "repetition": 0
+      },
+      {
+        "candidate_count": 268435456,
+        "candidates_per_gpu_second": 1450840389.7637465,
+        "control_matches": [],
+        "factual_matches": [
+          0
+        ],
+        "gpu_seconds": 0.18502066656947136,
+        "repetition": 1
+      },
+      {
+        "candidate_count": 268435456,
+        "candidates_per_gpu_second": 1453442873.178701,
+        "control_matches": [],
+        "factual_matches": [
+          0
+        ],
+        "gpu_seconds": 0.18468937510624528,
+        "repetition": 2
+      }
+    ],
+    "safety_adjusted_projected_seconds": 7992.192001342773,
+    "safety_factor": 1.25
+  },
+  "design_execution_sha256": "3c3dbbb36b84b87baf0f11c99e7cf7771bd6202156ff7be4eb492df506651199",
+  "design_sha256": "1b8b9aac076787ec4d4f7f06108e4b82ac7e70c6f494ee8cd9d05c2148bc92ff",
+  "mapping_gate": {
+    "complete_output_bits_checked": 12288,
+    "logical_candidates_checked": 24,
+    "official_reference_and_Metal_exact": true,
+    "rows": [
+      {
+        "candidate_count": 8,
+        "complete_output_bits_checked": 4096,
+        "factual_key_word0": 610839555,
+        "first_key_word0": 610839552,
+        "outer11": 0,
+        "output_sha256": "0f1bd335de3b04805887b72f8a8dafe6393075bad8213d7a1e520c1f70e42241"
+      },
+      {
+        "candidate_count": 8,
+        "complete_output_bits_checked": 4096,
+        "factual_key_word0": 610839555,
+        "first_key_word0": 610839552,
+        "outer11": 1023,
+        "output_sha256": "ba2bf771485333faee805f11965ecca353b63d661093707b567063fddb414527"
+      },
+      {
+        "candidate_count": 8,
+        "complete_output_bits_checked": 4096,
+        "factual_key_word0": 610839555,
+        "first_key_word0": 610839552,
+        "outer11": 2047,
+        "output_sha256": "98328c2943c27a73c7077ce7f646f8590424cf4eeed73e24d94b1e09bf593177"
+      }
+    ]
+  },
+  "metal_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-native-v1"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "5fc1863f3f5633256ccfb1a6a95945c7255fe4642d057c0c642e04b0579f7079",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "warnings_as_errors": true
+  },
+  "production_challenge_generated": false,
+  "qualification_state": "complete_before_production_challenge_generation",
+  "reference_gate": {
+    "feedforward": true,
+    "independent_word_reference_exact": true,
+    "output_bits_checked": 512,
+    "output_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "pure_python_exact": true,
+    "reference": "RFC_8439_Section_2.3.2",
+    "rounds": 20
+  },
+  "schema": "chacha20-round20-w43-metal-record-qualification-v1",
+  "selection": {
+    "launch_approved": true,
+    "logical_candidate_count": 8796093022208,
+    "selected_width": 43
+  }
+}

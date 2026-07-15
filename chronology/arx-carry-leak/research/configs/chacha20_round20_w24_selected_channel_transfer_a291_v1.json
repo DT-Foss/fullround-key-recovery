@@ -1,0 +1,307 @@
+{
+  "anchors": {
+    "A223_config": {
+      "path": "research/configs/chacha20_round20_capacity_moonshot_a223_v1.json",
+      "sha256": "9b60f65be6415b4ac3738881336bfe8397328e0d216882f684db1c3da9b3a79f"
+    },
+    "A223_source": {
+      "path": "research/experiments/chacha20_round20_capacity_moonshot_a223.py",
+      "sha256": "f41b70c549392101a4a2cdf1499f69ac897912682a5696da79ef3533fa55e0e0"
+    },
+    "A251_base_native": {
+      "path": "research/native/cadical_fresh_multihorizon.cpp",
+      "sha256": "b9c679b1566665e823534734919289b8acc0a1ba0965a96da604088889cc2210"
+    },
+    "A251_helper": {
+      "path": "research/native/build/cadical_fresh_clause_identity_a291-167d845e67f294c9c920ada124cf582e4609c697116270bccd486f7e37382eaa-d536dd2a7d22b4e4f587f44333861b303fb3fdf100b395ac1d911f4e93cd43a3",
+      "sha256": "d536dd2a7d22b4e4f587f44333861b303fb3fdf100b395ac1d911f4e93cd43a3"
+    },
+    "A251_native": {
+      "path": "research/native/cadical_fresh_clause_identity.cpp",
+      "sha256": "bb79a3de830f8f1912731e302b6bc1d4ac8dadb1c57b03668211f16b6894d98f"
+    },
+    "A251_wrapper": {
+      "path": "research/experiments/chacha20_fresh_clause_identity.py",
+      "sha256": "3a1d63d223712997519f72143ebcc3e5725a8f8659eadbd9389465dd0fe654f6"
+    },
+    "A272_causal": {
+      "path": "research/results/v1/chacha20_round20_selected_channel_prospective_validation_v1.causal",
+      "sha256": "18b1d58b74af5e7d6b66622f9607ce751a7911da802c1d058715bcd892d9de3f"
+    },
+    "A272_protocol": {
+      "path": "research/configs/chacha20_round20_selected_channel_prospective_validation_v1.json",
+      "sha256": "67c568baf4ac5a4d7191cca2ac7bbe4e07e62a81475b51ba838be3f011d6220f"
+    },
+    "A272_result": {
+      "path": "research/results/v1/chacha20_round20_selected_channel_prospective_validation_v1.json",
+      "sha256": "41460e75bed006f5df23057151d22d594d30e88b55f6320f28462e24945f18da"
+    },
+    "A275_protocol": {
+      "path": "research/configs/chacha20_round20_selected_channel_target_replication_v1.json",
+      "sha256": "d6e753defe3eba1e9989e8e6f792a6e731d8371487788917db0d7cff518c75f9"
+    },
+    "A275_runner": {
+      "path": "research/experiments/chacha20_round20_selected_channel_target_replication_measure.py",
+      "sha256": "218815280ce978aba16ba857db80828424e390cc1d141a1be3d33fb330c4e56b"
+    },
+    "A286_causal": {
+      "path": "research/results/v1/chacha20_round20_multitarget_panel_root_confirmation_a286_v1.causal",
+      "sha256": "4c8ac373485a5f8f8db91f3d555ec041dad917182e101fd8833ec346683ade0b"
+    },
+    "A286_result": {
+      "path": "research/results/v1/chacha20_round20_multitarget_panel_root_confirmation_a286_v1.json",
+      "sha256": "c171c61c1ce90c9e19faa06784205a7c9a24c2ddcb58db5ba74ecd00f1e32464"
+    },
+    "A287_preflight": {
+      "path": "research/results/v1/chacha20_round20_w24_global_portfolio_a287_preflight_v1.json",
+      "sha256": "1bacefadd636b9e7fb9f42476e1927a87547d04ece676c8efcd1e29a6ef898b0"
+    },
+    "A287_protocol": {
+      "path": "research/configs/chacha20_round20_w24_global_portfolio_a287_v1.json",
+      "sha256": "8e75e49d33d8311be2132cdcec1f0f87073e5e5395112c7dac8752e39b6dac72"
+    },
+    "A287_source": {
+      "path": "research/experiments/chacha20_round20_w24_global_portfolio_a287.py",
+      "sha256": "cf0aeb03f4914a398b47c1675e7dee48ad3176e2c6a364cda37ede2c163f154c"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w24_selected_channel_transfer_a291.py",
+      "sha256": "d09946325b0fed45a19815ca8b8db7e58ba9f6ae956c928f52babfc7dfa892ba"
+    }
+  },
+  "attempt_id": "A291",
+  "authentic_causal_readback": {
+    "read_by_main_before_freeze": true,
+    "source_api_id": "a286pan",
+    "source_gap": {
+      "confidence": 1.0,
+      "expected_object_type": "prospectively_frozen_W24_cross_material_transfer",
+      "predicate": "next_required_object",
+      "subject": "A286:retained_four_target_panel",
+      "suggested_queries": [
+        "Can the frozen panel evidence guide a 24-unknown-bit R20 recovery?",
+        "Which target-blind operator preserves advantage after widening from W20 to W24?"
+      ]
+    }
+  },
+  "execution_plan": {
+    "CNF_sha256": "9365e0dd8f8d3c7ff0afd9a70c69cbde9b478a724fa418565fbb2223262de7f4",
+    "all_1024_stages_must_remain_UNKNOWN_and_model_free": true,
+    "candidate_order": "numeric_0_through_255",
+    "complete_disjoint_assignment_domain": 16777216,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "diagnostic_target_blocks": 1,
+    "feedforward_included": true,
+    "free_bits_per_cell": 16,
+    "fresh_solver_instance_per_cell": true,
+    "known_key_bits": 232,
+    "model_refits": 0,
+    "order_tiebreak": "descending_score_then_ascending_prefix",
+    "partition_prefix_coordinates_high_to_low": [
+      23,
+      22,
+      21,
+      20,
+      19,
+      18,
+      17,
+      16
+    ],
+    "prefix_cells": 256,
+    "primitive": "standard_ChaCha20_block_function",
+    "reader": "unchanged_A272_eight_feature_selected_channel_reader",
+    "recovery_target_blocks_available": 8,
+    "rounds": 20,
+    "score": "sum_of_frozen_standardized_additive_contributions",
+    "selected_feature_indices": [
+      502,
+      504,
+      505,
+      508,
+      509,
+      510,
+      511,
+      514
+    ],
+    "source_mapping_sha256": "32b7df2873259346eef7416d705985c78ac19532325c823c4dfd4dd8e51a27e7",
+    "synthetic_reader_mapping_sha256": "3d5f21d8ba96049fe578ada8cf490201b861c20c8caabb78ac918ece030a4afc",
+    "target_labels_used": 0,
+    "unknown_key_bits": 24,
+    "watchdog_seconds_per_stage": 2.0
+  },
+  "execution_plan_sha256": "8ca17413bc38d4e2d088f746d75e5eea9662da5fc23a632c04b8955baadc3e7a",
+  "information_boundary": {
+    "A272_reader_frozen_before_A287_target_generation": true,
+    "A286_W24_gap_read_before_A291_design": true,
+    "A287_A289_A290_outcomes_available_at_freeze": false,
+    "A287_public_target_exists_but_secret_assignment_is_absent": true,
+    "A291_trajectory_measurement_started_before_freeze": false,
+    "UNKNOWN_will_not_be_treated_as_UNSAT": true,
+    "all_cells_horizons_features_and_tiebreak_frozen": true,
+    "target_prefix_or_model_available_to_reader": false
+  },
+  "protocol_state": "unchanged_A272_reader_and_complete_W24_measurement_frozen_before_any_A291_measurement_or_global_W24_outcome",
+  "public_challenge_sha256": "5beabf27dccaa98cfaa97eed7bf7420c6548dcc469b4c924af04f8a872ecc30f",
+  "reader_CNF": {
+    "CNF": {
+      "path": "research/artifacts/a291_chacha20_r20_w24_selected_channel/a291_chacha20_r20_w24_b1_base.cnf",
+      "sha256": "9365e0dd8f8d3c7ff0afd9a70c69cbde9b478a724fa418565fbb2223262de7f4"
+    },
+    "CNF_export": {
+      "bytes": 3808950,
+      "command_sha256": "e6b98eac4d25c9b12889be18cdf12c9d87e50cbabd3b2bfbf6d53df6e33f9b09",
+      "externally_timed_out": false,
+      "header": "p cnf 68771 216391",
+      "label": "A291_W24_B1_BASE",
+      "returncode": 0,
+      "sha256": "9365e0dd8f8d3c7ff0afd9a70c69cbde9b478a724fa418565fbb2223262de7f4",
+      "solver_status_redacted_and_not_used": true,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "volatile_seconds": 10.032173749990761
+    },
+    "CNF_header": "p cnf 68771 216391",
+    "blocks": 1,
+    "coordinate_probes": [
+      {
+        "dimension": -1,
+        "exact_unit_delta": true,
+        "pattern_sha256": "709e80c88487a2411e1ee4dfb9f22a861492d20c4765150c0c794abd70f8147c",
+        "probe_cnf_sha256": "73c38db5ffb9d2406c5acea3b7ff82d2ea0c2a82a4aa7e8793cd9e009b51086b",
+        "probe_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "probe_stdout_sha256": "5c17dfcc2a8f1f30d9e96df6a9825a5030ade046d560332c19de74d93d591a18",
+        "unit_count": 24,
+        "unit_int32le_sha256": "99c8b22b1368462e3c5e8b493929eececbe27ccb2a44e41f359818465a83d0ca"
+      },
+      {
+        "dimension": 0,
+        "exact_unit_delta": true,
+        "pattern_sha256": "9b6842cbc48d02524c0566cff1ed4373c4471324b9a6db7d2000f1cfff7b03fe",
+        "probe_cnf_sha256": "ec72e3e53a9638851f774e88b21e5b2cdb89f598811f51dc4e152b9cc3c1d8bb",
+        "probe_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "probe_stdout_sha256": "5c17dfcc2a8f1f30d9e96df6a9825a5030ade046d560332c19de74d93d591a18",
+        "unit_count": 24,
+        "unit_int32le_sha256": "c478c825510e5fd59c71a6a4472480b931b9550c2363111a0b7b96e1f80a7833"
+      },
+      {
+        "dimension": 1,
+        "exact_unit_delta": true,
+        "pattern_sha256": "e668f0a1b72560ced14c54488a25335d11336448950bb6485267ebc5eb3fecee",
+        "probe_cnf_sha256": "6949d539fa38b0508ca346d51aebc33b2170dc3b4ffc2dc9886645498aa29c79",
+        "probe_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "probe_stdout_sha256": "5c17dfcc2a8f1f30d9e96df6a9825a5030ade046d560332c19de74d93d591a18",
+        "unit_count": 24,
+        "unit_int32le_sha256": "b61f2a31135eec35a107e7ec5ae9c0e1745b0b47a1b757ad664d7abd31e645ba"
+      },
+      {
+        "dimension": 2,
+        "exact_unit_delta": true,
+        "pattern_sha256": "f77a7d26cbff8d4a139e744c4a98c7d4990d159ca61727d7fe2d814e9c03b3f5",
+        "probe_cnf_sha256": "7b93304d034bd8fe6442874d8dc4f12898c17c2a4f567e162244573fb1f9cdbb",
+        "probe_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "probe_stdout_sha256": "5c17dfcc2a8f1f30d9e96df6a9825a5030ade046d560332c19de74d93d591a18",
+        "unit_count": 24,
+        "unit_int32le_sha256": "bb9766fa012306dda9eb48063af9aaee060ae2b70ffdfa0db7cf13b56fc71663"
+      },
+      {
+        "dimension": 3,
+        "exact_unit_delta": true,
+        "pattern_sha256": "2c8d07cd986f58eb210bd800133d6645c7340c59865377c8ea431cebca0b3113",
+        "probe_cnf_sha256": "ba60b609de8b1ca3c4134c5437e1764062e4dde42c36b3ffbc70aa14d5b5dd64",
+        "probe_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "probe_stdout_sha256": "5c17dfcc2a8f1f30d9e96df6a9825a5030ade046d560332c19de74d93d591a18",
+        "unit_count": 24,
+        "unit_int32le_sha256": "5f5c5d596a6062b98c021b6a79060e4152008d5d84462591486c9b199c9369de"
+      },
+      {
+        "dimension": 4,
+        "exact_unit_delta": true,
+        "pattern_sha256": "ae974d4a74c2371d8cfe842b7aa4f6698de8570526eeb3db1941b0b72311d470",
+        "probe_cnf_sha256": "4ca1ddc7b43e6b613ef3359231c29d1890b0fa21235890db3b3ebf83fc9f449c",
+        "probe_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "probe_stdout_sha256": "5c17dfcc2a8f1f30d9e96df6a9825a5030ade046d560332c19de74d93d591a18",
+        "unit_count": 24,
+        "unit_int32le_sha256": "c88c3f2cbf1eda9e85b8bbaeb56d0a7e3fde751320b47381a80e0dc905f49de1"
+      }
+    ],
+    "feedforward_included": true,
+    "formula_bytes": 44131,
+    "formula_sha256": "f9a26527ed1a1f0659fb425be5797101dbf9d5c4c12e5adb5433dcc1b2037b01",
+    "omitted_from_diagnostic_model_view_but_free_in_CNF": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "partition_coordinates_high_to_low": [
+      23,
+      22,
+      21,
+      20,
+      19,
+      18,
+      17,
+      16
+    ],
+    "rounds": 20,
+    "source_mapping_sha256": "32b7df2873259346eef7416d705985c78ac19532325c823c4dfd4dd8e51a27e7",
+    "source_one_literals_bit0_upward": [
+      11,
+      10,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33,
+      35,
+      37,
+      39,
+      41,
+      43,
+      45,
+      47,
+      54,
+      58,
+      62,
+      66
+    ],
+    "split_round": 18,
+    "synthetic_reader_mapping": [
+      11,
+      10,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23,
+      25,
+      27,
+      29,
+      31,
+      41,
+      43,
+      45,
+      47,
+      54,
+      58,
+      62,
+      66
+    ],
+    "synthetic_reader_mapping_sha256": "3d5f21d8ba96049fe578ada8cf490201b861c20c8caabb78ac918ece030a4afc"
+  },
+  "research_question": "Does A272's unchanged target-blind selected channel preserve prefix-order information after widening the same full-round relation from W20 to W24?",
+  "schema": "chacha20-round20-w24-selected-channel-transfer-a291-protocol-v1",
+  "scientific_design_sha256": "07fbef34c0a1ce3c78321741a4300ff2db852a22fad338f2b04e4c60a683a336"
+}

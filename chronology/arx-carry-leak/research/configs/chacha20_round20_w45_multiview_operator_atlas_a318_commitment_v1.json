@@ -1,0 +1,68 @@
+{
+  "A314_order_sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034",
+  "A314_result_available_at_commitment": false,
+  "anchors": {
+    "A314_order": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_order_v1.json",
+      "sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034"
+    },
+    "A314_order_causal": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_order_v1.causal",
+      "sha256": "d23f142490c77ca3ef20d5aa97dc501e6e6cac02a9db05887c10c061fa9236e3"
+    },
+    "A314_preflight": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_preflight_v1.json",
+      "sha256": "cfb5bacd6e6e17479260d8a2cacd2f9808afc632d82e31f80e8dc6ed2d4159a4"
+    },
+    "A314_protocol": {
+      "path": "research/configs/chacha20_round20_w45_fine_band_recovery_a314_v1.json",
+      "sha256": "17877a15624f7ab6fec1333c57260fa447d71d1112b9df5aa8219f8403968574"
+    },
+    "A317_commitment": {
+      "path": "research/configs/chacha20_round20_w44_multiview_operator_atlas_a317_commitment_v1.json",
+      "sha256": "e7b4be79a4a0902d631cfef6073818c7afdc89108b18b7b2b1e22e568d773240"
+    },
+    "A317_order": {
+      "path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+      "sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w45_multiview_operator_atlas_a318_design_v1.json",
+      "sha256": "75807a37fb87991fabb78ecfc7ab32068a452c27eeb5d04f3fe34a86de36324f"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w45_multiview_operator_atlas_a318_order_v1.json",
+      "sha256": "25c36b4412cedcd37243057535109b36e79ded5172eba642bb84dd50f1de49f0"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w45_multiview_operator_atlas_a318.sh",
+      "sha256": "cfbf81f64b91275be7fa6b8298511de4f8b9aebe3bcbcbdbea3d853f083a6b14"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w45_multiview_operator_atlas_a318.py",
+      "sha256": "7338d53c1dfe7b40fc1d8109dcdcd7299eed86bbedbe069b72adfcfeeec31c7a"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w45_multiview_operator_atlas_a318.py",
+      "sha256": "bc4d92fbd7bf9f38ab00306a9abc4c8c2203203c63ea835368b00a6fc1c37c28"
+    }
+  },
+  "attempt_id": "A318",
+  "candidate_or_rank_available_at_commitment": false,
+  "commitment_state": "frozen_after_target_blind_A314_measurement_before_A314_recovery",
+  "design_sha256": "75807a37fb87991fabb78ecfc7ab32068a452c27eeb5d04f3fe34a86de36324f",
+  "execution_branch": "A314_complete_model_free_field_to_multiview_W45_atlas",
+  "order_sha256": "25c36b4412cedcd37243057535109b36e79ded5172eba642bb84dd50f1de49f0",
+  "order_uint16be_sha256": {
+    "A314_portfolio": "c8ed83fedd0add1d272928223bcfecad2bb7552615ae941d57479c0188d4642c",
+    "coarse": "79cb4208849e1a7926fded8ed507e3c5c7c7bf7b9724177ffcfe4aa0f837c56a",
+    "fine": "d21b993bdafb78016ae5d801a6c072c1e188c733c3db20e02ef825a5e7e1f555",
+    "nearest_prototype_L1": "8661c6ee523b4b4c00c59fa21b534088ec696ec8d3d2ef8b442d3c76e96d6ae9",
+    "nearest_prototype_Linf": "5d1afc37614fdbe050e9853413a3de7b850b876e9bc5649d3dffcf3e23c9780a",
+    "nearest_prototype_squared_L2": "3147b095011b374521fb102a79ee923cb04987d8ea72deafd02123402d72734d",
+    "numeric": "a02cf28d81488fd0b2bbde4d6d5b035210669370a220eb257b016d7bf2dfe68e"
+  },
+  "primary_view": "nearest_prototype_L1",
+  "public_challenge_sha256": "f55002a6240e6b557e40f15f0d66a997164eb107e59875654d3255588fe20c67",
+  "schema": "chacha20-round20-w45-multiview-operator-atlas-a318-commitment-v1"
+}

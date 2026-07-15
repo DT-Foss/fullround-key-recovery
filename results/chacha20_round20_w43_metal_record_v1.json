@@ -1,0 +1,205 @@
+{
+  "anchors": {
+    "design_sha256": "1b8b9aac076787ec4d4f7f06108e4b82ac7e70c6f494ee8cd9d05c2148bc92ff",
+    "native_executable_sha256": "5fc1863f3f5633256ccfb1a6a95945c7255fe4642d057c0c642e04b0579f7079",
+    "native_source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "runner_sha256": "2f9c150dafd2b1dd9b0a6fa8d4162bcf1c90e3ef2658fa1bdef1e2a80faac2ca"
+  },
+  "attempt_id": "CHACHA20KR43",
+  "authentic_causal": {
+    "api_id": "c20kr43",
+    "clusters": 2,
+    "gaps": [
+      {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W43_domain",
+        "predicate": "next_required_gain",
+        "subject": "ChaCha20:unique_verified_W43_fullround_residual",
+        "suggested_queries": [
+          "Which frozen Causal operator ranks a held-out ChaCha20 W43 region early?"
+        ]
+      }
+    ],
+    "path": "research/results/v1/chacha20_round20_w43_metal_record_v1.causal",
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "rules": 2,
+    "sha256": "4c0c409362c746aa57fc3c50d97ad47b1ff4bef567a596bcb2b517e7d5d12c89",
+    "triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 5446,
+      "file_size_kb": 5.3,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w43_metal_record_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation": {
+    "all_blocks_match": true,
+    "assignment": 2800167095032,
+    "byte_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "byte_reference_sha256": [
+      "ae92c6e14cd7b4c8ae9dbbb989ccbdf3a367aaae9f19abb03d28a32ee4efbbe3",
+      "aba353fdc44e98bf75423d01742921705395e8d72335f6b2b267cb2bcc4c1bfb",
+      "84b3209fe4f82e2ef0cba7f89c0db47eedd5965e4db1fb5f12dd99ab24f6df77",
+      "8670abce7c1fe35602e86e7452310a2b984df354a12567a8203e42c47357b2b4",
+      "9e650a75492809ed7969516e35215da38140e7569021bc010234d78042eafecb",
+      "5a8db5debf38ab6806e0d56548a6e47096b1b204b6ea4a68eb66f8b5234ddfc9",
+      "6ee2d6f15c4d8f5f78e48a7e400c538e56faf831ebb40ac4c96d03586608849c",
+      "0bebf6ecac9d98382235f4ab176f933cd35d3f0935537fb069514acc4c6e7376"
+    ],
+    "output_bits_checked_per_reference": 4096,
+    "recovered_key_words": [
+      4143385336,
+      3392957067,
+      691505016,
+      140126982,
+      2836788385,
+      1847858357,
+      2521758717,
+      3874418491
+    ],
+    "recovered_key_words_hex": [
+      "f6f70af8",
+      "ca3c6a8b",
+      "29378778",
+      "085a2b06",
+      "a915f4a1",
+      "6e2414b5",
+      "964efbfd",
+      "e6eeef3b"
+    ],
+    "total_cross_implementation_output_bits_checked": 8192,
+    "word_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "word_reference_sha256": [
+      "ae92c6e14cd7b4c8ae9dbbb989ccbdf3a367aaae9f19abb03d28a32ee4efbbe3",
+      "aba353fdc44e98bf75423d01742921705395e8d72335f6b2b267cb2bcc4c1bfb",
+      "84b3209fe4f82e2ef0cba7f89c0db47eedd5965e4db1fb5f12dd99ab24f6df77",
+      "8670abce7c1fe35602e86e7452310a2b984df354a12567a8203e42c47357b2b4",
+      "9e650a75492809ed7969516e35215da38140e7569021bc010234d78042eafecb",
+      "5a8db5debf38ab6806e0d56548a6e47096b1b204b6ea4a68eb66f8b5234ddfc9",
+      "6ee2d6f15c4d8f5f78e48a7e400c538e56faf831ebb40ac4c96d03586608849c",
+      "0bebf6ecac9d98382235f4ab176f933cd35d3f0935537fb069514acc4c6e7376"
+    ]
+  },
+  "confirmation_sha256": "f694c1522d11650e6b469978d0e517280f440bc2acea45b4c723bc5dda0122d5",
+  "evidence_stage": "FULLROUND_CHACHA20_W43_COMPLETE_DOMAIN_RECOVERY_CONFIRMED",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "executed_assignment_count": 8796093022208,
+    "factual_filter_matches": [
+      2800167095032
+    ],
+    "factual_full_matches": [
+      2800167095032
+    ],
+    "gpu_seconds": 6406.802912211977,
+    "known_key_bits": 213,
+    "logical_candidate_count": 8796093022208,
+    "newly_executed_assignment_count": 8796093022208,
+    "resumed_assignment_count": 0,
+    "success_evaluated_only_after_complete_domain": true,
+    "unique_exact_assignment": true,
+    "unknown_key_bits": 43,
+    "volatile_wall_seconds": 6515.854350375012
+  },
+  "execution_sha256": "c313a6134e1e67e6c278db65f72a48710c2472961adeef261d5704e4931b2ec0",
+  "mapping_gate": {
+    "complete_output_bits_checked": 12288,
+    "logical_candidates_checked": 24,
+    "official_reference_and_Metal_exact": true,
+    "rows": [
+      {
+        "candidate_count": 8,
+        "complete_output_bits_checked": 4096,
+        "factual_key_word0": 610839555,
+        "first_key_word0": 610839552,
+        "outer11": 0,
+        "output_sha256": "7db2ae174eb8cae381d7b9ceeed233299ba9566b5fda7b11ef0a5a69906d6cc0"
+      },
+      {
+        "candidate_count": 8,
+        "complete_output_bits_checked": 4096,
+        "factual_key_word0": 610839555,
+        "first_key_word0": 610839552,
+        "outer11": 1023,
+        "output_sha256": "096cd629219a54c032ba6b4264b1d9fabc1fed30e02de912c0520507c1cd9b51"
+      },
+      {
+        "candidate_count": 8,
+        "complete_output_bits_checked": 4096,
+        "factual_key_word0": 610839555,
+        "first_key_word0": 610839552,
+        "outer11": 2047,
+        "output_sha256": "3e261e12f1af8440fc59acae2a2231efc4779d77cd3d86d44421e5ccd68d51bb"
+      }
+    ]
+  },
+  "metal_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-native-v1"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "5fc1863f3f5633256ccfb1a6a95945c7255fe4642d057c0c642e04b0579f7079",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "warnings_as_errors": true
+  },
+  "protocol_sha256": "fe69f7c4962ed771703c68a1d64c361147a568cabe71d23cc9448fb1bef88de3",
+  "public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+  "qualification_sha256": "c69c4a63965d22eeeaf92136b9218ae29376f174aa440dd2a7d6b423cae7b369",
+  "reference_gate": {
+    "feedforward": true,
+    "independent_word_reference_exact": true,
+    "output_bits_checked": 512,
+    "output_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "pure_python_exact": true,
+    "reference": "RFC_8439_Section_2.3.2",
+    "rounds": 20
+  },
+  "schema": "chacha20-round20-w43-metal-record-result-v1"
+}

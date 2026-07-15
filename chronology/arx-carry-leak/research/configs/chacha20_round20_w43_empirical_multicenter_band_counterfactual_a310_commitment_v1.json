@@ -1,0 +1,17 @@
+{
+  "attempt_id": "A310",
+  "baseline_order_uint16be_sha256": "a843ebcb59cbb48e37276b4b26257bbffd789f4ae4271307f7babeac5f1dd1f7",
+  "candidate_or_rank_available_at_commitment": false,
+  "cells": 4096,
+  "design_sha256": "1e886342759d83ae060600d83ce7be81feca90f0ddf4b00cc63618339d478f0f",
+  "empirical_centers_one_based": [
+    2114,
+    2366,
+    2605
+  ],
+  "maximum_observed_factor": 2.0,
+  "multicenter_band_order_uint16be_sha256": "27fc8ac9f9f9bf12ab11f6686f07a611f64cc427cee5f49ecc434a0829c5b39d",
+  "portfolio_order_uint16be_sha256": "770f5d9059e30ea3f6a2e54c1cae538fea40315cb9ddf551da8713da01e5eb44",
+  "public_challenge_sha256": "2fd7b142df59cda46313150c8803cf4498b8ea99af4969f8fc91d36aea230772",
+  "schema": "chacha20-round20-w43-empirical-multicenter-band-counterfactual-a310-commitment-v1"
+}

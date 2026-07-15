@@ -1,0 +1,68 @@
+{
+  "attempt_id": "A310",
+  "design_state": "frozen_while_A309_is_executing_and_before_any_A300_candidate_rank_assignment_or_filter_outcome_is_available",
+  "information_boundary": {
+    "A300_candidate_available_at_freeze": false,
+    "A300_filter_outcome_available_at_freeze": false,
+    "A300_prefix_rank_available_at_freeze": false,
+    "A300_result_available_at_freeze": false,
+    "A300_target_assignment_available_at_freeze": false,
+    "A309_result_available_at_freeze": false,
+    "candidate_filter_outcome_used_for_order": false,
+    "disjoint_confirmed_training_labels_used": 3,
+    "implementation_and_order_materialization_may_follow_reveal_but_the_frozen_algorithm_must_not_change": true,
+    "reader_refits_on_A300": 0,
+    "target_labels_used_from_A300": 0
+  },
+  "operator_contract": {
+    "baseline_order": "A300_three_operator_fine_coarse_numeric_round_robin",
+    "empirical_centers_one_based": [
+      2114,
+      2366,
+      2605
+    ],
+    "multicenter_band_order": "sort_A300_fine_cells_by_tuple_minimum_absolute_rank_distance_then_nearest_center_precedence_2114_2366_2605_then_ascending_fine_rank",
+    "merge": "rank_synchronous_round_robin_first_occurrence_multicenter_band_then_A300_baseline",
+    "rank_guarantee": "R_A310_at_cell <= 2 * min(R_multicenter_band_at_cell, R_A300_at_cell)",
+    "target_order": "A300_fresh_W43_public_relation",
+    "training_rows": [
+      {
+        "attempt_id": "A295",
+        "confirmed_fine_rank_one_based": 2605,
+        "unknown_key_bits": 24
+      },
+      {
+        "attempt_id": "A303",
+        "confirmed_fine_rank_one_based": 2366,
+        "unknown_key_bits": 32
+      },
+      {
+        "attempt_id": "A305",
+        "confirmed_fine_rank_one_based": 2114,
+        "unknown_key_bits": 43
+      }
+    ],
+    "training_values_are_not_recomputed_or_extended_after_A300_reveal": true
+  },
+  "schema": "chacha20-round20-w43-empirical-multicenter-band-counterfactual-a310-design-v1",
+  "source_anchors": {
+    "A295_causal_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.causal",
+    "A295_causal_sha256": "673f0470cd02826ffdd939e36247b3885a55e6d24affd509e7946d24e7d6aac1",
+    "A295_result_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+    "A295_result_sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03",
+    "A303_causal_path": "research/results/v1/chacha20_round20_w32_dominance_pruned_companion_a303_v1.causal",
+    "A303_causal_sha256": "11ae8b91d6e9e8f067ac847b790ed3b77d261862a6f68a23408fb41bbca9ce23",
+    "A303_result_path": "research/results/v1/chacha20_round20_w32_dominance_pruned_companion_a303_v1.json",
+    "A303_result_sha256": "bc1878203ed1dc8dffab86e8cd1a85bd01fb12e09a1de6a86b29fd9d1ceae3fe",
+    "A305_causal_path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.causal",
+    "A305_causal_sha256": "c3460e10dedca9027609d16c4686ad56d1576f05edeea5c368cd56e4ae34f888",
+    "A305_result_path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.json",
+    "A305_result_sha256": "adbc8b879f09e03896699188d8141ac0164296eaf2ad688b6fb1036f2b1ac40e",
+    "A300_order_path": "research/results/v1/chacha20_round20_w43_three_operator_portfolio_a300_order_v1.json",
+    "A300_order_sha256": "76af63fd14613520bda54316e242c16e4530af22ddb2ec9e5a7a6e6df5afefd1",
+    "A300_preflight_path": "research/results/v1/chacha20_round20_w43_three_operator_portfolio_a300_preflight_v1.json",
+    "A300_preflight_sha256": "5479756d446f2a2349e780844a8a8373dde328b7bb448ce85271bf116b46db2d",
+    "A300_protocol_path": "research/configs/chacha20_round20_w43_three_operator_portfolio_a300_v1.json",
+    "A300_protocol_sha256": "d132e818e598458f0ac2aa53d8032c7c4dc5f2ffed5d863410b76c10c5b43307"
+  }
+}

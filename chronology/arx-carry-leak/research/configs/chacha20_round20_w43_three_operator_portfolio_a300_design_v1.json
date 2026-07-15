@@ -1,0 +1,88 @@
+{
+  "attempt_id": "A300",
+  "design_state": "frozen_before_A299_order_result_candidate_rank_or_confirmation_and_before_the_fresh_A300_target_exists",
+  "frozen_at_utc": "2026-07-14T19:52:18Z",
+  "purpose": "Convert the complementary ChaCha20-R20 numeric, coarse-Causal and fine-selected-channel prefix views into one target-blind W43 recovery order with a deterministic worst-case rank-regret bound against the best constituent operator.",
+  "primitive_contract": {
+    "assignment_encoding": "assignment=(key_word1_low11<<32)|key_word0",
+    "candidate_group_size": 2147483648,
+    "complete_residual_domain": 8796093022208,
+    "feedforward_included": true,
+    "known_key_bits": 213,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_blocks": 8,
+    "rounds": 20,
+    "unknown_key_bits": 43,
+    "word0_prefix_bits": 12,
+    "word0_suffix_bits_per_group": 20,
+    "word1_outer_slices_per_group": 2048
+  },
+  "operator_contract": {
+    "component_orders": [
+      "numeric_word0_prefix12",
+      "A297_coarse_high8_then_reflected_Gray4",
+      "A295_fine_selected_channel"
+    ],
+    "fine_operator_coefficients_and_features": "unchanged_A295_A272_positive_channel",
+    "merge": "round_robin_by_component_rank_then_first_occurrence_deduplication",
+    "merge_component_precedence": [
+      "A295_fine_selected_channel",
+      "A297_coarse_high8_then_reflected_Gray4",
+      "numeric_word0_prefix12"
+    ],
+    "reader_refits": 0,
+    "target_labels_used": 0,
+    "total_prefix_cells": 4096
+  },
+  "rank_guarantee": {
+    "component_count": 3,
+    "proof": "After r round-robin epochs, the first r entries of every component order have been visited. Therefore a target whose best component rank is r has been emitted by portfolio position at most 3r; duplicate suppression can only decrease that position.",
+    "statement": "R_portfolio <= 3 * min(R_numeric, R_coarse, R_fine)",
+    "worst_case_regret_bits": 1.584962500721156,
+    "worst_case_regret_factor": 3
+  },
+  "execution_contract": {
+    "all_executed_candidate_groups_counted": true,
+    "complete_group_execution_before_stop": true,
+    "fresh_target_source": "OS_CSPRNG_after_runner_and_protocol_contract_freeze",
+    "independent_confirmation": "RFC8439_byte_reference_plus_independent_word_reference_over_all_eight_blocks",
+    "matched_control": "one_bit_modified_output_over_every_executed_primary_group",
+    "primary_order": "three_operator_round_robin_portfolio",
+    "public_hash_order": "counterfactual_control_only",
+    "stop": "first_factual_filter_match_after_its_complete_2^31_candidate_group"
+  },
+  "acceptance": {
+    "authentic_AI_native_Causal_artifact_required": true,
+    "component_and_portfolio_orders_frozen_before_candidate_discovery": true,
+    "counterfactual_component_ranks_computed_only_after_confirmation": true,
+    "independent_full_output_confirmation_required": true,
+    "main_agent_personal_CausalReader_readback_required": true,
+    "matched_control_must_remain_empty": true,
+    "rank_regret_bound_must_hold_exactly": true
+  },
+  "information_boundary": {
+    "A298_assignment_order_or_result_available_at_freeze": false,
+    "A299_candidate_prefix_rank_or_result_available_at_freeze": false,
+    "A299_fine_trace_order_available_at_freeze": false,
+    "A300_production_assignment_or_target_available_at_freeze": false,
+    "future_target_assignment_model_filter_outcome_or_rank_may_select_an_operator": false,
+    "operator_family_merge_rule_and_precedence_frozen": true
+  },
+  "source_anchors": {
+    "A295_design_path": "research/configs/chacha20_round20_w24_fine_selected_channel_a295_design_v1.json",
+    "A295_design_sha256": "8dfd07e548daffe01ba7262e02a8e9d16754ef8765c3a9169e8f98b2d0014121",
+    "A295_result_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+    "A295_result_sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03",
+    "A295_runner_path": "research/experiments/chacha20_round20_w24_fine_selected_channel_a295.py",
+    "A295_runner_sha256": "0ecbffc2e5f0a036ef84bd4c10f17068580592be73f0b59ec03beb0fa29af14e",
+    "A297_result_path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.json",
+    "A297_result_sha256": "046beb03789c994e564a018d3ca6d4ce146a22ca6b171197e99aeedd9cc98cfd",
+    "A297_runner_path": "research/experiments/chacha20_round20_w32_causal_search_gain_panel_a297.py",
+    "A297_runner_sha256": "f5700d37179c82969fb458d5cd184656641f65e5962e82cfa6fa1ff48b3ca60f",
+    "A299_design_path": "research/configs/chacha20_round20_w43_fine_selected_channel_transfer_a299_design_v1.json",
+    "A299_design_sha256": "a7876b5a8e61e3a61cfbfcbb9b0ac985f723ebbc40823ce11dbea55bb39f8c36",
+    "fine_orbit_source_path": "src/arx_carry_leak/xor_prefix_orbit.py",
+    "fine_orbit_source_sha256": "a2c1f142eab770f308ef4103141ee9aee73eaa4dd8b73235454d0d822476e806"
+  },
+  "schema": "chacha20-round20-w43-three-operator-portfolio-a300-design-v1"
+}

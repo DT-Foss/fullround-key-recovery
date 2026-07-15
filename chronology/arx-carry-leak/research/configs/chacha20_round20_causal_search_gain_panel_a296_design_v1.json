@@ -1,0 +1,71 @@
+{
+  "attempt_id": "A296",
+  "design_state": "frozen_after_personal_A294_Causal_readback_and_before_any_A296_target_generation_CNF_export_measurement_order_or_discovery",
+  "purpose": "Prospectively replicate A294's target-specific Causal search gain on fresh W24 material and transfer the identical zero-refit Reader contract directly to W28.",
+  "panel": [
+    {"target_id": "w24_t00", "unknown_key_bits": 24},
+    {"target_id": "w24_t01", "unknown_key_bits": 24},
+    {"target_id": "w24_t02", "unknown_key_bits": 24},
+    {"target_id": "w24_t03", "unknown_key_bits": 24},
+    {"target_id": "w28_t00", "unknown_key_bits": 28},
+    {"target_id": "w28_t01", "unknown_key_bits": 28},
+    {"target_id": "w28_t02", "unknown_key_bits": 28},
+    {"target_id": "w28_t03", "unknown_key_bits": 28}
+  ],
+  "target_generation": {
+    "source": "OS_CSPRNG",
+    "standard_relation": "ChaCha20_20_rounds_plus_feedforward",
+    "public_blocks_per_target": 8,
+    "generation_assignment_returned_logged_or_serialized": false,
+    "all_eight_targets_frozen_before_any_target_CNF_export": true
+  },
+  "reader_contract": {
+    "source": "unchanged_A272_eight_feature_selected_channel_Reader_as_transferred_by_A291",
+    "selected_feature_indices": [502, 504, 505, 508, 509, 510, 511, 514],
+    "diagnostic_blocks": 1,
+    "partition": "top_eight_unknown_coordinates",
+    "candidate_cells": 256,
+    "conflict_horizons": [1, 2, 4, 8],
+    "all_1024_stages_per_target_must_remain_UNKNOWN_and_model_free": true,
+    "reader_refits": 0,
+    "target_labels_used": 0,
+    "fine_order": "each_Causal_high8_cell_followed_by_reflected_Gray4",
+    "fine_prefix_bits": 12,
+    "fine_prefix_groups": 4096
+  },
+  "discovery_contract": {
+    "native_backend": "A294_Apple_Metal_ChaCha20_candidate_axis",
+    "group_size": "2^(unknown_key_bits-12)",
+    "stop": "first_factual_64_bit_filter_match",
+    "matched_control": "one_bit_flipped_target_scanned_over_every_executed_group",
+    "confirmation": "two_independent_RFC8439_implementations_over_all_eight_blocks",
+    "controls": ["numeric_prefix12", "public_challenge_hash_prefix12"],
+    "control_ranks_computed_only_after_independent_confirmation": true
+  },
+  "retained_outputs": {
+    "per_target": [
+      "Causal_prefix_rank",
+      "numeric_prefix_rank",
+      "public_hash_prefix_rank",
+      "executed_candidate_upper_bound",
+      "search_gain_bits",
+      "confirmed_assignment",
+      "matched_control_count"
+    ],
+    "panel": [
+      "width_stratified_rank_and_gain_distributions",
+      "paired_Causal_vs_numeric_and_hash_counts",
+      "geometric_mean_candidate_reduction",
+      "all_independent_confirmations"
+    ],
+    "AI_native_graph": "authentic_dotcausal_v1_reopened_with_CausalReader"
+  },
+  "information_boundary": {
+    "any_A296_target_exists_at_design_freeze": false,
+    "any_A296_generation_assignment_exists_at_design_freeze": false,
+    "any_A296_measurement_or_order_exists_at_design_freeze": false,
+    "A294_result_and_personal_Causal_readback_available": true,
+    "target_prefix_model_or_filter_outcome_may_select_reader_order_or_budget": false
+  },
+  "schema": "chacha20-round20-causal-search-gain-panel-a296-design-v1"
+}

@@ -1,0 +1,106 @@
+{
+  "attempt_id": "A301",
+  "design_state": "frozen_after_A299_order_readback_and_before_A300_measurement_order_candidate_or_assignment_reveal",
+  "frozen_at_utc": "2026-07-14T20:42:19Z",
+  "purpose": "Use the accumulated full-round calibration corpus to prune the twice-dominated fine operator from candidate-execution allocation while retaining its measurement as an audit view, yielding a tighter target-blind rank guarantee for the sealed A300 W43 challenge.",
+  "primitive_contract": {
+    "assignment_encoding": "assignment=(key_word1_low11<<32)|key_word0",
+    "candidate_group_size": 2147483648,
+    "complete_residual_domain": 8796093022208,
+    "feedforward_included": true,
+    "known_key_bits": 213,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_blocks": 8,
+    "rounds": 20,
+    "unknown_key_bits": 43,
+    "word0_prefix_bits": 12
+  },
+  "calibration_contract": {
+    "calibration_targets": 14,
+    "calibration_target_families": [
+      "A296_W24_x4",
+      "A296_W28_x4",
+      "A297_W32_x4",
+      "A295_W24_fine_calibration",
+      "A299_W43_fine_calibration"
+    ],
+    "frozen_observation": "The fine selected-channel operator is directly measurable on A295 and A299 and is dominated by the coarse-Causal operator on both: 2605 versus 202 and 2114 versus 427. The coarse/numeric two-operator portfolio is a strict subset on all fourteen retained full-round calibration targets.",
+    "retrospective_two_operator_prefix_ranks": {
+      "A295": 362,
+      "A299": 853
+    },
+    "retrospective_geometric_mean_complete_domain_reduction": 3.206509101787679,
+    "retrospective_mean_search_gain_bits": 1.6810035023216012,
+    "selection_inputs": "Only hash-gated completed calibration artifacts and their post-confirmation ranks; no A300 measurement, order, candidate, assignment, model, filter outcome, or target label."
+  },
+  "operator_contract": {
+    "candidate_execution_orders": [
+      "A297_coarse_high8_then_reflected_Gray4",
+      "numeric_word0_prefix12"
+    ],
+    "audit_only_order": "A295_fine_selected_channel",
+    "merge": "round_robin_by_component_rank_then_first_occurrence_deduplication",
+    "merge_component_precedence": [
+      "A297_coarse_high8_then_reflected_Gray4",
+      "numeric_word0_prefix12"
+    ],
+    "reader_refits": 0,
+    "target_labels_used": 0,
+    "total_prefix_cells": 4096
+  },
+  "rank_guarantee": {
+    "component_count": 2,
+    "proof": "After r round-robin epochs, the first r entries of both allocated component orders have been visited. Therefore a target whose best allocated component rank is r has been emitted by portfolio position at most 2r; first-occurrence duplicate suppression can only decrease that position.",
+    "statement": "R_A301 <= 2 * min(R_coarse, R_numeric)",
+    "worst_case_regret_bits": 1.0,
+    "worst_case_regret_factor": 2
+  },
+  "execution_contract": {
+    "all_executed_candidate_groups_counted": true,
+    "complete_group_execution_before_stop": true,
+    "independent_confirmation": "RFC8439_byte_reference_plus_independent_word_reference_over_all_eight_blocks",
+    "matched_control": "one_bit_modified_output_over_every_executed_primary_group",
+    "public_target_source": "the already sealed and hash-gated A300 protocol challenge",
+    "stop": "first_factual_filter_match_after_its_complete_2^31_candidate_group"
+  },
+  "acceptance": {
+    "authentic_AI_native_Causal_artifact_required": true,
+    "counterfactual_component_ranks_computed_only_after_confirmation": true,
+    "independent_full_output_confirmation_required": true,
+    "main_agent_personal_CausalReader_readback_required": true,
+    "matched_control_must_remain_empty": true,
+    "rank_regret_bound_must_hold_exactly": true,
+    "two_operator_order_frozen_before_candidate_discovery": true
+  },
+  "information_boundary": {
+    "A299_order_and_CHACHA20KR43_confirmation_available_for_calibration": true,
+    "A300_public_challenge_and_preflight_available_at_freeze": true,
+    "A300_measurement_or_order_available_at_freeze": false,
+    "A300_production_assignment_model_candidate_filter_outcome_or_rank_available_at_freeze": false,
+    "future_target_assignment_model_filter_outcome_or_rank_may_select_an_operator": false,
+    "operator_pruning_merge_rule_and_precedence_frozen": true
+  },
+  "source_anchors": {
+    "A291_result_path": "research/results/v1/chacha20_round20_w24_selected_channel_transfer_a291_v1.json",
+    "A291_result_sha256": "abbb158fd96866a50dcb97f5cc63309d52bd2c9aefa1a2c4fc7f4333e750a0e0",
+    "A295_result_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+    "A295_result_sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03",
+    "A296_result_path": "research/results/v1/chacha20_round20_causal_search_gain_panel_a296_v1.json",
+    "A296_result_sha256": "2cf8aa4fbd37889baa0a7740724b7751746d037dd2482a63261327abb7e6f45d",
+    "A297_result_path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.json",
+    "A297_result_sha256": "046beb03789c994e564a018d3ca6d4ce146a22ca6b171197e99aeedd9cc98cfd",
+    "A299_order_path": "research/results/v1/chacha20_round20_w43_fine_selected_channel_transfer_a299_order_v1.json",
+    "A299_order_sha256": "8369e7b4b421c68b344a3ea4588de350796cdc97216d71d43fc2f960df26af07",
+    "CHACHA20KR43_result_path": "research/results/v1/chacha20_round20_w43_metal_record_v1.json",
+    "CHACHA20KR43_result_sha256": "35d01c2c68537659e2a9f0439a0c037abd4171f073a1fece3ae48d15cfc87d48",
+    "A300_design_path": "research/configs/chacha20_round20_w43_three_operator_portfolio_a300_design_v1.json",
+    "A300_design_sha256": "640dea44142309870faec5f4699283e84b8b30212803745c32f3ab04dd39170a",
+    "A300_protocol_path": "research/configs/chacha20_round20_w43_three_operator_portfolio_a300_v1.json",
+    "A300_protocol_sha256": "d132e818e598458f0ac2aa53d8032c7c4dc5f2ffed5d863410b76c10c5b43307",
+    "A300_preflight_path": "research/results/v1/chacha20_round20_w43_three_operator_portfolio_a300_preflight_v1.json",
+    "A300_preflight_sha256": "5479756d446f2a2349e780844a8a8373dde328b7bb448ce85271bf116b46db2d",
+    "A300_runner_path": "research/experiments/chacha20_round20_w43_three_operator_portfolio_a300.py",
+    "A300_runner_sha256": "b5bbb602976408017395fa8e2969e38bff4ac79b5d80045d36216af26f71b586"
+  },
+  "schema": "chacha20-round20-w43-dominance-pruned-portfolio-a301-design-v1"
+}

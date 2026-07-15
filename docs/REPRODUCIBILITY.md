@@ -10,10 +10,10 @@ python3 -m venv .venv
 make verify test lint
 ```
 
-This verifies 205 artifact hashes, twelve complete-domain records, the A281
-strict-subset record, the four-target A286 root confirmation, recovered-key
+This verifies all 570 artifact hashes, thirteen complete-domain records,
+24 strict-subset ChaCha20-R20 executions across 23 targets, recovered-key
 reconstruction, full-output confirmations, matched controls, and Causal
-integrity across 28 AI-native files.
+integrity across 38 headline plus 26 chronology AI-native files.
 
 The source-compatible Causal Reader is vendored because it is part of the
 artifact provenance. Its exact files and MIT license are pinned by
@@ -62,15 +62,19 @@ The checkpoint records durable progress and accumulated GPU time but no candidat
 identity. Once a filter match appears, durable progress remains before that
 batch, so candidate identity is not persisted before full-domain completion.
 
-The later nine complete-domain records retain their exact originating protocol factories,
-qualification programs, recovery programs, and native hosts. Those sources are
-provenance-preserving originals rather than rewritten package wrappers.
+The later complete-domain records retain their exact originating protocol
+factories, qualification programs, recovery programs, and native hosts. Those
+sources are provenance-preserving originals rather than rewritten package
+wrappers. The complete A287--A325 portable research chain is retained under
+`chronology/arx-carry-leak/`.
 
-The A281/A286 strict-subset evidence is verified without replaying the solver:
-the verifier checks every frozen anchor hash, recomputes all 40 ChaCha20 blocks,
-checks the exact search/rank summaries, rejects the matched controls, and opens
-the original, canonical, order, and aggregate Causal files. The byte-exact
-solver/orchestration sources remain in `experiments/original/` for full replay.
+The strict-subset evidence is verified without replaying the production search:
+the verifier checks every frozen anchor hash, independently recomputes every
+ChaCha20 block, checks the exact search/rank summaries and information
+boundaries, rejects all matched controls, and opens the original, canonical,
+order, aggregate, and chronology Causal files. The byte-exact search and
+orchestration sources remain in `experiments/original/` and `chronology/` for
+full replay.
 
 ## Platform boundary
 

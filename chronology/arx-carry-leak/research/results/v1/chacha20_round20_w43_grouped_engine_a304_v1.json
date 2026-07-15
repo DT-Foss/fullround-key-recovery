@@ -1,0 +1,294 @@
+{
+  "A302_order_sha256": "eeaa8e2a39e40dc50d46d78a149c8c5bf4e2b68781e2a846e329e2dfc164166d",
+  "A302_preflight_sha256": "990366ed7199049c9f6b132824215ecf170e8a0f2891eab7ad4ff3b7875cb1ab",
+  "A302_protocol_sha256": "9aa1121eb94002aea1a159ed321e5b7369dcad7cd24b4f295fb4239f61cfedcc",
+  "anchors": {
+    "A302_order": {
+      "path": "research/results/v1/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302_order_v1.json",
+      "sha256": "eeaa8e2a39e40dc50d46d78a149c8c5bf4e2b68781e2a846e329e2dfc164166d"
+    },
+    "A302_preflight": {
+      "path": "research/results/v1/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302_preflight_v1.json",
+      "sha256": "990366ed7199049c9f6b132824215ecf170e8a0f2891eab7ad4ff3b7875cb1ab"
+    },
+    "A302_protocol": {
+      "path": "research/configs/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302_v1.json",
+      "sha256": "9aa1121eb94002aea1a159ed321e5b7369dcad7cd24b4f295fb4239f61cfedcc"
+    },
+    "A302_runner": {
+      "path": "research/experiments/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302.py",
+      "sha256": "335c6e002634185dd64999386723665f500953f29b7dc67573e2db654e9f91da"
+    },
+    "A304_reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w43_grouped_engine_a304.sh",
+      "sha256": "367eb3b80fcc24bc62f6a1b44a06295adda57b2c9b0aaa99a09632a9e33e90fd"
+    },
+    "A304_runner": {
+      "path": "research/experiments/chacha20_round20_w43_grouped_engine_a304.py",
+      "sha256": "0f00e54a149d3ad896f5e7bb2ac79b55caac371e163c948894a7d1df72e0ec21"
+    },
+    "A304_test": {
+      "path": "tests/test_chacha20_round20_w43_grouped_engine_a304.py",
+      "sha256": "76d3dd70cb4850c8efd952cdaf407565eba01b85a65da128a03965fae8d66389"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w43_grouped_engine_a304_design_v1.json",
+      "sha256": "7f7e9e1a5d7906aa06e2818f0bc99474839de039815e316cdd7ec01cbcff8d03"
+    },
+    "grouped_native_source": {
+      "path": "research/experiments/chacha20_metal_w43_grouped_native.swift",
+      "sha256": "cfd657be7826ccd25a425cbbb5c7eb4d658ab9dc3fb0521edb34688ef32d319d"
+    }
+  },
+  "attempt_id": "A304",
+  "causal": {
+    "api_id": "a304w43",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w43_grouped_engine_a304_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "grouped_three_operator_W43_recovery_or_wider_residual_transfer",
+        "predicate": "next_required_object",
+        "subject": "A304:confirmed_grouped_A302_W43_recovery",
+        "suggested_queries": [
+          "Does the grouped engine preserve the A300 three-operator strict-subset gain on its fresh W43 target?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_W43_GROUPED_A302_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_A302_order_A304_execution_confirmation_chain",
+        "o_idx": 4,
+        "outcome": "A304:confirmed_grouped_A302_W43_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A304_grouped_chain",
+        "trigger": "A302:frozen_coarse_numeric_W43_order"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "70db8dd5b09f71e252159b93e068a8aaeae8d8068f20cf80ff7f12289c1de5b5",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 4643,
+      "file_size_kb": 4.5,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w43_grouped_engine_a304_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "confirmation": {
+    "all_blocks_match": true,
+    "assignment": 3697242003407,
+    "byte_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "byte_reference_sha256": [
+      "5c97b82c68f92a84c33223b9800a2696ab44bfc7a9d38070a548b10345141bba",
+      "6ec7a2d3f4fd45ed65d119dca475b48de8b3bdaf0c73bf9d73c33548fb6dfbb7",
+      "2d64e29c8c68a08d84b940949e0b1f8eae2ba8a421e3c0cb5637efff9406086b",
+      "44cf46d97f014aca67d5ccb3e83368a59820bc4f688cfd934281a31d8544347b",
+      "17f9236440777f36eadfaa13ebc2406471a6381175da3b398109a4b4ac3e3d93",
+      "2ee9dc3b7480df377a9bdeb8f82db9f606fc5e458d8a2e5980eaa229c04e567d",
+      "4bb40f533d2880969d7fab39eb1d4e4a69ab570a4b9112c9e359a6e5207cb285",
+      "27129a17410dfd958e91a0e2ce20cfff4e7e69179ba002dd515a97096a2c35b6"
+    ],
+    "output_bits_checked_per_reference": 4096,
+    "recovered_key_words": [
+      3570128847,
+      2369549148,
+      2225864274,
+      3724317489,
+      3777762622,
+      3248124364,
+      151751342,
+      3535061463
+    ],
+    "recovered_key_words_hex": [
+      "d4cbd7cf",
+      "8d3c735c",
+      "84abfe52",
+      "ddfc9331",
+      "e12c153e",
+      "c19a71cc",
+      "090b8aae",
+      "d2b4c1d7"
+    ],
+    "total_cross_implementation_output_bits_checked": 8192,
+    "word_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "word_reference_sha256": [
+      "5c97b82c68f92a84c33223b9800a2696ab44bfc7a9d38070a548b10345141bba",
+      "6ec7a2d3f4fd45ed65d119dca475b48de8b3bdaf0c73bf9d73c33548fb6dfbb7",
+      "2d64e29c8c68a08d84b940949e0b1f8eae2ba8a421e3c0cb5637efff9406086b",
+      "44cf46d97f014aca67d5ccb3e83368a59820bc4f688cfd934281a31d8544347b",
+      "17f9236440777f36eadfaa13ebc2406471a6381175da3b398109a4b4ac3e3d93",
+      "2ee9dc3b7480df377a9bdeb8f82db9f606fc5e458d8a2e5980eaa229c04e567d",
+      "4bb40f533d2880969d7fab39eb1d4e4a69ab570a4b9112c9e359a6e5207cb285",
+      "27129a17410dfd958e91a0e2ce20cfff4e7e69179ba002dd515a97096a2c35b6"
+    ]
+  },
+  "discovery": {
+    "candidate": 3697242003407,
+    "candidate_hex": "35cd4cbd7cf",
+    "complete_domain_assignments": 8796093022208,
+    "complete_group_execution_before_stop": true,
+    "control_filter_candidates": [],
+    "early_stop_inside_group": false,
+    "executed_assignments": 5310727061504,
+    "executed_assignments_upper_bound": 5310727061504,
+    "executed_group_dispatches": 2473,
+    "executed_outer_slices": 5064704,
+    "executed_prefix_groups": 2473,
+    "execution_engine_attempt": "A304",
+    "factual_filter_candidates": [
+      3697242003407
+    ],
+    "fine_prefix12": 3404,
+    "fine_prefix12_hex": "d4c",
+    "gpu_seconds": 3627.4294757861644,
+    "key_word0": 3570128847,
+    "key_word1_low11": 860,
+    "matched_control_candidates": 0,
+    "search_gain_bits": 0.7279534756100621,
+    "source_operator_attempt": "A302",
+    "strict_subset_of_complete_domain": true,
+    "volatile_wall_seconds": 3629.176766499877
+  },
+  "engine_efficiency": {
+    "candidate_membership_identical": true,
+    "complete_group_semantics_identical": true,
+    "filter_dispatch_reduction_factor": 2048,
+    "grouped_JSON_requests_per_prefix_group": 1,
+    "grouped_filter_dispatches_per_prefix_group": 1,
+    "host_request_reduction_factor": 4096,
+    "legacy_JSON_requests_per_prefix_group": 4096,
+    "legacy_filter_dispatches_per_prefix_group": 2048
+  },
+  "evidence_stage": "FULLROUND_R20_W43_GROUPED_A302_STRICT_SUBSET_RECOVERY_CONFIRMED",
+  "execution_sha256": "d2b773529672b215976a50f1c759909fb8ba700f8aa853d6dae9cc580b66e4f8",
+  "grouped_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_path": "research/build/chacha20_round20_w43_grouped_engine_a304/chacha20_w43_grouped_cfd657be7826ccd2",
+    "executable_sha256": "d1c41a049db90997ada5eba880d1ba2d0787b1d74be499f0a254183f1b577acf",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_path": "research/experiments/chacha20_metal_w43_grouped_native.swift",
+    "source_sha256": "cfd657be7826ccd25a425cbbb5c7eb4d658ab9dc3fb0521edb34688ef32d319d"
+  },
+  "information_boundary": {
+    "A302_candidate_available_at_freeze": false,
+    "A302_filter_outcome_available_at_freeze": false,
+    "A302_prefix_rank_available_at_freeze": false,
+    "A302_unknown_assignment_available_at_freeze": false,
+    "engine_changes_candidate_membership": false,
+    "engine_changes_frozen_prefix_order": false,
+    "public_A302_challenge_available_at_freeze": true,
+    "public_A302_order_available_at_freeze": true
+  },
+  "measurement_efficiency": {
+    "cells_avoided_vs_A300": 4096,
+    "coarse_cells": 256,
+    "coarse_stages": 1024,
+    "fine_cells": 0,
+    "fine_stages": 0
+  },
+  "measurement_sha256": "275ba5986a75ff0def5bb44066c3282baa3bdae80e50d73b85faa393c7735863",
+  "metal_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true,
+      "two_dimensional_candidate_grid": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-w43-grouped-v1"
+  },
+  "portfolio_guarantee": {
+    "checked_prefix_cells": 4096,
+    "frozen_worst_case_bound_bits": 1.0,
+    "frozen_worst_case_bound_factor": 2,
+    "maximum_observed_regret_bits": 1.0,
+    "maximum_observed_regret_cell": 0,
+    "maximum_observed_regret_factor": 2.0,
+    "statement": "R_A301 <= 2 * min(R_coarse, R_numeric)",
+    "violations": 0
+  },
+  "protocol_sha256": "2b2ea9febb74397437e0c3a772463d9ed46093461d6cc848aa6c77d2c38e7168",
+  "public_challenge_sha256": "a70fce0d6453012e9a44b1b1ff6378476bb918d2a052f87972eb4026e9464146",
+  "qualification_artifact_sha256": "a9a92f4f8ecceede5dee44a429352ee4bc55e581531145fb5bb8a9606bc96c9c",
+  "qualification_gate": {
+    "evidence_stage": "GROUPED_W43_ENGINE_EXACTLY_QUALIFIED_BEFORE_CANDIDATE_EXECUTION",
+    "full_block_bits_checked": 67584,
+    "production_target_used": false,
+    "qualification_sha256": "9b9f36f519e222fc34e41b597cd4652b70b48a55f5225fb5b785d0a3250ad7b4",
+    "synthetic_filter_exact": true
+  },
+  "rank_analysis": {
+    "assignment_upper_bounds": {
+      "A297_coarse_high8_then_reflected_Gray4": 3317862236160,
+      "A302_two_operator_portfolio": 5310727061504,
+      "numeric_word0_prefix12": 7312181821440,
+      "public_hash_control": 5126043467776
+    },
+    "best_component_rank_one_based": 1545,
+    "counterfactual_component_ranks_computed_only_after_confirmation": true,
+    "portfolio_gain_bits_vs_complete_domain": 0.7279534756100621,
+    "portfolio_regret_bits_vs_best_component": 0.6786554015982009,
+    "portfolio_regret_factor_vs_best_component": 1.6006472491909385,
+    "portfolio_speedup_vs_public_hash_rank": 0.9652244237767893,
+    "prefix12": 3404,
+    "prefix12_hex": "d4c",
+    "prefix_ranks_one_based": {
+      "A297_coarse_high8_then_reflected_Gray4": 1545,
+      "A302_two_operator_portfolio": 2473,
+      "numeric_word0_prefix12": 3405,
+      "public_hash_control": 2387
+    },
+    "rank_guarantee_holds": true
+  },
+  "schema": "chacha20-round20-w43-grouped-engine-a304-result-v1",
+  "source_operator_attempt": "A302",
+  "strict_subset_of_complete_domain": true
+}

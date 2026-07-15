@@ -1,0 +1,39 @@
+{
+  "schema": "chacha20-round20-cross-width-operator-stability-a323-design-v1",
+  "attempt_id": "A323",
+  "design_state": "frozen_and_executed_while_A313_recovery_is_running_before_any_A313_or_A314_result_candidate_or_prefix_rank_exists",
+  "scientific_question": "Which precommitted operator geometry is structurally stable from the target-blind W44 field to the target-blind W45 field, and how complementary is the eight-operator family before either target is revealed?",
+  "analysis_contract": {
+    "operators": "the_eight_exact_W44_W45_pairs_frozen_by_A321",
+    "cross_width_metric": "Spearman_correlation_of_complete_cell_rank_vectors",
+    "stability_selector": "largest_cross_width_Spearman_then_earliest_A321_candidate_index",
+    "complementarity_metric": "for_each_W44_cell_the_smallest_rank_across_eight_orders_with_frozen_index_tie_break",
+    "reported_quantiles": [
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "candidate_execution": false,
+    "operator_refit": false,
+    "target_label_use": 0
+  },
+  "information_boundary": {
+    "A313_recovery_running_at_design_and_execution": true,
+    "A313_result_available": false,
+    "A313_candidate_available": false,
+    "A313_prefix_rank_available": false,
+    "A314_target_blind_order_available": true,
+    "A314_result_available": false,
+    "A314_candidate_available": false,
+    "A314_prefix_rank_available": false,
+    "target_labels_used": 0,
+    "reader_refits": 0
+  },
+  "source_anchors": {
+    "A321_design_path": "research/configs/chacha20_round20_holdout_selected_w45_operator_a321_design_v1.json",
+    "A321_design_sha256": "3db5966ca254f8a5342399445d992db672fd0e9e5d40bc8ad401b0ae8cbd1e92",
+    "A321_runner_path": "research/experiments/chacha20_round20_holdout_selected_w45_operator_a321.py",
+    "A321_runner_sha256": "61fd8e3c9635eab8cb166d8c9008df08b0cc067764f9c64da5042fa18726ef52"
+  }
+}

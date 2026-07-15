@@ -1,0 +1,56 @@
+{
+  "attempt_id": "A325",
+  "design_state": "frozen_while_A313_recovery_is_running_before_A321_selection_A324_qualification_any_W46_challenge_or_A322_result_exists",
+  "execution_contract": {
+    "candidate_execution_engine": "A324_exact_eight_slab_W46_group",
+    "candidates_per_prefix_group": 17179869184,
+    "candidates_per_slab": 2147483648,
+    "complete_prefix_domain_candidates": 70368744177664,
+    "complete_selected_prefix_group_before_outcome_evaluation": true,
+    "early_stop_inside_prefix_group": false,
+    "host_refresh_interval_prefix_groups": 64,
+    "matched_control": "first_target_block_bit0_flipped_before_execution",
+    "public_output_blocks": 8,
+    "rounds": 20,
+    "feedforward": true,
+    "slabs_per_prefix_group": 8,
+    "unknown_key_bits": 46,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low14",
+    "verification": "independent_byte_and_word_ChaCha20_implementations_across_all_eight_blocks"
+  },
+  "information_boundary": {
+    "A313_result_available_at_design_freeze": false,
+    "A321_selected_operator_available_at_design_freeze": false,
+    "A322_result_available_at_design_freeze": false,
+    "A324_qualification_available_at_design_freeze": false,
+    "W46_candidate_available_at_design_freeze": false,
+    "W46_challenge_available_at_design_freeze": false,
+    "W46_filter_outcome_available_at_design_freeze": false,
+    "manual_order_override_after_A321_selection": false,
+    "target_labels_used_for_W46_order_selection": 0
+  },
+  "order_transfer_contract": {
+    "calibration": "A321_minimum_rank_selection_on_independently_confirmed_A313_W44_holdout",
+    "deployment": "copy_the_exact_selected_A321_W45_prefix_order_unchanged_to_fresh_W46",
+    "parameter_refit_at_W46": false,
+    "prefix_coordinate": "key_word0_bits31_through20",
+    "selection_or_merge_after_A322_or_W46_reveal": false,
+    "W46_protocol_must_freeze_before_A322_result": true
+  },
+  "schema": "chacha20-round20-holdout-selected-w46-recovery-a325-design-v1",
+  "scientific_question": "Does the operator selected only by the independent A313 W44 holdout transfer unchanged through every ChaCha20 round plus feed-forward to a fresh W46 residual relation?",
+  "source_anchors": {
+    "A321_design_path": "research/configs/chacha20_round20_holdout_selected_w45_operator_a321_design_v1.json",
+    "A321_design_sha256": "3db5966ca254f8a5342399445d992db672fd0e9e5d40bc8ad401b0ae8cbd1e92",
+    "A321_runner_path": "research/experiments/chacha20_round20_holdout_selected_w45_operator_a321.py",
+    "A321_runner_sha256": "61fd8e3c9635eab8cb166d8c9008df08b0cc067764f9c64da5042fa18726ef52",
+    "A314_reference_runner_path": "research/experiments/chacha20_round20_w45_fine_band_recovery_a314.py",
+    "A314_reference_runner_sha256": "f85ed4e7ae7acbd71f06aeca54609e278a1d26e16f9fbddf94e154a3b5f005f0",
+    "A324_design_path": "research/configs/chacha20_round20_w46_eight_slab_grouped_engine_a324_design_v1.json",
+    "A324_design_sha256": "9a307d00c898a325a792ea1850a8a04d5ad8c7a6e4038e9938ee0e99d3507078",
+    "A324_protocol_path": "research/configs/chacha20_round20_w46_eight_slab_grouped_engine_a324_v1.json",
+    "A324_protocol_sha256": "a787285d547e4eaaeffd808c35fcaa3f44df2ce2bd01dece67cd6f4ceb550694",
+    "A324_runner_path": "research/experiments/chacha20_round20_w46_eight_slab_grouped_engine_a324.py",
+    "A324_runner_sha256": "d286102bfcdf5ec4902c7e7240aa6b4ba6c9edd486933b58cbc895355b0c0f4b"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "anchors": {
+    "A287_preflight": {
+      "path": "research/results/v1/chacha20_round20_w24_global_portfolio_a287_preflight_v1.json",
+      "sha256": "1bacefadd636b9e7fb9f42476e1927a87547d04ece676c8efcd1e29a6ef898b0"
+    },
+    "A287_protocol": {
+      "path": "research/configs/chacha20_round20_w24_global_portfolio_a287_v1.json",
+      "sha256": "8e75e49d33d8311be2132cdcec1f0f87073e5e5395112c7dac8752e39b6dac72"
+    },
+    "A287_source": {
+      "path": "research/experiments/chacha20_round20_w24_global_portfolio_a287.py",
+      "sha256": "cf0aeb03f4914a398b47c1675e7dee48ad3176e2c6a364cda37ede2c163f154c"
+    },
+    "cryptominisat": {
+      "binary": {
+        "path": "/opt/homebrew/Cellar/cryptominisat/5.14.7/bin/cryptominisat5",
+        "sha256": "c1f313d66f9253964a778455ee84bc64dbe786602b0d85c9d55813d3ee0682fe"
+      },
+      "version_stdout": "c CMS SHA1: GIT-notfound\nc CryptoMiniSat version 5.14.7\nc CMS compilation env CMAKE_CXX_COMPILER = clang++ | CMAKE_CXX_FLAGS =  -fno-stack-protector -msse4.2 -Wno-bitfield-constant-conversion -Wlogical-op -Wrestrict -Wnull-dereference -Wdouble-promotion -Wshadow -Wformat=2 -Wextra-semi -pedantic | COMPILE_DEFINES =  -DNDEBUG -D_FORTIFY_SOURCE=0 -DUSE_ZLIB | BUILD_SHARED_LIBS = ON | ONLY_SIMPLE =  | STATS = OFF | SQLITE3_FOUND =  | ZLIB_FOUND = TRUE | VALGRIND_FOUND =  | ENABLE_TESTING = OFF | SLOW_DEBUG = OFF | ENABLE_ASSERTIONS = OFF | PYTHON_EXECUTABLE =  | PYTHON_LIBRARY =  | PYTHON_INCLUDE_DIRS =  | MY_TARGETS =  | LARGEMEM = OFF | LIMITMEM = OFF | BREAKID_LIBRARIES =  | BREAKID-VER = . | c c Using VMTF, picosat, CaDiCaL, and CadiBack code by Armin Biere\nc CMS is MIT licensed\nc Using code from 'When Boolean Satisfiability Meets Gauss-E. in a Simplex Way'\nc       by C.-S. Han and J.-H. Roland Jiang in CAV 2012. Fixes by M. Soos\nc Using CCAnr from 'CCAnr: A Conf. Checking Based Local Search Solver [...]'\nc       by Shaowei Cai, Chuan Luo, and Kaile Su, SAT 2015\nc Using Oracle code from 'Integrating Tree Decompositions [...]'\nc       by Tuukka Korhonen and Matti Jarvisalo, CP 2021",
+      "version_stdout_sha256": "ffa1cee9f1211a37fa832b1b3f47159508335897ea294a1d8598e5c77c746ec7"
+    },
+    "kissat": {
+      "binary": {
+        "path": "/opt/homebrew/Cellar/kissat/4.0.4/bin/kissat",
+        "sha256": "05d6f3e9c402a1fe8853b0746e384e1b3d1c4a550e255f11daa2461d279aa848"
+      },
+      "version_stdout": "4.0.4",
+      "version_stdout_sha256": "27aa16a537d00b66aa2a31a9e193efbd26861afa33a7bc14ea3345f6284cbcdc"
+    },
+    "root_reference": {
+      "path": "research/experiments/chacha20_round20_multitarget_root_confirm.py",
+      "sha256": "3911002cdeff7f4705e82fd62ed293bbe675c7d02791aa7aa8770ed4d7d2891e"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w24_cross_solver_portfolio_a289.py",
+      "sha256": "a8ab334b0f7292a953bf3d8be9caa29dd7e05c4decb593408929c154b49f1ab7"
+    }
+  },
+  "attempt_id": "A289",
+  "execution_plan": {
+    "confirmation": "standalone_RFC_operation_reference_all_eight_blocks",
+    "constrained_output_bits": 4096,
+    "control": "one_bit_flipped_first_standard_output_block",
+    "feedforward_included": true,
+    "first_exact_SAT_terminates_unfinished_sibling": true,
+    "known_key_bits": 232,
+    "no_complete_candidate_enumeration": true,
+    "no_prefix_or_candidate_label_available": true,
+    "parallel_solver_processes": 2,
+    "portfolio": [
+      {
+        "arm": "kissat_base_sat",
+        "cnf": {
+          "path": "research/artifacts/a287_chacha20_r20_w24_global/a223_w24_shared_b8_base.cnf",
+          "sha256": "91337e95194205055c057419f7084f756198afb305223aa1d23b2d3d27d04297"
+        },
+        "command": [
+          "/opt/homebrew/bin/kissat",
+          "--sat",
+          "--time=7200",
+          "--quiet",
+          "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/artifacts/a287_chacha20_r20_w24_global/a223_w24_shared_b8_base.cnf"
+        ],
+        "model_mapping_sha256": "32b7df2873259346eef7416d705985c78ac19532325c823c4dfd4dd8e51a27e7",
+        "model_one_literals_bit0_upward": [
+          11,
+          10,
+          13,
+          15,
+          17,
+          19,
+          21,
+          23,
+          25,
+          27,
+          29,
+          31,
+          33,
+          35,
+          37,
+          39,
+          41,
+          43,
+          45,
+          47,
+          54,
+          58,
+          62,
+          66
+        ],
+        "seconds": 7200,
+        "solver": "kissat_sat",
+        "source_A287_CNF_arm": "base_default"
+      },
+      {
+        "arm": "cryptominisat_bfs_default",
+        "cnf": {
+          "path": "research/artifacts/a287_chacha20_r20_w24_global/a287_w24_bfs_far.cnf",
+          "sha256": "b91c9ee6a6d4ae6ea033f7b978dad5bbb3e7cb19272fa654f511d10e12cb48ce"
+        },
+        "command": [
+          "/opt/homebrew/bin/cryptominisat5",
+          "--verb",
+          "0",
+          "--maxtime",
+          "7200",
+          "--threads",
+          "1",
+          "--maxsol",
+          "1",
+          "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/artifacts/a287_chacha20_r20_w24_global/a287_w24_bfs_far.cnf"
+        ],
+        "model_mapping_sha256": "0a6579df011924ea0763c147ef66448123884c0601ea4d5ddb67e8ac00226f70",
+        "model_one_literals_bit0_upward": [
+          531439,
+          531438,
+          531440,
+          531441,
+          511886,
+          511887,
+          511888,
+          511889,
+          511890,
+          511891,
+          511892,
+          511893,
+          511894,
+          511895,
+          511897,
+          511898,
+          541651,
+          541652,
+          541653,
+          541654,
+          541655,
+          541656,
+          541657,
+          541658
+        ],
+        "seconds": 7200,
+        "solver": "cryptominisat_default",
+        "source_A287_CNF_arm": "bfs_far_sat"
+      }
+    ],
+    "primitive": "standard_ChaCha20_block_function",
+    "public_input_output_blocks": 8,
+    "rounds": 20,
+    "unknown_key_bits": 24
+  },
+  "execution_plan_sha256": "db6898b87581b9c44e22467aa0065af5ed7abf7b787b1e990197a544b78adad2",
+  "information_boundary": {
+    "A287_result_available_at_freeze": false,
+    "UNKNOWN_will_not_be_treated_as_UNSAT": true,
+    "any_target_solver_execution_started": false,
+    "secret_assignment_target_prefix_or_model_available": false,
+    "solver_families_CNF_views_and_budgets_frozen": true
+  },
+  "protocol_state": "cross_solver_views_and_budgets_frozen_before_target_solver_execution",
+  "public_challenge_sha256": "5beabf27dccaa98cfaa97eed7bf7420c6548dcc469b4c924af04f8a872ecc30f",
+  "schema": "chacha20-round20-w24-cross-solver-portfolio-a289-protocol-v1",
+  "scientific_design_sha256": "3175fdd8be3c01fa76042c231d75e92dc28ee6d95f5ee31529675a876077f220"
+}

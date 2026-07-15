@@ -1,0 +1,259 @@
+{
+  "A307_qualification_artifact_sha256": "b6b8f0193229d034a16f88ae37b1da11eed6568499dbb579f81eb47b84f9293a",
+  "A312_order_sha256": "698641af20a9f9ef7071f7a46d239a9cb9124cc82e10ab1b4bdb00f4a98f39fc",
+  "anchors": {
+    "A308_order": {
+      "path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_order_v1.json",
+      "sha256": "d69b594a5c7a8ce17d7e5e8d5736006f76a3757a532aa6e4e84f2ca5d6ab2f0b"
+    },
+    "A308_preflight": {
+      "path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_preflight_v1.json",
+      "sha256": "7afda29f1cf4f12d4ab09348d2393a80c30b7689d2e6623fffb9351f966cd5fd"
+    },
+    "A308_protocol": {
+      "path": "research/configs/chacha20_round20_w44_calibrated_coarse_numeric_a308_v1.json",
+      "sha256": "06fcdf7e79f07408292ced64eb19c7c973ba202061d47f8c9499bd23fe679dbd"
+    },
+    "A312_causal": {
+      "path": "research/results/v1/chacha20_round20_w44_fine_selected_channel_transfer_a312_order_v1.causal",
+      "sha256": "05b3c0cc3b4e034afe91cdaa1becb1455ef623f60f96d2fb85ac21ec75c8b238"
+    },
+    "A312_order": {
+      "path": "research/results/v1/chacha20_round20_w44_fine_selected_channel_transfer_a312_order_v1.json",
+      "sha256": "698641af20a9f9ef7071f7a46d239a9cb9124cc82e10ab1b4bdb00f4a98f39fc"
+    },
+    "A313_reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w44_width_conditioned_fine_portfolio_a313.sh",
+      "sha256": "67b4d8c35fa880a65d313767e448d3be37f29a9b7ab1ca86b54acb4bc24d0ee1"
+    },
+    "A313_runner": {
+      "path": "research/experiments/chacha20_round20_w44_width_conditioned_fine_portfolio_a313.py",
+      "sha256": "2e3ef48726395d7c45bdcb859a565f4b9cc511b589aee04bfc8ea05856140484"
+    },
+    "A313_test": {
+      "path": "tests/test_chacha20_round20_w44_width_conditioned_fine_portfolio_a313.py",
+      "sha256": "8f230eeefce27b5e5033bb5b275ec844dc70cecd8526da730dd9df10b3112f9d"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_design_v1.json",
+      "sha256": "7c3f2b78933cc64f9bdc7322aa185eef4997c4bab86f5d47576bd0a2687daf8e"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json",
+      "sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3"
+    }
+  },
+  "attempt_id": "A313",
+  "causal": {
+    "api_id": "a313w44",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fresh_W44_replication_or_W45_fine_reader_transfer",
+        "predicate": "next_required_object",
+        "subject": "A313:confirmed_width_conditioned_fine_W44_recovery",
+        "suggested_queries": [
+          "Does the W44 fine-band portfolio replicate on a fresh target or transfer to the qualified A311 W45 engine?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_W44_WIDTH_CONDITIONED_FINE_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_A313_order_search_confirmation_chain",
+        "o_idx": 4,
+        "outcome": "A313:confirmed_width_conditioned_fine_W44_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A313_W44_fine_band_chain",
+        "trigger": "A312:complete_model_free_W44_fine_field"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "b761ffd6c2864fca62c87e2308a01842a7a7fb9a74d0dafc7b68d71129711c44",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 5389,
+      "file_size_kb": 5.3,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "confirmation": {
+    "all_blocks_match": true,
+    "assignment": 662233243956,
+    "byte_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "byte_reference_sha256": [
+      "ec12015a0834ec92e36315759cdbf38d9c8c725fc42280ef8651119efc162fae",
+      "160ee74b537edf9f80245ab55837efe1e84f21a8454703b1dfad754bdac345f9",
+      "1925465467bd54e0b8f9a99db7de0e740290d87c35eb4e3b06b71bd81509038d",
+      "e531d6a4f398102fdc182eff27c9952d39c2c709c03221b629d51a7f09ed2e42",
+      "8147a500edf766864d339c1c9eb0609fbf482481df3fb23e4a26de10d4ab9277",
+      "16f3a9a8b9f722ee8cb44d6a67799e9184f70fb60d262a8b46d7c757ef01e278",
+      "d633645675d529735ee20fe17989fa8c5ad01547f44388c60430e7bd50d9b788",
+      "8bafc3c7f15e128df94ea0db02643af85aaf8f7e50f89734932ac0a769a525b8"
+    ],
+    "output_bits_checked_per_reference": 4096,
+    "recovered_key_words": [
+      808280372,
+      2638082202,
+      3513116469,
+      249176464,
+      2153789193,
+      3072028349,
+      2586452441,
+      3353429385
+    ],
+    "recovered_key_words_hex": [
+      "302d6134",
+      "9d3df09a",
+      "d165e735",
+      "0eda2190",
+      "80603709",
+      "b71b6ebd",
+      "9a2a21d9",
+      "c7e14589"
+    ],
+    "total_cross_implementation_output_bits_checked": 8192,
+    "word_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "word_reference_sha256": [
+      "ec12015a0834ec92e36315759cdbf38d9c8c725fc42280ef8651119efc162fae",
+      "160ee74b537edf9f80245ab55837efe1e84f21a8454703b1dfad754bdac345f9",
+      "1925465467bd54e0b8f9a99db7de0e740290d87c35eb4e3b06b71bd81509038d",
+      "e531d6a4f398102fdc182eff27c9952d39c2c709c03221b629d51a7f09ed2e42",
+      "8147a500edf766864d339c1c9eb0609fbf482481df3fb23e4a26de10d4ab9277",
+      "16f3a9a8b9f722ee8cb44d6a67799e9184f70fb60d262a8b46d7c757ef01e278",
+      "d633645675d529735ee20fe17989fa8c5ad01547f44388c60430e7bd50d9b788",
+      "8bafc3c7f15e128df94ea0db02643af85aaf8f7e50f89734932ac0a769a525b8"
+    ]
+  },
+  "discovery": {
+    "candidate": 662233243956,
+    "candidate_hex": "09a302d6134",
+    "complete_W44_group_execution_before_stop": true,
+    "complete_domain_assignments": 17592186044416,
+    "control_filter_candidates": [],
+    "early_stop_inside_group": false,
+    "executed_assignments": 11824044965888,
+    "executed_group_dispatches": 5506,
+    "executed_prefix_groups": 2753,
+    "factual_filter_candidates": [
+      662233243956
+    ],
+    "gpu_seconds": 8291.20728220744,
+    "host_instances": 11,
+    "host_refresh_interval_prefix_groups": 256,
+    "key_word0": 808280372,
+    "key_word1_low12": 154,
+    "matched_control_candidates": 0,
+    "prefix12": 770,
+    "prefix12_hex": "302",
+    "search_gain_bits": 0.5732111054044389,
+    "strict_subset_of_complete_domain": true,
+    "volatile_wall_seconds": 8301.239466417115
+  },
+  "evidence_stage": "FULLROUND_R20_W44_WIDTH_CONDITIONED_FINE_STRICT_SUBSET_RECOVERY_CONFIRMED",
+  "execution_sha256": "4bdf1813cd17f933d9a41c67e29cd33af7211d907544d6102d35a33d0ddf99c0",
+  "information_boundary": {
+    "A308_candidate_available_at_design_freeze": false,
+    "A308_candidate_or_prefix_rank_available_at_materialization": false,
+    "A308_filter_outcome_available_at_design_freeze": false,
+    "A308_prefix_rank_available_at_design_freeze": false,
+    "A308_result_available_at_design_freeze": false,
+    "A308_result_available_at_materialization": false,
+    "A312_direct_symbolic_outcome_available_at_design_freeze": false,
+    "A312_fine_order_available_at_design_freeze": false,
+    "A312_measurement_complete_at_design_freeze": false,
+    "A312_outcome_used_only_to_select_predeclared_conditional_branch": true,
+    "candidate_filter_outcome_used_for_operator_or_order": false,
+    "reader_refits_on_A308_or_A312": 0,
+    "target_labels_used_from_A308_or_A312": 0
+  },
+  "measurement_sha256": "560363ceb84866911d9f5247a648a78b9d67f0c11dffc6c2db926023da06344a",
+  "order_sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3",
+  "portfolio_guarantee": {
+    "checked_prefix_cells": 4096,
+    "frozen_worst_case_bound_bits": 1.584962500721156,
+    "frozen_worst_case_bound_factor": 3,
+    "maximum_observed_regret_bits": 1.584962500721156,
+    "maximum_observed_regret_cell": 0,
+    "maximum_observed_regret_factor": 3.0,
+    "statement": "R_A313 <= 3 * min(R_band, R_A312_fine, R_A308_baseline)",
+    "violations": 0
+  },
+  "protocol_sha256": "dd5d59c52b8d5247d4a51b5a078f640577a2b8e3506fd2c7a46a8ca2a34c2f3c",
+  "public_challenge_sha256": "c3897f3f8499c9afa01628b7f5e8de0ea5910a9559ca6bfb22fafe71d1fb26d6",
+  "qualification_gate": {
+    "complete_W44_group_candidates": 4294967296,
+    "evidence_stage": "TARGET_FREE_COMPLETE_W44_GROUP_ENGINE_EXACTLY_QUALIFIED",
+    "production_target_used": false,
+    "qualification_sha256": "847261a50ac1deac31c01279ff33ff998e66d6af36813c61ee60f2945f88e3f8",
+    "synthetic_filter_exact": true
+  },
+  "rank_analysis": {
+    "assignment_upper_bounds": {
+      "A297_coarse_high8_then_reflected_Gray4": 6545530159104,
+      "A308_two_operator_baseline": 6128918331392,
+      "A312_fine_selected_channel": 4930622455808,
+      "A313_three_arm_portfolio": 11824044965888,
+      "numeric_word0_prefix12": 3311419785216,
+      "public_hash_control": 4432406249472,
+      "width_conditioned_A312_fine_rank_band": 7997229105152
+    },
+    "best_A313_arm_rank_one_based": 1148,
+    "component_ranks_computed_only_after_confirmation": true,
+    "portfolio_gain_bits_vs_complete_domain": 0.5732111054044389,
+    "portfolio_regret_bits_vs_best_arm": 1.2618819679198734,
+    "portfolio_regret_factor_vs_best_arm": 2.39808362369338,
+    "prefix12": 770,
+    "prefix12_hex": "302",
+    "prefix_ranks_one_based": {
+      "A297_coarse_high8_then_reflected_Gray4": 1524,
+      "A308_two_operator_baseline": 1427,
+      "A312_fine_selected_channel": 1148,
+      "A313_three_arm_portfolio": 2753,
+      "numeric_word0_prefix12": 771,
+      "public_hash_control": 1032,
+      "width_conditioned_A312_fine_rank_band": 1862
+    },
+    "rank_guarantee_holds": true
+  },
+  "schema": "chacha20-round20-w44-width-conditioned-fine-portfolio-a313-result-v1",
+  "strict_subset_of_complete_domain": true
+}

@@ -4,10 +4,10 @@
 
 This repository preserves two complementary full-round recovery result classes:
 
-- **twelve complete-domain residual-key recoveries** across twelve primitive
+- **thirteen complete-domain residual-key recoveries** across thirteen primitive
   configurations in nine cipher families; and
-- **five target-blind strict-subset ChaCha20-R20 recoveries**: the A281
-  cross-material result and the four-target A286 replication panel.
+- **24 strict-subset ChaCha20-R20 executions across 23 distinct targets**, from
+  W20 through W44, using frozen target-blind or zero-refit schedules.
 
 Every complete-domain record enumerated its full declared domain on Apple M4
 Metal without early stopping, produced one exact factual model, and produced no
@@ -27,16 +27,17 @@ model for the matched one-bit-flipped control.
 | A264 | Salsa20/20 block function | 20 | 42 / 214 | `2^42` | 1 / 0 | 512 bits |
 | P128R1 | PRESENT-128 | 31 + K32 whitening | 38 / 90 | `2^38` | 1 / 0 | 128 bits |
 | AES256R1 | AES-256 | 14 | 41 / 215 | `2^41` | 1 / 0 | 256 bits |
+| CHACHA20KR43 | ChaCha20 block function with feed-forward | 20 | 43 / 213 | `2^43` | 1 / 0 | 8,192 bits |
 
-The strict-subset records use frozen target-blind schedules and stop when the
-factual model is found. A281 recovered the hidden 20-bit residual at frozen
-rank 37 after 36 exact-UNSAT cells: 151,552 of 1,048,576 assignments
-(14.453125%). A286 independently confirmed four fresh public-material targets,
-recomputed 16,384 output bits with a third RFC-style implementation, and
-rejected all four one-bit controls. Its discovery modes were
-`fallback / top128 / top128 / global`; applicable frozen-order ranks were
-254, 55, and 107. None of the five strict-subset recoveries enumerated the
-complete residual domain.
+The strict-subset line starts with A281 at W20 and the four-target A286 panel.
+The A287--A325 batch adds 19 executions across 18 targets: two W24 orders on one
+target (A294/A295), eight W24/W28 targets (A296), four W32 targets (A297), one
+additional W32 target (A303), three W43 targets (A304/A305/A309), and one W44
+target (A313). Every
+execution stops only after its complete frozen group, remains below the full
+declared domain, rejects the matched control, and recomputes all eight public
+output blocks independently. The exact ranks are published in
+[the A287--A325 release record](docs/A287_A325_RELEASE.md).
 
 Each unique assignment reconstructs the complete master key in its declared
 known-key model. The package then recomputes the complete output with a compact
@@ -45,17 +46,18 @@ scope are in [docs/CLAIM_MATRIX.md](docs/CLAIM_MATRIX.md).
 
 ## Exact claim
 
-The artifacts establish twelve complete-domain full-round recovery points and
+The artifacts establish thirteen complete-domain full-round recovery points and
 a common Metal architecture across ARX, Feistel, SP-network, AEAD, and AES
 designs. Each input is a frozen public plaintext/ciphertext or AEAD relation
 plus the listed known key bits; every assignment in the remaining 38- to
-44-bit domain was executed.
+44-bit domain was executed. CHACHA20KR43 adds the complete `2^43` ChaCha20-R20
+domain and confirms 8,192 output bits across independent word- and byte-oriented
+implementations.
 
-A281 and A286 establish the separate strict-subset result class: target-blind
-frozen scheduling, exact UNSAT/SAT evidence, recovery before complete-domain
-enumeration, full-output recomputation, and matched-control rejection. The
-claim boundary is residual-key recovery in the declared known-key models;
-full-key recovery with all master-key bits unknown is a separate scope.
+A281, A286, and A294--A313 establish the separate strict-subset result class:
+frozen scheduling, recovery before complete-domain enumeration, full-output
+recomputation, and matched-control rejection. The demonstrated operation is
+exact residual-key recovery in each declared known-key model.
 
 ## Verify in seconds
 
@@ -73,13 +75,15 @@ make lint
 
 `make verify`:
 
-1. verifies all 205 immutable files against `provenance/ARTIFACTS.sha256`;
-2. checks every frozen protocol/result challenge and every A286 root anchor;
+1. verifies all 570 immutable files against `provenance/ARTIFACTS.sha256`;
+2. checks every frozen protocol/result challenge, every A286 root anchor, and
+   every retained A287--A325 chronology artifact;
 3. reconstructs every recovered key and independently recomputes the complete
-   full-round output, including all five strict-subset ChaCha20 targets;
-4. opens all 28 `.causal` files with the matching integrity-checking Reader;
-5. checks complete-domain gates for the twelve exhaustive records and
-   target-blind/no-full-enumeration gates for A281/A286.
+   full-round output for all 13 complete-domain and 24 strict-subset executions;
+4. opens all 38 headline and 26 chronology `.causal` files with the matching
+   integrity-checking Reader;
+5. checks complete-domain gates for the thirteen exhaustive records and the
+   frozen-order/no-full-enumeration gates for all strict-subset executions.
 
 ## Native replay
 
@@ -94,12 +98,13 @@ make native-smoke
 ./scripts/reproduce_full_search.sh threefish256
 ```
 
-The nine subsequent byte-exact protocol factories, qualification programs, and
+The subsequent byte-exact protocol factories, qualification programs, and
 recovery runners are preserved under `experiments/original/`, alongside their
-native hosts under `experiments/native/`. Their immutable configs, qualification
-records, results, manifests, original reports, and Causal artifacts are retained
-as one provenance chain. Platform-independent independent confirmation of every
-record is part of `make verify`.
+native hosts under `experiments/native/`. The complete A287--A325 source and
+evidence chain is preserved under `chronology/arx-carry-leak/`. Their immutable
+configs, qualification records, results, manifests, reports, source, and Causal
+artifacts are retained as one provenance chain. Platform-independent independent
+confirmation of every recovery record is part of `make verify`.
 
 The commands write only below `build/`; retained evidence is never overwritten.
 A completed replay must match the frozen factual assignment and empty control
@@ -123,6 +128,7 @@ cores and 16 GB unified memory.
 | A264 | 4,398,046,511,104 | 3,153.32 s |
 | P128R1 | 274,877,906,944 | 4,305.32 s |
 | AES256R1 | 2,199,023,255,552 | 3,712.32 s |
+| CHACHA20KR43 | 8,796,093,022,208 | 6,406.80 s |
 
 A184's time is contextual, non-canonical end-to-end wall-clock provenance. The
 other rows retain GPU seconds directly in their result JSON. Correctness is
@@ -146,6 +152,7 @@ causal/              immutable Causal evidence graphs
 reports/original/    byte-exact reports from the originating working tree
 experiments/native/  byte-exact Swift/Metal enumerators
 experiments/original/byte-exact originating factories and runners
+chronology/           byte-exact A287--A325 research and evidence chain
 src/                  independent verification and reproduction package
 tests/                KAT, artifact, Causal, claim, and CLI gates
 scripts/              one-command verification and reproduction

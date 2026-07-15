@@ -1,0 +1,123 @@
+{
+  "A204R_causal": {
+    "path": "research/results/v1/chacha20_round10_external_cnf_reverse_canonical_v1.causal",
+    "sha256": "6dbf196b9d764e2f21f5e0f3fb89924e90de696bc44990ad43f2b1a16102110f"
+  },
+  "A204R_result": {
+    "path": "research/results/v1/chacha20_round10_external_cnf_reverse_canonical_v1.json",
+    "sha256": "51e96cec45484fa7c6d388a1aa53bcf76cd24d0884da83a54ba42140a1a18ada"
+  },
+  "A287_preflight": {
+    "path": "research/results/v1/chacha20_round20_w24_global_portfolio_a287_preflight_v1.json",
+    "sha256": "1bacefadd636b9e7fb9f42476e1927a87547d04ece676c8efcd1e29a6ef898b0"
+  },
+  "attempt_id": "A290",
+  "causal": {
+    "api_id": "a290rv",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 3,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w24_reverse_global_transfer_a290_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "A287_A289_A290_conditioned_exact_W24_partition",
+        "predicate": "next_required_object",
+        "subject": "A290:measured_fullround_W24_reverse_budget_boundary",
+        "suggested_queries": [
+          "Which exact prefix partition best complements all six global traces?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_W24_REVERSE_GLOBAL_BUDGET_BOUNDARY",
+        "is_inferred": true,
+        "m_idx": 7,
+        "mechanism": "materialized_prospective_reverse_transfer_chain",
+        "o_idx": 6,
+        "outcome": "A290:measured_fullround_W24_reverse_budget_boundary",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "AI-native exact closure retained in-file",
+        "s_idx": 0,
+        "source": "materialized:A204R_gap_plus_A290_execution",
+        "trigger": "A204R:personally_read_reverse_global_operator_gap"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "b3952e5b14e70beecb72d6a621c1105631cf453626ef56e7469901d99fbdcc23",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 8,
+      "file_size_bytes": 4308,
+      "file_size_kb": 4.2,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w24_reverse_global_transfer_a290_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 4
+    }
+  },
+  "confirmation": null,
+  "evidence_stage": "FULLROUND_R20_W24_REVERSE_GLOBAL_BUDGET_BOUNDARY",
+  "execution_sha256": "449853c7a35c2485933032bdcaaeb7fda829ba609e3f2aa972f3984412e96a8c",
+  "information_boundary": {
+    "complete_candidate_domain_enumeration_used": false,
+    "reverse_operator_views_and_budgets_frozen_before_solver": true,
+    "secret_assignment_available_to_runner": false,
+    "source_gap_personally_read_before_freeze": true,
+    "target_prefix_or_model_available_before_solver": false,
+    "unknown_treated_as_UNSAT": false
+  },
+  "measurement_sha256": "2c67bd2f99e40bbfe6563c47f80dd74884727031d618949884dbae1996db0ff6",
+  "protocol": {
+    "path": "research/configs/chacha20_round20_w24_reverse_global_transfer_a290_v1.json",
+    "sha256": "20d9cac40bbd0edec80d2e579e20530aab97e87f6324d32ee23adeb15940ab51"
+  },
+  "public_challenge_sha256": "5beabf27dccaa98cfaa97eed7bf7420c6548dcc469b4c924af04f8a872ecc30f",
+  "rfc8439_gate": {
+    "exact": true,
+    "expected_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "observed_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "vector": "RFC8439_section_2.3.2"
+  },
+  "runner": {
+    "path": "research/experiments/chacha20_round20_w24_reverse_global_transfer_a290.py",
+    "sha256": "daa292c83f4d46a8ede45e63f54f211255e90cd54f616103cde4d7bfc5ad263d"
+  },
+  "schema": "chacha20-round20-w24-reverse-global-transfer-a290-result-v1",
+  "solver_arms": [
+    {
+      "arm": "base_reverse",
+      "command_sha256": "e3a027f400af019235d91f1292381898308d1bee7d9486e37d07ae8323b37def",
+      "elapsed_seconds": 7200.443227041047,
+      "returncode": 0,
+      "status": "unknown",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "terminated_after_sibling_sat": false,
+      "witness_exists": true,
+      "witness_sha256": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb"
+    },
+    {
+      "arm": "bfs_far_reverse",
+      "command_sha256": "3cca9be0689f400a465ebdb6ab949d4efb170564b00d198ead36c5a21a9a3b77",
+      "elapsed_seconds": 7200.445425500162,
+      "returncode": 0,
+      "status": "unknown",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "terminated_after_sibling_sat": false,
+      "witness_exists": true,
+      "witness_sha256": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb"
+    }
+  ],
+  "winner": null
+}

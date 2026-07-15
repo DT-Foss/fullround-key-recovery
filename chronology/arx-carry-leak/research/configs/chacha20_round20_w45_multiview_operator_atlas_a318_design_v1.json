@@ -1,0 +1,70 @@
+{
+  "schema": "chacha20-round20-w45-multiview-operator-atlas-a318-design-v1",
+  "attempt_id": "A318",
+  "design_state": "frozen_while_A314_measurement_is_running_before_any_A314_order_model_candidate_or_prefix_rank_exists",
+  "scientific_question": "Does the unchanged A317 Fine-Coarse-Numeric prototype atlas transfer to a second unseen target and from W44 to W45?",
+  "conditional_branch_contract": {
+    "direct_symbolic_A314_branch": "retain_the_independently_confirmed_symbolic_model_and_skip_rank_counterfactual_candidate_execution",
+    "complete_model_free_A314_branch": "apply_the_three_frozen_A317_distance_views_to_A314_fine_coarse_numeric_rank_coordinates",
+    "branch_selected_only_by_A314_public_measurement_outcome": true,
+    "branch_logic_frozen_before_A314_order_exists": true
+  },
+  "operator_contract": {
+    "target_coordinate_map": [
+      "rank_in_future_A314_fine_selected_channel_order",
+      "rank_in_future_A314_coarse_high8_then_reflected_Gray4_order",
+      "rank_in_numeric_word0_prefix12_order"
+    ],
+    "confirmed_prototypes": [
+      [2605, 202, 1006],
+      [2366, 3113, 3197],
+      [2114, 427, 3952],
+      [3829, 1789, 3227]
+    ],
+    "frozen_distance_views": [
+      "nearest_prototype_L1",
+      "nearest_prototype_Linf",
+      "nearest_prototype_squared_L2"
+    ],
+    "primary_view": "nearest_prototype_L1",
+    "tie_break": [
+      "minimum_distance",
+      "first_prototype_index",
+      "fine_rank",
+      "coarse_rank",
+      "numeric_rank",
+      "cell_value"
+    ],
+    "selection_or_refit_after_A314_reveal": false,
+    "candidate_execution_by_A318": false,
+    "evaluation": "all_three_frozen_rank_views_after_A314_independent_confirmation_without_duplicate_candidate_execution"
+  },
+  "information_boundary": {
+    "A314_protocol_available_at_design_freeze": true,
+    "A314_preflight_available_at_design_freeze": true,
+    "A314_measurement_running_at_design_freeze": true,
+    "A314_order_available_at_design_freeze": false,
+    "A314_direct_symbolic_model_available_at_design_freeze": false,
+    "A314_result_available_at_design_freeze": false,
+    "A314_candidate_available_at_design_freeze": false,
+    "A314_prefix_rank_available_at_design_freeze": false,
+    "A314_filter_outcome_available_at_design_freeze": false,
+    "target_labels_used_from_A314": 0,
+    "reader_refits_after_A314_reveal": 0,
+    "candidate_or_rank_used_to_choose_prototypes_metrics_or_branch_logic": false
+  },
+  "source_anchors": {
+    "A314_runner_path": "research/experiments/chacha20_round20_w45_fine_band_recovery_a314.py",
+    "A314_runner_sha256": "f85ed4e7ae7acbd71f06aeca54609e278a1d26e16f9fbddf94e154a3b5f005f0",
+    "A314_protocol_path": "research/configs/chacha20_round20_w45_fine_band_recovery_a314_v1.json",
+    "A314_protocol_sha256": "17877a15624f7ab6fec1333c57260fa447d71d1112b9df5aa8219f8403968574",
+    "A314_preflight_path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_preflight_v1.json",
+    "A314_preflight_sha256": "cfb5bacd6e6e17479260d8a2cacd2f9808afc632d82e31f80e8dc6ed2d4159a4",
+    "A317_design_path": "research/configs/chacha20_round20_w44_multiview_operator_atlas_a317_design_v1.json",
+    "A317_design_sha256": "4f17da4f0f300a3fbae60c229e018f4d19b36334c652c2edf6e0238caf65f4f1",
+    "A317_commitment_path": "research/configs/chacha20_round20_w44_multiview_operator_atlas_a317_commitment_v1.json",
+    "A317_commitment_sha256": "e7b4be79a4a0902d631cfef6073818c7afdc89108b18b7b2b1e22e568d773240",
+    "A317_order_path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+    "A317_order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2"
+  }
+}

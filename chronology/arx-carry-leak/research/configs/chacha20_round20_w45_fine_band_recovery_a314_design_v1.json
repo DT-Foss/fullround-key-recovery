@@ -1,0 +1,135 @@
+{
+  "attempt_id": "A314",
+  "design_state": "target_free_W45_end_to_end_fine_band_recovery_pipeline_frozen_before_A311_qualification_any_W45_challenge_or_A312_A313_outcome_exists",
+  "execution_contract": {
+    "candidate_group_size": 8589934592,
+    "complete_prefix_group_before_success_evaluation": true,
+    "early_stop_inside_prefix_group": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "grouped_engine": "A311_four_complete_2^31_slabs_per_prefix",
+    "matched_one_bit_control": true,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "unknown_key_bits": 45
+  },
+  "fine_reader_contract": {
+    "cadical_configuration": "default",
+    "cells_per_lane": 512,
+    "complete_prefix_cover_required_without_direct_SAT": true,
+    "fine_prefix_bits": 12,
+    "fine_prefix_coordinates_high_to_low": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24,
+      23,
+      22,
+      21,
+      20
+    ],
+    "model_permutation": "word0_low20_then_word1_low13_then_word0_high12",
+    "parallel_retained_state_lanes": 8,
+    "prefix_cells": 4096,
+    "reader": "unchanged_A295_frozen_positive_selected_channel",
+    "reader_refits": 0,
+    "seconds_per_cell": 5.0,
+    "target_labels_used": 0
+  },
+  "fresh_target_contract": {
+    "A311_synthetic_qualification_must_complete_before_target_generation": true,
+    "counter_and_nonce_public": true,
+    "full_key_never_persisted": true,
+    "known_key_bits": 211,
+    "matched_control": "first_output_word_bit0_flipped_after_factual_target_construction",
+    "public_output_blocks": 8,
+    "secret_used_only_for_target_construction_then_discarded": true,
+    "unknown_assignment_never_persisted": true,
+    "unknown_key_bits": 45
+  },
+  "information_boundary": {
+    "A311_qualification_available_at_design_freeze": false,
+    "A312_direct_symbolic_or_fine_order_outcome_available_at_design_freeze": false,
+    "A313_W44_candidate_or_rank_available_at_design_freeze": false,
+    "W45_candidate_available_at_design_freeze": false,
+    "W45_challenge_available_at_design_freeze": false,
+    "W45_filter_outcome_available_at_design_freeze": false,
+    "W45_prefix_order_available_at_design_freeze": false,
+    "W45_secret_or_assignment_available_at_design_freeze": false,
+    "candidate_filter_outcome_used_for_reader_or_order": false,
+    "target_labels_used": 0
+  },
+  "operator_contract": {
+    "conditional_execution": {
+      "direct_symbolic_W45_model": "dual_confirm_all_eight_full_round_blocks_and_skip_duplicate_grouped_execution",
+      "model_free_W45_fine_field": "materialize_and_execute_the_frozen_three_arm_W45_portfolio"
+    },
+    "fit": {
+      "intercept_denominator": 546,
+      "intercept_numerator": 1751899,
+      "method": "exact_ordinary_least_squares_on_three_disjoint_confirmed_width_rank_pairs",
+      "predicted_W45_fine_rank_denominator": 273,
+      "predicted_W45_fine_rank_nearest_integer": 2054,
+      "predicted_W45_fine_rank_numerator": 560657,
+      "slope_denominator": 182,
+      "slope_numerator": -4671,
+      "training_rows": [
+        {
+          "attempt_id": "A295",
+          "confirmed_fine_rank_one_based": 2605,
+          "unknown_key_bits": 24
+        },
+        {
+          "attempt_id": "A303",
+          "confirmed_fine_rank_one_based": 2366,
+          "unknown_key_bits": 32
+        },
+        {
+          "attempt_id": "A305",
+          "confirmed_fine_rank_one_based": 2114,
+          "unknown_key_bits": 43
+        }
+      ]
+    },
+    "merge": "rank_synchronous_round_robin_first_occurrence_width_band_then_raw_fine_then_coarse_numeric_baseline",
+    "portfolio_arms": [
+      "ascending_absolute_distance_from_predicted_W45_one_based_rank_2054_in_fine_order_then_ascending_fine_rank",
+      "unchanged_W45_A295_fine_selected_channel_order",
+      "unchanged_W45_coarse_numeric_two_operator_baseline"
+    ],
+    "rank_guarantee": "R_A314_at_cell <= 3 * min(R_band_at_cell, R_fine_at_cell, R_coarse_numeric_baseline_at_cell)",
+    "training_fit_is_not_recomputed_after_A311_A312_A313_or_W45_reveal": true
+  },
+  "pipeline_stages": [
+    "qualify_A311_on_synthetic_W45_group",
+    "generate_fresh_W45_public_relation_and_discard_secret",
+    "export_one_block_W45_symbolic_CNF_and_exact_45_literal_map",
+    "measure_model_free_coarse_and_complete_fine_fields",
+    "confirm_direct_symbolic_model_or_freeze_A314_three_arm_order",
+    "execute_complete_A311_groups_in_frozen_order",
+    "dual_confirm_all_eight_full_round_blocks",
+    "write_authentic_AI_native_Causal_artifact_and_exact_log"
+  ],
+  "schema": "chacha20-round20-w45-fine-band-recovery-a314-design-v1",
+  "source_anchors": {
+    "A295_result_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+    "A295_result_sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03",
+    "A303_result_path": "research/results/v1/chacha20_round20_w32_dominance_pruned_companion_a303_v1.json",
+    "A303_result_sha256": "bc1878203ed1dc8dffab86e8cd1a85bd01fb12e09a1de6a86b29fd9d1ceae3fe",
+    "A305_result_path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.json",
+    "A305_result_sha256": "adbc8b879f09e03896699188d8141ac0164296eaf2ad688b6fb1036f2b1ac40e",
+    "A311_design_path": "research/configs/chacha20_round20_w45_four_slab_grouped_engine_a311_design_v1.json",
+    "A311_design_sha256": "80cfdb6382f7fd70cf67869584239b0dafb9f7359644b3f46fb283db9f392c6a",
+    "A311_protocol_path": "research/configs/chacha20_round20_w45_four_slab_grouped_engine_a311_v1.json",
+    "A311_protocol_sha256": "b91ee4d153f9ee88d170e333c15c13f1d42a4711b95b1ea069ada8f86816fca6",
+    "A312_design_path": "research/configs/chacha20_round20_w44_fine_selected_channel_transfer_a312_design_v1.json",
+    "A312_design_sha256": "40da3c04819ecba94300d5306edd8fcfe21b65174623ceb725ae9c4d9edff272",
+    "A312_protocol_path": "research/configs/chacha20_round20_w44_fine_selected_channel_transfer_a312_v1.json",
+    "A312_protocol_sha256": "a8fb67f813b09776168e6447b1f4eee44795b413b4a6cc12688a30f5b932f014",
+    "A313_design_path": "research/configs/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_design_v1.json",
+    "A313_design_sha256": "7c3f2b78933cc64f9bdc7322aa185eef4997c4bab86f5d47576bd0a2687daf8e"
+  }
+}

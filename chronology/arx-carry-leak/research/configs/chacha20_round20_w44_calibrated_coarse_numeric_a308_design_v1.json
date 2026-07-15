@@ -1,0 +1,92 @@
+{
+  "acceptance": {
+    "authentic_AI_native_Causal_artifact_required": true,
+    "complete_model_free_256_cell_coarse_field_required": true,
+    "dual_independent_full_output_confirmation_required": true,
+    "main_agent_personal_CausalReader_readback_required": true,
+    "matched_one_bit_control_must_remain_empty": true,
+    "rank_regret_bound_must_hold_exactly": true,
+    "source_A307_complete_W44_group_qualification_required_before_candidate_execution": true,
+    "two_operator_order_frozen_before_candidate_discovery": true
+  },
+  "attempt_id": "A308",
+  "design_state": "frozen_before_A307_W44_qualification_and_before_A308_runner_protocol_target_measurement_order_or_candidate_exists",
+  "execution_contract": {
+    "all_executed_candidate_groups_counted": true,
+    "candidate_group_size": 4294967296,
+    "complete_group_execution_before_stop": true,
+    "complete_residual_domain": 17592186044416,
+    "fresh_target_source": "OS_CSPRNG_after_runner_and_test_hash_freeze",
+    "host_refresh_interval_prefix_groups": 256,
+    "independent_confirmation": "RFC8439_byte_reference_plus_independent_word_reference_over_all_eight_blocks",
+    "matched_control": "one_bit_modified_output_over_every_executed_primary_group",
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_blocks": 8,
+    "rounds": 20,
+    "feedforward_included": true,
+    "stop": "first_factual_filter_match_after_both_complete_2^31_slabs_of_its_2^32_candidate_group",
+    "unknown_key_bits": 44,
+    "word0_prefix_bits": 12,
+    "word0_suffix_bits": 20,
+    "word1_low12_slabs": 2
+  },
+  "information_boundary": {
+    "A307_qualification_available_at_design_freeze": false,
+    "A308_assignment_target_measurement_order_model_candidate_filter_outcome_or_rank_available_at_design_freeze": false,
+    "future_A308_assignment_model_filter_outcome_or_rank_may_change_operator_or_order": false,
+    "measurement_operator_merge_rule_and_precedence_frozen": true,
+    "source_calibration_only_available_at_design_freeze": true
+  },
+  "measurement_contract": {
+    "coarse_cells": 256,
+    "coarse_operator": "unchanged_A272_A297_positive_channel_high8",
+    "coarse_to_prefix12_extension": "reflected_Gray4",
+    "conflict_horizons_per_cell": 4,
+    "expected_model_free_stages": 1024,
+    "fine_cells": 0,
+    "reader_refits": 0,
+    "target_labels_used": 0,
+    "unknown_bits_per_coarse_cell": 36
+  },
+  "operator_contract": {
+    "candidate_execution_orders": [
+      "A297_coarse_high8_then_reflected_Gray4",
+      "numeric_word0_prefix12"
+    ],
+    "merge": "round_robin_by_component_rank_then_first_occurrence_deduplication",
+    "merge_component_precedence": [
+      "A297_coarse_high8_then_reflected_Gray4",
+      "numeric_word0_prefix12"
+    ],
+    "total_prefix_cells": 4096
+  },
+  "purpose": "Execute the first prospectively ordered complete-prefix-group recovery over a 44-bit residual key domain for standard ChaCha20, transferring the calibrated target-blind coarse Causal operator while the A307 two-slab engine raises every prefix group from 2^31 to 2^32 exact candidates.",
+  "rank_guarantee": {
+    "component_count": 2,
+    "proof": "After r round-robin epochs, the first r cells of both frozen component orders have been emitted; duplicate suppression can only reduce the portfolio position.",
+    "statement": "R_A308 <= 2 * min(R_coarse, R_numeric)",
+    "worst_case_regret_bits": 1.0,
+    "worst_case_regret_factor": 2
+  },
+  "schema": "chacha20-round20-w44-calibrated-coarse-numeric-a308-design-v1",
+  "source_anchors": {
+    "A297_causal_path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.causal",
+    "A297_causal_sha256": "5b2c2358807d242e8042d390fc269ecbac931d75a18d1e3a1b1efc004fc829f2",
+    "A297_result_path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.json",
+    "A297_result_sha256": "046beb03789c994e564a018d3ca6d4ce146a22ca6b171197e99aeedd9cc98cfd",
+    "A297_runner_path": "research/experiments/chacha20_round20_w32_causal_search_gain_panel_a297.py",
+    "A297_runner_sha256": "f5700d37179c82969fb458d5cd184656641f65e5962e82cfa6fa1ff48b3ca60f",
+    "A301_calibration_path": "research/results/v1/chacha20_round20_w43_dominance_pruned_portfolio_a301_calibration_v1.json",
+    "A301_calibration_sha256": "4fc58388be336ccd3543a9b7f852920a477cc64bf93213376dc81284e6131cf1",
+    "A302_design_path": "research/configs/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302_design_v1.json",
+    "A302_design_sha256": "d5792178976e49de1b7c768f72e68ef1c809237e41dd954ff32c215f3d5f2b91",
+    "A302_runner_path": "research/experiments/chacha20_round20_w43_calibrated_coarse_numeric_replication_a302.py",
+    "A302_runner_sha256": "335c6e002634185dd64999386723665f500953f29b7dc67573e2db654e9f91da",
+    "A307_design_path": "research/configs/chacha20_round20_w44_two_slab_grouped_engine_a307_design_v1.json",
+    "A307_design_sha256": "e72cd5be42e6803cdd0e2616ed04c99a2b901cc0b546663193af7808881276ec",
+    "A307_protocol_path": "research/configs/chacha20_round20_w44_two_slab_grouped_engine_a307_v1.json",
+    "A307_protocol_sha256": "6db581911ba38e1c02b8320e63c2e627f97800db2991266677cf972a3985935e",
+    "A307_runner_path": "research/experiments/chacha20_round20_w44_two_slab_grouped_engine_a307.py",
+    "A307_runner_sha256": "717eaa14927e4313cb81ba57935773ae71b91e88e2aed982cd7ced73bcfe7669"
+  }
+}

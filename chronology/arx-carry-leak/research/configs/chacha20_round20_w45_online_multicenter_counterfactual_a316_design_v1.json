@@ -1,0 +1,57 @@
+{
+  "schema": "chacha20-round20-w45-online-multicenter-counterfactual-a316-design-v1",
+  "attempt_id": "A316",
+  "design_state": "frozen_while_A314_measurement_is_running_before_any_A314_order_model_candidate_or_prefix_rank_exists",
+  "scientific_question": "Does the A315 online four-center rank memory transfer unchanged to a second unseen width and target when applied to A314's future target-blind W45 fine field?",
+  "conditional_branch_contract": {
+    "direct_symbolic_A314_branch": "retain_the_independently_confirmed_symbolic_model_and_skip_counterfactual_grouped_execution",
+    "complete_model_free_A314_branch": "derive_four_center_nearest_rank_band_and_2_to_1_band_baseline_dovetail_from_the_future_A314_fine_field",
+    "branch_selected_only_by_A314_public_measurement_outcome": true,
+    "branch_logic_frozen_before_A314_order_exists": true
+  },
+  "operator_contract": {
+    "source_coordinate_system": "one_based_rank_in_the_future_target_blind_A314_fine_selected_channel_order",
+    "confirmed_fine_rank_centers_one_based": [2114, 2366, 2605, 3829],
+    "online_update_rule": "reuse_the_exact_A315_confirmed_rank_memory_without_A314_labels_or_refit",
+    "primary_order": "four_center_nearest_rank_band",
+    "safeguarded_order": "weighted_dovetail_two_band_draws_then_one_A314_coarse_numeric_baseline_draw_with_duplicate_suppression",
+    "candidate_schedules_frozen_before_A314_reveal": [
+      "four_center_nearest_rank_band",
+      "weighted_dovetail_2_to_1",
+      "unchanged_A314_three_arm_portfolio"
+    ],
+    "selection_or_refit_after_A314_reveal": false,
+    "candidate_execution_by_A316": false,
+    "evaluation": "rank_only_after_A314_independent_confirmation_without_duplicate_candidate_execution"
+  },
+  "information_boundary": {
+    "A314_protocol_available_at_design_freeze": true,
+    "A314_preflight_available_at_design_freeze": true,
+    "A314_measurement_running_at_design_freeze": true,
+    "A314_order_available_at_design_freeze": false,
+    "A314_direct_symbolic_model_available_at_design_freeze": false,
+    "A314_result_available_at_design_freeze": false,
+    "A314_candidate_available_at_design_freeze": false,
+    "A314_prefix_rank_available_at_design_freeze": false,
+    "A314_filter_outcome_available_at_design_freeze": false,
+    "target_labels_used_from_A314": 0,
+    "reader_refits_after_A314_reveal": 0,
+    "candidate_or_rank_used_to_choose_centers_weights_or_branch_logic": false
+  },
+  "source_anchors": {
+    "A311_qualification_path": "research/results/v1/chacha20_round20_w45_four_slab_grouped_engine_a311_qualification_v1.json",
+    "A311_qualification_sha256": "37b258ab7c46f78a702ed92b3c1b72c5b5948113cf67a61a4a1f33e938e9b31a",
+    "A314_runner_path": "research/experiments/chacha20_round20_w45_fine_band_recovery_a314.py",
+    "A314_runner_sha256": "f85ed4e7ae7acbd71f06aeca54609e278a1d26e16f9fbddf94e154a3b5f005f0",
+    "A314_design_path": "research/configs/chacha20_round20_w45_fine_band_recovery_a314_design_v1.json",
+    "A314_design_sha256": "d0508b7f0d9263620815be797c87444a7d8f10bef2676c25b4ce35630007a7ea",
+    "A314_protocol_path": "research/configs/chacha20_round20_w45_fine_band_recovery_a314_v1.json",
+    "A314_protocol_sha256": "17877a15624f7ab6fec1333c57260fa447d71d1112b9df5aa8219f8403968574",
+    "A314_preflight_path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_preflight_v1.json",
+    "A314_preflight_sha256": "cfb5bacd6e6e17479260d8a2cacd2f9808afc632d82e31f80e8dc6ed2d4159a4",
+    "A315_commitment_path": "research/configs/chacha20_round20_w44_online_multicenter_counterfactual_a315_commitment_v1.json",
+    "A315_commitment_sha256": "c6fae402a992da304c21fa17fef48360a166bb47a9e2bc223fa608b1649cdc4c",
+    "A315_order_path": "research/results/v1/chacha20_round20_w44_online_multicenter_counterfactual_a315_order_v1.json",
+    "A315_order_sha256": "7f3765084afcf9015a60b1561c4a3d6dc327eee7ee4ef6395794599a499ea3ff"
+  }
+}

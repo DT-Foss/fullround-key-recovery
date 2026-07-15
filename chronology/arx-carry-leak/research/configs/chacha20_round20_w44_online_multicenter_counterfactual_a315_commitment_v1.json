@@ -1,0 +1,67 @@
+{
+  "A313_result_available_at_commitment": false,
+  "anchors": {
+    "A309_result": {
+      "path": "research/results/v1/chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.json",
+      "sha256": "73edd2514cb644330c481d9fe01293e3a0242aad5157ba7a598ac776fbfb8abd"
+    },
+    "A310_result": {
+      "path": "research/results/v1/chacha20_round20_w43_empirical_multicenter_band_counterfactual_a310_v1.json",
+      "sha256": "19d9a341e103345600470adfa3a8feae1c99a66a38de241a60b42c4c8bdd13bc"
+    },
+    "A312_order": {
+      "path": "research/results/v1/chacha20_round20_w44_fine_selected_channel_transfer_a312_order_v1.json",
+      "sha256": "698641af20a9f9ef7071f7a46d239a9cb9124cc82e10ab1b4bdb00f4a98f39fc"
+    },
+    "A313_order": {
+      "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json",
+      "sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3"
+    },
+    "A313_protocol": {
+      "path": "research/configs/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+      "sha256": "dd5d59c52b8d5247d4a51b5a078f640577a2b8e3506fd2c7a46a8ca2a34c2f3c"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w44_online_multicenter_counterfactual_a315_design_v1.json",
+      "sha256": "7cc62d63ea2a7f0987dd24e6e55071487b796ffbffbba7f39c1d43663bc4d696"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w44_online_multicenter_counterfactual_a315_order_v1.json",
+      "sha256": "7f3765084afcf9015a60b1561c4a3d6dc327eee7ee4ef6395794599a499ea3ff"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w44_online_multicenter_counterfactual_a315.sh",
+      "sha256": "0f44074f1af2d470f24d477dfb29b14a3b918af87cc4e0ddc20b26f0c41408c6"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w44_online_multicenter_counterfactual_a315.py",
+      "sha256": "f5b952160faadfdcf3434b119f4acfa907ffeda8e73da80d38129e7d47011e5a"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w44_online_multicenter_counterfactual_a315.py",
+      "sha256": "904ea1f780d59bd3362f733ec6117462558bf566ab10e7685859cb6adf862fd7"
+    }
+  },
+  "attempt_id": "A315",
+  "candidate_or_rank_available_at_commitment": false,
+  "commitment_state": "frozen_before_A313_result_candidate_or_rank_exists",
+  "component_order_sha256": {
+    "A308_baseline_uint16be_sha256": "5bf9051a837968dec4e59580fe17ccbfcece2d0ca2c5adf00ab33dd8e1206f7c",
+    "A313_portfolio_uint16be_sha256": "5b504f49688ee98271be8d3fd28982fe7d590879ed0ededb8d41116dc1626191",
+    "four_center_band_uint16be_sha256": "36dd80fbfb697e4576518f2ad06f6b9bf69c8e49cac428afca77927904e18182",
+    "weighted_dovetail_2_to_1_uint16be_sha256": "c88b45cbc4c141c05d7280fee9bb47172d086f8a257c06c5cf39f25e98197bfc"
+  },
+  "design_sha256": "7cc62d63ea2a7f0987dd24e6e55071487b796ffbffbba7f39c1d43663bc4d696",
+  "order_sha256": "7f3765084afcf9015a60b1561c4a3d6dc327eee7ee4ef6395794599a499ea3ff",
+  "public_challenge_sha256": "c3897f3f8499c9afa01628b7f5e8de0ea5910a9559ca6bfb22fafe71d1fb26d6",
+  "schema": "chacha20-round20-w44-online-multicenter-counterfactual-a315-commitment-v1",
+  "weighted_portfolio_guarantee": {
+    "checked_prefix_cells": 4096,
+    "maximum_factor_vs_A308_baseline": 3.0,
+    "maximum_factor_vs_best_arm": 3.0,
+    "maximum_factor_vs_four_center_band": 1.4923076923076923,
+    "maximum_regret_bits_vs_best_arm": 1.584962500721156,
+    "statement": "R_A315_weighted <= 1.5 R_four_center_band and <= 3 R_A308_baseline over every exact W44 prefix cell",
+    "violations": 0
+  }
+}

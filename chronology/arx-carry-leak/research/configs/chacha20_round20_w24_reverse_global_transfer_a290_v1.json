@@ -1,0 +1,154 @@
+{
+  "anchors": {
+    "A204R_causal": {
+      "path": "research/results/v1/chacha20_round10_external_cnf_reverse_canonical_v1.causal",
+      "sha256": "6dbf196b9d764e2f21f5e0f3fb89924e90de696bc44990ad43f2b1a16102110f"
+    },
+    "A204R_result": {
+      "path": "research/results/v1/chacha20_round10_external_cnf_reverse_canonical_v1.json",
+      "sha256": "51e96cec45484fa7c6d388a1aa53bcf76cd24d0884da83a54ba42140a1a18ada"
+    },
+    "A204R_source": {
+      "path": "research/experiments/chacha20_round10_external_cnf_reverse_causal_canonicalize.py",
+      "sha256": "1dccf58dbb78726c3ab7be8ceda5eec8a70898eabe8414c001fe1a67fd385b73"
+    },
+    "A287_preflight": {
+      "path": "research/results/v1/chacha20_round20_w24_global_portfolio_a287_preflight_v1.json",
+      "sha256": "1bacefadd636b9e7fb9f42476e1927a87547d04ece676c8efcd1e29a6ef898b0"
+    },
+    "A287_protocol": {
+      "path": "research/configs/chacha20_round20_w24_global_portfolio_a287_v1.json",
+      "sha256": "8e75e49d33d8311be2132cdcec1f0f87073e5e5395112c7dac8752e39b6dac72"
+    },
+    "A287_source": {
+      "path": "research/experiments/chacha20_round20_w24_global_portfolio_a287.py",
+      "sha256": "cf0aeb03f4914a398b47c1675e7dee48ad3176e2c6a364cda37ede2c163f154c"
+    },
+    "cadical": {
+      "path": "/opt/homebrew/Cellar/cadical/3.0.0/bin/cadical",
+      "sha256": "c7b63954503d7fb1c8532efa37689715398683b5dea59d9bf6d80f06169e09b3"
+    },
+    "root_reference": {
+      "path": "research/experiments/chacha20_round20_multitarget_root_confirm.py",
+      "sha256": "3911002cdeff7f4705e82fd62ed293bbe675c7d02791aa7aa8770ed4d7d2891e"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w24_reverse_global_transfer_a290.py",
+      "sha256": "daa292c83f4d46a8ede45e63f54f211255e90cd54f616103cde4d7bfc5ad263d"
+    }
+  },
+  "attempt_id": "A290",
+  "execution_plan": {
+    "arms": {
+      "base_reverse": {
+        "cadical_configuration": "reverse=true",
+        "cnf": {
+          "path": "research/artifacts/a287_chacha20_r20_w24_global/a223_w24_shared_b8_base.cnf",
+          "sha256": "91337e95194205055c057419f7084f756198afb305223aa1d23b2d3d27d04297"
+        },
+        "model_one_literals_bit0_upward": [
+          11,
+          10,
+          13,
+          15,
+          17,
+          19,
+          21,
+          23,
+          25,
+          27,
+          29,
+          31,
+          33,
+          35,
+          37,
+          39,
+          41,
+          43,
+          45,
+          47,
+          54,
+          58,
+          62,
+          66
+        ],
+        "operator": "cadical_reverse_true",
+        "source_A287_CNF_arm": "base_default"
+      },
+      "bfs_far_reverse": {
+        "cadical_configuration": "reverse=true",
+        "cnf": {
+          "path": "research/artifacts/a287_chacha20_r20_w24_global/a287_w24_bfs_far.cnf",
+          "sha256": "b91c9ee6a6d4ae6ea033f7b978dad5bbb3e7cb19272fa654f511d10e12cb48ce"
+        },
+        "model_one_literals_bit0_upward": [
+          531439,
+          531438,
+          531440,
+          531441,
+          511886,
+          511887,
+          511888,
+          511889,
+          511890,
+          511891,
+          511892,
+          511893,
+          511894,
+          511895,
+          511897,
+          511898,
+          541651,
+          541652,
+          541653,
+          541654,
+          541655,
+          541656,
+          541657,
+          541658
+        ],
+        "operator": "cadical_reverse_true",
+        "source_A287_CNF_arm": "bfs_far_sat"
+      }
+    },
+    "confirmation": "standalone_RFC_operation_reference_all_eight_blocks",
+    "constrained_output_bits": 4096,
+    "control": "one_bit_flipped_first_standard_output_block",
+    "feedforward_included": true,
+    "first_exact_SAT_terminates_unfinished_sibling": true,
+    "known_key_bits": 232,
+    "no_complete_candidate_enumeration": true,
+    "no_prefix_or_candidate_label_available": true,
+    "parallel_solver_processes": 2,
+    "primitive": "standard_ChaCha20_block_function",
+    "public_input_output_blocks": 8,
+    "rounds": 20,
+    "seconds_per_arm": 7200,
+    "source_operator": "A204R_unique_global_cadical_reverse",
+    "unknown_key_bits": 24
+  },
+  "execution_plan_sha256": "5ace326ac76048a1f068c2bf33b964f7be50ce5013f82f6350deefde966bf7e2",
+  "information_boundary": {
+    "A204R_gap_personally_read_before_design": true,
+    "A287_or_A289_result_available_at_freeze": false,
+    "UNKNOWN_will_not_be_treated_as_UNSAT": true,
+    "any_A290_solver_execution_started": false,
+    "both_CNF_views_reverse_operator_and_budgets_frozen": true,
+    "secret_assignment_target_prefix_or_model_available": false,
+    "source_solver_evidence_rerun": false
+  },
+  "protocol_state": "A204R_reverse_operator_and_two_global_W24_views_frozen_before_execution",
+  "public_challenge_sha256": "5beabf27dccaa98cfaa97eed7bf7420c6548dcc469b4c924af04f8a872ecc30f",
+  "schema": "chacha20-round20-w24-reverse-global-transfer-a290-protocol-v1",
+  "scientific_design_sha256": "01160ea9587c3fd9fa12e1543d632adac4b46029ec8a78cd07265c90584b79dc",
+  "source_causal_gap": {
+    "confidence": 1.0,
+    "expected_object_type": "prospective_fullround_W24_global_reverse_operator",
+    "predicate": "next_required_object",
+    "subject": "A204:unpartitioned_reverse_transfer_required",
+    "suggested_queries": [
+      "Does cadical --reverse=true return a model on the frozen unpartitioned ChaCha20-R20 W24 CNF?",
+      "Does the reverse operator behave differently on the native and BFS-far CNF views?"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "attempt_id": "A299",
+  "corrected_at_utc": "2026-07-14T19:41:41Z",
+  "correction_scope": "W43_model_vector_helper_capacity_32_to_64_only",
+  "design_sha256": "a7876b5a8e61e3a61cfbfcbb9b0ac985f723ebbc40823ce11dbea55bb39f8c36",
+  "failed_measurement_transition": {
+    "coarse_measurement_completed": true,
+    "failure": "The inherited retained-state helper rejected the 43-literal model view before its first fine cell because its generic validation ceiling was 32",
+    "preflight_sha256": "7aa5250ee6f198d2247fd13b6d175230b97b8db1e4f465d9e99b80f8ebf701e8",
+    "protocol_sha256": "7ce69412fa49e6002d83e7bde84880fa1df8439815166ef59d924ad166482e46",
+    "returncode": 2
+  },
+  "fix": {
+    "after_model_vector_capacity": 64,
+    "before_model_vector_capacity": 32,
+    "candidate_formula_changed": false,
+    "CaDiCaL_configuration_changed": false,
+    "metric_or_retained_state_semantics_changed": false,
+    "prefix_plan_or_budget_changed": false
+  },
+  "information_boundary": {
+    "correction_derived_only_from_public_helper_stderr_and_source_validation_ceiling": true,
+    "reader_operator_order_partition_or_recovery_changed": false,
+    "W43_checkpoint_or_result_read_by_correction": false
+  },
+  "parent_implementation_correction_sha256": "6049b632cead5320a6b346beca399435e60ad51b3d4d502aa35fb560e65685ca",
+  "public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+  "runner_path": "research/experiments/chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+  "runner_sha256": "1487dd6360523076e60d203aeaff75fa29d15a5c3f3e6c35b79f73279dce42b9",
+  "schema": "chacha20-round20-w43-fine-selected-channel-transfer-a299-implementation-correction-v3",
+  "scientific_contract_changed": false,
+  "test_path": "tests/test_chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+  "test_sha256": "7d79c782f29ec2ca083424c2fd3315fb3d095b0c41744512951e33849c7246e9"
+}

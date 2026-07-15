@@ -1,0 +1,78 @@
+{
+  "attempt_id": "A309",
+  "design_state": "frozen_after_personal_authentic_Causal_readback_of_A295_A303_A305_and_before_any_A300_candidate_rank_assignment_or_filter_outcome_is_available",
+  "information_boundary": {
+    "A300_candidate_available_at_freeze": false,
+    "A300_filter_outcome_available_at_freeze": false,
+    "A300_prefix_rank_available_at_freeze": false,
+    "A300_result_available_at_freeze": false,
+    "A300_target_assignment_available_at_freeze": false,
+    "A302_result_available_at_freeze": false,
+    "candidate_filter_outcome_used_for_order": false,
+    "disjoint_confirmed_training_labels_used": 3,
+    "reader_refits_on_A300": 0,
+    "target_labels_used_from_A300": 0
+  },
+  "operator_contract": {
+    "band_order": "ascending_absolute_distance_from_width_conditioned_predicted_one_based_fine_rank_then_ascending_fine_rank",
+    "baseline_order": "A300_three_operator_fine_coarse_numeric_round_robin",
+    "fit": {
+      "intercept_denominator": 546,
+      "intercept_numerator": 1751899,
+      "method": "exact_ordinary_least_squares_on_three_disjoint_confirmed_width_rank_pairs",
+      "predicted_W43_fine_rank_nearest_integer": 2105,
+      "slope_denominator": 182,
+      "slope_numerator": -4671,
+      "training_rows": [
+        {
+          "attempt_id": "A295",
+          "confirmed_fine_rank_one_based": 2605,
+          "unknown_key_bits": 24
+        },
+        {
+          "attempt_id": "A303",
+          "confirmed_fine_rank_one_based": 2366,
+          "unknown_key_bits": 32
+        },
+        {
+          "attempt_id": "A305",
+          "confirmed_fine_rank_one_based": 2114,
+          "unknown_key_bits": 43
+        }
+      ]
+    },
+    "merge": "rank_synchronous_round_robin_first_occurrence_band_then_A300_baseline",
+    "rank_guarantee": "R_A309_at_cell <= 2 * min(R_band_at_cell, R_A300_at_cell)",
+    "target_order": "A300_fresh_W43_public_relation",
+    "training_fit_is_not_recomputed_after_A300_reveal": true
+  },
+  "schema": "chacha20-round20-w43-width-conditioned-band-portfolio-a309-design-v1",
+  "source_anchors": {
+    "A295_causal_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.causal",
+    "A295_causal_sha256": "673f0470cd02826ffdd939e36247b3885a55e6d24affd509e7946d24e7d6aac1",
+    "A295_result_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+    "A295_result_sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03",
+    "A303_causal_path": "research/results/v1/chacha20_round20_w32_dominance_pruned_companion_a303_v1.causal",
+    "A303_causal_sha256": "11ae8b91d6e9e8f067ac847b790ed3b77d261862a6f68a23408fb41bbca9ce23",
+    "A303_result_path": "research/results/v1/chacha20_round20_w32_dominance_pruned_companion_a303_v1.json",
+    "A303_result_sha256": "bc1878203ed1dc8dffab86e8cd1a85bd01fb12e09a1de6a86b29fd9d1ceae3fe",
+    "A305_causal_path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.causal",
+    "A305_causal_sha256": "c3460e10dedca9027609d16c4686ad56d1576f05edeea5c368cd56e4ae34f888",
+    "A305_result_path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.json",
+    "A305_result_sha256": "adbc8b879f09e03896699188d8141ac0164296eaf2ad688b6fb1036f2b1ac40e",
+    "A300_order_path": "research/results/v1/chacha20_round20_w43_three_operator_portfolio_a300_order_v1.json",
+    "A300_order_sha256": "76af63fd14613520bda54316e242c16e4530af22ddb2ec9e5a7a6e6df5afefd1",
+    "A300_preflight_path": "research/results/v1/chacha20_round20_w43_three_operator_portfolio_a300_preflight_v1.json",
+    "A300_preflight_sha256": "5479756d446f2a2349e780844a8a8373dde328b7bb448ce85271bf116b46db2d",
+    "A300_protocol_path": "research/configs/chacha20_round20_w43_three_operator_portfolio_a300_v1.json",
+    "A300_protocol_sha256": "d132e818e598458f0ac2aa53d8032c7c4dc5f2ffed5d863410b76c10c5b43307",
+    "A300_runner_path": "research/experiments/chacha20_round20_w43_three_operator_portfolio_a300.py",
+    "A300_runner_sha256": "b5bbb602976408017395fa8e2969e38bff4ac79b5d80045d36216af26f71b586",
+    "A304_qualification_path": "research/results/v1/chacha20_round20_w43_grouped_engine_a304_qualification_v1.json",
+    "A304_qualification_sha256": "a9a92f4f8ecceede5dee44a429352ee4bc55e581531145fb5bb8a9606bc96c9c",
+    "A304_runner_path": "research/experiments/chacha20_round20_w43_grouped_engine_a304.py",
+    "A304_runner_sha256": "0f00e54a149d3ad896f5e7bb2ac79b55caac371e163c948894a7d1df72e0ec21",
+    "CausalReader_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+    "CausalReader_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+  }
+}

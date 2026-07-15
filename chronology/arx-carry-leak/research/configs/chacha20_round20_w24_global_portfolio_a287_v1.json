@@ -1,0 +1,304 @@
+{
+  "anchors": {
+    "A223_formula_and_mapping": {
+      "path": "research/experiments/chacha20_round20_capacity_moonshot_a223.py",
+      "sha256": "f41b70c549392101a4a2cdf1499f69ac897912682a5696da79ef3533fa55e0e0"
+    },
+    "A223_toolchain_protocol": {
+      "path": "research/configs/chacha20_round20_capacity_moonshot_a223_v1.json",
+      "sha256": "9b60f65be6415b4ac3738881336bfe8397328e0d216882f684db1c3da9b3a79f"
+    },
+    "bitwuzla": {
+      "path": "/opt/homebrew/Cellar/bitwuzla/0.9.1/bin/bitwuzla",
+      "sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a"
+    },
+    "cadical": {
+      "path": "/opt/homebrew/Cellar/cadical/3.0.0/bin/cadical",
+      "sha256": "c7b63954503d7fb1c8532efa37689715398683b5dea59d9bf6d80f06169e09b3"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w24_global_portfolio_a287.py",
+      "sha256": "cf0aeb03f4914a398b47c1675e7dee48ad3176e2c6a364cda37ede2c163f154c"
+    },
+    "standalone_RFC_reference": {
+      "path": "research/experiments/chacha20_round20_multitarget_root_confirm.py",
+      "sha256": "3911002cdeff7f4705e82fd62ed293bbe675c7d02791aa7aa8770ed4d7d2891e"
+    }
+  },
+  "attempt_id": "A287",
+  "execution_plan": {
+    "confirmation": "frozen_third_RFC_operation_reference_all_eight_blocks",
+    "constrained_output_bits": 4096,
+    "control": "one_bit_flipped_first_standard_output_block",
+    "feedforward_included": true,
+    "first_exact_SAT_terminates_unfinished_sibling": true,
+    "known_key_bits": 232,
+    "no_complete_candidate_enumeration": true,
+    "no_prefix_or_candidate_label_available": true,
+    "parallel_solver_processes": 2,
+    "portfolio": [
+      {
+        "arm": "base_default",
+        "cadical_configuration": "default",
+        "cnf_operator": "native_Bitwuzla_export",
+        "seconds": 7200
+      },
+      {
+        "arm": "bfs_far_sat",
+        "cadical_configuration": "sat",
+        "cnf_operator": "unit_multisource_BFS_far_variable_reindex",
+        "seconds": 7200
+      }
+    ],
+    "primitive": "standard_ChaCha20_block_function",
+    "public_input_output_blocks": 8,
+    "rounds": 20,
+    "split_round": 18,
+    "unknown_global_bit_interval": [
+      0,
+      23
+    ],
+    "unknown_is_not_unsat": true,
+    "unknown_key_bits": 24
+  },
+  "execution_plan_sha256": "353739fe311fa3514ed69fd19f9233fde06812158f2ceaf9f1b8de627e57a70f",
+  "information_boundary": {
+    "CNF_export_started_before_protocol_freeze": false,
+    "ephemeral_secret_available_to_preflight_or_runner": false,
+    "ephemeral_secret_generated_once_from_OS_CSPRNG": true,
+    "ephemeral_secret_returned_logged_or_serialized": false,
+    "ephemeral_secret_used_only_for_public_target_construction": true,
+    "solver_execution_started_before_protocol_freeze": false,
+    "target_model_or_prefix_available_to_operator_selection": false
+  },
+  "protocol_state": "fresh_public_challenge_and_two_arm_portfolio_frozen_before_CNF_export_or_solver_execution",
+  "public_challenge": {
+    "block_count": 8,
+    "challenge_id": "0a296ba83b4c632454150608e18a718e",
+    "control_target_block_sha256": "ac6fd1b879a364296f3d7567656a4673e825378e28a9291af88aa47c80f7b0c3",
+    "control_target_words": [
+      2093663018,
+      196912418,
+      771241770,
+      4274678854,
+      2772092072,
+      3944871006,
+      2089281184,
+      1311965538,
+      3526277737,
+      3207527570,
+      3022245827,
+      1648799567,
+      2474801751,
+      637255228,
+      3488013734,
+      3809883716
+    ],
+    "counter_schedule": "base_plus_block_index_mod_2^32",
+    "counter_start": 2649703962,
+    "full_key_included": false,
+    "generation_entropy_source": "python_secrets_token_bytes_OS_CSPRNG",
+    "known_key_bits": 232,
+    "known_key_mask_words": [
+      4278190080,
+      4294967295,
+      4294967295,
+      4294967295,
+      4294967295,
+      4294967295,
+      4294967295,
+      4294967295
+    ],
+    "known_key_value_words": [
+      2583691264,
+      2897398108,
+      3831638298,
+      1778867284,
+      433809860,
+      2071329526,
+      1550069603,
+      3330424766
+    ],
+    "nonce_words": [
+      3652152525,
+      700855400,
+      2975395812
+    ],
+    "rounds": 20,
+    "secret_discarded_after_target_construction": true,
+    "secret_used_only_for_target_construction": true,
+    "target_block_sha256": [
+      "115041b650908744162e372f7b6fc1a1d0c1bac4115148413fc8bc168041a410",
+      "2c19c64b18a6401b26434d5a79399fcb0ff057cf8ef1b5d74efd348ae1c38f29",
+      "aecf534915ffadd8fd8cf36610d403acbda887764816e245fcbb82a4bc0f2c53",
+      "11a4585697f5317cf5d0bb8b491ed8d73623d4d346d92e687241e15514bf1f57",
+      "86ceeb9605d3ce08637e7b32d8efced57a121ca18c758512c159cad0c2b3c7fc",
+      "9035417e5ec45af2c3c5c587ce8bb517449f9986e249875de1c364f1e62c5085",
+      "0160a1f61d4320babba5461d9be741f5767e693c7eef32e7ae714ce09fa30f1b",
+      "632e98dbc82fa20d3d1b30fd35d51fc6a0dd19a45a3cdba379810bea0bf9cce9"
+    ],
+    "target_words": [
+      [
+        2093663019,
+        196912418,
+        771241770,
+        4274678854,
+        2772092072,
+        3944871006,
+        2089281184,
+        1311965538,
+        3526277737,
+        3207527570,
+        3022245827,
+        1648799567,
+        2474801751,
+        637255228,
+        3488013734,
+        3809883716
+      ],
+      [
+        2998660085,
+        3707158905,
+        3690675387,
+        3169888226,
+        1983801365,
+        2033515094,
+        2535915351,
+        195699507,
+        1829840835,
+        4087295546,
+        3724472590,
+        2080427163,
+        1001567475,
+        1846234825,
+        590814170,
+        2065611248
+      ],
+      [
+        1254795838,
+        3595361096,
+        4020107310,
+        3360849328,
+        3504653255,
+        3720638174,
+        1791457824,
+        255959103,
+        2623792517,
+        2717281912,
+        1393308193,
+        2886039093,
+        1267399018,
+        3694528762,
+        202941853,
+        3182539034
+      ],
+      [
+        4012568031,
+        4152261570,
+        1101389957,
+        2473992967,
+        2558214227,
+        3047458457,
+        543036060,
+        704340005,
+        3604427507,
+        1687387617,
+        3882342898,
+        2511306133,
+        3326619163,
+        1139249303,
+        2682186715,
+        1103671134
+      ],
+      [
+        2710007145,
+        2917338298,
+        440517465,
+        517041671,
+        1630094772,
+        1817951980,
+        147154062,
+        2797018807,
+        2929151846,
+        4119985466,
+        3246304977,
+        3611716011,
+        3445870662,
+        2704480074,
+        2718855120,
+        2092244698
+      ],
+      [
+        3683539337,
+        2999708353,
+        276220509,
+        1162416194,
+        2912922274,
+        3458751284,
+        3027421984,
+        3723124599,
+        1247193532,
+        914458559,
+        1471460799,
+        1352823767,
+        4227120892,
+        3927474560,
+        2460848898,
+        3259660147
+      ],
+      [
+        747366768,
+        307912368,
+        2391071918,
+        696321098,
+        3861779914,
+        1855805517,
+        2538047460,
+        745074255,
+        1362913566,
+        1857036238,
+        2867952352,
+        968237894,
+        4115407606,
+        2081164567,
+        4043168912,
+        271518093
+      ],
+      [
+        3998257923,
+        2794972928,
+        2211588280,
+        4140202432,
+        242428065,
+        509929670,
+        3238110752,
+        2926250715,
+        1905350,
+        2730573210,
+        27251233,
+        2255879405,
+        2705265270,
+        2026132107,
+        1235633902,
+        3053641075
+      ]
+    ],
+    "unknown_assignment_included": false,
+    "unknown_assignment_value_included": false,
+    "unknown_bit_numbering": "little_endian_bit0_upward_across_key_words_k0_through_k7",
+    "unknown_global_bit_interval": [
+      0,
+      23
+    ],
+    "unknown_key_bits": 24
+  },
+  "public_challenge_sha256": "5beabf27dccaa98cfaa97eed7bf7420c6548dcc469b4c924af04f8a872ecc30f",
+  "rfc8439_gate": {
+    "exact": true,
+    "expected_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "observed_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "vector": "RFC8439_section_2.3.2"
+  },
+  "schema": "chacha20-round20-w24-global-portfolio-a287-protocol-v1",
+  "scientific_design_sha256": "0942f20cd750aea5cb4d192a9a2ece25fe4396b987f754c7a165f8a501fd3ccb"
+}

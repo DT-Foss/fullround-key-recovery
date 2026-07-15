@@ -1,0 +1,115 @@
+{
+  "A287_preflight": {
+    "path": "research/results/v1/chacha20_round20_w24_global_portfolio_a287_preflight_v1.json",
+    "sha256": "1bacefadd636b9e7fb9f42476e1927a87547d04ece676c8efcd1e29a6ef898b0"
+  },
+  "attempt_id": "A289",
+  "causal": {
+    "api_id": "a289xs",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 3,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w24_cross_solver_portfolio_a289_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "A287_A289_boundary_conditioned_exact_W24_partition",
+        "predicate": "next_required_object",
+        "subject": "A289:measured_cross_solver_budget_boundary",
+        "suggested_queries": [
+          "Which exact prefix partition best complements all four global traces?",
+          "Can retained clauses expose a model inside a strict subset of W24 cells?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_W24_CROSS_SOLVER_BUDGET_BOUNDARY",
+        "is_inferred": true,
+        "m_idx": 7,
+        "mechanism": "materialized_cross_solver_boundary_chain",
+        "o_idx": 6,
+        "outcome": "A289:measured_cross_solver_budget_boundary",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "AI-native exact closure retained in-file",
+        "s_idx": 2,
+        "source": "materialized:A289_cross_solver_execution",
+        "trigger": "A289:frozen_cross_solver_portfolio"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "54c83b4e5ca1753e00bbc53e0bab66ac86484bdd051049ac0bbf7109145bc9de",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 8,
+      "file_size_bytes": 4325,
+      "file_size_kb": 4.2,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w24_cross_solver_portfolio_a289_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 4
+    }
+  },
+  "confirmation": null,
+  "evidence_stage": "FULLROUND_R20_W24_CROSS_SOLVER_BUDGET_BOUNDARY",
+  "execution_sha256": "52994cf695799f3a26ee8778d4c58fd304c34fa2fb882e620a91ca1ce41659dc",
+  "information_boundary": {
+    "complete_candidate_domain_enumeration_used": false,
+    "cross_solver_operators_and_budgets_frozen_before_solver": true,
+    "secret_assignment_available_to_runner": false,
+    "target_prefix_or_model_available_before_solver": false,
+    "unknown_treated_as_UNSAT": false
+  },
+  "measurement_sha256": "de76dfae92edbcc9381a8f22e1ea9077e9d578585978dda72e2a44595317ed49",
+  "protocol": {
+    "path": "research/configs/chacha20_round20_w24_cross_solver_portfolio_a289_v1.json",
+    "sha256": "a641944578e65fa9f92bbdae06de3e370a04485ab4c9731c709dc4e7f0eefd19"
+  },
+  "public_challenge_sha256": "5beabf27dccaa98cfaa97eed7bf7420c6548dcc469b4c924af04f8a872ecc30f",
+  "rfc8439_gate": {
+    "exact": true,
+    "expected_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "observed_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "vector": "RFC8439_section_2.3.2"
+  },
+  "runner": {
+    "path": "research/experiments/chacha20_round20_w24_cross_solver_portfolio_a289.py",
+    "sha256": "a8ab334b0f7292a953bf3d8be9caa29dd7e05c4decb593408929c154b49f1ab7"
+  },
+  "schema": "chacha20-round20-w24-cross-solver-portfolio-a289-result-v1",
+  "solver_arms": [
+    {
+      "arm": "cryptominisat_bfs_default",
+      "command_sha256": "35532f5f0e5a60c313a27f0b383bb57fa683f7188cd299584ce2f948d31e61e1",
+      "elapsed_seconds": 7690.48851920804,
+      "returncode": 15,
+      "solver": "cryptominisat_default",
+      "source_A287_CNF_arm": "bfs_far_sat",
+      "status": "unknown",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4a52c9a8b31d6fc86b80dd052c5c856427974d7b1f25c502df82270e6c3aa3ab",
+      "terminated_after_sibling_sat": false
+    },
+    {
+      "arm": "kissat_base_sat",
+      "command_sha256": "af83ded8b8736e27fd0962510753e03368b36ecb5998cb0d020f58bece648223",
+      "elapsed_seconds": 7690.487147042062,
+      "returncode": 0,
+      "solver": "kissat_sat",
+      "source_A287_CNF_arm": "base_default",
+      "status": "unknown",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2c4c866c90a863846ecab6e6bac416700035e3791b12ca7bb7ce17b07a49ddf5",
+      "terminated_after_sibling_sat": false
+    }
+  ],
+  "winner": null
+}

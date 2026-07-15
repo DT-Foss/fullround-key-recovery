@@ -1,0 +1,853 @@
+{
+  "anchors": {
+    "A223_config": {
+      "path": "research/configs/chacha20_round20_capacity_moonshot_a223_v1.json",
+      "sha256": "9b60f65be6415b4ac3738881336bfe8397328e0d216882f684db1c3da9b3a79f"
+    },
+    "A223_source": {
+      "path": "research/experiments/chacha20_round20_capacity_moonshot_a223.py",
+      "sha256": "f41b70c549392101a4a2cdf1499f69ac897912682a5696da79ef3533fa55e0e0"
+    },
+    "A251_wrapper": {
+      "path": "research/experiments/chacha20_fresh_clause_identity.py",
+      "sha256": "3a1d63d223712997519f72143ebcc3e5725a8f8659eadbd9389465dd0fe654f6"
+    },
+    "A293_causal": {
+      "path": "research/results/v1/chacha20_round20_w24_causal_refinement_a293_v1.causal",
+      "sha256": "422d924f4c059cc7a6c796f3ba477d1c49bd748882b4b802fbf7e18557f1bafa"
+    },
+    "A293_result": {
+      "path": "research/results/v1/chacha20_round20_w24_causal_refinement_a293_v1.json",
+      "sha256": "de57f0994c3a868e8cb923bd39e49f5b29850d0fa013fd46730a3aca96f9ebff"
+    },
+    "A293_runner": {
+      "path": "research/experiments/chacha20_round20_w24_causal_refinement_a293.py",
+      "sha256": "2b5a7c2b22ff35604315af465be58cea6e5abea52b807b2c6cb7dec5f6144a46"
+    },
+    "A295_causal": {
+      "path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.causal",
+      "sha256": "673f0470cd02826ffdd939e36247b3885a55e6d24affd509e7946d24e7d6aac1"
+    },
+    "A295_result": {
+      "path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+      "sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03"
+    },
+    "A295_runner": {
+      "path": "research/experiments/chacha20_round20_w24_fine_selected_channel_a295.py",
+      "sha256": "0ecbffc2e5f0a036ef84bd4c10f17068580592be73f0b59ec03beb0fa29af14e"
+    },
+    "A296_runner": {
+      "path": "research/experiments/chacha20_round20_causal_search_gain_panel_a296.py",
+      "sha256": "7b2a4423e71c87751389fcccea05839ad5ca2b8524d6c821d9f23cb7b30dd936"
+    },
+    "A297_causal": {
+      "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.causal",
+      "sha256": "5b2c2358807d242e8042d390fc269ecbac931d75a18d1e3a1b1efc004fc829f2"
+    },
+    "A297_result": {
+      "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.json",
+      "sha256": "046beb03789c994e564a018d3ca6d4ce146a22ca6b171197e99aeedd9cc98cfd"
+    },
+    "A297_runner": {
+      "path": "research/experiments/chacha20_round20_w32_causal_search_gain_panel_a297.py",
+      "sha256": "f5700d37179c82969fb458d5cd184656641f65e5962e82cfa6fa1ff48b3ca60f"
+    },
+    "CausalReader": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "Metal_anchor": {
+      "path": "research/experiments/chacha20_round20_a223_w40_metal_transfer.py",
+      "sha256": "9374b2788ff3c05a5ab42fbbdfb2fc490d183675312d2d01ce08312f7758c0fe"
+    },
+    "W43_protocol": {
+      "path": "research/configs/chacha20_round20_w43_metal_record_v1.json",
+      "sha256": "fe69f7c4962ed771703c68a1d64c361147a568cabe71d23cc9448fb1bef88de3"
+    },
+    "W43_qualification": {
+      "path": "research/results/v1/chacha20_round20_w43_metal_qualification_v1.json",
+      "sha256": "c69c4a63965d22eeeaf92136b9218ae29376f174aa440dd2a7d6b423cae7b369"
+    },
+    "W43_runner": {
+      "path": "research/experiments/chacha20_round20_w43_metal_record.py",
+      "sha256": "2f9c150dafd2b1dd9b0a6fa8d4162bcf1c90e3ef2658fa1bdef1e2a80faac2ca"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w43_fine_selected_channel_transfer_a299_design_v1.json",
+      "sha256": "a7876b5a8e61e3a61cfbfcbb9b0ac985f723ebbc40823ce11dbea55bb39f8c36"
+    },
+    "implementation_correction": {
+      "path": "research/configs/chacha20_round20_w43_fine_selected_channel_transfer_a299_implementation_correction_v2.json",
+      "sha256": "6049b632cead5320a6b346beca399435e60ad51b3d4d502aa35fb560e65685ca"
+    },
+    "implementation_correction_v3": {
+      "path": "research/configs/chacha20_round20_w43_fine_selected_channel_transfer_a299_implementation_correction_v3.json",
+      "sha256": "d5c3befbf9393f0803227a174e04d7c48c396d49d58219c9d4446bf366675e71"
+    },
+    "implementation_freeze": {
+      "path": "research/configs/chacha20_round20_w43_fine_selected_channel_transfer_a299_implementation_freeze_v1.json",
+      "sha256": "7f1208a9ea8c13b6705fcb0254e16a9c3da29e8b7be1e0abb622cb8f8c49a95a"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+      "sha256": "1487dd6360523076e60d203aeaff75fa29d15a5c3f3e6c35b79f73279dce42b9"
+    }
+  },
+  "attempt_id": "A299",
+  "design": {
+    "acceptance": {
+      "all_executed_candidate_groups_counted": true,
+      "authentic_AI_native_Causal_artifact_required": true,
+      "complete_prefix_order_frozen_before_A299_candidate_discovery": true,
+      "full_measurement_cover_or_earlier_logical_model_required": true,
+      "independent_full_output_confirmation_required": true,
+      "main_agent_personal_CausalReader_readback_required": true,
+      "numeric_and_public_hash_counterfactual_ranks_computed_only_after_confirmation": true
+    },
+    "attempt_id": "A299",
+    "design_state": "frozen_while_CHACHA20KR43_complete_domain_execution_and_A293_are_running_before_the_W43_assignment_or_full_domain_result_is_read",
+    "fine_measurement_contract": {
+      "W43_target_CNF_source": "sealed_holdout_protocol_only",
+      "coarse_seed_reader_refits": 0,
+      "coarse_seed_stage": "unchanged_A297_A272_high8_reader_on_key_word0_bits31_through24",
+      "coarse_seed_target_labels_used": 0,
+      "execution": "eight_disjoint_retained_state_lanes_covering_every_prefix_exactly_once",
+      "free_key_word0_bits_per_cell": 20,
+      "free_key_word1_bits_per_cell": 11,
+      "lane_seed_order": "fresh_target_coarse_high8_Causal_order_then_reflected_Gray4",
+      "measurement_status_required_if_no_model": "UNKNOWN",
+      "model_refits": 0,
+      "partition_coordinates_high_to_low": [
+        31,
+        30,
+        29,
+        28,
+        27,
+        26,
+        25,
+        24,
+        23,
+        22,
+        21,
+        20
+      ],
+      "partition_scope": "key_word0",
+      "prefix_bits": 12,
+      "prefix_cells": 4096,
+      "seconds_per_cell": 5,
+      "target_key_label_available_to_measurement": false,
+      "target_labels_used": 0,
+      "total_free_bits_per_cell": 31
+    },
+    "information_boundary": {
+      "A293_result_available_at_design_freeze": false,
+      "A295_result_available_at_design_freeze": false,
+      "A299_runner_must_reject_any_dependency_on_W43_result_checkpoint_or_confirmation": true,
+      "CHACHA20KR43_assignment_available_at_design_freeze": false,
+      "CHACHA20KR43_checkpoint_candidate_values_read_at_design_freeze": false,
+      "CHACHA20KR43_result_available_at_design_freeze": false,
+      "future_W43_assignment_model_filter_outcome_or_numeric_rank_may_select_reader_or_order": false,
+      "public_W43_target_exists_at_design_freeze": true,
+      "reader_formula_features_coefficients_tiebreak_and_partition_coordinates_frozen": true
+    },
+    "launch_gate": {
+      "A293_required": "complete_4096_prefix_model_free_trace_cover",
+      "A295_required": "confirmed_W24_recovery_using_the_unchanged_fine_selected_channel_order",
+      "A299_measurement": "may_start_only_from_the_public_W43_protocol_without_reading_the_W43_checkpoint_or_result",
+      "A299_order_freeze": "complete_W43_trace_field_and_unchanged_A295_formula_before_any_A299_candidate_discovery",
+      "fallback_if_A293_finds_a_model": "retain_the_stronger_A293_symbolic_recovery_and_do_not_execute_this_trace-transfer_branch",
+      "fallback_if_A295_does_not_confirm": "retain_the_W43_complete-domain_anchor_and_do_not_replace_the_predeclared_reader"
+    },
+    "primitive_contract": {
+      "assignment_encoding": "assignment=(key_word1_low11<<32)|key_word0",
+      "counter_schedule": "public_base_plus_block_index_mod_2^32",
+      "feedforward_included": true,
+      "known_key_bits": 213,
+      "nonce": "public_96_bit_nonce",
+      "primitive": "RFC8439_ChaCha20_block_function",
+      "public_output_bits": 4096,
+      "public_output_blocks": 8,
+      "rounds": 20,
+      "unknown_key_bits": 43,
+      "unknown_key_scope": "key_word0_all32_plus_key_word1_low11"
+    },
+    "purpose": "Transfer the independently frozen A295 fine selected-channel readout to the already public but still sealed CHACHA20KR43 holdout, then recover its 43-bit residual assignment in the resulting target-blind twelve-bit group order and measure the strict-subset gain against numeric and public-hash controls.",
+    "reader_contract": {
+      "accepted_clause_proxy": "max(redundant_clauses_delta,0)",
+      "complete_order_required": true,
+      "conflict_channel": "max(metrics_delta[conflicts],0)",
+      "operator": "unchanged_A295_frozen_a272_single_horizon_score",
+      "operator_selection_uses_W43_assignment_or_result": false,
+      "ratio": "(accepted_proxy-conflicts)/(abs(accepted_proxy)+abs(conflicts))",
+      "score_terms": "raw_z_xor_laplacian_xor_gradient_l2_xor_gradient_maxabs_with_unchanged_A272_positive_coefficients",
+      "selected_feature_indices": [
+        502,
+        504,
+        505,
+        508,
+        509,
+        510,
+        511,
+        514
+      ],
+      "tiebreak": "descending_score_then_ascending_prefix"
+    },
+    "recovery_contract": {
+      "all_executed_outer_slices_and_inner_candidates_counted": true,
+      "candidate_group_decomposition": "2048_key_word1_low11_slices_times_2^20_key_word0_suffixes",
+      "candidate_group_size": 2147483648,
+      "complete_residual_domain": 8796093022208,
+      "confirmation": "RFC8439_byte_reference_plus_independent_word_reference_over_all_eight_output_blocks",
+      "controls_do_not_trigger_duplicate_candidate_execution": true,
+      "counterfactual_rank_controls": [
+        "numeric_prefix12",
+        "public_hash_prefix12"
+      ],
+      "matched_control": "one_bit_modified_output_scanned_over_every_primary_group_actually_executed",
+      "primary_order": "A299_fine_selected_channel_key_word0_prefix12",
+      "stop": "first_factual_full_filter_match_in_primary_group_order",
+      "strict_subset_reported_exactly_when": "executed_candidate_upper_bound_is_less_than_2^43"
+    },
+    "schema": "chacha20-round20-w43-fine-selected-channel-transfer-a299-design-v1",
+    "sealed_holdout": {
+      "assignment_serialized_in_protocol": false,
+      "checkpoint_assignment_or_filter_value_read_by_A299": false,
+      "full_domain_execution_incomplete_at_design_freeze": true,
+      "future_CHACHA20KR43_result_or_confirmation_may_select_the_reader": false,
+      "protocol_path": "research/configs/chacha20_round20_w43_metal_record_v1.json",
+      "protocol_sha256": "fe69f7c4962ed771703c68a1d64c361147a568cabe71d23cc9448fb1bef88de3",
+      "public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+      "qualification_sha256": "c69c4a63965d22eeeaf92136b9218ae29376f174aa440dd2a7d6b423cae7b369",
+      "target_exists_at_design_freeze": true
+    },
+    "source_frontier": {
+      "A295_design_path": "research/configs/chacha20_round20_w24_fine_selected_channel_a295_design_v1.json",
+      "A295_design_sha256": "8dfd07e548daffe01ba7262e02a8e9d16754ef8765c3a9169e8f98b2d0014121",
+      "A295_orbit_source_path": "src/arx_carry_leak/xor_prefix_orbit.py",
+      "A295_orbit_source_sha256": "a2c1f142eab770f308ef4103141ee9aee73eaa4dd8b73235454d0d822476e806",
+      "A297_causal_path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.causal",
+      "A297_causal_sha256": "5b2c2358807d242e8042d390fc269ecbac931d75a18d1e3a1b1efc004fc829f2",
+      "A297_result_path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.json",
+      "A297_result_sha256": "046beb03789c994e564a018d3ca6d4ce146a22ca6b171197e99aeedd9cc98cfd",
+      "A297_retained_boundary": "coarse_high8_reader_retains_W32_search_concentration_but_requires_fine_subprefix_learning"
+    }
+  },
+  "execution_contract": {
+    "candidate_group_size": 2147483648,
+    "cells_per_lane": 512,
+    "coarse_seed": "unchanged_A297_word0_high8_reader",
+    "complete_residual_domain": 8796093022208,
+    "feedforward_included": true,
+    "fine_prefix_bits": 12,
+    "fine_prefix_cells": 4096,
+    "fine_prefix_coordinates_high_to_low": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24,
+      23,
+      22,
+      21,
+      20
+    ],
+    "known_key_bits": 213,
+    "parallel_retained_state_lanes": 8,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_blocks": 8,
+    "reader": "unchanged_A295_frozen_fine_selected_channel",
+    "reader_refits": 0,
+    "recovery": "ordered_word0_prefix12_groups_x_complete_word1_low11_slices_then_dual_independent_eight_block_confirmation",
+    "rounds": 20,
+    "seconds_per_cell": 5.0,
+    "target_labels_used": 0,
+    "unknown_key_bits": 43,
+    "word0_suffix_bits_per_group": 20,
+    "word1_outer_slices_per_group": 2048
+  },
+  "execution_contract_sha256": "f5d4d700490b8afb4e1748de1423112ac5efc77117bff105a1b2ea9c3c3730e8",
+  "implementation_correction": {
+    "attempt_id": "A299",
+    "corrected_at_utc": "2026-07-14T19:30:34Z",
+    "correction_scope": "non_nibble_partial_word_SMT_literal_width_only",
+    "design_sha256": "a7876b5a8e61e3a61cfbfcbb9b0ac985f723ebbc40823ce11dbea55bb39f8c36",
+    "failed_preflight": {
+      "failure": "Bitwuzla rejected a 24-bit hexadecimal literal equated to the 21-bit extract ((_ extract 31 11) k1)",
+      "protocol_sha256": "d933e0ac2dadd2b4289b496d1c040602e90ad737697fbc1c11d62c066f037a97",
+      "returncode": 1
+    },
+    "fix": {
+      "after": "exact-width 21-bit binary literal",
+      "before": "nibble-rounded hexadecimal literal",
+      "formula_relation_changed": false,
+      "known_high_bits_changed": false,
+      "width": 43
+    },
+    "information_boundary": {
+      "W43_checkpoint_or_result_read_by_correction": false,
+      "correction_derived_only_from_public_formula_and_solver_parse_error": true,
+      "reader_operator_order_partition_or_recovery_changed": false
+    },
+    "parent_implementation_freeze_sha256": "7f1208a9ea8c13b6705fcb0254e16a9c3da29e8b7be1e0abb622cb8f8c49a95a",
+    "pre_reveal_runner_sha256": "dd997a3a73e4df73f75d124417e1d435075dcbac6f844a1a5484353fc3992b23",
+    "pre_reveal_test_sha256": "e9e24113ced6038c4d37dadadb5afcae55e86097ce9cfd3fec0d2dde8ed09553",
+    "public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+    "runner_path": "research/experiments/chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+    "runner_sha256": "b049274efd7f5bd8315738feace36a06cd872c6fbebce4940b364c472a0af42e",
+    "schema": "chacha20-round20-w43-fine-selected-channel-transfer-a299-implementation-correction-v2",
+    "scientific_contract_changed": false,
+    "test_path": "tests/test_chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+    "test_sha256": "c5d7ef4d4555d7a0ae6f35a995cd98137ca53021697e42c5a7de2f69bd84a660"
+  },
+  "implementation_correction_v3": {
+    "attempt_id": "A299",
+    "corrected_at_utc": "2026-07-14T19:41:41Z",
+    "correction_scope": "W43_model_vector_helper_capacity_32_to_64_only",
+    "design_sha256": "a7876b5a8e61e3a61cfbfcbb9b0ac985f723ebbc40823ce11dbea55bb39f8c36",
+    "failed_measurement_transition": {
+      "coarse_measurement_completed": true,
+      "failure": "The inherited retained-state helper rejected the 43-literal model view before its first fine cell because its generic validation ceiling was 32",
+      "preflight_sha256": "7aa5250ee6f198d2247fd13b6d175230b97b8db1e4f465d9e99b80f8ebf701e8",
+      "protocol_sha256": "7ce69412fa49e6002d83e7bde84880fa1df8439815166ef59d924ad166482e46",
+      "returncode": 2
+    },
+    "fix": {
+      "CaDiCaL_configuration_changed": false,
+      "after_model_vector_capacity": 64,
+      "before_model_vector_capacity": 32,
+      "candidate_formula_changed": false,
+      "metric_or_retained_state_semantics_changed": false,
+      "prefix_plan_or_budget_changed": false
+    },
+    "information_boundary": {
+      "W43_checkpoint_or_result_read_by_correction": false,
+      "correction_derived_only_from_public_helper_stderr_and_source_validation_ceiling": true,
+      "reader_operator_order_partition_or_recovery_changed": false
+    },
+    "parent_implementation_correction_sha256": "6049b632cead5320a6b346beca399435e60ad51b3d4d502aa35fb560e65685ca",
+    "public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+    "runner_path": "research/experiments/chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+    "runner_sha256": "1487dd6360523076e60d203aeaff75fa29d15a5c3f3e6c35b79f73279dce42b9",
+    "schema": "chacha20-round20-w43-fine-selected-channel-transfer-a299-implementation-correction-v3",
+    "scientific_contract_changed": false,
+    "test_path": "tests/test_chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+    "test_sha256": "7d79c782f29ec2ca083424c2fd3315fb3d095b0c41744512951e33849c7246e9"
+  },
+  "implementation_freeze": {
+    "W43_protocol_path": "research/configs/chacha20_round20_w43_metal_record_v1.json",
+    "W43_protocol_sha256": "fe69f7c4962ed771703c68a1d64c361147a568cabe71d23cc9448fb1bef88de3",
+    "attempt_id": "A299",
+    "design_path": "research/configs/chacha20_round20_w43_fine_selected_channel_transfer_a299_design_v1.json",
+    "design_sha256": "a7876b5a8e61e3a61cfbfcbb9b0ac985f723ebbc40823ce11dbea55bb39f8c36",
+    "freeze_state": "runner_tests_and_exact_word0_prefix_mapping_frozen_before_CHACHA20KR43_complete_domain_result_A293_result_or_A295_result_exists",
+    "frozen_at_utc": "2026-07-14T18:55:24Z",
+    "implementation_contract": {
+      "candidate_group_decomposition": "2048_key_word1_low11_slices_times_2^20_key_word0_suffixes",
+      "candidate_group_size": 2147483648,
+      "complete_residual_domain": 8796093022208,
+      "confirmation": "RFC8439_byte_reference_plus_independent_word_reference_over_all_eight_output_blocks",
+      "counterfactuals": [
+        "numeric_prefix12",
+        "public_hash_prefix12"
+      ],
+      "partition_scope": "key_word0_bits31_through20",
+      "prefix_cells": 4096,
+      "reader": "unchanged_A295_frozen_fine_selected_channel"
+    },
+    "information_boundary": {
+      "A293_result_available_at_freeze": false,
+      "A295_result_available_at_freeze": false,
+      "W43_assignment_available_at_freeze": false,
+      "W43_checkpoint_candidate_value_read": false,
+      "W43_complete_domain_result_available_at_freeze": false,
+      "W43_public_target_exists": true,
+      "operator_mapping_order_controls_and_confirmation_logic_byte_frozen": true
+    },
+    "launch_gate": {
+      "A293_required": "complete_4096_prefix_model_free_trace_cover",
+      "A295_required": "confirmed_W24_recovery_using_the_unchanged_fine_selected_channel_order",
+      "measurement_and_recovery_started": false
+    },
+    "public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+    "runner_path": "research/experiments/chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+    "runner_sha256": "dd997a3a73e4df73f75d124417e1d435075dcbac6f844a1a5484353fc3992b23",
+    "schema": "chacha20-round20-w43-fine-selected-channel-transfer-a299-implementation-freeze-v1",
+    "test_path": "tests/test_chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+    "test_sha256": "e9e24113ced6038c4d37dadadb5afcae55e86097ce9cfd3fec0d2dde8ed09553"
+  },
+  "information_boundary": {
+    "W43_assignment_absent_from_source_protocol": true,
+    "W43_checkpoint_read": false,
+    "W43_complete_domain_result_read": false,
+    "W43_confirmation_read": false,
+    "W43_target_is_preexisting_public_holdout": true,
+    "reader_formula_features_coefficients_and_tiebreak_frozen": true,
+    "reader_refits": 0,
+    "target_labels_used": 0,
+    "target_measurement_or_A299_order_available_at_freeze": false,
+    "target_prefix_model_or_A299_filter_outcome_available_at_freeze": false
+  },
+  "protocol_state": "public_W43_holdout_and_unchanged_two_stage_reader_contract_frozen_before_A299_CNF_export_measurement_order_or_candidate_discovery",
+  "public_challenge": {
+    "challenge_id": "chacha20-r20-w43-fresh-v1",
+    "control_target_block_sha256": "f7700badb3b8b10468ba6e66992c0c53df4a9a4c3ce65c0c13e6680285ea1e86",
+    "control_target_words": [
+      2542727383,
+      1288693148,
+      1739235886,
+      3642831457,
+      3515603744,
+      798643757,
+      2363542496,
+      2620217590,
+      191955366,
+      315363239,
+      2967681502,
+      125445568,
+      1371908102,
+      256361742,
+      3491271095,
+      1898613976
+    ],
+    "counter_start": 869151012,
+    "feedforward": true,
+    "filter_bits": 64,
+    "filter_words": 2,
+    "known_key_bits": 213,
+    "known_material_derivation_label": "CHACHA20KR43|fresh|60417cee42291768b7c0a85215f1d3cf8a849f5e075baa91ea0459c777cc50c6",
+    "known_material_derivation_sha256": "1a43e2ee14ccc672e4a8ecbf9d239b15bdc6be21324409d9e0ea2325acab38fa",
+    "known_zeroed_key_words": [
+      0,
+      3392956416,
+      691505016,
+      140126982,
+      2836788385,
+      1847858357,
+      2521758717,
+      3874418491
+    ],
+    "nonce_words": [
+      187641148,
+      378623026,
+      4279096247
+    ],
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_bits": 4096,
+    "public_output_blocks": 8,
+    "rounds": 20,
+    "target_block_sha256": [
+      "ae92c6e14cd7b4c8ae9dbbb989ccbdf3a367aaae9f19abb03d28a32ee4efbbe3",
+      "aba353fdc44e98bf75423d01742921705395e8d72335f6b2b267cb2bcc4c1bfb",
+      "84b3209fe4f82e2ef0cba7f89c0db47eedd5965e4db1fb5f12dd99ab24f6df77",
+      "8670abce7c1fe35602e86e7452310a2b984df354a12567a8203e42c47357b2b4",
+      "9e650a75492809ed7969516e35215da38140e7569021bc010234d78042eafecb",
+      "5a8db5debf38ab6806e0d56548a6e47096b1b204b6ea4a68eb66f8b5234ddfc9",
+      "6ee2d6f15c4d8f5f78e48a7e400c538e56faf831ebb40ac4c96d03586608849c",
+      "0bebf6ecac9d98382235f4ab176f933cd35d3f0935537fb069514acc4c6e7376"
+    ],
+    "target_words": [
+      [
+        2542727382,
+        1288693148,
+        1739235886,
+        3642831457,
+        3515603744,
+        798643757,
+        2363542496,
+        2620217590,
+        191955366,
+        315363239,
+        2967681502,
+        125445568,
+        1371908102,
+        256361742,
+        3491271095,
+        1898613976
+      ],
+      [
+        1067957015,
+        2355952270,
+        384263845,
+        2252585967,
+        1810187299,
+        421111235,
+        553986718,
+        2576722264,
+        4216605328,
+        1622194710,
+        365867821,
+        129595308,
+        2120612920,
+        4090886061,
+        403584883,
+        141180706
+      ],
+      [
+        4129316326,
+        3523838786,
+        2560104965,
+        3403632598,
+        310039011,
+        1898232347,
+        1645122923,
+        2618075140,
+        1210376076,
+        652567005,
+        3123057997,
+        718423508,
+        2517879123,
+        108400826,
+        255989609,
+        1500456845
+      ],
+      [
+        1570045643,
+        1968674837,
+        305698800,
+        1020677592,
+        3959199728,
+        3411107907,
+        1891921856,
+        3044418089,
+        3333748614,
+        3168576486,
+        281220087,
+        2001184542,
+        1493521897,
+        2500623175,
+        1265062182,
+        2999861330
+      ],
+      [
+        724301974,
+        3980988435,
+        4213022662,
+        997283664,
+        3019379854,
+        861087305,
+        2423670076,
+        4131256642,
+        159487452,
+        3012985096,
+        3802785053,
+        3717885083,
+        3396255444,
+        1160449466,
+        2601068980,
+        6839767
+      ],
+      [
+        2477741060,
+        2087480881,
+        467056227,
+        3159240249,
+        3759613089,
+        944275909,
+        2518507344,
+        1118797620,
+        786549055,
+        3811563582,
+        3708465765,
+        3555572910,
+        1533208031,
+        3450742405,
+        3657367536,
+        2522123858
+      ],
+      [
+        1779123533,
+        1329581789,
+        4010579744,
+        1872657410,
+        3550290056,
+        366092965,
+        2673878750,
+        1650503597,
+        155344731,
+        1044875044,
+        3607577495,
+        3460436333,
+        3920672068,
+        1910592089,
+        1864401024,
+        3298840481
+      ],
+      [
+        3791728196,
+        1451699084,
+        806814083,
+        577922519,
+        2902289211,
+        2708970683,
+        4009258827,
+        4055378968,
+        1448538730,
+        3520726853,
+        110545531,
+        1226927887,
+        2050992892,
+        1419835959,
+        3430177942,
+        2440444478
+      ]
+    ],
+    "unknown_assignment_included": false,
+    "unknown_key_bits": 43,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low11"
+  },
+  "public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+  "reader_challenge": {
+    "block_count": 8,
+    "challenge_id": "a299-reader-view-of-chacha20-r20-w43-fresh-v1",
+    "control_target_block_sha256": "f7700badb3b8b10468ba6e66992c0c53df4a9a4c3ce65c0c13e6680285ea1e86",
+    "control_target_words": [
+      2542727383,
+      1288693148,
+      1739235886,
+      3642831457,
+      3515603744,
+      798643757,
+      2363542496,
+      2620217590,
+      191955366,
+      315363239,
+      2967681502,
+      125445568,
+      1371908102,
+      256361742,
+      3491271095,
+      1898613976
+    ],
+    "counter_schedule": "base_plus_block_index_mod_2^32",
+    "counter_start": 869151012,
+    "full_key_included": false,
+    "known_key_bits": 213,
+    "known_key_mask_words": [
+      0,
+      4294965248,
+      4294967295,
+      4294967295,
+      4294967295,
+      4294967295,
+      4294967295,
+      4294967295
+    ],
+    "known_key_value_words": [
+      0,
+      3392956416,
+      691505016,
+      140126982,
+      2836788385,
+      1847858357,
+      2521758717,
+      3874418491
+    ],
+    "nonce_words": [
+      187641148,
+      378623026,
+      4279096247
+    ],
+    "rounds": 20,
+    "secret_discarded_after_target_construction": true,
+    "secret_used_only_for_target_construction": true,
+    "source_public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+    "target_block_sha256": [
+      "ae92c6e14cd7b4c8ae9dbbb989ccbdf3a367aaae9f19abb03d28a32ee4efbbe3",
+      "aba353fdc44e98bf75423d01742921705395e8d72335f6b2b267cb2bcc4c1bfb",
+      "84b3209fe4f82e2ef0cba7f89c0db47eedd5965e4db1fb5f12dd99ab24f6df77",
+      "8670abce7c1fe35602e86e7452310a2b984df354a12567a8203e42c47357b2b4",
+      "9e650a75492809ed7969516e35215da38140e7569021bc010234d78042eafecb",
+      "5a8db5debf38ab6806e0d56548a6e47096b1b204b6ea4a68eb66f8b5234ddfc9",
+      "6ee2d6f15c4d8f5f78e48a7e400c538e56faf831ebb40ac4c96d03586608849c",
+      "0bebf6ecac9d98382235f4ab176f933cd35d3f0935537fb069514acc4c6e7376"
+    ],
+    "target_words": [
+      [
+        2542727382,
+        1288693148,
+        1739235886,
+        3642831457,
+        3515603744,
+        798643757,
+        2363542496,
+        2620217590,
+        191955366,
+        315363239,
+        2967681502,
+        125445568,
+        1371908102,
+        256361742,
+        3491271095,
+        1898613976
+      ],
+      [
+        1067957015,
+        2355952270,
+        384263845,
+        2252585967,
+        1810187299,
+        421111235,
+        553986718,
+        2576722264,
+        4216605328,
+        1622194710,
+        365867821,
+        129595308,
+        2120612920,
+        4090886061,
+        403584883,
+        141180706
+      ],
+      [
+        4129316326,
+        3523838786,
+        2560104965,
+        3403632598,
+        310039011,
+        1898232347,
+        1645122923,
+        2618075140,
+        1210376076,
+        652567005,
+        3123057997,
+        718423508,
+        2517879123,
+        108400826,
+        255989609,
+        1500456845
+      ],
+      [
+        1570045643,
+        1968674837,
+        305698800,
+        1020677592,
+        3959199728,
+        3411107907,
+        1891921856,
+        3044418089,
+        3333748614,
+        3168576486,
+        281220087,
+        2001184542,
+        1493521897,
+        2500623175,
+        1265062182,
+        2999861330
+      ],
+      [
+        724301974,
+        3980988435,
+        4213022662,
+        997283664,
+        3019379854,
+        861087305,
+        2423670076,
+        4131256642,
+        159487452,
+        3012985096,
+        3802785053,
+        3717885083,
+        3396255444,
+        1160449466,
+        2601068980,
+        6839767
+      ],
+      [
+        2477741060,
+        2087480881,
+        467056227,
+        3159240249,
+        3759613089,
+        944275909,
+        2518507344,
+        1118797620,
+        786549055,
+        3811563582,
+        3708465765,
+        3555572910,
+        1533208031,
+        3450742405,
+        3657367536,
+        2522123858
+      ],
+      [
+        1779123533,
+        1329581789,
+        4010579744,
+        1872657410,
+        3550290056,
+        366092965,
+        2673878750,
+        1650503597,
+        155344731,
+        1044875044,
+        3607577495,
+        3460436333,
+        3920672068,
+        1910592089,
+        1864401024,
+        3298840481
+      ],
+      [
+        3791728196,
+        1451699084,
+        806814083,
+        577922519,
+        2902289211,
+        2708970683,
+        4009258827,
+        4055378968,
+        1448538730,
+        3520726853,
+        110545531,
+        1226927887,
+        2050992892,
+        1419835959,
+        3430177942,
+        2440444478
+      ]
+    ],
+    "unknown_assignment_included": false,
+    "unknown_assignment_value_included": false,
+    "unknown_bit_numbering": "little_endian_bit0_upward_across_key_words_k0_through_k7",
+    "unknown_global_bit_interval": [
+      0,
+      42
+    ],
+    "unknown_key_bits": 43
+  },
+  "reader_challenge_sha256": "a503257f315bcd149069349d5b87965c8a6553776fd41b6affe94aaec2da7c85",
+  "schema": "chacha20-round20-w43-fine-selected-channel-transfer-a299-protocol-v1",
+  "scientific_design_sha256": "c2866195afdfd81f75a5a2a8fedfb58cb86c9546ceeef4670ebf4d6f3e787ca8",
+  "source_results": {
+    "A293_coverage": {
+      "complete_candidate_domain_enumeration_used": false,
+      "complete_prefix_cover_if_no_recovery": true,
+      "executed_prefix_cells": 4096,
+      "executed_prefix_fraction": 1.0,
+      "full_W24_assignment_domain": 16777216,
+      "prefix_domain_upper_bound_assignments": 16777216,
+      "strict_prefix_subset_before_recovery": false,
+      "total_prefix_cells": 4096
+    },
+    "A293_result_sha256": "de57f0994c3a868e8cb923bd39e49f5b29850d0fa013fd46730a3aca96f9ebff",
+    "A295_rank_analysis": {
+      "A295_search_gain_bits": 0.6529323428341295,
+      "A295_speedup_vs_A294_rank": 0.07754318618042226,
+      "A295_speedup_vs_numeric_rank": 0.38618042226487526,
+      "A295_speedup_vs_public_hash_rank": 1.3589251439539347,
+      "prefix12": 1005,
+      "prefix_ranks_one_based": {
+        "A294_coarse_Causal_Gray4": 202,
+        "A295_fine_selected_channel": 2605,
+        "numeric": 1006,
+        "public_hash_control": 3540
+      },
+      "ranks_computed_only_after_independent_confirmation": true
+    },
+    "A295_result_sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03"
+  }
+}

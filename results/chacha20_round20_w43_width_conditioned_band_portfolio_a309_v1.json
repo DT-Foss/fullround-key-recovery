@@ -1,0 +1,477 @@
+{
+  "A300_order_sha256": "76af63fd14613520bda54316e242c16e4530af22ddb2ec9e5a7a6e6df5afefd1",
+  "A300_preflight_sha256": "5479756d446f2a2349e780844a8a8373dde328b7bb448ce85271bf116b46db2d",
+  "A300_protocol_sha256": "d132e818e598458f0ac2aa53d8032c7c4dc5f2ffed5d863410b76c10c5b43307",
+  "A304_protocol_sha256": "2b2ea9febb74397437e0c3a772463d9ed46093461d6cc848aa6c77d2c38e7168",
+  "A304_qualification_artifact_sha256": "a9a92f4f8ecceede5dee44a429352ee4bc55e581531145fb5bb8a9606bc96c9c",
+  "anchors": {
+    "A300_order": {
+      "path": "research/results/v1/chacha20_round20_w43_three_operator_portfolio_a300_order_v1.json",
+      "sha256": "76af63fd14613520bda54316e242c16e4530af22ddb2ec9e5a7a6e6df5afefd1"
+    },
+    "A300_preflight": {
+      "path": "research/results/v1/chacha20_round20_w43_three_operator_portfolio_a300_preflight_v1.json",
+      "sha256": "5479756d446f2a2349e780844a8a8373dde328b7bb448ce85271bf116b46db2d"
+    },
+    "A300_protocol": {
+      "path": "research/configs/chacha20_round20_w43_three_operator_portfolio_a300_v1.json",
+      "sha256": "d132e818e598458f0ac2aa53d8032c7c4dc5f2ffed5d863410b76c10c5b43307"
+    },
+    "A304_qualification": {
+      "path": "research/results/v1/chacha20_round20_w43_grouped_engine_a304_qualification_v1.json",
+      "sha256": "a9a92f4f8ecceede5dee44a429352ee4bc55e581531145fb5bb8a9606bc96c9c"
+    },
+    "A309_reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w43_width_conditioned_band_portfolio_a309.sh",
+      "sha256": "9651a5532d4fab4cbcbafbc25af949c2f5d25a48b7be744bdf4fdb8b90c18146"
+    },
+    "A309_runner": {
+      "path": "research/experiments/chacha20_round20_w43_width_conditioned_band_portfolio_a309.py",
+      "sha256": "d3d102220cbe4a24bcdee4b915ff74c89ee1afa4959caaa20e379d91b305c2c7"
+    },
+    "A309_test": {
+      "path": "tests/test_chacha20_round20_w43_width_conditioned_band_portfolio_a309.py",
+      "sha256": "f03867f58c3945f42de7df4030341701b3654d71ab2814c962e68e4395026912"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w43_width_conditioned_band_portfolio_a309_design_v1.json",
+      "sha256": "5dde7d22eac9b01a706d46366e13653db61826ca29710c6d9b545d5ea2443552"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w43_width_conditioned_band_portfolio_a309_order_v1.json",
+      "sha256": "664bb911e63df3d08504f6785f8ae77b35ae0dccb1b7938169438b7952d6f1ee"
+    }
+  },
+  "attempt_id": "A309",
+  "causal": {
+    "api_id": "a309w43",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fresh_width_conditioned_band_replication_or_W44_transfer",
+        "predicate": "next_required_object",
+        "subject": "A309:confirmed_width_conditioned_band_W43_recovery",
+        "suggested_queries": [
+          "Does the frozen width-conditioned band retain concentration on another fresh W43 target or W44?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_W43_WIDTH_CONDITIONED_BAND_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_width_fit_band_search_confirmation_chain",
+        "o_idx": 4,
+        "outcome": "A309:confirmed_width_conditioned_band_W43_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A309_width_conditioned_chain",
+        "trigger": "A295_A303_A305:confirmed_disjoint_fine_rank_sequence"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "34937eba8e737bfbc77df76635a986a54b64bc04db2a5c426df27fc16e998c51",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 6276,
+      "file_size_kb": 6.1,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "confirmation": {
+    "all_blocks_match": true,
+    "assignment": 7060014834815,
+    "byte_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "byte_reference_sha256": [
+      "607bbcf8ca483719f2cf458ab8bfe5659fb19708106309c1d4cb156b5a9d793e",
+      "52a6c3bc7ba08155c7eb030d2c8120f3d64e89c40bfa8247e1c16978482f2d4f",
+      "feb7b53c8b2cd7cdc5a69cff9d203dcde8d786610b3701d76aca7beadd8bfc7b",
+      "7906418560316015d7ce4d3ddf5c636cfab919b1510acd0aaf2d9ef32794aa46",
+      "4ad6b009a61ba80b57bc819568a331b3f13a26650fa7e430e2492a7d6c6c9da2",
+      "4f2016bbb7a7e47a789b9e35750e566b86298ea9f981a91e4d892b66d790fb54",
+      "3349cb37a59c2557585a402d99b9b13bfa5042986f1fa27f9c5c16014ed84f1d",
+      "2fafc3ef6252af1428d44168570bb58d63b49f322a9e4fdda9943561a3dd53e7"
+    ],
+    "output_bits_checked_per_reference": 4096,
+    "recovered_key_words": [
+      3383567487,
+      577070699,
+      1957299714,
+      2548679447,
+      4083776714,
+      4121678668,
+      1280971629,
+      2043892503
+    ],
+    "recovered_key_words_hex": [
+      "c9ad247f",
+      "2265666b",
+      "74aa0602",
+      "97e9c317",
+      "f3697cca",
+      "f5abd34c",
+      "4c5a136d",
+      "79d35317"
+    ],
+    "total_cross_implementation_output_bits_checked": 8192,
+    "word_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "word_reference_sha256": [
+      "607bbcf8ca483719f2cf458ab8bfe5659fb19708106309c1d4cb156b5a9d793e",
+      "52a6c3bc7ba08155c7eb030d2c8120f3d64e89c40bfa8247e1c16978482f2d4f",
+      "feb7b53c8b2cd7cdc5a69cff9d203dcde8d786610b3701d76aca7beadd8bfc7b",
+      "7906418560316015d7ce4d3ddf5c636cfab919b1510acd0aaf2d9ef32794aa46",
+      "4ad6b009a61ba80b57bc819568a331b3f13a26650fa7e430e2492a7d6c6c9da2",
+      "4f2016bbb7a7e47a789b9e35750e566b86298ea9f981a91e4d892b66d790fb54",
+      "3349cb37a59c2557585a402d99b9b13bfa5042986f1fa27f9c5c16014ed84f1d",
+      "2fafc3ef6252af1428d44168570bb58d63b49f322a9e4fdda9943561a3dd53e7"
+    ]
+  },
+  "discovery": {
+    "candidate": 7060014834815,
+    "candidate_hex": "66bc9ad247f",
+    "complete_domain_assignments": 8796093022208,
+    "complete_group_execution_before_stop": true,
+    "control_filter_candidates": [],
+    "early_stop_inside_group": false,
+    "executed_assignments": 8684423872512,
+    "executed_assignments_upper_bound": 8684423872512,
+    "executed_group_dispatches": 4044,
+    "executed_outer_slices": 8282112,
+    "executed_prefix_groups": 4044,
+    "execution_engine_attempt": "A304",
+    "factual_filter_candidates": [
+      7060014834815
+    ],
+    "fine_prefix12": 3226,
+    "fine_prefix12_hex": "c9a",
+    "gpu_seconds": 6117.349136828911,
+    "grouped_execution_engine": "A304",
+    "key_word0": 3383567487,
+    "key_word1_low11": 1643,
+    "matched_control_candidates": 0,
+    "search_gain_bits": 0.0184327180969853,
+    "source_operator_attempt": "A309",
+    "strict_subset_of_complete_domain": true,
+    "volatile_wall_seconds": 6122.714495792054
+  },
+  "evidence_stage": "FULLROUND_R20_W43_WIDTH_CONDITIONED_BAND_STRICT_SUBSET_RECOVERY_CONFIRMED",
+  "exact_width_fit": {
+    "intercept": {
+      "decimal": 3208.606227106227,
+      "denominator": 546,
+      "numerator": 1751899
+    },
+    "leave_one_out": [
+      {
+        "absolute_error": 55.72727272727273,
+        "attempt_id": "A295",
+        "predicted_rank": 2549.2727272727275,
+        "signed_error": 55.72727272727273
+      },
+      {
+        "absolute_error": 32.26315789473684,
+        "attempt_id": "A303",
+        "predicted_rank": 2398.2631578947367,
+        "signed_error": -32.26315789473684
+      },
+      {
+        "absolute_error": 76.625,
+        "attempt_id": "A305",
+        "predicted_rank": 2037.375,
+        "signed_error": 76.625
+      }
+    ],
+    "maximum_absolute_leave_one_out_error": 76.625,
+    "maximum_absolute_training_residual": 21.331501831501832,
+    "predicted_W43_rank": {
+      "decimal": 2105.018315018315,
+      "denominator": 273,
+      "nearest_integer": 2105,
+      "numerator": 574670
+    },
+    "slope": {
+      "decimal": -25.664835164835164,
+      "denominator": 182,
+      "numerator": -4671
+    },
+    "training_residuals": [
+      12.34981684981685,
+      -21.331501831501832,
+      8.981684981684982
+    ]
+  },
+  "execution_sha256": "fa9db43e010546a58ec08ec9addf51dbfd1db1259d0445d21ec8c7421630db8e",
+  "grouped_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_path": "research/build/chacha20_round20_w43_grouped_engine_a304/chacha20_w43_grouped_cfd657be7826ccd2",
+    "executable_sha256": "d1c41a049db90997ada5eba880d1ba2d0787b1d74be499f0a254183f1b577acf",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_path": "research/experiments/chacha20_metal_w43_grouped_native.swift",
+    "source_sha256": "cfd657be7826ccd25a425cbbb5c7eb4d658ab9dc3fb0521edb34688ef32d319d"
+  },
+  "information_boundary": {
+    "A300_candidate_available_at_freeze": false,
+    "A300_filter_outcome_available_at_freeze": false,
+    "A300_prefix_rank_available_at_freeze": false,
+    "A300_result_available_at_freeze": false,
+    "A300_target_assignment_available_at_freeze": false,
+    "A302_result_available_at_freeze": false,
+    "candidate_filter_outcome_used_for_order": false,
+    "disjoint_confirmed_training_labels_used": 3,
+    "reader_refits_on_A300": 0,
+    "target_labels_used_from_A300": 0
+  },
+  "measurement_sha256": "9b171b9154cb4ef583b585cf24fea8ae74712267aed555a1e8d233add43fd481",
+  "metal_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true,
+      "two_dimensional_candidate_grid": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-w43-grouped-v1"
+  },
+  "order_sha256": "664bb911e63df3d08504f6785f8ae77b35ae0dccb1b7938169438b7952d6f1ee",
+  "personal_source_causal_readback": [
+    {
+      "api_id": "a295w24",
+      "attempt_id": "A295",
+      "clusters": 1,
+      "embedded_rules": 2,
+      "explicit_triplets": 2,
+      "gaps": 1,
+      "materialized_inferred_triplets": 1,
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fresh_target_fine_selected_channel_replication_or_W28_transfer",
+        "predicate": "next_required_object",
+        "subject": "A295:confirmed_fine_selected_channel_W24_recovery",
+        "suggested_queries": [
+          "Does the frozen fine-channel construction replicate on fresh targets or widen to W28?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_W24_FINE_SELECTED_CHANNEL_ORDERED_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_fine_trace_readout_discovery_confirmation_chain",
+        "o_idx": 4,
+        "outcome": "A295:confirmed_fine_selected_channel_W24_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "AI-native exact closure retained in-file",
+        "s_idx": 0,
+        "source": "materialized:A293_traces_plus_A295_reader",
+        "trigger": "A293:complete_Causal_refined_budget_boundary"
+      }
+    },
+    {
+      "api_id": "a303w32",
+      "attempt_id": "A303",
+      "clusters": 1,
+      "embedded_rules": 2,
+      "explicit_triplets": 2,
+      "gaps": 1,
+      "materialized_inferred_triplets": 1,
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fresh_low_overhead_W43_replication",
+        "predicate": "next_required_object",
+        "subject": "A303:confirmed_two_operator_W32_recovery",
+        "suggested_queries": [
+          "Does A302 retain the same allocation on its fresh W43 target?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_W32_CALIBRATED_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_calibration_order_recovery_chain",
+        "o_idx": 4,
+        "outcome": "A303:confirmed_two_operator_W32_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A303_companion_chain",
+        "trigger": "A303:sealed_A298_W32_relation"
+      }
+    },
+    {
+      "api_id": "a305w43",
+      "attempt_id": "A305",
+      "clusters": 1,
+      "embedded_rules": 2,
+      "explicit_triplets": 2,
+      "gaps": 1,
+      "materialized_inferred_triplets": 1,
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fresh_grouped_W43_replication_or_wider_residual_transfer",
+        "predicate": "next_required_object",
+        "subject": "A305:confirmed_grouped_A299_W43_recovery",
+        "suggested_queries": [
+          "Does the prospectively frozen A302 or A300 operator portfolio retain strict-subset gain under grouped W43 execution?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_W43_A299_GROUPED_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_A299_order_A304_execution_confirmation_chain",
+        "o_idx": 4,
+        "outcome": "A305:confirmed_grouped_A299_W43_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A305_grouped_A299_chain",
+        "trigger": "A299:prospectively_frozen_fine_W43_order"
+      }
+    }
+  ],
+  "portfolio_guarantee": {
+    "checked_prefix_cells": 4096,
+    "frozen_worst_case_bound_bits": 1.0,
+    "frozen_worst_case_bound_factor": 2,
+    "maximum_observed_regret_bits": 1.0,
+    "maximum_observed_regret_cell": 0,
+    "maximum_observed_regret_factor": 2.0,
+    "statement": "R_A309 <= 2 * min(R_width_band, R_A300_baseline)",
+    "transitive_bound_vs_best_A300_component_bits": 2.584962500721156,
+    "transitive_bound_vs_best_A300_component_factor": 6,
+    "violations": 0
+  },
+  "protocol_sha256": "e94ca4a4f88ed104a5807d14b06602d4f5f5e5c5c72bc694af98f55c1708594b",
+  "public_challenge_sha256": "2fd7b142df59cda46313150c8803cf4498b8ea99af4969f8fc91d36aea230772",
+  "qualification_gate": {
+    "evidence_stage": "GROUPED_W43_ENGINE_EXACTLY_QUALIFIED_BEFORE_CANDIDATE_EXECUTION",
+    "full_block_bits_checked": 67584,
+    "production_target_used": false,
+    "qualification_sha256": "9b9f36f519e222fc34e41b597cd4652b70b48a55f5225fb5b785d0a3250ad7b4",
+    "synthetic_filter_exact": true
+  },
+  "rank_analysis": {
+    "A300_rank_analysis": {
+      "assignment_upper_bounds": {
+        "A295_fine_selected_channel": 8222714888192,
+        "A297_coarse_high8_then_reflected_Gray4": 3841848246272,
+        "A300_three_operator_portfolio": 7438883356672,
+        "numeric_word0_prefix12": 6929929732096,
+        "public_hash_control": 2568390443008
+      },
+      "best_component_rank_one_based": 1789,
+      "counterfactual_component_ranks_computed_only_after_confirmation": true,
+      "portfolio_gain_bits_vs_complete_domain": 0.24177678527327506,
+      "portfolio_regret_bits_vs_best_component": 0.9532855426748167,
+      "portfolio_regret_factor_vs_best_component": 1.9362772498602572,
+      "portfolio_speedup_vs_public_hash_rank": 0.34526558891454967,
+      "prefix12": 3226,
+      "prefix12_hex": "c9a",
+      "prefix_ranks_one_based": {
+        "A295_fine_selected_channel": 3829,
+        "A297_coarse_high8_then_reflected_Gray4": 1789,
+        "A300_three_operator_portfolio": 3464,
+        "numeric_word0_prefix12": 3227,
+        "public_hash_control": 1196
+      },
+      "rank_guarantee_holds": true
+    },
+    "best_A309_arm_rank_one_based": 3449,
+    "counterfactual_ranks_computed_only_after_confirmation": true,
+    "gain_bits_vs_A300_baseline": -0.2233440671762898,
+    "portfolio_gain_bits_vs_complete_domain": 0.0184327180969853,
+    "portfolio_regret_factor_vs_best_A309_arm": 1.1725137721078573,
+    "prefix12": 3226,
+    "prefix12_hex": "c9a",
+    "prefix_ranks_one_based": {
+      "A295_fine_selected_channel": 3829,
+      "A297_coarse_high8_then_reflected_Gray4": 1789,
+      "A300_three_operator_baseline": 3464,
+      "A300_three_operator_portfolio": 3464,
+      "A309_width_band_plus_baseline": 4044,
+      "numeric_word0_prefix12": 3227,
+      "public_hash_control": 1196,
+      "width_conditioned_fine_rank_band": 3449
+    },
+    "speedup_vs_A300_baseline": 0.8565776458951533
+  },
+  "schema": "chacha20-round20-w43-width-conditioned-band-portfolio-a309-result-v1",
+  "strict_subset_of_complete_domain": true,
+  "training_rows": [
+    {
+      "attempt_id": "A295",
+      "confirmed_fine_rank_one_based": 2605,
+      "public_challenge_sha256": "5beabf27dccaa98cfaa97eed7bf7420c6548dcc469b4c924af04f8a872ecc30f",
+      "unknown_key_bits": 24
+    },
+    {
+      "attempt_id": "A303",
+      "confirmed_fine_rank_one_based": 2366,
+      "public_challenge_sha256": "549e610165965b3027618e4d4b33f899def0cc2a557124797234a0afe269abcb",
+      "unknown_key_bits": 32
+    },
+    {
+      "attempt_id": "A305",
+      "confirmed_fine_rank_one_based": 2114,
+      "public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+      "unknown_key_bits": 43
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "chacha20-round20-w45-covariance-whitened-atlas-a320-design-v1",
+  "attempt_id": "A320",
+  "design_state": "frozen_while_A314_measurement_is_running_before_any_A314_order_model_candidate_or_prefix_rank_exists",
+  "scientific_question": "Does A319's unchanged exact covariance-whitened geometry transfer to the unseen W45 target before any A314 recovery outcome exists?",
+  "conditional_branch_contract": {
+    "if_A314_measurement_returns_direct_symbolic_model": "retain_the_direct_model_without_grouped_rank_counterfactual",
+    "if_A314_measurement_returns_complete_model_free_field": "derive_all_three_A319_orders_from_A314_target_blind_Fine_Coarse_Numeric_coordinates",
+    "branch_selected_only_by_A314_public_measurement_outcome": true,
+    "branch_logic_frozen_before_A314_order_exists": true
+  },
+  "operator_contract": {
+    "geometry_source": "unchanged_exact_rational_A319_geometry_and_four_confirmed_prototypes",
+    "frozen_views": [
+      "nearest_exact_shrinkage_mahalanobis",
+      "nearest_exact_diagonal_variance_L2",
+      "nearest_exact_pairwise_median_scaled_L1"
+    ],
+    "primary_view": "nearest_exact_shrinkage_mahalanobis",
+    "parameter_refit_at_W45": false,
+    "selection_or_refit_after_A314_reveal": false,
+    "candidate_execution_by_A320": false,
+    "evaluation": "all_three_unchanged_views_after_A314_independent_confirmation_without_duplicate_candidate_execution"
+  },
+  "information_boundary": {
+    "A319_order_and_commitment_available_at_design_freeze": true,
+    "A314_measurement_running_at_design_freeze": true,
+    "A314_order_available_at_design_freeze": false,
+    "A314_direct_symbolic_model_available_at_design_freeze": false,
+    "A314_result_available_at_design_freeze": false,
+    "A314_candidate_available_at_design_freeze": false,
+    "A314_prefix_rank_available_at_design_freeze": false,
+    "target_labels_used_from_A314": 0,
+    "reader_refits_after_A314_reveal": 0,
+    "candidate_or_rank_used_to_choose_geometry_views_or_tie_break": false
+  },
+  "source_anchors": {
+    "A319_design_path": "research/configs/chacha20_round20_w44_covariance_whitened_atlas_a319_design_v1.json",
+    "A319_design_sha256": "5e5a4d3497104ad64a185b4f2d41572aa76f7f35dfb1c4a4fdf6dc3d5790ecb3",
+    "A319_order_path": "research/results/v1/chacha20_round20_w44_covariance_whitened_atlas_a319_order_v1.json",
+    "A319_order_sha256": "8096131a7e3c2508ebd04226e9f8a335c48e359241eaf2e9e18c268e2ed1bead",
+    "A319_commitment_path": "research/configs/chacha20_round20_w44_covariance_whitened_atlas_a319_commitment_v1.json",
+    "A319_commitment_sha256": "82b772cda68ba1cea76ecf4140f1979254409d0523d57b646cc4fad15afe0233",
+    "A314_protocol_path": "research/configs/chacha20_round20_w45_fine_band_recovery_a314_v1.json",
+    "A314_protocol_sha256": "17877a15624f7ab6fec1333c57260fa447d71d1112b9df5aa8219f8403968574",
+    "A314_preflight_path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_preflight_v1.json",
+    "A314_preflight_sha256": "cfb5bacd6e6e17479260d8a2cacd2f9808afc632d82e31f80e8dc6ed2d4159a4"
+  }
+}

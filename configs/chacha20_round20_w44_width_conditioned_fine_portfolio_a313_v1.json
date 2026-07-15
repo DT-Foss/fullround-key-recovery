@@ -1,0 +1,79 @@
+{
+  "A312_order_sha256": "698641af20a9f9ef7071f7a46d239a9cb9124cc82e10ab1b4bdb00f4a98f39fc",
+  "anchors": {
+    "A308_order": {
+      "path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_order_v1.json",
+      "sha256": "d69b594a5c7a8ce17d7e5e8d5736006f76a3757a532aa6e4e84f2ca5d6ab2f0b"
+    },
+    "A308_preflight": {
+      "path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_preflight_v1.json",
+      "sha256": "7afda29f1cf4f12d4ab09348d2393a80c30b7689d2e6623fffb9351f966cd5fd"
+    },
+    "A308_protocol": {
+      "path": "research/configs/chacha20_round20_w44_calibrated_coarse_numeric_a308_v1.json",
+      "sha256": "06fcdf7e79f07408292ced64eb19c7c973ba202061d47f8c9499bd23fe679dbd"
+    },
+    "A312_causal": {
+      "path": "research/results/v1/chacha20_round20_w44_fine_selected_channel_transfer_a312_order_v1.causal",
+      "sha256": "05b3c0cc3b4e034afe91cdaa1becb1455ef623f60f96d2fb85ac21ec75c8b238"
+    },
+    "A312_order": {
+      "path": "research/results/v1/chacha20_round20_w44_fine_selected_channel_transfer_a312_order_v1.json",
+      "sha256": "698641af20a9f9ef7071f7a46d239a9cb9124cc82e10ab1b4bdb00f4a98f39fc"
+    },
+    "A313_reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w44_width_conditioned_fine_portfolio_a313.sh",
+      "sha256": "67b4d8c35fa880a65d313767e448d3be37f29a9b7ab1ca86b54acb4bc24d0ee1"
+    },
+    "A313_runner": {
+      "path": "research/experiments/chacha20_round20_w44_width_conditioned_fine_portfolio_a313.py",
+      "sha256": "2e3ef48726395d7c45bdcb859a565f4b9cc511b589aee04bfc8ea05856140484"
+    },
+    "A313_test": {
+      "path": "tests/test_chacha20_round20_w44_width_conditioned_fine_portfolio_a313.py",
+      "sha256": "8f230eeefce27b5e5033bb5b275ec844dc70cecd8526da730dd9df10b3112f9d"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_design_v1.json",
+      "sha256": "7c3f2b78933cc64f9bdc7322aa185eef4997c4bab86f5d47576bd0a2687daf8e"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json",
+      "sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3"
+    }
+  },
+  "attempt_id": "A313",
+  "design_sha256": "7c3f2b78933cc64f9bdc7322aa185eef4997c4bab86f5d47576bd0a2687daf8e",
+  "execution_contract": {
+    "candidate_group_size": 4294967296,
+    "complete_prefix_group_before_success_evaluation": true,
+    "early_stop_inside_prefix_group": false,
+    "feedforward_included": true,
+    "frozen_execution_order": "A313_band_plus_fine_plus_A308_baseline",
+    "full_rounds": 20,
+    "grouped_engine": "A307_two_slab_W44",
+    "matched_control_target": true,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "unknown_key_bits": 44
+  },
+  "information_boundary": {
+    "A308_candidate_available_at_design_freeze": false,
+    "A308_candidate_or_prefix_rank_available_at_materialization": false,
+    "A308_filter_outcome_available_at_design_freeze": false,
+    "A308_prefix_rank_available_at_design_freeze": false,
+    "A308_result_available_at_design_freeze": false,
+    "A308_result_available_at_materialization": false,
+    "A312_direct_symbolic_outcome_available_at_design_freeze": false,
+    "A312_fine_order_available_at_design_freeze": false,
+    "A312_measurement_complete_at_design_freeze": false,
+    "A312_outcome_used_only_to_select_predeclared_conditional_branch": true,
+    "candidate_filter_outcome_used_for_operator_or_order": false,
+    "reader_refits_on_A308_or_A312": 0,
+    "target_labels_used_from_A308_or_A312": 0
+  },
+  "order_sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3",
+  "portfolio_order_uint16be_sha256": "5b504f49688ee98271be8d3fd28982fe7d590879ed0ededb8d41116dc1626191",
+  "protocol_state": "frozen_before_A308_grouped_candidate_execution_or_reveal",
+  "public_challenge_sha256": "c3897f3f8499c9afa01628b7f5e8de0ea5910a9559ca6bfb22fafe71d1fb26d6",
+  "schema": "chacha20-round20-w44-width-conditioned-fine-portfolio-a313-protocol-v1"
+}

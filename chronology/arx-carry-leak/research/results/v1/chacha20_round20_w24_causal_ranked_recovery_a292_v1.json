@@ -1,0 +1,118 @@
+{
+  "attempt_id": "A292",
+  "causal": {
+    "api_id": "a292w24",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 3,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w24_causal_ranked_recovery_a292_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "Causal_ranked_budget_or_partition_intervention",
+        "predicate": "next_required_object",
+        "subject": "A292:complete_Causal_ranked_budget_boundary",
+        "suggested_queries": [
+          "Which Reader-ranked cells accumulated the strongest retained clause-state gain?",
+          "Does the frozen order improve under a 12+12 partition without refitting?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_W24_COMPLETE_CAUSAL_RANKED_BUDGET_BOUNDARY",
+        "is_inferred": true,
+        "m_idx": 6,
+        "mechanism": "materialized_reader_order_recovery_chain",
+        "o_idx": 4,
+        "outcome": "A292:complete_Causal_ranked_budget_boundary",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "AI-native exact continuation retained in-file",
+        "s_idx": 0,
+        "source": "materialized:A291_order_plus_A292_recovery",
+        "trigger": "A291:hash_frozen_W24_prefix_order"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "d9defd07891d21fc170590665ade124702a22de363c187d441d47b8a69a4a9b1",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 7,
+      "file_size_bytes": 4147,
+      "file_size_kb": 4.0,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w24_causal_ranked_recovery_a292_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 4
+    }
+  },
+  "confirmation": null,
+  "coverage": {
+    "complete_candidate_domain_enumeration_used": false,
+    "complete_prefix_cover_if_no_recovery": true,
+    "executed_prefix_cells": 256,
+    "executed_prefix_fraction": 1.0,
+    "full_W24_assignment_domain": 16777216,
+    "prefix_domain_upper_bound_assignments": 16777216,
+    "strict_prefix_subset_before_recovery": false,
+    "total_prefix_cells": 256
+  },
+  "evidence_stage": "FULLROUND_R20_W24_COMPLETE_CAUSAL_RANKED_BUDGET_BOUNDARY",
+  "execution_sha256": "6e532f1c3b674e54aeeea1c4552db39a9d1a3ad173903ae38f5155edc4225369",
+  "information_boundary": {
+    "A287_A289_A290_outcomes_loaded_by_A292": false,
+    "A291_reader_refits": 0,
+    "A291_target_labels_used": 0,
+    "complete_candidate_domain_enumeration_used": false,
+    "prospective_design_precedes_A287_result_materialization": true,
+    "target_prefix_or_model_available_to_A292_order": false,
+    "unknown_treated_as_UNSAT": false
+  },
+  "measurement_sha256": "63f0af780aa9798d9390e171fd4835dc4ca60db8e46380f6dac7791147b026b9",
+  "protocol_sha256": "3fd80762f0d112002985bd0c1cd430977e0a874648a4a861039ef889fc92c449",
+  "public_challenge_sha256": "5beabf27dccaa98cfaa97eed7bf7420c6548dcc469b4c924af04f8a872ecc30f",
+  "rfc8439_gate": {
+    "exact": true,
+    "expected_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "observed_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "vector": "RFC8439_section_2.3.2"
+  },
+  "runner": {
+    "path": "research/experiments/chacha20_round20_w24_causal_ranked_recovery_a292.py",
+    "sha256": "d318c8797933b5d3f4b72898c3e1e22b9c304e81f2e0b5f590eddee1ea0f6745"
+  },
+  "schema": "chacha20-round20-w24-causal-ranked-recovery-a292-result-v1",
+  "solver": {
+    "attempted_cells": 256,
+    "helper_returncode": 0,
+    "measurement": {
+      "compressed_bytes": 15208,
+      "compressed_sha256": "f4a88ff91c2a7c104d8d2a870db373467a7e19249be7e7db1649a60fa147dcc4",
+      "path": "research/results/v1/chacha20_round20_w24_causal_ranked_recovery_a292_v1.measurement.json.zst",
+      "raw_bytes": 212939,
+      "raw_sha256": "78d455ec513f493796f05aab11921f7be6dd000d237377fc07dee71b2abc8d28"
+    },
+    "process_elapsed_seconds": 15456.698832124937,
+    "retained_state_continuity_verified": true,
+    "reverse_helper_sha256": "fcac403ac366cdd444d2adeee6b332e0f7f98b71aa6316b6eb75a939744951fd",
+    "reverse_source_derivation_sha256": "b06a20d5163ae51982395f8d870f97f35b2ad68fc67f0538a071ed8d001cc34e",
+    "status_counts": {
+      "sat": 0,
+      "unknown": 256,
+      "unsat": 0
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "0b110d158e4a1341be0f1fbea3b49ff6ee86eafdabafee43499b71b50a93bcb0",
+    "stopped_after_sat": false,
+    "terminator_fires": 256
+  },
+  "winner": null
+}

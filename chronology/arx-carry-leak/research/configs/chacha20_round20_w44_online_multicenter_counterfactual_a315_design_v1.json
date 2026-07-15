@@ -1,0 +1,73 @@
+{
+  "schema": "chacha20-round20-w44-online-multicenter-counterfactual-a315-design-v1",
+  "attempt_id": "A315",
+  "design_state": "frozen_while_A313_recovery_is_running_before_any_A313_result_candidate_or_prefix_rank_exists",
+  "scientific_question": "Does an online Reader that appends each independently confirmed fine-rank location to a target-blind multicenter map concentrate the next fresh W44 target, and can a band-prioritized schedule retain that gain without discarding the pre-existing baseline?",
+  "operator_contract": {
+    "coordinate_system": "one_based_rank_in_the_unchanged_A312_fine_selected_channel_order",
+    "confirmed_training_rows": [
+      {
+        "attempt_id": "A305",
+        "unknown_key_bits": 43,
+        "fine_rank_one_based": 2114
+      },
+      {
+        "attempt_id": "A303",
+        "unknown_key_bits": 32,
+        "fine_rank_one_based": 2366
+      },
+      {
+        "attempt_id": "A295",
+        "unknown_key_bits": 24,
+        "fine_rank_one_based": 2605
+      },
+      {
+        "attempt_id": "A309",
+        "unknown_key_bits": 43,
+        "fine_rank_one_based": 3829
+      }
+    ],
+    "confirmed_fine_rank_centers_one_based": [2114, 2366, 2605, 3829],
+    "online_update_rule": "append_each_new_independently_confirmed_fresh_target_fine_rank_exactly_once_then_sort_cells_by_nearest_center_distance_center_index_and_original_fine_rank",
+    "primary_order": "four_center_nearest_rank_band",
+    "safeguarded_order": "weighted_dovetail_two_band_draws_then_one_A308_baseline_draw_with_duplicate_suppression",
+    "weight_choice": {
+      "band": 2,
+      "A308_baseline": 1,
+      "reason": "smallest_integer_dovetail_that_privileges_the_A310_better_direct_multicenter_arm_while_retaining_every_baseline_cell_and_an_exhaustively_checked_finite_rank_bound"
+    },
+    "candidate_schedules_frozen_before_A313_reveal": [
+      "four_center_nearest_rank_band",
+      "weighted_dovetail_2_to_1",
+      "unchanged_A313_three_arm_portfolio"
+    ],
+    "selection_or_refit_after_A313_reveal": false,
+    "candidate_execution_by_A315": false,
+    "evaluation": "rank_only_after_A313_independent_confirmation_without_duplicate_candidate_execution"
+  },
+  "information_boundary": {
+    "A309_result_available_at_design_freeze": true,
+    "A310_result_available_at_design_freeze": true,
+    "A313_order_available_at_design_freeze": true,
+    "A313_recovery_running_at_design_freeze": true,
+    "A313_result_available_at_design_freeze": false,
+    "A313_candidate_available_at_design_freeze": false,
+    "A313_prefix_rank_available_at_design_freeze": false,
+    "A313_filter_outcome_available_at_design_freeze": false,
+    "target_labels_used_from_A313": 0,
+    "reader_refits_after_A313_reveal": 0,
+    "candidate_or_rank_used_to_choose_centers_weights_or_order": false
+  },
+  "source_anchors": {
+    "A309_result_path": "research/results/v1/chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.json",
+    "A309_result_sha256": "73edd2514cb644330c481d9fe01293e3a0242aad5157ba7a598ac776fbfb8abd",
+    "A310_result_path": "research/results/v1/chacha20_round20_w43_empirical_multicenter_band_counterfactual_a310_v1.json",
+    "A310_result_sha256": "19d9a341e103345600470adfa3a8feae1c99a66a38de241a60b42c4c8bdd13bc",
+    "A312_order_path": "research/results/v1/chacha20_round20_w44_fine_selected_channel_transfer_a312_order_v1.json",
+    "A312_order_sha256": "698641af20a9f9ef7071f7a46d239a9cb9124cc82e10ab1b4bdb00f4a98f39fc",
+    "A313_protocol_path": "research/configs/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+    "A313_protocol_sha256": "dd5d59c52b8d5247d4a51b5a078f640577a2b8e3506fd2c7a46a8ca2a34c2f3c",
+    "A313_order_path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json",
+    "A313_order_sha256": "2772df2531cc150d04002816661fb755c272f1afd5d699d5b802a2ff96eb42e3"
+  }
+}

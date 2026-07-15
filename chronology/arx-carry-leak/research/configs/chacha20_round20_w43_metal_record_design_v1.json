@@ -1,0 +1,32 @@
+{
+  "attempt_id": "CHACHA20KR43",
+  "design_state": "frozen_before_qualification_and_before_generation_of_the_fresh_production_challenge",
+  "execution": {
+    "complete_candidate_domain": 8796093022208,
+    "complete_domain_required": true,
+    "control": "flip_bit_zero_of_the_first_standard_output_word",
+    "early_stop": false,
+    "filter_bits": 64,
+    "full_confirmation": "independent_Python_RFC8439_operation_recompute_over_all_eight_blocks",
+    "known_key_bits": 213,
+    "public_counter_nonce_bits": 128,
+    "public_output_blocks": 8,
+    "public_output_bits": 4096,
+    "rounds": 20,
+    "unknown_key_bits": 43,
+    "unknown_layout": "complete_key_word_0_plus_low_11_bits_of_key_word_1"
+  },
+  "information_boundary": {
+    "fresh_assignment_generated_only_to_materialize_the_public_outputs": true,
+    "fresh_assignment_not_stored_in_protocol_source_or_checkpoint": true,
+    "production_challenge_generated_only_after_a_successful_pre_target_qualification": true,
+    "success_requires_complete_domain_unique_factual_model_and_zero_control_models": true
+  },
+  "qualification": {
+    "maximum_projected_complete_domain_seconds": 10800.0,
+    "minimum_timed_repetitions": 3,
+    "selection_statistic": "minimum_end_to_end_candidates_per_second",
+    "width_43_launch_requires_safety_factor": 1.25
+  },
+  "schema": "chacha20-round20-w43-metal-record-design-v1"
+}

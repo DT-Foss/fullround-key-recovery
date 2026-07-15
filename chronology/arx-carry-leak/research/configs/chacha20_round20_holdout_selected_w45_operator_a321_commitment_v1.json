@@ -1,0 +1,74 @@
+{
+  "A313_result_sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a",
+  "A314_candidate_or_rank_available_at_commitment": false,
+  "A314_order_sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034",
+  "A314_result_available_at_commitment": false,
+  "anchors": {
+    "A313_result": {
+      "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+      "sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a"
+    },
+    "A314_order": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_order_v1.json",
+      "sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034"
+    },
+    "causal": {
+      "path": "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.causal",
+      "sha256": "c032a1f71e0645d419196f19c4d2c7300ccb3ed2dc6286eb712c61ad5b8e20f3"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_holdout_selected_w45_operator_a321_design_v1.json",
+      "sha256": "3db5966ca254f8a5342399445d992db672fd0e9e5d40bc8ad401b0ae8cbd1e92"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.json",
+      "sha256": "8ace2e5af5ce1a132e78926f317dadaf63ada13a10c0338a56ddf62713a9d9d2"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_holdout_selected_w45_operator_a321.sh",
+      "sha256": "4ac9e1228647a52814bc48aaee30c07687a416e2878829400cfa49e0a45a2027"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_holdout_selected_w45_operator_a321.py",
+      "sha256": "61fd8e3c9635eab8cb166d8c9008df08b0cc067764f9c64da5042fa18726ef52"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_holdout_selected_w45_operator_a321.py",
+      "sha256": "8b44cf07b78acdc23c3f7746af08fdce28dd66fea41970abd8f1b24c37258701"
+    }
+  },
+  "attempt_id": "A321",
+  "commitment_state": "frozen_after_independent_A313_confirmation_before_any_A314_recovery_result",
+  "design_sha256": "3db5966ca254f8a5342399445d992db672fd0e9e5d40bc8ad401b0ae8cbd1e92",
+  "order_sha256": "8ace2e5af5ce1a132e78926f317dadaf63ada13a10c0338a56ddf62713a9d9d2",
+  "schema": "chacha20-round20-holdout-selected-w45-operator-a321-commitment-v1",
+  "selected_order_commitment": {
+    "deployment_target_public_challenge_sha256": "f55002a6240e6b557e40f15f0d66a997164eb107e59875654d3255588fe20c67",
+    "parameter_refit_or_manual_override": false,
+    "selected_W45_order_uint16be_sha256": "5d1afc37614fdbe050e9853413a3de7b850b876e9bc5649d3dffcf3e23c9780a",
+    "selected_W45_prefix_cells": 4096,
+    "selected_family": "raw_multiview",
+    "selected_operator": "raw_nearest_prototype_Linf"
+  },
+  "selection": {
+    "calibration_prefix12": 770,
+    "calibration_prefix12_hex": "302",
+    "candidate_ranks_one_based": {
+      "online_four_center_band": 2949,
+      "online_weighted_dovetail_2_to_1": 3342,
+      "raw_nearest_prototype_L1": 2809,
+      "raw_nearest_prototype_Linf": 2159,
+      "raw_nearest_prototype_squared_L2": 2626,
+      "whitened_diagonal_variance_L2": 2955,
+      "whitened_pairwise_median_scaled_L1": 3019,
+      "whitened_shrinkage_mahalanobis": 3002
+    },
+    "selected_W44_order_uint16be_sha256": "ebcbc4e1b195f82d4645d280e70e557fdfd0082fde329aaa6d2be90ff282f066",
+    "selected_W45_order_uint16be_sha256": "5d1afc37614fdbe050e9853413a3de7b850b876e9bc5649d3dffcf3e23c9780a",
+    "selected_calibration_rank_one_based": 2159,
+    "selected_candidate_index": 3,
+    "selected_family": "raw_multiview",
+    "selected_operator": "raw_nearest_prototype_Linf",
+    "selection_rule": "minimum_A313_rank_then_frozen_candidate_index"
+  }
+}

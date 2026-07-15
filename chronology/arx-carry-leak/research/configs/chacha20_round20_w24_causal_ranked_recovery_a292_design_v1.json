@@ -1,0 +1,37 @@
+{
+  "attempt_id": "A292",
+  "design_state": "prospectively_frozen_before_reading_any_A287_A289_A290_outcome",
+  "evidence_target": "FULLROUND_R20_W24_CAUSAL_RANKED_SYMBOLIC_RECOVERY_CONFIRMED",
+  "execution": {
+    "cadical_configuration": "default",
+    "complete_candidate_enumeration": false,
+    "free_bits_per_cell": 16,
+    "max_cells": 256,
+    "model_width": 24,
+    "prefix_bits": 8,
+    "public_output_blocks": 8,
+    "public_output_bits": 4096,
+    "retained_solver_state_across_cells": true,
+    "reverse_operator": true,
+    "seconds_per_cell": 60.0,
+    "stop_condition": "first_SAT_model_then_independent_all_eight_block_confirmation",
+    "unknown_key_bits": 24
+  },
+  "frozen_inputs": {
+    "A287_base_CNF_sha256": "91337e95194205055c057419f7084f756198afb305223aa1d23b2d3d27d04297",
+    "A287_preflight_sha256": "1bacefadd636b9e7fb9f42476e1927a87547d04ece676c8efcd1e29a6ef898b0",
+    "A291_Causal_sha256": "b287b2e1bcd206ef5c8b34892aea8d79b8b7045712bc7e0738befd9600be64bd",
+    "A291_complete_order_uint8_sha256": "2c379bbc174eb914ab218ababb885a3935ddf3d33b412851e4ed24f27fa88b43",
+    "A291_result_sha256": "abbb158fd96866a50dcb97f5cc63309d52bd2c9aefa1a2c4fc7f4333e750a0e0",
+    "public_challenge_sha256": "5beabf27dccaa98cfaa97eed7bf7420c6548dcc469b4c924af04f8a872ecc30f"
+  },
+  "information_boundary": {
+    "A291_order_may_select_cell_order_only": true,
+    "A291_target_labels_used": 0,
+    "A291_zero_refit_reader": true,
+    "A287_A289_A290_results_must_not_select_or_modify_any_A292_parameter": true,
+    "candidate_or_target_prefix_available_to_A292_design": false,
+    "unknown_is_not_unsat_or_elimination": true
+  },
+  "schema": "chacha20-round20-w24-causal-ranked-recovery-a292-design-v1"
+}

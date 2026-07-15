@@ -1,0 +1,435 @@
+{
+  "aggregate": {
+    "Causal_earlier_than_numeric": 0,
+    "Causal_earlier_than_public_hash": 2,
+    "Causal_prefix_ranks": [
+      2867,
+      2032,
+      926,
+      3932
+    ],
+    "confirmed_recoveries": 4,
+    "cross_implementation_output_bits_checked": 32768,
+    "geometric_mean_Causal_speedup_vs_numeric": 0.4494008730902669,
+    "geometric_mean_Causal_speedup_vs_public_hash": 1.3966284835564888,
+    "geometric_mean_domain_reduction": 1.9086046380841557,
+    "matched_control_candidates": 0,
+    "strict_subset_recoveries": 4,
+    "targets": 4
+  },
+  "anchors": {
+    "A223_config": {
+      "path": "research/configs/chacha20_round20_capacity_moonshot_a223_v1.json",
+      "sha256": "9b60f65be6415b4ac3738881336bfe8397328e0d216882f684db1c3da9b3a79f"
+    },
+    "A223_source": {
+      "path": "research/experiments/chacha20_round20_capacity_moonshot_a223.py",
+      "sha256": "f41b70c549392101a4a2cdf1499f69ac897912682a5696da79ef3533fa55e0e0"
+    },
+    "A251_wrapper": {
+      "path": "research/experiments/chacha20_fresh_clause_identity.py",
+      "sha256": "3a1d63d223712997519f72143ebcc3e5725a8f8659eadbd9389465dd0fe654f6"
+    },
+    "A296_causal": {
+      "path": "research/results/v1/chacha20_round20_causal_search_gain_panel_a296_v1.causal",
+      "sha256": "027889a7ac736a1e27c9c3cdf85567cb0b9c935fb197758229f72c16bf61f20a"
+    },
+    "A296_result": {
+      "path": "research/results/v1/chacha20_round20_causal_search_gain_panel_a296_v1.json",
+      "sha256": "2cf8aa4fbd37889baa0a7740724b7751746d037dd2482a63261327abb7e6f45d"
+    },
+    "A296_runner": {
+      "path": "research/experiments/chacha20_round20_causal_search_gain_panel_a296.py",
+      "sha256": "7b2a4423e71c87751389fcccea05839ad5ca2b8524d6c821d9f23cb7b30dd936"
+    },
+    "CausalReader": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "Metal_anchor": {
+      "path": "research/experiments/chacha20_round20_a223_w40_metal_transfer.py",
+      "sha256": "9374b2788ff3c05a5ab42fbbdfb2fc490d183675312d2d01ce08312f7758c0fe"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w32_causal_search_gain_panel_a297_design_v1.json",
+      "sha256": "64037393209a6c791f13202d37715baa61f45fbd718146e7e03f3218b9609edc"
+    },
+    "root_reference": {
+      "path": "research/experiments/chacha20_round20_multitarget_root_confirm.py",
+      "sha256": "3911002cdeff7f4705e82fd62ed293bbe675c7d02791aa7aa8770ed4d7d2891e"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w32_causal_search_gain_panel_a297.py",
+      "sha256": "f5700d37179c82969fb458d5cd184656641f65e5962e82cfa6fa1ff48b3ca60f"
+    }
+  },
+  "attempt_id": "A297",
+  "causal": {
+    "api_id": "a297w32",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fine_subprefix_reader_or_prospective_W36_transfer",
+        "predicate": "next_required_object",
+        "subject": "A297:confirmed_four_target_W32_zero_refit_transfer",
+        "suggested_queries": [
+          "Can the A295 fine-channel operator improve W32 order?",
+          "Does the same contract widen beyond one complete 32-bit key word?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_FOUR_TARGET_W32_ZERO_REFIT_CAUSAL_TRANSFER_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_W24_W28_to_W32_transfer_chain",
+        "o_idx": 4,
+        "outcome": "A297:confirmed_four_target_W32_zero_refit_transfer",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"Causal_earlier_than_numeric\": 0, \"Causal_earlier_than_public_hash\": 2, \"Causal_prefix_ranks\": [2867, 2032, 926, 3932], \"confirmed_recoveries\": 4, \"cross_implementation_output_bits_checked\": 32768, \"geometric_mean_Causal_speedup_vs_numeric\": 0.4494008730902669, \"geometric_mean_Causal_speedup_vs_public_hash\": 1.3966284835564888, \"geometric_mean_domain_reduction\": 1.9086046380841557, \"matched_control_candidates\": 0, \"strict_subset_recoveries\": 4, \"targets\": 4}",
+        "s_idx": 0,
+        "source": "materialized:A296_gap_plus_A297_panel",
+        "trigger": "A296:confirmed_W24_replication_and_W28_transfer_panel"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "5b2c2358807d242e8042d390fc269ecbac931d75a18d1e3a1b1efc004fc829f2",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 3694,
+      "file_size_kb": 3.6,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w32_causal_search_gain_panel_a297_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "evidence_stage": "FULLROUND_R20_FOUR_TARGET_W32_ZERO_REFIT_CAUSAL_TRANSFER_CONFIRMED",
+  "execution_sha256": "a4e88594367ef7bcf877df7596dc87a7ebb08d104e91aace816f1e8141436c62",
+  "information_boundary": {
+    "all_target_generation_assignments_absent": true,
+    "all_target_orders_completed_before_any_recovery": true,
+    "counterfactual_control_ranks_computed_after_confirmation": true,
+    "matched_controls_scanned_over_identical_executed_groups": true,
+    "reader_refits": 0,
+    "target_labels_or_models_used_for_reader_scoring": false
+  },
+  "measurement_sha256": "b52364180b7f8de731cec80df955b57e45bfb96dd6f1becd531542b234625e90",
+  "metal_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-native-v1"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "5fc1863f3f5633256ccfb1a6a95945c7255fe4642d057c0c642e04b0579f7079",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "warnings_as_errors": true
+  },
+  "preflight_sha256": "663d90c7d29b928830431510c6e854c7c5206ed79c7bebfa0bade0c69e3d6c07",
+  "protocol_sha256": "6c3505606b53d3e3c5680b11142833129bb083313657b83ba027dcd9994bc253",
+  "schema": "chacha20-round20-w32-causal-search-gain-panel-a297-result-v1",
+  "targets": [
+    {
+      "confirmation": {
+        "block_sha256": [
+          "3aab401dd7f383b4cd66e4724a3a776459e215c557bb455f69693ad3b842a6bb",
+          "8adfcaac77b060460b49a053b1236ef66a7f208b556d7358c2a3fb2e0a795650",
+          "b99c6f6f35818e4c8d27aecb75a2b5b63fd89e69bf036db2972289ad08d50c60",
+          "3e03b9e64023c9102eb79e9db8e9ffa14115866687664bd197dd61b59ffa9e4f",
+          "b9d7a59efa2814902dcfa85be4fa8df5602ed18762ba1263d2685b10ad3cd252",
+          "0a683c64c2a736fc836241b2ffe93114b83762a778927045f15d54b900c6d134",
+          "c48418a7db90cffcd2d794c60646673cabfe7afd4894aff80360b2e3f68b4ca6",
+          "ae6c5c99203af3c19f2017adbd234a040485e7dc87cd6eefec7589d46151eb6d"
+        ],
+        "cross_implementation_blocks_match": true,
+        "cross_implementation_output_bits_checked": 8192,
+        "independent_byte_reference_all_eight_blocks_match": true,
+        "one_bit_control_rejected_over_discovery_subset": true,
+        "output_bits_checked_per_implementation": 4096,
+        "recovered_full_key_word0": 2134664270,
+        "recovered_unknown_assignment": 2134664270,
+        "root_operation_reference_all_eight_blocks_match": true
+      },
+      "discovery": {
+        "Causal_prefix_rank_one_based": 2867,
+        "candidate": 2134664270,
+        "candidate_hex": "7f3c644e",
+        "complete_domain_assignments": 4294967296,
+        "executed_assignments_upper_bound": 3006267392,
+        "executed_prefix_groups": 2867,
+        "fine_prefix12": 2035,
+        "fine_prefix12_hex": "7f3",
+        "gpu_seconds": 3.9371836711652577,
+        "matched_control_candidates": 0,
+        "matched_full_key_word0": 2134664270,
+        "search_gain_bits": 0.5146738107594764,
+        "strict_subset_of_complete_domain": true
+      },
+      "mapping_gate": {
+        "candidate_group_size": 1048576,
+        "control_matches": 0,
+        "factual_match_exact": true,
+        "gpu_seconds": 0.0011957501992583275,
+        "public_synthetic_prefix12": 1443,
+        "public_synthetic_suffix": 1969,
+        "width": 32
+      },
+      "measurement_artifact": {
+        "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1/w32_t00.measurement.json.zst",
+        "sha256": "6c5de749b28ca863b3f5cffa87cb58f464214f681bf0d1d4f7fa7b4b501af080"
+      },
+      "order_artifact": {
+        "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1/w32_t00.order.json",
+        "sha256": "11894637b4b9db120174c9b407b042aa511ea34b4184be3a8874599b5d56ead6"
+      },
+      "public_challenge_sha256": "b38eb768600bb5e9188cb88c565ad34e0467ce999c56a1aa5f1ca3da24d2ce13",
+      "rank_analysis": {
+        "Causal_speedup_vs_numeric_rank": 0.7101499825601674,
+        "Causal_speedup_vs_public_hash_rank": 0.9658179281478898,
+        "counterfactual_ranks_computed_after_confirmation": true,
+        "prefix12": 2035,
+        "prefix_ranks_one_based": {
+          "Causal": 2867,
+          "numeric": 2036,
+          "public_hash_control": 2769
+        }
+      },
+      "target_id": "w32_t00",
+      "unknown_key_bits": 32
+    },
+    {
+      "confirmation": {
+        "block_sha256": [
+          "a5c165331820f4dc5194531782ab0dc40c5cdf7056337cd0490e59700ff7d3e0",
+          "153fb893e340d50b0f317e2deb2b38a76e155f569ee1b91f1fe5b780f7889d7a",
+          "619bdaf2cf1b8718f481876685ea7c8eddea3350b7ced52d6f3caf6c60aadbbe",
+          "9df90f503666bbad74ae6e0992db7683cd50a051ec46ff106d578dcd310a2a62",
+          "b2e042bf06b1fd133d0c2e7902c45e2a3f01092c8810ec9556beab46e5e03dbc",
+          "f5f321c2afc1564c301cd3028bd432c41273ab1cf505e6d6a67ea833cb839d23",
+          "d3d49238b85aa0f7b72ff899983b186b5a8e40c91667a48e4814a06500dcaab3",
+          "4bc72d983eb39443ff9c1b7f28a2a2dc2176aa69b3b0056983931a8492065865"
+        ],
+        "cross_implementation_blocks_match": true,
+        "cross_implementation_output_bits_checked": 8192,
+        "independent_byte_reference_all_eight_blocks_match": true,
+        "one_bit_control_rejected_over_discovery_subset": true,
+        "output_bits_checked_per_implementation": 4096,
+        "recovered_full_key_word0": 478580146,
+        "recovered_unknown_assignment": 478580146,
+        "root_operation_reference_all_eight_blocks_match": true
+      },
+      "discovery": {
+        "Causal_prefix_rank_one_based": 2032,
+        "candidate": 478580146,
+        "candidate_hex": "1c868db2",
+        "complete_domain_assignments": 4294967296,
+        "executed_assignments_upper_bound": 2130706432,
+        "executed_prefix_groups": 2032,
+        "fine_prefix12": 456,
+        "fine_prefix12_hex": "1c8",
+        "gpu_seconds": 2.8446171693503857,
+        "matched_control_candidates": 0,
+        "matched_full_key_word0": 478580146,
+        "search_gain_bits": 1.011315313227834,
+        "strict_subset_of_complete_domain": true
+      },
+      "mapping_gate": {
+        "candidate_group_size": 1048576,
+        "control_matches": 0,
+        "factual_match_exact": true,
+        "gpu_seconds": 0.0014256248250603676,
+        "public_synthetic_prefix12": 1443,
+        "public_synthetic_suffix": 1969,
+        "width": 32
+      },
+      "measurement_artifact": {
+        "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1/w32_t01.measurement.json.zst",
+        "sha256": "44d4fa2a4e111c6dfebb0ac3c9b740a7024959b79b08d258606657576ea4311d"
+      },
+      "order_artifact": {
+        "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1/w32_t01.order.json",
+        "sha256": "288ed3de100d7a06974a2f929fc88bb8397c01a84867eb1ab37eed3e4d966392"
+      },
+      "public_challenge_sha256": "2ad62e377119417a0bf092baac24d3faa60cb9072102dae462251649a2694eed",
+      "rank_analysis": {
+        "Causal_speedup_vs_numeric_rank": 0.2249015748031496,
+        "Causal_speedup_vs_public_hash_rank": 1.8617125984251968,
+        "counterfactual_ranks_computed_after_confirmation": true,
+        "prefix12": 456,
+        "prefix_ranks_one_based": {
+          "Causal": 2032,
+          "numeric": 457,
+          "public_hash_control": 3783
+        }
+      },
+      "target_id": "w32_t01",
+      "unknown_key_bits": 32
+    },
+    {
+      "confirmation": {
+        "block_sha256": [
+          "95781fae837769bd18db38a24aa60d9ce0bba5ade6c8b857f51a3319cc0f862c",
+          "0e71b2880fc5aa2ff2233f611541c1c9eb548a61da6c640c65a7d45bbf83bb42",
+          "557ba1a5ff65149e85125567452f9329e1d88e32404b7dff6dcc3cd20c5fa6c5",
+          "e6c91034277c372d294930794d0b00a11350c2bf173724bf26d99d0fe843ab07",
+          "60465382573481c6a2634b6ce600b88c37cec54b00723a290175aba6f6604480",
+          "6f292ec35727d37ad03bf4b668b7841fae11105d1f031a97f6d02b9a03bf9574",
+          "a071104168a60725a2c158e655aa066ef3c537d2773aca930a3f7d512dad2445",
+          "6ed68f0b1fa84c3c9340e065f053bc1fbb36bae6d55b14b9b2fb34fb4a91fc16"
+        ],
+        "cross_implementation_blocks_match": true,
+        "cross_implementation_output_bits_checked": 8192,
+        "independent_byte_reference_all_eight_blocks_match": true,
+        "one_bit_control_rejected_over_discovery_subset": true,
+        "output_bits_checked_per_implementation": 4096,
+        "recovered_full_key_word0": 397791255,
+        "recovered_unknown_assignment": 397791255,
+        "root_operation_reference_all_eight_blocks_match": true
+      },
+      "discovery": {
+        "Causal_prefix_rank_one_based": 926,
+        "candidate": 397791255,
+        "candidate_hex": "17b5d017",
+        "complete_domain_assignments": 4294967296,
+        "executed_assignments_upper_bound": 970981376,
+        "executed_prefix_groups": 926,
+        "fine_prefix12": 379,
+        "fine_prefix12_hex": "17b",
+        "gpu_seconds": 1.2708607921376824,
+        "matched_control_candidates": 0,
+        "matched_full_key_word0": 397791255,
+        "search_gain_bits": 2.145131616739764,
+        "strict_subset_of_complete_domain": true
+      },
+      "mapping_gate": {
+        "candidate_group_size": 1048576,
+        "control_matches": 0,
+        "factual_match_exact": true,
+        "gpu_seconds": 0.0015144585631787777,
+        "public_synthetic_prefix12": 1443,
+        "public_synthetic_suffix": 1969,
+        "width": 32
+      },
+      "measurement_artifact": {
+        "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1/w32_t02.measurement.json.zst",
+        "sha256": "3e40978d48e438f7fa69ddf54c4b8b28433bda8399d2d5a8404c3f336ded96df"
+      },
+      "order_artifact": {
+        "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1/w32_t02.order.json",
+        "sha256": "bc4c26e0e72a354b39fc9b1137b1c8dad97d267cac614a59568f72249217b102"
+      },
+      "public_challenge_sha256": "e42b631ade2aacc9d991a087c4c0b0b9297e081f1b9aaacac9ab7ab4b45d3c70",
+      "rank_analysis": {
+        "Causal_speedup_vs_numeric_rank": 0.4103671706263499,
+        "Causal_speedup_vs_public_hash_rank": 2.1339092872570196,
+        "counterfactual_ranks_computed_after_confirmation": true,
+        "prefix12": 379,
+        "prefix_ranks_one_based": {
+          "Causal": 926,
+          "numeric": 380,
+          "public_hash_control": 1976
+        }
+      },
+      "target_id": "w32_t02",
+      "unknown_key_bits": 32
+    },
+    {
+      "confirmation": {
+        "block_sha256": [
+          "b55eb8114c297459d12e0abf2ab72dc4462287d03d927ef6189ed18c750f9307",
+          "4391d07bf050ae11893c8448ba9d7c8ae8904e040636508deda47a52c6f6ae75",
+          "e527885450d09395acd8440f3ca164d235bbaef7c185658e4ed30e58c791fbfb",
+          "10375032ee0c2e7263bcf73167767617bc6d0307d2ec22705644e456239e6110",
+          "b0f37fc92a75ecb8fe63453128dceb47bbfbbd0e26db3b0afffc977e127994d5",
+          "d46ebd6d5a2f90495833d1fa5f7bf6e307983ced73bdfe10ca059009d28802fb",
+          "065cfac24353c6bce03be811190315dcef1d1424008544249072a515a523036c",
+          "87b69f0ca8cb620ccd102d6f866ebecbe47589abce1bb670abaef8366300030e"
+        ],
+        "cross_implementation_blocks_match": true,
+        "cross_implementation_output_bits_checked": 8192,
+        "independent_byte_reference_all_eight_blocks_match": true,
+        "one_bit_control_rejected_over_discovery_subset": true,
+        "output_bits_checked_per_implementation": 4096,
+        "recovered_full_key_word0": 2564859430,
+        "recovered_unknown_assignment": 2564859430,
+        "root_operation_reference_all_eight_blocks_match": true
+      },
+      "discovery": {
+        "Causal_prefix_rank_one_based": 3932,
+        "candidate": 2564859430,
+        "candidate_hex": "98e0a626",
+        "complete_domain_assignments": 4294967296,
+        "executed_assignments_upper_bound": 4123000832,
+        "executed_prefix_groups": 3932,
+        "fine_prefix12": 2446,
+        "fine_prefix12_hex": "98e",
+        "gpu_seconds": 5.469354071188718,
+        "matched_control_candidates": 0,
+        "matched_full_key_word0": 2564859430,
+        "search_gain_bits": 0.058952393659419344,
+        "strict_subset_of_complete_domain": true
+      },
+      "mapping_gate": {
+        "candidate_group_size": 1048576,
+        "control_matches": 0,
+        "factual_match_exact": true,
+        "gpu_seconds": 0.0011585834436118603,
+        "public_synthetic_prefix12": 1443,
+        "public_synthetic_suffix": 1969,
+        "width": 32
+      },
+      "measurement_artifact": {
+        "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1/w32_t03.measurement.json.zst",
+        "sha256": "1481952977722a261a40782df5c24a1ebaae098a5bf0894a8bce380ba0921f38"
+      },
+      "order_artifact": {
+        "path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1/w32_t03.order.json",
+        "sha256": "dcf3bbd387c806f32667d1a4d885be4df9587b310a741758a36902382fd09497"
+      },
+      "public_challenge_sha256": "d168ff2840460e790fe4fdbb4ee5bd8851ba30445aeeb92c6e72aaff03da50ef",
+      "rank_analysis": {
+        "Causal_speedup_vs_numeric_rank": 0.6223296032553408,
+        "Causal_speedup_vs_public_hash_rank": 0.9916073245167853,
+        "counterfactual_ranks_computed_after_confirmation": true,
+        "prefix12": 2446,
+        "prefix_ranks_one_based": {
+          "Causal": 3932,
+          "numeric": 2447,
+          "public_hash_control": 3899
+        }
+      },
+      "target_id": "w32_t03",
+      "unknown_key_bits": 32
+    }
+  ]
+}

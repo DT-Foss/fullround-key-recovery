@@ -1,0 +1,227 @@
+{
+  "aggregate": {
+    "fine_operator_direct_calibrations": 2,
+    "fine_operator_dominated_calibrations": 2,
+    "geometric_mean_complete_domain_reduction": 3.206509101787679,
+    "maximum_portfolio_rank": 3534,
+    "mean_search_gain_bits": 1.6810035023216012,
+    "strict_subset_targets": 14,
+    "targets": 14
+  },
+  "attempt_id": "A301",
+  "evidence_stage": "FOURTEEN_TARGET_TWO_OPERATOR_CALIBRATION_FROZEN",
+  "information_boundary": {
+    "A300_measurement_order_candidate_assignment_or_label_used": false,
+    "calibration_selects_only_the_future_operator_allocation": true,
+    "completed_postconfirmation_calibration_labels_used": true
+  },
+  "rows": [
+    {
+      "complete_domain_reduction": 1.159026598754952,
+      "prefix12": 3243,
+      "prefix_ranks_one_based": {
+        "coarse": 2750,
+        "numeric": 3244,
+        "two_operator_portfolio": 3534
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 0.2129136754483832,
+      "strict_subset": true,
+      "target_id": "w24_t00",
+      "unknown_key_bits": 24
+    },
+    {
+      "complete_domain_reduction": 1.9486203615604187,
+      "prefix12": 1186,
+      "prefix_ranks_one_based": {
+        "coarse": 2948,
+        "numeric": 1187,
+        "two_operator_portfolio": 2102
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 0.9624530460378217,
+      "strict_subset": true,
+      "target_id": "w24_t01",
+      "unknown_key_bits": 24
+    },
+    {
+      "complete_domain_reduction": 1.6780008193363376,
+      "prefix12": 2842,
+      "prefix_ranks_one_based": {
+        "coarse": 1485,
+        "numeric": 2843,
+        "two_operator_portfolio": 2441
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 0.7467434202188461,
+      "strict_subset": true,
+      "target_id": "w24_t02",
+      "unknown_key_bits": 24
+    },
+    {
+      "complete_domain_reduction": 10.422391857506362,
+      "prefix12": 1862,
+      "prefix_ranks_one_based": {
+        "coarse": 213,
+        "numeric": 1863,
+        "two_operator_portfolio": 393
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 3.3816144977413938,
+      "strict_subset": true,
+      "target_id": "w24_t03",
+      "unknown_key_bits": 24
+    },
+    {
+      "complete_domain_reduction": 2.5190651906519066,
+      "prefix12": 980,
+      "prefix_ranks_one_based": {
+        "coarse": 1144,
+        "numeric": 981,
+        "two_operator_portfolio": 1626
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 1.3328884579249722,
+      "strict_subset": true,
+      "target_id": "w28_t00",
+      "unknown_key_bits": 28
+    },
+    {
+      "complete_domain_reduction": 4.7297921478060045,
+      "prefix12": 432,
+      "prefix_ranks_one_based": {
+        "coarse": 2113,
+        "numeric": 433,
+        "two_operator_portfolio": 866
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 2.241776785273275,
+      "strict_subset": true,
+      "target_id": "w28_t01",
+      "unknown_key_bits": 28
+    },
+    {
+      "complete_domain_reduction": 4.201025641025641,
+      "prefix12": 1620,
+      "prefix_ranks_one_based": {
+        "coarse": 520,
+        "numeric": 1621,
+        "two_operator_portfolio": 975
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 2.070741591363027,
+      "strict_subset": true,
+      "target_id": "w28_t02",
+      "unknown_key_bits": 28
+    },
+    {
+      "complete_domain_reduction": 2.56,
+      "prefix12": 847,
+      "prefix_ranks_one_based": {
+        "coarse": 3019,
+        "numeric": 848,
+        "two_operator_portfolio": 1600
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 1.3561438102252754,
+      "strict_subset": true,
+      "target_id": "w28_t03",
+      "unknown_key_bits": 28
+    },
+    {
+      "complete_domain_reduction": 1.2978453738910012,
+      "prefix12": 2035,
+      "prefix_ranks_one_based": {
+        "coarse": 2867,
+        "numeric": 2036,
+        "two_operator_portfolio": 3156
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 0.3761185099865414,
+      "strict_subset": true,
+      "target_id": "w32_t00",
+      "unknown_key_bits": 32
+    },
+    {
+      "complete_domain_reduction": 4.818823529411764,
+      "prefix12": 456,
+      "prefix_ranks_one_based": {
+        "coarse": 2032,
+        "numeric": 457,
+        "two_operator_portfolio": 850
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 2.2686809689749357,
+      "strict_subset": true,
+      "target_id": "w32_t01",
+      "unknown_key_bits": 32
+    },
+    {
+      "complete_domain_reduction": 5.626373626373627,
+      "prefix12": 379,
+      "prefix_ranks_one_based": {
+        "coarse": 926,
+        "numeric": 380,
+        "two_operator_portfolio": 728
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 2.4922053598013036,
+      "strict_subset": true,
+      "target_id": "w32_t02",
+      "unknown_key_bits": 32
+    },
+    {
+      "complete_domain_reduction": 1.2552865461231995,
+      "prefix12": 2446,
+      "prefix_ranks_one_based": {
+        "coarse": 3932,
+        "numeric": 2447,
+        "two_operator_portfolio": 3263
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 0.3280167279081358,
+      "strict_subset": true,
+      "target_id": "w32_t03",
+      "unknown_key_bits": 32
+    },
+    {
+      "complete_domain_reduction": 11.314917127071823,
+      "prefix12": 1005,
+      "prefix_ranks_one_based": {
+        "coarse": 202,
+        "fine": 2605,
+        "numeric": 1006,
+        "two_operator_portfolio": 362
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 3.500154112916795,
+      "strict_subset": true,
+      "target_id": "A295",
+      "unknown_key_bits": 24
+    },
+    {
+      "complete_domain_reduction": 4.801875732708089,
+      "prefix12": 3951,
+      "prefix_ranks_one_based": {
+        "coarse": 427,
+        "fine": 2114,
+        "numeric": 3952,
+        "two_operator_portfolio": 853
+      },
+      "rank_bound_holds": true,
+      "search_gain_bits": 2.2635980686817097,
+      "strict_subset": true,
+      "target_id": "A299",
+      "unknown_key_bits": 43
+    }
+  ],
+  "schema": "chacha20-round20-w43-dominance-pruned-portfolio-a301-calibration-v1",
+  "source_sha256": {
+    "A291_result_sha256": "abbb158fd96866a50dcb97f5cc63309d52bd2c9aefa1a2c4fc7f4333e750a0e0",
+    "A295_result_sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03",
+    "A296_result_sha256": "2cf8aa4fbd37889baa0a7740724b7751746d037dd2482a63261327abb7e6f45d",
+    "A297_result_sha256": "046beb03789c994e564a018d3ca6d4ce146a22ca6b171197e99aeedd9cc98cfd",
+    "A299_order_sha256": "8369e7b4b421c68b344a3ea4588de350796cdc97216d71d43fc2f960df26af07",
+    "CHACHA20KR43_result_sha256": "35d01c2c68537659e2a9f0439a0c037abd4171f073a1fece3ae48d15cfc87d48"
+  }
+}

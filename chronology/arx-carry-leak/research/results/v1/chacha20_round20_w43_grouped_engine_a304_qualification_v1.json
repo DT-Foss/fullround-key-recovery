@@ -1,0 +1,141 @@
+{
+  "attempt_id": "A304",
+  "evidence_stage": "GROUPED_W43_ENGINE_EXACTLY_QUALIFIED_BEFORE_CANDIDATE_EXECUTION",
+  "full_block_cross_engine_rows": [
+    {
+      "complete_output_bits_checked": 16896,
+      "first_word0": 305418240,
+      "grouped_equals_scalar": true,
+      "legacy_equals_scalar": true,
+      "outer": 0,
+      "output_sha256": "6482341a75bbdeca176c1e18f98ef15a78dc88de2a02aea5a7cc34593dced6a8",
+      "word0_count": 33
+    },
+    {
+      "complete_output_bits_checked": 16896,
+      "first_word0": 305418240,
+      "grouped_equals_scalar": true,
+      "legacy_equals_scalar": true,
+      "outer": 1,
+      "output_sha256": "ab80233c5868ff8f20fe79f93ac742c10f85abe6f410d790488e119e0167e6e4",
+      "word0_count": 33
+    },
+    {
+      "complete_output_bits_checked": 16896,
+      "first_word0": 305418240,
+      "grouped_equals_scalar": true,
+      "legacy_equals_scalar": true,
+      "outer": 1023,
+      "output_sha256": "620967a6a4ff127bd22ad1276556cd4ef8d86b311be7933c3640480eaa5b43b2",
+      "word0_count": 33
+    },
+    {
+      "complete_output_bits_checked": 16896,
+      "first_word0": 305418240,
+      "grouped_equals_scalar": true,
+      "legacy_equals_scalar": true,
+      "outer": 2047,
+      "output_sha256": "12adaa34401da58260a5b7d0b0e6f0bcdde557061f8e8486924ab2d24d6a3881",
+      "word0_count": 33
+    }
+  ],
+  "grouped_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_path": "research/build/chacha20_round20_w43_grouped_engine_a304/chacha20_w43_grouped_cfd657be7826ccd2",
+    "executable_sha256": "d1c41a049db90997ada5eba880d1ba2d0787b1d74be499f0a254183f1b577acf",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_path": "research/experiments/chacha20_metal_w43_grouped_native.swift",
+    "source_sha256": "cfd657be7826ccd25a425cbbb5c7eb4d658ab9dc3fb0521edb34688ef32d319d"
+  },
+  "grouped_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true,
+      "two_dimensional_candidate_grid": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-w43-grouped-v1"
+  },
+  "information_boundary": {
+    "A302_candidate_available_at_freeze": false,
+    "A302_filter_outcome_available_at_freeze": false,
+    "A302_prefix_rank_available_at_freeze": false,
+    "A302_unknown_assignment_available_at_freeze": false,
+    "engine_changes_candidate_membership": false,
+    "engine_changes_frozen_prefix_order": false,
+    "public_A302_challenge_available_at_freeze": true,
+    "public_A302_order_available_at_freeze": true
+  },
+  "legacy_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "5fc1863f3f5633256ccfb1a6a95945c7255fe4642d057c0c642e04b0579f7079",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "warnings_as_errors": true
+  },
+  "legacy_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-native-v1"
+  },
+  "production_target_used": false,
+  "protocol_sha256": "2b2ea9febb74397437e0c3a772463d9ed46093461d6cc848aa6c77d2c38e7168",
+  "public_challenge_sha256": "a70fce0d6453012e9a44b1b1ff6378476bb918d2a052f87972eb4026e9464146",
+  "qualification_sha256": "9b9f36f519e222fc34e41b597cd4652b70b48a55f5225fb5b785d0a3250ad7b4",
+  "reference_gate": {
+    "feedforward": true,
+    "independent_word_reference_exact": true,
+    "output_bits_checked": 512,
+    "output_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "pure_python_exact": true,
+    "reference": "RFC_8439_Section_2.3.2",
+    "rounds": 20
+  },
+  "schema": "chacha20-round20-w43-grouped-engine-a304-qualification-v1",
+  "synthetic_filter_gate": {
+    "exact": true,
+    "expected_factual_pair": [
+      878080073,
+      39
+    ],
+    "first_word0": 878080000,
+    "logical_candidates": 1028,
+    "observed_control_pairs": [],
+    "observed_factual_pairs": [
+      [
+        878080073,
+        39
+      ]
+    ],
+    "outer_count": 4,
+    "outer_first": 37,
+    "word0_count": 257
+  },
+  "total_full_block_bits_checked": 67584,
+  "unknown_assignment_used": false
+}

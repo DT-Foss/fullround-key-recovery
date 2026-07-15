@@ -1,0 +1,77 @@
+{
+  "attempt_id": "A313",
+  "design_state": "frozen_while_A309_and_A312_are_running_before_any_A312_search_object_A308_candidate_or_W44_prefix_rank_exists",
+  "information_boundary": {
+    "A308_candidate_available_at_design_freeze": false,
+    "A308_filter_outcome_available_at_design_freeze": false,
+    "A308_prefix_rank_available_at_design_freeze": false,
+    "A308_result_available_at_design_freeze": false,
+    "A312_direct_symbolic_outcome_available_at_design_freeze": false,
+    "A312_fine_order_available_at_design_freeze": false,
+    "A312_measurement_complete_at_design_freeze": false,
+    "candidate_filter_outcome_used_for_operator_or_order": false,
+    "reader_refits_on_A308_or_A312": 0,
+    "target_labels_used_from_A308_or_A312": 0
+  },
+  "operator_contract": {
+    "conditional_execution": {
+      "A312_direct_symbolic_model": "retain_the_independently_confirmed_A312_recovery_without_duplicate_grouped_execution",
+      "A312_complete_model_free_fine_order": "materialize_and_execute_the_frozen_three_arm_A313_portfolio"
+    },
+    "fit": {
+      "intercept_denominator": 546,
+      "intercept_numerator": 1751899,
+      "method": "exact_ordinary_least_squares_on_three_disjoint_confirmed_width_rank_pairs",
+      "predicted_W44_fine_rank_denominator": 546,
+      "predicted_W44_fine_rank_nearest_integer": 2079,
+      "predicted_W44_fine_rank_numerator": 1135327,
+      "slope_denominator": 182,
+      "slope_numerator": -4671,
+      "training_rows": [
+        {
+          "attempt_id": "A295",
+          "confirmed_fine_rank_one_based": 2605,
+          "unknown_key_bits": 24
+        },
+        {
+          "attempt_id": "A303",
+          "confirmed_fine_rank_one_based": 2366,
+          "unknown_key_bits": 32
+        },
+        {
+          "attempt_id": "A305",
+          "confirmed_fine_rank_one_based": 2114,
+          "unknown_key_bits": 43
+        }
+      ]
+    },
+    "merge": "rank_synchronous_round_robin_first_occurrence_width_band_then_raw_A312_fine_then_A308_baseline",
+    "portfolio_arms": [
+      "ascending_absolute_distance_from_predicted_W44_one_based_rank_2079_in_A312_fine_order_then_ascending_fine_rank",
+      "unchanged_A312_fine_selected_channel_order",
+      "unchanged_A308_coarse_numeric_two_operator_baseline"
+    ],
+    "rank_guarantee": "R_A313_at_cell <= 3 * min(R_band_at_cell, R_A312_fine_at_cell, R_A308_baseline_at_cell)",
+    "transitive_rank_guarantee": "R_A313_at_cell <= 6 * min(R_band_at_cell, R_A312_fine_at_cell, R_A308_coarse_at_cell, R_numeric_at_cell)",
+    "training_fit_is_not_recomputed_after_A309_A312_or_A308_reveal": true
+  },
+  "schema": "chacha20-round20-w44-width-conditioned-fine-portfolio-a313-design-v1",
+  "source_anchors": {
+    "A295_result_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+    "A295_result_sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03",
+    "A303_result_path": "research/results/v1/chacha20_round20_w32_dominance_pruned_companion_a303_v1.json",
+    "A303_result_sha256": "bc1878203ed1dc8dffab86e8cd1a85bd01fb12e09a1de6a86b29fd9d1ceae3fe",
+    "A305_result_path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.json",
+    "A305_result_sha256": "adbc8b879f09e03896699188d8141ac0164296eaf2ad688b6fb1036f2b1ac40e",
+    "A308_order_path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_order_v1.json",
+    "A308_order_sha256": "d69b594a5c7a8ce17d7e5e8d5736006f76a3757a532aa6e4e84f2ca5d6ab2f0b",
+    "A308_protocol_path": "research/configs/chacha20_round20_w44_calibrated_coarse_numeric_a308_v1.json",
+    "A308_protocol_sha256": "06fcdf7e79f07408292ced64eb19c7c973ba202061d47f8c9499bd23fe679dbd",
+    "A309_design_path": "research/configs/chacha20_round20_w43_width_conditioned_band_portfolio_a309_design_v1.json",
+    "A309_design_sha256": "5dde7d22eac9b01a706d46366e13653db61826ca29710c6d9b545d5ea2443552",
+    "A312_design_path": "research/configs/chacha20_round20_w44_fine_selected_channel_transfer_a312_design_v1.json",
+    "A312_design_sha256": "40da3c04819ecba94300d5306edd8fcfe21b65174623ceb725ae9c4d9edff272",
+    "A312_protocol_path": "research/configs/chacha20_round20_w44_fine_selected_channel_transfer_a312_v1.json",
+    "A312_protocol_sha256": "a8fb67f813b09776168e6447b1f4eee44795b413b4a6cc12688a30f5b932f014"
+  }
+}

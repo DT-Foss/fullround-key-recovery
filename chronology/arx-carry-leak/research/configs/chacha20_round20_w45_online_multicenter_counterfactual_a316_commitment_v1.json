@@ -1,0 +1,73 @@
+{
+  "A314_order_sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034",
+  "A314_result_available_at_commitment": false,
+  "anchors": {
+    "A314_order": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_order_v1.json",
+      "sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034"
+    },
+    "A314_order_causal": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_order_v1.causal",
+      "sha256": "d23f142490c77ca3ef20d5aa97dc501e6e6cac02a9db05887c10c061fa9236e3"
+    },
+    "A314_preflight": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_preflight_v1.json",
+      "sha256": "cfb5bacd6e6e17479260d8a2cacd2f9808afc632d82e31f80e8dc6ed2d4159a4"
+    },
+    "A314_protocol": {
+      "path": "research/configs/chacha20_round20_w45_fine_band_recovery_a314_v1.json",
+      "sha256": "17877a15624f7ab6fec1333c57260fa447d71d1112b9df5aa8219f8403968574"
+    },
+    "A315_commitment": {
+      "path": "research/configs/chacha20_round20_w44_online_multicenter_counterfactual_a315_commitment_v1.json",
+      "sha256": "c6fae402a992da304c21fa17fef48360a166bb47a9e2bc223fa608b1649cdc4c"
+    },
+    "A315_order": {
+      "path": "research/results/v1/chacha20_round20_w44_online_multicenter_counterfactual_a315_order_v1.json",
+      "sha256": "7f3765084afcf9015a60b1561c4a3d6dc327eee7ee4ef6395794599a499ea3ff"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w45_online_multicenter_counterfactual_a316_design_v1.json",
+      "sha256": "e7a3b185c12f2767946f256298839798be366dc69e3017c9778c7cb409c8c8ba"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w45_online_multicenter_counterfactual_a316_order_v1.json",
+      "sha256": "8d0279bac05d8eb31d2acb2b41b0432e39e6f5679e9330ccae0e1752ac6363e8"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w45_online_multicenter_counterfactual_a316.sh",
+      "sha256": "72d042f7a94b7bb1c55153d5cd584085900efa6ced3da410bdb6df921f0c15ab"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w45_online_multicenter_counterfactual_a316.py",
+      "sha256": "57212592280a14f57e52d2ea9a2e4f9a3fe2e59014a244765297d4b6466e99e1"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w45_online_multicenter_counterfactual_a316.py",
+      "sha256": "c68eff1169e144fe717d2e6237214297d4ce2bdcc051e96008ee8d908734547f"
+    }
+  },
+  "attempt_id": "A316",
+  "candidate_or_rank_available_at_commitment": false,
+  "commitment_state": "frozen_after_target_blind_A314_measurement_before_A314_recovery",
+  "component_order_sha256": {
+    "A314_baseline_uint16be_sha256": "dadd9b95b6dd3f4ad2bef21999c65aedf2ce7f95df6a99d45f073277d01a7e01",
+    "A314_portfolio_uint16be_sha256": "c8ed83fedd0add1d272928223bcfecad2bb7552615ae941d57479c0188d4642c",
+    "four_center_band_uint16be_sha256": "bda05840bffed94395b2150f4bdd7bdefe320a58960ec72eb9ccd5c75b71685a",
+    "weighted_dovetail_2_to_1_uint16be_sha256": "3b2fcb4ae98d75f34cf915933f9a19025d0764fa513836501ce8f343d2aa0357"
+  },
+  "design_sha256": "e7a3b185c12f2767946f256298839798be366dc69e3017c9778c7cb409c8c8ba",
+  "execution_branch": "A314_complete_model_free_field_to_online_multicenter_rank_panel",
+  "order_sha256": "8d0279bac05d8eb31d2acb2b41b0432e39e6f5679e9330ccae0e1752ac6363e8",
+  "public_challenge_sha256": "f55002a6240e6b557e40f15f0d66a997164eb107e59875654d3255588fe20c67",
+  "schema": "chacha20-round20-w45-online-multicenter-counterfactual-a316-commitment-v1",
+  "weighted_portfolio_guarantee": {
+    "checked_prefix_cells": 4096,
+    "maximum_factor_vs_A308_baseline": 3.0,
+    "maximum_factor_vs_best_arm": 3.0,
+    "maximum_factor_vs_four_center_band": 1.492537313432836,
+    "maximum_regret_bits_vs_best_arm": 1.584962500721156,
+    "statement": "R_A315_weighted <= 1.5 R_four_center_band and <= 3 R_A308_baseline over every exact W44 prefix cell",
+    "violations": 0
+  }
+}

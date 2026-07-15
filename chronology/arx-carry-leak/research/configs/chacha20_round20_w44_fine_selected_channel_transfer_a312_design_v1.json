@@ -1,0 +1,80 @@
+{
+  "attempt_id": "A312",
+  "design_state": "frozen_after_A308_model_free_coarse_order_and_before_any_A308_candidate_result_or_prefix_rank_exists",
+  "fine_measurement_contract": {
+    "cadical_configuration": "default",
+    "cells_per_lane": 512,
+    "complete_prefix_cover_required_without_direct_SAT": true,
+    "fine_prefix_bits": 12,
+    "fine_prefix_coordinates_high_to_low": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24,
+      23,
+      22,
+      21,
+      20
+    ],
+    "model_permutation": "word0_low20_then_word1_low12_then_word0_high12",
+    "parallel_retained_state_lanes": 8,
+    "prefix_cells": 4096,
+    "reader": "unchanged_A295_frozen_positive_selected_channel",
+    "reader_refits": 0,
+    "seconds_per_cell": 5.0,
+    "target_labels_used": 0
+  },
+  "information_boundary": {
+    "A308_candidate_available_at_design_freeze": false,
+    "A308_filter_outcome_available_at_design_freeze": false,
+    "A308_prefix_rank_available_at_design_freeze": false,
+    "A308_result_available_at_design_freeze": false,
+    "A308_target_assignment_available_at_design_freeze": false,
+    "candidate_filter_outcome_used_for_reader_or_order": false,
+    "reader_formula_features_coefficients_tiebreak_and_partition_coordinates_frozen": true,
+    "target_labels_used": 0
+  },
+  "outcome_contract": {
+    "direct_SAT": "decode_the_complete_W44_model_and_confirm_all_eight_full_round_blocks_with_independent_byte_and_word_implementations",
+    "no_direct_SAT": "require_all_4096_model_free_UNKNOWN_traces_then_apply_the_unchanged_A295_selected_channel_to_freeze_one_complete_W44_prefix_order"
+  },
+  "schema": "chacha20-round20-w44-fine-selected-channel-transfer-a312-design-v1",
+  "source_anchors": {
+    "A293_runner_path": "research/experiments/chacha20_round20_w24_causal_refinement_a293.py",
+    "A293_runner_sha256": "2b5a7c2b22ff35604315af465be58cea6e5abea52b807b2c6cb7dec5f6144a46",
+    "A295_causal_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.causal",
+    "A295_causal_sha256": "673f0470cd02826ffdd939e36247b3885a55e6d24affd509e7946d24e7d6aac1",
+    "A295_result_path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+    "A295_result_sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03",
+    "A295_runner_path": "research/experiments/chacha20_round20_w24_fine_selected_channel_a295.py",
+    "A295_runner_sha256": "0ecbffc2e5f0a036ef84bd4c10f17068580592be73f0b59ec03beb0fa29af14e",
+    "A299_order_path": "research/results/v1/chacha20_round20_w43_fine_selected_channel_transfer_a299_order_v1.json",
+    "A299_order_sha256": "8369e7b4b421c68b344a3ea4588de350796cdc97216d71d43fc2f960df26af07",
+    "A299_runner_path": "research/experiments/chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+    "A299_runner_sha256": "1487dd6360523076e60d203aeaff75fa29d15a5c3f3e6c35b79f73279dce42b9",
+    "A305_causal_path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.causal",
+    "A305_causal_sha256": "c3460e10dedca9027609d16c4686ad56d1576f05edeea5c368cd56e4ae34f888",
+    "A305_result_path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.json",
+    "A305_result_sha256": "adbc8b879f09e03896699188d8141ac0164296eaf2ad688b6fb1036f2b1ac40e",
+    "A308_order_path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_order_v1.json",
+    "A308_order_sha256": "d69b594a5c7a8ce17d7e5e8d5736006f76a3757a532aa6e4e84f2ca5d6ab2f0b",
+    "A308_preflight_path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_preflight_v1.json",
+    "A308_preflight_sha256": "7afda29f1cf4f12d4ab09348d2393a80c30b7689d2e6623fffb9351f966cd5fd",
+    "A308_protocol_path": "research/configs/chacha20_round20_w44_calibrated_coarse_numeric_a308_v1.json",
+    "A308_protocol_sha256": "06fcdf7e79f07408292ced64eb19c7c973ba202061d47f8c9499bd23fe679dbd",
+    "A308_runner_path": "research/experiments/chacha20_round20_w44_calibrated_coarse_numeric_a308.py",
+    "A308_runner_sha256": "c719062aa94500f43d6acae0ad329a06f0dbdd3972875530ee6256b2a98d5aae"
+  },
+  "target_contract": {
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_challenge_sha256": "c3897f3f8499c9afa01628b7f5e8de0ea5910a9559ca6bfb22fafe71d1fb26d6",
+    "public_output_blocks": 8,
+    "unknown_key_bits": 44
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "A308_candidate_or_prefix_rank_available_at_protocol_freeze": false,
+  "A308_result_available_at_protocol_freeze": false,
+  "A312_measurement_started_at_protocol_freeze": false,
+  "anchors": {
+    "A293_runner": {
+      "path": "research/experiments/chacha20_round20_w24_causal_refinement_a293.py",
+      "sha256": "2b5a7c2b22ff35604315af465be58cea6e5abea52b807b2c6cb7dec5f6144a46"
+    },
+    "A295_causal": {
+      "path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.causal",
+      "sha256": "673f0470cd02826ffdd939e36247b3885a55e6d24affd509e7946d24e7d6aac1"
+    },
+    "A295_result": {
+      "path": "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+      "sha256": "93a591d75ab882345091c813f4ace877dc85ae37d748ed8f70c91e7323effc03"
+    },
+    "A295_runner": {
+      "path": "research/experiments/chacha20_round20_w24_fine_selected_channel_a295.py",
+      "sha256": "0ecbffc2e5f0a036ef84bd4c10f17068580592be73f0b59ec03beb0fa29af14e"
+    },
+    "A299_order": {
+      "path": "research/results/v1/chacha20_round20_w43_fine_selected_channel_transfer_a299_order_v1.json",
+      "sha256": "8369e7b4b421c68b344a3ea4588de350796cdc97216d71d43fc2f960df26af07"
+    },
+    "A299_runner": {
+      "path": "research/experiments/chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+      "sha256": "1487dd6360523076e60d203aeaff75fa29d15a5c3f3e6c35b79f73279dce42b9"
+    },
+    "A305_causal": {
+      "path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.causal",
+      "sha256": "c3460e10dedca9027609d16c4686ad56d1576f05edeea5c368cd56e4ae34f888"
+    },
+    "A305_result": {
+      "path": "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.json",
+      "sha256": "adbc8b879f09e03896699188d8141ac0164296eaf2ad688b6fb1036f2b1ac40e"
+    },
+    "A308_order": {
+      "path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_order_v1.json",
+      "sha256": "d69b594a5c7a8ce17d7e5e8d5736006f76a3757a532aa6e4e84f2ca5d6ab2f0b"
+    },
+    "A308_preflight": {
+      "path": "research/results/v1/chacha20_round20_w44_calibrated_coarse_numeric_a308_preflight_v1.json",
+      "sha256": "7afda29f1cf4f12d4ab09348d2393a80c30b7689d2e6623fffb9351f966cd5fd"
+    },
+    "A308_protocol": {
+      "path": "research/configs/chacha20_round20_w44_calibrated_coarse_numeric_a308_v1.json",
+      "sha256": "06fcdf7e79f07408292ced64eb19c7c973ba202061d47f8c9499bd23fe679dbd"
+    },
+    "A308_runner": {
+      "path": "research/experiments/chacha20_round20_w44_calibrated_coarse_numeric_a308.py",
+      "sha256": "c719062aa94500f43d6acae0ad329a06f0dbdd3972875530ee6256b2a98d5aae"
+    },
+    "A312_reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w44_fine_selected_channel_transfer_a312.sh",
+      "sha256": "56bf5af77183d070a3eec29c2613fc101b14531a979fef4310d9007d55058fbb"
+    },
+    "A312_runner": {
+      "path": "research/experiments/chacha20_round20_w44_fine_selected_channel_transfer_a312.py",
+      "sha256": "5adfb16542d37e8928981ff593b873c12c86cc3a1e08f062849738fe7a60037a"
+    },
+    "A312_test": {
+      "path": "tests/test_chacha20_round20_w44_fine_selected_channel_transfer_a312.py",
+      "sha256": "31063ac68254707dcee8f9f9196a5b80643b92ebb709196d2f0a9d11d57754d6"
+    },
+    "CausalReader": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w44_fine_selected_channel_transfer_a312_design_v1.json",
+      "sha256": "40da3c04819ecba94300d5306edd8fcfe21b65174623ceb725ae9c4d9edff272"
+    },
+    "target_CNF": {
+      "path": "research/artifacts/a308_chacha20_r20_w44_coarse_numeric/preflight/target/base_b1.cnf",
+      "sha256": "9c1a67674a0600feab564733d2e0374a2c2fe017a40babae5a87e8078cf89720"
+    }
+  },
+  "attempt_id": "A312",
+  "authentic_source_causal_readback": {
+    "A295": {
+      "api_id": "a295w24",
+      "clusters": 1,
+      "gaps": 1,
+      "materialized_inferred_triplets": 1,
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fresh_target_fine_selected_channel_replication_or_W28_transfer",
+        "predicate": "next_required_object",
+        "subject": "A295:confirmed_fine_selected_channel_W24_recovery",
+        "suggested_queries": [
+          "Does the frozen fine-channel construction replicate on fresh targets or widen to W28?"
+        ]
+      },
+      "rules": 2,
+      "triplets_including_materialized_inference": 3
+    },
+    "A305": {
+      "api_id": "a305w43",
+      "clusters": 1,
+      "gaps": 1,
+      "materialized_inferred_triplets": 1,
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fresh_grouped_W43_replication_or_wider_residual_transfer",
+        "predicate": "next_required_object",
+        "subject": "A305:confirmed_grouped_A299_W43_recovery",
+        "suggested_queries": [
+          "Does the prospectively frozen A302 or A300 operator portfolio retain strict-subset gain under grouped W43 execution?"
+        ]
+      },
+      "rules": 2,
+      "triplets_including_materialized_inference": 3
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    }
+  },
+  "design_sha256": "40da3c04819ecba94300d5306edd8fcfe21b65174623ceb725ae9c4d9edff272",
+  "execution_contract": {
+    "cells_per_lane": 512,
+    "fine_prefix_bits": 12,
+    "parallel_retained_state_lanes": 8,
+    "prefix_cells": 4096,
+    "reader": "unchanged_A295_frozen_positive_selected_channel",
+    "reader_refits": 0,
+    "seconds_per_cell": 5.0,
+    "suffix_bits_per_cell": 32,
+    "target_labels_used": 0,
+    "unknown_key_bits": 44
+  },
+  "fine_seed_order_uint16be_sha256": "cf1391b4b4a62a9e4585a68d3dbf6cfa5f87ba5b13ff3b3a5edb1eecdd63e854",
+  "information_boundary": {
+    "A308_candidate_available_at_design_freeze": false,
+    "A308_filter_outcome_available_at_design_freeze": false,
+    "A308_prefix_rank_available_at_design_freeze": false,
+    "A308_result_available_at_design_freeze": false,
+    "A308_target_assignment_available_at_design_freeze": false,
+    "candidate_filter_outcome_used_for_reader_or_order": false,
+    "reader_formula_features_coefficients_tiebreak_and_partition_coordinates_frozen": true,
+    "target_labels_used": 0
+  },
+  "model_permutation_sha256": "835be1e6abbe0851edfa1018901b984feaf0931a78d207839dd0d2133b9d54a6",
+  "protocol_state": "complete_W44_fine_reader_execution_frozen_before_any_A308_candidate_result_or_rank",
+  "public_challenge_sha256": "c3897f3f8499c9afa01628b7f5e8de0ea5910a9559ca6bfb22fafe71d1fb26d6",
+  "schema": "chacha20-round20-w44-fine-selected-channel-transfer-a312-protocol-v1",
+  "scientific_design_sha256": "1df5a17d00f63b92a51d501c4cf184a6d7db00621f8f18104e040fbef3504497"
+}

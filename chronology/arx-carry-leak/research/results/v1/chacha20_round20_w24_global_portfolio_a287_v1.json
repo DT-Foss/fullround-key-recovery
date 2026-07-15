@@ -1,0 +1,115 @@
+{
+  "attempt_id": "A287",
+  "causal": {
+    "api_id": "a287w24",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 3,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w24_global_portfolio_a287_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "exact_disjoint_partitioned_W24_transfer",
+        "predicate": "next_required_object",
+        "subject": "A287:measured_W24_global_budget_boundary",
+        "suggested_queries": [
+          "Which frozen prefix operator maximizes diversity from both global traces?",
+          "Can retained-state prefix cells expose a W24 model within a strict subset?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_W24_DIVERSE_GLOBAL_BUDGET_BOUNDARY",
+        "is_inferred": true,
+        "m_idx": 7,
+        "mechanism": "materialized_diverse_global_boundary_chain",
+        "o_idx": 6,
+        "outcome": "A287:measured_W24_global_budget_boundary",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "AI-native exact closure retained in-file",
+        "s_idx": 2,
+        "source": "materialized:A287_portfolio_execution",
+        "trigger": "A287:frozen_W24_global_portfolio"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "a67c42256c08ab7cdf69509b680279f494bf6d5fa314d436edcf91e5277bf07c",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 8,
+      "file_size_bytes": 4334,
+      "file_size_kb": 4.2,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w24_global_portfolio_a287_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 4
+    }
+  },
+  "confirmation": null,
+  "evidence_stage": "FULLROUND_R20_W24_DIVERSE_GLOBAL_BUDGET_BOUNDARY",
+  "execution_sha256": "ba8d18e111888fe176ebe812cf7dd7517b8a877cc35de0a44a1679cf94104ffb",
+  "information_boundary": {
+    "complete_candidate_domain_enumeration_used": false,
+    "operators_and_budgets_frozen_before_solver": true,
+    "secret_assignment_available_to_runner": false,
+    "target_prefix_or_model_available_before_solver": false,
+    "unknown_treated_as_UNSAT": false
+  },
+  "measurement_sha256": "6b4a3d253b78bb15cba35f3579eb8c6575ae80acf663ad4eaf6a8624292af9b7",
+  "preflight": {
+    "path": "research/results/v1/chacha20_round20_w24_global_portfolio_a287_preflight_v1.json",
+    "sha256": "1bacefadd636b9e7fb9f42476e1927a87547d04ece676c8efcd1e29a6ef898b0"
+  },
+  "protocol": {
+    "path": "research/configs/chacha20_round20_w24_global_portfolio_a287_v1.json",
+    "sha256": "8e75e49d33d8311be2132cdcec1f0f87073e5e5395112c7dac8752e39b6dac72"
+  },
+  "public_challenge_sha256": "5beabf27dccaa98cfaa97eed7bf7420c6548dcc469b4c924af04f8a872ecc30f",
+  "rfc8439_gate": {
+    "exact": true,
+    "expected_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "observed_sha256": "c77ed898301e57815e68f8ca5a2e78bc9b021b7ac9a7cf300a7a3b19a34bb29e",
+    "vector": "RFC8439_section_2.3.2"
+  },
+  "runner": {
+    "path": "research/experiments/chacha20_round20_w24_global_portfolio_a287.py",
+    "sha256": "cf0aeb03f4914a398b47c1675e7dee48ad3176e2c6a364cda37ede2c163f154c"
+  },
+  "schema": "chacha20-round20-w24-global-portfolio-a287-result-v1",
+  "solver_arms": [
+    {
+      "arm": "base_default",
+      "command_sha256": "ba6e0b2594d586ffbd5d83198c988d9d34535b1b1c63e695e30b45a353c1972f",
+      "elapsed_seconds": 7200.780313459225,
+      "returncode": 0,
+      "status": "unknown",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "terminated_after_sibling_sat": false,
+      "witness_exists": true,
+      "witness_sha256": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb"
+    },
+    {
+      "arm": "bfs_far_sat",
+      "command_sha256": "7f594f9a50e03634321b70adae03a3080c087eb8c2aeb322ccedf81b908db76d",
+      "elapsed_seconds": 7200.786320750136,
+      "returncode": 0,
+      "status": "unknown",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "terminated_after_sibling_sat": false,
+      "witness_exists": true,
+      "witness_sha256": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb"
+    }
+  ],
+  "winner": null
+}

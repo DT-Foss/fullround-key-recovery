@@ -1,0 +1,148 @@
+{
+  "A314_order_sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034",
+  "A314_result_available_at_commitment": false,
+  "anchors": {
+    "A314_order": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_order_v1.json",
+      "sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034"
+    },
+    "A314_order_causal": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_order_v1.causal",
+      "sha256": "d23f142490c77ca3ef20d5aa97dc501e6e6cac02a9db05887c10c061fa9236e3"
+    },
+    "A314_preflight": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_preflight_v1.json",
+      "sha256": "cfb5bacd6e6e17479260d8a2cacd2f9808afc632d82e31f80e8dc6ed2d4159a4"
+    },
+    "A314_protocol": {
+      "path": "research/configs/chacha20_round20_w45_fine_band_recovery_a314_v1.json",
+      "sha256": "17877a15624f7ab6fec1333c57260fa447d71d1112b9df5aa8219f8403968574"
+    },
+    "A319_commitment": {
+      "path": "research/configs/chacha20_round20_w44_covariance_whitened_atlas_a319_commitment_v1.json",
+      "sha256": "82b772cda68ba1cea76ecf4140f1979254409d0523d57b646cc4fad15afe0233"
+    },
+    "A319_design": {
+      "path": "research/configs/chacha20_round20_w44_covariance_whitened_atlas_a319_design_v1.json",
+      "sha256": "5e5a4d3497104ad64a185b4f2d41572aa76f7f35dfb1c4a4fdf6dc3d5790ecb3"
+    },
+    "A319_order": {
+      "path": "research/results/v1/chacha20_round20_w44_covariance_whitened_atlas_a319_order_v1.json",
+      "sha256": "8096131a7e3c2508ebd04226e9f8a335c48e359241eaf2e9e18c268e2ed1bead"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w45_covariance_whitened_atlas_a320_design_v1.json",
+      "sha256": "a8d40544c2419b1fc9f04d7885300bb01082228a3463b257f4691265d4e69a5c"
+    },
+    "order": {
+      "path": "research/results/v1/chacha20_round20_w45_covariance_whitened_atlas_a320_order_v1.json",
+      "sha256": "2f9078586d6dd00e66305f4a7487d397fe6126997cfa17a2409eac278ac910be"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w45_covariance_whitened_atlas_a320.sh",
+      "sha256": "dba72e9b7c6db9410df6da654d23c90af2a273315321f646e597309910bb10ab"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w45_covariance_whitened_atlas_a320.py",
+      "sha256": "fd9369bb1ec07459f327842d1c4b1d2f2ae770de72ab007b7b6c885d4c3c5bc8"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w45_covariance_whitened_atlas_a320.py",
+      "sha256": "c136f492752fb31f113c7c2482081a0acc26b3ddd24f957f94bdee5e69e48ca5"
+    }
+  },
+  "attempt_id": "A320",
+  "candidate_or_rank_available_at_commitment": false,
+  "commitment_state": "frozen_after_target_blind_A314_measurement_before_A314_recovery",
+  "design_sha256": "a8d40544c2419b1fc9f04d7885300bb01082228a3463b257f4691265d4e69a5c",
+  "exact_geometry": {
+    "arithmetic": "exact_rational",
+    "diagonal_variances_with_ridge": [
+      "381506843/576",
+      "1097871083/576",
+      "984737819/576"
+    ],
+    "fixed_identity_ridge": "48315995/576",
+    "fixed_shrinkage_weight": "1/2",
+    "inverse_shrunk_covariance": [
+      [
+        "604007759611250607168/396727468116278921169482291",
+        "-31709814965685660672/396727468116278921169482291",
+        "412052241960271872/10722364003142673545121143"
+      ],
+      [
+        "-31709814965685660672/396727468116278921169482291",
+        "216257628281201764416/396727468116278921169482291",
+        "-1083258996817628160/10722364003142673545121143"
+      ],
+      [
+        "412052241960271872/10722364003142673545121143",
+        "-1083258996817628160/10722364003142673545121143",
+        "6476529388370681664/10722364003142673545121143"
+      ]
+    ],
+    "pairwise_median_scales": [
+      "1715/2",
+      "2949/2",
+      "1473/1"
+    ],
+    "positive_definite_leading_principal_minors": [
+      "381506843/576",
+      "416027061405755593/331776",
+      "396727468116278921169482291/191102976"
+    ],
+    "prototype_mean": [
+      "5457/2",
+      "5531/4",
+      "5691/2"
+    ],
+    "sample_covariance": [
+      [
+        "1735369/3",
+        "1105987/6",
+        "-53448/1"
+      ],
+      [
+        "1105987/6",
+        "7288577/4",
+        "3755239/6"
+      ],
+      [
+        "-53448/1",
+        "3755239/6",
+        "4877197/3"
+      ]
+    ],
+    "shrunk_covariance": [
+      [
+        "381506843/576",
+        "1105987/12",
+        "-26724/1"
+      ],
+      [
+        "1105987/12",
+        "1097871083/576",
+        "3755239/12"
+      ],
+      [
+        "-26724/1",
+        "3755239/12",
+        "984737819/576"
+      ]
+    ]
+  },
+  "execution_branch": "A314_complete_model_free_field_to_unchanged_exact_whitened_W45_atlas",
+  "order_sha256": "2f9078586d6dd00e66305f4a7487d397fe6126997cfa17a2409eac278ac910be",
+  "order_uint16be_sha256": {
+    "A314_portfolio": "c8ed83fedd0add1d272928223bcfecad2bb7552615ae941d57479c0188d4642c",
+    "coarse": "79cb4208849e1a7926fded8ed507e3c5c7c7bf7b9724177ffcfe4aa0f837c56a",
+    "fine": "d21b993bdafb78016ae5d801a6c072c1e188c733c3db20e02ef825a5e7e1f555",
+    "nearest_exact_diagonal_variance_L2": "2a0c31ff78952ecff08b61f5d22ba49d7cffcf555864a6c585434c1a78a9e006",
+    "nearest_exact_pairwise_median_scaled_L1": "a18e5b8b31a9c1a9f8c30530ee588a0dfb9c4a4ef8f1e9c3ac968046fc49d303",
+    "nearest_exact_shrinkage_mahalanobis": "9879f89cb0839c504c9009edde677a6de622d334aa4dcb6d8f463bb2fe0f4d9f",
+    "numeric": "a02cf28d81488fd0b2bbde4d6d5b035210669370a220eb257b016d7bf2dfe68e"
+  },
+  "primary_view": "nearest_exact_shrinkage_mahalanobis",
+  "public_challenge_sha256": "f55002a6240e6b557e40f15f0d66a997164eb107e59875654d3255588fe20c67",
+  "schema": "chacha20-round20-w45-covariance-whitened-atlas-a320-commitment-v1"
+}

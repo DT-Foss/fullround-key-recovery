@@ -19,6 +19,14 @@ the same source tree. Original reports and experiment sources remain byte-exact
 provenance artifacts; package verification code, documentation, and metadata
 were authored separately in this repository.
 
+The inventory was extended again on 2026-07-15 with the closed A287--A325
+batch. The compact headline layer adds CHACHA20KR43 and A294/A295/A296/A297/
+A303/A304/A305/A309/A313. The complete portable source chronology is retained under
+`chronology/arx-carry-leak/`, preserving its source-relative paths and bytes.
+This batch adds one complete `2^43` record and 19 strict-subset executions
+across 18 targets. A322 remains live and A325 is protocol-only at the release
+boundary; their outcome and progress artifacts are absent.
+
 The authoritative source-compatible `dotcausal` Reader revision used by A237
 and A240 was copied from the same research environment. Its `io.py` SHA-256 is
 `e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074`,

@@ -1,0 +1,42 @@
+{
+  "schema": "chacha20-round20-w43-fine-selected-channel-transfer-a299-implementation-freeze-v1",
+  "attempt_id": "A299",
+  "freeze_state": "runner_tests_and_exact_word0_prefix_mapping_frozen_before_CHACHA20KR43_complete_domain_result_A293_result_or_A295_result_exists",
+  "frozen_at_utc": "2026-07-14T18:55:24Z",
+  "design_path": "research/configs/chacha20_round20_w43_fine_selected_channel_transfer_a299_design_v1.json",
+  "design_sha256": "a7876b5a8e61e3a61cfbfcbb9b0ac985f723ebbc40823ce11dbea55bb39f8c36",
+  "runner_path": "research/experiments/chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+  "runner_sha256": "dd997a3a73e4df73f75d124417e1d435075dcbac6f844a1a5484353fc3992b23",
+  "test_path": "tests/test_chacha20_round20_w43_fine_selected_channel_transfer_a299.py",
+  "test_sha256": "e9e24113ced6038c4d37dadadb5afcae55e86097ce9cfd3fec0d2dde8ed09553",
+  "W43_protocol_path": "research/configs/chacha20_round20_w43_metal_record_v1.json",
+  "W43_protocol_sha256": "fe69f7c4962ed771703c68a1d64c361147a568cabe71d23cc9448fb1bef88de3",
+  "public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+  "implementation_contract": {
+    "partition_scope": "key_word0_bits31_through20",
+    "prefix_cells": 4096,
+    "candidate_group_decomposition": "2048_key_word1_low11_slices_times_2^20_key_word0_suffixes",
+    "candidate_group_size": 2147483648,
+    "complete_residual_domain": 8796093022208,
+    "reader": "unchanged_A295_frozen_fine_selected_channel",
+    "counterfactuals": [
+      "numeric_prefix12",
+      "public_hash_prefix12"
+    ],
+    "confirmation": "RFC8439_byte_reference_plus_independent_word_reference_over_all_eight_output_blocks"
+  },
+  "launch_gate": {
+    "A293_required": "complete_4096_prefix_model_free_trace_cover",
+    "A295_required": "confirmed_W24_recovery_using_the_unchanged_fine_selected_channel_order",
+    "measurement_and_recovery_started": false
+  },
+  "information_boundary": {
+    "W43_public_target_exists": true,
+    "W43_complete_domain_result_available_at_freeze": false,
+    "W43_assignment_available_at_freeze": false,
+    "W43_checkpoint_candidate_value_read": false,
+    "A293_result_available_at_freeze": false,
+    "A295_result_available_at_freeze": false,
+    "operator_mapping_order_controls_and_confirmation_logic_byte_frozen": true
+  }
+}

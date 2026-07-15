@@ -1,0 +1,67 @@
+{
+  "attempt_id": "A311",
+  "design_state": "target_free_W45_engine_adapter_frozen_before_any_W45_production_challenge_or_candidate_exists",
+  "engine_contract": {
+    "candidate_group_size": 8589934592,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "filter_dispatches_per_W45_prefix_group": 4,
+    "full_rounds": 20,
+    "host_refresh_changes_candidate_membership": false,
+    "host_refresh_changes_prefix_order": false,
+    "host_refresh_interval_W45_prefix_groups": 128,
+    "lower_unknown_word1_bits_per_slab": 11,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "slab_selector": "key_word1_bits11_through12",
+    "slab_traversal_order": "zero_through_three_before_success_evaluation",
+    "slabs": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "unknown_key_bits": 45,
+    "word0_prefix_bits": 12,
+    "word0_suffix_bits": 20,
+    "word1_low13_mapping": "two_slab_bits11_through12_concatenated_with_grouped_outer_low11"
+  },
+  "information_boundary": {
+    "A311_changes_A304_candidate_membership_inside_each_slab": false,
+    "A311_qualification_uses_only_synthetic_targets": true,
+    "W45_candidate_available_at_freeze": false,
+    "W45_filter_outcome_available_at_freeze": false,
+    "W45_prefix_order_available_at_freeze": false,
+    "W45_production_challenge_available_at_freeze": false,
+    "W45_target_assignment_available_at_freeze": false
+  },
+  "qualification_contract": {
+    "complete_W45_group_candidates": 8589934592,
+    "complete_W45_group_gate": true,
+    "full_block_outer13_boundaries": [
+      0,
+      1,
+      2047,
+      2048,
+      4095,
+      4096,
+      6143,
+      6144,
+      8191
+    ],
+    "matched_one_bit_control_required_empty": true,
+    "scalar_full_block_identity": true,
+    "single_planted_factual_pair_across_all_four_slabs": true
+  },
+  "schema": "chacha20-round20-w45-four-slab-grouped-engine-a311-design-v1",
+  "source_anchors": {
+    "A307_protocol_path": "research/configs/chacha20_round20_w44_two_slab_grouped_engine_a307_v1.json",
+    "A307_protocol_sha256": "6db581911ba38e1c02b8320e63c2e627f97800db2991266677cf972a3985935e",
+    "A307_qualification_path": "research/results/v1/chacha20_round20_w44_two_slab_grouped_engine_a307_qualification_v1.json",
+    "A307_qualification_sha256": "b6b8f0193229d034a16f88ae37b1da11eed6568499dbb579f81eb47b84f9293a",
+    "A307_runner_path": "research/experiments/chacha20_round20_w44_two_slab_grouped_engine_a307.py",
+    "A307_runner_sha256": "717eaa14927e4313cb81ba57935773ae71b91e88e2aed982cd7ced73bcfe7669",
+    "grouped_executable_path": "research/build/chacha20_round20_w43_grouped_engine_a304/chacha20_w43_grouped_cfd657be7826ccd2",
+    "grouped_executable_sha256": "d1c41a049db90997ada5eba880d1ba2d0787b1d74be499f0a254183f1b577acf"
+  }
+}

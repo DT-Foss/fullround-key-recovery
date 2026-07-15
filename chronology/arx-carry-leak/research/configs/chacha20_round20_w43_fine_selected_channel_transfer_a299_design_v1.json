@@ -1,0 +1,138 @@
+{
+  "attempt_id": "A299",
+  "design_state": "frozen_while_CHACHA20KR43_complete_domain_execution_and_A293_are_running_before_the_W43_assignment_or_full_domain_result_is_read",
+  "purpose": "Transfer the independently frozen A295 fine selected-channel readout to the already public but still sealed CHACHA20KR43 holdout, then recover its 43-bit residual assignment in the resulting target-blind twelve-bit group order and measure the strict-subset gain against numeric and public-hash controls.",
+  "source_frontier": {
+    "A297_result_path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.json",
+    "A297_result_sha256": "046beb03789c994e564a018d3ca6d4ce146a22ca6b171197e99aeedd9cc98cfd",
+    "A297_causal_path": "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.causal",
+    "A297_causal_sha256": "5b2c2358807d242e8042d390fc269ecbac931d75a18d1e3a1b1efc004fc829f2",
+    "A297_retained_boundary": "coarse_high8_reader_retains_W32_search_concentration_but_requires_fine_subprefix_learning",
+    "A295_design_path": "research/configs/chacha20_round20_w24_fine_selected_channel_a295_design_v1.json",
+    "A295_design_sha256": "8dfd07e548daffe01ba7262e02a8e9d16754ef8765c3a9169e8f98b2d0014121",
+    "A295_orbit_source_path": "src/arx_carry_leak/xor_prefix_orbit.py",
+    "A295_orbit_source_sha256": "a2c1f142eab770f308ef4103141ee9aee73eaa4dd8b73235454d0d822476e806"
+  },
+  "sealed_holdout": {
+    "protocol_path": "research/configs/chacha20_round20_w43_metal_record_v1.json",
+    "protocol_sha256": "fe69f7c4962ed771703c68a1d64c361147a568cabe71d23cc9448fb1bef88de3",
+    "public_challenge_sha256": "b7dfe786d4c5f90d190b651701f078f1dadb5ea5972cf46d8f689818e7fdd6d5",
+    "qualification_sha256": "c69c4a63965d22eeeaf92136b9218ae29376f174aa440dd2a7d6b423cae7b369",
+    "target_exists_at_design_freeze": true,
+    "assignment_serialized_in_protocol": false,
+    "full_domain_execution_incomplete_at_design_freeze": true,
+    "checkpoint_assignment_or_filter_value_read_by_A299": false,
+    "future_CHACHA20KR43_result_or_confirmation_may_select_the_reader": false
+  },
+  "launch_gate": {
+    "A293_required": "complete_4096_prefix_model_free_trace_cover",
+    "A295_required": "confirmed_W24_recovery_using_the_unchanged_fine_selected_channel_order",
+    "A299_measurement": "may_start_only_from_the_public_W43_protocol_without_reading_the_W43_checkpoint_or_result",
+    "A299_order_freeze": "complete_W43_trace_field_and_unchanged_A295_formula_before_any_A299_candidate_discovery",
+    "fallback_if_A293_finds_a_model": "retain_the_stronger_A293_symbolic_recovery_and_do_not_execute_this_trace-transfer_branch",
+    "fallback_if_A295_does_not_confirm": "retain_the_W43_complete-domain_anchor_and_do_not_replace_the_predeclared_reader"
+  },
+  "primitive_contract": {
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "rounds": 20,
+    "feedforward_included": true,
+    "public_output_blocks": 8,
+    "public_output_bits": 4096,
+    "unknown_key_bits": 43,
+    "known_key_bits": 213,
+    "unknown_key_scope": "key_word0_all32_plus_key_word1_low11",
+    "assignment_encoding": "assignment=(key_word1_low11<<32)|key_word0",
+    "counter_schedule": "public_base_plus_block_index_mod_2^32",
+    "nonce": "public_96_bit_nonce"
+  },
+  "fine_measurement_contract": {
+    "W43_target_CNF_source": "sealed_holdout_protocol_only",
+    "coarse_seed_stage": "unchanged_A297_A272_high8_reader_on_key_word0_bits31_through24",
+    "coarse_seed_reader_refits": 0,
+    "coarse_seed_target_labels_used": 0,
+    "lane_seed_order": "fresh_target_coarse_high8_Causal_order_then_reflected_Gray4",
+    "partition_coordinates_high_to_low": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24,
+      23,
+      22,
+      21,
+      20
+    ],
+    "partition_scope": "key_word0",
+    "prefix_bits": 12,
+    "prefix_cells": 4096,
+    "free_key_word0_bits_per_cell": 20,
+    "free_key_word1_bits_per_cell": 11,
+    "total_free_bits_per_cell": 31,
+    "execution": "eight_disjoint_retained_state_lanes_covering_every_prefix_exactly_once",
+    "seconds_per_cell": 5,
+    "measurement_status_required_if_no_model": "UNKNOWN",
+    "target_key_label_available_to_measurement": false,
+    "model_refits": 0,
+    "target_labels_used": 0
+  },
+  "reader_contract": {
+    "operator": "unchanged_A295_frozen_a272_single_horizon_score",
+    "accepted_clause_proxy": "max(redundant_clauses_delta,0)",
+    "conflict_channel": "max(metrics_delta[conflicts],0)",
+    "ratio": "(accepted_proxy-conflicts)/(abs(accepted_proxy)+abs(conflicts))",
+    "selected_feature_indices": [
+      502,
+      504,
+      505,
+      508,
+      509,
+      510,
+      511,
+      514
+    ],
+    "score_terms": "raw_z_xor_laplacian_xor_gradient_l2_xor_gradient_maxabs_with_unchanged_A272_positive_coefficients",
+    "tiebreak": "descending_score_then_ascending_prefix",
+    "complete_order_required": true,
+    "operator_selection_uses_W43_assignment_or_result": false
+  },
+  "recovery_contract": {
+    "candidate_group_size": 2147483648,
+    "candidate_group_decomposition": "2048_key_word1_low11_slices_times_2^20_key_word0_suffixes",
+    "complete_residual_domain": 8796093022208,
+    "primary_order": "A299_fine_selected_channel_key_word0_prefix12",
+    "counterfactual_rank_controls": [
+      "numeric_prefix12",
+      "public_hash_prefix12"
+    ],
+    "controls_do_not_trigger_duplicate_candidate_execution": true,
+    "stop": "first_factual_full_filter_match_in_primary_group_order",
+    "matched_control": "one_bit_modified_output_scanned_over_every_primary_group_actually_executed",
+    "confirmation": "RFC8439_byte_reference_plus_independent_word_reference_over_all_eight_output_blocks",
+    "strict_subset_reported_exactly_when": "executed_candidate_upper_bound_is_less_than_2^43",
+    "all_executed_outer_slices_and_inner_candidates_counted": true
+  },
+  "information_boundary": {
+    "A293_result_available_at_design_freeze": false,
+    "A295_result_available_at_design_freeze": false,
+    "CHACHA20KR43_result_available_at_design_freeze": false,
+    "CHACHA20KR43_assignment_available_at_design_freeze": false,
+    "CHACHA20KR43_checkpoint_candidate_values_read_at_design_freeze": false,
+    "public_W43_target_exists_at_design_freeze": true,
+    "reader_formula_features_coefficients_tiebreak_and_partition_coordinates_frozen": true,
+    "future_W43_assignment_model_filter_outcome_or_numeric_rank_may_select_reader_or_order": false,
+    "A299_runner_must_reject_any_dependency_on_W43_result_checkpoint_or_confirmation": true
+  },
+  "acceptance": {
+    "full_measurement_cover_or_earlier_logical_model_required": true,
+    "complete_prefix_order_frozen_before_A299_candidate_discovery": true,
+    "all_executed_candidate_groups_counted": true,
+    "independent_full_output_confirmation_required": true,
+    "numeric_and_public_hash_counterfactual_ranks_computed_only_after_confirmation": true,
+    "authentic_AI_native_Causal_artifact_required": true,
+    "main_agent_personal_CausalReader_readback_required": true
+  },
+  "schema": "chacha20-round20-w43-fine-selected-channel-transfer-a299-design-v1"
+}
