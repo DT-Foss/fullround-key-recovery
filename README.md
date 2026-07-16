@@ -2,56 +2,102 @@
 
 [![verification](https://github.com/DT-Foss/fullround-key-recovery/actions/workflows/ci.yml/badge.svg)](https://github.com/DT-Foss/fullround-key-recovery/actions/workflows/ci.yml)
 
-This repository preserves two complementary full-round recovery result classes:
+This is the executable public record of **37 verified full-round residual-key
+recovery executions** on a base Apple M4 Mac mini with 16 GB unified memory:
+thirteen complete-domain records across nine cipher families and 24
+strict-subset ChaCha20-R20 executions across 23 targets. Every row below
+recovers the declared residual key, reconstructs the complete master key in its
+known-key model, recomputes the full public relation independently, and rejects
+its matched control.
 
-- **thirteen complete-domain residual-key recoveries** across thirteen primitive
-  configurations in nine cipher families; and
-- **24 strict-subset ChaCha20-R20 executions across 23 distinct targets**, from
-  W20 through W44, using frozen target-blind or zero-refit schedules.
+## Main results: complete full-round recovery record
 
-Every complete-domain record enumerated its full declared domain on Apple M4
-Metal without early stopping, produced one exact factual model, and produced no
-model for the matched one-bit-flipped control.
+### Thirteen complete-domain records
 
-| Record | Primitive | Full rounds | Unknown / known key bits | Domain | Factual / control | Independent confirmation |
-|---|---|---:|---:|---:|---:|---:|
-| A184 | ChaCha20 block function with feed-forward | 20 | 40 / 216 | `2^40` | 1 / 0 | 512 bits |
-| A237 | Speck32/64 | 22 | 42 / 22 | `2^42` | 1 / 0 | 96 bits |
-| A240 | Threefish-256 | 72 | 38 / 218 | `2^38` | 1 / 0 | 256 bits |
-| A244 | Speck64/128 | 27 | 44 / 84 | `2^44` | 1 / 0 | 128 bits |
-| A246 | SIMON64/128 | 44 | 43 / 85 | `2^43` | 1 / 0 | 128 bits |
-| A248 | RC5-32/12/16 | 12 | 40 / 88 | `2^40` | 1 / 0 | 128 bits |
-| A253 | PRESENT-80 | 31 | 38 / 42 | `2^38` | 1 / 0 | 128 bits |
-| A256 | Ascon-AEAD128 | 12/8/12 permutation schedule | 40 / 88 | `2^40` | 1 / 0 | 384 bits |
-| AES-W41 | AES-128 | 10 | 41 / 87 | `2^41` | 1 / 0 | 256 bits |
-| A264 | Salsa20/20 block function | 20 | 42 / 214 | `2^42` | 1 / 0 | 512 bits |
-| P128R1 | PRESENT-128 | 31 + K32 whitening | 38 / 90 | `2^38` | 1 / 0 | 128 bits |
-| AES256R1 | AES-256 | 14 | 41 / 215 | `2^41` | 1 / 0 | 256 bits |
-| CHACHA20KR43 | ChaCha20 block function with feed-forward | 20 | 43 / 213 | `2^43` | 1 / 0 | 8,192 bits |
+Every assignment in every declared domain was executed without early stopping.
+Each factual relation returned exactly one model; each one-bit-flipped control
+returned none.
 
-The strict-subset line starts with A281 at W20 and the four-target A286 panel.
-The A287--A325 batch adds 19 executions across 18 targets: two W24 orders on one
-target (A294/A295), eight W24/W28 targets (A296), four W32 targets (A297), one
-additional W32 target (A303), three W43 targets (A304/A305/A309), and one W44
-target (A313). Every
-execution stops only after its complete frozen group, remains below the full
-declared domain, rejects the matched control, and recomputes all eight public
-output blocks independently. The exact ranks are published in
-[the A287--A325 release record](docs/A287_A325_RELEASE.md).
+| Record | Primitive / standard endpoint | Residual key | Executed domain | Factual / control | Independent confirmation |
+|---|---|---:|---:|---:|---:|
+| A184 | ChaCha20, 20 rounds + feed-forward | 40 / 216 bits | `2^40` complete | 1 / 0 | 512 bits |
+| A237 | Speck32/64, 22 rounds | 42 / 22 bits | `2^42` complete | 1 / 0 | 96 bits |
+| A240 | Threefish-256, 72 rounds | 38 / 218 bits | `2^38` complete | 1 / 0 | 256 bits |
+| A244 | Speck64/128, 27 rounds | 44 / 84 bits | `2^44` complete | 1 / 0 | 128 bits |
+| A246 | SIMON64/128, 44 rounds | 43 / 85 bits | `2^43` complete | 1 / 0 | 128 bits |
+| A248 | RC5-32/12/16, 12 rounds | 40 / 88 bits | `2^40` complete | 1 / 0 | 128 bits |
+| A253 | PRESENT-80, 31 rounds | 38 / 42 bits | `2^38` complete | 1 / 0 | 128 bits |
+| A256 | Ascon-AEAD128, complete 12/8/12 operation | 40 / 88 bits | `2^40` complete | 1 / 0 | 384 bits |
+| AES-W41 | AES-128, 10 rounds | 41 / 87 bits | `2^41` complete | 1 / 0 | 256 bits |
+| A264 | Salsa20/20, 20 rounds + feed-forward | 42 / 214 bits | `2^42` complete | 1 / 0 | 512 bits |
+| P128R1 | PRESENT-128, 31 rounds + K32 whitening | 38 / 90 bits | `2^38` complete | 1 / 0 | 128 bits |
+| AES256R1 | AES-256, 14 FIPS 197 rounds | 41 / 215 bits | `2^41` complete | 1 / 0 | 256 bits |
+| CHACHA20KR43 | ChaCha20, 20 rounds + feed-forward | 43 / 213 bits | `2^43` complete | 1 / 0 | 8,192 bits |
 
-The subsequent A326--A458 line builds the complete W52 execution geometry.
-A456 evaluates 878 frequency-ray schedules and A458 evaluates 405 paired B1/B0
-schedules. Their fixed remaining-96 minimum gain rises from A454's
-`0.160759081` bit to `0.205050505` bit, while every released W52 schedule stays
-target-blind and compiles all 16,777,216 pair cells exactly once. A455 and A457
-are the frozen recovery executors; no live progress or recovery result is
-published. The exact hashes and source commit are in the
-[A326--A458 frontier record](docs/A326_A458_FRONTIER.md).
+### Twenty-four strict-subset ChaCha20-R20 executions
 
-Each unique assignment reconstructs the complete master key in its declared
-known-key model. The package then recomputes the complete output with a compact
-independent Python implementation. The exact evidence mapping and per-record
-scope are in [docs/CLAIM_MATRIX.md](docs/CLAIM_MATRIX.md).
+All rows execute the standard 20 rounds plus feed-forward against eight public
+output blocks unless noted. Their orders were frozen target-blind or transferred
+without refitting; execution ends only at a complete frozen group and never
+enumerates the full residual domain.
+
+| Record / target | Residual key | Frozen discovery point | Executed assignments | Factual / control | Confirmation |
+|---|---:|---:|---:|---:|---:|
+| A281 | 20 / 236 bits | rank 37 / 256 | 151,552 / 1,048,576 | 1 / 0 | 4,096 bits |
+| A286/t01 | 20 / 236 bits | fallback, rank 254 | strict subset | 1 / 0 | 4,096 bits |
+| A286/t02 | 20 / 236 bits | top-128, rank 55 | strict subset | 1 / 0 | 4,096 bits |
+| A286/t03 | 20 / 236 bits | top-128, rank 107 | strict subset | 1 / 0 | 4,096 bits |
+| A286/t04 | 20 / 236 bits | global retained solve | strict subset | 1 / 0 | 4,096 bits |
+| A294 | 24 / 232 bits | rank 202 / 4,096 | 827,392 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A295 | 24 / 232 bits | rank 2,605 / 4,096 | 10,670,080 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A296/w24_t00 | 24 / 232 bits | rank 2,750 / 4,096 | 11,264,000 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A296/w24_t01 | 24 / 232 bits | rank 2,948 / 4,096 | 12,075,008 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A296/w24_t02 | 24 / 232 bits | rank 1,485 / 4,096 | 6,082,560 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A296/w24_t03 | 24 / 232 bits | rank 213 / 4,096 | 872,448 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A296/w28_t00 | 28 / 228 bits | rank 1,144 / 4,096 | 74,973,184 / 268,435,456 | 1 / 0 | 8,192 bits |
+| A296/w28_t01 | 28 / 228 bits | rank 2,113 / 4,096 | 138,477,568 / 268,435,456 | 1 / 0 | 8,192 bits |
+| A296/w28_t02 | 28 / 228 bits | rank 520 / 4,096 | 34,078,720 / 268,435,456 | 1 / 0 | 8,192 bits |
+| A296/w28_t03 | 28 / 228 bits | rank 3,019 / 4,096 | 197,853,184 / 268,435,456 | 1 / 0 | 8,192 bits |
+| A297/w32_t00 | 32 / 224 bits | rank 2,867 / 4,096 | 3,006,267,392 / 4,294,967,296 | 1 / 0 | 8,192 bits |
+| A297/w32_t01 | 32 / 224 bits | rank 2,032 / 4,096 | 2,130,706,432 / 4,294,967,296 | 1 / 0 | 8,192 bits |
+| A297/w32_t02 | 32 / 224 bits | rank 926 / 4,096 | 970,981,376 / 4,294,967,296 | 1 / 0 | 8,192 bits |
+| A297/w32_t03 | 32 / 224 bits | rank 3,932 / 4,096 | 4,123,000,832 / 4,294,967,296 | 1 / 0 | 8,192 bits |
+| A303 | 32 / 224 bits | rank 3,801 / 4,096 | 3,985,637,376 / 4,294,967,296 | 1 / 0 | 8,192 bits |
+| A302/A304 | 43 / 213 bits | rank 2,473 / 4,096 | 5,310,727,061,504 / 8,796,093,022,208 | 1 / 0 | 8,192 bits |
+| A305 | 43 / 213 bits | rank 2,114 / 4,096 | 4,539,780,431,872 / 8,796,093,022,208 | 1 / 0 | 8,192 bits |
+| A309 | 43 / 213 bits | rank 4,044 / 4,096 | 8,684,423,872,512 / 8,796,093,022,208 | 1 / 0 | 8,192 bits |
+| A313 | 44 / 212 bits | rank 2,753 / 4,096 | 11,824,044,965,888 / 17,592,186,044,416 | 1 / 0 | 8,192 bits |
+
+The exact per-record protocols, results, Causal graphs, and reports are linked
+in the [claim matrix](docs/CLAIM_MATRIX.md). The A287--A325 ranks and execution
+bounds are also collected in the [release record](docs/A287_A325_RELEASE.md).
+
+## A326--A458: complete W52 Reader frontier
+
+The next public line compiles target-blind execution geometry for the complete
+`2^52` residual domain. A456 and A458 each evaluate every registered schedule
+and emit a complete permutation of all 16,777,216 W52 pair cells.
+
+| Result | Schedule census | Selected schedule | Remaining-96 aggregate gain | Minimum block gain | Pair-stream SHA-256 |
+|---|---:|---|---:|---:|---|
+| A456 | 878 schedules / 86 cyclic orbits | `BOOOOOOHHHHHH` | `0.489437610231` bit | `0.176347721941` bit | `9a3af1cfb71f96d186815086170127cd5340e7ac102a5fe9dc65414c14df7352` |
+| A458 | 405 paired B1/B0 schedules / 18 cyclic orbits | `OOOOOOOOHHHHHHHHHHHHHHHBOOOOOOO` | `0.495787645250` bit | `0.205050504927` bit | `5220aa319ab75f7e5e77717802f248512ecdb04531a5d660ac48302f428a1138` |
+
+Both schedules have positive gain on all eight fixed blocks, zero W52 labels,
+zero refits, zero candidate assignments, and exact component bounds over the
+entire pair domain. A455 and A457 are the hash-frozen eight-worker recovery
+executors with production disabled. The public release contains no live worker
+state or recovery outcome.
+
+- [Pinned A326--A458 release record](docs/A326_A458_FRONTIER.md)
+- [One-command frontier verifier](https://github.com/DT-Foss/f8-causal-cryptanalysis/blob/676ee0d6523351347b75907b151c5c4b605061ac/scripts/verify_a326_a458_frontier.py)
+- [935-file SHA-256 manifest](https://github.com/DT-Foss/f8-causal-cryptanalysis/blob/676ee0d6523351347b75907b151c5c4b605061ac/research/results/v1/A326_A458_FRONTIER_SHA256SUMS)
+- [A456 result and AI-native Causal graph](https://github.com/DT-Foss/f8-causal-cryptanalysis/tree/676ee0d6523351347b75907b151c5c4b605061ac/research/results/v1)
+- [Integrity-checking Causal Reader](src/fullround_key_recovery/_dotcausal/io.py)
+
+The package independently reconstructs and confirms every recovered key. Its
+immutable evidence mapping and exact per-record scope are in
+[docs/CLAIM_MATRIX.md](docs/CLAIM_MATRIX.md).
 
 ## Exact claim
 
