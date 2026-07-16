@@ -1,0 +1,289 @@
+{
+  "algorithm": {
+    "branch_updates": 64,
+    "complete_standard_round_count": true,
+    "cycles": 32,
+    "filter_bits": 128,
+    "key_bits": 128,
+    "name": "Extended Tiny Encryption Algorithm (XTEA)",
+    "plaintext_blocks": 2
+  },
+  "anchors": {
+    "family_framework_sha256": "107e400039176ef1ab6e400677f55b7148c9342571be4f0822aaf33bc2e2d7ee",
+    "native_source_sha256": "fb96e8d225bf4cbc2f854b1d15f783124a010f6139fcabbbd59b6285fb7c2c5f",
+    "qualification_source_sha256": "901eef29125197c69ccf47e7acc4935de61ebadb2b45b2d8502e7a4dd21a2c4e"
+  },
+  "attempt_id": "XTEAKR1",
+  "benchmark": {
+    "budget_seconds": 10800.0,
+    "candidate_count_per_repetition": 33554432,
+    "candidates_per_gpu_second": [
+      1370645571.0421262,
+      1993727380.300506,
+      2677660355.6445556
+    ],
+    "gpu_seconds": [
+      0.02448075031861663,
+      0.01683000009506941,
+      0.01253125024959445
+    ],
+    "median_candidates_per_gpu_second": 1993727380.300506,
+    "minimum_candidates_per_gpu_second": 1370645571.0421262,
+    "repetitions": 3,
+    "safety_factor": 1.25
+  },
+  "evidence_stage": "FULLROUND_XTEA_METAL_QUALIFIED",
+  "metal_identity": {
+    "metal": {
+      "algorithms": [
+        "tea",
+        "xtea",
+        "siphash24"
+      ],
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "output_words_compared": 4,
+      "plaintext_blocks": 2,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true,
+      "tea_cycles": 32,
+      "tea_feistel_updates": 64
+    },
+    "op": "ready",
+    "version": "tea-metal-native-v1"
+  },
+  "metal_mapping_gate": {
+    "outer_mask": 2047,
+    "rows": [
+      {
+        "assignment": 0,
+        "exact": true,
+        "inner": 0,
+        "outer": 0,
+        "output_sha256": "782434a063393ece3f2eb561fdf747f018d88f4e5ac61a56e1cb117458520332"
+      },
+      {
+        "assignment": 1,
+        "exact": true,
+        "inner": 1,
+        "outer": 0,
+        "output_sha256": "cb78a970221dbbda84d258afdb3899fbae288cf0a58c17de34d370ac17ae0f58"
+      },
+      {
+        "assignment": 4294967295,
+        "exact": true,
+        "inner": 4294967295,
+        "outer": 0,
+        "output_sha256": "06ff577c66866895e7a01795e98bb4fb516a509b401e1a40a6d7098aceb4116f"
+      },
+      {
+        "assignment": 4294967296,
+        "exact": true,
+        "inner": 0,
+        "outer": 1,
+        "output_sha256": "2f6b29cb26c5b0d10a9c005d06eec900d7be96919cc6983608eecf0684371ccb"
+      },
+      {
+        "assignment": 8796093022207,
+        "exact": true,
+        "inner": 4294967295,
+        "outer": 2047,
+        "output_sha256": "30cd9377e6b200659ec83819396a95538d014e6a9c0337e50125ec5cd12ee678"
+      }
+    ],
+    "scalar_numpy_metal_exact": true,
+    "width": 43
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "3e551be49a23a69e296f3cbca2c78ba49bceb35d26a77a495c005ef059b7712a",
+    "flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source_sha256": "fb96e8d225bf4cbc2f854b1d15f783124a010f6139fcabbbd59b6285fb7c2c5f"
+  },
+  "published_reference_gate": {
+    "all_exact": true,
+    "cross_reference_rows": [
+      {
+        "case": 0,
+        "ciphertext_words": [
+          3920856436,
+          1269374796
+        ],
+        "decrypt_roundtrip_exact": true,
+        "key_words": [
+          2654435769,
+          1338412881,
+          22389993,
+          3001334401
+        ],
+        "plaintext_words": [
+          2779096485,
+          1515870810
+        ],
+        "scalar_numpy_exact": true
+      },
+      {
+        "case": 1,
+        "ciphertext_words": [
+          932028402,
+          3475119331
+        ],
+        "decrypt_roundtrip_exact": true,
+        "key_words": [
+          1013904242,
+          3992848650,
+          2676825762,
+          1360802874
+        ],
+        "plaintext_words": [
+          2762450593,
+          1532779870
+        ],
+        "scalar_numpy_exact": true
+      },
+      {
+        "case": 2,
+        "ciphertext_words": [
+          3497950406,
+          2170743226
+        ],
+        "decrypt_roundtrip_exact": true,
+        "key_words": [
+          3668340011,
+          2352317123,
+          1036294235,
+          4015238643
+        ],
+        "plaintext_words": [
+          2812388269,
+          1549688930
+        ],
+        "scalar_numpy_exact": true
+      },
+      {
+        "case": 3,
+        "ciphertext_words": [
+          3972588502,
+          1778556668
+        ],
+        "decrypt_roundtrip_exact": true,
+        "key_words": [
+          2027808484,
+          711785596,
+          3690730004,
+          2374707116
+        ],
+        "plaintext_words": [
+          2795744425,
+          1566597990
+        ],
+        "scalar_numpy_exact": true
+      },
+      {
+        "case": 4,
+        "ciphertext_words": [
+          2071422557,
+          578373028
+        ],
+        "decrypt_roundtrip_exact": true,
+        "key_words": [
+          387276957,
+          3366221365,
+          2050198477,
+          734175589
+        ],
+        "plaintext_words": [
+          2712512949,
+          1583507050
+        ],
+        "scalar_numpy_exact": true
+      },
+      {
+        "case": 5,
+        "ciphertext_words": [
+          4243310836,
+          3724162530
+        ],
+        "decrypt_roundtrip_exact": true,
+        "key_words": [
+          3041712726,
+          1725689838,
+          409666950,
+          3388611358
+        ],
+        "plaintext_words": [
+          2695867057,
+          1600416110
+        ],
+        "scalar_numpy_exact": true
+      },
+      {
+        "case": 6,
+        "ciphertext_words": [
+          1097747678,
+          277246436
+        ],
+        "decrypt_roundtrip_exact": true,
+        "key_words": [
+          1401181199,
+          85158311,
+          3064102719,
+          1748079831
+        ],
+        "plaintext_words": [
+          2745808829,
+          1617325170
+        ],
+        "scalar_numpy_exact": true
+      },
+      {
+        "case": 7,
+        "ciphertext_words": [
+          2204861807,
+          2080539426
+        ],
+        "decrypt_roundtrip_exact": true,
+        "key_words": [
+          4055616968,
+          2739594080,
+          1423571192,
+          107548304
+        ],
+        "plaintext_words": [
+          2729160889,
+          1634234230
+        ],
+        "scalar_numpy_exact": true
+      }
+    ],
+    "reference": "Needham and Wheeler XTEA 32-cycle recurrence",
+    "zero_key_zero_plaintext_ciphertext": [
+      3739866328,
+      4145225433
+    ],
+    "zero_vector_exact": true
+  },
+  "schema": "xtea-metal-qualification-v1",
+  "selection": {
+    "eligible_widths": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "production_challenge_generated": false,
+    "projected_seconds_at_minimum_throughput": 6417.4818115234375,
+    "selected_width": 43
+  }
+}

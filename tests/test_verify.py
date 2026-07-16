@@ -72,6 +72,42 @@ def test_new_complete_domain_present128_and_aes256_records() -> None:
         assert result["control_models"] == 0
 
 
+def test_extended_complete_domain_records() -> None:
+    expected = {
+        "blake3_keyed": ("B3KR1", 2**43, 6_241_046_275_180, 256),
+        "siphash24": ("SIPKR1", 2**43, 31_398_082_423, 128),
+        "tea": ("TEAKR1", 2**43, 3_588_575_041_194, 128),
+        "xtea": ("XTEAKR1", 2**43, 5_121_519_399_188, 128),
+        "threefish1024": ("TF1024KR1", 2**39, 167_907_888_337, 2048),
+    }
+    for name, (attempt, candidates, assignment, confirmation_bits) in expected.items():
+        result = verify_result(name, ROOT)
+        assert result["attempt_id"] == attempt
+        assert result["logical_candidates"] == candidates
+        assert result["recovered_assignment"] == assignment
+        assert result["independent_confirmation_bits"] == confirmation_bits
+        assert result["factual_models"] == 1
+        assert result["control_models"] == 0
+
+
+def test_a322_a325_a350_a374_strict_subset_records() -> None:
+    expected = {
+        "chacha20_a322": ("A322", 45, 1459, 12_532_714_569_728, 9_971_050_529_000),
+        "chacha20_a325": ("A325", 46, 77, 1_322_849_927_168, 32_932_650_148_774),
+        "chacha20_a350": ("A350", 46, 445, 7_645_041_786_880, 67_179_618_068_862),
+        "chacha20_a374": ("A374", 48, 102, 7_009_386_627_072, 255_004_576_462_523),
+    }
+    for name, (attempt, width, rank, executed, assignment) in expected.items():
+        result = verify_result(name, ROOT)
+        assert result["attempt_id"] == attempt
+        assert result["unknown_key_bits"] == width
+        assert result["frozen_order_rank"] == rank
+        assert result["executed_assignments"] == executed
+        assert result["recovered_assignment"] == assignment
+        assert result["strict_subset_recovery"] is True
+        assert result["control_models"] == 0
+
+
 def test_target_blind_strict_subset_chacha20_recoveries() -> None:
     a281 = verify_result("chacha20_cross_material", ROOT)
     assert a281["attempt_id"] == "A281"
@@ -159,7 +195,7 @@ def test_new_strict_subset_chacha20_panels() -> None:
     ]
 
 
-def test_open_outcomes_are_not_published_as_results() -> None:
+def test_a322_and_a325_terminal_outcomes_are_published() -> None:
     root = ROOT / "chronology" / "arx-carry-leak"
     result_dir = root / "research" / "results" / "v1"
     assert (
@@ -168,18 +204,10 @@ def test_open_outcomes_are_not_published_as_results() -> None:
     assert (
         result_dir / "chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.causal"
     ).is_file()
-    assert not (
-        result_dir / "chacha20_round20_holdout_selected_w45_recovery_a322_v1.json"
-    ).exists()
-    assert not (
-        result_dir / "chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal"
-    ).exists()
-    assert not (
-        result_dir / "chacha20_round20_holdout_selected_w46_recovery_a325_v1.json"
-    ).exists()
-    assert not (
-        result_dir / "chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal"
-    ).exists()
+    assert (ROOT / "results/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json").is_file()
+    assert (ROOT / "causal/chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal").is_file()
+    assert (ROOT / "results/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json").is_file()
+    assert (ROOT / "causal/chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal").is_file()
     assert (
         result_dir / "chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json"
     ).is_file()
@@ -195,7 +223,7 @@ def test_complete_suite_opens_all_causal_and_protocol_artifacts() -> None:
     result = verify_all(ROOT)
     assert result["status"] == "verified"
     assert result["author"] == "David Tom Foss"
-    assert result["artifact_count"] == 572
+    assert result["artifact_count"] == len(result["artifacts"])
     assert [row["attempt_id"] for row in result["results"]] == [
         "A184",
         "A237",
@@ -221,6 +249,15 @@ def test_complete_suite_opens_all_causal_and_protocol_artifacts() -> None:
         "A305",
         "A309",
         "A313",
+        "B3KR1",
+        "SIPKR1",
+        "TEAKR1",
+        "XTEAKR1",
+        "TF1024KR1",
+        "A322",
+        "A325",
+        "A350",
+        "A374",
     ]
-    assert len(result["causal"]) == 38
+    assert len(result["causal"]) == 48
     assert len(result["chronology_causal"]) == 26

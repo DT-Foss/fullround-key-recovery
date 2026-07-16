@@ -1,0 +1,155 @@
+{
+  "anchors": {
+    "native_executable_sha256": "3e551be49a23a69e296f3cbca2c78ba49bceb35d26a77a495c005ef059b7712a",
+    "native_source_sha256": "fb96e8d225bf4cbc2f854b1d15f783124a010f6139fcabbbd59b6285fb7c2c5f",
+    "runner_sha256": "107e400039176ef1ab6e400677f55b7148c9342571be4f0822aaf33bc2e2d7ee"
+  },
+  "attempt_id": "TEAKR1",
+  "authentic_causal": {
+    "api_id": "teakr1",
+    "clusters": 2,
+    "gaps": [
+      {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W43_domain",
+        "predicate": "next_required_gain",
+        "subject": "TEA:unique_verified_W43_fullround_residual",
+        "suggested_queries": [
+          "Which frozen operator ranks a held-out W43 TEA region early?"
+        ]
+      }
+    ],
+    "path": "research/results/v1/tea_metal_recovery_v1.causal",
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "rules": 2,
+    "sha256": "c81ad41af67867be423576e82f2d74f9fad85a420973dba4e274e2c2afa5f593",
+    "triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 5352,
+      "file_size_kb": 5.2,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.tea_metal_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation_sha256": "1b67e9d63cfc13871c6c6ea7f36fa5b72aa15fee5fae91e2606c26034a67172c",
+  "evidence_stage": "FULLROUND_TEA_COMPLETE_DOMAIN_RECOVERY_CONFIRMED",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "executed_assignment_count": 8796093022208,
+    "factual_confirmations": [
+      {
+        "assignment": 3588575041194,
+        "complete_128_bit_match": true,
+        "independent_numpy_output_sha256": "74f1d0ed3ce056fe80fbe9caff51d3567fd2a7dc8ecc451257af4963aaf8f831",
+        "output_bits_checked": 128,
+        "recovered_key_words": [
+          2277349034,
+          1415574339,
+          3151373862,
+          3177633920
+        ],
+        "recovered_key_words_hex": [
+          "87bd96aa",
+          "545ff343",
+          "bbd62626",
+          "bd66d880"
+        ],
+        "relation": "factual",
+        "scalar_numpy_identity": true,
+        "scalar_output_sha256": "74f1d0ed3ce056fe80fbe9caff51d3567fd2a7dc8ecc451257af4963aaf8f831"
+      }
+    ],
+    "factual_filter_matches": [
+      3588575041194
+    ],
+    "factual_full_matches": [
+      3588575041194
+    ],
+    "gpu_seconds": 5012.034078941215,
+    "known_key_bits": 85,
+    "logical_candidate_count": 8796093022208,
+    "newly_executed_assignment_count": 8796093022208,
+    "resumed_assignment_count": 0,
+    "success_evaluated_only_after_complete_domain": true,
+    "unique_exact_assignment": true,
+    "unknown_key_bits": 43,
+    "volatile_candidates_per_gpu_second": 1754994655.596229,
+    "volatile_wall_seconds": 5317.9360506660305
+  },
+  "execution_sha256": "52766cd2267d45634a56f5328b8ba1aa26ec88517af59d26b277b865a593c912",
+  "mapping_gate": {
+    "rows": [
+      {
+        "assignment": 0,
+        "output_sha256": "cb2439b20ff0593bb6864af1777a86ad1b7766c0a81c37011d6979343de0800b"
+      },
+      {
+        "assignment": 1,
+        "output_sha256": "29972875a358791de4f007aae70a8ecc2b008bce306e1d467cc0e55bce1bbae7"
+      },
+      {
+        "assignment": 4294967295,
+        "output_sha256": "9ef0d1bd1080974071b017956fba409857d861b2f015c18fec0d36d7515c50ee"
+      },
+      {
+        "assignment": 4294967296,
+        "output_sha256": "9fcad0492439504b3cedd247b56e7431ad6265f9bc3251ceceb68b5767ae55e0"
+      },
+      {
+        "assignment": 8796093022207,
+        "output_sha256": "7c90d0cf4e333014d45b9bdb3fa633287d8d98f88a51a5c32315fdf31f609321"
+      }
+    ],
+    "scalar_numpy_metal_exact": true
+  },
+  "metal_identity": {
+    "metal": {
+      "algorithms": [
+        "tea",
+        "xtea",
+        "siphash24"
+      ],
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "output_words_compared": 4,
+      "plaintext_blocks": 2,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true,
+      "tea_cycles": 32,
+      "tea_feistel_updates": 64
+    },
+    "op": "ready",
+    "version": "tea-metal-native-v1"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "3e551be49a23a69e296f3cbca2c78ba49bceb35d26a77a495c005ef059b7712a",
+    "flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source_sha256": "fb96e8d225bf4cbc2f854b1d15f783124a010f6139fcabbbd59b6285fb7c2c5f"
+  },
+  "protocol_sha256": "b52e53e56cc8f2a1b3cc5359bc94cc0c4608c07e6be7790cf086a87b819df9df",
+  "public_challenge_sha256": "1a0680dda8a440d71a8b84024d3bfa0e1d4f14830c547bdc24227d3f85c9f2ee",
+  "qualification_path": "research/results/v1/tea_metal_qualification_v1.json",
+  "qualification_sha256": "185fa32141a9831139f6c11b1ce24bff414a8e743f8e2ba13498eca1d661a6a4",
+  "schema": "tea-metal-recovery-result-v1"
+}

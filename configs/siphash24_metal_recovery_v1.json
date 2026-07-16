@@ -1,0 +1,88 @@
+{
+  "algorithm": {
+    "complete_standard_round_count": true,
+    "compression_rounds_per_message_word": 2,
+    "finalization_rounds": 4,
+    "messages": 2,
+    "name": "SipHash-2-4",
+    "output_bits_compared": 128
+  },
+  "anchors": {
+    "complete_domain_engine_sha256": "901eef29125197c69ccf47e7acc4935de61ebadb2b45b2d8502e7a4dd21a2c4e",
+    "family_framework_sha256": "107e400039176ef1ab6e400677f55b7148c9342571be4f0822aaf33bc2e2d7ee",
+    "native_source_sha256": "fb96e8d225bf4cbc2f854b1d15f783124a010f6139fcabbbd59b6285fb7c2c5f",
+    "qualification": {
+      "path": "research/results/v1/siphash24_metal_qualification_v1.json",
+      "sha256": "69480f514b8b636dc4ace327125a5c058f1e9a823cc58f540332249f4dacb341"
+    },
+    "runner_sha256": "bdfc398fd951ed4bb45a87f74472d5f76a5971bd516396a915a33ea45af0660b"
+  },
+  "attempt_id": "SIPKR1",
+  "challenge": {
+    "control_hash_words": [
+      1601331617,
+      2035343085,
+      25157297,
+      1309371060
+    ],
+    "control_relation": "first_hash_word_bit0_flipped",
+    "control_sha256": "212c8e4da1ae21d693029d73815dc5198a953feb9da6cf9e4fab55cf78a2e915",
+    "full_key_included": false,
+    "known_key_bits": 85,
+    "known_key_words_zeroed_residual": [
+      0,
+      205961216,
+      3083550135,
+      2338367582
+    ],
+    "message_lengths_bytes": [
+      8,
+      8
+    ],
+    "message_words": [
+      2019779860,
+      1313389884,
+      3050909877,
+      138590683
+    ],
+    "secret_assignment_included": false,
+    "secret_discarded_after_target_construction": true,
+    "target_hash_words": [
+      1601331616,
+      2035343085,
+      25157297,
+      1309371060
+    ],
+    "target_sha256": "a633401c0df7f7c1c8621924d3034487f2337a4b03e87b56ecb5e55c019bf80e",
+    "unknown_bit_interval": [
+      0,
+      42
+    ],
+    "unknown_key_bits": 43,
+    "unknown_mapping": "key_k0_low_bits_across_two_little_endian_uint32_words"
+  },
+  "execution": {
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "early_stop_permitted": false,
+    "inner_count": 4294967296,
+    "known_key_bits": 85,
+    "logical_candidates": 8796093022208,
+    "matched_control_same_kernel_and_domain": true,
+    "outer_bits": 11,
+    "outer_count": 2048,
+    "outer_mask": 2047,
+    "stream_candidates": 268435456,
+    "success_evaluated_only_after_complete_domain": true,
+    "width": 43
+  },
+  "information_boundary": {
+    "production_target_frozen_before_candidate_execution": true,
+    "qualification_precedes_production_target": true,
+    "secret_assignment_available_to_runner": false,
+    "secret_assignment_serialized": false
+  },
+  "protocol_state": "frozen_before_any_production_candidate_execution",
+  "public_challenge_sha256": "1eec7af993be1b476b2a87363ab0b492420d00259dc2fc1d1c4dad665e75a245",
+  "schema": "siphash24-metal-recovery-protocol-v1"
+}

@@ -1,0 +1,138 @@
+{
+  "anchors": {
+    "independent_numpy_reference_sha256": "9daf38512de019a2d72aaef45b5ac2645e88ccec5ca942d4c1498aa7d21ecbac",
+    "native_executable_sha256": "20dbc129705ee3c7b4a59a05888cdf581c447974b0153c284a0934762b9c93cd",
+    "native_source_sha256": "7dbdf10d4d363d9425f2818ee71040a897245fc0091a267ff8780ef7a4212348",
+    "runner_sha256": "5f2eb06a4b1e3472d929746b5f7f971674238ee4c893527c36cb3c70daab953c"
+  },
+  "attempt_id": "B3KR1",
+  "authentic_causal": {
+    "api_id": "b3kr1",
+    "clusters": 2,
+    "gaps": [
+      {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W43_domain",
+        "predicate": "next_required_gain",
+        "subject": "BLAKE3:unique_verified_W43_keyed_residual",
+        "suggested_queries": [
+          "Which frozen operator ranks a held-out W43 keyed region early?"
+        ]
+      }
+    ],
+    "path": "research/results/v1/blake3_keyed_metal_recovery_v1.causal",
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "rules": 2,
+    "sha256": "0298c1572bca5ab9f6e4022b73242a361af6abe63a7828b4718a8dfdbadc8feb",
+    "triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 5324,
+      "file_size_kb": 5.2,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.blake3_keyed_metal_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation_sha256": "1e71caaaf53bbd7b123464dd95a050e439c66c6eaec2e2c986b285df6fcc63f4",
+  "evidence_stage": "FULLROUND_KEYED_BLAKE3_COMPLETE_DOMAIN_RECOVERY_CONFIRMED",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "executed_assignment_count": 8796093022208,
+    "factual_confirmations": [
+      {
+        "assignment": 6241046275180,
+        "complete_256_bit_match": true,
+        "independent_numpy_output_sha256": "e71be32aefabfbceaa43d2f198886578c3680d98fc7bf8738f2311a8bc2b02fc",
+        "output_bits_checked": 256,
+        "recovered_key_hex": "6ca4581bad4dc17cba32241d06b9f0034c5184cd11b4410fd1833ce834dd8efe",
+        "relation": "factual",
+        "scalar_numpy_identity": true,
+        "scalar_output_sha256": "e71be32aefabfbceaa43d2f198886578c3680d98fc7bf8738f2311a8bc2b02fc"
+      }
+    ],
+    "factual_filter_matches": [
+      6241046275180
+    ],
+    "factual_full_matches": [
+      6241046275180
+    ],
+    "gpu_seconds": 6313.442647403572,
+    "known_key_bits": 213,
+    "logical_candidate_count": 8796093022208,
+    "newly_executed_assignment_count": 8796093022208,
+    "resumed_assignment_count": 0,
+    "success_evaluated_only_after_complete_domain": true,
+    "unique_exact_assignment": true,
+    "unknown_key_bits": 43,
+    "volatile_candidates_per_gpu_second": 1393232426.9747548,
+    "volatile_wall_seconds": 6343.5042284578085
+  },
+  "execution_sha256": "928afa53af5702556d0ac76df1a1d51eb7ff1ccd8c2b609049c54eea3b4c4733",
+  "mapping_gate": {
+    "rows": [
+      {
+        "assignment": 0,
+        "output_sha256": "c81383dad5205affadd7b352bbca48f4b16153e75248812759af350cc68fcef7"
+      },
+      {
+        "assignment": 1,
+        "output_sha256": "6ebb80106a5fd560614b4fae2c9592e37d0610d59010bcbe8537c27d05e0b243"
+      },
+      {
+        "assignment": 4294967295,
+        "output_sha256": "a409c943ec476e0c0f69a2f9a958abc9318663640feb258d8eb33a0db31a95f1"
+      },
+      {
+        "assignment": 4294967296,
+        "output_sha256": "3ba6b12987320035024bf8ce108b72ea33bb41b54dc8abfff32e916a5ee11b28"
+      },
+      {
+        "assignment": 8796093022207,
+        "output_sha256": "abcdb57ed55bfbc0768644d3533cac451211af17197fa5cd6111e4673bc2a389"
+      }
+    ],
+    "scalar_numpy_metal_exact": true
+  },
+  "metal_identity": {
+    "metal": {
+      "blake3_rounds": 7,
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "keyed_root_output_words_compared": 8,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "blake3-keyed-metal-native-v1"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "20dbc129705ee3c7b4a59a05888cdf581c447974b0153c284a0934762b9c93cd",
+    "flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source_sha256": "7dbdf10d4d363d9425f2818ee71040a897245fc0091a267ff8780ef7a4212348"
+  },
+  "protocol_sha256": "6e5b04a66165307328ad5ab56be272997dffd478c04b72b74f380c7d4bf68b2c",
+  "public_challenge_sha256": "5271ec61020f89c81cb616d5021f03dfb2421645fdea880c0e38e1e9317c1255",
+  "qualification_path": "research/results/v1/blake3_keyed_metal_qualification_v1.json",
+  "qualification_sha256": "e6be99285d200db11d5b0062a16c399318ca2458b73511213e0597b7fc7433ee",
+  "schema": "blake3-keyed-metal-recovery-result-v1"
+}

@@ -1,0 +1,83 @@
+{
+  "algorithm": {
+    "branch_updates": 64,
+    "complete_standard_round_count": true,
+    "cycles": 32,
+    "name": "Extended Tiny Encryption Algorithm (XTEA)",
+    "output_bits_compared": 128,
+    "plaintext_blocks": 2
+  },
+  "anchors": {
+    "family_framework_sha256": "107e400039176ef1ab6e400677f55b7148c9342571be4f0822aaf33bc2e2d7ee",
+    "native_source_sha256": "fb96e8d225bf4cbc2f854b1d15f783124a010f6139fcabbbd59b6285fb7c2c5f",
+    "qualification": {
+      "path": "research/results/v1/xtea_metal_qualification_v1.json",
+      "sha256": "0ec5b4ebf6bee50b36a198594d91a141cb6ca553d2f588b7d399b5fa81026603"
+    },
+    "runner_sha256": "901eef29125197c69ccf47e7acc4935de61ebadb2b45b2d8502e7a4dd21a2c4e"
+  },
+  "attempt_id": "XTEAKR1",
+  "challenge": {
+    "control_ciphertext_words": [
+      225094930,
+      2603215848,
+      1145089974,
+      2220477562
+    ],
+    "control_relation": "target_ciphertext_word0_bit0_flipped",
+    "control_sha256": "f89dd74d57c856ac38159918492c2319a514a8ac1ef1ba9ae6b22bcd6229d877",
+    "full_key_included": false,
+    "known_key_bits": 85,
+    "known_key_words_zeroed_residual": [
+      0,
+      791126016,
+      1812447632,
+      3339131489
+    ],
+    "plaintext_words": [
+      2208549857,
+      1005762752,
+      1083521702,
+      1814966023
+    ],
+    "secret_assignment_included": false,
+    "secret_discarded_after_target_construction": true,
+    "target_ciphertext_words": [
+      225094931,
+      2603215848,
+      1145089974,
+      2220477562
+    ],
+    "target_sha256": "e00aa00d46cbdab63b6a7e63162a4c36272bc0a73c73a16cb3b55f010e0837dd",
+    "unknown_bit_interval": [
+      0,
+      42
+    ],
+    "unknown_key_bits": 43,
+    "unknown_mapping": "key_word0_bits_0_31_then_key_word1_low_bits"
+  },
+  "execution": {
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "early_stop_permitted": false,
+    "inner_count": 4294967296,
+    "known_key_bits": 85,
+    "logical_candidates": 8796093022208,
+    "matched_control_same_kernel_and_domain": true,
+    "outer_bits": 11,
+    "outer_count": 2048,
+    "outer_mask": 2047,
+    "stream_candidates": 268435456,
+    "success_evaluated_only_after_complete_domain": true,
+    "width": 43
+  },
+  "information_boundary": {
+    "production_target_frozen_before_candidate_execution": true,
+    "qualification_precedes_production_target": true,
+    "secret_assignment_available_to_runner": false,
+    "secret_assignment_serialized": false
+  },
+  "protocol_state": "frozen_before_any_production_candidate_execution",
+  "public_challenge_sha256": "1b1904fa3a527de11a02e28ceb63c6177575be47ddcd3b612ac749facf3d1c77",
+  "schema": "xtea-metal-recovery-protocol-v1"
+}

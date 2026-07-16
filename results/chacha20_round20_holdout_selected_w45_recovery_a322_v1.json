@@ -1,0 +1,241 @@
+{
+  "A311_qualification_sha256": "37b258ab7c46f78a702ed92b3c1b72c5b5948113cf67a61a4a1f33e938e9b31a",
+  "A314_order_sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034",
+  "A321_commitment_sha256": "951b98ad7b0c7f905db198ad4740de4987b6f15d3a55805082885dea9584ad46",
+  "anchors": {
+    "A311_qualification": {
+      "path": "research/results/v1/chacha20_round20_w45_four_slab_grouped_engine_a311_qualification_v1.json",
+      "sha256": "37b258ab7c46f78a702ed92b3c1b72c5b5948113cf67a61a4a1f33e938e9b31a"
+    },
+    "A314_order": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_order_v1.json",
+      "sha256": "581c7cbec3900034934525e325ab41f1cc55e79a75aaa1757b0d5bd2ffc3b034"
+    },
+    "A314_preflight": {
+      "path": "research/results/v1/chacha20_round20_w45_fine_band_recovery_a314_preflight_v1.json",
+      "sha256": "cfb5bacd6e6e17479260d8a2cacd2f9808afc632d82e31f80e8dc6ed2d4159a4"
+    },
+    "A314_protocol": {
+      "path": "research/configs/chacha20_round20_w45_fine_band_recovery_a314_v1.json",
+      "sha256": "17877a15624f7ab6fec1333c57260fa447d71d1112b9df5aa8219f8403968574"
+    },
+    "A321_commitment": {
+      "path": "research/configs/chacha20_round20_holdout_selected_w45_operator_a321_commitment_v1.json",
+      "sha256": "951b98ad7b0c7f905db198ad4740de4987b6f15d3a55805082885dea9584ad46"
+    },
+    "A321_order": {
+      "path": "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.json",
+      "sha256": "8ace2e5af5ce1a132e78926f317dadaf63ada13a10c0338a56ddf62713a9d9d2"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_holdout_selected_w45_recovery_a322_design_v1.json",
+      "sha256": "9480d96e6b51309a23ad29e1b579f17398d97770319410acbadd0b91d476e72a"
+    },
+    "protocol": {
+      "path": "research/configs/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
+      "sha256": "5fdd681b97ba452acf713b845423752c9413c07bcd5baf3dfa3c3c78eaa741a4"
+    }
+  },
+  "attempt_id": "A322",
+  "causal": {
+    "api_id": "a322w45",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fresh_holdout_selected_W45_replication_or_W46_transfer",
+        "predicate": "next_required_object",
+        "subject": "A322:confirmed_holdout_selected_fullround_W45_recovery",
+        "suggested_queries": [
+          "Does the same frozen holdout-selection rule retain a strict-subset advantage on a second unseen W45 target or W46?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_HOLDOUT_SELECTED_W45_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_selected_recovery_and_confirmation_chain",
+        "o_idx": 4,
+        "outcome": "A322:confirmed_holdout_selected_fullround_W45_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A322_holdout_selected_recovery_chain",
+        "trigger": "A321:frozen_holdout_selected_W45_execution_order"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "2daa751eef039a58411112c8dae235b8b4eb3011661a551933050ada124774cf",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 5828,
+      "file_size_kb": 5.7,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "confirmation": {
+    "all_blocks_match": true,
+    "assignment": 9971050529000,
+    "byte_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "byte_reference_sha256": [
+      "8f05899aab86572a4533deb011076090f17a97c90df0d10f9869fd0f3a05fa96",
+      "47df586c9e3c4d20034ca4b78a6db018f3c088f7dded52ac01a9303cf0413a53",
+      "a42e013133c91d8cbbf88e033d99ac47005f56474ed2a541d46a2e0fc892e642",
+      "78a4756b44586c9f20da7a08b5435b197b13506749fb31141f2233765c8f316d",
+      "62f09c7da0404d9a6ee44ecc8458296d09d37b6bddcc5a864afc2adb6fc6de70",
+      "3f9c183476e99d7cf9486b905b27f8e4bfee8f2328468238172d551e210cec55",
+      "b231c1acd38cedc27ac6a1a42eb84b470f96d77dd8888c8e05641a2a081766bc",
+      "50710f86898246f238d33c9003be1d64f09705205624d6566646dbd587c0914d"
+    ],
+    "output_bits_checked_per_reference": 4096,
+    "recovered_key_words": [
+      2431434984,
+      1678805265,
+      1941826152,
+      1655383607,
+      2158973446,
+      1331532728,
+      1433051051,
+      29686412
+    ],
+    "recovered_key_words_hex": [
+      "90ecc0e8",
+      "64108911",
+      "73bdea68",
+      "62ab2637",
+      "80af5206",
+      "4f5d93b8",
+      "556a9fab",
+      "01c4fa8c"
+    ],
+    "total_cross_implementation_output_bits_checked": 8192,
+    "word_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "word_reference_sha256": [
+      "8f05899aab86572a4533deb011076090f17a97c90df0d10f9869fd0f3a05fa96",
+      "47df586c9e3c4d20034ca4b78a6db018f3c088f7dded52ac01a9303cf0413a53",
+      "a42e013133c91d8cbbf88e033d99ac47005f56474ed2a541d46a2e0fc892e642",
+      "78a4756b44586c9f20da7a08b5435b197b13506749fb31141f2233765c8f316d",
+      "62f09c7da0404d9a6ee44ecc8458296d09d37b6bddcc5a864afc2adb6fc6de70",
+      "3f9c183476e99d7cf9486b905b27f8e4bfee8f2328468238172d551e210cec55",
+      "b231c1acd38cedc27ac6a1a42eb84b470f96d77dd8888c8e05641a2a081766bc",
+      "50710f86898246f238d33c9003be1d64f09705205624d6566646dbd587c0914d"
+    ]
+  },
+  "design_sha256": "9480d96e6b51309a23ad29e1b579f17398d97770319410acbadd0b91d476e72a",
+  "discovery": {
+    "candidate": 9971050529000,
+    "candidate_hex": "091190ecc0e8",
+    "complete_W45_group_execution_before_stop": true,
+    "complete_domain_assignments": 35184372088832,
+    "control_filter_candidates": [],
+    "early_stop_inside_group": false,
+    "executed_assignments": 12532714569728,
+    "executed_group_dispatches": 5836,
+    "executed_prefix_groups": 1459,
+    "factual_filter_candidates": [
+      9971050529000
+    ],
+    "gpu_seconds": 8925.777156819124,
+    "host_instances": 12,
+    "host_refresh_interval_prefix_groups": 128,
+    "key_word0": 2431434984,
+    "key_word1_low13": 2321,
+    "matched_control_candidates": 0,
+    "prefix12": 2318,
+    "prefix12_hex": "90e",
+    "search_gain_bits": 1.4892358320821093,
+    "strict_subset_of_complete_domain": true,
+    "volatile_wall_seconds": 8932.786728041712
+  },
+  "evidence_stage": "FULLROUND_R20_HOLDOUT_SELECTED_W45_STRICT_SUBSET_RECOVERY_CONFIRMED",
+  "execution_branch": "A321_holdout_selected_four_slab_grouped_W45_recovery",
+  "execution_sha256": "cb9c7b50c8dc4481fe9050f5b5ba8e0ed5638e64bc4ea375ec6b07098edf0392",
+  "information_boundary": {
+    "A313_candidate_available_at_design_freeze": false,
+    "A313_result_available_at_design_freeze": false,
+    "A313_result_used_only_through_frozen_A321_selection": true,
+    "A314_candidate_available_at_design_freeze": false,
+    "A314_candidate_or_prefix_rank_available_at_protocol_freeze": false,
+    "A314_filter_outcome_available_at_design_freeze": false,
+    "A314_filter_outcome_available_at_protocol_freeze": false,
+    "A314_prefix_rank_available_at_design_freeze": false,
+    "A314_result_available_at_design_freeze": false,
+    "A314_result_available_at_protocol_freeze": false,
+    "A314_target_blind_order_available_at_design_freeze": true,
+    "A321_selected_operator_available_at_design_freeze": false,
+    "reader_refits_after_A313_or_A314_reveal": 0,
+    "target_labels_used_from_A314_for_order_selection": 0
+  },
+  "measurement_sha256": "3505ee889222cdd07f0b6efc77d53d04f2ecdac44a083517a65b0aa69775b53e",
+  "protocol_sha256": "5fdd681b97ba452acf713b845423752c9413c07bcd5baf3dfa3c3c78eaa741a4",
+  "public_challenge_sha256": "f55002a6240e6b557e40f15f0d66a997164eb107e59875654d3255588fe20c67",
+  "qualification_gate": {
+    "complete_W45_group_candidates": 8589934592,
+    "evidence_stage": "TARGET_FREE_COMPLETE_W45_GROUP_ENGINE_EXACTLY_QUALIFIED",
+    "production_target_used": false,
+    "qualification_sha256": "cf13a86d016ab4dc74114c03e5796404f85316292901d3849aca97d103f82d89",
+    "synthetic_filter_exact": true
+  },
+  "rank_analysis": {
+    "A314_baseline_rank_one_based": 2886,
+    "prefix12": 2318,
+    "prefix12_hex": "90e",
+    "prefix_ranks_one_based": {
+      "A314_three_arm_portfolio": 2886,
+      "online_four_center_band": 2916,
+      "online_weighted_dovetail_2_to_1": 3346,
+      "raw_nearest_prototype_L1": 1780,
+      "raw_nearest_prototype_Linf": 1459,
+      "raw_nearest_prototype_squared_L2": 1581,
+      "whitened_diagonal_variance_L2": 2132,
+      "whitened_pairwise_median_scaled_L1": 2163,
+      "whitened_shrinkage_mahalanobis": 2158
+    },
+    "selected_gain_bits_vs_complete_prefix_domain": 1.4892358320821093,
+    "selected_operator": "raw_nearest_prototype_Linf",
+    "selected_rank_computed_only_after_independent_confirmation": true,
+    "selected_rank_one_based": 1459,
+    "selected_speed_factor_vs_A314_baseline": 1.978067169294037
+  },
+  "schema": "chacha20-round20-holdout-selected-w45-recovery-a322-result-v1",
+  "selected_A313_calibration_rank_one_based": 2159,
+  "selected_W45_order_uint16be_sha256": "5d1afc37614fdbe050e9853413a3de7b850b876e9bc5649d3dffcf3e23c9780a",
+  "selected_family": "raw_multiview",
+  "selected_operator": "raw_nearest_prototype_Linf",
+  "strict_subset_of_complete_domain": true
+}

@@ -1,0 +1,150 @@
+{
+  "algorithm": {
+    "filter_bits": 256,
+    "key_bits": 256,
+    "mode": "single_block_keyed_root_output",
+    "name": "BLAKE3 keyed hash",
+    "rounds": 7
+  },
+  "anchors": {
+    "independent_numpy_reference_sha256": "9daf38512de019a2d72aaef45b5ac2645e88ccec5ca942d4c1498aa7d21ecbac",
+    "native_source_sha256": "7dbdf10d4d363d9425f2818ee71040a897245fc0091a267ff8780ef7a4212348",
+    "qualification_source_sha256": "5f2eb06a4b1e3472d929746b5f7f971674238ee4c893527c36cb3c70daab953c"
+  },
+  "attempt_id": "B3KR1",
+  "benchmark": {
+    "budget_seconds": 10800.0,
+    "candidate_count_per_repetition": 67108864,
+    "candidates_per_gpu_second": [
+      1127666060.9512422,
+      1492670847.857436,
+      1471918284.7254615
+    ],
+    "gpu_seconds": [
+      0.05951129179447889,
+      0.04495891649276018,
+      0.045592791866511106
+    ],
+    "median_candidates_per_gpu_second": 1471918284.7254615,
+    "minimum_candidates_per_gpu_second": 1127666060.9512422,
+    "repetitions": 3,
+    "safety_factor": 1.25
+  },
+  "evidence_stage": "FULLROUND_KEYED_BLAKE3_METAL_QUALIFIED",
+  "metal_identity": {
+    "metal": {
+      "blake3_rounds": 7,
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "keyed_root_output_words_compared": 8,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "blake3-keyed-metal-native-v1"
+  },
+  "metal_mapping_gate": {
+    "outer_mask": 2047,
+    "rows": [
+      {
+        "assignment": 0,
+        "exact": true,
+        "inner": 0,
+        "outer": 0,
+        "output_sha256": "993a30475caaea98209fa815445190b1f54726a3c266dd2ef14d9a475d84f8b1"
+      },
+      {
+        "assignment": 1,
+        "exact": true,
+        "inner": 1,
+        "outer": 0,
+        "output_sha256": "7fdc46a12d58608ed685f1cf18c0d912fb5596400dcb62e8e3b43253750476d6"
+      },
+      {
+        "assignment": 4294967295,
+        "exact": true,
+        "inner": 4294967295,
+        "outer": 0,
+        "output_sha256": "e0140dc58c47922e60493c39442522f51f46e9ca76a6c7efb393f2424dc54d82"
+      },
+      {
+        "assignment": 4294967296,
+        "exact": true,
+        "inner": 0,
+        "outer": 1,
+        "output_sha256": "4e0111ff72de1d961b40d7b88fd12bd4b15fec928c8559becacd9a8e998f94fe"
+      },
+      {
+        "assignment": 8796093022207,
+        "exact": true,
+        "inner": 4294967295,
+        "outer": 2047,
+        "output_sha256": "9d8c9ccd922426446312d13384e0a5d52606e8f4af34ecf6524887ad2f4ca609"
+      }
+    ],
+    "scalar_numpy_metal_exact": true,
+    "width": 43
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "20dbc129705ee3c7b4a59a05888cdf581c447974b0153c284a0934762b9c93cd",
+    "flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source_sha256": "7dbdf10d4d363d9425f2818ee71040a897245fc0091a267ff8780ef7a4212348"
+  },
+  "official_keyed_kat_gate": {
+    "all_exact": true,
+    "official_key_ascii": "whats the Elvish word for friend",
+    "rows": [
+      {
+        "exact": true,
+        "expected_32_hex": "92b2b75604ed3c761f9d6f62392c8a9227ad0ea3f09573e783f1498a4ed60d26",
+        "independent_numpy_32_hex": "92b2b75604ed3c761f9d6f62392c8a9227ad0ea3f09573e783f1498a4ed60d26",
+        "input_len": 0,
+        "scalar_32_hex": "92b2b75604ed3c761f9d6f62392c8a9227ad0ea3f09573e783f1498a4ed60d26"
+      },
+      {
+        "exact": true,
+        "expected_32_hex": "6d7878dfff2f485635d39013278ae14f1454b8c0a3a2d34bc1ab38228a80c95b",
+        "independent_numpy_32_hex": "6d7878dfff2f485635d39013278ae14f1454b8c0a3a2d34bc1ab38228a80c95b",
+        "input_len": 1,
+        "scalar_32_hex": "6d7878dfff2f485635d39013278ae14f1454b8c0a3a2d34bc1ab38228a80c95b"
+      },
+      {
+        "exact": true,
+        "expected_32_hex": "bb1eb5d4afa793c1ebdd9fb08def6c36d10096986ae0cfe148cd101170ce37ae",
+        "independent_numpy_32_hex": "bb1eb5d4afa793c1ebdd9fb08def6c36d10096986ae0cfe148cd101170ce37ae",
+        "input_len": 63,
+        "scalar_32_hex": "bb1eb5d4afa793c1ebdd9fb08def6c36d10096986ae0cfe148cd101170ce37ae"
+      },
+      {
+        "exact": true,
+        "expected_32_hex": "ba8ced36f327700d213f120b1a207a3b8c04330528586f414d09f2f7d9ccb7e6",
+        "independent_numpy_32_hex": "ba8ced36f327700d213f120b1a207a3b8c04330528586f414d09f2f7d9ccb7e6",
+        "input_len": 64,
+        "scalar_32_hex": "ba8ced36f327700d213f120b1a207a3b8c04330528586f414d09f2f7d9ccb7e6"
+      }
+    ],
+    "source": "BLAKE3-team/BLAKE3 test_vectors/test_vectors.json"
+  },
+  "schema": "blake3-keyed-metal-qualification-v1",
+  "selection": {
+    "eligible_widths": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "production_challenge_generated": false,
+    "projected_seconds_at_minimum_throughput": 7800.264038085938,
+    "selected_width": 43
+  }
+}

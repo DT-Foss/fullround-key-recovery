@@ -1,0 +1,88 @@
+{
+  "attempt_id": "B3OFF1",
+  "authentic_causal": {
+    "api_id": "b3off1",
+    "clusters": 1,
+    "explicit_triplets": 2,
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/blake3_keyed_official_b3sum_root_confirmation_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W43_domain",
+        "predicate": "next_required_gain",
+        "subject": "BLAKE3:official_b3sum_confirmed_W43_recovery",
+        "suggested_queries": [
+          "Which frozen operator concentrates the W43 residual search?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "b4128ba933c89f0dc558bd7448a7c5acff82aa115c2936f3b05c2cf887c91d4a",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_official_confirmation_chain",
+        "o_idx": 4,
+        "outcome": "BLAKE3:official_b3sum_confirmed_W43_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "AI-native exact closure retained in-file",
+        "s_idx": 0,
+        "source": "materialized:B3OFF1",
+        "trigger": "BLAKE3:unique_verified_W43_keyed_residual"
+      }
+    },
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "rules": 1,
+    "sha256": "f28f1f9fddfbb6ff2690e6cdf1eacc557563a78e8853b512c95f8f72211c1f44",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 2773,
+      "file_size_kb": 2.7,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.blake3_keyed_official_b3sum_root_confirmation_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 1,
+      "triplets": 3
+    }
+  },
+  "complete_256_bit_target_match": true,
+  "confirmation_sha256": "b4128ba933c89f0dc558bd7448a7c5acff82aa115c2936f3b05c2cf887c91d4a",
+  "control_target_rejected_in_complete_source_execution": true,
+  "evidence_stage": "OFFICIAL_BLAKE3_THIRD_IMPLEMENTATION_RECOVERY_CONFIRMED",
+  "independent_numpy_target_output_hex": "33214d986e0b94b584ba0e02764c20e1bbf34cbf1bf60b630eda01a04eed1746",
+  "official_target_output_hex": "33214d986e0b94b584ba0e02764c20e1bbf34cbf1bf60b630eda01a04eed1746",
+  "official_tool": {
+    "binary_path": "/private/tmp/blake3-official-a287/b3sum/target/release/b3sum",
+    "binary_sha256": "7ed2f331413dac1162c7007a14528a3740adf4cb10bf38ca2af57c6e38f13e3a",
+    "cargo_lock_sha256": "e6fbe1f2b2a6fc726bf8f3da5774ba9fb05f94115883c531ba1a02a891e072a3",
+    "cargo_manifest_sha256": "8713fddfa4ac6e1b0dc384f4abaf83d62f0e52f5e408b3b2ff3b30de746c1d54",
+    "commit": "8aa5145039b972ba30e98e788752d37d14568824",
+    "official_KAT_exact": true,
+    "official_keyed_64_byte_message_KAT_expected_hex": "ba8ced36f327700d213f120b1a207a3b8c04330528586f414d09f2f7d9ccb7e6",
+    "official_keyed_64_byte_message_KAT_observed_hex": "ba8ced36f327700d213f120b1a207a3b8c04330528586f414d09f2f7d9ccb7e6",
+    "repository": "https://github.com/BLAKE3-team/BLAKE3",
+    "version": "b3sum 1.8.5"
+  },
+  "recovered_assignment": 6241046275180,
+  "recovered_key_hex": "6ca4581bad4dc17cba32241d06b9f0034c5184cd11b4410fd1833ce834dd8efe",
+  "scalar_target_output_hex": "33214d986e0b94b584ba0e02764c20e1bbf34cbf1bf60b630eda01a04eed1746",
+  "schema": "blake3-keyed-official-b3sum-root-confirmation-v1",
+  "source_protocol": {
+    "path": "research/configs/blake3_keyed_metal_recovery_v1.json",
+    "sha256": "6e5b04a66165307328ad5ab56be272997dffd478c04b72b74f380c7d4bf68b2c"
+  },
+  "source_recovery": {
+    "path": "research/results/v1/blake3_keyed_metal_recovery_v1.json",
+    "sha256": "1d52eee222c2397a8d6f42937345390b3fb8dd9faadeb555cfa705520f3ec409"
+  },
+  "three_implementation_identity": true,
+  "unknown_key_bits": 43
+}

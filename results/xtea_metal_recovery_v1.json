@@ -1,0 +1,156 @@
+{
+  "anchors": {
+    "family_framework_sha256": "107e400039176ef1ab6e400677f55b7148c9342571be4f0822aaf33bc2e2d7ee",
+    "native_executable_sha256": "3e551be49a23a69e296f3cbca2c78ba49bceb35d26a77a495c005ef059b7712a",
+    "native_source_sha256": "fb96e8d225bf4cbc2f854b1d15f783124a010f6139fcabbbd59b6285fb7c2c5f",
+    "runner_sha256": "901eef29125197c69ccf47e7acc4935de61ebadb2b45b2d8502e7a4dd21a2c4e"
+  },
+  "attempt_id": "XTEAKR1",
+  "authentic_causal": {
+    "api_id": "xteakr1",
+    "clusters": 2,
+    "gaps": [
+      {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W43_domain",
+        "predicate": "next_required_gain",
+        "subject": "XTEA:unique_verified_W43_fullround_residual",
+        "suggested_queries": [
+          "Which frozen operator ranks a held-out W43 XTEA region early?"
+        ]
+      }
+    ],
+    "path": "research/results/v1/xtea_metal_recovery_v1.causal",
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "rules": 2,
+    "sha256": "4fe46ada5098deb7c17a8568b0b15ac4485f7496476698eeccd02a307b59b94f",
+    "triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 5364,
+      "file_size_kb": 5.2,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.xtea_metal_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation_sha256": "f8f6b1455b3a56616b1194ec0b9c8c1a2b9203aab21e7c29b63e2195f9492a64",
+  "evidence_stage": "FULLROUND_XTEA_COMPLETE_DOMAIN_RECOVERY_CONFIRMED",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "executed_assignment_count": 8796093022208,
+    "factual_confirmations": [
+      {
+        "assignment": 5121519399188,
+        "complete_128_bit_match": true,
+        "independent_numpy_output_sha256": "e00aa00d46cbdab63b6a7e63162a4c36272bc0a73c73a16cb3b55f010e0837dd",
+        "output_bits_checked": 128,
+        "recovered_key_words": [
+          1918382356,
+          791127208,
+          1812447632,
+          3339131489
+        ],
+        "recovered_key_words_hex": [
+          "72583114",
+          "2f27a4a8",
+          "6c07c190",
+          "c7071a61"
+        ],
+        "relation": "factual",
+        "scalar_numpy_identity": true,
+        "scalar_output_sha256": "e00aa00d46cbdab63b6a7e63162a4c36272bc0a73c73a16cb3b55f010e0837dd"
+      }
+    ],
+    "factual_filter_matches": [
+      5121519399188
+    ],
+    "factual_full_matches": [
+      5121519399188
+    ],
+    "gpu_seconds": 3522.483606181573,
+    "known_key_bits": 85,
+    "logical_candidate_count": 8796093022208,
+    "newly_executed_assignment_count": 8796093022208,
+    "resumed_assignment_count": 0,
+    "success_evaluated_only_after_complete_domain": true,
+    "unique_exact_assignment": true,
+    "unknown_key_bits": 43,
+    "volatile_candidates_per_gpu_second": 2497128164.5631566,
+    "volatile_wall_seconds": 3664.8330813329667
+  },
+  "execution_sha256": "30b432a3a57b5442ec087a10176abfc3c93869d5e393bd3aba44c9b70493b625",
+  "mapping_gate": {
+    "rows": [
+      {
+        "assignment": 0,
+        "output_sha256": "eed9c092a94eb1db02c340f65b384b41f34ded2886f9462fe4c64ad5be5559e3"
+      },
+      {
+        "assignment": 1,
+        "output_sha256": "7fff9b36485165e49fcbcc785efb6d0cce098cd6d92d0e743839ce2e72184e6d"
+      },
+      {
+        "assignment": 4294967295,
+        "output_sha256": "1659c9b3c56c3fbb24975b8f18439ad159fbae4e9f0c8493b90fdc970b526fb4"
+      },
+      {
+        "assignment": 4294967296,
+        "output_sha256": "bd8efe45c5159df321697a92d338371332c855375d06c91aab6ea4774e2661b6"
+      },
+      {
+        "assignment": 8796093022207,
+        "output_sha256": "dffc2f8dda7fa12273af54c1530c3298917c4804c591d2b30cd9a4f5dfb262a8"
+      }
+    ],
+    "scalar_numpy_metal_exact": true
+  },
+  "metal_identity": {
+    "metal": {
+      "algorithms": [
+        "tea",
+        "xtea",
+        "siphash24"
+      ],
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "output_words_compared": 4,
+      "plaintext_blocks": 2,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true,
+      "tea_cycles": 32,
+      "tea_feistel_updates": 64
+    },
+    "op": "ready",
+    "version": "tea-metal-native-v1"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "3e551be49a23a69e296f3cbca2c78ba49bceb35d26a77a495c005ef059b7712a",
+    "flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source_sha256": "fb96e8d225bf4cbc2f854b1d15f783124a010f6139fcabbbd59b6285fb7c2c5f"
+  },
+  "protocol_sha256": "1e8a58dc8ae337df8e7fee568fb45e9342e4fea8bb632e8abac7fb130f77f25f",
+  "public_challenge_sha256": "1b1904fa3a527de11a02e28ceb63c6177575be47ddcd3b612ac749facf3d1c77",
+  "qualification_path": "research/results/v1/xtea_metal_qualification_v1.json",
+  "qualification_sha256": "0ec5b4ebf6bee50b36a198594d91a141cb6ca553d2f588b7d399b5fa81026603",
+  "schema": "xtea-metal-recovery-result-v1"
+}

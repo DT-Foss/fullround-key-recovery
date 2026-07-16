@@ -8,7 +8,7 @@ authors:
     email: d.foss@ieee.org
     orcid: "https://orcid.org/0009-0004-0289-7154"
     affiliation: "AI Systems and Causal Knowledge Graphs, Görlitz, Germany"
-version: 1.5.0
+version: 1.6.0
 date-released: 2026-07-16
 license: MIT
 repository-code: "https://github.com/DT-Foss/fullround-key-recovery"
@@ -29,4 +29,9 @@ keywords:
   - strict-subset recovery
   - Salsa20/20
   - Threefish-256
+  - Threefish-1024
+  - BLAKE3
+  - SipHash-2-4
+  - TEA
+  - XTEA
   - Apple Metal

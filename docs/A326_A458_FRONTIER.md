@@ -28,7 +28,7 @@ residual domain. Both protocols were frozen with production disabled and zero
 candidate assignments. No live worker progress, filter outcome, stop object, or
 secret recovery result is present in either public repository.
 
-The 13 complete-domain and 24 strict-subset recovery executions summarized in
+The 18 complete-domain and 28 strict-subset recovery executions summarized in
 this repository remain the closed recovery set. A456 and A458 advance the W52
 target-blind execution schedule; they are schedule results, not additional
 recovery executions.

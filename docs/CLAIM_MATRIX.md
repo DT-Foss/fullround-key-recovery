@@ -1,10 +1,10 @@
 # Verified claim matrix
 
-The thirteen complete-domain records are bound to frozen public challenges,
+The eighteen complete-domain records are bound to frozen public challenges,
 complete residual-domain executions, exact matched controls, and independent
-complete-output confirmation. The 24 strict-subset ChaCha20-R20 executions are
-bound to frozen target-blind or zero-refit schedules, exact execution evidence,
-matched controls, and full-output recomputation. All native executions ran on a
+complete-output confirmation. The 28 strict-subset ChaCha20-R20 executions are
+bound to their declared pre-execution information boundary, exact execution
+evidence, frozen controls, and full-output recomputation. All native executions ran on a
 base Apple M4 Mac mini (`Mac16,10`, 10 CPU cores, 16 GB unified memory).
 
 | Record | Primitive | Semantics | Unknown / known bits | Public relation | Domain | Models | Confirmation |
@@ -22,6 +22,11 @@ base Apple M4 Mac mini (`Mac16,10`, 10 CPU cores, 16 GB unified memory).
 | P128R1 | PRESENT-128 | 31 rounds plus K32 whitening | 38 / 90 | 2 block pairs | `2^38` | 1 / 0 | 128 bits |
 | AES256R1 | AES-256 | 14-round FIPS 197 encryption | 41 / 215 | 2 block pairs | `2^41` | 1 / 0 | 256 bits |
 | CHACHA20KR43 | ChaCha20 | 20 rounds plus feed-forward | 43 / 213 | counter, nonce, 8 output blocks | `2^43` | 1 / 0 | 8,192 bits |
+| B3KR1 | keyed BLAKE3 | 7 standard rounds | 43 / 213 | one 64-byte message, 256-bit root | `2^43` | 1 / 0 | 256 bits plus official `b3sum` |
+| SIPKR1 | SipHash-2-4 | complete 2/4 operation | 43 / 85 | two 8-byte messages | `2^43` | 1 / 0 | 128 bits |
+| TEAKR1 | TEA | 32 cycles / 64 updates | 43 / 85 | 2 block pairs | `2^43` | 1 / 0 | 128 bits |
+| XTEAKR1 | XTEA | 32 cycles / 64 updates | 43 / 85 | 2 block pairs | `2^43` | 1 / 0 | 128 bits |
+| TF1024KR1 | Threefish-1024 | 80 rounds plus final subkey | 39 / 985 | tweak, 1 block pair | `2^39` | 1 / 0 | 2,048 bits |
 
 `Models` gives exact factual/control models. Every row has `early_stop=false`.
 
@@ -40,13 +45,16 @@ base Apple M4 Mac mini (`Mac16,10`, 10 CPU cores, 16 GB unified memory).
 | A305 | 1 | 43 / 213 | rank 2,114/4,096 | 4,539,780,431,872 / 8,796,093,022,208 assignments | 8,192 bits |
 | A309 | 1 | 43 / 213 | rank 4,044/4,096 | 8,684,423,872,512 / 8,796,093,022,208 assignments | 8,192 bits |
 | A313 | 1 | 44 / 212 | rank 2,753/4,096 | 11,824,044,965,888 / 17,592,186,044,416 assignments | 8,192 bits |
+| A322 | 1 | 45 / 211 | rank 1,459/4,096 | 12,532,714,569,728 / 35,184,372,088,832 assignments | 8,192 bits |
+| A325 | 1 | 46 / 210 | rank 77/4,096 | 1,322,849,927,168 / 70,368,744,177,664 assignments | 8,192 bits |
+| A350 | 1 | 46 / 210 | rank 445/4,096 | 7,645,041,786,880 / 70,368,744,177,664 assignments | 8,192 bits |
+| A374 | 1 | 48 / 208 | rank 102/4,096 | 7,009,386,627,072 / 281,474,976,710,656 assignments | 8,192 bits |
 
-A286 uses a third direct RFC-style implementation for every output block and
-rejects all four one-bit controls. A294--A313 use independent word- and
-byte-oriented implementations across all eight output blocks and reject every
-matched one-bit control. The complete batch contains 19 executions across 18
-targets; the full archive contains 24 strict-subset executions across 23
-targets.
+A281/A286 use post-model one-bit control rejection (`O0`); A286 also uses a
+third direct RFC-style implementation for every output block. A294--A374 use
+independent word- and byte-oriented implementations across all eight output
+blocks and the same grouped candidate search accepts zero control candidates
+(`S0`). The full frontier contains 28 strict-subset executions.
 
 ## Evidence mapping
 
@@ -67,6 +75,11 @@ targets.
 | A281 | `configs/chacha20_round20_cross_material_target_v1.json` | `results/chacha20_round20_cross_material_composite_recovery_v1.json` | `causal/chacha20_round20_cross_material_composite_recovery_canonical_v1.causal` | `reports/original/CAUSAL_CHACHA20_ROUND20_CROSS_MATERIAL_COMPOSITE_RECOVERY_CANONICAL_V1.md` |
 | A286 | `configs/chacha20_round20_multitarget_panel_master_v1.json` | `results/chacha20_round20_multitarget_panel_root_confirmation_a286_v1.json` | `causal/chacha20_round20_multitarget_panel_root_confirmation_a286_v1.causal` | `reports/original/CHACHA20_ROUND20_MULTITARGET_PANEL_ROOT_CONFIRMATION_A286_V1.md` |
 | CHACHA20KR43 | `configs/chacha20_round20_w43_metal_record_v1.json` | `results/chacha20_round20_w43_metal_record_v1.json` | `causal/chacha20_round20_w43_metal_record_v1.causal` | source report in `chronology/` |
+| B3KR1 | `configs/blake3_keyed_metal_recovery_v1.json` | `results/blake3_keyed_metal_recovery_v1.json` | `causal/blake3_keyed_metal_recovery_v1.causal` | `reports/original/FULLROUND_BLAKE3_KEYED_METAL_RECOVERY_V1.md` |
+| SIPKR1 | `configs/siphash24_metal_recovery_v1.json` | `results/siphash24_metal_recovery_v1.json` | `causal/siphash24_metal_recovery_v1.causal` | `reports/original/FULLROUND_SIPHASH24_METAL_RECOVERY_V1.md` |
+| TEAKR1 | `configs/tea_metal_recovery_v1.json` | `results/tea_metal_recovery_v1.json` | `causal/tea_metal_recovery_v1.causal` | `reports/original/FULLROUND_TEA_METAL_RECOVERY_V1.md` |
+| XTEAKR1 | `configs/xtea_metal_recovery_v1.json` | `results/xtea_metal_recovery_v1.json` | `causal/xtea_metal_recovery_v1.causal` | `reports/original/FULLROUND_XTEA_METAL_RECOVERY_V1.md` |
+| TF1024KR1 | `configs/threefish1024_metal_record_v1.json` | `results/threefish1024_metal_record_v1.json` | `causal/threefish1024_metal_record_v1.causal` | `reports/original/FULLROUND_THREEFISH1024_METAL_RECORD_V1.md` |
 | A294 | `configs/chacha20_round20_w24_causal_ordered_metal_a294_v1.json` | `results/chacha20_round20_w24_causal_ordered_metal_a294_v1.json` | `causal/chacha20_round20_w24_causal_ordered_metal_a294_v1.causal` | source report in `chronology/` |
 | A295 | `configs/chacha20_round20_w24_fine_selected_channel_a295_v1.json` | `results/chacha20_round20_w24_fine_selected_channel_a295_v1.json` | `causal/chacha20_round20_w24_fine_selected_channel_a295_v1.causal` | source report in `chronology/` |
 | A296 | `configs/chacha20_round20_causal_search_gain_panel_a296_v1.json` | `results/chacha20_round20_causal_search_gain_panel_a296_v1.json` | `causal/chacha20_round20_causal_search_gain_panel_a296_v1.causal` | source report in `chronology/` |
@@ -76,6 +89,10 @@ targets.
 | A305 | `configs/chacha20_round20_w43_fine_selected_channel_transfer_a299_v1.json` | `results/chacha20_round20_w43_a299_grouped_replay_a305_v1.json` | `causal/chacha20_round20_w43_a299_grouped_replay_a305_v1.causal` | source report in `chronology/` |
 | A309 | `configs/chacha20_round20_w43_three_operator_portfolio_a300_v1.json` | `results/chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.json` | `causal/chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.causal` | source report in `chronology/` |
 | A313 | `configs/chacha20_round20_w44_calibrated_coarse_numeric_a308_v1.json` | `results/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json` | `causal/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.causal` | source report in `chronology/` |
+| A322 | `configs/chacha20_round20_w45_fine_band_recovery_a314_v1.json` | `results/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json` | `causal/chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal` | retained terminal Markdown in `results/` |
+| A325 | `configs/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json` | `results/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json` | `causal/chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal` | retained terminal Markdown in `results/` |
+| A350 | `configs/chacha20_round20_w46_a349_order_prospective_recovery_a350_v1.json` | `results/chacha20_round20_w46_a349_order_prospective_recovery_a350_v1.json` | `causal/chacha20_round20_w46_a349_order_prospective_recovery_a350_v1.causal` | retained terminal Markdown in `results/` |
+| A374 | `configs/chacha20_round20_w48_target_conditioned_recovery_a374_v1.json` | `results/chacha20_round20_w48_target_conditioned_recovery_a374_v1.json` | `causal/chacha20_round20_w48_target_conditioned_recovery_a374_v1.causal` | retained terminal Markdown in `results/` |
 
 Every immutable path above is byte-pinned in `provenance/ARTIFACTS.sha256`.
 Qualification records, native sources, factories, recovery runners, every A286
@@ -91,5 +108,5 @@ full-round recovery, commodity-hardware feasibility at the listed widths,
 cross-family transfer, unique factual reconstruction, and control rejection.
 
 The strict-subset records directly establish recovery in their declared W20,
-W24, W28, W32, W43, and W44 residual domains. Every listed assignment reconstructs
+W24, W28, W32, W43, W44, W45, W46, and W48 residual domains. Every listed assignment reconstructs
 the complete key under its frozen known-key relation.

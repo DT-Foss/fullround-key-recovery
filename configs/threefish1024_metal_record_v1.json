@@ -1,0 +1,193 @@
+{
+  "anchors": {
+    "canonical_source": {
+      "path": "src/arx_carry_leak/ciphers.py",
+      "sha256": "fae855bdb18b76043bf9b520b4d1ea5f0c6a2207abfa13f087d0faa4a6aaf770"
+    },
+    "design": {
+      "path": "research/configs/threefish1024_metal_record_design_v1.json",
+      "sha256": "dd6a4a3ebfeae67b51af34f93c31c70e661dff8e8db756e0588ab04cb1c1feb3"
+    },
+    "native_source": {
+      "path": "research/experiments/threefish1024_metal_native.swift",
+      "sha256": "82b3de6d0baf7876d8f45fe06773e74c32cf89dd8c7947fe11ca56a30ba545e6"
+    },
+    "qualification": {
+      "path": "research/results/v1/threefish1024_metal_qualification_v1.json",
+      "sha256": "9f6ef85988f0097821b68f15f25777757b5a7158f3c0b48e81329863a6d2b816"
+    },
+    "runner": {
+      "path": "research/experiments/threefish1024_metal_record.py",
+      "sha256": "84a50e56540d990343aafc0c8a467f3159294a5069368596d6cfc739ccf1fd99"
+    }
+  },
+  "attempt_id": "TF1024KR1",
+  "design": {
+    "attempt_id": "TF1024KR1",
+    "design_state": "frozen_before_any_production_target_qualification_width_selection_or_candidate_execution",
+    "information_boundary": {
+      "candidate_outcome_may_select_width_target_or_success_rule": false,
+      "production_assignment_exists_at_design_freeze": false,
+      "production_target_exists_at_design_freeze": false,
+      "qualification_or_benchmark_outcome_exists_at_design_freeze": false
+    },
+    "primitive_contract": {
+      "block_bits": 1024,
+      "key_bits": 1024,
+      "known_tweak_bits": 128,
+      "mixes_per_round": 8,
+      "official_zero_key_zero_tweak_zero_plaintext_KAT_required": true,
+      "rounds": 80,
+      "standard_final_subkey_included": true,
+      "subkey_injections": 21
+    },
+    "production_contract": {
+      "assignment_returned_logged_or_serialized_before_execution": false,
+      "assignment_used_only_to_construct_public_ciphertext": true,
+      "authentic_AI_native_Causal_artifact_required": true,
+      "authentic_CausalReader_reopen_required": true,
+      "complete_selected_domain_required": true,
+      "confirmation": "canonical_scalar_plus_independent_second_reference_over_all_1024_output_bits",
+      "early_stop_forbidden": true,
+      "fresh_assignment_source": "OS_CSPRNG",
+      "matched_control": "target_final_word_xor_1_over_identical_complete_domain"
+    },
+    "purpose": "Prospectively recover a fresh residual master-key assignment through all 80 Threefish-1024 rounds with the standard final subkey on Apple Metal.",
+    "qualification_contract": {
+      "benchmark_repeats": 5,
+      "maximum_projected_complete_gpu_seconds": 21600,
+      "maximum_unknown_bits": 43,
+      "minimum_unknown_bits": 32,
+      "runs_before_any_production_target_exists": true,
+      "scalar_Metal_exact_block_gate_required": true,
+      "selection_uses_minimum_observed_candidates_per_gpu_second": true,
+      "uint32_boundary_mapping_gate_required": true,
+      "volatile_performance_is_not_a_success_rule": true
+    },
+    "schema": "threefish1024-metal-record-design-v1",
+    "source_anchors": {
+      "existing_Threefish256_Metal_pattern": "A238_A240",
+      "existing_fullround_F8_anchor": "Threefish-1024_R80_permutation_fixed_point_retained",
+      "specification": "Skein_Hash_Function_Family_v1.3"
+    }
+  },
+  "execution": {
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "confirmation": "canonical_plus_independent_all_1024_output_bits",
+    "early_stop_forbidden": true,
+    "inner_candidate_count_per_slice": 4294967296,
+    "logical_candidate_count": 549755813888,
+    "matched_control_same_kernel_and_domain": true,
+    "outer_bits": 7,
+    "outer_slice_count": 128,
+    "stream_batch_count": 2048,
+    "stream_candidate_count": 268435456,
+    "success_evaluated_only_after_complete_domain": true
+  },
+  "execution_sha256": "4ad0f2a2474c2bd75a7cef54ccf14385b2ca2714b9525275261cf49a9d7cbfc0",
+  "information_boundary": {
+    "all_secret_fields_absent": true,
+    "assignment_absent": true,
+    "candidate_execution_started": false,
+    "success_rule_frozen": true,
+    "target_frozen_after_pre_target_qualification": true
+  },
+  "protocol_state": "fresh_target_and_complete_execution_contract_frozen_before_candidate_zero",
+  "public_challenge": {
+    "candidate_encoding": "assignment=(outer_key0_bits<<32)|key0_low32",
+    "control_ciphertext_sha256": "aa7bb2aa3eda2e2376eb1616aa555ed81852fecc987669c994e8d6f4a1026377",
+    "control_ciphertext_words": [
+      1533242957775763407,
+      10666056137426495417,
+      3299439338665658311,
+      12664467223733286023,
+      4342185410407570454,
+      7344967719069937938,
+      16793367905008436820,
+      1215856186413473703,
+      7022587189387960872,
+      1889948118033476963,
+      14163627469417390036,
+      9669509937337718348,
+      8959821048350956887,
+      4161504701616863479,
+      9248471779058465754,
+      7709147542040365196
+    ],
+    "full_key_included": false,
+    "known_key0_upper_bits": 746839974631964672,
+    "known_key_bits": 985,
+    "known_key_words_1_through_15": [
+      9820682439086433811,
+      15278579881280024107,
+      13029888193905099230,
+      10651841486502779335,
+      3494607514834442080,
+      4877118260459448024,
+      6148812330854540441,
+      17174740954529235685,
+      10750366321222683701,
+      14942757847493875650,
+      129867207065982633,
+      12442512608760675837,
+      8117802834961937104,
+      10765586809463216635,
+      460267372500797215
+    ],
+    "known_material_derivation_label": "threefish1024/tf1024kr1/fullround/known-material/v1",
+    "known_material_derivation_sha256": "6656aa741732cffda8eae915fac0d5c7572f42280b9e7acba494f849af1a82f3",
+    "known_tweak_words": [
+      8706223389427588130,
+      975557473447505883
+    ],
+    "plaintext_words": [
+      13928966360821317175,
+      17526819857533386747,
+      6534889836962225742,
+      7042873209982032339,
+      15771248102020223285,
+      11405185258486762586,
+      10404795689523707416,
+      7236682346768615226,
+      17015396919566322326,
+      14748606830178271142,
+      9890304189175704755,
+      17626468973762690102,
+      14206660892753627826,
+      16999366241665507022,
+      5182631192497394829,
+      7928181876479139610
+    ],
+    "primitive": "Threefish-1024",
+    "rounds": 80,
+    "secret_discarded_after_target_construction": true,
+    "secret_used_only_for_target_construction": true,
+    "standard_final_subkey_included": true,
+    "target_ciphertext_sha256": "c1e574cd6f499d319bc8fc3eed39636f2e7a3f7a749acbc9b0855cd34794a61a",
+    "target_ciphertext_words": [
+      1533242957775763407,
+      10666056137426495417,
+      3299439338665658311,
+      12664467223733286023,
+      4342185410407570454,
+      7344967719069937938,
+      16793367905008436820,
+      1215856186413473703,
+      7022587189387960872,
+      1889948118033476963,
+      14163627469417390036,
+      9669509937337718348,
+      8959821048350956887,
+      4161504701616863479,
+      9248471779058465754,
+      7709147542040365197
+    ],
+    "unknown_assignment_included": false,
+    "unknown_assignment_value_included": false,
+    "unknown_key_bits": 39
+  },
+  "public_challenge_sha256": "c794ef3f9ff2256fa8496ade6c9ae1dee98bd65dd4c9b1906fab47e7ad02a9cc",
+  "qualification_sha256": "9f6ef85988f0097821b68f15f25777757b5a7158f3c0b48e81329863a6d2b816",
+  "schema": "threefish1024-metal-record-protocol-v1"
+}

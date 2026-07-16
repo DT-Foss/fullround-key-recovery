@@ -81,6 +81,15 @@ RESULT_FILES = {
     "chacha20_a305": "chacha20_round20_w43_a299_grouped_replay_a305_v1.json",
     "chacha20_a309": "chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.json",
     "chacha20_a313": "chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+    "blake3_keyed": "blake3_keyed_metal_recovery_v1.json",
+    "siphash24": "siphash24_metal_recovery_v1.json",
+    "tea": "tea_metal_recovery_v1.json",
+    "xtea": "xtea_metal_recovery_v1.json",
+    "threefish1024": "threefish1024_metal_record_v1.json",
+    "chacha20_a322": "chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
+    "chacha20_a325": "chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "chacha20_a350": "chacha20_round20_w46_a349_order_prospective_recovery_a350_v1.json",
+    "chacha20_a374": "chacha20_round20_w48_target_conditioned_recovery_a374_v1.json",
 }
 
 CONFIG_FILES = {
@@ -93,6 +102,7 @@ CONFIG_FILES = {
     "chacha20_a305": "chacha20_round20_w43_fine_selected_channel_transfer_a299_v1.json",
     "chacha20_a309": "chacha20_round20_w43_three_operator_portfolio_a300_v1.json",
     "chacha20_a313": "chacha20_round20_w44_calibrated_coarse_numeric_a308_v1.json",
+    "chacha20_a322": "chacha20_round20_w45_fine_band_recovery_a314_v1.json",
 }
 
 

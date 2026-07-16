@@ -1,0 +1,247 @@
+{
+  "A321_commitment_sha256": "951b98ad7b0c7f905db198ad4740de4987b6f15d3a55805082885dea9584ad46",
+  "A324_qualification_sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a",
+  "anchors": {
+    "A321_commitment": {
+      "path": "research/configs/chacha20_round20_holdout_selected_w45_operator_a321_commitment_v1.json",
+      "sha256": "951b98ad7b0c7f905db198ad4740de4987b6f15d3a55805082885dea9584ad46"
+    },
+    "A321_design": {
+      "path": "research/configs/chacha20_round20_holdout_selected_w45_operator_a321_design_v1.json",
+      "sha256": "3db5966ca254f8a5342399445d992db672fd0e9e5d40bc8ad401b0ae8cbd1e92"
+    },
+    "A321_order": {
+      "path": "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.json",
+      "sha256": "8ace2e5af5ce1a132e78926f317dadaf63ada13a10c0338a56ddf62713a9d9d2"
+    },
+    "A324_protocol": {
+      "path": "research/configs/chacha20_round20_w46_eight_slab_grouped_engine_a324_v1.json",
+      "sha256": "a787285d547e4eaaeffd808c35fcaa3f44df2ce2bd01dece67cd6f4ceb550694"
+    },
+    "A324_qualification": {
+      "path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+      "sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a"
+    },
+    "A325_implementation_commitment": {
+      "path": "research/configs/chacha20_round20_holdout_selected_w46_recovery_a325_implementation_commitment_v1.json",
+      "sha256": "7f537870745c9216aaaf7be0bc9f93dc68a9897f558b2f79eb566860ad25ef63"
+    },
+    "A325_reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_holdout_selected_w46_recovery_a325.sh",
+      "sha256": "5de11966c828bd4a12b81dae555544e60783801809d091bcc56c746f26c24285"
+    },
+    "A325_runner": {
+      "path": "research/experiments/chacha20_round20_holdout_selected_w46_recovery_a325.py",
+      "sha256": "27aee43b3a4bcbacef869af30f9017bac8ae643c4027945d01f97f030217f156"
+    },
+    "A325_test": {
+      "path": "tests/test_chacha20_round20_holdout_selected_w46_recovery_a325.py",
+      "sha256": "089b59ff781f84ce53944189e41e3fa858d9bab41a76bb813bfa9e72b4800a79"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_holdout_selected_w46_recovery_a325_design_v1.json",
+      "sha256": "de0262a09388a613d3fda288dcb4211c92be246d43d3ccb89dca16b71d2a9c6b"
+    }
+  },
+  "attempt_id": "A325",
+  "causal": {
+    "api_id": "a325w46",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "fresh_W46_replication_or_W47_transfer",
+        "predicate": "next_required_object",
+        "subject": "A325:confirmed_holdout_selected_fullround_W46_recovery",
+        "suggested_queries": [
+          "Does unchanged holdout-selected concentration replicate on another W46 target or transfer to W47?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_UNCHANGED_HOLDOUT_SELECTED_W46_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_unchanged_W46_transfer_recovery_confirmation_chain",
+        "o_idx": 4,
+        "outcome": "A325:confirmed_holdout_selected_fullround_W46_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A325_holdout_selected_W46_chain",
+        "trigger": "A321:frozen_holdout_selected_order"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "25de0d93a78564ee76ff83dcd65afe932f337bca0467e05b24d91a4df4c5529b",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 5809,
+      "file_size_kb": 5.7,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "confirmation": {
+    "all_blocks_match": true,
+    "assignment": 32932650148774,
+    "byte_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "byte_reference_sha256": [
+      "a96e02d57a35d52f6a810d1a43fed54dc5a69d58f19bc697b59a22ca39aa26ae",
+      "8c7a2d5b41189f1e9be8a57d041a059521064b014889aa03f88a0dff54ca50eb",
+      "47e0a8359c64e86c0f0dd7444a4e1b7369d49d91ac36ac1a50d6984d547907ec",
+      "1f4cbdf506defcfd5183f4c29edcb9c5c9ec113bafaeab64453bc82f1058d1df",
+      "f098bc834f3c2b75f97bd69bf0af951990aedd80177d260a86d4f48bf1bf9602",
+      "32d9635979a9f473d167a94dec1b6ea5997039b48fa057d8f6cba80b83280d24",
+      "e3632c309456b62ca0ceb80e80b3d3b23060799626a6c361027a780128d9fedf",
+      "5dc9acde237298f6403b24d2b91466ccdf203c64289d81ba363b4e2d10c5fc2b"
+    ],
+    "output_bits_checked_per_reference": 4096,
+    "recovered_key_words": [
+      3135890342,
+      1338351091,
+      3079345659,
+      495360164,
+      1057917118,
+      2345765702,
+      713908469,
+      906957426
+    ],
+    "recovered_key_words_hex": [
+      "bae9e3a6",
+      "4fc59df3",
+      "b78b15fb",
+      "1d8698a4",
+      "3f0e88be",
+      "8bd18b46",
+      "2a8d60f5",
+      "360f1272"
+    ],
+    "total_cross_implementation_output_bits_checked": 8192,
+    "word_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "word_reference_sha256": [
+      "a96e02d57a35d52f6a810d1a43fed54dc5a69d58f19bc697b59a22ca39aa26ae",
+      "8c7a2d5b41189f1e9be8a57d041a059521064b014889aa03f88a0dff54ca50eb",
+      "47e0a8359c64e86c0f0dd7444a4e1b7369d49d91ac36ac1a50d6984d547907ec",
+      "1f4cbdf506defcfd5183f4c29edcb9c5c9ec113bafaeab64453bc82f1058d1df",
+      "f098bc834f3c2b75f97bd69bf0af951990aedd80177d260a86d4f48bf1bf9602",
+      "32d9635979a9f473d167a94dec1b6ea5997039b48fa057d8f6cba80b83280d24",
+      "e3632c309456b62ca0ceb80e80b3d3b23060799626a6c361027a780128d9fedf",
+      "5dc9acde237298f6403b24d2b91466ccdf203c64289d81ba363b4e2d10c5fc2b"
+    ]
+  },
+  "design_sha256": "de0262a09388a613d3fda288dcb4211c92be246d43d3ccb89dca16b71d2a9c6b",
+  "discovery": {
+    "candidate": 32932650148774,
+    "candidate_hex": "1df3bae9e3a6",
+    "complete_W46_group_execution_before_stop": true,
+    "complete_domain_assignments": 70368744177664,
+    "control_filter_candidates": [],
+    "early_stop_inside_group": false,
+    "executed_assignments": 1322849927168,
+    "executed_group_dispatches": 616,
+    "executed_prefix_groups": 77,
+    "factual_filter_candidates": [
+      32932650148774
+    ],
+    "gpu_seconds": 909.742040167097,
+    "host_instances": 2,
+    "host_refresh_interval_prefix_groups": 64,
+    "key_word0": 3135890342,
+    "key_word1_low14": 7667,
+    "matched_control_candidates": 0,
+    "prefix12": 2990,
+    "prefix12_hex": "bae",
+    "search_gain_bits": 5.733213459305099,
+    "strict_subset_of_complete_domain": true,
+    "volatile_wall_seconds": 911.1405434999615
+  },
+  "evidence_stage": "FULLROUND_R20_UNCHANGED_HOLDOUT_SELECTED_W46_STRICT_SUBSET_RECOVERY_CONFIRMED",
+  "execution_sha256": "c2b18046d4ff6ebd4d40eaf87f533ca151dbb68cb2f5d13c2318a49596510dbe",
+  "information_boundary": {
+    "A313_result_available_at_design_freeze": false,
+    "A313_result_used_only_through_frozen_A321_selection": true,
+    "A321_selected_operator_available_at_design_freeze": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_result_available_at_protocol_freeze": false,
+    "A324_qualification_available_at_design_freeze": false,
+    "A324_qualification_verified_before_W46_challenge_generation": true,
+    "W46_assignment_absent_from_protocol": true,
+    "W46_candidate_available_at_design_freeze": false,
+    "W46_candidate_or_prefix_rank_available_at_protocol_freeze": false,
+    "W46_challenge_available_at_design_freeze": false,
+    "W46_filter_outcome_available_at_design_freeze": false,
+    "manual_order_override_after_A321_selection": false,
+    "target_labels_used_for_W46_order_selection": 0
+  },
+  "measurement_sha256": "1df4e456dc9f2b6de9bb4834342ab2c415293da18e11f8a8df18940dd70e6328",
+  "protocol_sha256": "480fe15f22c87df1b9422c1dc8cfcf5a9add147f65b6631d25e94d66b5255a2c",
+  "public_challenge_sha256": "d027bd3ec1b85cb2dfbf962ab3c2507b2b2f4195a526e814024208f9bea0cccd",
+  "qualification_gate": {
+    "complete_W46_group_candidates": 17179869184,
+    "evidence_stage": "TARGET_FREE_COMPLETE_W46_GROUP_ENGINE_EXACTLY_QUALIFIED",
+    "production_target_used": false,
+    "qualification_sha256": "0ba6c01c0cdefec50c94cc1f67ee2622eed623741123f26958ec992b9d4553c2",
+    "synthetic_filter_exact": true
+  },
+  "rank_analysis": {
+    "A314_baseline_rank_one_based": 3236,
+    "prefix12": 2990,
+    "prefix12_hex": "bae",
+    "prefix_ranks_one_based": {
+      "A314_three_arm_portfolio": 3236,
+      "online_four_center_band": 1067,
+      "online_weighted_dovetail_2_to_1": 1414,
+      "raw_nearest_prototype_L1": 102,
+      "raw_nearest_prototype_Linf": 77,
+      "raw_nearest_prototype_squared_L2": 81,
+      "whitened_diagonal_variance_L2": 138,
+      "whitened_pairwise_median_scaled_L1": 150,
+      "whitened_shrinkage_mahalanobis": 133
+    },
+    "selected_gain_bits_vs_complete_prefix_domain": 5.733213459305099,
+    "selected_operator": "raw_nearest_prototype_Linf",
+    "selected_rank_computed_only_after_independent_confirmation": true,
+    "selected_rank_one_based": 77,
+    "selected_speed_factor_vs_A314_baseline": 42.02597402597402
+  },
+  "schema": "chacha20-round20-holdout-selected-w46-recovery-a325-result-v1",
+  "selected_A313_calibration_rank_one_based": 2159,
+  "selected_W46_order_uint16be_sha256": "5d1afc37614fdbe050e9853413a3de7b850b876e9bc5649d3dffcf3e23c9780a",
+  "selected_family": "raw_multiview",
+  "selected_operator": "raw_nearest_prototype_Linf",
+  "strict_subset_of_complete_domain": true
+}

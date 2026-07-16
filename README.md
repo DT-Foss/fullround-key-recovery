@@ -2,17 +2,17 @@
 
 [![verification](https://github.com/DT-Foss/fullround-key-recovery/actions/workflows/ci.yml/badge.svg)](https://github.com/DT-Foss/fullround-key-recovery/actions/workflows/ci.yml)
 
-This is the executable public record of **37 verified full-round residual-key
+This is the executable public record of **46 verified full-round residual-key
 recovery executions** on a base Apple M4 Mac mini with 16 GB unified memory:
-thirteen complete-domain records across nine cipher families and 24
-strict-subset ChaCha20-R20 executions across 23 targets. Every row below
+eighteen complete-domain records across thirteen primitive families and 28
+strict-subset ChaCha20-R20 executions. Every row below
 recovers the declared residual key, reconstructs the complete master key in its
 known-key model, recomputes the full public relation independently, and rejects
-its matched control.
+its frozen control.
 
 ## Main results: complete full-round recovery record
 
-### Thirteen complete-domain records
+### Eighteen complete-domain records
 
 Every assignment in every declared domain was executed without early stopping.
 Each factual relation returned exactly one model; each one-bit-flipped control
@@ -33,15 +33,24 @@ returned none.
 | P128R1 | PRESENT-128, 31 rounds + K32 whitening | 38 / 90 bits | `2^38` complete | 1 / 0 | 128 bits |
 | AES256R1 | AES-256, 14 FIPS 197 rounds | 41 / 215 bits | `2^41` complete | 1 / 0 | 256 bits |
 | CHACHA20KR43 | ChaCha20, 20 rounds + feed-forward | 43 / 213 bits | `2^43` complete | 1 / 0 | 8,192 bits |
+| B3KR1 | keyed BLAKE3, all 7 standard rounds | 43 / 213 bits | `2^43` complete | 1 / 0 | 256 bits + official `b3sum` confirmation |
+| SIPKR1 | SipHash-2-4, complete 2/4 operation | 43 / 85 bits | `2^43` complete | 1 / 0 | 128 bits |
+| TEAKR1 | TEA, 32 cycles / 64 Feistel updates | 43 / 85 bits | `2^43` complete | 1 / 0 | 128 bits |
+| XTEAKR1 | XTEA, 32 cycles / 64 Feistel updates | 43 / 85 bits | `2^43` complete | 1 / 0 | 128 bits |
+| TF1024KR1 | Threefish-1024, 80 rounds + final subkey | 39 / 985 bits | `2^39` complete | 1 / 0 | 2,048 cross-implementation bits |
 
-### Twenty-four strict-subset ChaCha20-R20 executions
+### Twenty-eight strict-subset ChaCha20-R20 executions
 
 All rows execute the standard 20 rounds plus feed-forward against eight public
-output blocks unless noted. Their orders were frozen target-blind or transferred
-without refitting; execution ends only at a complete frozen group and never
-enumerates the full residual domain.
+output blocks unless noted. Their schedules were frozen before candidate
+execution under the declared information boundary; target-blind,
+zero-refit-transfer, and prospectively public-output-conditioned protocols are
+labeled in their artifacts. Every execution remains below its full residual
+domain. A281 and the four A286 targets use post-model one-bit control rejection
+(`O0`); A294--A374 execute the same grouped candidate search against the control
+and accept zero control candidates (`S0`).
 
-| Record / target | Residual key | Frozen discovery point | Executed assignments | Factual / control | Confirmation |
+| Record / target | Residual key | Frozen discovery point | Executed assignments | Recovered / control accepted | Confirmation |
 |---|---:|---:|---:|---:|---:|
 | A281 | 20 / 236 bits | rank 37 / 256 | 151,552 / 1,048,576 | 1 / 0 | 4,096 bits |
 | A286/t01 | 20 / 236 bits | fallback, rank 254 | strict subset | 1 / 0 | 4,096 bits |
@@ -67,10 +76,17 @@ enumerates the full residual domain.
 | A305 | 43 / 213 bits | rank 2,114 / 4,096 | 4,539,780,431,872 / 8,796,093,022,208 | 1 / 0 | 8,192 bits |
 | A309 | 43 / 213 bits | rank 4,044 / 4,096 | 8,684,423,872,512 / 8,796,093,022,208 | 1 / 0 | 8,192 bits |
 | A313 | 44 / 212 bits | rank 2,753 / 4,096 | 11,824,044,965,888 / 17,592,186,044,416 | 1 / 0 | 8,192 bits |
+| A322 | 45 / 211 bits | rank 1,459 / 4,096 | 12,532,714,569,728 / 35,184,372,088,832 | 1 / 0 | 8,192 bits |
+| A325 | 46 / 210 bits | rank 77 / 4,096 | 1,322,849,927,168 / 70,368,744,177,664 | 1 / 0 | 8,192 bits |
+| A350 | 46 / 210 bits | rank 445 / 4,096 | 7,645,041,786,880 / 70,368,744,177,664 | 1 / 0 | 8,192 bits |
+| A374 | 48 / 208 bits | rank 102 / 4,096 | 7,009,386,627,072 / 281,474,976,710,656 | 1 / 0 | 8,192 bits |
 
 The exact per-record protocols, results, Causal graphs, and reports are linked
 in the [claim matrix](docs/CLAIM_MATRIX.md). The A287--A325 ranks and execution
 bounds are also collected in the [release record](docs/A287_A325_RELEASE.md).
+The [recovery completeness audit](docs/RECOVERY_COMPLETENESS_AUDIT.md) separately
+classifies the 46-record frontier, the earlier breadth ladder, same-target
+replays, alternative solver records, and post-barrier recovery labels.
 
 ## A326--A458: complete W52 Reader frontier
 
@@ -101,15 +117,16 @@ immutable evidence mapping and exact per-record scope are in
 
 ## Exact claim
 
-The artifacts establish thirteen complete-domain full-round recovery points and
+The artifacts establish eighteen complete-domain full-round recovery points and
 a common Metal architecture across ARX, Feistel, SP-network, AEAD, and AES
-designs. Each input is a frozen public plaintext/ciphertext or AEAD relation
-plus the listed known key bits; every assignment in the remaining 38- to
-44-bit domain was executed. CHACHA20KR43 adds the complete `2^43` ChaCha20-R20
-domain and confirms 8,192 output bits across independent word- and byte-oriented
-implementations.
+designs. Each input is a frozen public relation plus the listed known key bits;
+every assignment in the declared 38- to 44-bit residual domain was executed.
+TF1024KR1 adds complete `2^39` Threefish-1024 recovery through all 80 rounds and
+the final subkey, independently confirming 2,048 output bits. CHACHA20KR43 adds
+the complete `2^43` ChaCha20-R20 domain and confirms 8,192 output bits across
+independent word- and byte-oriented implementations.
 
-A281, A286, and A294--A313 establish the separate strict-subset result class:
+A281, A286, and A294--A374 establish the separate strict-subset result class:
 frozen scheduling, recovery before complete-domain enumeration, full-output
 recomputation, and matched-control rejection. The demonstrated operation is
 exact residual-key recovery in each declared known-key model.
@@ -130,21 +147,21 @@ make lint
 
 `make verify`:
 
-1. verifies all 572 immutable files against `provenance/ARTIFACTS.sha256`;
+1. verifies every immutable file against `provenance/ARTIFACTS.sha256`;
 2. checks every frozen protocol/result challenge, every A286 root anchor, and
    every retained A287--A325 chronology artifact and the A001--A458 public
    attempt ledgers;
 3. reconstructs every recovered key and independently recomputes the complete
-   full-round output for all 13 complete-domain and 24 strict-subset executions;
-4. opens all 38 headline and 26 chronology `.causal` files with the matching
+   full-round output for all 18 complete-domain and 28 strict-subset executions;
+4. opens every headline and chronology `.causal` file with the matching
    integrity-checking Reader;
-5. checks complete-domain gates for the thirteen exhaustive records and the
+5. checks complete-domain gates for the eighteen exhaustive records and the
    frozen-order/no-full-enumeration gates for all strict-subset executions.
 
 ## Native replay
 
 Native replay requires macOS, Apple Silicon with Metal, and Swift 6. The
-repository retains all twelve native Swift/Metal hosts. The three original
+repository retains all fifteen native Swift/Metal hosts. The three original
 checkpointable package integrations expose direct complete-search commands:
 
 ```bash
@@ -191,6 +208,11 @@ cores and 16 GB unified memory.
 | P128R1 | 274,877,906,944 | 4,305.32 s |
 | AES256R1 | 2,199,023,255,552 | 3,712.32 s |
 | CHACHA20KR43 | 8,796,093,022,208 | 6,406.80 s |
+| B3KR1 | 8,796,093,022,208 | 6,313.44 s |
+| SIPKR1 | 8,796,093,022,208 | 4,259.91 s |
+| TEAKR1 | 8,796,093,022,208 | 5,012.03 s |
+| XTEAKR1 | 8,796,093,022,208 | 3,522.48 s |
+| TF1024KR1 | 549,755,813,888 | 6,434.77 s |
 
 A184's time is contextual, non-canonical end-to-end wall-clock provenance. The
 other rows retain GPU seconds directly in their result JSON. Correctness is

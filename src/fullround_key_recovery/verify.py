@@ -28,6 +28,14 @@ from .ciphers import (
     speck64_128_encrypt,
     threefish256_encrypt,
 )
+from .extended_references import (
+    apply_low_residual_words,
+    blake3_keyed_root,
+    siphash24,
+    tea_encrypt,
+    threefish1024_encrypt,
+    xtea_encrypt,
+)
 from .present80_reference import encrypt_int as present80_encrypt
 from .present80_reference import key_parts_to_int, key_schedule
 from .present128_reference import encrypt_int as present128_encrypt
@@ -1254,6 +1262,365 @@ def verify_chacha20_a313(root: Path) -> dict[str, Any]:
     }
 
 
+def _complete_record(
+    root: Path, name: str, attempt: str, width: int, known_bits: int
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], int]:
+    payload = load_result(name, root)
+    config = json.loads((root / "configs" / CONFIG_FILES[name]).read_text())
+    challenge = config.get("challenge", config.get("public_challenge"))
+    if not isinstance(challenge, dict):
+        raise RuntimeError(f"{attempt} public challenge is absent")
+    assignment = int(payload["execution"]["factual_full_matches"][0])
+    _common_gates(payload, attempt=attempt, candidates=1 << width)
+    execution = payload["execution"]
+    if (
+        config.get("attempt_id") != attempt
+        or int(execution["unknown_key_bits"]) != width
+        or int(execution["known_key_bits"]) != known_bits
+        or int(execution["executed_assignment_count"]) != 1 << width
+        or int(config["execution"].get("logical_candidates", config["execution"].get("logical_candidate_count")))
+        != 1 << width
+        or payload.get("protocol_sha256") != sha256_file(root / "configs" / CONFIG_FILES[name])
+        or payload.get("public_challenge_sha256") != config.get("public_challenge_sha256")
+        or _canonical_sha(challenge) != config.get("public_challenge_sha256")
+    ):
+        raise RuntimeError(f"{attempt} complete-domain protocol gates failed")
+    return payload, config, challenge, assignment
+
+
+def verify_blake3_keyed(root: Path) -> dict[str, Any]:
+    payload, _config, challenge, assignment = _complete_record(
+        root, "blake3_keyed", "B3KR1", 43, 213
+    )
+    known = int.from_bytes(bytes.fromhex(challenge["known_key_zeroed_residual_hex"]), "little")
+    key = (known | assignment).to_bytes(32, "little")
+    output = blake3_keyed_root(key, bytes.fromhex(challenge["message_hex"]))
+    confirmation = payload["execution"]["factual_confirmations"][0]
+    official = json.loads(
+        (root / "results" / "blake3_keyed_official_b3sum_root_confirmation_v1.json").read_text()
+    )
+    if (
+        output.hex() != challenge["target_256_hex"]
+        or hashlib.sha256(output).hexdigest() != challenge["target_sha256"]
+        or confirmation["assignment"] != assignment
+        or confirmation["recovered_key_hex"] != key.hex()
+        or confirmation["scalar_output_sha256"] != challenge["target_sha256"]
+        or confirmation["independent_numpy_output_sha256"] != challenge["target_sha256"]
+        or confirmation["output_bits_checked"] != 256
+        or official.get("official_target_output_hex") != output.hex()
+        or official.get("three_implementation_identity") is not True
+        or official.get("complete_256_bit_target_match") is not True
+    ):
+        raise RuntimeError("B3KR1 independent keyed-root confirmation failed")
+    return {
+        "attempt_id": "B3KR1",
+        "cipher": "BLAKE3 keyed hash",
+        "rounds": 7,
+        "unknown_key_bits": 43,
+        "known_key_bits": 213,
+        "logical_candidates": 1 << 43,
+        "recovered_assignment": assignment,
+        "reconstructed_master_key_hex": key.hex(),
+        "factual_models": 1,
+        "control_models": 0,
+        "independent_confirmation_bits": 256,
+        "official_cli_confirmation": "b3sum",
+    }
+
+
+def verify_siphash24(root: Path) -> dict[str, Any]:
+    payload, _config, challenge, assignment = _complete_record(
+        root, "siphash24", "SIPKR1", 43, 85
+    )
+    key_words = apply_low_residual_words(
+        challenge["known_key_words_zeroed_residual"], assignment, 43
+    )
+    key = b"".join(word.to_bytes(4, "little") for word in key_words)
+    messages = challenge["message_words"]
+    output = b"".join(
+        siphash24(
+            key,
+            b"".join(int(word).to_bytes(4, "little") for word in messages[offset : offset + 2]),
+        )
+        for offset in (0, 2)
+    )
+    words = [int.from_bytes(output[offset : offset + 4], "little") for offset in range(0, 16, 4)]
+    confirmation = payload["execution"]["factual_confirmations"][0]
+    if (
+        words != challenge["target_hash_words"]
+        or _canonical_sha(words) != challenge["target_sha256"]
+        or confirmation["recovered_key_words"] != key_words
+        or confirmation["scalar_output_sha256"] != challenge["target_sha256"]
+        or confirmation["independent_numpy_output_sha256"] != challenge["target_sha256"]
+        or confirmation["output_bits_checked"] != 128
+    ):
+        raise RuntimeError("SIPKR1 independent SipHash-2-4 confirmation failed")
+    return {
+        "attempt_id": "SIPKR1",
+        "cipher": "SipHash-2-4",
+        "rounds": "2 compression / 4 finalization",
+        "unknown_key_bits": 43,
+        "known_key_bits": 85,
+        "logical_candidates": 1 << 43,
+        "recovered_assignment": assignment,
+        "reconstructed_master_key_words": key_words,
+        "factual_models": 1,
+        "control_models": 0,
+        "independent_confirmation_bits": 128,
+    }
+
+
+def _verify_tea_family(
+    root: Path, *, name: str, attempt: str, cipher: str, encrypt: Any
+) -> dict[str, Any]:
+    payload, _config, challenge, assignment = _complete_record(root, name, attempt, 43, 85)
+    key_words = apply_low_residual_words(
+        challenge["known_key_words_zeroed_residual"], assignment, 43
+    )
+    plaintext = challenge["plaintext_words"]
+    output = [
+        value
+        for offset in (0, 2)
+        for value in encrypt(plaintext[offset : offset + 2], key_words)
+    ]
+    confirmation = payload["execution"]["factual_confirmations"][0]
+    if (
+        output != challenge["target_ciphertext_words"]
+        or _canonical_sha(output) != challenge["target_sha256"]
+        or confirmation["recovered_key_words"] != key_words
+        or confirmation["scalar_output_sha256"] != challenge["target_sha256"]
+        or confirmation["independent_numpy_output_sha256"] != challenge["target_sha256"]
+        or confirmation["output_bits_checked"] != 128
+    ):
+        raise RuntimeError(f"{attempt} independent {cipher} confirmation failed")
+    return {
+        "attempt_id": attempt,
+        "cipher": cipher,
+        "rounds": "32 cycles / 64 branch updates",
+        "unknown_key_bits": 43,
+        "known_key_bits": 85,
+        "logical_candidates": 1 << 43,
+        "recovered_assignment": assignment,
+        "reconstructed_master_key_words": key_words,
+        "factual_models": 1,
+        "control_models": 0,
+        "independent_confirmation_bits": 128,
+    }
+
+
+def verify_tea(root: Path) -> dict[str, Any]:
+    return _verify_tea_family(root, name="tea", attempt="TEAKR1", cipher="TEA", encrypt=tea_encrypt)
+
+
+def verify_xtea(root: Path) -> dict[str, Any]:
+    return _verify_tea_family(
+        root, name="xtea", attempt="XTEAKR1", cipher="XTEA", encrypt=xtea_encrypt
+    )
+
+
+def verify_threefish1024(root: Path) -> dict[str, Any]:
+    payload, _config, challenge, assignment = _complete_record(
+        root, "threefish1024", "TF1024KR1", 39, 985
+    )
+    key = [
+        int(challenge["known_key0_upper_bits"]) | assignment,
+        *[int(value) for value in challenge["known_key_words_1_through_15"]],
+    ]
+    output = threefish1024_encrypt(
+        challenge["plaintext_words"], key, challenge["known_tweak_words"]
+    )
+    confirmation = payload["execution"]["factual_confirmations"][0]
+    if (
+        output != challenge["target_ciphertext_words"]
+        or _words_sha(output, 64) != challenge["target_ciphertext_sha256"]
+        or confirmation["recovered_key_words"] != key
+        or confirmation["canonical_output_sha256"] != challenge["target_ciphertext_sha256"]
+        or confirmation["independent_output_sha256"] != challenge["target_ciphertext_sha256"]
+        or confirmation["canonical_independent_identity"] is not True
+        or confirmation["cross_implementation_output_bits_checked"] != 2048
+    ):
+        raise RuntimeError("TF1024KR1 independent Threefish-1024 confirmation failed")
+    return {
+        "attempt_id": "TF1024KR1",
+        "cipher": "Threefish-1024",
+        "rounds": "80 + final subkey",
+        "unknown_key_bits": 39,
+        "known_key_bits": 985,
+        "logical_candidates": 1 << 39,
+        "recovered_assignment": assignment,
+        "reconstructed_master_key_words": key,
+        "factual_models": 1,
+        "control_models": 0,
+        "independent_confirmation_bits": 2048,
+    }
+
+
+def _verify_wide_chacha_strict_subset(
+    root: Path,
+    *,
+    name: str,
+    attempt: str,
+    evidence_stage: str,
+    width: int,
+    rank: int,
+    executed: int,
+    required_boundary: dict[str, Any],
+    protocol_relative: str | None = None,
+) -> dict[str, Any]:
+    payload = load_result(name, root)
+    config = json.loads((root / "configs" / CONFIG_FILES[name]).read_text())
+    challenge = config["public_challenge"]
+    discovery = payload["discovery"]
+    confirmation = payload["confirmation"]
+    boundary = payload["information_boundary"]
+    key_words = [int(value) for value in confirmation["recovered_key_words"]]
+    assignment = int(confirmation["assignment"])
+    hashes = _verify_chacha20_output(
+        challenge=challenge,
+        key_words=key_words,
+        retained_hashes=confirmation["word_reference_sha256"],
+    )
+    known = [int(value) for value in challenge["known_zeroed_key_words"]]
+    low_mask = (1 << (width - 32)) - 1
+    if (
+        payload.get("attempt_id") != attempt
+        or payload.get("evidence_stage") != evidence_stage
+        or payload.get("public_challenge_sha256") != config.get("public_challenge_sha256")
+        or _canonical_sha(challenge) != config.get("public_challenge_sha256")
+        or payload.get("protocol_sha256")
+        != sha256_file(root / (protocol_relative or f"configs/{CONFIG_FILES[name]}"))
+        or int(challenge["unknown_key_bits"]) != width
+        or int(challenge["known_key_bits"]) != 256 - width
+        or discovery["executed_prefix_groups"] != rank
+        or discovery["executed_assignments"] != executed
+        or discovery["complete_domain_assignments"] != 1 << width
+        or executed >= 1 << width
+        or discovery["strict_subset_of_complete_domain"] is not True
+    ):
+        raise RuntimeError(f"{attempt} strict-subset protocol gates failed")
+    complete_group_key = next(
+        key for key in discovery if key.startswith("complete_W") and key.endswith("_group_execution_before_stop")
+    )
+    if (
+        discovery[complete_group_key] is not True
+        or discovery["early_stop_inside_group"] is not False
+        or discovery["factual_filter_candidates"] != [assignment]
+        or discovery["control_filter_candidates"] != []
+        or discovery["matched_control_candidates"] != 0
+        or assignment != (key_words[0] | ((key_words[1] & low_mask) << 32))
+        or known[0] != 0
+        or (key_words[1] & ~low_mask) != known[1]
+        or key_words[2:] != known[2:]
+        or hashes != confirmation["byte_reference_sha256"]
+        or confirmation["all_blocks_match"] is not True
+        or confirmation["word_reference_block_matches"] != [True] * 8
+        or confirmation["byte_reference_block_matches"] != [True] * 8
+        or confirmation["output_bits_checked_per_reference"] != 4096
+        or confirmation["total_cross_implementation_output_bits_checked"] != 8192
+        or any(boundary.get(key) != value for key, value in required_boundary.items())
+    ):
+        raise RuntimeError(f"{attempt} strict-subset confirmation failed")
+    return {
+        "attempt_id": attempt,
+        "cipher": "ChaCha20 block function",
+        "rounds": 20,
+        "unknown_key_bits": width,
+        "known_key_bits": 256 - width,
+        "complete_domain_executed": False,
+        "strict_subset_recovery": True,
+        "frozen_order_rank": rank,
+        "executed_assignments": executed,
+        "complete_domain_assignments": 1 << width,
+        "recovered_assignment": assignment,
+        "reconstructed_master_key_words": key_words,
+        "independent_confirmation_bits": 8192,
+        "control_models": 0,
+    }
+
+
+def verify_chacha20_a322(root: Path) -> dict[str, Any]:
+    return _verify_wide_chacha_strict_subset(
+        root,
+        name="chacha20_a322",
+        attempt="A322",
+        evidence_stage="FULLROUND_R20_HOLDOUT_SELECTED_W45_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        width=45,
+        rank=1459,
+        executed=12_532_714_569_728,
+        protocol_relative=(
+            "chronology/arx-carry-leak/research/configs/"
+            "chacha20_round20_holdout_selected_w45_recovery_a322_v1.json"
+        ),
+        required_boundary={
+            "A314_candidate_or_prefix_rank_available_at_protocol_freeze": False,
+            "A314_filter_outcome_available_at_protocol_freeze": False,
+            "A314_result_available_at_protocol_freeze": False,
+            "reader_refits_after_A313_or_A314_reveal": 0,
+            "target_labels_used_from_A314_for_order_selection": 0,
+        },
+    )
+
+
+def verify_chacha20_a325(root: Path) -> dict[str, Any]:
+    return _verify_wide_chacha_strict_subset(
+        root,
+        name="chacha20_a325",
+        attempt="A325",
+        evidence_stage=(
+            "FULLROUND_R20_UNCHANGED_HOLDOUT_SELECTED_W46_STRICT_SUBSET_RECOVERY_CONFIRMED"
+        ),
+        width=46,
+        rank=77,
+        executed=1_322_849_927_168,
+        required_boundary={
+            "A322_result_available_at_protocol_freeze": False,
+            "W46_assignment_absent_from_protocol": True,
+            "W46_candidate_or_prefix_rank_available_at_protocol_freeze": False,
+            "manual_order_override_after_A321_selection": False,
+            "target_labels_used_for_W46_order_selection": 0,
+        },
+    )
+
+
+def verify_chacha20_a350(root: Path) -> dict[str, Any]:
+    return _verify_wide_chacha_strict_subset(
+        root,
+        name="chacha20_a350",
+        attempt="A350",
+        evidence_stage="FULLROUND_R20_PUBLIC_OUTPUT_CONDITIONED_W46_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        width=46,
+        rank=445,
+        executed=7_645_041_786_880,
+        required_boundary={
+            "A345_candidate_or_prefix_available_at_protocol_freeze": False,
+            "A345_running_order_modified": False,
+            "A349_order_frozen_before_protocol": True,
+            "A349_reader_refits": 0,
+            "A349_target_labels_used_for_order_construction": 0,
+            "A350_candidate_or_prefix_available_at_protocol_freeze": False,
+            "A350_order_starts_at_frozen_rank_one": True,
+        },
+    )
+
+
+def verify_chacha20_a374(root: Path) -> dict[str, Any]:
+    return _verify_wide_chacha_strict_subset(
+        root,
+        name="chacha20_a374",
+        attempt="A374",
+        evidence_stage="FULLROUND_R20_TARGET_CONDITIONED_W48_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        width=48,
+        rank=102,
+        executed=7_009_386_627_072,
+        required_boundary={
+            "A373_order_frozen_before_protocol": True,
+            "A374_candidate_or_prefix_available_at_protocol_freeze": False,
+            "reader_refits": 0,
+            "target_labels_used_for_order_construction": 0,
+        },
+    )
+
+
 VERIFY_FUNCTIONS = {
     "chacha20": verify_chacha20,
     "speck32_64": verify_speck32_64,
@@ -1279,6 +1646,15 @@ VERIFY_FUNCTIONS = {
     "chacha20_a305": verify_chacha20_a305,
     "chacha20_a309": verify_chacha20_a309,
     "chacha20_a313": verify_chacha20_a313,
+    "blake3_keyed": verify_blake3_keyed,
+    "siphash24": verify_siphash24,
+    "tea": verify_tea,
+    "xtea": verify_xtea,
+    "threefish1024": verify_threefish1024,
+    "chacha20_a322": verify_chacha20_a322,
+    "chacha20_a325": verify_chacha20_a325,
+    "chacha20_a350": verify_chacha20_a350,
+    "chacha20_a374": verify_chacha20_a374,
 }
 
 

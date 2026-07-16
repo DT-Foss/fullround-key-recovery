@@ -1,0 +1,195 @@
+{
+  "anchors": {
+    "canonical_source": {
+      "path": "src/arx_carry_leak/ciphers.py",
+      "sha256": "fae855bdb18b76043bf9b520b4d1ea5f0c6a2207abfa13f087d0faa4a6aaf770"
+    },
+    "design": {
+      "path": "research/configs/threefish1024_metal_record_design_v1.json",
+      "sha256": "dd6a4a3ebfeae67b51af34f93c31c70e661dff8e8db756e0588ab04cb1c1feb3"
+    },
+    "native_source": {
+      "path": "research/experiments/threefish1024_metal_native.swift",
+      "sha256": "82b3de6d0baf7876d8f45fe06773e74c32cf89dd8c7947fe11ca56a30ba545e6"
+    },
+    "qualification": {
+      "path": "research/results/v1/threefish1024_metal_qualification_v1.json",
+      "sha256": "9f6ef85988f0097821b68f15f25777757b5a7158f3c0b48e81329863a6d2b816"
+    },
+    "runner": {
+      "path": "research/experiments/threefish1024_metal_record.py",
+      "sha256": "84a50e56540d990343aafc0c8a467f3159294a5069368596d6cfc739ccf1fd99"
+    }
+  },
+  "attempt_id": "TF1024KR1",
+  "authentic_causal": {
+    "api_id": "tf1024k1",
+    "clusters": 2,
+    "gaps": [
+      {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_residual_domain",
+        "predicate": "next_required_gain",
+        "subject": "Threefish1024:unique_verified_fullround_residual",
+        "suggested_queries": [
+          "Can the full-round F8 fixed-point channel rank a held-out residual region early?"
+        ]
+      }
+    ],
+    "path": "research/results/v1/threefish1024_metal_record_v1.causal",
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "rules": 2,
+    "sha256": "9608580fef4dd08e59002a4b23e48d12f622a6d5e833afeef4a8416762d32c31",
+    "triplets": 6,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 12,
+      "file_size_bytes": 4447,
+      "file_size_kb": 4.3,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.threefish1024_metal_record_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 6
+    }
+  },
+  "confirmation_sha256": "2e09924107331bb2b2b2e204bfce23077e0d0090d632f041a683195b2a916bff",
+  "evidence_stage": "FULLROUND_THREEFISH1024_COMPLETE_DOMAIN_RECOVERY_CONFIRMED",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "executed_assignment_count": 549755813888,
+    "factual_confirmations": [
+      {
+        "assignment": 167907888337,
+        "assignment_hex": "2718170cd1",
+        "canonical_independent_identity": true,
+        "canonical_output_sha256": "c1e574cd6f499d319bc8fc3eed39636f2e7a3f7a749acbc9b0855cd34794a61a",
+        "complete_1024_bit_match": true,
+        "cross_implementation_output_bits_checked": 2048,
+        "independent_output_sha256": "c1e574cd6f499d319bc8fc3eed39636f2e7a3f7a749acbc9b0855cd34794a61a",
+        "output_bits_checked_per_implementation": 1024,
+        "recovered_key_words": [
+          746840142539853009,
+          9820682439086433811,
+          15278579881280024107,
+          13029888193905099230,
+          10651841486502779335,
+          3494607514834442080,
+          4877118260459448024,
+          6148812330854540441,
+          17174740954529235685,
+          10750366321222683701,
+          14942757847493875650,
+          129867207065982633,
+          12442512608760675837,
+          8117802834961937104,
+          10765586809463216635,
+          460267372500797215
+        ],
+        "recovered_key_words_hex": [
+          "0a5d4f2718170cd1",
+          "884a12a569a9e613",
+          "d4086b73e0202e2b",
+          "b4d37646ecc501de",
+          "93d2f16566c459c7",
+          "307f5704ff1e1760",
+          "43af0137c241a6d8",
+          "5554f83cb3206499",
+          "ee58efe7081182e5",
+          "9530f93615cd0c35",
+          "cf5f5717988d97c2",
+          "01cd61896923d6a9",
+          "acacaf4b5e7fbdfd",
+          "70a83aab1e90b2d0",
+          "95670c2a28af99fb",
+          "066332bc979cc71f"
+        ]
+      }
+    ],
+    "factual_filter_matches": [
+      167907888337
+    ],
+    "factual_full_matches": [
+      167907888337
+    ],
+    "gpu_seconds": 6434.765595954377,
+    "known_key_bits": 985,
+    "logical_candidate_count": 549755813888,
+    "newly_executed_assignment_count": 344402690048,
+    "resumed_assignment_count": 205353123840,
+    "success_evaluated_only_after_complete_domain": true,
+    "unique_exact_assignment": true,
+    "unknown_key_bits": 39,
+    "volatile_candidates_per_gpu_second": 85435251.01110736,
+    "volatile_wall_seconds": 3980.484780833125
+  },
+  "execution_sha256": "dce1927fff7785e10969b57c9d588e57cffb51cf1d977118bf93b0721749ceba",
+  "mapping_gate": {
+    "assignments": [
+      0,
+      1,
+      4294967295,
+      4294967296,
+      549755813887
+    ],
+    "canonical_independent_Metal_exact": true,
+    "rows": [
+      {
+        "assignment": 0,
+        "output_sha256": "2acd63db5bb3db85429b0ec74608655cd58f8522a95cf9b0ceee4bfd6869756d"
+      },
+      {
+        "assignment": 1,
+        "output_sha256": "997ba3f5fb96756358710286c97f416dcfd4b3dead16aa604aac8663142c7806"
+      },
+      {
+        "assignment": 4294967295,
+        "output_sha256": "e7f1b5ae7a5685d4464e7a8efa683a5fbbe4939edfba5a6408185266d39fe9ab"
+      },
+      {
+        "assignment": 4294967296,
+        "output_sha256": "56d2952dc6c94451cce163206462723a840d87346aee44c902a54839055d056b"
+      },
+      {
+        "assignment": 549755813887,
+        "output_sha256": "b624537eca2c704b75644b2e8c9d615b6588e500199240981d37493c42becf98"
+      }
+    ]
+  },
+  "metal_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "native_64_bit_integer_arithmetic": true,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "threefish1024-metal-native-v1"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "df3b8cf5c347634b3e63812124c117232c0c9d650a7ab717671224eefb3cff62",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source_sha256": "82b3de6d0baf7876d8f45fe06773e74c32cf89dd8c7947fe11ca56a30ba545e6",
+    "warnings_as_errors": true
+  },
+  "protocol_sha256": "85ae682e54131ad544f8ed9e40be6c7f050a7e1d570227d72bd0d7712ee70f16",
+  "public_challenge_sha256": "c794ef3f9ff2256fa8496ade6c9ae1dee98bd65dd4c9b1906fab47e7ad02a9cc",
+  "qualification_sha256": "9f6ef85988f0097821b68f15f25777757b5a7158f3c0b48e81329863a6d2b816",
+  "schema": "threefish1024-metal-record-result-v1"
+}

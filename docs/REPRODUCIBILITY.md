@@ -10,10 +10,10 @@ python3 -m venv .venv
 make verify test lint
 ```
 
-This verifies all 572 artifact hashes, thirteen complete-domain records,
-24 strict-subset ChaCha20-R20 executions across 23 targets, recovered-key
-reconstruction, full-output confirmations, matched controls, and Causal
-integrity across 38 headline plus 26 chronology AI-native files. The immutable
+This verifies every pinned artifact hash, eighteen complete-domain records,
+28 strict-subset ChaCha20-R20 executions, recovered-key reconstruction,
+full-output confirmations, frozen controls, and Causal integrity across 48
+headline plus 26 chronology AI-native files. The immutable
 inventory also pins the public A001--A458 attempt ledgers and therefore the
 exact A455/A457 no-progress publication boundary.
 
@@ -67,8 +67,10 @@ batch, so candidate identity is not persisted before full-domain completion.
 The later complete-domain records retain their exact originating protocol
 factories, qualification programs, recovery programs, and native hosts. Those
 sources are provenance-preserving originals rather than rewritten package
-wrappers. The complete A287--A325 portable research chain is retained under
-`chronology/arx-carry-leak/`.
+wrappers. B3KR1, SIPKR1, TEAKR1, XTEAKR1, and TF1024KR1 are also verified by
+fresh package references, including an independent Skein 1.3 Threefish-1024
+transcription through all 80 rounds and the final subkey. The complete
+A287--A325 portable research chain is retained under `chronology/arx-carry-leak/`.
 
 The strict-subset evidence is verified without replaying the production search:
 the verifier checks every frozen anchor hash, independently recomputes every

@@ -1,0 +1,49 @@
+{
+  "attempt_id": "TF1024KR1",
+  "design_state": "frozen_before_any_production_target_qualification_width_selection_or_candidate_execution",
+  "purpose": "Prospectively recover a fresh residual master-key assignment through all 80 Threefish-1024 rounds with the standard final subkey on Apple Metal.",
+  "primitive_contract": {
+    "block_bits": 1024,
+    "key_bits": 1024,
+    "known_tweak_bits": 128,
+    "rounds": 80,
+    "mixes_per_round": 8,
+    "subkey_injections": 21,
+    "standard_final_subkey_included": true,
+    "official_zero_key_zero_tweak_zero_plaintext_KAT_required": true
+  },
+  "qualification_contract": {
+    "runs_before_any_production_target_exists": true,
+    "scalar_Metal_exact_block_gate_required": true,
+    "uint32_boundary_mapping_gate_required": true,
+    "benchmark_repeats": 5,
+    "minimum_unknown_bits": 32,
+    "maximum_unknown_bits": 43,
+    "maximum_projected_complete_gpu_seconds": 21600,
+    "selection_uses_minimum_observed_candidates_per_gpu_second": true,
+    "volatile_performance_is_not_a_success_rule": true
+  },
+  "production_contract": {
+    "fresh_assignment_source": "OS_CSPRNG",
+    "assignment_used_only_to_construct_public_ciphertext": true,
+    "assignment_returned_logged_or_serialized_before_execution": false,
+    "complete_selected_domain_required": true,
+    "early_stop_forbidden": true,
+    "matched_control": "target_final_word_xor_1_over_identical_complete_domain",
+    "confirmation": "canonical_scalar_plus_independent_second_reference_over_all_1024_output_bits",
+    "authentic_AI_native_Causal_artifact_required": true,
+    "authentic_CausalReader_reopen_required": true
+  },
+  "information_boundary": {
+    "production_target_exists_at_design_freeze": false,
+    "production_assignment_exists_at_design_freeze": false,
+    "qualification_or_benchmark_outcome_exists_at_design_freeze": false,
+    "candidate_outcome_may_select_width_target_or_success_rule": false
+  },
+  "source_anchors": {
+    "specification": "Skein_Hash_Function_Family_v1.3",
+    "existing_fullround_F8_anchor": "Threefish-1024_R80_permutation_fixed_point_retained",
+    "existing_Threefish256_Metal_pattern": "A238_A240"
+  },
+  "schema": "threefish1024-metal-record-design-v1"
+}

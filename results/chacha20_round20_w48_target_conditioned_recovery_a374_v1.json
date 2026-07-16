@@ -1,0 +1,268 @@
+{
+  "A371_qualification_sha256": "2094ca66fcd3ba068994ab2cd8b792f991920862a5e94ce24246900c75c2ee2c",
+  "A372_protocol_sha256": "9223d8a9da09112f62e85f8c3d8ae8a737d3793661b9eb563944191411be846f",
+  "A373_order_commitment_sha256": "7c169a7d580af9a25b6ac2a943fc5d1269161b5811fa203a82c983baee4af690",
+  "A373_order_sha256": "5631b0f2f05a015a9ad07b938a2f2862862214171d3066397da3524afe8e9264",
+  "anchors": {
+    "A371_protocol": {
+      "path": "research/configs/chacha20_round20_w48_thirtytwo_slab_grouped_engine_a371_v1.json",
+      "sha256": "edd943f71990299312c7b7bc154015102af25eede97ea4784140a2b652e971f3"
+    },
+    "A371_qualification": {
+      "path": "research/results/v1/chacha20_round20_w48_thirtytwo_slab_grouped_engine_a371_qualification_v1.json",
+      "sha256": "2094ca66fcd3ba068994ab2cd8b792f991920862a5e94ce24246900c75c2ee2c"
+    },
+    "A372_order": {
+      "path": "research/results/v1/chacha20_round20_fresh_w48_pretarget_transfer_a372_order_v1.json",
+      "sha256": "bbc5e61fb0867125c08b08e31f166c686accf1d41c73f27e0b2774371483e3f5"
+    },
+    "A372_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w48_pretarget_transfer_a372_v1.json",
+      "sha256": "9223d8a9da09112f62e85f8c3d8ae8a737d3793661b9eb563944191411be846f"
+    },
+    "A373_order": {
+      "path": "research/results/v1/chacha20_round20_w48_target_conditioned_factor2_a373_order_v1.json",
+      "sha256": "5631b0f2f05a015a9ad07b938a2f2862862214171d3066397da3524afe8e9264"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w48_target_conditioned_recovery_a374_design_v1.json",
+      "sha256": "22f02caa3a0bd91e524605da7f970b3ce805d4b152f9dea0bba5de5cb5678cde"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w48_target_conditioned_recovery_a374_implementation_v1.json",
+      "sha256": "51d479a2e670b095d2c945f2b6b8096df10e21ac228f70802e83a31bd00e8e43"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w48_target_conditioned_recovery_a374.sh",
+      "sha256": "0f04821ad16eda1f41cfde7edcf70f6010d21471db4271f313693db3142aad5e"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w48_target_conditioned_recovery_a374.py",
+      "sha256": "e4e058b84a0e30bd2395eae2f340195bf010ea25bb6f3d17f2bc2ccf0ce7d8c6"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w48_target_conditioned_recovery_a374.py",
+      "sha256": "af5494d30d1c9f1e576edc8502520b19721ffe76b11d7a2b7f1fffaa1ef9cfe6"
+    }
+  },
+  "attempt_id": "A374",
+  "causal": {
+    "api_id": "a374w48",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w48_target_conditioned_recovery_a374_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "W48_target_conditioned_transfer_or_second_fresh_W48_replication",
+        "predicate": "next_required_object",
+        "subject": "A374:confirmed_target_conditioned_W48_recovery",
+        "suggested_queries": [
+          "Replicate the complete W48 target-conditioned portfolio on a second fresh challenge or qualify the next width."
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "FULLROUND_R20_TARGET_CONDITIONED_W48_STRICT_SUBSET_RECOVERY_CONFIRMED",
+        "is_inferred": true,
+        "m_idx": 5,
+        "mechanism": "materialized_W48_search_and_confirmation_closure",
+        "o_idx": 4,
+        "outcome": "A374:confirmed_target_conditioned_W48_recovery",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A374_W48_recovery_chain",
+        "trigger": "A373:public_output_conditioned_factor2_order"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "8cd25481a1a9b5a5828e99b657ec94a4ce00d770eb8af7d88c9ef5705ce784e8",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 6,
+      "file_size_bytes": 5758,
+      "file_size_kb": 5.6,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w48_target_conditioned_recovery_a374_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 3
+    }
+  },
+  "confirmation": {
+    "all_blocks_match": true,
+    "assignment": 255004576462523,
+    "byte_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "byte_reference_sha256": [
+      "376d3ead7917d3bdef1cfd4ba70cc2203eff1aa4a5ed64d2481a1620722f58a5",
+      "aab865360478e7494c566205485c939ec31d328034d8f3acb36473f73be4e786",
+      "d75bbd9315da9679db76551d7447d412e96f03014620a0625ddeffd720abb816",
+      "fce40df11ae99c65b7672de5060bf3d78a670f261e6ae4d58321c31310cfdfe9",
+      "c4c4cdc17ef593f5f1af9292599b6d639fb2a187038d4397923292baba3ea740",
+      "5acf9a908316bf48f8a0e976954a920d8c0b0d4fd7d5d52d87d5a9eac2aadd2e",
+      "48c83a18e36ddd8146241b54915c2948d4b8c273ff02e1c7169fc743c58419c9",
+      "f8869562f8478cac7ffcd799022bfdd40d17b1cb45e25abcb5e5787ead2f2aef"
+    ],
+    "output_bits_checked_per_reference": 4096,
+    "recovered_key_words": [
+      3778164411,
+      1679484908,
+      3562442420,
+      4134440368,
+      2935751011,
+      4198523904,
+      1695177449,
+      2004363146
+    ],
+    "recovered_key_words_hex": [
+      "e13236bb",
+      "641ae7ec",
+      "d4568eb4",
+      "f66e8db0",
+      "aefc0163",
+      "fa406400",
+      "650a5ae9",
+      "7778278a"
+    ],
+    "total_cross_implementation_output_bits_checked": 8192,
+    "word_reference_block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "word_reference_sha256": [
+      "376d3ead7917d3bdef1cfd4ba70cc2203eff1aa4a5ed64d2481a1620722f58a5",
+      "aab865360478e7494c566205485c939ec31d328034d8f3acb36473f73be4e786",
+      "d75bbd9315da9679db76551d7447d412e96f03014620a0625ddeffd720abb816",
+      "fce40df11ae99c65b7672de5060bf3d78a670f261e6ae4d58321c31310cfdfe9",
+      "c4c4cdc17ef593f5f1af9292599b6d639fb2a187038d4397923292baba3ea740",
+      "5acf9a908316bf48f8a0e976954a920d8c0b0d4fd7d5d52d87d5a9eac2aadd2e",
+      "48c83a18e36ddd8146241b54915c2948d4b8c273ff02e1c7169fc743c58419c9",
+      "f8869562f8478cac7ffcd799022bfdd40d17b1cb45e25abcb5e5787ead2f2aef"
+    ]
+  },
+  "design_sha256": "22f02caa3a0bd91e524605da7f970b3ce805d4b152f9dea0bba5de5cb5678cde",
+  "discovery": {
+    "candidate": 255004576462523,
+    "candidate_hex": "e7ece13236bb",
+    "complete_W48_group_execution_before_stop": true,
+    "complete_domain_assignments": 281474976710656,
+    "control_filter_candidates": [],
+    "early_stop_inside_group": false,
+    "executed_assignments": 7009386627072,
+    "executed_group_dispatches": 3264,
+    "executed_prefix_groups": 102,
+    "factual_filter_candidates": [
+      255004576462523
+    ],
+    "gpu_seconds": 38328.755750921555,
+    "host_instances": 7,
+    "host_refresh_interval_prefix_groups": 16,
+    "key_word0": 3778164411,
+    "key_word1_low16": 59372,
+    "matched_control_candidates": 0,
+    "prefix12": 3603,
+    "prefix12_hex": "e13",
+    "search_gain_bits": 5.327574658028505,
+    "strict_subset_of_complete_domain": true,
+    "volatile_wall_seconds": 38369.14285816718
+  },
+  "evidence_stage": "FULLROUND_R20_TARGET_CONDITIONED_W48_STRICT_SUBSET_RECOVERY_CONFIRMED",
+  "execution_sha256": "3d9fe5dd080e1c43ff28fa131db7d4f0a019f6b186fe55b8e905cd6a5bfc6833",
+  "implementation_sha256": "51d479a2e670b095d2c945f2b6b8096df10e21ac228f70802e83a31bd00e8e43",
+  "information_boundary": {
+    "A373_order_frozen_before_protocol": true,
+    "A374_candidate_or_prefix_available_at_protocol_freeze": false,
+    "reader_refits": 0,
+    "target_labels_used_for_order_construction": 0
+  },
+  "measurement_sha256": "b6c04507d77b7e9e30631e76e4e2abbd82aaeaa6e1eaa551df16c36f90df8ab1",
+  "operator_diversity": {
+    "spearman_rank_correlation": -0.009837138179761212,
+    "top_k_overlap": {
+      "1024": {
+        "fraction_of_each_top_k": 0.2587890625,
+        "intersection": 265
+      },
+      "128": {
+        "fraction_of_each_top_k": 0.0625,
+        "intersection": 8
+      },
+      "256": {
+        "fraction_of_each_top_k": 0.0703125,
+        "intersection": 18
+      },
+      "32": {
+        "fraction_of_each_top_k": 0.03125,
+        "intersection": 1
+      },
+      "512": {
+        "fraction_of_each_top_k": 0.125,
+        "intersection": 64
+      },
+      "64": {
+        "fraction_of_each_top_k": 0.046875,
+        "intersection": 3
+      }
+    }
+  },
+  "pointwise_factor2_proof": {
+    "bound": "R_portfolio(c) <= 2*min(R_A345(c),R_A349(c))",
+    "cells_checked": 4096,
+    "maximum_ratio": 2.0,
+    "mean_ratio": 1.6622758854408373,
+    "violations": 0
+  },
+  "protocol_sha256": "2d4a0ac1436db0107b812ec5c5eafbf6fa00604c25df3700a82e9577812ae6e2",
+  "public_challenge_sha256": "bc77e77e2e29ef089f17643d70fce47e5e665f3974f639ccff077f0692aaf789",
+  "qualification_gate": {
+    "complete_W48_group_candidates": 68719476736,
+    "evidence_stage": "TARGET_FREE_COMPLETE_W48_GROUP_ENGINE_EXACTLY_QUALIFIED",
+    "production_target_used": false,
+    "qualification_sha256": "a308c397cecf9722663b6bd13d7b99653f07d7569f585faf396104f065dbc158",
+    "synthetic_filter_exact": true
+  },
+  "rank_analysis": {
+    "factor2_bound_for_confirmed_prefix": true,
+    "portfolio_overhead_vs_better_source": 1.9615384615384615,
+    "prefix12": 3603,
+    "prefix12_hex": "e13",
+    "prefix_ranks_one_based": {
+      "A372_target_free": 638,
+      "A373_target_conditioned": 52,
+      "A374_executed_factor2_portfolio": 102
+    },
+    "ranks_computed_only_after_independent_confirmation": true,
+    "selected_domain_reduction_factor": 40.15686274509804,
+    "selected_gain_bits_vs_complete_domain": 5.327574658028505,
+    "selected_rank_one_based": 102
+  },
+  "schema": "chacha20-round20-w48-target-conditioned-recovery-a374-result-v1",
+  "selected_operator": "A373_W48_target_conditioned_plus_A372_target_free_factor2_wavefront",
+  "selected_order_uint16be_sha256": "05e306514ae8796aec995f4a1863d9c3ea038b3cb3f76809813caaf53fd9a837",
+  "strict_subset_of_complete_domain": true
+}

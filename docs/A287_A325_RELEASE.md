@@ -1,8 +1,8 @@
 # A287--A325 verified recovery release
 
-Version 1.4.0 adds the closed A287--A325 ChaCha20-R20 evidence batch to the
-compact recovery archive: one complete-domain W43 record, 19 strict-subset
-executions across 18 targets, the exact source chronology, and independent
+This release closes the A287--A325 ChaCha20-R20 evidence batch in the compact
+recovery archive: one complete-domain W43 record, 21 strict-subset
+executions across 20 targets, the exact source chronology, and independent
 recomputation of every recovered output block.
 
 Every recovery executes all 20 ChaCha20 rounds plus feed-forward, uses eight
@@ -29,11 +29,14 @@ reconstructed 256-bit key.
 | A305 | 43 | 1 | 2,114 | 4,539,780,431,872 / 8,796,093,022,208 |
 | A309 | 43 | 1 | 4,044 | 8,684,423,872,512 / 8,796,093,022,208 |
 | A313 | 44 | 1 | 2,753 | 11,824,044,965,888 / 17,592,186,044,416 |
+| A322 | 45 | 1 | 1,459 | 12,532,714,569,728 / 35,184,372,088,832 |
+| A325 | 46 | 1 | 77 | 1,322,849,927,168 / 70,368,744,177,664 |
 
 A294 and A295 intentionally execute two distinct frozen orders against the same
-public target. The batch therefore contains 19 executions across 18 targets.
-Together with A281/A286, the archive now contains 24 strict-subset executions
-across 23 distinct targets.
+public target. The batch therefore contains 21 executions across 20 targets.
+Together with A281/A286, the archive at A325 contains 26 strict-subset
+executions across 25 distinct targets. A350 and A374 extend the selected
+frontier to 28 strict-subset executions.
 
 ## Source chronology
 
@@ -50,16 +53,16 @@ orders, the A314 order-only record, completed A315/A317/A319 rank evaluations,
 the A321 holdout selection, A316/A318/A320 commitments, and the A323 cross-width
 operator audit.
 
-## Open outcome boundary
+## Closed outcome boundary
 
-A322 remains a live W45 execution and A325 is a frozen W46 protocol; neither has
-an outcome JSON or Causal confirmation file. A313 is a confirmed W44 recovery,
-A321 is a completed holdout selection, and A324 is a target-free W46 engine
-qualification. The test suite checks this boundary directly.
+A322 recovers W45 assignment `0x091190ecc0e8` at rank 1,459 and A325 recovers
+W46 assignment `0x1df3bae9e3a6` at rank 77. Both terminal JSON and AI-native
+Causal confirmations are hash-pinned. A321 remains the completed holdout
+selection and A324 the target-free W46 engine qualification on which A325 runs.
 
 ## Verification
 
-`make verify` pins every chronology byte, independently recomputes all 19 new
+`make verify` pins every chronology byte, independently recomputes all 21
 strict-subset executions and CHACHA20KR43, opens all headline and chronology
 Causal files through the integrity-checking Reader, and checks the frozen
 information boundaries encoded in every retained result.

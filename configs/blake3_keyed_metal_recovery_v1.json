@@ -1,0 +1,63 @@
+{
+  "algorithm": {
+    "complete_standard_round_count": true,
+    "flags": 27,
+    "name": "BLAKE3 keyed hash",
+    "output_bits_compared": 256,
+    "rounds": 7
+  },
+  "anchors": {
+    "independent_numpy_reference_sha256": "9daf38512de019a2d72aaef45b5ac2645e88ccec5ca942d4c1498aa7d21ecbac",
+    "native_source_sha256": "7dbdf10d4d363d9425f2818ee71040a897245fc0091a267ff8780ef7a4212348",
+    "qualification": {
+      "path": "research/results/v1/blake3_keyed_metal_qualification_v1.json",
+      "sha256": "e6be99285d200db11d5b0062a16c399318ca2458b73511213e0597b7fc7433ee"
+    },
+    "runner_sha256": "5f2eb06a4b1e3472d929746b5f7f971674238ee4c893527c36cb3c70daab953c"
+  },
+  "attempt_id": "B3KR1",
+  "challenge": {
+    "bit_numbering": "little_endian_bit0_upward_across_key_words",
+    "control_256_hex": "32214d986e0b94b584ba0e02764c20e1bbf34cbf1bf60b630eda01a04eed1746",
+    "control_relation": "target_output_bit0_flipped",
+    "control_sha256": "7504c692040133920391e01536f352d88c321142753b9aa7d27b2eacda2b5272",
+    "full_key_included": false,
+    "known_key_bits": 213,
+    "known_key_zeroed_residual_hex": "000000000048c17cba32241d06b9f0034c5184cd11b4410fd1833ce834dd8efe",
+    "message_hex": "d8a5b804e1a72c2c711d38cc59a37f2eb46cd3494f854a83e91de69b93de9133eb06db1786ea896b5e82bb9d7bdb96971e11e0f3aa76d1fd8f24ee4eabbc73e9",
+    "message_length": 64,
+    "secret_assignment_included": false,
+    "secret_discarded_after_target_construction": true,
+    "target_256_hex": "33214d986e0b94b584ba0e02764c20e1bbf34cbf1bf60b630eda01a04eed1746",
+    "target_sha256": "e71be32aefabfbceaa43d2f198886578c3680d98fc7bf8738f2311a8bc2b02fc",
+    "unknown_bit_interval": [
+      0,
+      42
+    ],
+    "unknown_key_bits": 43
+  },
+  "execution": {
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "early_stop_permitted": false,
+    "inner_count": 4294967296,
+    "known_key_bits": 213,
+    "logical_candidates": 8796093022208,
+    "matched_control_same_kernel_and_domain": true,
+    "outer_bits": 11,
+    "outer_count": 2048,
+    "outer_mask": 2047,
+    "stream_candidates": 536870912,
+    "success_evaluated_only_after_complete_domain": true,
+    "width": 43
+  },
+  "information_boundary": {
+    "production_target_frozen_before_candidate_execution": true,
+    "qualification_precedes_production_target": true,
+    "secret_assignment_available_to_runner": false,
+    "secret_assignment_serialized": false
+  },
+  "protocol_state": "frozen_before_any_production_candidate_execution",
+  "public_challenge_sha256": "5271ec61020f89c81cb616d5021f03dfb2421645fdea880c0e38e1e9317c1255",
+  "schema": "blake3-keyed-metal-recovery-protocol-v1"
+}

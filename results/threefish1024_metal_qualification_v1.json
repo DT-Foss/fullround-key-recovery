@@ -1,0 +1,136 @@
+{
+  "anchors": {
+    "canonical_source": {
+      "path": "src/arx_carry_leak/ciphers.py",
+      "sha256": "fae855bdb18b76043bf9b520b4d1ea5f0c6a2207abfa13f087d0faa4a6aaf770"
+    },
+    "design": {
+      "path": "research/configs/threefish1024_metal_record_design_v1.json",
+      "sha256": "dd6a4a3ebfeae67b51af34f93c31c70e661dff8e8db756e0588ab04cb1c1feb3"
+    },
+    "native_source": {
+      "path": "research/experiments/threefish1024_metal_native.swift",
+      "sha256": "82b3de6d0baf7876d8f45fe06773e74c32cf89dd8c7947fe11ca56a30ba545e6"
+    },
+    "runner": {
+      "path": "research/experiments/threefish1024_metal_record.py",
+      "sha256": "84a50e56540d990343aafc0c8a467f3159294a5069368596d6cfc739ccf1fd99"
+    }
+  },
+  "attempt_id": "TF1024KR1",
+  "benchmark": {
+    "candidate_count_per_repeat": 1048576,
+    "maximum_candidates_per_gpu_second": 88460365.00314894,
+    "median_candidates_per_gpu_second": 82764618.32067451,
+    "minimum_candidates_per_gpu_second": 47740394.11980359,
+    "projected_complete_gpu_seconds": {
+      "32": 89.96505737304688,
+      "33": 179.93011474609375,
+      "34": 359.8602294921875,
+      "35": 719.720458984375,
+      "36": 1439.44091796875,
+      "37": 2878.8818359375,
+      "38": 5757.763671875,
+      "39": 11515.52734375,
+      "40": 23031.0546875,
+      "41": 46062.109375,
+      "42": 92124.21875,
+      "43": 184248.4375
+    },
+    "repeats": 5,
+    "samples": [
+      {
+        "candidate_count": 1048576,
+        "candidates_per_gpu_second": 47740394.11980359,
+        "gpu_seconds": 0.021964125335216522
+      },
+      {
+        "candidate_count": 1048576,
+        "candidates_per_gpu_second": 75919355.3403478,
+        "gpu_seconds": 0.013811708427965641
+      },
+      {
+        "candidate_count": 1048576,
+        "candidates_per_gpu_second": 88460365.00314894,
+        "gpu_seconds": 0.011853625066578388
+      },
+      {
+        "candidate_count": 1048576,
+        "candidates_per_gpu_second": 82764618.32067451,
+        "gpu_seconds": 0.012669375166296959
+      },
+      {
+        "candidate_count": 1048576,
+        "candidates_per_gpu_second": 84090139.56153281,
+        "gpu_seconds": 0.012469666544348001
+      }
+    ],
+    "volatile_performance_only_not_a_success_rule": true
+  },
+  "boundary_filter_gate": {
+    "control": [],
+    "exact": true,
+    "factual": [
+      4294967295
+    ],
+    "interval": [
+      4294967294,
+      4294967295
+    ]
+  },
+  "cross_implementation_gate": {
+    "candidate_count": 64,
+    "canonical_independent_Metal_exact": true,
+    "output_bits_checked": 65536,
+    "output_sha256": "5c5a83a96d212c29042f236205c78a77d17daaa8a5312a5943f1435a40f543dc"
+  },
+  "design_sha256": "dd6a4a3ebfeae67b51af34f93c31c70e661dff8e8db756e0588ab04cb1c1feb3",
+  "evidence_stage": "THREEFISH1024_METAL_PRE_TARGET_QUALIFICATION",
+  "information_boundary": {
+    "candidate_execution_against_production_target": false,
+    "production_assignment_exists": false,
+    "production_target_exists": false
+  },
+  "known_material_sha256": "6656aa741732cffda8eae915fac0d5c7572f42280b9e7acba494f849af1a82f3",
+  "metal_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "native_64_bit_integer_arithmetic": true,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "threefish1024-metal-native-v1"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "df3b8cf5c347634b3e63812124c117232c0c9d650a7ab717671224eefb3cff62",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source_sha256": "82b3de6d0baf7876d8f45fe06773e74c32cf89dd8c7947fe11ca56a30ba545e6",
+    "warnings_as_errors": true
+  },
+  "official_kat_gate": {
+    "Metal_match": true,
+    "all_passed": true,
+    "canonical_match": true,
+    "ciphertext_sha256": "f981f29742fa67709d59664bd98281844d6928c7536bb7673186cc203b894fac",
+    "independent_match": true,
+    "source": "Skein_v1.3_Threefish-1024_zero_KAT"
+  },
+  "schema": "threefish1024-metal-qualification-v1",
+  "selection": {
+    "maximum_projected_complete_gpu_seconds": 21600.0,
+    "maximum_width": 43,
+    "minimum_width": 32,
+    "selected_width": 39,
+    "selection_rate": "minimum_observed_candidates_per_gpu_second"
+  }
+}

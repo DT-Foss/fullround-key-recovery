@@ -9,7 +9,7 @@ ROOT = Path(__file__).parents[1]
 
 def test_every_immutable_artifact_is_hash_pinned() -> None:
     assert verify_artifact_hashes(ROOT) == EXPECTED_SHA256
-    assert len(EXPECTED_SHA256) == 572
+    assert len(EXPECTED_SHA256) == 626
 
 
 def test_checked_in_manifest_exactly_matches_runtime_inventory() -> None:
@@ -22,7 +22,7 @@ def test_checked_in_manifest_exactly_matches_runtime_inventory() -> None:
 
 def test_original_reports_are_explicitly_separated_from_current_docs() -> None:
     originals = sorted((ROOT / "reports" / "original").glob("*.md"))
-    assert len(originals) == 32
+    assert len(originals) == 38
     assert all(path.suffix == ".md" for path in originals)
 
 

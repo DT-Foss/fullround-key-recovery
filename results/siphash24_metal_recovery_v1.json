@@ -1,0 +1,157 @@
+{
+  "anchors": {
+    "complete_domain_engine_sha256": "901eef29125197c69ccf47e7acc4935de61ebadb2b45b2d8502e7a4dd21a2c4e",
+    "family_framework_sha256": "107e400039176ef1ab6e400677f55b7148c9342571be4f0822aaf33bc2e2d7ee",
+    "native_executable_sha256": "3e551be49a23a69e296f3cbca2c78ba49bceb35d26a77a495c005ef059b7712a",
+    "native_source_sha256": "fb96e8d225bf4cbc2f854b1d15f783124a010f6139fcabbbd59b6285fb7c2c5f",
+    "runner_sha256": "bdfc398fd951ed4bb45a87f74472d5f76a5971bd516396a915a33ea45af0660b"
+  },
+  "attempt_id": "SIPKR1",
+  "authentic_causal": {
+    "api_id": "sipkr1",
+    "clusters": 2,
+    "gaps": [
+      {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_selected_strict_subset_of_W43_domain",
+        "predicate": "next_required_gain",
+        "subject": "SipHash24:unique_verified_W43_fullround_residual",
+        "suggested_queries": [
+          "Which frozen operator ranks a held-out W43 SipHash region early?"
+        ]
+      }
+    ],
+    "path": "research/results/v1/siphash24_metal_recovery_v1.causal",
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    },
+    "rules": 2,
+    "sha256": "25fb38498906457f2c471a2fdb282e833e13bf247be8397e5f93d86a5afdf6fc",
+    "triplets": 7,
+    "writer_stats": {
+      "clusters": 2,
+      "entities": 15,
+      "file_size_bytes": 5412,
+      "file_size_kb": 5.3,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.siphash24_metal_recovery_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 7
+    }
+  },
+  "confirmation_sha256": "87bee7e7765bb8a87d39ef6e83b6c290d3a79751683652766902fdd90119ca66",
+  "evidence_stage": "FULLROUND_SIPHASH24_COMPLETE_DOMAIN_RECOVERY_CONFIRMED",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "executed_assignment_count": 8796093022208,
+    "factual_confirmations": [
+      {
+        "assignment": 31398082423,
+        "complete_128_bit_match": true,
+        "independent_numpy_output_sha256": "a633401c0df7f7c1c8621924d3034487f2337a4b03e87b56ecb5e55c019bf80e",
+        "output_bits_checked": 128,
+        "recovered_key_words": [
+          1333311351,
+          205961223,
+          3083550135,
+          2338367582
+        ],
+        "recovered_key_words_hex": [
+          "4f78b777",
+          "0c46b807",
+          "b7cb3db7",
+          "8b60a85e"
+        ],
+        "relation": "factual",
+        "scalar_numpy_identity": true,
+        "scalar_output_sha256": "a633401c0df7f7c1c8621924d3034487f2337a4b03e87b56ecb5e55c019bf80e"
+      }
+    ],
+    "factual_filter_matches": [
+      31398082423
+    ],
+    "factual_full_matches": [
+      31398082423
+    ],
+    "gpu_seconds": 4259.9068639907055,
+    "known_key_bits": 85,
+    "logical_candidate_count": 8796093022208,
+    "newly_executed_assignment_count": 8796093022208,
+    "resumed_assignment_count": 0,
+    "success_evaluated_only_after_complete_domain": true,
+    "unique_exact_assignment": true,
+    "unknown_key_bits": 43,
+    "volatile_candidates_per_gpu_second": 2064855712.3541825,
+    "volatile_wall_seconds": 4522.081045084167
+  },
+  "execution_sha256": "cba3ece6f30434be58eb7056564cea762b5c7452c6bd164fd55a1ff0b36f087d",
+  "mapping_gate": {
+    "rows": [
+      {
+        "assignment": 0,
+        "output_sha256": "fa8bc95f1be844306feffbaef71e4d03315828f21c4234ff60404869a7314cf6"
+      },
+      {
+        "assignment": 1,
+        "output_sha256": "e43f79eb0939ccc9c48171ed6154388aeb6a10ac9ca9dce13299807f4b0f1b26"
+      },
+      {
+        "assignment": 4294967295,
+        "output_sha256": "6a781af9d813c206dd09b283105b0dcfad2cc4dfa29510c92444fee81b4039c4"
+      },
+      {
+        "assignment": 4294967296,
+        "output_sha256": "08b4a6b9af23e099f759bf4f4f64bf7a8eb13a870afb1a22c66e7c427d5d8229"
+      },
+      {
+        "assignment": 8796093022207,
+        "output_sha256": "57df11e2d1b74b321a1ab18dcb9d51075d07a8a7ffa96ae77f19c95fdc7aeeed"
+      }
+    ],
+    "scalar_numpy_metal_exact": true
+  },
+  "metal_identity": {
+    "metal": {
+      "algorithms": [
+        "tea",
+        "xtea",
+        "siphash24"
+      ],
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "output_words_compared": 4,
+      "plaintext_blocks": 2,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true,
+      "tea_cycles": 32,
+      "tea_feistel_updates": 64
+    },
+    "op": "ready",
+    "version": "tea-metal-native-v1"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "3e551be49a23a69e296f3cbca2c78ba49bceb35d26a77a495c005ef059b7712a",
+    "flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "source_sha256": "fb96e8d225bf4cbc2f854b1d15f783124a010f6139fcabbbd59b6285fb7c2c5f"
+  },
+  "protocol_sha256": "97665ee1242d6e498a1411c2540146e0bbc6d0e86b2afbbcb8e9e4e71fb2041c",
+  "public_challenge_sha256": "1eec7af993be1b476b2a87363ab0b492420d00259dc2fc1d1c4dad665e75a245",
+  "qualification_path": "research/results/v1/siphash24_metal_qualification_v1.json",
+  "qualification_sha256": "69480f514b8b636dc4ace327125a5c058f1e9a823cc58f540332249f4dacb341",
+  "schema": "siphash24-metal-recovery-result-v1"
+}
