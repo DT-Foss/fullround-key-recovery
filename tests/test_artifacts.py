@@ -9,7 +9,7 @@ ROOT = Path(__file__).parents[1]
 
 def test_every_immutable_artifact_is_hash_pinned() -> None:
     assert verify_artifact_hashes(ROOT) == EXPECTED_SHA256
-    assert len(EXPECTED_SHA256) == 570
+    assert len(EXPECTED_SHA256) == 572
 
 
 def test_checked_in_manifest_exactly_matches_runtime_inventory() -> None:

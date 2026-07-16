@@ -21,7 +21,7 @@ def test_module_cli_emits_machine_readable_verified_summary() -> None:
     )
     value = json.loads(process.stdout)
     assert value["status"] == "verified"
-    assert value["artifact_count"] == 570
+    assert value["artifact_count"] == 572
     assert [row["attempt_id"] for row in value["results"]] == [
         "A184",
         "A237",

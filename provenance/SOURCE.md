@@ -27,6 +27,15 @@ This batch adds one complete `2^43` record and 19 strict-subset executions
 across 18 targets. A322 remains live and A325 is protocol-only at the release
 boundary; their outcome and progress artifacts are absent.
 
+The inventory was extended on 2026-07-16 with the complete public attempt
+ledgers through A458. The source is `DT-Foss/f8-causal-cryptanalysis` commit
+`676ee0d6523351347b75907b151c5c4b605061ac`. A456 and A458 are completed,
+hash-pinned W52 schedule results; A455 and A457 are frozen recovery protocols.
+No running recovery progress, filter outcome, stop object, or secret result was
+copied. The canonical A456/A458 JSON, AI-native Causal graphs, Reader readbacks,
+and five complete pair streams remain in the source repository and are bound
+here by `docs/A326_A458_FRONTIER.md`.
+
 The authoritative source-compatible `dotcausal` Reader revision used by A237
 and A240 was copied from the same research environment. Its `io.py` SHA-256 is
 `e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074`,

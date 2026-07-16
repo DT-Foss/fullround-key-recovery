@@ -1,10 +1,15 @@
-# A287--A325 originating provenance
+# Public A001--A458 chronology and A287--A325 originating provenance
 
 This directory retains the portable originating files selected by the
 publication gap audit. The subtree mirrors the original
 `arx-carry-leak/` paths so result-internal source references remain
 auditable without mixing production runners into the compact verification
 package.
+
+The complete public evidence ledger is split into
+`ATTEMPT_LOG_A001_A431.md` and `ATTEMPT_LOG_A432_A458.md`. The second ledger
+records completed A456/A458 W52 schedule results and the frozen A455/A457
+recovery boundaries without publishing any live progress or outcome.
 
 Included:
 
@@ -13,6 +18,7 @@ Included:
 - exact experiment, native, test, and reproduction sources;
 - completed scientific reports;
 - the attempt chronology in `ATTEMPT_LOG_A287_A325.md`.
+- the public attempt ledgers through A458.
 
 Excluded:
 

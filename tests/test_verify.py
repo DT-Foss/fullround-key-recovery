@@ -195,7 +195,7 @@ def test_complete_suite_opens_all_causal_and_protocol_artifacts() -> None:
     result = verify_all(ROOT)
     assert result["status"] == "verified"
     assert result["author"] == "David Tom Foss"
-    assert result["artifact_count"] == 570
+    assert result["artifact_count"] == 572
     assert [row["attempt_id"] for row in result["results"]] == [
         "A184",
         "A237",

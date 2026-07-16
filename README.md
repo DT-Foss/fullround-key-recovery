@@ -39,6 +39,15 @@ declared domain, rejects the matched control, and recomputes all eight public
 output blocks independently. The exact ranks are published in
 [the A287--A325 release record](docs/A287_A325_RELEASE.md).
 
+The subsequent A326--A458 line builds the complete W52 execution geometry.
+A456 evaluates 878 frequency-ray schedules and A458 evaluates 405 paired B1/B0
+schedules. Their fixed remaining-96 minimum gain rises from A454's
+`0.160759081` bit to `0.205050505` bit, while every released W52 schedule stays
+target-blind and compiles all 16,777,216 pair cells exactly once. A455 and A457
+are the frozen recovery executors; no live progress or recovery result is
+published. The exact hashes and source commit are in the
+[A326--A458 frontier record](docs/A326_A458_FRONTIER.md).
+
 Each unique assignment reconstructs the complete master key in its declared
 known-key model. The package then recomputes the complete output with a compact
 independent Python implementation. The exact evidence mapping and per-record
@@ -75,9 +84,10 @@ make lint
 
 `make verify`:
 
-1. verifies all 570 immutable files against `provenance/ARTIFACTS.sha256`;
+1. verifies all 572 immutable files against `provenance/ARTIFACTS.sha256`;
 2. checks every frozen protocol/result challenge, every A286 root anchor, and
-   every retained A287--A325 chronology artifact;
+   every retained A287--A325 chronology artifact and the A001--A458 public
+   attempt ledgers;
 3. reconstructs every recovered key and independently recomputes the complete
    full-round output for all 13 complete-domain and 24 strict-subset executions;
 4. opens all 38 headline and 26 chronology `.causal` files with the matching
@@ -105,6 +115,12 @@ evidence chain is preserved under `chronology/arx-carry-leak/`. Their immutable
 configs, qualification records, results, manifests, reports, source, and Causal
 artifacts are retained as one provenance chain. Platform-independent independent
 confirmation of every recovery record is part of `make verify`.
+
+The public attempt history through A458 is retained separately in
+`chronology/ATTEMPT_LOG_A001_A431.md` and
+`chronology/ATTEMPT_LOG_A432_A458.md`. These ledgers bind this compact recovery
+package to the completed W52 Reader frontier without copying its five 64 MiB
+pair streams into a second repository.
 
 The commands write only below `build/`; retained evidence is never overwritten.
 A completed replay must match the frozen factual assignment and empty control
@@ -152,7 +168,7 @@ causal/              immutable Causal evidence graphs
 reports/original/    byte-exact reports from the originating working tree
 experiments/native/  byte-exact Swift/Metal enumerators
 experiments/original/byte-exact originating factories and runners
-chronology/           byte-exact A287--A325 research and evidence chain
+chronology/           A001--A458 ledgers plus byte-exact A287--A325 evidence
 src/                  independent verification and reproduction package
 tests/                KAT, artifact, Causal, claim, and CLI gates
 scripts/              one-command verification and reproduction

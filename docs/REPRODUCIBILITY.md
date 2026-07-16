@@ -10,10 +10,12 @@ python3 -m venv .venv
 make verify test lint
 ```
 
-This verifies all 570 artifact hashes, thirteen complete-domain records,
+This verifies all 572 artifact hashes, thirteen complete-domain records,
 24 strict-subset ChaCha20-R20 executions across 23 targets, recovered-key
 reconstruction, full-output confirmations, matched controls, and Causal
-integrity across 38 headline plus 26 chronology AI-native files.
+integrity across 38 headline plus 26 chronology AI-native files. The immutable
+inventory also pins the public A001--A458 attempt ledgers and therefore the
+exact A455/A457 no-progress publication boundary.
 
 The source-compatible Causal Reader is vendored because it is part of the
 artifact provenance. Its exact files and MIT license are pinned by
@@ -75,6 +77,11 @@ boundaries, rejects all matched controls, and opens the original, canonical,
 order, aggregate, and chronology Causal files. The byte-exact search and
 orchestration sources remain in `experiments/original/` and `chronology/` for
 full replay.
+
+The completed A326--A458 W52 schedule frontier is verified in the source repo
+pinned by [the frontier record](A326_A458_FRONTIER.md). This compact repository
+pins the exact public ledgers and source commit; the 64 MiB pair streams remain
+in their originating repository to preserve one canonical artifact identity.
 
 ## Platform boundary
 
