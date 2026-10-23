@@ -262,4 +262,4 @@ Use [CITATION.cff](CITATION.cff) for machine-readable citation metadata.
 
 ## License
 
-MIT © 2026 David Tom Foss. See [LICENSE](LICENSE).
+PolyForm Noncommercial License 1.0.0. See [LICENSE](LICENSE). Commercial licenses: Wirkung Inc. (d.foss@ieee.org).

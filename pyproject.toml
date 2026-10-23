@@ -8,7 +8,7 @@ version = "1.6.0"
 description = "Complete-domain and strict-subset full-round residual-key recovery records"
 readme = "README.md"
 requires-python = ">=3.10"
-license = "MIT"
+license = "PolyForm-Noncommercial-1.0.0"
 authors = [
   {name = "David Tom Foss", email = "d.foss@ieee.org"},
 ]

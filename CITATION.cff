@@ -10,7 +10,7 @@ authors:
     affiliation: "AI Systems and Causal Knowledge Graphs, Görlitz, Germany"
 version: 1.6.0
 date-released: 2026-07-16
-license: MIT
+license: PolyForm-Noncommercial-1.0.0
 repository-code: "https://github.com/DT-Foss/fullround-key-recovery"
 url: "https://github.com/DT-Foss/fullround-key-recovery"
 keywords:
